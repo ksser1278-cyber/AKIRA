@@ -74,26 +74,26 @@ masters/
 backup/
 backups/
 
-# Optional large data folders
+# Data policy
+# Ignore bulk data by default, but allow artist-scoped reference tracks
+data/**
+!data/*/
+!data/*/reference_tracks/
+!data/*/reference_tracks/**
+!data/sample/
+!data/sample/**
+!data/refs/
+!data/refs/**
+!data/anchor_sets/
+!data/anchor_sets/**
 data/raw/
 data/intermediate/
 
-# AKIRA ENGINE Specific Exclusions
+# AKIRA ENGINE specific exclusions
 artists/
 bundles/
-data/
 datasets/
 lyrics/
 reports/
 수정본/
 *.tmp.*
-
-# Allow specific small data folders if needed
-!data/sample/
-!data/refs/
-!data/reference_tracks/
-!data/anchor_sets/
-
-# Keep only lightweight sample data
-# !data/sample/
-# !data/sample/**
