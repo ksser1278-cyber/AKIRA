@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "atols_macaron",
+    "artist_id": "atols",
+    "title": "マカロン",
+    "bpm": 128,
+    "key": "A Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "fragmented",
+        "lines": [
+          "マカロン 馬の耳に念仏",
+          "甘い罠 熔ける夢",
+          "ぐるぐる 回る 遠い空",
+          "私の 脈を 止めて"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 13, "role": "surreal_setup", "tech": "Macaron + Proverb contradiction"},
+          {"line": 2, "mora": 9, "role": "tactile", "tech": "Melting dream metaphor"},
+          {"line": 3, "mora": 11, "role": "spinning", "tech": "Cyclical vertigo imagery"},
+          {"line": 4, "mora": 9, "role": "dissolution", "tech": "Stopping the pulse / Reset"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "glitchy",
+        "lines": [
+          "マ・マ・マ・マ・マカロン",
+          "ドロドロ 熔けだす 脳",
+          "指先 触れる 異質な",
+          "サヨナラ 私は マカロン"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "vocal_glitch", "tech": "Syllabic stutter hook"},
+          {"line": 2, "mora": 10, "role": "viscous_peak", "tech": "Melting brain / identity"},
+          {"line": 3, "mora": 10, "role": "tactile_climax", "tech": "Anomalous touch"},
+          {"line": 4, "mora": 12, "role": "final_merger", "tech": "Becoming the object"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["transformation into candy", "industrial dissolution", "sensory vertigo"],
+    "emotional_thesis": "Identity is viscous and fragile; it can be melted into a sweet, artificial object (Macaron) through industrial/glitchy cycles."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

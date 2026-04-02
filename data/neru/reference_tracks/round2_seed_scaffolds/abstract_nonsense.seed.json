@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "neru",
+    "track_id": "neru_abstract_nonsense",
+    "title": "アブストラクト・ナンセンス"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "mode_support",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "concept_noun",
+    "hook_behavior": [
+      "early pioneer of despair-rock",
+      "heavy syncopation"
+    ],
+    "section_flow_guess": [
+      "verse_syncopated",
+      "prechorus_building_dread",
+      "chorus_explosive_despair",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "trash",
+      "garbage",
+      "meaninglessness",
+      "hanging heads"
+    ],
+    "emotional_arc": [
+      "despair",
+      "nihilism",
+      "rock catharsis"
+    ],
+    "leakage_watchouts": [
+      "stick to fundamental 2010s vocaloid rock tropes; fast bass, sharp drums"
+    ],
+    "prompt_seed_terms": [
+      "2010s vocaloid rock",
+      "syncopated bass",
+      "nihilistic anthem"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Early pioneer of despair-rock."
+    ],
+    "style_gap_filled": [
+      "Heavy syncopation in verse."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

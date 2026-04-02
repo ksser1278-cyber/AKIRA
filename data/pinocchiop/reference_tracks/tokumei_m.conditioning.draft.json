@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_tokumei_m",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "匿名M",
+    "title_core": "匿名M",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2023,
+        "status": "cross_checked",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": [
+      "Draft scaffold created from conditioning queue.",
+      "Priority-3 PinocchioP anchor for ironic_meta mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "excluded",
+    "copyright_handling_note": "Draft scaffold only. Add internal lyric source before enabling prompting.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": ["anonymous persona", "social roleplay", "identity performance"],
+    "emotional_thesis": "Draft only. Final thesis requires lyric and hook review.",
+    "contrast_device": ["anonymous mask vs exposed desire"],
+    "dramatic_arc": ["role declaration", "performance escalation", "hook exposure"],
+    "narrative_role": ["duet-like persona song", "social satire"],
+    "title_function": "Use the title as a label that strips personal identity into a public tag.",
+    "key_motifs": ["anonymity", "labeling", "performative identity"],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": ["fast opener", "dialogic verse churn", "high-copy chorus"],
+      "vocal_behavior": ["tagline delivery", "compressed exchange feel", "sharp chorus repeat"],
+      "production_palette": ["digital pop chassis", "tight beat focus", "glossy subculture edge"],
+      "arrangement_arc": ["instant role framing", "exchange-like verse motion", "hook snap"],
+      "dynamics_arc": ["immediate start", "stable pressure", "repeated chorus lift"],
+      "confidence": "low",
+      "evidence_basis": ["model_inference"]
+    },
+    "do_not_overclaim": [
+      "Do not assert duet staging or specific sound design without source support."
+    ]
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": ["tagline", "social copy", "persona exchange"],
+    "mora_control_notes": ["Expect high compression in chant-like hook lines; verify after lyric import."],
+    "accent_risk_notes": ["Validate anonymous tag hook against synthetic accent placement."],
+    "critic_focus": ["hook slogan precision", "persona separation", "copy-line sharpness"],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": ["social-ironic vocaloid pop", "compressed electro-pop"],
+    "tempo_feels": ["fast hook cadence", "tight beat speech rhythm"],
+    "vocal_tones": ["tagline-forward lead", "detached smirk", "high-copy chorus"],
+    "production_palette": ["digital pop chassis", "beat-forward compression", "clean-toxic shine"],
+    "energy_arc": ["instant tag reveal", "performative escalation", "sharp chorus repeat"],
+    "imagery_anchors": ["anonymous tag", "public label", "performative self", "social frame"],
+    "exclude": ["do not soften into generic relational pop", "do not erase the satire layer"],
+    "source_basis": ["queue scaffold", "model inference"]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "section analysis",
+      "metadata sources",
+      "lyric sources"
+    ],
+    "manual_review_required_for": [
+      "speaker-role separation",
+      "hook tag extraction",
+      "section map",
+      "sound claims"
+    ],
+    "warnings": [
+      "Draft scaffold only. Not ready for prompting until lyric_ground_truth and section_analysis are populated."
+    ],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

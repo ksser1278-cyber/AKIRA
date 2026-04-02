@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_android_girl",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "アンドロイドガール",
+    "title_core": "アンドロイドガール",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2019-05-03",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2019,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=isZ_uBv7C0o",
+        "status": "confirmed"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "DECO*27 Official Website (Release Info)",
+        "origin": "official_site",
+        "url": "https://deco27.com/discography/android_girl/",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance verified and narrative mode aligned to the existing round2 classification for planner_safe promotion review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "もういっそ\"一緒ランド\"作りましょ",
+          "君とマッチアップ乗っかって",
+          "「構ってもっと足りないの」",
+          "歌え想い出染みた嫉妬のstyle",
+          "代わる代わる傷付けては「もうしない」って嘘で仲直りごっこだ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "explosive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "アンドロイドガール をかしくなっちゃった",
+          "僕だけのものになった君は\"誰\"なの？",
+          "ずっとずっと信じてきたのにな",
+          "アンドロイドガール 想いはなんだっけ",
+          "君とのキスが痛くて息を閉じたの",
+          "ずっとずっと"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "medium",
+        "lines": [
+          "エンドロールはまだ流れない？",
+          "「どこにいても\"一緒だよ\"」とか本気で引く",
+          "感傷に浸っていいかな",
+          "あの頃を願っていいかな"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "アンドロイドガール をかしくなっちゃった",
+      "何度愛を再起動したって"
+    ],
+    "repetition_patterns": [
+      "Zutto zutto (obsession loop)",
+      "Technical metaphors (Reboot, End roll)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "rebooting broken love",
+      "artificial intimacy",
+      "sequel syndrome"
+    ],
+    "emotional_thesis": "Toxic love is a software loop ('Saikidou') that maintains the illusion of 'Togetherness' while the ego is being 'Resized' out of existence.",
+    "key_motifs": [
+      "android",
+      "reboot",
+      "painful kiss",
+      "rust"
+    ],
+    "interpretation_confidence": "high",
+    "narrative_role": [
+      "direct_emotional_pop"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "nostalgia trap",
+        "sequel bait"
+      ],
+      "narrative_job": "References 'Two Breaths Walking' themes to show how the characters haven't changed.",
+      "vocabulary_focus": [
+        "仲直りごっこ",
+        "嫉妬のstyle",
+        "傷付けては"
+      ],
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "identity breakdown"
+      ],
+      "narrative_job": "The question 'Who are you?' represents the loss of individual identity in high-fidelity toxic relationships.",
+      "vocabulary_focus": [
+        "をかしくなっちゃった",
+        "息を閉じた"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "high",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "computing",
+      "childlike_play"
+    ],
+    "critic_focus": [
+      "sequel motif consistency",
+      "technical jargon integration"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.84,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 0.77,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

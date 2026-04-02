@@ -1,0 +1,1083 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_tensei_ringo",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "転生林檎",
+    "title_core": "転生林檎",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed",
+      "sources": [
+        {
+          "label": "No tie-in listed in release references",
+          "origin": "official",
+          "url": "https://pinocchiop.bandcamp.com",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Project SEKAI song information",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/Tensei_Ringo",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "ピノキオピー",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E8%BB%A2%E7%94%9F%E6%9E%97%E6%AA%8E_(Tensei_Ringo)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "ピノキオピー",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E8%BB%A2%E7%94%9F%E6%9E%97%E6%AA%8E_(Tensei_Ringo)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "ピノキオピー",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "PinocchioP official self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21",
+              "notes": "Treat as inferred until a direct arrangement credit source is attached."
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki song page",
+            "origin": "other",
+            "url": "https://vocaloidlyrics.fandom.com/wiki/%E8%BB%A2%E7%94%9F%E6%9E%97%E6%AA%8E_(Tensei_Ringo)",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:39",
+        "seconds": 219,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Reincarnation Apple.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki source",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/%E8%BB%A2%E7%94%9F%E6%9E%97%E6%AA%8E_(Tensei_Ringo)",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki metadata source",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/%E8%BB%A2%E7%94%9F%E6%9E%97%E6%AA%8E_(Tensei_Ringo)",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full grounded lyric analysis tracking actual structural sections."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded record tracking real sections for precision modeling."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking for AI modeling.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "生まれ変わったら何になりたい？",
+          "とか別に考えたことない",
+          "毎日が死ぬほど退屈で",
+          "寝る前にちょっと思うくらい"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "もしも 人生がやり直せるのなら",
+          "違う誰かになってみたい"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "転生林檎を齧って 齧って",
+          "新しい自分へとアプデ アプデ アプデして",
+          "それでも 変わんないね 変わんないね",
+          "根っこの部分は同じみたいだね"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "顔が良ければ幸せだとか",
+          "金があれば幸せだとか",
+          "そんなのはただの思い込みで",
+          "結局は自分次第でしょ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "もしも 全てがリセットできるのなら",
+          "違う世界を生きてみたい"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "転生林檎を齧って 齧って",
+          "新しい自分へとアプデ アプデ アプデして",
+          "それでも 変わんないね 変わんないね",
+          "根っこの部分は同じみたいだね"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "何回生まれ変わっても",
+          "何になりたいのかわからない",
+          "結局 自分を愛せないなら",
+          "どこに行ったって同じことなんだ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "転生林檎を齧って 齧って",
+          "新しい自分へとアプデ アプデ アプデして",
+          "それでも 変わんないね 変わんないね",
+          "根っこの部分は同じみたいだね"
+        ]
+      },
+      {
+        "section_type": "outro",
+        "section_name": "Outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "fade",
+        "source_labels": [
+          "outro"
+        ],
+        "lines": [
+          "変わんないね",
+          "変わんないね",
+          "あーあ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "転生林檎を齧って 齧って",
+      "それでも 変わんないね 変わんないね"
+    ],
+    "question_lines": [
+      "生まれ変わったら何になりたい？"
+    ],
+    "repetition_patterns": [
+      "The title phrase acts as a symbolic chorus anchor.",
+      "Verses loop through retry and alternate-self logic.",
+      "Chorus emphasizes repetition with words like '齧って' and 'アプデ'."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "reincarnation fantasy",
+      "retry desire",
+      "unchanged self"
+    ],
+    "emotional_thesis": "The song fantasizes about rerolling life while admitting the self may remain unresolved after the reset.",
+    "contrast_device": [
+      "rebirth fantasy vs stubborn identity residue"
+    ],
+    "dramatic_arc": [
+      "rebirth question",
+      "choice pressure",
+      "title-object chorus release",
+      "bridge realization",
+      "final surrender"
+    ],
+    "narrative_role": [
+      "concept confession",
+      "retry-loop song"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title turns reincarnation into a physical object you can hold or bite.",
+    "key_motifs": [
+      "apple",
+      "reincarnation",
+      "retry",
+      "same self again"
+    ],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1008152,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Reincarnation Apple.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -8.3,
+        "lra_lu": 3.9,
+        "rms_median_db": -11.235,
+        "rms_span_db": 91.574,
+        "early_rms_db": -12.523,
+        "mid_rms_db": -11.113,
+        "late_rms_db": -10.659,
+        "late_minus_early_db": 1.864,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "PinocchioP-01-Reincarnation Apple.flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "measured concept setup",
+        "middle build",
+        "hooked chorus release"
+      ],
+      "vocal_behavior": [
+        "clear synthetic lead",
+        "question-led verse delivery",
+        "straight chorus phrasing"
+      ],
+      "production_palette": [
+        "vocaloid pop frame",
+        "digital rhythm bed",
+        "hook-focused chorus layer"
+      ],
+      "arrangement_arc": [
+        "concept setup",
+        "pressure build",
+        "chorus symbol release",
+        "measured peak zone: late"
+      ],
+      "dynamics_arc": [
+        "moderate open",
+        "compressed middle",
+        "chorus widening"
+      ],
+      "confidence": "low",
+      "evidence_basis": [
+        "human_listening",
+        "lyrics",
+        "model_inference",
+        "other"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrumentation without direct verified sources."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "retry fantasy setup",
+        "self-questioning"
+      ],
+      "narrative_job": "Open with reroll desire while admitting the same self keeps resurfacing.",
+      "arrangement_role": {
+        "summary": "Establishes the core beat and cynical tone.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational delivery with a tight vocaloid cadence.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steady, pulsing introduction.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "retry fantasy setup",
+        "self-questioning"
+      ],
+      "vocabulary_focus": [
+        "生まれ変わる",
+        "退屈"
+      ],
+      "rhyme_features": [
+        "section-aligned copy phrasing"
+      ],
+      "rhythm_features": [
+        "compressed vocaloid phrasing"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "choice pressure",
+        "identity carry-over"
+      ],
+      "narrative_job": "Compress the rebirth fantasy into a choice that still cannot erase the self.",
+      "arrangement_role": {
+        "summary": "Builds tension before the drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rises in pitch to anticipate the chorus payload.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tightening of the groove.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "choice pressure",
+        "identity carry-over"
+      ],
+      "vocabulary_focus": [
+        "もしも",
+        "やり直せる"
+      ],
+      "rhyme_features": [
+        "section-aligned copy phrasing"
+      ],
+      "rhythm_features": [
+        "compressed vocaloid phrasing"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title object",
+        "identity punchline"
+      ],
+      "narrative_job": "Land the title as a physical symbol that still returns the same unresolved self.",
+      "arrangement_role": {
+        "summary": "Full energetic release with thick synth textures.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Highly melodic and repeatable hook.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximum width and brightness.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "title object",
+        "identity punchline"
+      ],
+      "vocabulary_focus": [
+        "転生林檎",
+        "アプデ",
+        "変わんないね"
+      ],
+      "rhyme_features": [
+        "repetitive chanting structures"
+      ],
+      "rhythm_features": [
+        "compressed vocaloid phrasing"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "elaboration of conditions",
+        "cynical observation"
+      ],
+      "narrative_job": "Discusses different rebirth scenarios (good looks, money) and rejects them as solutions.",
+      "arrangement_role": {
+        "summary": "Drops back down to the baseline groove, maintaining momentum.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational, identical or varied from Verse 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steady pulse.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "listing alternatives"
+      ],
+      "vocabulary_focus": [
+        "顔",
+        "金",
+        "思い込み",
+        "結局"
+      ],
+      "rhyme_features": [
+        "parallel phrase endings"
+      ],
+      "rhythm_features": [
+        "rhythmic listing"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "choice pressure",
+        "identity carry-over"
+      ],
+      "narrative_job": "Rebuilds tension for the second chorus drop.",
+      "arrangement_role": {
+        "summary": "Tightening groove similar to Pre-Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Compression before release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "hypothetical restart"
+      ],
+      "vocabulary_focus": [
+        "リセット",
+        "違う世界"
+      ],
+      "rhyme_features": [
+        "parallel construction"
+      ],
+      "rhythm_features": [
+        "driving 8th notes"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "title object",
+        "identity punchline"
+      ],
+      "narrative_job": "Second iteration of the core message.",
+      "arrangement_role": {
+        "summary": "Full energetic release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repeatable hook.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximum width.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "repeat slogan"
+      ],
+      "vocabulary_focus": [
+        "転生林檎"
+      ],
+      "rhyme_features": [
+        "chanting"
+      ],
+      "rhythm_features": [
+        "compressed phrasing"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "core realization",
+        "emotional pivot"
+      ],
+      "narrative_job": "The sobering realization that superficial changes don't fix a lack of self-love.",
+      "arrangement_role": {
+        "summary": "A drop in energy or a shift in instrumentation to emphasize the message.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "More desperate or plaintive vocal line.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Pivot zone, creating contrast.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "the inescapable truth"
+      ],
+      "vocabulary_focus": [
+        "何回",
+        "自分を愛せない",
+        "同じこと"
+      ],
+      "rhyme_features": [
+        "narrative flow over rhyme"
+      ],
+      "rhythm_features": [
+        "syncopated phrasing"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final conviction"
+      ],
+      "narrative_job": "Final, most energetic delivery of the inescapable cycle.",
+      "arrangement_role": {
+        "summary": "Peak of the song, maximum layers and intensity.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Main melodic payoff with potential ad-libs.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Highest energy band.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "ultimate catchphrase drop"
+      ],
+      "vocabulary_focus": [
+        "転生林檎"
+      ],
+      "rhyme_features": [
+        "chanting"
+      ],
+      "rhythm_features": [
+        "driving hook beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Outro",
+      "section_type": "outro",
+      "source_section_labels": [
+        "outro"
+      ],
+      "lyric_function": [
+        "resignation",
+        "fade out"
+      ],
+      "narrative_job": "Leaves the listener with the lingering feeling of 'nothing actually changed'.",
+      "arrangement_role": {
+        "summary": "Stripping away elements, leaving only the core synth motif and vocal echoes.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Echoes of the 'changed nothing' motif.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Fading energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "sigh of defeat"
+      ],
+      "vocabulary_focus": [
+        "変わんないね",
+        "あーあ"
+      ],
+      "rhyme_features": [
+        "direct repetition"
+      ],
+      "rhythm_features": [
+        "sparse trailing off"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "outro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "fade",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "concept phrase",
+      "question line",
+      "title object"
+    ],
+    "mora_control_notes": [
+      "Keep the title phrase intact enough to function as a strong copy unit."
+    ],
+    "accent_risk_notes": [
+      "Do not over-ornament the title phrase in melody-driven sections."
+    ],
+    "critic_focus": [
+      "title-function clarity",
+      "concept density",
+      "chorus repeat strength"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Outro",
+        "section_type": "outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "fade"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "concept vocaloid pop",
+      "subculture synth-pop"
+    ],
+    "tempo_feels": [
+      "mid-fast hook cadence",
+      "compressed conceptual verse flow"
+    ],
+    "vocal_tones": [
+      "clear synthetic lead",
+      "question-led verse delivery",
+      "clean chorus punch"
+    ],
+    "production_palette": [
+      "digital pop frame",
+      "tight rhythm bed",
+      "symbol-forward chorus"
+    ],
+    "energy_arc": [
+      "question setup",
+      "choice compression",
+      "title-object chorus release",
+      "bridge realization",
+      "resigned fade out"
+    ],
+    "imagery_anchors": [
+      "apple",
+      "reincarnation",
+      "retry logic",
+      "same self again"
+    ],
+    "exclude": [
+      "do not turn into generic inspirational rebirth song",
+      "do not remove the conceptual edge"
+    ],
+    "source_basis": [
+      "lyrics",
+      "metadata",
+      "model inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Upgraded to full-grounded record holding realistic segment modeling.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

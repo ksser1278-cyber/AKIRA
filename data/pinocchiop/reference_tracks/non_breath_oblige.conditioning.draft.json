@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_non_breath_oblige",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "ノンブレス・オブリージュ",
+    "title_core": "ノンブレス・オブリージュ",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "cross_checked",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": [
+      "Draft scaffold created from conditioning queue.",
+      "Priority-5 PinocchioP anchor for ironic_meta mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "excluded",
+    "copyright_handling_note": "Draft scaffold only. Add internal lyric source before enabling prompting.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": ["breathless obligation", "moral pressure", "social acceleration"],
+    "emotional_thesis": "Draft only. Final thesis requires lyric and hook review.",
+    "contrast_device": ["ethical demand vs physical limit"],
+    "dramatic_arc": ["pressure statement", "breathless escalation", "hook overload"],
+    "narrative_role": ["social critique", "pressure song"],
+    "title_function": "Use the title as a pressure phrase that fuses etiquette and suffocation.",
+    "key_motifs": ["breathlessness", "obligation", "pressure spiral"],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": ["high-pressure open", "continuous verbal churn", "overload chorus"],
+      "vocal_behavior": ["compressed rapid delivery", "pressure stacking", "hook overload phrasing"],
+      "production_palette": ["tight digital rhythm bed", "high-tension synth frame", "pressure-forward pop shell"],
+      "arrangement_arc": ["instant pressure", "unbroken accumulation", "chorus overload"],
+      "dynamics_arc": ["high start", "sustained compression", "ceiling-push chorus"],
+      "confidence": "low",
+      "evidence_basis": ["model_inference"]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact BPM or mix density without source support."
+    ]
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "kyokusen",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": ["pressure copy", "social slogan", "rapid monologue"],
+    "mora_control_notes": ["Expect compressed mora density through verse and chorus; verify after lyric import."],
+    "accent_risk_notes": ["Breathless hook needs explicit mora/accent mapping before generation use."],
+    "critic_focus": ["compression control", "pressure escalation", "hook overload clarity"],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": ["high-pressure vocaloid pop", "social-ironic synth pop"],
+    "tempo_feels": ["compressed rapid cadence", "unbroken pressure pulse"],
+    "vocal_tones": ["breathless synthetic lead", "stacked verbal pressure", "overload chorus push"],
+    "production_palette": ["tight digital rhythm bed", "high-tension synth shell", "pressure-first arrangement"],
+    "energy_arc": ["instant pressure", "escalating verbal compression", "chorus overload"],
+    "imagery_anchors": ["breathlessness", "duty", "moral pressure", "social suffocation"],
+    "exclude": ["do not relax into generic motivational pop", "do not dilute the suffocation concept"],
+    "source_basis": ["queue scaffold", "model inference"]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "section analysis",
+      "metadata sources",
+      "lyric sources"
+    ],
+    "manual_review_required_for": [
+      "mora compression map",
+      "hook overload extraction",
+      "section map",
+      "sound claims"
+    ],
+    "warnings": [
+      "Draft scaffold only. Not ready for prompting until lyric_ground_truth and section_analysis are populated."
+    ],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

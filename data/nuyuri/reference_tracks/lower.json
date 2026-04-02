@@ -1,0 +1,42 @@
+{
+  "track_id": "lower",
+  "artist_id": "nuyuri",
+  "title": "ロウワー",
+  "bpm": 136,
+  "key": "G Minor",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14],
+      "energy": 0.5,
+      "description": "Sophisticated jazz-pop groove. Focus on internal conflict. Sharp vocal syncopation."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.8,
+      "description": "Groovy rhythmic peak. Raising the curtain/Sayonara motif. High melodic density."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "そう 簡単な祈りだった 端から 段々と消える感嘆",
+      "romaji": "Sou kantan na inori datta hana kara dandan to kieru kantan",
+      "mora": 22,
+      "meta": "Signature motif. Simple prayer vs. fading admiration."
+    },
+    {
+      "original": "言いかけていた事が一つ消えてまだ増えて背中に後ろめたさが残る",
+      "romaji": "Iikakete ita koto ga hitotsu kiete mada fuete senaka ni ushirometasa ga nokoru",
+      "mora": 28,
+      "meta": "Core thematic line. Internal conflict and guilt."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "v flower - Sharp, rhythmic, emotive",
+    "main_instrument": "Sophisticated Slap Bass, Jazz Drums, Sharp Synths, Piano",
+    "thematic_tags": ["Urban", "Isolation", "Hidden Identity", "Betrayal", "Logic"],
+    "signature_phrases": ["ロウワー (Lower)", "感嘆 (Admiration)"]
+  }
+}

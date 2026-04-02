@@ -1,0 +1,42 @@
+{
+  "track_id": "asu_no_yozora_shoukaihan",
+  "artist_id": "orangestar",
+  "title": "アスノヨゾラ哨戒班",
+  "bpm": 190,
+  "key": "Ab Major",
+  "structure": ["Verse 1", "Pre-Chorus", "Chorus", "Verse 2", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14, 17],
+      "energy": 0.4,
+      "description": "Narrative intro. Fast delivery but low intensity. Focus on self-doubt."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [14, 13, 16, 15],
+      "energy": 0.9,
+      "description": "High-pitched explosion. Emphasizes height and sky. Sweeping emotional release."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "気分次第です僕は 敵を選んで戦う少年",
+      "romaji": "Kibun shidai desu boku wa teki wo erande tatakau shounen",
+      "mora": 22,
+      "meta": "Introductory statement. Fast pacing."
+    },
+    {
+      "original": "空へ舞う 世界の彼方 闇を照らす魁星",
+      "romaji": "Sora e mau sekai no kanata yami wo terasu kaisei",
+      "mora": 20,
+      "meta": "Chorus hook. High altitude imagery."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "IA - Clear, transparent, youthful",
+    "main_instrument": "Piano, Guitar-Pop",
+    "thematic_tags": ["Summer", "Sky", "Youth", "Tomorrow"],
+    "signature_phrases": ["明日よ！ (Tomorrow!)", "魁星 (Guiding Star)"]
+  }
+}

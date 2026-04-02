@@ -1,0 +1,42 @@
+{
+  "track_id": "kinyoubi_no_ohayou",
+  "artist_id": "honeyworks",
+  "title": "金曜日のおはよう",
+  "bpm": 135,
+  "key": "G Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Pre-Chorus", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [14, 12, 14, 13],
+      "energy": 0.5,
+      "description": "Daily routine narrative. Clean guitar strumming. Focus on 'Morning preparation'."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.85,
+      "description": "Bouncy emotional release. 'Ohayou' (Good Morning) motif. High syncopation with cute melodic delivery."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "おはようのオーディションして 髪型もバッチリOK",
+      "romaji": "Ohayou no oodishon shite Kamigata mo bacchiri OK",
+      "mora": 22,
+      "meta": "Signature rehearsal motif. Youthful daily life focus."
+    },
+    {
+      "original": "金曜日は頑張らなくちゃ だって二日会えないからね",
+      "romaji": "Kin'youbi wa ganbara nakucha Datte futsuka aenai kara ne",
+      "mora": 24,
+      "meta": "Core emotional driver. Friday deadline."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "GUMI - Bright, youthful, clean",
+    "main_instrument": "Clean Electric Guitar, Grand Piano, Steady Pop Drums",
+    "thematic_tags": ["High School", "First Love", "Shyness", "Train", "Friday", "Morning"],
+    "signature_phrases": ["おはよう (Good morning)", "バッチリOK (Perfectly OK)"]
+  }
+}

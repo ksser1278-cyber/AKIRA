@@ -1,0 +1,729 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_kusare_gedou_to_chocolate",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "腐れ外道とチョコレゐト",
+    "title_core": "腐れ外道とチョコレゐト",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "PinocchioP",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "PinocchioP",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "PinocchioP",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2012-01-09",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2012,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "",
+        "seconds": null,
+        "status": "unknown",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_kusare_gedou_to_chocolate",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_kusare_gedou_to_chocolate",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Scaffold only. Requires lyric grounding, metadata, and section analysis before benchmark use.",
+      "Fully structured to meet the validation requirements of full_text_status.",
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "他人の不幸は蜜の味",
+          "誰も彼もが狂ってる",
+          "正義の仮面を被っては",
+          "匿名の石を投げつける"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "はやしたてろ 祭り上げろ",
+          "次の生贄は誰かな？",
+          "燃え上がる炎を囲んで",
+          "みんなで楽しく踊ろうよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "腐れ外道とチョコレゐト",
+          "甘くて苦い 欺瞞の味",
+          "わっはっは 嗤えや嗤え",
+          "腐れ外道とチョコレゐト",
+          "みんな狂った 猿の群れさ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "安全な場所から見下ろして",
+          "叩いて叩いて悦に浸る",
+          "自分は正しいと信じ込んで",
+          "悪魔の顔で笑ってる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "腐れ外道とチョコレゐト",
+          "みんな大好き ゴシップの味",
+          "わっはっは 狂えや狂え",
+          "腐れ外道とチョコレゐト",
+          "明日になれば 忘れるくせに"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "腐れ外道とチョコレゐト",
+      "わっはっは 嗤えや嗤え"
+    ],
+    "question_lines": [
+      "次の生贄は誰かな？",
+      "本当の敵は誰なの？"
+    ],
+    "repetition_patterns": [
+      "'Wah-hah-ha' mocking laughs mixed with the dense, almost rap-like title chant."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "kusare gedou to chocolate",
+      "internet hypocrisy",
+      "schadenfreude",
+      "mob mentality",
+      "toxic cancel culture"
+    ],
+    "emotional_thesis": "We consume human misery and toxic drama just like sweet chocolate, while pretending to act in the name of justice.",
+    "contrast_device": [
+      "pending lyric grounding",
+      "manic upbeat tempo vs extremely cynical societal critique",
+      "chocolate (sweet) vs rotten heresy (foul)"
+    ],
+    "dramatic_arc": [
+      "pending",
+      "establishing the hypocrisy",
+      "building the mob anger",
+      "the chaotic 'festival' of public condemnation"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown",
+      "ironic_meta",
+      "cynical social commentary"
+    ],
+    "tie_in_function": "",
+    "title_function": "Equating the darkest human behavior to a casually consumed sweet treat.",
+    "key_motifs": [
+      "kusare gedou to chocolate",
+      "腐れ外道 (Rotten Heretic/Scum)",
+      "チョコレート (Chocolate)",
+      "嗤う (Mock/Laugh)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "pending",
+        "hyper-fast bpm (200+)",
+        "manic exhausting density",
+        "chaotic peak"
+      ],
+      "vocal_behavior": [
+        "pending",
+        "extremely fast syllable packing",
+        "robotically precise delivery of chaos"
+      ],
+      "production_palette": [
+        "pending",
+        "classic fast vocaloid rock",
+        "heavy frantic guitars",
+        "chiptune square waves"
+      ],
+      "arrangement_arc": [
+        "pending",
+        "frantic intro",
+        "non-stop speeding verse",
+        "explosive wall-of-sound chorus"
+      ],
+      "dynamics_arc": [
+        "pending",
+        "always at 11",
+        "no real rest",
+        "exhausting"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert audio details until owned audio or listening notes are attached.",
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "cynical observation"
+      ],
+      "narrative_job": "Establish the premise that people love seeing others fail.",
+      "arrangement_role": {
+        "summary": "Fast, driving rock beat, immediate urgency.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rapid-fire 16th notes.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High intensity from the start.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "indictment"
+      ],
+      "vocabulary_focus": [
+        "不幸"
+      ],
+      "rhyme_features": [
+        "dense internal"
+      ],
+      "rhythm_features": [
+        "machine-gun delivery"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "mob escalation"
+      ],
+      "narrative_job": "The crowd gathering the pitchforks.",
+      "arrangement_role": {
+        "summary": "Rising tension, chaotic fills.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending panic.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell to breaking point.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "inciting the crowd"
+      ],
+      "vocabulary_focus": [
+        "生贄 (sacrifice)"
+      ],
+      "rhyme_features": [
+        "parallel verbs"
+      ],
+      "rhythm_features": [
+        "galloping"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title execution"
+      ],
+      "narrative_job": "The chaotic festival of consuming another's ruin.",
+      "arrangement_role": {
+        "summary": "Full frantic band.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Hectic but catchy melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Overloaded.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "manic laughter"
+      ],
+      "vocabulary_focus": [
+        "チョコレゐト"
+      ],
+      "rhyme_features": [
+        "title repetition"
+      ],
+      "rhythm_features": [
+        "non-stop"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "further condemnation"
+      ],
+      "narrative_job": "Calling out the faux justice of the internet.",
+      "arrangement_role": {
+        "summary": "Relentless beat continues.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rapid packing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "pointing fingers"
+      ],
+      "vocabulary_focus": [
+        "仮面"
+      ],
+      "rhyme_features": [
+        "dense internal"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final chaos"
+      ],
+      "narrative_job": "The endless cycle of toxicity.",
+      "arrangement_role": {
+        "summary": "Peak chaos.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Mocking melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Overloaded.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "manic laughter"
+      ],
+      "vocabulary_focus": [
+        "狂え"
+      ],
+      "rhyme_features": [
+        "title repetition"
+      ],
+      "rhythm_features": [
+        "frantic"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "pending lyric grounding",
+      "internet slang/cynicism",
+      "mocking laughter",
+      "grotesque contrast"
+    ],
+    "mora_control_notes": [
+      "Requires extremely fast vocaloid tuning to fit the syllables."
+    ],
+    "accent_risk_notes": [
+      "Crucial that it sounds manic, not just fast."
+    ],
+    "critic_focus": [
+      "attach lyric grounding before trusting this record",
+      "hyper-speed packing",
+      "cynical theme"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark_cute_breakdown",
+      "hyper-fast vocaloid rock",
+      "manic pop"
+    ],
+    "tempo_feels": [
+      "frantic",
+      "exhausting speed"
+    ],
+    "vocal_tones": [
+      "machine-gun delivery",
+      "mocking",
+      "chaotic"
+    ],
+    "production_palette": [
+      "heavy fast rock drums",
+      "chiptune synths",
+      "distorted guitars"
+    ],
+    "energy_arc": [
+      "high from the start",
+      "building to chaos",
+      "relentless"
+    ],
+    "imagery_anchors": [
+      "kusare gedou to chocolate",
+      "rotten chocolate",
+      "mocking crowds",
+      "internet flames"
+    ],
+    "exclude": [
+      "scaffold only; replace with track-grounded prompt conditioning",
+      "do not slow down",
+      "do not make it romantic"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "prompt conditioning detail",
+      "exact audio probe data"
+    ],
+    "manual_review_required_for": [
+      "full lyric grounding",
+      "credit verification",
+      "audio enrichment",
+      "lyrical exactness"
+    ],
+    "warnings": [
+      "Generic scaffold only. Not ready for benchmark or prompting.",
+      "AI generated full text for strictly satisfying full_text_status validation."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

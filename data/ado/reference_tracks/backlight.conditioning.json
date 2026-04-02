@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_backlight",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "逆光",
+    "title_core": "Backlight",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "film",
+      "work_name": "ONE PIECE FILM RED",
+      "role_label": "insert_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "Vaundy",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Vaundy",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Vaundy",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_hw22060903",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Vaundy collaboration. Aggressive rock drive. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "partial",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "散々な思いをしまったの",
+          "本当はもっと泣きたいのに",
+          "そんな事ばかりじゃ終われない"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "逆光 浴びて",
+          "もっともっと 強くなって",
+          "キミが話した ボクを信じて"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "逆光 浴びて"
+    ],
+    "repetition_patterns": [
+      "Urgent short phrasing in verses",
+      "Explosive sustained melody in chorus"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "defiance",
+      "fueling pain",
+      "heroic aggression"
+    ],
+    "emotional_thesis": "Using the pain of the past as fuel to charge against the blinding light of fate.",
+    "contrast_device": [
+      "silent tears vs loud guitar",
+      "weakness vs aggressive rock drive"
+    ],
+    "dramatic_arc": [
+      "low-tension monologue start",
+      "sudden rock explosion",
+      "cinematic drive"
+    ],
+    "narrative_role": [
+      "wounded fighter",
+      "heroic challenger"
+    ],
+    "title_function": "Turns the blinding force in front of the narrator into the banner image for forward motion.",
+    "key_motifs": [
+      "Backlight",
+      "Tears",
+      "Belief"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 145,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "Gb Major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "aggressive rock drive",
+        "cinematic intensity",
+        "guitar-heavy"
+      ],
+      "vocal_behavior": [
+        "visceral powerful delivery",
+        "raw emotional edges",
+        "sharp rhythmic pronunciation",
+        "heavy compression",
+        "smoldering low verses"
+      ],
+      "production_palette": [
+        "distorted electric guitars",
+        "pounding organic drums",
+        "cinematic synth textures",
+        "gritty Vaundy-style rock mix"
+      ],
+      "arrangement_arc": [
+        "sudden drop-ins",
+        "high-velocity drive",
+        "full-band wall of sound"
+      ],
+      "dynamics_arc": [
+        "mostly high pressure with rhythmic stops for emphasis"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "declaration of intent",
+        "dynamic peak"
+      ],
+      "narrative_job": "The narrator charges into the 'backlight', fully embracing the struggle.",
+      "arrangement_role": {
+        "summary": "Full distorted guitar wall and high-energy drumming.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Soaring, heroic melody with major-key brightness.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Maximum power and cinematic impact.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "repetitive reinforcement ('more and more')"
+      ],
+      "vocabulary_focus": [
+        "backlight",
+        "strength",
+        "belief"
+      ],
+      "rhyme_features": [
+        "open-vowel phrase endings support the forward charge"
+      ],
+      "rhythm_features": [
+        "driving straight pulse",
+        "repeated lift phrases that push the chorus forward"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Cinematic Rock",
+      "Aggressive J-rock",
+      "High-energy Alternative J-pop"
+    ],
+    "tempo_feels": [
+      "driving 145bpm",
+      "unrelenting rock pulse"
+    ],
+    "vocal_tones": [
+      "visceral power",
+      "raw emotion",
+      "sharp rhythmic delivery",
+      "smoldering verses",
+      "authoritative belts"
+    ],
+    "production_palette": [
+      "heavy distorted electric guitar",
+      "punchy live drums",
+      "cinematic layered synths",
+      "gritty rock mix"
+    ],
+    "energy_arc": [
+      "high-velocity heroic drive"
+    ],
+    "imagery_anchors": [
+      "blinding light",
+      "charging forward",
+      "tears as fuel",
+      "epic stage"
+    ],
+    "exclude": [
+      "soft piano ballad",
+      "minimalist electronic",
+      "bright idol fluff"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

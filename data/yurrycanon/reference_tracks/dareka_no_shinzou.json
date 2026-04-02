@@ -1,0 +1,42 @@
+{
+  "track_id": "dareka_no_shinzou",
+  "artist_id": "yurrycanon",
+  "title": "だれかの心臓になれたなら",
+  "bpm": 195,
+  "key": "A Minor",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.65,
+      "description": "Literary narrative. Focus on the 'Warped World'. Rhythmic piano-led tension."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [14, 13, 15, 14],
+      "energy": 0.95,
+      "description": "High-velocity emotional release. 'Ai wo kudasai' (Give me love) motif. Intense percussive delivery."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "「愛をください」 きっとだれもがそう願った",
+      "romaji": "Ai wo kudasai Kitto daremo ga sou negatta",
+      "mora": 21,
+      "meta": "Signature motif. Desperate plea for love."
+    },
+    {
+      "original": "僕の地獄で君はいつでも 絶えず鼓動する心臓だ",
+      "romaji": "Boku no jigoku de kimi wa itsu demo taezu kodou suru shinzou da",
+      "mora": 28,
+      "meta": "Core thematic line. Living source of hope in 'Hell'."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "GUMI - Powerful, rhythmic, emotive high register",
+    "main_instrument": "Percussive Piano, Aggressive Electric Guitar, Driving Rock Drums",
+    "thematic_tags": ["Heartbeat", "Love", "Suffering", "Reason to Live", "Hell"],
+    "signature_phrases": ["心臓 (Heart)", "愛をください (Give me love)"]
+  }
+}

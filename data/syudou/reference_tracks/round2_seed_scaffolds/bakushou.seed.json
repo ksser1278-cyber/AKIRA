@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "syudou",
+    "track_id": "syudou_bakushou",
+    "title": "爆笑"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "mode_support",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "priority": "high"
+  },
+  "seed_brief": {
+    "title_pattern": "violent_laughter",
+    "hook_behavior": [
+      "manic laughter hook",
+      "aggressive drop dynamics"
+    ],
+    "section_flow_guess": [
+      "verse_mocking",
+      "prechorus_breathing",
+      "chorus_laughing_drop",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "laughing at others",
+      "mirrors",
+      "comedy",
+      "clowns"
+    ],
+    "emotional_arc": [
+      "manic joy",
+      "mockery",
+      "superiority"
+    ],
+    "leakage_watchouts": [
+      "the hook must sound like violent, unhinged laughter"
+    ],
+    "prompt_seed_terms": [
+      "aggressive trap metal",
+      "manic laughter",
+      "heavy bass"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Manic laughter as a hook device."
+    ],
+    "style_gap_filled": [
+      "Aggressive drop dynamics."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "chinozo_goodbye_declaration",
+    "artist_id": "chinozo",
+    "title": "グッバイ宣言",
+    "bpm": 170,
+    "key": "E Major",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "high",
+        "lines": [
+          "エマージェンシー 0時 鳴り響く",
+          "溢れ出す 感情の 渦の中",
+          "引きこもり 部屋の隅っこで",
+          "僕らは 夢を 見ている"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 14, "role": "alert_setup", "tech": "Emergency motif + Time pressure"},
+          {"line": 2, "mora": 12, "role": "emotional_chaos", "tech": "Swirling feelings metaphor"},
+          {"line": 3, "mora": 11, "role": "introversion", "tech": "Shut-in (Hikikomori) setting"},
+          {"line": 4, "mora": 9, "role": "secret_dream", "tech": "Quiet internal ambition"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "explosive",
+        "lines": [
+          "グッバイ宣言 さあ今こそ",
+          "この指を 空に 掲げて",
+          "誰にも 邪魔は させないぜ",
+          "僕だけの 色で 染めていく"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "title_hook", "tech": "Declaration call-to-action"},
+          {"line": 2, "mora": 12, "role": "iconic_pose", "tech": "Finger-pointing imagery"},
+          {"line": 3, "mora": 12, "role": "defiance", "tech": "Rejecting interference"},
+          {"line": 4, "mora": 12, "role": "self_assertion", "tech": "Owning one's 'color' / Identity"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["self-declaration", "breaking free from hikikomori culture", "teenage independence"],
+    "emotional_thesis": "The ultimate 'Goodbye' is not a parting from others, but a declaration of war against one's own self-doubt, signaled by a finger pointed at the sun."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

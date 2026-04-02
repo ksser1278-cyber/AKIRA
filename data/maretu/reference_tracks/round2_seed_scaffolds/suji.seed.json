@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "maretu",
+    "track_id": "maretu_suji",
+    "title": "スヂ"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "priority": "high"
+  },
+  "seed_brief": {
+    "title_pattern": "single_kanji_katakana",
+    "hook_behavior": [
+      "Heavy electronic drop",
+      "Distorted screams",
+      "Atonal shifts"
+    ],
+    "section_flow_guess": [
+      "verse_mocking",
+      "prechorus_dissonant",
+      "chorus_heavy_drop",
+      "bridge_noise",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "bloodlines",
+      "dirt",
+      "inescapable fate",
+      "chains"
+    ],
+    "emotional_arc": [
+      "disgust",
+      "anger",
+      "violent release"
+    ],
+    "leakage_watchouts": [
+      "Do not let acoustic elements overpower the industrial noise."
+    ],
+    "prompt_seed_terms": [
+      "industrial vocaloid",
+      "heavy bass drop",
+      "screaming synth"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Extremely heavy drop mechanics missing in current set."
+    ],
+    "style_gap_filled": [
+      "Industrial vocaloid mapping."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "deco27",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "deco27_hibana",
+      "title": "ヒバナ",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "The definitive fast rock emotional anthem."
+      ],
+      "style_gap_filled": [
+        "English integration in hooks."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "deco27_mozaik_role",
+      "title": "モザイクロール",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Classic baseline for DECO*27 rock."
+      ],
+      "style_gap_filled": [
+        "Foundational verse-chorus dynamic."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "deco27_yowamushi_montblanc",
+      "title": "弱虫モンブラン",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Softer, more acoustic-driven anxiety."
+      ],
+      "style_gap_filled": [
+        "Acoustic groove."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "deco27_salamander",
+      "title": "サラマンダー",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Modern heavily-produced hip-hop/rock fusion."
+      ],
+      "style_gap_filled": [
+        "Flow and rap-like verses."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "deco27_android_girl",
+      "title": "アンドロイドガール",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Vocal processing as narrative device."
+      ],
+      "style_gap_filled": [
+        "Heavy thematic sequel mechanics."
+      ],
+      "notes": []
+    }
+  ]
+}

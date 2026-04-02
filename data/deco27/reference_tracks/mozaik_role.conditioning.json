@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_mozaik_role",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "モザイクロール",
+    "title_core": "モザイクロール",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2010-07-15",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2010,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=R_S-pT_vI_o",
+        "status": "confirmed"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "NicoNico Douga (Original Upload)",
+        "origin": "official_channel",
+        "url": "https://www.nicovideo.jp/watch/sm11398357",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance and narrative mode verified for planner_safe promotion."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "lines": [
+          "とある言葉が 君に突き刺さり",
+          "傷口から漏れ出す 液を「愛」と形容してみた",
+          "思いやりの欠如と 形だけの交尾は",
+          "腐れ縁のキミと アタシによく似ている",
+          "「それでも好き」とか (笑)"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "bouncy",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "愛したっていいじゃないか？",
+          "縛り 誰も 触れないよう",
+          "これも運命じゃないか？",
+          "消える 消える とある愛世"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "lines": [
+          "終わる頃には 君に飽いてるよ",
+          "愛か欲か分からず 放つことは何としようか？",
+          "キミがくれた涙は アタシが飲み干すから",
+          "「弱虫でもいい」と 甘い嘘をくれたら",
+          "逃げ出せたのかな"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "desperate",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "「愛した」って言うのですか？",
+          "しがみついて藻掻くことを",
+          "殺したっていいじゃないか？",
+          "キミが嫌うアタシなんて"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "愛したっていいじゃないか？",
+      "消える 消える とある愛世"
+    ],
+    "repetition_patterns": [
+      "Ironic suffixes (笑)",
+      "Vocaloid-specific phonemes (aise, aise)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "self-erasure",
+      "pixelated identity",
+      "loveless attachment"
+    ],
+    "emotional_thesis": "Love is a mosaic of lies ('Amai uso') that covers the void of desire ('Yoku').",
+    "key_motifs": [
+      "mosaic",
+      "liquid",
+      "stabbing",
+      "erasure"
+    ],
+    "interpretation_confidence": "high",
+    "narrative_role": [
+      "ironic_meta"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "stabbing/intrusion"
+      ],
+      "narrative_job": "Uses violent imagery to describe communication.",
+      "vocabulary_focus": [
+        "突き刺さり",
+        "漏れ出す",
+        "交尾"
+      ],
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "justification",
+        "collapse"
+      ],
+      "narrative_job": "The 'Mosaic' is the blurring of boundaries between self and other.",
+      "vocabulary_focus": [
+        "運命",
+        "消える",
+        "愛世"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "high",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "digital_artifact",
+      "biological_love"
+    ],
+    "critic_focus": [
+      "cynicism control",
+      "pixelated metaphors"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.86,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 0.81,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

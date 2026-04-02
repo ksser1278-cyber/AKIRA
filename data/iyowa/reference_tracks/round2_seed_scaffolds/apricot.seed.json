@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_apricot",
+    "title": "アプリコット"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "mode_support",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "soft_fruit",
+    "hook_behavior": [
+      "fragile high-pitched melody",
+      "gentle panic"
+    ],
+    "section_flow_guess": [
+      "verse_soft",
+      "prechorus_shivering",
+      "chorus_fragile_cry",
+      "bridge_silence",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "apricots",
+      "bruises",
+      "softness",
+      "crying"
+    ],
+    "emotional_arc": [
+      "gentle sorrow",
+      "fragility",
+      "dizziness"
+    ],
+    "leakage_watchouts": [
+      "must lack heavy rock drums; rely on soft synths and piano"
+    ],
+    "prompt_seed_terms": [
+      "fragile art pop",
+      "soft piano",
+      "gentle crying vocal"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Soft, agonizing desperation."
+    ],
+    "style_gap_filled": [
+      "Whispery vocal tuning."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_odo",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "踊",
+    "title_core": "Odo",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "tv_program",
+      "work_name": "夜光音楽 ボカロP 5min.",
+      "role_label": "theme_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Giga",
+          "role": "composition",
+          "status": "confirmed"
+        },
+        {
+          "name": "TeddyLoid",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Giga",
+          "role": "arrangement",
+          "status": "confirmed"
+        },
+        {
+          "name": "TeddyLoid",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_mi21042102",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Peak dance energy. Harmonized for consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "半端ならK.O. ふわふわしたいならどうぞ",
+          "開演準備しちゃおうか 泣いても笑っても愛してね"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ロンリー論理のノート ハンディー本気脱走",
+          "やんなっちゃって泥に Badご法度だろうが溺れて堕ちて そろそろいっか"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "Woah 踊りだせ 踊りだせ 孤独は殺菌満員御礼",
+          "Woah 痛みまで おシェアで ここらでバイバイ Let go"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "踊りだせ 踊りだ세",
+      "Let go"
+    ],
+    "repetition_patterns": [
+      "Chant-like 'Woah' openings",
+      "Rhythmic repetition of '踊りだせ'"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "escapism",
+      "collective dance",
+      "discarding pain",
+      "night energy"
+    ],
+    "emotional_thesis": "Surrendering the individual self to the rhythm to erase the stagnation of everyday life.",
+    "contrast_device": [
+      "logical loneliness vs illogical dancing",
+      "pain vs 'sharing' (oshare)"
+    ],
+    "dramatic_arc": [
+      "manic invitation",
+      "rapid-fire build",
+      "groove release"
+    ],
+    "narrative_role": [
+      "dance instigator",
+      "collective escape guide"
+    ],
+    "title_function": "Makes dance itself the method for dissolving isolation and pain.",
+    "key_motifs": [
+      "sterile",
+      "K.O.",
+      "blackout party",
+      "PrrPrrPrr"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 128,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "C# Major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "Bounce/EDM hybrid",
+        "hard-hitting dance groove",
+        "festival-ready"
+      ],
+      "vocal_behavior": [
+        "rapid-fire staccato delivery",
+        "middle-eastern inspired melodic scales",
+        "playful growls and ad-libs",
+        "chanting hooks"
+      ],
+      "production_palette": [
+        "heavy oscillating synth bass",
+        "digital lead synths",
+        "clapping trap-style percussion",
+        "intricate vocal chops"
+      ],
+      "arrangement_arc": [
+        "buildup-drop structure",
+        "rhythmic shifts between sections"
+      ],
+      "dynamics_arc": [
+        "maximally compressed for club impact",
+        "sudden drop-outs for vocal focus"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "unification",
+        "energetic peak"
+      ],
+      "narrative_job": "Sterilize individual loneliness through collective dance.",
+      "arrangement_role": {
+        "summary": "Heaviest part of the track with clear electronic bounce.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Pentatonic-leaning melody with exotic chromatic runs.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Maximum loudness and energy.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "call and response",
+        "exclamatory 'Woah'"
+      ],
+      "vocabulary_focus": [
+        "dance",
+        "sterilization",
+        "loneliness",
+        "farewell"
+      ],
+      "rhyme_features": [
+        "internal rhyming (lonely-ronri)",
+        "vowel-heavy hooks"
+      ],
+      "rhythm_features": [
+        "syncopated bounce",
+        "trap-style hi-hats"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "EDM J-pop",
+      "Electro Bounce J-pop",
+      "Future Bass hybrid"
+    ],
+    "tempo_feels": [
+      "driving 128bpm",
+      "infectious bounce swing"
+    ],
+    "vocal_tones": [
+      "rapid staccato",
+      "playful growls",
+      "exotic melodic scales",
+      "chanting"
+    ],
+    "production_palette": [
+      "heavy synth bass",
+      "digital lead synths",
+      "trap percussion",
+      "vocal chops"
+    ],
+    "energy_arc": [
+      "high-energy build and release"
+    ],
+    "imagery_anchors": [
+      "neon dance floor",
+      "blackout party",
+      "bacteria of loneliness"
+    ],
+    "exclude": [
+      "acoustic guitar",
+      "ballad pacing",
+      "organic piano"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "internal_monologue",
+      "copy_line"
+    ],
+    "mora_control_notes": [
+      "Intro: compressed",
+      "Verse 1: compressed",
+      "Chorus: dense"
+    ],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse.",
+      "Compressed modern phrasing likely needs manual singability review."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias",
+      "title_drop_timing"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

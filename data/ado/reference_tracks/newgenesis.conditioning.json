@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_newgenesis",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "新時代",
+    "title_core": "New Genesis",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "film",
+      "work_name": "ONE PIECE FILM RED",
+      "role_label": "theme_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "Yasutaka Nakata",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Yasutaka Nakata",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Yasutaka Nakata",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_hw22060901",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Futuristic Nakata anthem. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "新時代はこの未来だ",
+          "世界中全部変えてしまえば 変えてしまえば…"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "full",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "Do you wanna play? リアルゲーム ギリギリ",
+          "夢の中に居させて I wanna be free",
+          "見えるよ新時代が 世界の向こうへ"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "新時代はこの未来だ",
+          "世界中全部変えてしまえば 変えてしまえば",
+          "果てしない音楽がもっと届くように"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "新時代だ"
+    ],
+    "repetition_patterns": [
+      "Frequent repetition of Title phrase '新時代'"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "liberation",
+      "utopia through music",
+      "changing the world"
+    ],
+    "emotional_thesis": "A declaration of a new world where music erases all pain and boundaries.",
+    "contrast_device": [
+      "shackles of reality vs freedom of music",
+      "tiring real games vs utopia"
+    ],
+    "dramatic_arc": [
+      "triumphant opening",
+      "pulsating rhythmic drive",
+      "soaring melody"
+    ],
+    "narrative_role": [
+      "utopian herald",
+      "world-opening caller"
+    ],
+    "title_function": "Acts as the banner phrase for the world the song is trying to open.",
+    "key_motifs": [
+      "Metamorphosis",
+      "Magic",
+      "Rising",
+      "NewWorld"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 178,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "D Major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "bright anthemic pulse",
+        "futuristic electronic sparkle",
+        "high-velocity drive"
+      ],
+      "vocal_behavior": [
+        "authoritative and heroic",
+        "clear powerful belting",
+        "soaring sustains",
+        "hopeful radiant tone"
+      ],
+      "production_palette": [
+        "shimmering digital synths",
+        "driving Nakata 4/4 electronic beat",
+        "expansive bright reverb",
+        "high-fidelity sparkle"
+      ],
+      "arrangement_arc": [
+        "immediate high-energy start",
+        "continuous forward momentum"
+      ],
+      "dynamics_arc": [
+        "maximally compressed bright energy"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "anthemic call",
+        "core message"
+      ],
+      "narrative_job": "Invite the audience into the music-made utopia.",
+      "arrangement_role": {
+        "summary": "Full electronic orchestration with shimmering leads.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Simple, diatonic, incredibly catchy melody.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Triumphant and radiant.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "repetitive declaration of future"
+      ],
+      "vocabulary_focus": [
+        "future",
+        "changing the world",
+        "music"
+      ],
+      "rhyme_features": [
+        "slogan-like repeated phrase endings reinforce anthem clarity"
+      ],
+      "rhythm_features": [
+        "steady anthemic pulse",
+        "large singalong downbeats"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Futuristic Electro-pop",
+      "Anthemic J-pop",
+      "High-energy J-electro"
+    ],
+    "tempo_feels": [
+      "driving 178bpm",
+      "pulsating and bright"
+    ],
+    "vocal_tones": [
+      "soaring high notes",
+      "clear and powerful",
+      "authoritative",
+      "triumphant"
+    ],
+    "production_palette": [
+      "shimmering digital synths",
+      "crisp electronic percussion",
+      "expansive bright reverb",
+      "high-density textures"
+    ],
+    "energy_arc": [
+      "triumphant ascending momentum"
+    ],
+    "imagery_anchors": [
+      "new era",
+      "future world",
+      "shining music",
+      "digital utopia"
+    ],
+    "exclude": [
+      "dark distorted sounds",
+      "heavy minor-key gloom",
+      "slow acoustic instruments"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [
+      "Verse 1: dense",
+      "Chorus: dense"
+    ],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "full"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "reframe"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "neru",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "neru_tokyo_teddy_bear",
+      "title": "東京テディベア",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "The grandaddy of vocaloid emotional rock."
+      ],
+      "style_gap_filled": [
+        "Raw guitar emotional arcs."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "neru_lost_ones_weeping",
+      "title": "ロストワンの号哭",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Definitive track for school-system anxiety."
+      ],
+      "style_gap_filled": [
+        "Screaming rock chorus."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "neru_law_evading_rock",
+      "title": "脱法ロック",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Manic drug-reference chaos pop."
+      ],
+      "style_gap_filled": [
+        "Nonsense hooks."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "neru_snobbism",
+      "title": "SNOBBISM",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Funk rock social critique."
+      ],
+      "style_gap_filled": [
+        "Groove-based cynical verses."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "neru_abstract_nonsense",
+      "title": "アブストラクト・ナンセンス",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Early pioneer of despair-rock."
+      ],
+      "style_gap_filled": [
+        "Heavy syncopation in verse."
+      ],
+      "notes": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_alkali_rettoushou",
+    "title": "アルカリレットウショウ"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "chemical_compound",
+    "hook_behavior": [
+      "self-deprecating chant",
+      "rock bounce"
+    ],
+    "section_flow_guess": [
+      "verse_complaint",
+      "prechorus_failure",
+      "chorus_resignation_dance",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "chemicals",
+      "failing grades",
+      "comparisons",
+      "trash"
+    ],
+    "emotional_arc": [
+      "inferiority",
+      "jealousy",
+      "manic acceptance"
+    ],
+    "leakage_watchouts": [
+      "keep the BPM extremely fast to mask the sad lyrics"
+    ],
+    "prompt_seed_terms": [
+      "fast pop punk",
+      "bouncy bass",
+      "self-deprecating"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Establishes inferiority complex themes clearly."
+    ],
+    "style_gap_filled": [
+      "Self-deprecating irony."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

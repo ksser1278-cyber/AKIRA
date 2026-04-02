@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "jin_inner_arts",
+    "artist_id": "jin",
+    "artist_name": "Jin",
+    "title": "Inner Arts",
+    "title_core": "Inner Arts"
+  },
+  "song_intent": {
+    "core_theme": ["Introspection", "Inner World", "Creative Journey"],
+    "emotional_target": "Energetic exploration of the self and the creative act.",
+    "key_motifs": ["Heartbeat", "Sketchbook", "Inner World"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "呼吸を 止めて 走り出した 僕らの 夢を 描くのさ\nINNER ARTS ! 扉を 開けて\n\n[Chorus]\n描いた 世界に 飛び込んで 最高の 景色を 見に行こう\nINNER ARTS ! 誰にも 止められない\n心の中の 地図を 広げて",
+    "hook_lines": ["INNER ARTS !", "心の中の 地図を 広げて"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["描いた 世界に 飛び込んで 最高の 景色を 見に行こう", "INNER ARTS ! 誰にも 止められない", "心の中の 地図を 広げて"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Energetic", "Powerful", "Vocaloid-IA Rocks"],
+    "production_palette": ["High-speed rock guitars", "Synthesizer arpeggios", "Powerful drums"],
+    "energy_arc": "Expansive creative burst",
+    "imagery_anchors": ["Slowing lines", "Map of the heart", "Glowing sketchbook", "Endless horizon"]
+  }
+}

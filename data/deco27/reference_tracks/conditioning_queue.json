@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "deco27",
+  "artist_name": "DECO*27",
+  "reference_role": "audio-aligned primary anchor set",
+  "notes": [
+    "This queue is aligned to the owned-audio set in data/audio_manifest.json.",
+    "Legacy benchmark tracks remain on disk, but this queue defines the active DECO*27 conditioning line."
+  ],
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "deco27_ghost_rule",
+      "title": "Ghost Rule",
+      "romanized": "Ghost Rule",
+      "mode": "dark_cute_breakdown",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning", "audio enrichment"]
+    },
+    {
+      "priority": 2,
+      "track_id": "deco27_love_doll",
+      "title": "LOVE DOLL",
+      "romanized": "Love Doll",
+      "mode": "direct_emotional_pop",
+      "status": "drafted",
+      "required_inputs": ["lyrics", "credits", "hook lines", "section map", "prompt conditioning", "audio enrichment"]
+    },
+    {
+      "priority": 3,
+      "track_id": "deco27_ai_kotoba",
+      "title": "Ai Kotoba",
+      "romanized": "Ai Kotoba",
+      "mode": "direct_emotional_pop",
+      "status": "drafted",
+      "required_inputs": ["lyrics", "credits", "hook lines", "section map", "prompt conditioning", "audio enrichment"]
+    },
+    {
+      "priority": 4,
+      "track_id": "deco27_tsumi_to_batsu",
+      "title": "Tsumi to Batsu",
+      "romanized": "Tsumi to Batsu",
+      "mode": "dark_cute_breakdown",
+      "status": "drafted",
+      "required_inputs": ["lyrics", "credits", "hook lines", "section map", "prompt conditioning", "audio enrichment"]
+    },
+    {
+      "priority": 5,
+      "track_id": "deco27_yumeyume",
+      "title": "Yumeyume (Feat. Hatsune Miku)",
+      "romanized": "Yumeyume",
+      "mode": "direct_emotional_pop",
+      "status": "drafted",
+      "required_inputs": ["lyrics", "credits", "hook lines", "section map", "prompt conditioning", "audio enrichment"]
+    }
+  ]
+}

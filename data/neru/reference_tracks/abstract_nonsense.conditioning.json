@@ -1,0 +1,230 @@
+{
+  "track_identity": {
+    "track_id": "neru_abstract_nonsense",
+    "title": "アブストラクト・ナンセンス",
+    "artist": "neru",
+    "status": "cross_checked"
+  },
+  "likely_mode": "ironic_meta",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm11050802/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/kY1y-7Y_90E",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Cross-check bundle updated with an official creator upload exposing lyric text directly and existing lyric text retained."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "頭ごなしの机上の空論",
+      "あの子みたいになりたくて"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "頭ごなしの机上の空論",
+          "首から下が空中分解",
+          "鉛で紡ぐ将来設計",
+          "論争のファンタジー"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "鉛で紡ぐ将来設計",
+          "論争のファンタジー"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "あの子みたいになりたくて",
+          "あの子みたいになれなくて",
+          "そんなの当たり前じゃない"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "あの子みたいになりたくて",
+          "あの子みたいになれなくて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "あの子みたいになりたくて",
+          "あの子みたいになれなくて",
+          "そんなの当たり前じゃない"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Sets the mood and initial conflict.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Drives the instrumental forward.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hit"
+      ],
+      "narrative_job": "Explosive delivery of the title concept.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "reversal / silence"
+      ],
+      "narrative_job": "Subverts expectations before the finale.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Highest energy state of the track.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "Everything is meaningless garbage.",
+    "core_emotion": "Nihilism",
+    "primary_target": "The listener or a toxic counterpart",
+    "contrast_device": "Upbeat vocaloid rock delivering ultimate teenage despair.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "2010s vocaloid rock",
+      "syncopated bass"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.8,
+    "score_breakdown": {
+      "provenance_trust": 0.67,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

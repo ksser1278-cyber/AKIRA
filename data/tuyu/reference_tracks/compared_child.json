@@ -1,0 +1,42 @@
+{
+  "track_id": "compared_child",
+  "artist_id": "tuyu",
+  "title": "くらべられっ子",
+  "bpm": 195,
+  "key": "Db Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Pre-Chorus", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.6,
+      "description": "Rapid-fire delivery. Focus on specific inferiority comparisons. Very rhythmic piano."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [14, 13, 15, 14],
+      "energy": 0.9,
+      "description": "Explosive emotional release. 'Kuraberarekko' motif. High syncopation."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "くらべられっ子 くらべられっ子 さあ",
+      "romaji": "Kuraberarekko Kuraberarekko saa",
+      "mora": 16,
+      "meta": "Signature motif. Repeated for obsessive emphasis."
+    },
+    {
+      "original": "だから比べないで いや比べんな 私をほっといて",
+      "romaji": "Dakara kurabenaide iya kuraben na Watashi wo hottoite",
+      "mora": 22,
+      "meta": "Core emotional plea. Rapid negation."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Rei - Sharp, rhythmic, emotive high notes",
+    "main_instrument": "Jazz-fusion Electric Guitar, Piano, Fast Rock Drums",
+    "thematic_tags": ["Comparison", "Inadequacy", "Anxiety", "Self-Deprecation"],
+    "signature_phrases": ["くらべられっ子 (Compared Child)", "ほっといて (Leave me alone)"]
+  }
+}

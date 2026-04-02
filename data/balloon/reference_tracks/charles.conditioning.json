@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "balloon_charles",
+    "artist_id": "balloon",
+    "title": "シャルル",
+    "bpm": 145,
+    "key": "B Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "sharp",
+        "lines": [
+          "さよならはお互い言わないでおこう",
+          "これから始まる毎日のために",
+          "笑ってさよなら",
+          "君はそう言ったね"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 16, "role": "hook_setup", "tech": "Avoiding the goodbye (Irony)"},
+          {"line": 2, "mora": 14, "role": "future_detachment", "tech": "Daily life as a burden"},
+          {"line": 3, "mora": 7, "role": "masking", "tech": "Smiling goodbye"},
+          {"line": 4, "mora": 8, "role": "observation", "tech": "Recalling her words with distance"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "bouncy",
+        "lines": [
+          "シャルル シャルル 踊りましょう",
+          "夜の街を 抜けて",
+          "愛を 歌って 歌って 歌って",
+          "最後は 独りきり"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "title_hook", "tech": "Charles name repeat + Dance invitation"},
+          {"line": 2, "mora": 8, "role": "urban_escape", "tech": "Night city motif"},
+          {"line": 3, "mora": 12, "role": "repetition_peak", "tech": "Obsessive singing loop"},
+          {"line": 4, "mora": 8, "role": "cynical_drop", "tech": "Final isolation reveal"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["cynical separation", "danceable isolation", "urban apathy"],
+    "emotional_thesis": "Love is a dance in a lonely city; we repeat the same steps until we're finally alone, hiding the pain behind a sophisticated beat."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

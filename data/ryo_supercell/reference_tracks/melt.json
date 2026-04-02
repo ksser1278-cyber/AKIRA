@@ -1,0 +1,42 @@
+{
+  "track_id": "melt",
+  "artist_id": "ryo_supercell",
+  "title": "メルト",
+  "bpm": 170,
+  "key": "Eb Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.5,
+      "description": "Daily life narrative. Piano-led gentle rock. Focused on 'Maegami' (Bangs) motif."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [14, 13, 15, 14],
+      "energy": 0.9,
+      "description": "Grand anthem-style explosion. 'Melt' hook. High emotional release."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "メルト 溶けてしまいそう",
+      "romaji": "Melt tokete shimaisou",
+      "mora": 12,
+      "meta": "Signature motif. Iconic first-love metaphor."
+    },
+    {
+      "original": "お願い 時間を止めて 泣きそうなの",
+      "romaji": "Onegai jikan wo tomete nakisou nano",
+      "mora": 18,
+      "meta": "Core emotional plea. Innocent and intense."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Hatsune Miku - Emotive, innocent, clear",
+    "main_instrument": "Grand Piano, Electric Guitar, Driving Drums",
+    "thematic_tags": ["First Love", "Shyness", "Umbrella", "Rain", "Daily Scene"],
+    "signature_phrases": ["メルト (Melt)", "好きだなんて絶対に言えない (Can absolutely not say I like you)"]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "dazibee_elegant_pop",
+    "artist_id": "dazibee",
+    "artist_name": "DAZIBEE",
+    "title": "Urban Fantasy",
+    "title_core": "Urban Fantasy"
+  },
+  "song_intent": {
+    "core_theme": ["Urban Solitude", "Multilingual Sensitivity", "Morning Coffee"],
+    "emotional_target": "Elegant, sophisticated observations of modern city life.",
+    "key_motifs": ["Coffee", "Skyline", "Window", "Morning"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "朝の光が 窓から 溢れて 昨日の 憂鬱を 溶かしてゆくの\nコーヒーの 香りと 共に 始める Urban Fantasy\n\n[Chorus]\n流れる 街の 景色を 眺めて 少しだけ 息を 吐いて\n誰にも 邪魔されない 贅沢な 孤独を 楽しむのさ\nまた 新しい 私に 会いに行くの",
+    "hook_lines": ["Urban Fantasy", "贅沢な 孤独を 楽しむのさ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["流れる 街の 景色を 眺めて 少しだけ 息を 吐いて", "誰にも 邪魔されない 贅沢な 孤独を 楽しむのさ", "また 新しい 私に 会いに行くの"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Elegant", "Clear", "Smooth", "Bilingual feel"],
+    "production_palette": ["Clean jazz piano", "Sleek bass", "Light percussive beat"],
+    "energy_arc": "Gentle urban swell",
+    "imagery_anchors": ["City skyline from a window", "Steam rising from a cup", "Morning sunlight on wood", "Train tracks"]
+  }
+}

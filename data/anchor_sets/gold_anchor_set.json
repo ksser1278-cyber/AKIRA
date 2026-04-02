@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "set_id": "gold_anchor_set",
+  "set_type": "gold_anchor",
+  "description": "Highest-trust benchmark anchor set used for planner, critic, demo generation, and regression checks.",
+  "artists": [
+    {
+      "artist_id": "pinocchiop",
+      "track_ids": [
+        "pinocchiop_kamippoi_na",
+        "pinocchiop_tensei_ringo",
+        "pinocchiop_tokumei_m",
+        "pinocchiop_mahou_shoujo_to_chocolate",
+        "pinocchiop_non_breath_oblige"
+      ]
+    },
+    {
+      "artist_id": "deco27",
+      "track_ids": [
+        "deco27_ghost_rule",
+        "deco27_love_doll",
+        "deco27_ai_kotoba",
+        "deco27_tsumi_to_batsu",
+        "deco27_yumeyume"
+      ]
+    }
+  ],
+  "notes": [
+    "This set is synchronized from active conditioning audits.",
+    "Only tracks graded gold should remain here."
+  ]
+}

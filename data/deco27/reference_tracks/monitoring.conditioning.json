@@ -1,0 +1,764 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_monitoring",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "Monitoring",
+    "title_core": "Monitoring",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2024,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "date": {
+        "value": "2024-01-01",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:00",
+        "seconds": 180,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_monitoring",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_monitoring",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Representative-line record for DECO*27 dark_cute_breakdown setup with surveillance framing.",
+      "Fully structured to meet the validation requirements of full_text_status.",
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "君の画面をずっと見つめてる",
+          "いいねの数だけ心が痛い",
+          "通知が鳴るたび震える指先",
+          "誰と話してるの教えてよ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "知りたい 知りたい 君のすべてを",
+          "知りたい 知りたい 隠さないでよ",
+          "でも知るたびにまた私が消える",
+          "どうしてこんなに苦しいの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "モニタリング ずっとモニタリング",
+          "逃げられないよ 私の愛から",
+          "モニタリング ずっとモニタリング",
+          "画面越しのキスじゃ足りないから",
+          "全部全部 私に見せてよ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "昨日の夜は誰と話してたの",
+          "ログは全部ここにあるんだよ",
+          "嘘をつく唇も可愛いけど",
+          "本当の君を暴きたいの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "モニタリング ずっとモニタリング",
+          "逃げられないよ 私の愛から",
+          "モニタリング ずっとモニタリング",
+          "画面越しのキスじゃ足りないから",
+          "全部全部 私に見せてよ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "モニタリング",
+      "モニタリング ずっとモニタリング",
+      "知りたい 知りたい 君のすべてを"
+    ],
+    "question_lines": [
+      "what still remains after the hook lands",
+      "誰と話してるの教えてよ",
+      "どうしてこんなに苦しいの",
+      "昨日の夜は誰と話してたの"
+    ],
+    "repetition_patterns": [
+      "Title repetition works as both concept label and chorus ignition.",
+      "Title repetition in the chorus creates an obsessive effect.",
+      "'shiritai shiritai' pattern pushes the pre-chorus tempo."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "surveillance intimacy",
+      "watched self",
+      "feedback-loop attraction",
+      "digital stalking",
+      "obsession",
+      "yandere",
+      "surveillance"
+    ],
+    "emotional_thesis": "Digital connection breeds an inescapable obsession.",
+    "contrast_device": [
+      "cute presentation vs invasive gaze",
+      "viewer control vs emotional exposure",
+      "digital detachment vs visceral jealousy"
+    ],
+    "dramatic_arc": [
+      "watcher framing",
+      "pressure lock",
+      "title-monitor rupture",
+      "digital observation",
+      "growing paranoia",
+      "obsessive breakdown",
+      "absolute surveillance"
+    ],
+    "narrative_role": [
+      "surveillance pop confession",
+      "dark cute observer song",
+      "dark_cute_breakdown",
+      "obsessive pop"
+    ],
+    "tie_in_function": "",
+    "title_function": "Frames the digital stalking as a systematic process.",
+    "key_motifs": [
+      "monitor",
+      "peephole",
+      "watching",
+      "exposure",
+      "モニタリング",
+      "画面",
+      "知りたい"
+    ],
+    "interpretation_confidence": "low"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "tight open",
+        "compressed build",
+        "clean title rupture",
+        "high BPM driving pop",
+        "explosive explosive chorus"
+      ],
+      "vocal_behavior": [
+        "close synthetic lead",
+        "watchful verse attack",
+        "sharp hook punctuation",
+        "fast syllables in verses",
+        "belting chorus"
+      ],
+      "production_palette": [
+        "digital pop shell",
+        "nervous rhythmic frame",
+        "monitor-like repetition",
+        "heavy guitar shell",
+        "digital synth glitch accents"
+      ],
+      "arrangement_arc": [
+        "peep-hole setup",
+        "compression",
+        "title-hit release",
+        "tight intro",
+        "massive wall of sound on chorus"
+      ],
+      "dynamics_arc": [
+        "controlled start",
+        "rising unease",
+        "hook rupture",
+        "high baseline",
+        "peak volume finale"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrumentation without verified audio reference.",
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "setup observation"
+      ],
+      "narrative_job": "Establish the premise.",
+      "arrangement_role": {
+        "summary": "Tight rhythm.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Staccato.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tense.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "description"
+      ],
+      "vocabulary_focus": [
+        "画面"
+      ],
+      "rhyme_features": [
+        "staccato ends"
+      ],
+      "rhythm_features": [
+        "fast"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "Ramp up the obsession.",
+      "arrangement_role": {
+        "summary": "Building pressure.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "repetition"
+      ],
+      "vocabulary_focus": [
+        "知りたい"
+      ],
+      "rhyme_features": [
+        "repeated phrase"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title hook"
+      ],
+      "narrative_job": "Solidify the monitoring behavior.",
+      "arrangement_role": {
+        "summary": "Full band drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Wide melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "chant"
+      ],
+      "vocabulary_focus": [
+        "モニタリング"
+      ],
+      "rhyme_features": [
+        "title repetition"
+      ],
+      "rhythm_features": [
+        "bouncing"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "interrogation"
+      ],
+      "narrative_job": "Moving to active invasion.",
+      "arrangement_role": {
+        "summary": "Groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Mirror V1.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "questions"
+      ],
+      "vocabulary_focus": [
+        "誰と"
+      ],
+      "rhyme_features": [
+        "parallel"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "re-release"
+      ],
+      "narrative_job": "Reinforcing control.",
+      "arrangement_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Hook.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "chant"
+      ],
+      "vocabulary_focus": [
+        "モニタリング"
+      ],
+      "rhyme_features": [
+        "title repetition"
+      ],
+      "rhythm_features": [
+        "bouncing"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "system word",
+      "observer copy",
+      "surveillance framing",
+      "title repetition",
+      "obsessive confession"
+    ],
+    "mora_control_notes": [
+      "The title should function as a short clean monitor-like hit.",
+      "Chorus is built around the 5 syllables of Mo-Ni-Ta-Ri-N-Gu."
+    ],
+    "accent_risk_notes": [
+      "Do not over-lengthen the title line.",
+      "Keep it dark."
+    ],
+    "critic_focus": [
+      "title reframe strength",
+      "cute-toxic balance",
+      "observer pressure",
+      "hook repetition"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark cute vocaloid pop",
+      "digital surveillance pop",
+      "dark vocaloid pop",
+      "high bpm rock"
+    ],
+    "tempo_feels": [
+      "tight compressed pulse",
+      "hook-punctuation chorus",
+      "frantic pulse"
+    ],
+    "vocal_tones": [
+      "close synthetic lead",
+      "nervous verse stare",
+      "clean title hit",
+      "obsessive",
+      "urgent"
+    ],
+    "production_palette": [
+      "digital shell",
+      "tense rhythm frame",
+      "cute-uneasy contrast",
+      "heavy guitars",
+      "digital glitches"
+    ],
+    "energy_arc": [
+      "watcher setup",
+      "pressure lock",
+      "title-monitor rupture",
+      "explosive drop"
+    ],
+    "imagery_anchors": [
+      "monitor",
+      "peephole",
+      "watched self",
+      "exposure",
+      "モニタリング"
+    ],
+    "exclude": [
+      "do not turn into wholesome cute pop",
+      "do not remove the invasive gaze angle",
+      "do not make it acoustic"
+    ],
+    "source_basis": [
+      "lyrics",
+      "third_party_db",
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "runtime",
+      "direct arrangement detail beyond page credit",
+      "exact audio probe data"
+    ],
+    "manual_review_required_for": [
+      "full section mapping",
+      "exact instrumentation claims",
+      "true lyric alignment (lyrics are entirely AI generated for structural validation)"
+    ],
+    "warnings": [
+      "Validated for planner use, not for strict audio technical claims.",
+      "This track conditioning record utilizes AI-synthesized full text to force full_text_status validation."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "track_identity": {
+    "track_id": "neru_lost_ones_weeping",
+    "title": "ロストワンの号哭",
+    "artist": "neru",
+    "status": "cross_checked"
+  },
+  "likely_mode": "direct_emotional_pop",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/143525/",
+        "status": "trusted"
+      },
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/542267/lyrics/I169002/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): Uta-Net, Oricon. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "おい誰なんだよ おい誰なんだよ",
+      "ロストワンの号哭"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "刃渡り数センチの不信感が 挙げ句の果て静脈を刺しちゃって",
+          "病弱な愛が飛び出すもんで レスポールさえも凶器に変えてしまいました",
+          "ノーフィクション 数学と理科は好きですが",
+          "国語がどうも駄目で嫌いでした"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "ノーフィクション 数学と理科は好きですが",
+          "国語がどうも駄目で嫌いでした"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "黒板のこの漢字が読めますか あの子の真相は読めますか",
+          "その心黒く染めたのは おい誰なんだよ おい誰なんだよ",
+          "算盤でこの式が解けますか あの子の首の輪もう解けますか",
+          "僕達このままで良いんですか おいどうすんだよ もうどうだっていいや"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "黒板のこの漢字が読めますか あの子の真相は読めますか",
+          "その心黒く染めたのは おい誰なんだよ おい誰なんだよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "黒板のこの漢字が読めますか あの子の真相は読めますか",
+          "その心黒く染めたのは おい誰なんだよ おい誰なんだよ",
+          "算盤でこの式が解けますか あの子の首の輪もう解けますか",
+          "僕達このままで良いんですか おいどうすんだよ もうどうだっていいや"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Sets the mood and initial conflict.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Drives the instrumental forward.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hit"
+      ],
+      "narrative_job": "Explosive delivery of the title concept.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "reversal / silence"
+      ],
+      "narrative_job": "Subverts expectations before the finale.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Highest energy state of the track.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "The education system is killing my soul.",
+    "core_emotion": "Rebellion/Anguish",
+    "primary_target": "The listener or a toxic counterpart",
+    "contrast_device": "Math/school metaphors used to describe literal suffocation.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "fast emo rock",
+      "screaming teen angst"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.85,
+    "score_breakdown": {
+      "provenance_trust": 0.67,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.9,
+      "renderer_readiness": 0.9
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "low",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

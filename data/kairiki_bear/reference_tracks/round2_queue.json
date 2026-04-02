@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "kairiki_bear",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "kairiki_bear_ruma",
+      "title": "ルマ",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "A defining track for vocal stutter drops."
+      ],
+      "style_gap_filled": [
+        "Stuttering hook logic mapping."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "kairiki_bear_angel",
+      "title": "アンヘル",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Adds heavy angelic/demonic binary theme."
+      ],
+      "style_gap_filled": [
+        "Contrast between dark lyrics and upbeat tempo."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "kairiki_bear_alkali_rettoushou",
+      "title": "アルカリレットウショウ",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Establishes inferiority complex themes clearly."
+      ],
+      "style_gap_filled": [
+        "Self-deprecating irony."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "kairiki_bear_lemmingming",
+      "title": "レミングミング",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Explores mass psychology and suicidal ideation metaphors."
+      ],
+      "style_gap_filled": [
+        "Dark thematic depth."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "kairiki_bear_shippaisaku_shoujo",
+      "title": "失敗作少女",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Deeply emotional, less glitchy, more desperate."
+      ],
+      "style_gap_filled": [
+        "Acoustic-to-rock emotional scaling."
+      ],
+      "notes": []
+    }
+  ]
+}

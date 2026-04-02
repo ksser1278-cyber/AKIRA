@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "pinocchiop",
+  "reference_role": "producer expansion queue",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "pinocchiop_aisarenakutemo_kimi_ga_iru",
+      "title": "Aisarenakutemo Kimi ga Iru",
+      "romanized": "Aisarenakutemo Kimi ga Iru",
+      "mode": "direct_emotional_pop",
+      "status": "drafted",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 2,
+      "track_id": "pinocchiop_loveit",
+      "title": "Loveit",
+      "romanized": "Loveit",
+      "mode": "dark_cute_breakdown",
+      "status": "drafted",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 3,
+      "track_id": "pinocchiop_ultimate_senpai",
+      "title": "Ultimate Senpai",
+      "romanized": "Ultimate Senpai",
+      "mode": "ironic_meta",
+      "status": "drafted",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 4,
+      "track_id": "pinocchiop_boku_nanka_inakutemo",
+      "title": "Boku Nanka Inakutemo",
+      "romanized": "Boku Nanka Inakutemo",
+      "mode": "direct_emotional_pop",
+      "status": "drafted",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 5,
+      "track_id": "pinocchiop_kusare_gedou_to_chocolate",
+      "title": "Kusare Gedou to Chocolate",
+      "romanized": "Kusare Gedou to Chocolate",
+      "mode": "dark_cute_breakdown",
+      "status": "drafted",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    }
+  ]
+}

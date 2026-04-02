@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "pinocchiop",
+  "artist_name": "PinocchioP",
+  "reference_role": "primary anchor for ironic_meta",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "pinocchiop_kamippoi_na",
+      "title": "神っぽいな",
+      "romanized": "Kamippoi na",
+      "mode": "ironic_meta",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 2,
+      "track_id": "pinocchiop_tensei_ringo",
+      "title": "転生林檎",
+      "romanized": "Tensei Ringo",
+      "mode": "ironic_meta",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 3,
+      "track_id": "pinocchiop_tokumei_m",
+      "title": "匿名M",
+      "romanized": "Tokumei M",
+      "mode": "ironic_meta",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 4,
+      "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+      "title": "魔法少女とチョコレゐト",
+      "romanized": "Mahou Shoujo to Chocolate",
+      "mode": "dark_cute_breakdown",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 5,
+      "track_id": "pinocchiop_non_breath_oblige",
+      "title": "ノンブレス・オブリージュ",
+      "romanized": "Non-Breath Oblige",
+      "mode": "ironic_meta",
+      "status": "validated",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 6,
+      "track_id": "pinocchiop_aisarenakutemo_kimi_ga_iru",
+      "title": "愛されなくても君がいる",
+      "romanized": "Aisarenakutemo Kimi ga Iru",
+      "mode": "direct_emotional_pop",
+      "status": "pending",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 7,
+      "track_id": "pinocchiop_loveit",
+      "title": "ラヴィット",
+      "romanized": "Loveit",
+      "mode": "dark_cute_breakdown",
+      "status": "pending",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 8,
+      "track_id": "pinocchiop_ultimate_senpai",
+      "title": "アルティメットセンパイ",
+      "romanized": "Ultimate Senpai",
+      "mode": "ironic_meta",
+      "status": "pending",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 9,
+      "track_id": "pinocchiop_boku_nanka_inakutemo",
+      "title": "ぼくなんかいなくても",
+      "romanized": "Boku Nanka Inakutemo",
+      "mode": "direct_emotional_pop",
+      "status": "pending",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    },
+    {
+      "priority": 10,
+      "track_id": "pinocchiop_kusare_gedou_to_chocolate",
+      "title": "腐れ外道とチョコレゐト",
+      "romanized": "Kusare Gedou to Chocolate",
+      "mode": "dark_cute_breakdown",
+      "status": "pending",
+      "required_inputs": ["lyrics", "credits", "release year", "hook lines", "section map", "prompt conditioning"]
+    }
+  ]
+}

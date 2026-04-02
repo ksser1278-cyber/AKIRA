@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "jin_kagerou_daze",
+    "artist_id": "jin",
+    "title": "カゲロウデイズ",
+    "bpm": 185,
+    "key": "A Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "narrative",
+        "lines": [
+          "8月15日の 午後12時半くらいのこと",
+          "天気が良い 病気になりそうなほど 眩しい日",
+          "病気になりそうなほど 眩しい日",
+          "あの日々を 思い出していた"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 22, "role": "timestamp", "tech": "Specific date/time for narrative grounding"},
+          {"line": 2, "mora": 18, "role": "heat_haze", "tech": "Blinding sun metaphor (Dizzying heat)"},
+          {"line": 3, "mora": 13, "role": "repetition", "tech": "Emphasis on the blinding heat"},
+          {"line": 4, "mora": 11, "role": "memory", "tech": "Recalling those days (Nostalgia start)"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "aggressive",
+        "lines": [
+          "カゲロウデイズ 嗤い合って",
+          "この夏を ぶち壊そうぜ",
+          "何回も 何回も 繰り返す",
+          "最後の一瞬 終わらない"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "title_hook", "tech": "Title drop + Mocking laughter"},
+          {"line": 2, "mora": 12, "role": "destruction", "tech": "Aggressive call to destroy the summer"},
+          {"line": 3, "mora": 12, "role": "loop_reveal", "tech": "Iterative repetition mention"},
+          {"line": 4, "mora": 11, "role": "eternal_ending", "tech": "Unending final moment (The Daze)"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["summery loop", "tragic repetition", "youthful rebellion"],
+    "emotional_thesis": "The 'Kagerou Daze' is a recurring nightmare of an endless August afternoon; the only way to escape the heat is to destroy the very cycle of memory that sustains it."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

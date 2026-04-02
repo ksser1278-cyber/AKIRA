@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "maretu",
+    "track_id": "maretu_koukatsu",
+    "title": "コウカツ"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "blunt_kanji",
+    "hook_behavior": [
+      "rapid fire syllables",
+      "metal blast beats",
+      "cynical truth"
+    ],
+    "section_flow_guess": [
+      "verse_blast",
+      "prechorus_halt",
+      "chorus_hammer",
+      "bridge_slow",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "spitting",
+      "scum",
+      "truth",
+      "society"
+    ],
+    "emotional_arc": [
+      "pure rage",
+      "judgment",
+      "cynicism"
+    ],
+    "leakage_watchouts": [
+      "vocal parsing must be incredibly fast against metal drums"
+    ],
+    "prompt_seed_terms": [
+      "speed metal vocaloid",
+      "blast beats",
+      "cynical shouting"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Sharp, biting social critique."
+    ],
+    "style_gap_filled": [
+      "Fast vocal parsing in metal."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

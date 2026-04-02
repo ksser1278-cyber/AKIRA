@@ -1,0 +1,1036 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_ai_kotoba",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "愛言葉",
+    "title_core": "愛言葉",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "No tie-in noted in lyric and release references",
+          "origin": "other",
+          "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "DECO*27 self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2009-07-21",
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Vocaloid Wiki song page release date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "year": {
+        "value": 2009,
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Vocaloid Wiki song page release date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "4:24",
+        "seconds": 264,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-05-Ai Kotoba.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Wiki lyric excerpt source",
+        "origin": "lyric_site",
+        "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Wiki song page",
+        "origin": "other",
+        "url": "https://vocaloid.fandom.com/wiki/%E6%84%9B%E8%A8%80%E8%91%89_(Ai_Kotoba)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Local owned audio file metadata",
+        "origin": "other",
+        "notes": "FLAC tags from Melon library file",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section mapping for direct-confession pop structure."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking to map hook repetition and section energy.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "(Instrumental hook)"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "いつも僕の子供が お世話になっているようで",
+          "聴いてくれたあなた方に 感謝、感謝。",
+          "このご恩を一生で忘れないうちに",
+          "内に秘めた想いとともに 歌にしてみました。"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "愛言葉は“愛が10=ありがとう”",
+          "僕とか君とか 恋とか愛とか",
+          "好きとか嫌いとか また歌うね"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "今君が好きで てか君が好きで",
+          "むしろ君が好きで こんなバカな僕を君は好きで",
+          "愛してくれて。こんな歌聴いて泣いてくれて",
+          "ありがとう。"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "いつか僕の子供が 10万歳の誕生日",
+          "迎えたとき、祝ってくれて39ました",
+          "このご恩は一生で限られた時間で",
+          "生まれる曲と詩に乗せて 君に届けるよ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "これからもどうかよろしくね",
+          "僕とか君とか 恋とか愛とか",
+          "好きとか嫌いとか まだ足りない？",
+          "じゃあ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "「昨日何食べた？」「何してた？」「何回僕のこと思い出した？」",
+          "こんなこと話してみようか！",
+          "「キミ食べた。」「...バカ。」「何回キミのこと抱きしめた？」",
+          "…私、泣かないよ」"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "ありがとう…",
+          "バカ…",
+          "私、泣かないよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "「昨日何食べた？」「何してた？」「何回僕のこと思い出した？」",
+          "こんなこと話してみようか！",
+          "「キミ食べた。」「...バカ。」「何回キミのこと抱きしめた？」",
+          "…私、泣かないよ」"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "今君が好きで てか君が好きで",
+      "ありがとう",
+      "愛言葉は“愛が10=ありがとう”"
+    ],
+    "question_lines": [
+      "「昨日何食べた？」「何してた？」「何回僕のこと思い出した？」"
+    ],
+    "repetition_patterns": [
+      "Repetitive stacking of '好きで' creates an overwhelming outpouring of affection.",
+      "The Pre-Chorus relies heavily on binary oppositions (僕とか君とか 恋とか愛とか)."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "gratitude",
+      "direct confession",
+      "fan-addressed affection",
+      "creator-listener bond"
+    ],
+    "emotional_thesis": "The song turns a standard 'thank you for listening' message into an unabashed, hyper-direct declaration of love for the audience and the act of creation.",
+    "contrast_device": [
+      "ordinary gratitude vs oversized confession",
+      "casual conversational tone vs deep sincere emotion"
+    ],
+    "dramatic_arc": [
+      "polite thank-you setup",
+      "formulaic thematic bridge",
+      "explosion of 'I love you's",
+      "conversational intimacy deepening",
+      "tears of gratitude"
+    ],
+    "narrative_role": [
+      "direct_emotional_pop",
+      "gratitude anthem",
+      "meta-creator song"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title frames the song as a secret passcode ('Ai Kotoba' sounds like 'password' but means 'Love Words') shared between the creator and the listener.",
+    "key_motifs": [
+      "愛言葉 (Love Password)",
+      "ありがとう",
+      "君が好き",
+      "子供 (songs as children)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1065216,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-05-Ai Kotoba.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -5.6,
+        "lra_lu": 2.4,
+        "rms_median_db": -8.285,
+        "rms_span_db": 77.897,
+        "early_rms_db": -8.37,
+        "mid_rms_db": -8.393,
+        "late_rms_db": -8.111,
+        "late_minus_early_db": 0.259,
+        "peak_zone": "early",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "DECO_27-05-Ai Kotoba.flac"
+          }
+        ]
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "stable compressed pop energy",
+        "front-loaded brightness",
+        "cheerful drive"
+      ],
+      "vocal_behavior": [
+        "bright direct lead",
+        "clear conversational chorus address"
+      ],
+      "production_palette": [
+        "guitar-driven vocaloid pop rock",
+        "clean hook-forward shell"
+      ],
+      "arrangement_arc": [
+        "quick hook setup",
+        "conversational verse",
+        "massive affectionate chorus release"
+      ],
+      "dynamics_arc": [
+        "high baseline energy",
+        "consistent pop-rock drive",
+        "emotional peak in final chorus"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference",
+        "human_listening"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact synth patch or mix-chain detail without direct listening notes."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "gratitude setup",
+        "direct address"
+      ],
+      "narrative_job": "Frame the song as a thank-you message spoken plainly to the listener, referring to past songs as 'children' being taken care of.",
+      "arrangement_role": {
+        "summary": "Supports clear text delivery and a conversational pop opening.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Keeps the melody readable and speech-like.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steady pop-rock drive.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "direct address",
+        "thanks statement"
+      ],
+      "vocabulary_focus": [
+        "感謝",
+        "あなた方",
+        "子供"
+      ],
+      "rhyme_features": [
+        "conversational parallel structure"
+      ],
+      "rhythm_features": [
+        "balanced spoken-pop cadence"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "formula reveal",
+        "hook compression"
+      ],
+      "narrative_job": "Convert the gratitude into a universally understandable pop formula ('Love equals Thank You').",
+      "arrangement_role": {
+        "summary": "Tightens around the title phrase before the full confession opens.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Works as a bridge from conversational setup into repeatable chorus copy.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Pre-chorus swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "formula line",
+        "binary listing"
+      ],
+      "vocabulary_focus": [
+        "愛言葉",
+        "ありがとう",
+        "恋とか愛とか"
+      ],
+      "rhyme_features": [
+        "Toka parallel stacking"
+      ],
+      "rhythm_features": [
+        "staccato bouncing list"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "b_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "direct confession",
+        "gratitude release"
+      ],
+      "narrative_job": "Explode the song into plain spoken affection so the listener receives the ultimate 'Thank You' as an 'I Love You'.",
+      "arrangement_role": {
+        "summary": "A clean hook-led release that favors immediate singability and overwhelming positivity.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Incredibly catchy and repetitive melody mapping identically to the lyric stack.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Bright and loud core release.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "love confession",
+        "gratitude closure"
+      ],
+      "vocabulary_focus": [
+        "君が好きで",
+        "ありがとう"
+      ],
+      "rhyme_features": [
+        "anaphoric repetition of '好きで'"
+      ],
+      "rhythm_features": [
+        "relentless positive momentum"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "future promise"
+      ],
+      "narrative_job": "Extend the metaphor of the songs as children living far into the future (reaching their 100,000th birthday, referencing plays/views).",
+      "arrangement_role": {
+        "summary": "Maintains the conversational pulse, driving forward.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Matches Verse 1's conversational delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Stable verse energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "number play (39 = Thank You)",
+        "vow"
+      ],
+      "vocabulary_focus": [
+        "10万歳",
+        "39ました",
+        "曲と詩"
+      ],
+      "rhyme_features": [
+        "narrative flow"
+      ],
+      "rhythm_features": [
+        "steady pop rock rhythm"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "escalation of affection"
+      ],
+      "narrative_job": "Transition back to the binary 'toka' stack, but asking if it's 'not enough'.",
+      "arrangement_role": {
+        "summary": "The 'jaa' (Well then...) acts as a perfect setup drop into the second chorus.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Swells exactly like Pre-Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Lift toward drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "questioning"
+      ],
+      "vocabulary_focus": [
+        "足りない",
+        "じゃあ"
+      ],
+      "rhyme_features": [
+        "thematic stack"
+      ],
+      "rhythm_features": [
+        "vocal stop at 'じゃあ'"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "intimate dialogue"
+      ],
+      "narrative_job": "Shift the chorus from a broad 'Thank You' into an intimate, playful daily-life dialogue.",
+      "arrangement_role": {
+        "summary": "Full energy matching Chorus 1, but framing a totally different lyric shape.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational back-and-forth fits into the melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "dialogue quotes"
+      ],
+      "vocabulary_focus": [
+        "泣かないよ",
+        "バカ"
+      ],
+      "rhyme_features": [
+        "Q&A phrasing"
+      ],
+      "rhythm_features": [
+        "staccato conversational bursts"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "emotional focus"
+      ],
+      "narrative_job": "A sparse, highly emotional break to center on the core sentiment.",
+      "arrangement_role": {
+        "summary": "Often a breakdown or dynamic drop to let the vocal fragility shine.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Bare and direct.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Quiet space.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "vulnerability"
+      ],
+      "vocabulary_focus": [
+        "ありがとう",
+        "バカ"
+      ],
+      "rhyme_features": [
+        "short emotional words"
+      ],
+      "rhythm_features": [
+        "rubato or slow pulsing"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final celebration"
+      ],
+      "narrative_job": "The ultimate explosive celebration of the bond.",
+      "arrangement_role": {
+        "summary": "Maximum volume, bringing all layers back in.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Full belt.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loudest, brightest point of the track.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "celebratory closure"
+      ],
+      "vocabulary_focus": [
+        "泣かないよ"
+      ],
+      "rhyme_features": [
+        "repeating Chorus 2's structure for maximum audience participation"
+      ],
+      "rhythm_features": [
+        "driving finale"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "direct address",
+      "gratitude phrase",
+      "confession copy"
+    ],
+    "mora_control_notes": [
+      "The title formula must remain short enough to read like a memorable equation.",
+      "The chorus repetition around '君が好きで' should stay clean and singable."
+    ],
+    "accent_risk_notes": [
+      "Do not overcomplicate the chorus with abstract imagery.",
+      "The gratitude line must feel earned and overwhelmingly positive."
+    ],
+    "critic_focus": [
+      "title formula clarity",
+      "direct confession force",
+      "hook repeatability"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "direct emotional vocaloid pop",
+      "bright rock-pop gratitude anthem",
+      "classic vocaloid era celebration"
+    ],
+    "tempo_feels": [
+      "steady bright pop pulse",
+      "driving rock quarter note bounce"
+    ],
+    "vocal_tones": [
+      "bright direct lead",
+      "open gratitude delivery",
+      "overwhelmingly positive affection"
+    ],
+    "production_palette": [
+      "clean glossy pop frame",
+      "guitar-driven rock shell",
+      "sparkly synth accents"
+    ],
+    "energy_arc": [
+      "polite address",
+      "formulaic compression",
+      "explosion of 'I love you's",
+      "dialogue bridge",
+      "tears of joy finale"
+    ],
+    "imagery_anchors": [
+      "gratitude",
+      "confession",
+      "songs as children",
+      "Ai Kotoba = Love = Thank you"
+    ],
+    "exclude": [
+      "do not turn the song into cynical irony",
+      "do not make it acoustically dark or slow",
+      "do not bury the gratitude line under abstract metaphors"
+    ],
+    "source_basis": [
+      "lyrics",
+      "human analysis",
+      "model_inference",
+      "other"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Validated with a full 8-section emotional arc mapping.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

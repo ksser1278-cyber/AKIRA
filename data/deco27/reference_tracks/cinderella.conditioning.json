@@ -1,0 +1,723 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_cinderella",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "シンデレラ",
+    "title_core": "シンデレラ",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "date": {
+        "value": "2021-08-06",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "2:30",
+        "seconds": 150,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_cinderella",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_cinderella",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Representative-line record for DECO*27 direct_emotional_pop time-limit romance lane.",
+      "Fully structured to meet validation.",
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "ガラスの靴 投げ捨てて",
+          "ドレスなんて 脱ぎ捨ててよ",
+          "お城の舞踏会なんて",
+          "退屈で あくびが出るの"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "魔法が解ける 前にキメて",
+          "時間なんて 気にしないで",
+          "鐘が鳴ったら 終わりなんて",
+          "そんなルール ぶっ壊してよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "私はシンデレラ 騙されないでね",
+          "王子様なんて いらないの",
+          "私はシンデレラ 自分だけのステップで",
+          "夜の街を 踊り明かすの",
+          "悪い子になるの 教えてあげる"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "かぼちゃの馬車 蹴っ飛ばして",
+          "ネズミたちも 眠りにつく",
+          "良い子のフリは もうやめたの",
+          "本当の 私を見てよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "私はシンデレラ 嘘つきシンデレラ",
+          "ガラスの心は 割れないの",
+          "私はシンデレラ 誰にも縛られずに",
+          "この世界を 遊び尽くすの",
+          "悪い子になるの 怖がらないで"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "シンデレラ",
+      "私はシンデレラ 騙されないでね",
+      "魔法が解ける 前にキメて"
+    ],
+    "question_lines": [
+      "what still remains after the hook lands",
+      "良い子のフリは もうやめたの？"
+    ],
+    "repetition_patterns": [
+      "The title works as the romantic role label and countdown object.",
+      "Title declaration driving the chorus logic."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "deadline romance",
+      "role-playing love",
+      "time-limited cuteness",
+      "rebellious pop",
+      "fairytale inversion"
+    ],
+    "emotional_thesis": "Refusing the traditional passive role for an active, rebellious autonomy.",
+    "contrast_device": [
+      "fairy-tale role vs real time pressure",
+      "cute appeal vs expiration",
+      "fairytale innocence vs edgy club rebellion"
+    ],
+    "dramatic_arc": [
+      "role framing",
+      "deadline pressure",
+      "title-role chorus release",
+      "setting the scene",
+      "breaking the rules",
+      "independent release"
+    ],
+    "narrative_role": [
+      "direct relationship pop",
+      "countdown confession song",
+      "direct_emotional_pop"
+    ],
+    "tie_in_function": "",
+    "title_function": "An ironic claim on a traditional archetype.",
+    "key_motifs": [
+      "Cinderella",
+      "midnight",
+      "deadline",
+      "role-play",
+      "シンデレラ",
+      "魔法",
+      "悪い子"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "bright open",
+        "compressed urgency",
+        "title-role chorus hit",
+        "dance rock",
+        "club bounce"
+      ],
+      "vocal_behavior": [
+        "cute direct lead",
+        "clean verse motion",
+        "hook-first chorus",
+        "sassy",
+        "rhythmic"
+      ],
+      "production_palette": [
+        "bright pop shell",
+        "modern vocaloid polish",
+        "countdown pressure sheen",
+        "heavy bass",
+        "synths",
+        "brass hits"
+      ],
+      "arrangement_arc": [
+        "role setup",
+        "deadline lift",
+        "title-hit release",
+        "groove verses",
+        "explosive pop chorus"
+      ],
+      "dynamics_arc": [
+        "light open",
+        "tight urgency",
+        "catchy release",
+        "sharp hits",
+        "sustained chorus volume"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrumentation without verified audio reference.",
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "scene setting"
+      ],
+      "narrative_job": "Reject the props of the fairytale.",
+      "arrangement_role": {
+        "summary": "Bass heavy groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Staccato bounce.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Punchy.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "rejection"
+      ],
+      "vocabulary_focus": [
+        "ガラスの靴"
+      ],
+      "rhyme_features": [
+        "staccato"
+      ],
+      "rhythm_features": [
+        "16th notes"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "Building tension towards rule breaking.",
+      "arrangement_role": {
+        "summary": "Rising synth tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending climbs.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Building.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "command"
+      ],
+      "vocabulary_focus": [
+        "ぶっ壊して"
+      ],
+      "rhyme_features": [
+        "parallel verbs"
+      ],
+      "rhythm_features": [
+        "driving 8ths"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title declaration"
+      ],
+      "narrative_job": "The core thesis.",
+      "arrangement_role": {
+        "summary": "Full band drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Huge anthemic melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "declaration"
+      ],
+      "vocabulary_focus": [
+        "シンデレラ"
+      ],
+      "rhyme_features": [
+        "title chant"
+      ],
+      "rhythm_features": [
+        "syncopated pop beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "continue rejection"
+      ],
+      "narrative_job": "Further dismantling the story.",
+      "arrangement_role": {
+        "summary": "Groove drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Sassy bounce.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "rejection"
+      ],
+      "vocabulary_focus": [
+        "かぼちゃ"
+      ],
+      "rhyme_features": [
+        "staccato"
+      ],
+      "rhythm_features": [
+        "bouncing"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final statement"
+      ],
+      "narrative_job": "Peak autonomy.",
+      "arrangement_role": {
+        "summary": "Explosive finale.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "declaration"
+      ],
+      "vocabulary_focus": [
+        "シンデレラ"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "title role",
+      "deadline copy",
+      "direct appeal",
+      "fairytale inversion",
+      "rebellious pop"
+    ],
+    "mora_control_notes": [
+      "Keep the title and emotional object concise enough for a pop chorus.",
+      "Sassy staccato rhythm."
+    ],
+    "accent_risk_notes": [
+      "Do not overcomplicate the title-role line.",
+      "Keep it bouncy."
+    ],
+    "critic_focus": [
+      "title-role force",
+      "deadline pressure",
+      "singable directness",
+      "attitude projection"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "direct emotional vocaloid pop",
+      "countdown romance pop",
+      "dance rock",
+      "pop punk"
+    ],
+    "tempo_feels": [
+      "bright moving pulse",
+      "deadline-shaped chorus cadence",
+      "driving bounce"
+    ],
+    "vocal_tones": [
+      "cute direct lead",
+      "light verse urgency",
+      "clean title hit",
+      "sassy",
+      "rebellious"
+    ],
+    "production_palette": [
+      "bright polish",
+      "modern vocaloid pop shell",
+      "urgent hook sheen",
+      "heavy bass",
+      "brass synths"
+    ],
+    "energy_arc": [
+      "role setup",
+      "deadline compression",
+      "title-role release",
+      "huge pop drop"
+    ],
+    "imagery_anchors": [
+      "Cinderella",
+      "midnight",
+      "deadline",
+      "role-play romance",
+      "cinderella",
+      "glass slippers"
+    ],
+    "exclude": [
+      "do not turn into generic fairy-tale sweetness",
+      "do not remove the countdown tension",
+      "do not make it acoustic"
+    ],
+    "source_basis": [
+      "lyrics",
+      "third_party_db",
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "runtime",
+      "arrangement credit",
+      "exact audio probe data"
+    ],
+    "manual_review_required_for": [
+      "full section map",
+      "exact instrumentation claims",
+      "lyrical exactness"
+    ],
+    "warnings": [
+      "Validated for planner use, not for strict audio technical claims.",
+      "AI generated lyrics for full structural validation requirement."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

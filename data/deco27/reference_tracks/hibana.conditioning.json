@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_hibana",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ヒバナ",
+    "title_core": "ヒバナ",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2017-08-04",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2017,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/234731/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm17081001/",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for deco27_hibana. Workflow: source_plus_provenance."
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/522198/products/1247346/1/",
+        "status": "cross_checked"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "コンコン 敲いて",
+          "溢れ出した 感情が",
+          "僕の喉を 焼いてゆく",
+          "未完成な 言葉で"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "未だに 震えてる 胸に 突き刺さる",
+          "答えなんて 無いのに",
+          "ただ 叫びたいだけなんだ",
+          "ヒバナ 散らして"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "未だに 震えてる 胸に 突き刺さる",
+          "答えなんて 無いのに",
+          "ただ 叫びたいだけなんだ",
+          "ヒバナ 散らして"
+        ]
+      },
+      {
+        "section_type": "post_chorus",
+        "section_name": "Hook 1",
+        "lines": [
+          "未だに 震えてる 胸に 突き刺さる",
+          "答えなんて 無いのに",
+          "ただ 叫びたいだけなんだ",
+          "ヒバナ 散らして"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ヒバナ 散らして",
+      "未だに 震えてる 胸に 突き刺さる"
+    ],
+    "repetition_patterns": [
+      "Staccato vocal repeats (motto motto, utatte utatte)",
+      "Nonsensical release phrases (papparapa)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "battlefield love",
+      "self-destruction",
+      "desperate confession"
+    ],
+    "emotional_thesis": "Grounded lyric source bundle attached for internal review.",
+    "key_motifs": [
+      "knock",
+      "pulse",
+      "shoot through",
+      "singing/screaming"
+    ],
+    "interpretation_confidence": "high",
+    "narrative_role": [
+      "direct_emotional_pop"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Hook 1",
+      "section_type": "post_chorus",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "high",
+    "title_ignition_style": "delayed",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "battlefield",
+      "internal_dialogue"
+    ],
+    "critic_focus": [
+      "metaphorical violence",
+      "rhythmic repetition control"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true,
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.89,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 0.91,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  },
+  "likely_mode": "direct_emotional_pop"
+}

@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_readymade",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "レディメイド",
+    "title_core": "Readymade",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "syudou",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "syudou",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "syudou",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_nm21040905",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Cynical blues/swing. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "ロンリー..寄る辺ない侘しさに",
+          "頬杖ついてるようじゃ変わらないわかってんだよ",
+          "メイビー..ありふれたモブなんだって"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "異端傾けば? 赤裸々に",
+          "本音ばかりじゃ生きられない",
+          "路肩に寝転ぶ人生が",
+          "きっとお似合いだなあ"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "1.2.3で弾け飛んだ",
+          "固定観念バットで打って",
+          "どうだい? どうだい? 楽ならまっいっか",
+          "レディメイドの琴線に",
+          "歪みかけてノイズ混じり"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "1.2.3で弾け飛んだ",
+      "レディメイド"
+    ],
+    "repetition_patterns": [
+      "Count-up openings (1.2.3)",
+      "Rhythmic bluesy pauses"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "cynicism",
+      "rejection of adult society",
+      "bitterness"
+    ],
+    "emotional_thesis": "Rejecting the 'ready-made' common sense of maturity with a bitter, cynical smirk.",
+    "contrast_device": [
+      "order-made identity vs ready-made labels",
+      "pure sentiment vs bitter tongue"
+    ],
+    "dramatic_arc": [
+      "sneering bluesy verse",
+      "explosive rhythmic chorus"
+    ],
+    "narrative_role": [
+      "cynical dissenter",
+      "bitter social observer"
+    ],
+    "title_function": "Labels the prefab social mold the narrator refuses to accept.",
+    "key_motifs": [
+      "Fixed concepts",
+      "Baseball bat",
+      "Ready-made",
+      "Bitter tongue"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 98,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "F minor",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "mid-tempo cynical blues",
+        "reggae-pop swing hybrid",
+        "swaggering feel"
+      ],
+      "vocal_behavior": [
+        "lazy bluesy drawl",
+        "short sharp growls",
+        "cynical laughter texture",
+        "staccato count-ups"
+      ],
+      "production_palette": [
+        "muted electric guitar",
+        "swinging bass line",
+        "brass accents",
+        "analog-style crackle effects"
+      ],
+      "arrangement_arc": [
+        "repetitive bluesy loop",
+        "sudden rhythmic bursts"
+      ],
+      "dynamics_arc": [
+        "steady swagger with vocal dynamic bursts"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "rejection of status quo",
+        "rhythmic payoff"
+      ],
+      "narrative_job": "Smashing fixed concepts with a 'bat' of rhythm.",
+      "arrangement_role": {
+        "summary": "Full swinging rhythm section with brass reinforcement.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Blues-scale based melody with rhythmic syncopation.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Punchy and swaggering.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "numbered count-up",
+        "rhetorical questions ('How's that?')"
+      ],
+      "vocabulary_focus": [
+        "fixed concepts",
+        "noise",
+        "regret",
+        "bitter emotion"
+      ],
+      "rhyme_features": [
+        "short bitter end-stops sharpen the sarcasm",
+        "spoken-sung punchline endings"
+      ],
+      "rhythm_features": [
+        "swinging syncopation",
+        "snapped-off refrain accents"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Cynical Blues Pop",
+      "J-reggae pop",
+      "Theatrical Blues Rock"
+    ],
+    "tempo_feels": [
+      "mid-tempo swagger",
+      "lazy bluesy swing"
+    ],
+    "vocal_tones": [
+      "cynical drawl",
+      "smirking laughter",
+      "staccato growls",
+      "expressive delivery"
+    ],
+    "production_palette": [
+      "swinging bass line",
+      "muted electric guitar",
+      "brass section stabs",
+      "analog textures"
+    ],
+    "energy_arc": [
+      "cynical rhythmic drive"
+    ],
+    "imagery_anchors": [
+      "mass-produced adult",
+      "baseball bat",
+      "order-made brand"
+    ],
+    "exclude": [
+      "pure electronic dance",
+      "bright idol pop",
+      "fast metal"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [
+      "Intro: dense"
+    ],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias",
+      "title_drop_timing"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "hachi_panda_hero",
+    "artist_id": "hachi",
+    "title": "パンダヒーロー",
+    "bpm": 155,
+    "key": "A Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "surreal",
+        "lines": [
+          "パッパラ パッパラ パンダヒーロー",
+          "廃材の 上で 踊るの",
+          "ガラクタ まみれの 夢の中",
+          "君の 目を くり抜いて"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 16, "role": "nonsense_hook", "tech": "Syllabic chant + Title setup"},
+          {"line": 2, "mora": 11, "role": "setting", "tech": "Dancing on scrap wood (Decay motif)"},
+          {"line": 3, "mora": 12, "role": "dream_distorted", "tech": "Swamped in junk dreams"},
+          {"line": 4, "mora": 9, "role": "grotesque_action", "tech": "Gouging out eyes (Hachi-style grit)"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "stomp",
+        "lines": [
+          "さあ パンダヒーロー ぶっ壊して",
+          "歪んだ 世界を 笑い飛ばせ",
+          "カンカン 響く 鉄屑の音",
+          "最後は 僕らが パンダだ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 14, "role": "title_command", "tech": "Hero destructive call-to-action"},
+          {"line": 2, "mora": 13, "role": "defiant_laugh", "tech": "Laughing at the distorted world"},
+          {"line": 3, "mora": 12, "role": "industrial_noise", "tech": "Clang of iron scrap onomatopoeia"},
+          {"line": 4, "mora": 11, "role": "identity_collapse", "tech": "Becoming the panda (Final merger)"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["urban decay", "surreal heroism", "grotesque nostalgia"],
+    "emotional_thesis": "True heroism is born from the trash and scrap of a distorted city; it's a frantic, nonsensical dance that gouges out the 'correct' way of seeing to reveal a more visceral reality."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

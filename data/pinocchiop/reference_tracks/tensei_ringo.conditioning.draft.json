@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_tensei_ringo",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "転生林檎",
+    "title_core": "転生林檎",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "cross_checked",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": [
+      "Draft scaffold created from conditioning queue.",
+      "Priority-2 PinocchioP anchor for ironic_meta mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "excluded",
+    "copyright_handling_note": "Draft scaffold only. Add internal lyric source before enabling prompting.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": ["reincarnation fantasy", "identity reset", "wishful repetition"],
+    "emotional_thesis": "Draft only. Final thesis requires lyric and hook review.",
+    "contrast_device": ["rebirth promise vs unresolved self"],
+    "dramatic_arc": ["desire for reset", "catalog of possible selves", "hook confrontation"],
+    "narrative_role": ["concept confession", "cycle song"],
+    "title_function": "Use the title as an object-symbol that turns rebirth into a commodity or device.",
+    "key_motifs": ["apple", "reincarnation", "retry impulse"],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": ["clean concept framing", "middle build", "chorus slogan emphasis"],
+      "vocal_behavior": ["clear synthetic lead", "concept-heavy verse phrasing", "lifted hook repetition"],
+      "production_palette": ["vocaloid pop frame", "hook-focused rhythm bed", "digital gloss"],
+      "arrangement_arc": ["concept setup", "incremental build", "repeatable chorus release"],
+      "dynamics_arc": ["measured start", "mid-song pressure", "wide hook"],
+      "confidence": "low",
+      "evidence_basis": ["model_inference"]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact harmonic movement until sources are attached."
+    ]
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "high",
+    "phrase_source_types": ["copy_line", "concept phrase", "self-dialogue"],
+    "mora_control_notes": ["Need chorus compression map after lyric import."],
+    "accent_risk_notes": ["Validate title accent when title is dropped inside chorus."],
+    "critic_focus": ["title-function clarity", "concept word density", "chorus repeat strength"],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": ["concept vocaloid pop", "subculture synth-pop"],
+    "tempo_feels": ["mid-fast pop pulse", "hook-forward cadence"],
+    "vocal_tones": ["clear synthetic lead", "idea-dense verse delivery", "hook-lift chorus"],
+    "production_palette": ["digital gloss", "tight rhythm bed", "repeatable chorus frame"],
+    "energy_arc": ["concept setup", "choice pressure", "chorus reset fantasy"],
+    "imagery_anchors": ["apple", "reincarnation", "reset button", "retry life"],
+    "exclude": ["do not flatten into generic inspirational rebirth song", "do not remove irony from the concept layer"],
+    "source_basis": ["queue scaffold", "model inference"]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "section analysis",
+      "metadata sources",
+      "lyric sources"
+    ],
+    "manual_review_required_for": [
+      "hook slogan extraction",
+      "section role mapping",
+      "title reframe behavior",
+      "sound claims"
+    ],
+    "warnings": [
+      "Draft scaffold only. Not ready for prompting until lyric_ground_truth and section_analysis are populated."
+    ],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

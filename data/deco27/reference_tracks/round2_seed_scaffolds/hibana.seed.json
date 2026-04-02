@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "deco27",
+    "track_id": "deco27_hibana",
+    "title": "ヒバナ"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [],
+    "priority": "high"
+  },
+  "seed_brief": {
+    "title_pattern": "noun_sparks",
+    "hook_behavior": [
+      "English chanting (Na na na)",
+      "Soaring emotional peak",
+      "Fast rock drive"
+    ],
+    "section_flow_guess": [
+      "verse_tension",
+      "prechorus_english",
+      "chorus_explosion",
+      "bridge_guitar_solo",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "sparks",
+      "fire",
+      "guns/shooting",
+      "blinding light"
+    ],
+    "emotional_arc": [
+      "conflict",
+      "painful realization",
+      "fighting through"
+    ],
+    "leakage_watchouts": [
+      "Must not sound like generic anime OP; keep the vocal chops modern."
+    ],
+    "prompt_seed_terms": [
+      "fast emotional rock",
+      "english chant hook",
+      "guitar driven"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "The definitive fast rock emotional anthem."
+    ],
+    "style_gap_filled": [
+      "English integration in hooks."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "high"
+  }
+}

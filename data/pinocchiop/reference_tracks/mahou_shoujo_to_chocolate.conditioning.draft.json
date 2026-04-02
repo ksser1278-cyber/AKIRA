@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "魔法少女とチョコレゐト",
+    "title_core": "魔法少女とチョコレゐト",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": [
+      "Draft scaffold created from conditioning queue.",
+      "Priority-4 PinocchioP anchor for dark_cute_breakdown mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "excluded",
+    "copyright_handling_note": "Draft scaffold only. Add internal lyric source before enabling prompting.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": ["cute facade", "violence under sweetness", "genre costume breakdown"],
+    "emotional_thesis": "Draft only. Final thesis requires lyric and hook review.",
+    "contrast_device": ["magical-girl iconography vs toxic collapse"],
+    "dramatic_arc": ["cute framing", "damage reveal", "hook detonation"],
+    "narrative_role": ["genre deconstruction song", "dark cute performance"],
+    "title_function": "Use the title as a sugar-coated frame that makes the damage more visible.",
+    "key_motifs": ["magic girl", "chocolate", "cute damage", "sweet poison"],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": ["cute-bright opener", "damage build", "chaotic hook release"],
+      "vocal_behavior": ["playful synthetic lead", "sudden bite in hook", "cute-toxic switch"],
+      "production_palette": ["bright synthetic candy coat", "aggressive pop edge", "chaos-ready chorus frame"],
+      "arrangement_arc": ["cute setup", "instability escalation", "chorus rupture"],
+      "dynamics_arc": ["bright start", "pressure rise", "hard release"],
+      "confidence": "low",
+      "evidence_basis": ["model_inference"]
+    },
+    "do_not_overclaim": [
+      "Do not claim exact distortion or sound effects without source support."
+    ]
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "high",
+    "phrase_source_types": ["cute copy", "genre mask", "breakdown chant"],
+    "mora_control_notes": ["Need chorus burst mapping after lyric import."],
+    "accent_risk_notes": ["Validate cute-to-harsh transitions against melodic accent."],
+    "critic_focus": ["cute-toxic balance", "chorus rupture", "title reframe strength"],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": ["dark cute vocaloid pop", "chaotic subculture pop"],
+    "tempo_feels": ["bright-fast pulse", "breakdown-ready chorus swing"],
+    "vocal_tones": ["cute synthetic lead", "smiling menace", "rupture-ready hook attack"],
+    "production_palette": ["candy-coated synth frame", "aggressive chorus edge", "cute-chaos contrast"],
+    "energy_arc": ["sugary setup", "pressure distortion", "hook rupture"],
+    "imagery_anchors": ["magical girl", "chocolate", "cute poison", "mask breakdown"],
+    "exclude": ["do not turn into pure wholesome cute-pop", "do not remove the toxic undercurrent"],
+    "source_basis": ["queue scaffold", "model inference"]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "section analysis",
+      "metadata sources",
+      "lyric sources"
+    ],
+    "manual_review_required_for": [
+      "cute-toxic balance",
+      "hook rupture points",
+      "section map",
+      "sound claims"
+    ],
+    "warnings": [
+      "Draft scaffold only. Not ready for prompting until lyric_ground_truth and section_analysis are populated."
+    ],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

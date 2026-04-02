@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "neru",
+    "track_id": "neru_snobbism",
+    "title": "SNOBBISM"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "mode_support",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "concept_noun",
+    "hook_behavior": [
+      "funk rock social critique",
+      "groove-based cynical verses"
+    ],
+    "section_flow_guess": [
+      "verse_groove",
+      "prechorus_cynical",
+      "chorus_brass_rock",
+      "bridge_bass",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "fake intellectuals",
+      "empty words",
+      "pointing fingers",
+      "boredom"
+    ],
+    "emotional_arc": [
+      "cynicism",
+      "bored judgment",
+      "swagger"
+    ],
+    "leakage_watchouts": [
+      "use funk guitar strumming and brass hits"
+    ],
+    "prompt_seed_terms": [
+      "funk rock",
+      "brass rock",
+      "cynical groove"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Funk rock social critique."
+    ],
+    "style_gap_filled": [
+      "Groove-based cynical verses."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "deco27",
+    "track_id": "deco27_yowamushi_montblanc",
+    "title": "弱虫モンブラン"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "soft_noun",
+    "hook_behavior": [
+      "acoustic groove",
+      "gentle sadness"
+    ],
+    "section_flow_guess": [
+      "verse_acoustic",
+      "prechorus_build",
+      "chorus_soft_cry",
+      "bridge_soft",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "sweets",
+      "cowardice",
+      "falling apart",
+      "lies"
+    ],
+    "emotional_arc": [
+      "cowardice",
+      "regret",
+      "sadness"
+    ],
+    "leakage_watchouts": [
+      "avoid distorted guitars; use acoustic strumming and clean bass"
+    ],
+    "prompt_seed_terms": [
+      "acoustic pop rock",
+      "gentle vocal",
+      "melancholy pop"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Softer, more acoustic-driven anxiety."
+    ],
+    "style_gap_filled": [
+      "Acoustic groove."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "sasakure_hello_planet",
+    "artist_id": "sasakure_uk",
+    "artist_name": "sasakure.UK",
+    "title": "＊ハロー、プラネット。",
+    "title_core": "Hello, Planet."
+  },
+  "song_intent": {
+    "core_theme": ["Doomsday", "Android Loyalty", "Apocalyptic Greenery"],
+    "emotional_target": "Bittersweet hope in a dying world through an innocent digital lens.",
+    "key_motifs": ["Entropy", "Flowerpot", "Sunbathing Angel", "0 and 1"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ユメとメトロジカ ミチのエントロピカ\n陽の光に透けるような オハヨウゴザイマス\nまだ 植木鉢には 芽が出ないけれど\n今日も明日も 変わらず 探すのさ\n\n[Chorus]\nおはよ、おはよ。 誰もいない星で\nひとりぼっちで 歌うよ ＊ハロー、プラネット。\nあなたが最後に 見せてくれたのは\n全部 綺麗な 嘘だったんだね",
+    "hook_lines": ["＊ハロー、プラネット。", "オハヨウゴザイマス"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["おはよ、おはよ。 誰もいない星で", "ひとりぼっちで 歌うよ ＊ハロー、プラネット。", "あなたが最後に 見せてくれたのは", "全部 綺麗な 嘘だったんだね"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Innocent", "Digital", "Sweet", "Faded"],
+    "production_palette": ["8-bit chiptune", "Acoustic pizzicato", "Warm electronic pads"],
+    "energy_arc": "Nostalgic digital folk",
+    "imagery_anchors": ["Distant sun", "Single green sprout", "Rusty robot", "Glitchy stars"]
+  }
+}

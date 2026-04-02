@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "niki_error",
+    "artist_id": "niki",
+    "artist_name": "Niki",
+    "title": "-ERROR",
+    "title_core": "Error"
+  },
+  "song_intent": {
+    "core_theme": ["Emotional Malfunction", "Existential Void", "Longing"],
+    "emotional_target": "Raw, explosive longing expressed through a collapsing digital interface.",
+    "key_motifs": ["Error", "Blue Red White", "Screaming", "Breath"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "見える？ この目の涙 命の色に滲んでいる\n何を残して与えた？ 問いかけて 潰れて\n青と赤と白混ざる この世の中で叫んでいる\n何を求めて歩いた？ 追いかけて 疲れて\n\nどのくらい異常？ 壊れているの？ 壊れているよ\nそれでも 息をしたい したい\nキミに見えてるの？ 夢のように 最後の\n言葉も詰まるよ ERROR",
+    "hook_lines": ["言葉も詰まるよ ERROR", "壊れているよ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["どのくらい異常？ 壊れているの？ 壊れているよ", "それでも 息をしたい したい", "キミに見えてるの？ 夢のように 最後の", "言葉も詰まるよ ERROR"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Powerful", "Emotional", "Screaming", "Distorted"],
+    "production_palette": ["Heavy synthetic rock", "Aggressive drums", "Digital fuzz"],
+    "energy_arc": "Explosive emotional surge",
+    "imagery_anchors": ["Glitchy monitor", "Spilled paint", "Deep space", "Stuttering lights"]
+  }
+}

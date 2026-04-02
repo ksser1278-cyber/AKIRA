@@ -1,0 +1,42 @@
+{
+  "track_id": "rokuchounen_to_ichiya_monogatari",
+  "artist_id": "kemu",
+  "title": "六兆年と一夜物語",
+  "bpm": 200,
+  "key": "A Minor",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Pre-Chorus", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 12, 14, 13],
+      "energy": 0.6,
+      "description": "Theatrical narrative. Focus on the 'unknown folk-tale'. Fast but controlled."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.95,
+      "description": "High-velocity explosion. 'Shiranai' (Don't know) negation motif. Maximum dramatic intensity."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "知らない知らない 僕は何も知らない",
+      "romaji": "Shiranai shiranai boku wa nanimo shiranai",
+      "mora": 17,
+      "meta": "Signature negation motif. Rapid-fire delivery."
+    },
+    {
+      "original": "誰も知らない おとぎばなしは 夕焼けの中に吸い込まれて消えてった",
+      "romaji": "Daremo shiranai otogibanashi wa yuuyake no naka ni suikomarete kietetta",
+      "mora": 28,
+      "meta": "Core thematic line. Cinematic/Tragic disappearance imagery."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "IA - High pitch, dramatic, clear and powerful",
+    "main_instrument": "Fast Rock Drums, Slap Bass, Orchestral Hits, Piano",
+    "thematic_tags": ["Tragedy", "Fairy Tale", "Demon Child", "Ostracism", "Sunset"],
+    "signature_phrases": ["知らない (Don't know)", "おとぎばなし (Fairy tale)"]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_salamander",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "サラマンダー",
+    "title_core": "サラマンダー",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2022-01-07",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2022,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=-H2PCK48698",
+        "status": "confirmed"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Project Sekai Fandom Page (Salamander cross-check)",
+        "origin": "third_party_wiki",
+        "url": "https://pjsekai.fandom.com/wiki/Salamander",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Provenance verified conservatively and narrative mode aligned to the existing round2 classification for planner_safe promotion review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "chorus",
+        "section_name": "Main Hook",
+        "jp_section_role": "sabi",
+        "mora_density": "obsessive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "サラマンダー ホットが良くない？",
+          "やっぱぱぱぱぱぱ大問題？",
+          "ねえ“だって”は良くなくない？",
+          "“もっと”が聞きたい",
+          "頭の中は最高更新中"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "syncopated",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "サラマンダーダーダダ サラマンダーダーダダ",
+          "いっぱいほしい クセになるなんてずるいじゃない？",
+          "知ってたんなら 先に伝えといてほしいかな ねえ？",
+          "もう降参です ハマっちゃって",
+          "きみなしじゃだめだめになっちゃって",
+          "リピっちゃいたい ピリッちゃいたい",
+          "おかわりできるかな もう1回"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "lines": [
+          "やめられないのよ やめたくないのよ",
+          "ちゃんとふーして火傷したくないなら",
+          "真っ赤に燃えてみたい",
+          "真っ赤に燃えてみたい"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "サラマンダー ホットが良くない？",
+      "やっぱぱぱぱぱぱ大問題？"
+    ],
+    "repetition_patterns": [
+      "Percussive onomatopoeia (pa-pa-pa-pa-pa)",
+      "Internal rhythmic puns (Ripicchaitai/Piricchaitai)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "spicy love",
+      "overheating emotion",
+      "addiction"
+    ],
+    "emotional_thesis": "Love is an addictive, painful heat ('Salamander') that causes 'burns' but demands 'seconds' (Okawari).",
+    "key_motifs": [
+      "hot",
+      "burn",
+      "cat-tongue",
+      "mouth-watering"
+    ],
+    "interpretation_confidence": "high",
+    "narrative_role": [
+      "ironic_meta"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "addiction setup",
+        "rhythmic play"
+      ],
+      "narrative_job": "Uses food-related addiction verbs to describe obsession.",
+      "vocabulary_focus": [
+        "クセになる",
+        "ハマっちゃって",
+        "おかわり"
+      ],
+      "rhythm_features": [
+        "rap-like syncopation"
+      ],
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "heat release",
+        "stutter-hook"
+      ],
+      "narrative_job": "The stuttering 'pa-pa-pa' mimics the physical reaction to heat or excitement.",
+      "vocabulary_focus": [
+        "大問題",
+        "最高更新中"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "absolute",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "extreme",
+    "phrase_source_types": [
+      "culinary_metaphor",
+      "modern_slang"
+    ],
+    "critic_focus": [
+      "syncopation accuracy",
+      "temperature motif consistency"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.84,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 0.77,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

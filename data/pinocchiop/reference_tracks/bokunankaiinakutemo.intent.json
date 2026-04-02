@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "track_identity": {
+    "title": "僕なんかいなくても",
+    "composer": "PinocchioP",
+    "vocalist": "Hatsune Miku",
+    "bpm": 134,
+    "key": "A major",
+    "runtime": "3:37",
+    "release_year": 2024,
+    "instrumentation": [
+      "acoustic guitar",
+      "electric guitar",
+      "bass",
+      "drums",
+      "synthesizer"
+    ]
+  },
+  "high_level_intent": {
+    "core_purpose": "Turn self-erasure and helplessness into a still-moving survival anthem.",
+    "intent_label": "pressure_release_with_bright_contrast",
+    "emotional_engine": "The song weaponizes a bright A-major pop-rock frame against severely negative self-talk, producing a smiling-but-desperate emotional burn rather than simple sadness.",
+    "contrast_device": {
+      "primary": "bright melodic optimism versus despairing lyric content",
+      "secondary": "light acoustic verse texture versus explosive rock chorus release"
+    },
+    "dramatic_arc": [
+      "helpless observation",
+      "moral compromise and self-disgust",
+      "worthlessness and exclusion",
+      "rage-backed survival vow",
+      "life-light reversal",
+      "final persistence despite futility"
+    ],
+    "narrative_stance": "A timid first-person narrator who never becomes fully heroic, but keeps choosing motion anyway.",
+    "suno_relevance": {
+      "best_use_case": "an anthemic J-pop song that sounds uplifting on the surface while carrying self-loathing, resignation, and stubborn will underneath",
+      "must_preserve": [
+        "major-key brightness",
+        "lyric-versus-melody contradiction",
+        "acoustic-to-rock lift",
+        "repeated degradation phrase that later flips into a life-affirming phrase",
+        "final chorus persistence loop"
+      ],
+      "must_avoid": [
+        "purely tragic ballad treatment",
+        "dark minor-key collapse without lift",
+        "overly polished inspirational pop tone",
+        "EDM-drop framing that removes the human struggle"
+      ]
+    }
+  },
+  "section_intent": [
+    {
+      "section": "verse_1",
+      "function": "Establish a powerless witness who looks away from violence and shame.",
+      "arrangement_intent": "Acoustic strumming keeps the track deceptively buoyant so the lyric weakness lands with more irony.",
+      "dynamic_role": "controlled mid-level start",
+      "melodic_role": "bright melody used as emotional misdirection",
+      "rhetorical_pattern": "event -> passive response -> self-negating conclusion",
+      "carry_forward": [
+        "social fear",
+        "cowardice",
+        "moral fog"
+      ]
+    },
+    {
+      "section": "verse_2",
+      "function": "Escalate from passive observation to coerced complicity.",
+      "arrangement_intent": "Keep the same light pop-rock frame so the uglier imagery feels even more disturbing.",
+      "dynamic_role": "stable continuation",
+      "melodic_role": "parallel to verse 1 for moral deepening rather than melodic novelty",
+      "rhetorical_pattern": "social pressure -> forced participation -> inner rot",
+      "carry_forward": [
+        "violence pressure",
+        "fake laughter",
+        "corruption of conscience"
+      ]
+    },
+    {
+      "section": "pre_chorus_1",
+      "function": "Compress the song into a breath-held collapse before the first release.",
+      "arrangement_intent": "Strip back the groove, bring in pad and arpeggiated texture, and make the listener lean in.",
+      "dynamic_role": "sharp drop before impact",
+      "melodic_role": "descending and wounded",
+      "rhetorical_pattern": "hope loss -> qualification failure -> fear of being unloved"
+    },
+    {
+      "section": "chorus_1",
+      "function": "Convert weakness into a rough, shouted survival vow without solving the world's cruelty.",
+      "arrangement_intent": "Full-band rock impact, distorted guitars, and maximum drum commitment.",
+      "dynamic_role": "first total release",
+      "melodic_role": "highest register, chantable and desperate",
+      "rhetorical_pattern": "rejection of shame -> stubborn self-affirmation -> cruel world observation -> action vow",
+      "hook_logic": "The title line lands not as surrender but as a statement of cosmic insignificance that still cannot stop action."
+    },
+    {
+      "section": "verse_3",
+      "function": "Push the self-worth collapse to its most humiliating social form.",
+      "arrangement_intent": "Return to the earlier acoustic-led brightness so the loss feels cyclical rather than resolved.",
+      "dynamic_role": "drop back after chorus",
+      "melodic_role": "familiar verse shape used for deeper defeat",
+      "rhetorical_pattern": "sacrifice -> theft -> crowd pressure -> shutdown",
+      "carry_forward": [
+        "defeat",
+        "depersonalization",
+        "speechless collapse"
+      ]
+    },
+    {
+      "section": "pre_chorus_2",
+      "function": "Turn doubt into a philosophical crisis about belief, fraud, and salvation.",
+      "arrangement_intent": "Repeat the breakdown grammar so the listener recognizes this as another cliff edge.",
+      "dynamic_role": "second compression zone",
+      "melodic_role": "questioning descent",
+      "rhetorical_pattern": "value confusion -> spiritual doubt -> self-exclusion"
+    },
+    {
+      "section": "bridge",
+      "function": "Shift from despair to angry realism and build toward the final conversion.",
+      "arrangement_intent": "Reintroduce the pulse and let the band push forward without spending the full chorus energy yet.",
+      "dynamic_role": "crescendo build",
+      "melodic_role": "more upward, more defiant",
+      "rhetorical_pattern": "defiant outburst -> reality check -> action vow with harsher cost"
+    },
+    {
+      "section": "climax_reversal",
+      "function": "Flip the repeated decay mantra into a life-light mantra.",
+      "arrangement_intent": "Put the earlier chant mechanism on top of a peak-band texture so the reversal feels earned and physical.",
+      "dynamic_role": "maximum intensity",
+      "melodic_role": "same structural engine as earlier repetition, but emotionally inverted",
+      "rhetorical_pattern": "repeated collapse phrase becomes repeated illumination phrase",
+      "carry_forward": [
+        "survival through mud",
+        "irrational hope",
+        "meaning even if meaning fails"
+      ]
+    },
+    {
+      "section": "final_chorus",
+      "function": "Restate the survival vow with expanded generosity and worse imagined circumstances.",
+      "arrangement_intent": "Keep the band fully open and let the repeated ending phrase feel unresolved on purpose.",
+      "dynamic_role": "sustained peak until ending",
+      "melodic_role": "same chorus engine, greater emotional reach",
+      "rhetorical_pattern": "chorus return -> expanded wish for kindness -> even-if clauses -> repeated vow loop",
+      "ending_effect": "The looped ending should feel less like triumph and more like a refusal to stop."
+    }
+  ],
+  "distilled_conditioning": {
+    "genre_core": [
+      "major-key J-pop rock",
+      "acoustic-to-electric lift",
+      "anthemic but unstable"
+    ],
+    "tempo_and_groove": [
+      "134 BPM",
+      "straight 8th-note pop-rock drive",
+      "pre-chorus breakdown before full-band release"
+    ],
+    "production_palette": [
+      "cheerful acoustic guitar strumming in verses",
+      "supportive bass and drums with clean forward pulse",
+      "pad and electric arpeggio during the pre-chorus compression",
+      "distorted guitar and full-rock chorus expansion"
+    ],
+    "vocal_behavior": [
+      "clear melodic brightness in verses",
+      "more fragile descent in pre-chorus",
+      "rougher shouted conviction in chorus",
+      "bridge delivery that rises into argument rather than sadness"
+    ],
+    "lyric_behavior": [
+      "first-person self-negation",
+      "social cruelty and exclusion imagery",
+      "repeated degrading phrase that mutates into a life-affirming phrase",
+      "defiant colloquial outburst as a chorus ignition point"
+    ],
+    "style_prompt_seed": "Bright major-key J-pop rock at 134 BPM with cheerful acoustic-guitar strumming in the verses, a stripped pre-chorus with synth pad and electric arpeggio, then a full distorted-guitar chorus that sounds uplifting while the lyrics stay desperate. Keep the emotional engine built on contradiction: self-erasure, social pressure, and worthlessness pushed through a catchy, hopeful melodic frame. Let the bridge harden into angry realism, then flip the repeated decay mantra into a life-light climax before a final chorus that keeps repeating the action vow instead of giving clean triumph.",
+    "negative_prompt_hints": [
+      "no pure minor-key despair ballad",
+      "no clean motivational corporate pop",
+      "no glossy EDM drop replacing the rock chorus",
+      "no sentimental resolution that erases the bitterness"
+    ]
+  },
+  "notes": [
+    "This dossier is intentionally non-verbatim. It stores reusable compositional intent, not full lyric text.",
+    "The most important lesson is not the exact wording but the bright-versus-broken contradiction and the repeated phrase reversal."
+  ]
+}

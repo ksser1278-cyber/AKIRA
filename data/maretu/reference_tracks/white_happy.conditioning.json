@@ -1,0 +1,232 @@
+{
+  "track_identity": {
+    "track_id": "maretu_white_happy",
+    "title": "ホワイトハッピー",
+    "artist": "maretu",
+    "status": "cross_checked"
+  },
+  "likely_mode": "ironic_meta",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm17071201/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/vsevaTHk2zk",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Cross-check bundle updated with an official creator upload exposing lyric text directly and existing lyric text retained."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "僕の一等賞を奪いに来て",
+      "ちょ待って、それって扇情？"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ちょ待って、それって扇情？ じゃないよ、これって洗脳",
+          "歪んだ期待と判断違い、心躍れ！",
+          "ねーねー聞いて、これって重症？",
+          "決定打食らった急所 くらっときてもう、倒れたい"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "ねーねー聞いて、これって重症？",
+          "決定打食らった急所 くらっときてもう、倒れたい"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "僕の一等賞を奪いに来て！ 奪いに来て 恥ずかしがらないで",
+          "一直線に迎えに来て！ 迎えに来て、今すぐにさあ？",
+          "いっそのこと夢の中へ 夢の中へ 蹴落として、として",
+          "一方的に捲し立てて！ 捲し立てて、意地悪にさあ？"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "僕の一等賞を奪いに来て！ 奪いに来て 恥ずかしがらないで",
+          "一直線に迎えに来て！ 迎えに来て、今すぐにさあ？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "僕の一等賞を奪いに来て！ 奪いに来て 恥ずかしがらないで",
+          "一直線に迎えに来て！ 迎えに来て、今すぐにさあ？",
+          "いっそのこと夢の中へ 夢の中へ 蹴落として、として",
+          "一方的に捲し立てて！ 捲し立てて、意地悪にさあ？"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Sets the mood and initial conflict.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Drives the instrumental forward.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hit"
+      ],
+      "narrative_job": "Explosive delivery of the title concept.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "reversal / silence"
+      ],
+      "narrative_job": "Subverts expectations before the finale.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Highest energy state of the track.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "I am smiling but I am rotting inside.",
+    "core_emotion": "Suppressed Rage",
+    "primary_target": "The listener or a toxic counterpart",
+    "contrast_device": "Extremely happy ska/major key framing horrifying lyrics.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "happy ska metal",
+      "forced smile"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.85,
+    "score_breakdown": {
+      "provenance_trust": 0.67,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.9,
+      "renderer_readiness": 0.9
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "low",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

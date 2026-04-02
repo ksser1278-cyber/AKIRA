@@ -1,0 +1,1003 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "魔法少女とチョコレゐト",
+    "title_core": "魔法少女とチョコレゐト",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": []
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "ピノキオピー",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%82%90%E3%83%88_(Mahou_Shoujo_to_Chocolate)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "ピノキオピー",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%82%90%E3%83%88_(Mahou_Shoujo_to_Chocolate)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "ピノキオピー",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "PinocchioP default arrangement assumption",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki song page",
+            "origin": "other",
+            "url": "https://vocaloidlyrics.fandom.com/wiki/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%82%90%E3%83%88_(Mahou_Shoujo_to_Chocolate)",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:08",
+        "seconds": 188,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Magical Girl and Chocolate.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki excerpt source",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%82%90%E3%83%88_(Mahou_Shoujo_to_Chocolate)",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki metadata source",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%82%90%E3%83%88_(Mahou_Shoujo_to_Chocolate)",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section analysis added for structural tracking."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal structure tracking for precise lyrical and musical alignment.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "清く正しく美しくなんて",
+          "誰かか作ったただのお伽話",
+          "煌めくステッキで殴り飛ばして",
+          "笑ってるのが本当の私"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "痛いの 痛いの 飛んでいけ",
+          "甘い毒薬を飲み込んで",
+          "可愛いだけじゃ生きられないの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "魔法少女とチョコレゐト",
+          "甘い暴力で私を壊してよ",
+          "魔法少女とチョコレゐト",
+          "綺麗な嘘で包み込んで"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "みんなの期待を背負いすぎて",
+          "笑顔の裏側 ドロドロに溶ける",
+          "賞味期限が切れた夢たちを",
+          "ごみ箱の底に押し込んでいる"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "苦しい 苦しい 助けてよ",
+          "甘い幻想に縋り付いて",
+          "正義の味方なんて疲れるの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "魔法少女とチョコレゐト",
+          "甘い暴力で私を壊してよ",
+          "魔法少女とチョコレゐト",
+          "綺麗な嘘で包み込んで"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "もう隠しきれないくらい",
+          "心が悲鳴を上げている",
+          "それでもドレスを翻して",
+          "最後のひとくちを味わい尽くす"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "魔法少女とチョコレゐト",
+          "甘い暴力で私を壊してよ",
+          "魔法少女とチョコレゐト",
+          "綺麗な嘘で包み込んで",
+          "毒も甘味も全部飲み干して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "魔法少女とチョコレゐト",
+      "甘い暴力で私を壊してよ"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "The title works as the sugar-coated mask over the toxic core.",
+      "Repeated phrasing of pain ('痛いの', '苦しい') hidden behind sweet concepts."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "cute facade",
+      "genre mask breakdown",
+      "sweetness with damage underneath",
+      "burnout of the idol/savior figure"
+    ],
+    "emotional_thesis": "The song weaponizes cute magical-girl imagery to expose exhaustion, coercion, and toxic sweetness.",
+    "contrast_device": [
+      "magical-girl iconography vs emotional damage",
+      "sweet surface vs bitter collapse"
+    ],
+    "dramatic_arc": [
+      "cute-role framing and subversion",
+      "pressure build and admission of pain",
+      "title-mask chorus rupture",
+      "bridge breakdown",
+      "final consumption of the poison"
+    ],
+    "narrative_role": [
+      "genre deconstruction song",
+      "dark cute performance"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title packages poison as candy and makes the collapse more visible through the sugary aesthetic.",
+    "key_motifs": [
+      "magic girl",
+      "chocolate",
+      "sweet poison",
+      "collapsed cute persona"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1012490,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Magical Girl and Chocolate.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -9.0,
+        "lra_lu": 4.1,
+        "rms_median_db": -11.726,
+        "rms_span_db": 97.133,
+        "early_rms_db": -12.298,
+        "mid_rms_db": -11.465,
+        "late_rms_db": -11.509,
+        "late_minus_early_db": 0.789,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "PinocchioP-01-Magical Girl and Chocolate.flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "cute-bright setup",
+        "pressure increase",
+        "hard chorus rupture"
+      ],
+      "vocal_behavior": [
+        "playful synthetic tone",
+        "bite under cuteness",
+        "rupture-ready hook hit"
+      ],
+      "production_palette": [
+        "bright pop shell",
+        "aggressive subculture edge",
+        "cute-chaos contrast"
+      ],
+      "arrangement_arc": [
+        "sugary setup",
+        "instability build",
+        "chorus fracture",
+        "measured peak zone: late"
+      ],
+      "dynamics_arc": [
+        "bright open",
+        "rising tension",
+        "rupture chorus"
+      ],
+      "confidence": "medium",
+      "evidence_basis": [
+        "human_listening",
+        "lyrics",
+        "model_inference",
+        "other"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact distortion, effects, or instrumentation without verification."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "mask framing",
+        "expectation refusal"
+      ],
+      "narrative_job": "Introduce the magical-girl persona and immediately shatter the illusion of purity.",
+      "arrangement_role": {
+        "summary": "Bright and fast-paced, sounding deceitfully cheerful.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peppy, upbeat delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Energetic start.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "expectation refusal"
+      ],
+      "vocabulary_focus": [
+        "清く正しく",
+        "お伽話",
+        "殴り飛ばして"
+      ],
+      "rhyme_features": [
+        "section-aligned copy phrasing"
+      ],
+      "rhythm_features": [
+        "compressed vocaloid phrasing"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "sweetness compression",
+        "toxicity reveal"
+      ],
+      "narrative_job": "Tighten the sugar-coated frame and admit the internal pain.",
+      "arrangement_role": {
+        "summary": "Builds tension with slightly darker undertones creeping in.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Child-like chant turning desperate.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Pressure rising before the drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "plea for relief"
+      ],
+      "vocabulary_focus": [
+        "痛いの",
+        "毒薬",
+        "生きられない"
+      ],
+      "rhyme_features": [
+        "rhythmic repetition"
+      ],
+      "rhythm_features": [
+        "tight syncopation"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title-mask hit",
+        "sweetness rupture"
+      ],
+      "narrative_job": "Explosive delivery of the title concept, begging for sweet destruction.",
+      "arrangement_role": {
+        "summary": "Full, chaotic pop release with heavy synthetic textures.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Massive, repeatable hook.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High energy band.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "title-mask hit",
+        "sweetness rupture"
+      ],
+      "vocabulary_focus": [
+        "魔法少女とチョコレゐト",
+        "暴力",
+        "嘘"
+      ],
+      "rhyme_features": [
+        "chanting"
+      ],
+      "rhythm_features": [
+        "danceable drop"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "decay",
+        "exhaustion"
+      ],
+      "narrative_job": "Describes the behind-the-scenes burnout of maintaining the facade.",
+      "arrangement_role": {
+        "summary": "Maintains the fast pace but feels slightly more frantic or glitchy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rapid-fire lyrics.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steady pulse but with internal tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession of burnout"
+      ],
+      "vocabulary_focus": [
+        "期待",
+        "溶ける",
+        "ごみ箱"
+      ],
+      "rhyme_features": [
+        "end rhymes"
+      ],
+      "rhythm_features": [
+        "compressed delivery"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "escalation of pain"
+      ],
+      "narrative_job": "The breaking point before falling back into the chorus.",
+      "arrangement_role": {
+        "summary": "Building tension, similar to Pre-Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Increasing pitch and desperation.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximum tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "cry for help"
+      ],
+      "vocabulary_focus": [
+        "苦しい",
+        "幻想",
+        "正義の味方"
+      ],
+      "rhyme_features": [
+        "rhythmic repetition"
+      ],
+      "rhythm_features": [
+        "driving toward the drop"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "title-mask hit"
+      ],
+      "narrative_job": "Second explosion, cementing the inevitability of the toxic cycle.",
+      "arrangement_role": {
+        "summary": "Full drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Main hook.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loud, aggressive pop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "surrender to violence"
+      ],
+      "vocabulary_focus": [
+        "魔法少女とチョコレゐト"
+      ],
+      "rhyme_features": [
+        "chanting"
+      ],
+      "rhythm_features": [
+        "danceable beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "bare exposure",
+        "resignation"
+      ],
+      "narrative_job": "The final breakdown where the pain is fully exposed, but she resolves to finish the act.",
+      "arrangement_role": {
+        "summary": "A chaotic or stripped-back section that contrasts with the energetic choruses.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "More desperate, varied melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Pivot zone, lowering and then dramatically rising.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "fatalism"
+      ],
+      "vocabulary_focus": [
+        "悲鳴",
+        "ドレス",
+        "ひとくち"
+      ],
+      "rhyme_features": [
+        "narrative flow"
+      ],
+      "rhythm_features": [
+        "syncopated and dramatic"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final consumption"
+      ],
+      "narrative_job": "The ultimate embrace of the toxic sweetness, swallowing both the poison and the sugar.",
+      "arrangement_role": {
+        "summary": "Maximum intensity, potentially layered with chaotic synths.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak of the vocal range and energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Highest and most sustained energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "total submission"
+      ],
+      "vocabulary_focus": [
+        "毒",
+        "甘味",
+        "飲み干して"
+      ],
+      "rhyme_features": [
+        "hook repetition"
+      ],
+      "rhythm_features": [
+        "frenetic pace leading to end"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "cute copy",
+      "genre mask",
+      "breakdown chant"
+    ],
+    "mora_control_notes": [
+      "The title should remain intact as a cute-toxic hook unit."
+    ],
+    "accent_risk_notes": [
+      "Do not over-soften the chorus line; the cute surface needs bite."
+    ],
+    "critic_focus": [
+      "cute-toxic balance",
+      "title reframe strength",
+      "chorus rupture clarity"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark cute vocaloid pop",
+      "chaotic subculture pop"
+    ],
+    "tempo_feels": [
+      "bright-fast pulse",
+      "breakdown-ready hook cadence"
+    ],
+    "vocal_tones": [
+      "cute synthetic lead",
+      "smiling menace",
+      "rupture-ready chorus hit"
+    ],
+    "production_palette": [
+      "candy-coated pop shell",
+      "aggressive chorus edge",
+      "cute-chaos contrast"
+    ],
+    "energy_arc": [
+      "sugary setup",
+      "mask compression",
+      "title-mask rupture",
+      "chaotic bridge",
+      "final explosive chorus"
+    ],
+    "imagery_anchors": [
+      "magic girl",
+      "chocolate",
+      "sweet poison",
+      "collapsed cute persona"
+    ],
+    "exclude": [
+      "do not turn into wholesome cute-pop",
+      "do not remove the toxic underlayer"
+    ],
+    "source_basis": [
+      "lyrics",
+      "third_party_db",
+      "model inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Full realistic section analysis deployed.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

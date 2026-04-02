@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "magnetite_living_ghost",
+    "artist_id": "magnetite",
+    "artist_name": "Hiragi Magnetite",
+    "title": "生きてるお化けは生きている",
+    "title_core": "Living Ghost is Alive"
+  },
+  "song_intent": {
+    "core_theme": ["Ghost Imagery", "Ambiguity", "Alternative Energy"],
+    "emotional_target": "Technical, high-energy exploration of the boundary between existing and living.",
+    "key_motifs": ["Ghost", "Mirror", "Layer", "Technical Reef"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "生きてるお化けは生きている 鏡の中に隠れてる\n見えない境界を 越えてゆくのさ\n\n[Chorus]\n壊れるほどに 生きている証を 叫べ\nゴースト、ゴースト。 誰にも 見えない 詩を\n重なる 層の中 響く 鼓動が",
+    "hook_lines": ["生きてるお化けは生きている", "ゴースト、ゴースト。"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["壊れるほどに 生きている証を 叫べ", "ゴースト、ゴースト。 誰にも 見えない 詩を", "重なる 層の中 響く 鼓動が"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Powerful", "Edgy", "Precise", "Vocaloid-Flower style"],
+    "production_palette": ["Technical guitar riffs", "Alternative rock edge", "Electronic layering"],
+    "energy_arc": "Alternative high-tension drive",
+    "imagery_anchors": ["Glitched ghosts", "Reflecting glass", "Neural pathways", "Dark geometric shapes"]
+  }
+}

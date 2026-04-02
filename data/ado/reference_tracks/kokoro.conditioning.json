@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_kokoro",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "心という名の不可解",
+    "title_core": "Kokoro to iu Na no Fukakai",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "drama",
+      "work_name": "ドクターホワイト",
+      "role_label": "theme_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "Mafumafu",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Mafumafu",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Mafumafu",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_hw22011303",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Medical theatrical epic. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "君が瞬きをする音",
+          "目を逸らした音さえ",
+          "こんなにも容易く聞き分けてみせるのに"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "寸分の狂いだってない",
+          "正確に記録されたジグザグに",
+          "それ以上意味はないはずだもの",
+          "故にどんな顔して笑おうと"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "感情の判断はどうしたらいい?",
+          "心境の分別はどうしたらいい?",
+          "証明しようもない不明瞭が",
+          "エラー吐いては脈を打つんだ"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "心という名前の不可解を",
+      "見抜いてよ"
+    ],
+    "repetition_patterns": [
+      "Frequent use of '心音を吐いている' as a transitionary stabilizing phrase"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "unsolvable emotion",
+      "medical analysis of the soul",
+      "vulnerability"
+    ],
+    "emotional_thesis": "The human 'heart' is an illogical error in an otherwise solvable existence.",
+    "contrast_device": [
+      "precise medical charts vs messy emotions",
+      "logical diagnosis vs irrational tears"
+    ],
+    "dramatic_arc": [
+      "analytical whisper",
+      "diagnostic pressure build",
+      "emotional pleading (chorus)",
+      "raw vulnerability (outro)"
+    ],
+    "narrative_role": [
+      "self-diagnosing narrator",
+      "emotionally exposed analyst"
+    ],
+    "title_function": "Names the heart as the unresolved object the song keeps trying and failing to diagnose.",
+    "key_motifs": [
+      "zigzag (heartbeat)",
+      "chart",
+      "scalpel",
+      "medication",
+      "error"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 152,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "C major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "theatrical dramatic build",
+        "orchestral pop rock hybrid",
+        "dynamic rollercoaster"
+      ],
+      "vocal_behavior": [
+        "close-mic whispering",
+        "urgent breathy delivery",
+        "fragile falsetto",
+        "intense emotional belting in high-register"
+      ],
+      "production_palette": [
+        "emotional piano arpeggios",
+        "sweeping orchestral strings",
+        "pounding dramatic drums",
+        "glitchy electronic grain"
+      ],
+      "arrangement_arc": [
+        "linear crescendo of intensity",
+        "narrative pauses for vocal focus"
+      ],
+      "dynamics_arc": [
+        "extreme range from silent to maximum loudness"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "emotional outburst",
+        "philosophical question"
+      ],
+      "narrative_job": "The narrator breaks down their technical defense to ask the primary 'unsolvable' question.",
+      "arrangement_role": {
+        "summary": "Full band and orchestral expansion.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "High-register, soaring melody with frequent wide intervals.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Powerful and soaring.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "urgent repetition of questions ('how should I?')"
+      ],
+      "vocabulary_focus": [
+        "judgment",
+        "separation",
+        "error",
+        "pulse"
+      ],
+      "rhyme_features": [
+        "question-ending repetition creates recurring pressure",
+        "technical nouns add clipped consonant texture"
+      ],
+      "rhythm_features": [
+        "question-led rising cadence",
+        "alternation between long diagnostic lines and short impact phrases"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Dramatic J-pop",
+      "Orchestral Pop Rock",
+      "Cinematic V-pop"
+    ],
+    "tempo_feels": [
+      "driving 152bpm",
+      "emotional heartbeat pulse"
+    ],
+    "vocal_tones": [
+      "whispering",
+      "breathy urgency",
+      "emotional belting",
+      "theatrical monologue",
+      "fragile falsetto"
+    ],
+    "production_palette": [
+      "grand piano",
+      "dramatic string section",
+      "emotive heavy drums",
+      "digital glitch textures"
+    ],
+    "energy_arc": [
+      "emotional ascent and release"
+    ],
+    "imagery_anchors": [
+      "medical chart",
+      "heartbeat pulse",
+      "scalpel",
+      "forbidden tears",
+      "diagnosis"
+    ],
+    "exclude": [
+      "purely repetitive dance beats",
+      "monotone delivery"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "hidden",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "internal_monologue",
+      "concept_metaphor",
+      "copy_line"
+    ],
+    "mora_control_notes": [],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "release",
+        "title_drop_role": "none"
+      }
+    ]
+  }
+}

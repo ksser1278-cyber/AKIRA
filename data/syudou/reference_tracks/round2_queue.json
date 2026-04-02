@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "syudou",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "syudou_bitter_choco_decoration",
+      "title": "ビターチョコデコレーション",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Swing/jazz-hop rhythmic foundation."
+      ],
+      "style_gap_filled": [
+        "Adult cynical themes vs high school themes."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "syudou_call_boy",
+      "title": "コールボーイ",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Raw, alcoholic desperation."
+      ],
+      "style_gap_filled": [
+        "Jazz rock swagger."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "syudou_bakushou",
+      "title": "爆笑",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Manic laughter as a hook device."
+      ],
+      "style_gap_filled": [
+        "Aggressive drop dynamics."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "syudou_cute_na_kanojo",
+      "title": "キュートなカノジョ",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Sarcastic toxic romance."
+      ],
+      "style_gap_filled": [
+        "Minimalist funky basslines."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "syudou_gamble",
+      "title": "ギャンブル",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "mode_support",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "High stakes dramatic anthem."
+      ],
+      "style_gap_filled": [
+        "Orchestral integration."
+      ],
+      "notes": []
+    }
+  ]
+}

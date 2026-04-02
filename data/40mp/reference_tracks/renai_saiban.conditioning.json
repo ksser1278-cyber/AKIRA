@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "40mp_renai_saiban",
+    "artist_id": "40mp",
+    "title": "恋愛裁判",
+    "bpm": 134,
+    "key": "G Major",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "moderate",
+        "lines": [
+          "Oh! No! No! No!",
+          "ちょっと魔がさしたんだ",
+          "そう、僕は君だけが全てさ",
+          "卑怯な言い訳はよしてよね"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 4, "role": "intro_hook", "tech": "English exclamation"},
+          {"line": 2, "mora": 10, "role": "confession", "tech": "Gentle admit of mistake"},
+          {"line": 3, "mora": 13, "role": "affirmation", "tech": "Devotion claim"},
+          {"line": 4, "mora": 13, "role": "conflict", "tech": "Dialogue/Retort"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "melodic",
+        "lines": [
+          "恋愛裁判 君を下すよ",
+          "ギルティの判決を言い渡す",
+          "最高の笑顔で「さよなら」さ",
+          "君との日々は無罪だった"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "title_hook", "tech": "Legal metaphor reveal"},
+          {"line": 2, "mora": 13, "role": "climax", "tech": "Guilty verdict"},
+          {"line": 3, "mora": 12, "role": "twist", "tech": "Smiling goodbye"},
+          {"line": 4, "mora": 12, "role": "resolution", "tech": "Final innocence claim"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["love as a trial", "relatable cheating/mistakes", "playful legal metaphors"],
+    "emotional_thesis": "Love is a court where words are evidence and a smile is the ultimate verdict."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "deco27",
+    "track_id": "deco27_mozaik_role",
+    "title": "モザイクロール"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "priority": "high"
+  },
+  "seed_brief": {
+    "title_pattern": "wordplay_noun",
+    "hook_behavior": [
+      "classic bouncy rock",
+      "driving chorus melody"
+    ],
+    "section_flow_guess": [
+      "verse_doubt",
+      "prechorus_realization",
+      "chorus_catchy_truth",
+      "bridge_guitar_solo",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "pixels",
+      "censorship",
+      "hiding truth",
+      "scissors"
+    ],
+    "emotional_arc": [
+      "doubt",
+      "betrayal",
+      "cutting ties"
+    ],
+    "leakage_watchouts": [
+      "anchor to late 2000s vocal-rock style; less dense than modern DECO"
+    ],
+    "prompt_seed_terms": [
+      "classic vocaloid rock",
+      "driving pop punk",
+      "catchy hook"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Classic baseline for DECO*27 rock."
+    ],
+    "style_gap_filled": [
+      "Foundational verse-chorus dynamic."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

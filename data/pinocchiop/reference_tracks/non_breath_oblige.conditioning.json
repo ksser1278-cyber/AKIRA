@@ -1,0 +1,1054 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_non_breath_oblige",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "ノンブレス・オブリージュ",
+    "title_core": "ノンブレス・オブリージュ",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": []
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "ピノキオピー",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Project SEKAI song reference",
+              "origin": "other",
+              "url": "https://projectsekai.fandom.com/wiki/Non-breath_oblige",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "ピノキオピー",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Project SEKAI song reference",
+              "origin": "other",
+              "url": "https://projectsekai.fandom.com/wiki/Non-breath_oblige",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "ピノキオピー",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "PinocchioP default self-arrangement",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Project SEKAI song reference",
+            "origin": "other",
+            "url": "https://projectsekai.fandom.com/wiki/Non-breath_oblige",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:29",
+        "seconds": 209,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Non-breath oblige.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Project SEKAI lyric and song reference",
+        "origin": "other",
+        "status": "cross_checked",
+        "url": "https://projectsekai.fandom.com/wiki/Non-breath_oblige",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Project SEKAI song page",
+        "origin": "other",
+        "status": "cross_checked",
+        "url": "https://projectsekai.fandom.com/wiki/Non-breath_oblige",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full grounded upgrade identifying the hyper-compressed lyric pacing and suffocation theme."
+      }
+    ],
+    "notes": [
+      "Upgraded to full structure tracking to emphasize the continuous 'non-breath' compression."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal structure tracking. Captures the high-pressure verse phrasing and repetitive hook.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "息が詰まる 息が詰まる 息が詰まる"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "正しさのラインに立つと 息が先に細くなるんだ",
+          "優しい顔した言葉さえ 喉の奥で圧迫に変わる"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "飲み込めば飲み込むほど 吸う空気がなくなって",
+          "従えば従うほど 体が悲鳴を上げ始める"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "ノンブレス・オブリージュ",
+          "正しさの名の下で 呼吸さえ縛られてく",
+          "ノンブレス・オブリージュ",
+          "I love you",
+          "震える手で その首を絞めながら"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "誰一人悪くないから 逃げ道が見つからないんだ",
+          "空気読めという圧力で 真空パックにされていく"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "沈黙を優しさと いつから呼び始めたの",
+          "息を止めているだけなのに"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "ノンブレス・オブリージュ",
+          "正しさの名の下で 呼吸さえ縛られてく",
+          "ノンブレス・オブリージュ",
+          "I love you",
+          "震える手で その首を絞めながら"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "息継ぎも許されない 水の中を泳ぐように",
+          "互いの酸素を 奪い合っている"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "ノンブレス・オブリージュ",
+          "正当化された罰で この肺が潰れるまで",
+          "ノンブレス・オブリージュ",
+          "I love you",
+          "息を止めて 息を止めて 息を止めて"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ノンブレス・オブリージュ",
+      "正しさの名の下で 呼吸さえ縛られてく"
+    ],
+    "question_lines": [
+      "沈黙を優しさと いつから呼び始めたの"
+    ],
+    "repetition_patterns": [
+      "The title functions as a rhythmic chokehold repeated in choruses.",
+      "The repetition of '息を止めて' (stop your breath) mirrors hyperventilation."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "moral pressure",
+      "breathlessness",
+      "social suffocation",
+      "peer pressure masquerading as kindness"
+    ],
+    "emotional_thesis": "The song turns obligation and social etiquette into a literal, physical suffocation mechanism.",
+    "contrast_device": [
+      "good intentions vs bodily collapse",
+      "correctness vs survival",
+      "'I love you' vs strangulation"
+    ],
+    "dramatic_arc": [
+      "panic statement (Intro)",
+      "structural suffocation (Verses)",
+      "compression lock-in (Pre-Chorus)",
+      "choking hook (Chorus)",
+      "oxygen deprivation (Bridge)"
+    ],
+    "narrative_role": [
+      "social critique",
+      "high-pressure synth pop",
+      "vocaloid fast-singing showcase"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title flips 'noblesse oblige' into 'non-breath oblige', making suffocation the expected duty of the modern world.",
+    "key_motifs": [
+      "breathlessness",
+      "obligation",
+      "correctness pressure",
+      "suffocation",
+      "choking"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 965670,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Non-breath oblige.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -7.8,
+        "lra_lu": 6.3,
+        "rms_median_db": -10.373,
+        "rms_span_db": 94.226,
+        "early_rms_db": -13.276,
+        "mid_rms_db": -9.771,
+        "late_rms_db": -10.101,
+        "late_minus_early_db": 3.175,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "PinocchioP-01-Non-breath oblige.flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "high-pressure open",
+        "continuous compression",
+        "overload chorus"
+      ],
+      "vocal_behavior": [
+        "rapid compressed delivery",
+        "pressure stacking",
+        "hook overload",
+        "machine-gun breathing motif"
+      ],
+      "production_palette": [
+        "tight digital rhythm bed",
+        "high-tension synth frame",
+        "pressure-first pop shell"
+      ],
+      "arrangement_arc": [
+        "instant pressure",
+        "no-relief accumulation",
+        "chorus overload",
+        "measured peak zone: late"
+      ],
+      "dynamics_arc": [
+        "high start",
+        "sustained ceiling",
+        "hook overload",
+        "measured late energy lift"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "human_listening",
+        "lyrics",
+        "model_inference",
+        "other"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact BPM, mix density, or instrumentation without verified sources."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Intro",
+      "section_type": "intro",
+      "source_section_labels": [
+        "intro"
+      ],
+      "lyric_function": [
+        "panic setup"
+      ],
+      "narrative_job": "Immediately establish the physical sensation of struggling to breathe.",
+      "arrangement_role": {
+        "summary": "Rapid synth sequence mimicking hyperventilation.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Staccato repeated phrase.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Immediate high tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "hyperventilation"
+      ],
+      "vocabulary_focus": [
+        "息が詰まる"
+      ],
+      "rhyme_features": [
+        "exact repetition"
+      ],
+      "rhythm_features": [
+        "machine gun staccato"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "intro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "pressure statement",
+        "social squeeze setup"
+      ],
+      "narrative_job": "Diagnose the social correctness that causes the breathing problem.",
+      "arrangement_role": {
+        "summary": "Driving, frantic 4-on-the-floor beat with nervous energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rapid 16th-note vocal delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Sustained tight compression.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "cause and effect"
+      ],
+      "vocabulary_focus": [
+        "正しさ",
+        "息",
+        "圧迫"
+      ],
+      "rhyme_features": [
+        "packed phrasing"
+      ],
+      "rhythm_features": [
+        "breathless delivery"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "lock-in compression",
+        "bodily distress"
+      ],
+      "narrative_job": "Show the consequence of complying: inner bodily scream.",
+      "arrangement_role": {
+        "summary": "Chord progression climbs while the beat drops out slightly to maximize drop impact.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Vacuum sweep before chorus.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "escalation"
+      ],
+      "vocabulary_focus": [
+        "飲み込む",
+        "従う",
+        "悲鳴"
+      ],
+      "rhyme_features": [
+        "parallel structure"
+      ],
+      "rhythm_features": [
+        "syncopated push"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title-pressure hit",
+        "overload chorus"
+      ],
+      "narrative_job": "Deliver the core concept: modern duty is to hold your breath for others.",
+      "arrangement_role": {
+        "summary": "Explosive, dense synth-pop drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Rhythmic slogan chanting mixed with long melodic cries.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximum loudness, highly compressed.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "slogan release"
+      ],
+      "vocabulary_focus": [
+        "ノンブレス",
+        "呼吸",
+        "首を絞めながら"
+      ],
+      "rhyme_features": [
+        "hook repetition"
+      ],
+      "rhythm_features": [
+        "4-on-the-floor smash"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "societal mapping"
+      ],
+      "narrative_job": "Explain why this happens: nobody is evil, it's just group consensus crushing everyone.",
+      "arrangement_role": {
+        "summary": "Back to the driving beat, but feels even more enclosed.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Fast phrasing continues.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Continuous fast pressure.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "hopelessness"
+      ],
+      "vocabulary_focus": [
+        "誰一人悪くない",
+        "空気",
+        "真空パック"
+      ],
+      "rhyme_features": [
+        "packed phrasing"
+      ],
+      "rhythm_features": [
+        "relentless 16th notes"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "ironic questioning"
+      ],
+      "narrative_job": "Points out the hypocrisy of calling suffocation 'kindness'.",
+      "arrangement_role": {
+        "summary": "Buildup segment, increasing the desperation payload.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Vocal pitch rises with emotional distress.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High intensity swell.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "rhetorical question"
+      ],
+      "vocabulary_focus": [
+        "沈黙",
+        "優しさ",
+        "息を止めている"
+      ],
+      "rhyme_features": [
+        "parallel structure"
+      ],
+      "rhythm_features": [
+        "push to chorus"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "title-pressure hit"
+      ],
+      "narrative_job": "Second wave of the asphyxiation hook.",
+      "arrangement_role": {
+        "summary": "Full drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak melody playback.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Huge wall of sound.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "slogan release"
+      ],
+      "vocabulary_focus": [
+        "ノンブレス"
+      ],
+      "rhyme_features": [
+        "hook repetition"
+      ],
+      "rhythm_features": [
+        "driving beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "drowning metaphor"
+      ],
+      "narrative_job": "The lowest point of oxygen: everyone is just stealing air from each other to survive.",
+      "arrangement_role": {
+        "summary": "Music might drop away into a submerged, muffled feeling before exploding.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Desperate, reaching notes.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Dynamic pivot point, from deep drop to massive swell.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "metaphor"
+      ],
+      "vocabulary_focus": [
+        "水の中",
+        "酸素",
+        "奪い合っている"
+      ],
+      "rhyme_features": [
+        "narrative flow"
+      ],
+      "rhythm_features": [
+        "broken or half-time feel temporarily"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "terminal overload"
+      ],
+      "narrative_job": "The final chokehold, ending on continuous breath-stopping loops.",
+      "arrangement_role": {
+        "summary": "Maximum velocity and density, frantic ending.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repeated phrasing '息を止めて' mimicking final hyperventilation.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Absolute peak energy zone.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "final breakdown"
+      ],
+      "vocabulary_focus": [
+        "罰",
+        "潰れるまで",
+        "息を止めて"
+      ],
+      "rhyme_features": [
+        "hook repetition"
+      ],
+      "rhythm_features": [
+        "staccato burst out"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "kyokusen",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "pressure copy",
+      "social slogan",
+      "rapid monologue"
+    ],
+    "mora_control_notes": [
+      "This track needs sustained compression through both verses and chorus."
+    ],
+    "accent_risk_notes": [
+      "The title must stay tight enough to feel like a pressure alarm rather than a loose phrase."
+    ],
+    "critic_focus": [
+      "compression control",
+      "pressure escalation",
+      "hook overload clarity"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "high-pressure vocaloid pop",
+      "social-ironic synth pop"
+    ],
+    "tempo_feels": [
+      "compressed rapid cadence",
+      "unbroken pressure pulse"
+    ],
+    "vocal_tones": [
+      "breathless synthetic lead",
+      "stacked verbal pressure",
+      "overload chorus push"
+    ],
+    "production_palette": [
+      "tight digital rhythm bed",
+      "high-tension synth shell",
+      "pressure-first arrangement"
+    ],
+    "energy_arc": [
+      "instant pressure",
+      "suffocation compression",
+      "hook overload",
+      "bridge drowning",
+      "final hypoxic burst"
+    ],
+    "imagery_anchors": [
+      "breathlessness",
+      "duty",
+      "moral pressure",
+      "social suffocation",
+      "vaccuum pack"
+    ],
+    "exclude": [
+      "do not relax into motivational pop",
+      "do not dilute the suffocation concept"
+    ],
+    "source_basis": [
+      "lyrics",
+      "third_party_db",
+      "model inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact arrangement credit",
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Audio-derived runtime, loudness, and energy curve attached from owned file.",
+      "9-section structure mapped."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

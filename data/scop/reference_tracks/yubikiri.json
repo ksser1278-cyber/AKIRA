@@ -1,0 +1,42 @@
+{
+  "track_id": "yubikiri",
+  "artist_id": "scop",
+  "title": "指切り",
+  "bpm": 130,
+  "key": "A Minor",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14],
+      "energy": 0.45,
+      "description": "Intense internal monologue. Piano-driven emotional atmosphere. Focus on 'Body and Soul'."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.8,
+      "description": "Melodic explosion. 'Yubikitta' (Pinky Sworn) hook. Focus on the proof of love."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "指切りった 今日の日の誓い",
+      "romaji": "Yubikitta kyou no hi no chikai",
+      "mora": 14,
+      "meta": "Signature motif. The act of the pinky swear."
+    },
+    {
+      "original": "愛の証を見せてあげるわ",
+      "romaji": "Ai no akashi wo misete ageru wa",
+      "mora": 15,
+      "meta": "Core emotional driver. Intense devotion."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Hatsune Miku - Breathy, emotive, intense",
+    "main_instrument": "Grand Piano, Electric Guitar, Emotive Bass",
+    "thematic_tags": ["Pinky Swear", "Devotion", "Proof of Love", "Nocturnal", "Sincerity"],
+    "signature_phrases": ["指切り (Yubikiri)", "愛の証 (Proof of love)"]
+  }
+}

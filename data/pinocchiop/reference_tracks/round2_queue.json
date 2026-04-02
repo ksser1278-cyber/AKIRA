@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "pinocchiop",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "pinocchiop_slow_motion",
+      "title": "すろぉもぉしょん",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "A slower BPM ironic reflection."
+      ],
+      "style_gap_filled": [
+        "Slower, breathing rhythm."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "pinocchiop_apple_dot_com",
+      "title": "アップルドットコム",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "High conceptual irony using digital branding."
+      ],
+      "style_gap_filled": [
+        "Absurdist chants."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "pinocchiop_motivation_is_dead",
+      "title": "モチベーションが死んでる",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Ultimate apathy anthem."
+      ],
+      "style_gap_filled": [
+        "Flat vocal delivery contrasting upbeat music."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "pinocchiop_nee_nee_nee",
+      "title": "ねぇねぇねぇ。",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Dialog-driven toxic cuteness."
+      ],
+      "style_gap_filled": [
+        "Call and response hooks."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "pinocchiop_suki_na_koto_dake_de_ii_desu",
+      "title": "好きなことだけでいいです",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Sarcastic take on modern leisure."
+      ],
+      "style_gap_filled": [
+        "Gospel/choir synth integration."
+      ],
+      "notes": []
+    }
+  ]
+}

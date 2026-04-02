@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_apple_dot_com",
+    "artist_id": "pinocchiop",
+    "artist_name": "pinocchiop",
+    "title": "アップルドットコム",
+    "title_core": "アップルドットコム",
+    "language": "ja",
+    "artist": "pinocchiop",
+    "status": "cross_checked"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi17112401/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for pinocchiop_apple_dot_com. Workflow: source_plus_mode."
+    ],
+    "trusted_ratio": 1.0
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "アップルドットコム って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "アップルドットコム って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "アップルドットコム アップルドットコム",
+          "心を 抉るように",
+          "アップルドットコム アップルドットコム",
+          "全てを 塗り潰して"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "アップルドットコム アップルドットコム",
+          "心を 抉るように"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "アップルドットコム アップルドットコム",
+          "心を 抉るように",
+          "アップルドットコム アップルドットコム",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "アップルドットコム アップルドットコム",
+      "心を 抉るように"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "digital chants",
+      "flat delivery"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "websites",
+      "apples",
+      "information overload"
+    ],
+    "emotional_thesis": "There is too much information and nothing matters.",
+    "contrast_device": "Hyper-speed digital pop masking deep existential boredom.",
+    "dramatic_arc": [
+      "boredom",
+      "information fatigue",
+      "apathy"
+    ],
+    "narrative_role": [
+      "ironic_meta"
+    ],
+    "tie_in_function": "",
+    "title_function": "seed_centerpiece",
+    "key_motifs": [
+      "websites",
+      "apples",
+      "information overload",
+      "empty searches"
+    ],
+    "interpretation_confidence": "low",
+    "message": "There is too much information and nothing matters.",
+    "core_emotion": "Information Fatigue",
+    "primary_target": "The listener or a toxic counterpart",
+    "status": "cross_checked"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "medium",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "digital_domain"
+    ],
+    "critic_focus": [
+      "needs_full_grounding",
+      "needs_provenance"
+    ],
+    "section_features": [
+      "verse_listing",
+      "prechorus_glitch",
+      "chorus_deadpan_chant",
+      "verse2_listing",
+      "chorus_final"
+    ]
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": [
+        "boredom",
+        "information fatigue",
+        "apathy"
+      ],
+      "vocal_behavior": [
+        "digital chants",
+        "flat delivery",
+        "absurdist listing"
+      ],
+      "production_palette": [
+        "hyperpop",
+        "deadpan chant",
+        "digital noise"
+      ],
+      "confidence": "estimated",
+      "evidence_basis": [
+        "round2_draft_seed"
+      ]
+    },
+    "do_not_overclaim": [
+      "BPM exactness",
+      "key exactness",
+      "arrangement exactness"
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "ironic_meta",
+      "vocaloid",
+      "subculture",
+      "hyperpop",
+      "deadpan chant"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "digital chants",
+      "flat delivery",
+      "absurdist listing",
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "hyperpop",
+      "deadpan chant",
+      "digital noise",
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "boredom",
+      "information fatigue",
+      "apathy",
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "websites",
+      "apples",
+      "information overload",
+      "empty searches",
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "anchor leakage",
+      "verbatim hook reuse",
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "round2_draft_seed",
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "usable",
+    "missing_fields": [
+      "full lyrics",
+      "provenance",
+      "audio facts"
+    ],
+    "manual_review_required_for": [
+      "lyric grounding",
+      "source cross-check",
+      "section validation"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "notes": [
+      "High conceptual irony using digital branding."
+    ],
+    "warnings": []
+  },
+  "likely_mode": "ironic_meta",
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

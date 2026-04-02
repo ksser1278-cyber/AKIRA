@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "maretu_brain_revolution_girl",
+    "artist_id": "maretu",
+    "artist_name": "MARETU",
+    "title": "脳内革命ガール",
+    "title_core": "脳内革命ガール",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2013-09-20",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2013,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "MARETU Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=0h9VscH7J6E",
+        "status": "confirmed"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "NicoNico Douga (Original Upload)",
+        "origin": "official_channel",
+        "url": "https://www.nicovideo.jp/watch/sm21870906",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance verified and narrative mode aligned to the existing mode-support classification for planner_safe promotion review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Dismissive Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "staccato",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "言い訳、始まりました、また始まりました。 はぁ？",
+          "Sore wa saa...sore wa saa, sore ga saa! 逃げ切ったつもりなの？",
+          "見下し、在り在りですか、物足りないですか。 ねぇ？",
+          "これがさ...これがさ, これがさ！「タカラモノ」ってどーゆーことさ...？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Revolution Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "explosive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "あー、ニンゲンじゃないみたいだ、素顔隠して。",
+          "空振りの理想論、騒ぎ立てる名無しさん。",
+          "感じとれないみたいだ, キミの音は。",
+          "一粒の期待なんて 泣き濡れて染みになって、",
+          "ありふれた唄になっていった。"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Failure Enumeration",
+        "jp_section_role": "c_melo",
+        "mora_density": "obsessive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "如何にも残念そうだ、また病んでるそうだね。",
+          "平日...休日, 連日！ いつだってお粗末だ。",
+          "土砂降り洪水警報。 いざ直情径行。 はぁ？"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "あー、ニンゲンじゃないみたいだ、素顔隠して。",
+      "言い訳、始まりました、また始まりました。"
+    ],
+    "repetition_patterns": [
+      "Sequential demonstratives (Kore, Are, Sore)",
+      "Periodic dismissive Interjections (Haa?, Nee?)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "serial failure",
+      "mental revolution",
+      "identity facade"
+    ],
+    "emotional_thesis": "The subject is a 'bot' trapped in a cycle of excuses and 'desktop theories'. True emotion is replaced by 'common songs' and 'stained expectations'.",
+    "key_motifs": [
+      "excuse",
+      "bot",
+      "revolution",
+      "empty song"
+    ],
+    "interpretation_confidence": "high",
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "mocking observation"
+      ],
+      "narrative_job": "Uses conversational fillers and dismissive sighs to establish a tone of clinical boredom/disgust.",
+      "vocabulary_focus": [
+        "言い訳",
+        "つもりなの",
+        "どーゆーこと"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "high",
+    "title_ignition_style": "thematic",
+    "modern_compression_bias": "extreme",
+    "phrase_source_types": [
+      "conversational_dismissal",
+      "psychological_failure"
+    ],
+    "critic_focus": [
+      "staccato rhythm accuracy",
+      "sigh/filler timing"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.82,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 0.72,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.72
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

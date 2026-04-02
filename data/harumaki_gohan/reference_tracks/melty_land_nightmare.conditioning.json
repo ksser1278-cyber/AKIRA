@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "harumaki_gohan_melty",
+    "artist_id": "harumaki_gohan",
+    "artist_name": "Harumaki Gohan",
+    "title": "メル티ランドナイトメア",
+    "title_core": "Melty Land Nightmare"
+  },
+  "song_intent": {
+    "core_theme": ["Dream vs Reality", "Escapism", "Fading Memories"],
+    "emotional_target": "Bittersweet nostalgia for a world that only exists in sleep.",
+    "key_motifs": ["Melting", "Starry Night", "Door", "Nightmare"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "案外そんなフューチャー 前見的なフューチャー\nワンツーサンハイ、イチニサン そろそろ起きたらどう\nWelcome to the Melty Land. ここはひとりもふたりもない場所\n\n疑ってしまうような 不可視の Starry Night\nずっと前の空想が 今日のキミの白昼夢\n時間すら止まったら 見え始めるキミのナイトメア\n正常な Good Morning. 人生の Happy Ending.\n僕たちは何ひとつ 叶わないのなら",
+    "hook_lines": ["Welcome to the Melty Land", "キミとは今日で5000回目"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["疑ってしまうような 不可視の Starry Night", "ずっと前の空想が 今日のキミの白昼夢", "時間すら止まったら 見え始めるキミのナイトメア", "一瞬だけ 忘れないでよにね"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Dreamy", "Soft", "Whispering", "Nostalgic"],
+    "production_palette": ["Twinkling synths", "Pad wash", "Gentle electronic beat"],
+    "energy_arc": "Gentle, floating descent into sleep",
+    "imagery_anchors": ["Melting clock", "Pastel galaxy", "Open door in the sky", "Sinking into a pillow"]
+  }
+}

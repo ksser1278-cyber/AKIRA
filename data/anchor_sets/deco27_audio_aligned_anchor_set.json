@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "deco27",
+  "set_type": "audio_aligned_anchor_set",
+  "description": "Canonical DECO*27 anchor set aligned to owned audio files available in the local Melon library.",
+  "tracks": [
+    {
+      "track_id": "deco27_ghost_rule",
+      "title": "Ghost Rule",
+      "mode": "dark_cute_breakdown",
+      "audio_available": true,
+      "conditioning_status": "validated"
+    },
+    {
+      "track_id": "deco27_love_doll",
+      "title": "LOVE DOLL",
+      "mode": "direct_emotional_pop",
+      "audio_available": true,
+      "conditioning_status": "drafted"
+    },
+    {
+      "track_id": "deco27_ai_kotoba",
+      "title": "Ai Kotoba",
+      "mode": "direct_emotional_pop",
+      "audio_available": true,
+      "conditioning_status": "drafted"
+    },
+    {
+      "track_id": "deco27_tsumi_to_batsu",
+      "title": "Tsumi to Batsu",
+      "mode": "dark_cute_breakdown",
+      "audio_available": true,
+      "conditioning_status": "drafted"
+    },
+    {
+      "track_id": "deco27_yumeyume",
+      "title": "Yumeyume (Feat. Hatsune Miku)",
+      "mode": "direct_emotional_pop",
+      "audio_available": true,
+      "conditioning_status": "drafted"
+    }
+  ]
+}

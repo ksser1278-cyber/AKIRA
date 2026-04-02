@@ -1,0 +1,42 @@
+{
+  "track_id": "shoujo_rei",
+  "artist_id": "mikitop",
+  "title": "少女レイ",
+  "bpm": 135,
+  "key": "G Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Pre-Chorus", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14],
+      "energy": 0.4,
+      "description": "Quiet, rhythmic acoustic guitar. Focus on 'Atmospheric Summer' imagery."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.8,
+      "description": "Soaring melody. Focus on 'Transparent' world and longing. High emotional resonance."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "本能が狂い始める 追い詰められたハツカネズミ",
+      "romaji": "Honnou ga kurui hajimeru oitsume rareta hatsukanezumi",
+      "mora": 21,
+      "meta": "Opening line. Dark animalistic metaphor."
+    },
+    {
+      "original": "透明な君は 僕を指差してた―。",
+      "romaji": "Toumei na kimi wa boku wo yubi sashiteta—.",
+      "mora": 16,
+      "meta": "Key revelation line. Accusatory ghost imagery."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Hatsune Miku - Breathful, airy, evocative",
+    "main_instrument": "Acoustic Guitar, Piano, Clean Electric Guitar",
+    "thematic_tags": ["Summer", "September", "Bullying", "Suicide", "Ghost", "Railway Crossing"],
+    "signature_phrases": ["透明 (Transparent)", "僕を指差してた (Pointing at me)"]
+  }
+}

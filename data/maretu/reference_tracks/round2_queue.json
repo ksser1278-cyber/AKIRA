@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "maretu",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "maretu_suji",
+      "title": "スヂ",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Extremely heavy drop mechanics missing in current set."
+      ],
+      "style_gap_filled": [
+        "Industrial vocaloid mapping."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "maretu_umitagari",
+      "title": "うみたがり",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Addresses toxic obsessive love in a different meter."
+      ],
+      "style_gap_filled": [
+        "Odd time signature hints."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "maretu_white_happy",
+      "title": "ホワイトハッピー",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Sarcastic faux-happiness."
+      ],
+      "style_gap_filled": [
+        "Major key masking dark themes."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "maretu_koukatsu",
+      "title": "コウカツ",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Sharp, biting social critique."
+      ],
+      "style_gap_filled": [
+        "Fast vocal parsing in metal."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "maretu_darling",
+      "title": "ダーリン",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Highly requested for intense emotional anchors."
+      ],
+      "style_gap_filled": [
+        "Straightforward emotional threat."
+      ],
+      "notes": []
+    }
+  ]
+}

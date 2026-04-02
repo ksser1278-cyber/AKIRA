@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "police_piccadilly_cynic",
+    "artist_id": "police_piccadilly",
+    "artist_name": "Police Piccadilly",
+    "title": "Cynic",
+    "title_core": "Cynic"
+  },
+  "song_intent": {
+    "core_theme": ["Cynicism", "Urban Isolation", "Failing Connections"],
+    "emotional_target": "A cool, detached observation of one's own emotional pain.",
+    "key_motifs": ["Pain", "Wind", "Logic", "Misunderstanding"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "今は当たり前なんて思わない 風はまだまだ強い\n体を支配する痛みだ それでもここに来て\n終わりだけ思えばいい ひとつの理由\n\n振りかざした性善説 何がそうさせる？\n端からあった感情が 巻き起こす誤解か\n心を支配する憂いだ これでもうまたひとつ\n届きはしない想いは 重なり残る",
+    "hook_lines": ["体ウ支配する痛みだ", "届きはしない想いは 重なり残る"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["終わりだけ思えばいい ひとつの理由", "心を支配する憂いだ これでもうまたひとつ", "届きはしない想いは 重なり残る", "ひとつ ひとつ"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Cool", "Sleek", "Precise", "Unemotional"],
+    "production_palette": ["Clean rhythmic electric guitar", "Polished pop-rock drums", "Subtle synth pads"],
+    "energy_arc": "Sleek urban rock swell",
+    "imagery_anchors": ["City lights at dusk", "Empty sidewalk", "Cool wind", "Neatly organized room"]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "track_id": "phony",
+  "artist_id": "tsumiki",
+  "title": "フォニイ",
+  "bpm": 172,
+  "key": "A Minor",
+  "structure": ["Intro", "Verse 1", "Chorus", "Verse 2", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14],
+      "energy": 0.65,
+      "description": "High-density technical delivery. Focus on 'Mirror' and 'Fake' identity. Glitchy electronic beat."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.9,
+      "description": "Sharp melodic release. 'Phony' hook. High syllabic density and technical syncopation."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "造花も勝てない美しさ それは全部嘘 antipathy world",
+      "romaji": "Zouka mo katenai utsukushisa Sore wa zenbu uso antipathy world",
+      "mora": 22,
+      "meta": "Signature motif. Fake flowers as a metaphor for artificial happiness."
+    },
+    {
+      "original": "パ・パ・パ・パ・フォニイ",
+      "romaji": "Pa-pa-pa-pa-phony",
+      "mora": 10,
+      "meta": "Iconic rhythmic hook. Syllabic stutter effect."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "KAFU - Sharp, crystalline, high-fidelity",
+    "main_instrument": "Complex Percussion, Glitch Synths, Tech-Rock Guitar",
+    "thematic_tags": ["Identity", "Fake", "Mirror", "Phony", "Information Density"],
+    "signature_phrases": ["フォニイ (Phony)", "造花 (Fake flower)"]
+  }
+}

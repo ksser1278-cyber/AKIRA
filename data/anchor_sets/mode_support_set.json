@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "set_id": "mode_support_set",
+  "set_type": "mode_support",
+  "description": "Cross-producer support set for generalizing mode rules without overfitting to one producer.",
+  "modes": [
+    {
+      "mode_id": "ironic_meta",
+      "target_count": 20,
+      "support_artists": [
+        "pinocchiop",
+        "kanaria",
+        "maretu"
+      ]
+    },
+    {
+      "mode_id": "direct_emotional_pop",
+      "target_count": 20,
+      "support_artists": [
+        "deco27",
+        "kairiki_bear",
+        "kanaria"
+      ]
+    },
+    {
+      "mode_id": "dark_cute_breakdown",
+      "target_count": 20,
+      "support_artists": [
+        "deco27",
+        "pinocchiop",
+        "kairiki_bear",
+        "maretu"
+      ]
+    }
+  ],
+  "notes": [
+    "This set is not required to be audio-aligned.",
+    "Records here should be added only after gold anchors and producer expansion are stable."
+  ]
+}

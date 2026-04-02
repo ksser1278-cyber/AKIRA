@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "deco27",
+  "reference_role": "producer expansion queue",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "deco27_monitoring",
+      "title": "Monitoring",
+      "romanized": "Monitoring",
+      "mode": "surveillance pop confession",
+      "status": "validated",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 2,
+      "track_id": "deco27_rabbit_hole",
+      "title": "Rabbit Hole",
+      "romanized": "Rabbit Hole",
+      "mode": "descent hook song",
+      "status": "validated",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 3,
+      "track_id": "deco27_vampire",
+      "title": "Vampire",
+      "romanized": "Vampire",
+      "mode": "direct confession pop",
+      "status": "validated",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    },
+    {
+      "priority": 4,
+      "track_id": "deco27_cinderella",
+      "title": "Cinderella",
+      "romanized": "Cinderella",
+      "mode": "direct relationship pop",
+      "status": "validated",
+      "required_inputs": [
+        "lyrics",
+        "credits",
+        "release year",
+        "hook lines",
+        "section map",
+        "prompt conditioning"
+      ]
+    }
+  ]
+}

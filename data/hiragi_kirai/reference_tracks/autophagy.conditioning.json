@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "hiragi_kirai_autophagy",
+    "artist_id": "hiragi_kirai",
+    "artist_name": "Hiiragi Kirai",
+    "title": "オートファジー",
+    "title_core": "Autophagy"
+  },
+  "song_intent": {
+    "core_theme": ["Biological Horror", "Self-Consumption", "Manic Logic"],
+    "emotional_target": "Aggressive, high-tension internal agitation and self-critique.",
+    "key_motifs": ["Autophagy", "Brain", "Laughing", "Nonsense"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ハロー はははは ハロー ははははは 脳内案内人\n愚かしいとか 馬鹿らしい そんなことを僕の前で試行しないで\n到来 難題に問う 無駄なことは？\n\n[Chorus]\n喰って 喰って 喰って 満たされないのさ\nオートファジー 綺麗な 崩壊を 見守っててね\nはははは！ 狂い出した 鼓動が 響くのさ\n馬鹿らしいよね さよなら",
+    "hook_lines": ["オートファジー 綺麗な 崩壊を", "はははは！"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["喰って 喰って 喰って 満たされないのさ", "オートファジー 綺麗な 崩壊を 見守っててね", "はははは！ 狂い出した 鼓動が 響くのさ"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Aggressive", "Manic", "High-Energy", "Flower-tuned"],
+    "production_palette": ["Aggressive dark brass", "Slap bass", "Heavy synthetic rock beat"],
+    "energy_arc": "Manic internal explosion",
+    "imagery_anchors": ["X-ray of a brain", "Shattered mirrors", "Red and Black theme", "Mouths opening in dark"]
+  }
+}

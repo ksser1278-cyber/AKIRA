@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "hachi_donut_hole",
+    "artist_id": "hachi",
+    "artist_name": "Hachi",
+    "title": "ドーナツホール",
+    "title_core": "Donut Hole"
+  },
+  "song_intent": {
+    "core_theme": ["Memory Loss", "Absence", "Identity Voids"],
+    "emotional_target": "The feeling of remembering that you have forgotten something vital.",
+    "key_motifs": ["Donut", "Hole", "Scissors", "Matryoshka"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "いつからこんなに大きな\n思い出せない記憶があったか\nどうにも覚えてないのをひとつ 確かに覚えてるんだな\nもう一回何回やったって 思い出すのはその顔だ\n\nバイバイもう永遠に会えないね\n何だかそんな気がするんだ そうだったんだろう？\n誰も知らないこのドーナツの穴を\n埋めるように 壊すように 笑っていたんだ",
+    "hook_lines": ["ドーナツの穴を埋めるように", "心に 穴が空いたんだ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["バイバイもう永遠に会えないね", "何だかそんな気がするんだ そうだったんだろう？", "誰も知らないこのドーナツの穴を", "埋めるように 壊すように 笑っていたんだ"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Distorted", "Rhythmic", "Acoustic-Rock-Raw"],
+    "production_palette": ["Strumming acoustic guitar", "Aggressive rock beat", "Whistling"],
+    "energy_arc": "Frenetic, jagged rock pulse",
+    "imagery_anchors": ["Shattered glass", "Empty donut box", "Deserted amusement park", "Rusty scissors"]
+  }
+}

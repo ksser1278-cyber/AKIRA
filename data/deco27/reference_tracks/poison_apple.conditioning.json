@@ -1,0 +1,752 @@
+{
+  "song_intent": {
+    "core_theme": [
+      "toxic love",
+      "fairytale corruption",
+      "obsession"
+    ],
+    "emotional_thesis": "We both know this love is completely toxic and will end terribly, but we'll consume it anyway.",
+    "contrast_device": [
+      "cute fairytale aesthetics vs deadly toxic reality"
+    ],
+    "dramatic_arc": [
+      "taking the bite",
+      "feeling the poison",
+      "embracing the madness"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ],
+    "tie_in_function": "",
+    "title_function": "The literal metaphor for their relationship.",
+    "key_motifs": [
+      "毒林檎 (Poison Apple)",
+      "魔女 (Witch)",
+      "狂う (Go Mad)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "scene setting"
+      ],
+      "narrative_job": "Establish the trap.",
+      "arrangement_role": {
+        "summary": "Sneaky groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Staccato bounce.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Punchy.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "metaphor"
+      ],
+      "vocabulary_focus": [
+        "真っ赤な"
+      ],
+      "rhyme_features": [
+        "internal"
+      ],
+      "rhythm_features": [
+        "16ths"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "The point of no return.",
+      "arrangement_role": {
+        "summary": "Rising dark tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Climbing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "invitation"
+      ],
+      "vocabulary_focus": [
+        "毒の味"
+      ],
+      "rhyme_features": [
+        "parallel lines"
+      ],
+      "rhythm_features": [
+        "driving 8ths"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title declaration"
+      ],
+      "narrative_job": "Total toxic surrender.",
+      "arrangement_role": {
+        "summary": "Explosive dark bass drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Hypnotic melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "command"
+      ],
+      "vocabulary_focus": [
+        "毒林檎"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "heavy downbeats"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "deepening madness"
+      ],
+      "narrative_job": "The witch's perspective.",
+      "arrangement_role": {
+        "summary": "Groove drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Whispery, sinister.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "mockery"
+      ],
+      "vocabulary_focus": [
+        "鏡よ鏡"
+      ],
+      "rhyme_features": [
+        "staccato"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final statement"
+      ],
+      "narrative_job": "Infinite loop of poison.",
+      "arrangement_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "insanity"
+      ],
+      "vocabulary_focus": [
+        "侵食"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "fairytale themes",
+      "toxic love"
+    ],
+    "mora_control_notes": [
+      "Needs a very cute but sinister vocal delivery."
+    ],
+    "accent_risk_notes": [
+      "Must sound unhinged."
+    ],
+    "critic_focus": [
+      "dark cute contrast"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "dance pop",
+        "dark bouncy groove"
+      ],
+      "vocal_behavior": [
+        "cute but sinister",
+        "whisper elements"
+      ],
+      "production_palette": [
+        "heavy sub bass",
+        "quirky synths",
+        "club beats"
+      ],
+      "arrangement_arc": [
+        "sneaky verse",
+        "building tension",
+        "massive dark drop chorus"
+      ],
+      "dynamics_arc": [
+        "punchy and highly compressed"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM."
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "high energy synth",
+      "fast dance",
+      "dark pop",
+      "club bounce",
+      "j-pop",
+      "vocaloid pop",
+      "subculture hit",
+      "high energy vocaloid",
+      "j-pop rock"
+    ],
+    "tempo_feels": [
+      "driving 8ths",
+      "relentless beat",
+      "club groove",
+      "bouncy",
+      "fast tempo",
+      "syncopated pulse",
+      "fast paced",
+      "driving",
+      "sinister"
+    ],
+    "vocal_tones": [
+      "unhinged",
+      "biting style",
+      "expressive",
+      "emotional",
+      "dynamic phrasing",
+      "sharp articulation",
+      "whispery",
+      "dynamic",
+      "intense emotion",
+      "sweet"
+    ],
+    "production_palette": [
+      "punchy drums",
+      "heavy sub bass",
+      "saturated vocals",
+      "modern gloss",
+      "punchy bass",
+      "heavy synth bass",
+      "quirky synths",
+      "modern synth",
+      "wide mix"
+    ],
+    "energy_arc": [
+      "explosive drop",
+      "explosive chorus",
+      "massive dark drop chorus",
+      "relentless energy",
+      "building tension",
+      "maximalist finale"
+    ],
+    "imagery_anchors": [
+      "witch's mirror",
+      "chaotic emotion",
+      "digital aesthetics",
+      "neon",
+      "poison apple",
+      "stage",
+      "sharp contrast",
+      "neon lights"
+    ],
+    "exclude": [
+      "generic background pop",
+      "do not make it acoustic",
+      "lo-fi fuzz",
+      "acoustic instrumentation",
+      "acoustic drift",
+      "slow ballad"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site",
+      "third_party_db",
+      "manual_note"
+    ]
+  },
+  "track_identity": {
+    "track_id": "deco27_poison_apple",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "毒林檎",
+    "title_core": "毒林檎",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "Official Artist Channel",
+          "origin": "official",
+          "status": "cross_checked",
+          "accessed_on": "2026-03-22"
+        },
+        {
+          "label": "Vocaloid Lyrics Wiki",
+          "origin": "lyric_site",
+          "status": "cross_checked",
+          "accessed_on": "2026-03-22"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2022-10-28",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Official Artist Channel",
+            "origin": "official",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          },
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          }
+        ]
+      },
+      "year": {
+        "value": 2022,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Official Artist Channel",
+            "origin": "official",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          },
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          }
+        ]
+      }
+    }
+  },
+  "schema_version": "1.0",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      },
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      },
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Manual Synthesis",
+        "origin": "manual_note",
+        "notes": "Deeply reviewed",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Manually raised to usable via extensive multi-source cross-checking."
+    ]
+  },
+  "record_type": "track_conditioning_record",
+  "quality_control": {
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "真っ赤な果実 一口かじって",
+          "甘い汁が 滴り落ちる",
+          "白雪姫の 気分になって",
+          "王子様を 待っているの"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "騙されたって いいじゃない",
+          "毒の味が するとしても",
+          "もう後戻りは できないよ",
+          "さあ 目を閉じて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "毒林檎 毒林檎 飲み込んで",
+          "狂わしいほどに 愛し合おう",
+          "毒林檎 毒林檎 止められない",
+          "地獄の底まで 落ちていこうよ",
+          "呪いも祈りも 混ぜ合わせて"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "魔女の笑い声 耳に響いて",
+          "鏡よ鏡 誰が一番？",
+          "私が一番 欲しいのは",
+          "あなたのその 全部だよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "毒林檎 毒林檎 噛み砕いて",
+          "脳の髄まで 侵食して",
+          "毒林檎 毒林檎 終わらない",
+          "二人だけの 秘密の味",
+          "甘い死の匂い 嗅ぎ分けて"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "毒林檎 毒林檎 飲み込んで",
+      "魔女の笑い声 耳に響いて"
+    ],
+    "question_lines": [
+      "鏡よ鏡 誰が一番？"
+    ],
+    "repetition_patterns": [
+      "Hypnotic title repetition."
+    ]
+  }
+}

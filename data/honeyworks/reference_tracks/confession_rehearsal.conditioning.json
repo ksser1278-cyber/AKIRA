@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "honeyworks_confession",
+    "artist_id": "honeyworks",
+    "title": "告白予行練習",
+    "bpm": 165,
+    "key": "A Major",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "sparkly",
+        "lines": [
+          "いきなりで ごめんね",
+          "ずっと 前から 好きでした",
+          "鏡の前で 練習して",
+          "やっと 言えた 言葉だよ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 9, "role": "apology_start", "tech": "Apologetic opening for sudden confession"},
+          {"line": 2, "mora": 11, "role": "confession_peak", "tech": "Direct 'I liked you' statement"},
+          {"line": 3, "mora": 11, "role": "rehearsal_motif", "tech": "Practicing in the mirror (Effort focus)"},
+          {"line": 4, "mora": 10, "role": "sincerity", "tech": "Words finally spoken"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "youthful",
+        "lines": [
+          "告白予行練習 さあ今こそ",
+          "ドキドキ 止まらないよ",
+          "君の笑顔を 独り占め",
+          "明日からは 恋人だ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 16, "role": "title_hook", "tech": "Title drop + Call to action"},
+          {"line": 2, "mora": 10, "role": "heartbeat", "tech": "Unstoppable 'Doki-doki'"},
+          {"line": 3, "mora": 11, "role": "possession", "tech": "Monopolizing your smile"},
+          {"line": 4, "mora": 10, "role": "future_promise", "tech": "Lovers from tomorrow"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["confession rehearsal", "youthful struggle", "sparkly success"],
+    "emotional_thesis": "True love isn't just a result, but the effort of 'rehearsing' in the mirror; the nervousness is the ultimate proof of sincerity in youth."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

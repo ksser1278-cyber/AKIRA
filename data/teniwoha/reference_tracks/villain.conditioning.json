@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "teniwoha_villain",
+    "artist_id": "teniwoha",
+    "artist_name": "Teniwoha",
+    "title": "ヴィラン",
+    "title_core": "Villain"
+  },
+  "song_intent": {
+    "core_theme": ["Identity", "Gender Complexity", "Social Alienation"],
+    "emotional_target": "Sophisticated rejection of binary social constructs through a 'villain' persona.",
+    "key_motifs": ["Mr. / Mrs.", "Pills", "Makeup", "Theater"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "きっと手を繋ぐこと だけで終わらない\nMr. / Mrs. どっちでもないよ 誰でもないよ\n\n蛇腹の 心臓を 引きずって 歩くのさ\n\n[Chorus]\n地獄の底まで 堕ちましょう 憐れみの無い ヴィラン\n君の正しさを 捨てたら 楽になれるのさ\nパッパラ パッパラ 踊りましょう 毒を 喰らって\nさよなら、Mr. / Mrs. どっちでもないよ 誰でもないよ",
+    "hook_lines": ["憐れみの無い ヴィラン", "Mr. / Mrs. ど이트でもないよ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["地獄の底まで 堕ちましょう 憐れみの無い ヴィラン", "君の正しさを 捨てたら 楽になれるのさ", "パッパラ パッパラ 踊りましょう 毒を 喰らって", "さよなら、Mr. / Mrs. どっちでもないよ 誰でもないよ"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Smooth", "Androgynous", "Cynical", "Sultry"],
+    "production_palette": ["Retro-pop chords", "Sleek electronic bass", "Modern synth brass"],
+    "energy_arc": "Sleek, defiant pop swell",
+    "imagery_anchors": ["Smeared lipstick", "City alleyway at night", "Theatrical masks", "Divided mirrors"]
+  }
+}

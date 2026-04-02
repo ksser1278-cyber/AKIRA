@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "wowaka_rolling_girl",
+    "artist_id": "wowaka",
+    "artist_name": "Wowaka",
+    "title": "ローリンガール",
+    "title_core": "Rolling Girl"
+  },
+  "song_intent": {
+    "core_theme": ["Perseverance", "Mental Agitation", "Cycles of Failure"],
+    "emotional_target": "Manic determination to continue despite psychological collapse.",
+    "key_motifs": ["Rolling", "One more time", "Noise", "Mistake"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ロンリーガールはいつまでも 届かない夢見て\n騒ぐ頭の中を掻き回して、掻き回して\n「問題ない。」と呟いて、言葉は失われた？\nもう失敗、もう失敗。 間違い探しに終われば、また、回るの！\n\nもう一回、もう一回。\n「私は今日も回ります。」と、少女は言う 少女は言う\n言葉に意味を奏でながら！",
+    "hook_lines": ["もう一回、もう一回", "まだ足りないよ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["もう一回、もう一回", "「私は今日も回ります。」と、少女は言う 少女は言う", "まだ足りないよ、まだ足りないよ。 まだ、終わりは見えないから"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Fast", "High-pitched", "Repetitive", "Agitated"],
+    "production_palette": ["Fast piano scales", "Driving rock drums", "Thin electric guitars"],
+    "energy_arc": "Unstoppable, spinning momentum",
+    "imagery_anchors": ["Grey classroom", "Spinning ballerina", "Concrete floor", "Wind blowing"]
+  }
+}

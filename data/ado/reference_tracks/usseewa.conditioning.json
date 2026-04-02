@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_usseewa",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "うっせぇわ",
+    "title_core": "Usseewa",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed"
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed",
+          "sources": []
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "syudou",
+          "role": "lyrics",
+          "status": "confirmed",
+          "sources": []
+        }
+      ],
+      "composition": [
+        {
+          "name": "syudou",
+          "role": "composition",
+          "status": "confirmed",
+          "sources": []
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "syudou",
+          "role": "arrangement",
+          "status": "confirmed",
+          "sources": []
+        }
+      ]
+    },
+    "release": {
+      "year": {
+        "value": 2020,
+        "status": "confirmed",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_ma20102329",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "analysis_sources": [],
+    "notes": [
+      "Major breakthrough track for Ado. Sets the tone for social rebellion."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "copyright_handling_note": "Internal analysis only.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "正しさとは 愚かさとは",
+          "それが何か見せつけてやる"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ちっちゃな頃から優等生",
+          "気づいたら大人になっていた",
+          "ナイフの様な思考回路",
+          "持ち合わせる訳もなく"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "はぁ?うっせぇうっせぇうっせぇわ",
+          "あなたが思うより健康です",
+          "一切合切凡庸な",
+          "あなたじゃ分からないかもね"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "うっせぇわ"
+    ],
+    "repetition_patterns": [
+      "Triple repetition of 'うっせぇ' in hooks"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "social rebellion",
+      "frustrated youth",
+      "anti-conformity"
+    ],
+    "emotional_thesis": "The frustration of being forced into the 'model citizen' mold by a society that doesn't understand individual worth.",
+    "contrast_device": [
+      "honor student past vs knife-like present",
+      "model worker etiquette vs internal screaming"
+    ],
+    "dramatic_arc": [
+      "internal monologue",
+      "checklist of soul-crushing rules",
+      "explosive vocal outburst"
+    ],
+    "narrative_role": [
+      "social rebel",
+      "modern advocate for the frustrated"
+    ],
+    "title_function": "The central explosive hook that rejects external advice or criticism.",
+    "key_motifs": [
+      "knife",
+      "gunmussle",
+      "rules",
+      "alcohol pouring etiquette"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 178,
+        "status": "confirmed",
+        "sources": []
+      },
+      "key": {
+        "value": "B minor",
+        "tonic": "B",
+        "mode": "minor",
+        "status": "confirmed",
+        "sources": []
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "staccato piano intro",
+        "high-tension verse",
+        "frenetic explosive chorus"
+      ],
+      "vocal_behavior": [
+        "low-register grumbles",
+        "sharp rap-like delivery",
+        "distorted gravelly screams in chorus"
+      ],
+      "production_palette": [
+        "aggressive piano",
+        "distorted electronic beats",
+        "vocaloid-style processing"
+      ],
+      "arrangement_arc": [
+        "linear buildup of anger",
+        "extreme dynamics switching"
+      ],
+      "dynamics_arc": [
+        "tightly compressed verses",
+        "maximum loudness chorus"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference",
+        "human_listening"
+      ]
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis",
+        "rejection of authority"
+      ],
+      "narrative_job": "Convert accumulated frustration into a physical sound wall.",
+      "arrangement_role": {
+        "summary": "Wall of sound with heavy piano and synth bass.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Simple, driving minor key melody intended for shouting.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Impactful and loud.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "short repetitive rejection"
+      ],
+      "vocabulary_focus": [
+        "rebellion",
+        "health",
+        "mediocrity"
+      ],
+      "rhyme_features": [
+        "ending on '-wa' for sharp phonetic release"
+      ],
+      "rhythm_features": [
+        "16th note triplets",
+        "aggressive syncopation"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "aggressive J-pop",
+      "industrial electronic pop",
+      "Vocaloid-core"
+    ],
+    "tempo_feels": [
+      "high-speed",
+      "manic pulse"
+    ],
+    "vocal_tones": [
+      "gravelly distortion",
+      "shouting",
+      "smirking low-vocal",
+      "expressive theater-like delivery"
+    ],
+    "production_palette": [
+      "aggressive piano arpeggios",
+      "heavy synth bass",
+      "distorted percussion",
+      "Miku-style vocal glitching"
+    ],
+    "energy_arc": [
+      "tension-release cycling",
+      "constant underlying anger"
+    ],
+    "imagery_anchors": [
+      "urban night",
+      "sharp objects",
+      "social etiquette failure"
+    ],
+    "exclude": [
+      "soft acoustic instrumentation",
+      "gentle organic sounds"
+    ],
+    "source_basis": [
+      "lyrics",
+      "proxy sound inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias",
+      "title_drop_timing"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

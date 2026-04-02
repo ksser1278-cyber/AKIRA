@@ -1,0 +1,42 @@
+{
+  "track_id": "setsuna_trip",
+  "artist_id": "last_note",
+  "title": "セツナトリップ",
+  "bpm": 200,
+  "key": "G Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [14, 12, 14, 13],
+      "energy": 0.7,
+      "description": "Energetic narrative. Fast delivery. Focus on 'Reality vs. Daydream' conflict."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.9,
+      "description": "High-velocity explosion. 'Setsuna Trip' hook. Focus on 'Diving' into the heart."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "探しにいくんだ セツナトリップ",
+      "romaji": "Sagashi ni iku nda Setsuna Trip",
+      "mora": 16,
+      "meta": "Signature motif. Core escapist theme."
+    },
+    {
+      "original": "あー！もーっ！ギターッ！！",
+      "romaji": "Aa! Moo'! Gitaa!!",
+      "mora": 12,
+      "meta": "Iconic energetic interjection. High-school rebellion."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "GUMI - Bright, rhythmic, energetic",
+    "main_instrument": "Raucous Electric Guitar, Fast Rock Drums, Bright Piano",
+    "thematic_tags": ["High School", "Youth", "Escapism", "Daydream", "Moment"],
+    "signature_phrases": ["セツナトリップ (Setsuna Trip)", "現実 (Real/Reality)"]
+  }
+}

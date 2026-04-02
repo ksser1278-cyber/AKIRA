@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_artist_queue",
+  "artist_id": "kanaria",
+  "queue": [
+    {
+      "priority": 1,
+      "track_id": "kanaria_eye",
+      "title": "EYE",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Provides vocal rhythmic variation and jazzier chords than KING."
+      ],
+      "style_gap_filled": [
+        "Syncopated jazz-pop integration."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 2,
+      "track_id": "kanaria_mira",
+      "title": "MIRA",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Early Kanaria track establishing baseline emotional tones."
+      ],
+      "style_gap_filled": [
+        "More traditional pop-rock structure."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 3,
+      "track_id": "kanaria_yoidore_shirazu",
+      "title": "酔いどれ知らず",
+      "likely_mode": "dark_cute_breakdown",
+      "secondary_modes": [
+        "ironic_meta"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Broadens Kanaria beyond loud shouts into sliding intoxication."
+      ],
+      "style_gap_filled": [
+        "Smooth, dragging vocal phrasing."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 4,
+      "track_id": "kanaria_requiem",
+      "title": "レクイエム",
+      "likely_mode": "direct_emotional_pop",
+      "secondary_modes": [
+        "dark_cute_breakdown"
+      ],
+      "priority_label": "medium",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Hyper-energetic VTuber collaboration style."
+      ],
+      "style_gap_filled": [
+        "Extreme BPM pacing within simple pop."
+      ],
+      "notes": []
+    },
+    {
+      "priority": 5,
+      "track_id": "kanaria_daino_tekina_rendezvous",
+      "title": "大脳的なランデブー",
+      "likely_mode": "ironic_meta",
+      "secondary_modes": [
+        "direct_emotional_pop"
+      ],
+      "priority_label": "high",
+      "recommended_dataset_tier": "producer_expansion",
+      "has_draft_seed": true,
+      "status": "validated",
+      "why_it_matters": [
+        "Shows adaptation to external narrative."
+      ],
+      "style_gap_filled": [
+        "Mainstream alt-rock fusion."
+      ],
+      "notes": []
+    }
+  ]
+}

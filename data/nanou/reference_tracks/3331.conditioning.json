@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "nanou_3331",
+    "artist_id": "nanou",
+    "artist_name": "Nanou",
+    "title": "3331",
+    "title_core": "3331"
+  },
+  "song_intent": {
+    "core_theme": ["Mediocrity", "Vulnerability", "Existential Fatigue"],
+    "emotional_target": "The painful realization that life is not as happy as stories claim.",
+    "key_motifs": ["Life stories", "Card game", "Smiling through pain", "Wonderful but mediocre world"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "物語によれば人生とは 幸せでなければいけないらしい\nもしそうなら私の毎日は 人生とすら呼んじゃいけないよ\nねぇ誰でもいいよ 優しくして うっかり勘違いするくらいに\n\n[Chorus]\n生きてゆくのは簡単で 生きないほうが遥かに難しい\n大事にしなくとも ほら私の命はとっくに持て余してる\nカードゲームはもう積んだ気配 既にロクな手札がない状態\nそれでも残りうん十年を 精一杯の笑顔で生き抜け",
+    "hook_lines": ["生きるのハ簡単で 生きないほうが遥かに難しい", "精一杯の笑顔で生き抜け"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["生きてゆくのは簡単で 生きないほうが遥かに難しい", "大事にしなくとも ほら私の命はとっくに持て余してる", "精一杯の笑顔で生き抜け"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Fragile", "Emotional", "Whispering", "Raw"],
+    "production_palette": ["Clean rhythmic rock guitar", "Dry drums", "Melancholy piano"],
+    "energy_arc": "Restrained emotional indie-rock",
+    "imagery_anchors": ["Grey office", "Empty card table", "Forced smile in a mirror", "Subway tracks"]
+  }
+}

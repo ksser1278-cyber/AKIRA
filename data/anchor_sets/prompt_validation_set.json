@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "set_id": "prompt_validation_set",
+  "set_type": "prompt_validation",
+  "description": "Fixed test cases used to validate style prompt quality and generation bundle quality after engine changes.",
+  "cases": [
+    {
+      "case_id": "pinocchiop_ironic_meta_primary",
+      "artist_id": "pinocchiop",
+      "track_id": "pinocchiop_kamippoi_na",
+      "mode": "ironic_meta"
+    },
+    {
+      "case_id": "pinocchiop_dark_cute_primary",
+      "artist_id": "pinocchiop",
+      "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+      "mode": "dark_cute_breakdown"
+    },
+    {
+      "case_id": "deco27_direct_emotional_primary",
+      "artist_id": "deco27",
+      "track_id": "deco27_ai_kotoba",
+      "mode": "direct_emotional_pop"
+    },
+    {
+      "case_id": "deco27_direct_emotional_hardcase",
+      "artist_id": "deco27",
+      "track_id": "deco27_yumeyume",
+      "mode": "direct_emotional_pop"
+    },
+    {
+      "case_id": "deco27_dark_cute_primary",
+      "artist_id": "deco27",
+      "track_id": "deco27_tsumi_to_batsu",
+      "mode": "dark_cute_breakdown"
+    }
+  ],
+  "notes": [
+    "This set should stay small and stable.",
+    "Changes to generator, planner, critic, or prompt builder should be checked against this set every time."
+  ]
+}

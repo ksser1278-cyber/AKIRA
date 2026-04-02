@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "eve_dramaturgy",
+    "artist_id": "eve",
+    "title": "ドラマツルギー",
+    "bpm": 148,
+    "key": "G Major",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "theatrical",
+        "lines": [
+          "頭でわかっては いても",
+          "心が 追いつかない",
+          "僕らは いつだって",
+          "誰かの 真似をしている"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "cognitive_gap", "tech": "Logical understanding vs Emotion"},
+          {"line": 2, "mora": 9, "role": "emotional_lag", "tech": "Heart failing to catch up"},
+          {"line": 3, "mora": 8, "role": "universal_state", "tech": "Establish 'We' perspective"},
+          {"line": 4, "mora": 10, "role": "imitation_theme", "tech": "Masking / Mimicry motif"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "cinematic",
+        "lines": [
+          "さあ 踊りましょう ドラマツルギー",
+          "偽りの 笑顔を 剥がして",
+          "僕だけの 声を 響かせて",
+          "誰もいない 舞台の上で"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 15, "role": "title_hook", "tech": "Theatrical invitation + Title drop"},
+          {"line": 2, "mora": 13, "role": "unmasking", "tech": "Peeling off the fake smile"},
+          {"line": 3, "mora": 12, "role": "identity_reclaim", "tech": "Resonating true voice"},
+          {"line": 4, "mora": 11, "role": "isolation_peak", "tech": "Empty stage / Absolute solitude"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["theatricality of life", "masking", "internal monsters"],
+    "emotional_thesis": "Life is a scripted drama where we all play parts; true liberation comes from unmasking on an empty stage, even if it's terrifying."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

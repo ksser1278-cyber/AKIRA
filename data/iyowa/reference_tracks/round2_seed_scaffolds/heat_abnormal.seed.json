@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_heat_abnormal",
+    "title": "熱異常"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "mode_support",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "priority": "high"
+  },
+  "seed_brief": {
+    "title_pattern": "clinical_state",
+    "hook_behavior": [
+      "extreme chaotic pacing",
+      "noise pop transitions",
+      "apathetic lead"
+    ],
+    "section_flow_guess": [
+      "verse_noise",
+      "prechorus_heat",
+      "chorus_chaotic_apathy",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "thermometers",
+      "fever",
+      "melting logic",
+      "static"
+    ],
+    "emotional_arc": [
+      "fever dream",
+      "chaos",
+      "apathy"
+    ],
+    "leakage_watchouts": [
+      "the backing track should sound like it is breaking apart while the vocal remains stable"
+    ],
+    "prompt_seed_terms": [
+      "noise pop",
+      "glitch jazz",
+      "fever dream"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Extreme chaotic pacing mixed with apathy."
+    ],
+    "style_gap_filled": [
+      "Noise-pop elements."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

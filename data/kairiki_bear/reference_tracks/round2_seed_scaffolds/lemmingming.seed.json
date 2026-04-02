@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_draft_seed",
+  "track_identity": {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_lemmingming",
+    "title": "レミングミング"
+  },
+  "dataset_role": {
+    "recommended_dataset_tier": "producer_expansion",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "priority": "medium"
+  },
+  "seed_brief": {
+    "title_pattern": "repetitive_nonsense",
+    "hook_behavior": [
+      "dark march rhythm",
+      "group chanting",
+      "syncopated stops"
+    ],
+    "section_flow_guess": [
+      "verse_following",
+      "prechorus_cliff",
+      "chorus_falling",
+      "bridge_silence",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "cliffs",
+      "crowds",
+      "jumping",
+      "blindness"
+    ],
+    "emotional_arc": [
+      "conformity",
+      "group panic",
+      "inevitable fall"
+    ],
+    "leakage_watchouts": [
+      "must maintain a marching or shuffling rhythm underneath the rock"
+    ],
+    "prompt_seed_terms": [
+      "dark march",
+      "heavy tom drums",
+      "chanting hooks"
+    ],
+    "grounding_status": "research_ready"
+  },
+  "candidate_context": {
+    "why_it_matters": [
+      "Explores mass psychology and suicidal ideation metaphors."
+    ],
+    "style_gap_filled": [
+      "Dark thematic depth."
+    ],
+    "overlap_risk_with_existing_set": "",
+    "grounding_feasibility": "",
+    "provenance_feasibility": "",
+    "audio_feasibility": ""
+  }
+}

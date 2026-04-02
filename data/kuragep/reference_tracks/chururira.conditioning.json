@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "kuragep_chururira",
+    "artist_id": "kuragep",
+    "artist_name": "KurageP",
+    "title": "チュルリラ・チュルリラ・ダッダッダ！",
+    "title_core": "Chururira Chururira Daddadda!"
+  },
+  "song_intent": {
+    "core_theme": ["Secret Exposure", "School Hierarchy", "Elimination"],
+    "emotional_target": "Manic joy in exposing the secrets of others to survive the school hierarchy.",
+    "key_motifs": ["Chururira", "Classroom", "Secret", "Finger pointing"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "パッパッパッ 晴天なり 誘導灯を 振るって\nさあさあ 皆様 御一緒に チュルリラ・チュルリラ・ダッダッダ！\n誰かが言った 秘密だよ 誰にも言っちゃ いけないよ\n\n一反木綿の 裏の顔 もっと 暴いてやりましょうか\n先生、あの子が 悪いんです！ 密告、粛清、ダッダッダ！\n\nチュルリラ・チュルリラ・ダッダッダ！\nあの子も 消しちゃいましょうか\nチュルリラ・チュルリラ・ダッダッダ！\nさよなら、あの子。 はい、また明日。",
+    "hook_lines": ["チュルリラ・チュルリラ・ダッダッダ！", "先生、あの子が 悪いんです！"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["チュルリラ・チュルリラ・ダッダッダ！", "あの子も 消しちゃいましょうか", "チュルリラ・チュルリラ・ダッダッダ！", "さよなら、あの子。 はい、また明日。"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Manic", "High-pitched", "Aggressive Choice", "Cheerful Sneer"],
+    "production_palette": ["Fast driving rock", "Jangle guitar", "Cheerful sound triggers"],
+    "energy_arc": "High-tension school frenzy",
+    "imagery_anchors": ["School chalkboard", "Pointing fingers", "Empty desk", "Hidden notebook"]
+  }
+}

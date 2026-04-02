@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "nilfruits_ironina",
+    "artist_id": "nilfruits",
+    "artist_name": "Nilfruits",
+    "title": "アイロニーナ",
+    "title_core": "Ironina"
+  },
+  "song_intent": {
+    "core_theme": ["Information Overload", "Self-Cynicism", "Social Masking"],
+    "emotional_target": "Sophisticated exhaustion from living in a high-information, low-empathy society.",
+    "key_motifs": ["Handcuffs", "Tap Tap", "Transparency", "Irony"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "生きるのに時間が足りない\n今日明日も情報過多な重りを手に取って\n見下して Tap Tap 何にもない朝を歩く\n周りの目が狂気みたく思えて\n\n可視化するハートを稼いで\n自尊心に手錠をかけて\n目配せして生きてく毎日\n憧れてた生活に随分と\n痛く嫌われたもんだよな\n\n信じたいんだよ 信じたいんだよ\nこの世界以外の居場所があることを\n愛が冷める頃に\nボクを離さないでおいて ねえ",
+    "hook_lines": ["ボクを壊してくれよ アイロニーナ", "優越感で 溺れたいや"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["信じたいんだよ 信じたいんだよ", "この世界以外の居場所があることを", "愛が冷める頃に", "ボクを離さないでおいて ねえ", "ボクを壊してくれよ アイロニーナ"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Sophisticated", "Exhausted", "Breathless", "Cool Rhythm"],
+    "production_palette": ["Acid jazz chords", "Glitchy syncopation", "Slap bass"],
+    "energy_arc": "Sleek, jittery urban anxiety",
+    "imagery_anchors": ["Smartphones glowing in dark", "Digital handcuffs", "Rising water levels", "Glass walls"]
+  }
+}

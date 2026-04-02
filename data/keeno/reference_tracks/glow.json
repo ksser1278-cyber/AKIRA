@@ -1,0 +1,42 @@
+{
+  "track_id": "glow",
+  "artist_id": "keeno",
+  "title": "glow",
+  "bpm": 72,
+  "key": "A Minor",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [13, 14, 15, 14],
+      "energy": 0.3,
+      "description": "Slow, ambient intro. Focus on 'Cold Rain' and 'Blue Scars'. Atmospheric reverb-heavy guitar."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 12, 14, 13],
+      "energy": 0.65,
+      "description": "Breathy emotional peak. Focus on 'Fading' and 'Clinging'. High emotional resonance with slow tempo."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "降り注いだ冷たい雨 青い傷を溶かしてった。",
+      "romaji": "Furisosoida tsumetai ame aoi kizu wo tokashitetta.",
+      "mora": 21,
+      "meta": "Opening line. Core weather-metaphor for grief."
+    },
+    {
+      "original": "夕暮れの涙が出そうな赤 私の中の君を溶かしてしまえ。",
+      "romaji": "Yuugure no namida ga desou na aka watashi no naka no kimi wo tokashite shimae.",
+      "mora": 28,
+      "meta": "Chorus peak. Twilight imagery symbolizing fading memory."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Hatsune Miku Dark - Breathy, fragile, crying quality",
+    "main_instrument": "Ambient Electric Guitar, Slow Rock Drums, Subdued Piano",
+    "thematic_tags": ["Rain", "Twilight", "Fading", "Scars", "Memory", "Grief"],
+    "signature_phrases": ["消えて 消してよ (Please fade away, erase it)", "抱きしめてる (Clinging tightly)"]
+  }
+}

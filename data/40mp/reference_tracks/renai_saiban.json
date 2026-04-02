@@ -1,0 +1,42 @@
+{
+  "track_id": "renai_saiban",
+  "artist_id": "40mp",
+  "title": "恋愛裁判",
+  "bpm": 128,
+  "key": "Eb Major",
+  "structure": ["Intro", "Verse 1", "Verse 2", "Pre-Chorus", "Chorus", "Verse 3", "Chorus", "Bridge", "Chorus", "Outro"],
+  "section_analysis": [
+    {
+      "section": "Verse 1",
+      "mora_per_line": [14, 12, 12, 12],
+      "energy": 0.5,
+      "description": "Conversational plea. Piano-driven shuffle beat. Bouncy and rhythmic."
+    },
+    {
+      "section": "Chorus",
+      "mora_per_line": [15, 13, 15, 13],
+      "energy": 0.8,
+      "description": "Catchy hook. 'Oh! No! No! No!' motif. High melodic density."
+    }
+  ],
+  "lyrics": [
+    {
+      "original": "Oh! No! No! No! ちょっと魔がさしたんだ",
+      "romaji": "Oh! No! No! No! Chotto ma ga sashitanda",
+      "mora": 18,
+      "meta": "Signature motif. Catchy rhythmic hook."
+    },
+    {
+      "original": "まさに恋愛裁判 君は僕にどれくらいの罪を問う？",
+      "romaji": "Masa ni ren'ai saiban Kimi wa boku ni dore kurai no tsumi wo tou?",
+      "mora": 22,
+      "meta": "Core metaphor. Legal terminology used for romance."
+    }
+  ],
+  "stylistic_dna": {
+    "vocal_texture": "Hatsune Miku - Clean, moderate tuning, emotive",
+    "main_instrument": "Piano, Bouncy Bass, Light Shuffle Drums",
+    "thematic_tags": ["Courtroom", "Love", "Infidelity", "Guilt", "Playful"],
+    "signature_phrases": ["有罪判결 (Guilty Verdict)", "執行猶予 (Stay of Execution)"]
+  }
+}

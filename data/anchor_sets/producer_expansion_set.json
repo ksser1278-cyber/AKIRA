@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "set_id": "producer_expansion_set",
+  "set_type": "producer_expansion",
+  "description": "Next-wave producer-specific records used to broaden each producer line beyond the anchor set.",
+  "artists": [
+    {
+      "artist_id": "pinocchiop",
+      "track_ids": [
+        "pinocchiop_aisarenakutemo_kimi_ga_iru",
+        "pinocchiop_loveit",
+        "pinocchiop_ultimate_senpai",
+        "pinocchiop_boku_nanka_inakutemo",
+        "pinocchiop_kusare_gedou_to_chocolate"
+      ]
+    },
+    {
+      "artist_id": "deco27",
+      "track_ids": [
+        "deco27_monitoring",
+        "deco27_rabbit_hole",
+        "deco27_vampire",
+        "deco27_cinderella"
+      ]
+    }
+  ],
+  "notes": [
+    "Tracks in this set can stay usable rather than gold.",
+    "Active benchmark gold anchors are excluded from this set."
+  ]
+}

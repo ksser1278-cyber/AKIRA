@@ -1,0 +1,1146 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_tokumei_m",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "匿名M",
+    "title_core": "匿名M",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed",
+      "sources": [
+        {
+          "label": "No tie-in listed",
+          "origin": "official",
+          "url": "https://vgmdb.net/album/126766",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": []
+        },
+        {
+          "name": "ARuFa",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": []
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "ピノキオピー",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "VGMdb album credit context",
+              "origin": "third_party_db",
+              "url": "https://vgmdb.net/album/126766",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "ピノキオピー",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "VGMdb album credit context",
+              "origin": "third_party_db",
+              "url": "https://vgmdb.net/album/126766",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "ピノキオピー",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "PinocchioP official self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21",
+              "notes": "Treat as inferred until a direct arrangement credit source is attached."
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2023,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "VGMdb release date context",
+            "origin": "third_party_db",
+            "url": "https://vgmdb.net/album/126766",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "2:39",
+        "seconds": 159,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Anonymous M (feat. HATSUNE MIKU & ARuFa).flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "VGMdb track context",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "url": "https://vgmdb.net/album/126766",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VGMdb album entry including track and release context",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "url": "https://vgmdb.net/album/126766",
+        "accessed_on": "2026-03-21"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full structural layout of the interview format pop song."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text, tracking the unique interview duet format."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking for AI modeling.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "「匿名Mさん、本日はよろしくお願いします。」",
+          "「よろしくお願いします。」",
+          "「早速ですが、ご自身について教えていただけますか。」"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "「身長は？」「160くらいですかね」",
+          "「体重は？」「んー、ご想像にお任せします」",
+          "「好きな食べ物は？」「ネギとか」"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "本当の自分なんて見せられない",
+          "作られたパブリックイメージの中"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "匿名M 匿名M",
+          "本当の名前を隠して微笑むの",
+          "匿名M 匿名M",
+          "みんなが望む私を演じてる"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "「休日は何を？」「寝てますね」",
+          "「特技は？」「特にないです」",
+          "「やりがいは？」「まぁ、みなさんの笑顔ですかね」"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "本当の言葉なんて言えない",
+          "求められる台詞だけを吐き出す"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "匿名M 匿名M",
+          "本当の名前を隠して微笑むの",
+          "匿名M 匿名M",
+          "みんなが望む私を演じてる"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "「結局のところ、あなたにとって自分とは？」",
+          "「ただの...記号、ですかね」"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "匿名M 匿名M",
+          "本当の名前を隠して微笑むの",
+          "匿名M 匿名M",
+          "誰も本当の私を知らないまま"
+        ]
+      },
+      {
+        "section_type": "outro",
+        "section_name": "Outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "fade",
+        "source_labels": [
+          "outro"
+        ],
+        "lines": [
+          "「ありがとうございました」",
+          "「ありがとうございました」"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "匿名M 匿名M",
+      "本当の名前を隠して微笑むの"
+    ],
+    "question_lines": [
+      "「身長は？」",
+      "「好きな食べ物は？」",
+      "「結局のところ、あなたにとって自分とは？」"
+    ],
+    "repetition_patterns": [
+      "The verses are structured strictly as Q&A interview format.",
+      "The chorus treats '匿名M' as a brand-name repeating hook."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "anonymous labeling",
+      "performative identity",
+      "social roleplay",
+      "interviewer format"
+    ],
+    "emotional_thesis": "The song reduces personhood to a public tag and exposes identity as performance, using an absurd interview format to show how shallow public personas are.",
+    "contrast_device": [
+      "robotic interview questions vs evasive standard answers",
+      "private self vs public tag"
+    ],
+    "dramatic_arc": [
+      "interview start",
+      "mundane Q&A establishing the fake persona",
+      "title-tag chorus release",
+      "darker existential bridge",
+      "interview end"
+    ],
+    "narrative_role": [
+      "social satire",
+      "persona song",
+      "duet format"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title compresses the entire song into a depersonalized badge, representing 'Miku' or anyone else reduced to an initial.",
+    "key_motifs": [
+      "tag",
+      "interview",
+      "questions",
+      "public role"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 937504,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-Anonymous M (feat. HATSUNE MIKU & ARuFa).flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -9.3,
+        "lra_lu": 4.9,
+        "rms_median_db": -12.162,
+        "rms_span_db": 102.179,
+        "early_rms_db": -13.002,
+        "mid_rms_db": -11.383,
+        "late_rms_db": -12.457,
+        "late_minus_early_db": 0.545,
+        "peak_zone": "mid",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "PinocchioP-01-Anonymous M (feat. HATSUNE MIKU & ARuFa).flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "fast tag setup",
+        "compressed roleplay verse",
+        "hard tag chorus"
+      ],
+      "vocal_behavior": [
+        "tagline delivery",
+        "detached speech rhythm",
+        "duet/interview style back-and-forth",
+        "repeatable hook hit"
+      ],
+      "production_palette": [
+        "compressed digital pop",
+        "tag-forward rhythm bed",
+        "clean synthetic edge"
+      ],
+      "arrangement_arc": [
+        "instant framing",
+        "stable pressure",
+        "tag chorus release",
+        "measured peak zone: mid"
+      ],
+      "dynamics_arc": [
+        "immediate start",
+        "sustained compression",
+        "hook emphasis"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "human_listening",
+        "model_inference",
+        "other",
+        "third_party_db"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact synthesizer patches without verified sources."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Intro",
+      "section_type": "intro",
+      "source_section_labels": [
+        "intro"
+      ],
+      "lyric_function": [
+        "scene setting",
+        "format establishment"
+      ],
+      "narrative_job": "Establish the song as a formal interview rather than a traditional musical intro.",
+      "arrangement_role": {
+        "summary": "Minimal beat supporting spoken dialogue.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Non-melodic spoken word.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Low energy, highly conversational.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "business greeting"
+      ],
+      "vocabulary_focus": [
+        "よろしくお願いします"
+      ],
+      "rhyme_features": [
+        "none"
+      ],
+      "rhythm_features": [
+        "speech rhythm"
+      ],
+      "hook_weight": "none",
+      "jp_section_role": "intro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "q&a format",
+        "character building"
+      ],
+      "narrative_job": "Provide standard, evasive, or mundane answers to build the 'Anonymous M' persona.",
+      "arrangement_role": {
+        "summary": "A bouncy, stiff rhythm track that emphasizes the awkward or rehearsed nature of the interview.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Very tight, staccato delivery, almost rhythmic speaking.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Dry, compressed feel.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "call and response",
+        "interview questions"
+      ],
+      "vocabulary_focus": [
+        "身長",
+        "体重",
+        "ネギ"
+      ],
+      "rhyme_features": [
+        "Q&A pairing"
+      ],
+      "rhythm_features": [
+        "fast back-and-forth"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "mask reveal",
+        "internal monologue"
+      ],
+      "narrative_job": "Shift from the outward interview to the internal reality of being flattened.",
+      "arrangement_role": {
+        "summary": "Melody opens up slightly, preparing for the drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Duct-tapes the dry Q&A into the melodic chorus.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Building pressure.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "本当",
+        "イメージ"
+      ],
+      "rhyme_features": [
+        "melodic flow"
+      ],
+      "rhythm_features": [
+        "lengthened notes"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "tag release",
+        "identity punchline"
+      ],
+      "narrative_job": "Hit the title as a depersonalized slogan that replaces the speaker with a badge.",
+      "arrangement_role": {
+        "summary": "Danceable, catchy synthesizer hook drops here.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repetitive, high-stickiness melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Full release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "tag release",
+        "identity punchline"
+      ],
+      "vocabulary_focus": [
+        "匿名M",
+        "隠して",
+        "演じてる"
+      ],
+      "rhyme_features": [
+        "brand name repetition"
+      ],
+      "rhythm_features": [
+        "driving 4-on-the-floor feel"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "q&a continuation"
+      ],
+      "narrative_job": "More interview questions, reinforcing the absurdity and emptiness of the persona.",
+      "arrangement_role": {
+        "summary": "Return to the bouncy, dry beat.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Staccato dialogue.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Compression.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "call and response"
+      ],
+      "vocabulary_focus": [
+        "休日",
+        "特技"
+      ],
+      "rhyme_features": [
+        "Q&A pairing"
+      ],
+      "rhythm_features": [
+        "fast back-and-forth"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "mask reveal"
+      ],
+      "narrative_job": "Prepares for the second chorus drop with a slightly darker admission.",
+      "arrangement_role": {
+        "summary": "Tension building.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Melodic rise.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Pressure rising.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "言葉",
+        "台詞"
+      ],
+      "rhyme_features": [
+        "melodic flow"
+      ],
+      "rhythm_features": [
+        "lengthened notes"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "tag release"
+      ],
+      "narrative_job": "Second iteration of the core conceptual hook.",
+      "arrangement_role": {
+        "summary": "Full release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repetitive hook.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loud, bright.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "tag release",
+        "identity punchline"
+      ],
+      "vocabulary_focus": [
+        "匿名M"
+      ],
+      "rhyme_features": [
+        "brand name repetition"
+      ],
+      "rhythm_features": [
+        "driving 4-on-the-floor"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "philosophical pivot"
+      ],
+      "narrative_job": "The interviewer asks a deep question, and the answer reveals the ultimate detachment.",
+      "arrangement_role": {
+        "summary": "Music drops out or shifts completely, focusing on the spoken dialogue.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Spoken word.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Sudden drop into silence or ambient tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "deep question"
+      ],
+      "vocabulary_focus": [
+        "結局",
+        "記号"
+      ],
+      "rhyme_features": [
+        "none"
+      ],
+      "rhythm_features": [
+        "rubato speech"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final tag release"
+      ],
+      "narrative_job": "Final explosion of the hook, sealing the character as just a symbol.",
+      "arrangement_role": {
+        "summary": "Maximum energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak melody layer.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak brightness.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "tag release",
+        "conclusion"
+      ],
+      "vocabulary_focus": [
+        "誰も本当の私を知らない"
+      ],
+      "rhyme_features": [
+        "brand name repetition"
+      ],
+      "rhythm_features": [
+        "driving hook"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Outro",
+      "section_type": "outro",
+      "source_section_labels": [
+        "outro"
+      ],
+      "lyric_function": [
+        "interview conclusion"
+      ],
+      "narrative_job": "Ends the song cleanly like closing a broadcast.",
+      "arrangement_role": {
+        "summary": "Quick wrap-up, matching the intro.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Spoken word.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Fade to black abruptly.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "sign off"
+      ],
+      "vocabulary_focus": [
+        "ありがとうございました"
+      ],
+      "rhyme_features": [
+        "none"
+      ],
+      "rhythm_features": [
+        "speech"
+      ],
+      "hook_weight": "none",
+      "jp_section_role": "outro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "fade",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "tagline",
+      "social copy",
+      "persona exchange",
+      "interview Q&A"
+    ],
+    "mora_control_notes": [
+      "The title should behave like a short badge, not a lyrical ornament."
+    ],
+    "accent_risk_notes": [
+      "Keep the title phrase compact enough for strong tag emphasis."
+    ],
+    "critic_focus": [
+      "hook slogan precision",
+      "persona consistency",
+      "copy-line sharpness",
+      "Q&A timing"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Outro",
+        "section_type": "outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "fade"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "social-ironic vocaloid pop",
+      "compressed electro-pop",
+      "interview duet pop"
+    ],
+    "tempo_feels": [
+      "fast hook cadence",
+      "tight beat speech rhythm"
+    ],
+    "vocal_tones": [
+      "tagline-forward lead",
+      "detached smirk",
+      "formal interviewer",
+      "high-copy chorus"
+    ],
+    "production_palette": [
+      "digital pop chassis",
+      "beat-forward compression",
+      "clean synthetic sheen"
+    ],
+    "energy_arc": [
+      "spoken setup",
+      "performative escalation",
+      "sharp title chorus",
+      "philosophical bridge drop",
+      "final chorus release"
+    ],
+    "imagery_anchors": [
+      "anonymous tag",
+      "public label",
+      "performative self",
+      "social frame",
+      "microphone"
+    ],
+    "exclude": [
+      "do not soften into generic relational pop",
+      "do not erase the satire layer or the interview structure"
+    ],
+    "source_basis": [
+      "third_party_db",
+      "model inference",
+      "lyrics"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Fully upgraded to 10-section structure encompassing the interview duet layout.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "tsumiki_phony",
+    "artist_id": "tsumiki",
+    "title": "フォニイ",
+    "bpm": 172,
+    "key": "A Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "high",
+        "lines": [
+          "造花も勝てない美しさ",
+          "それは全部嘘 antipathy world",
+          "絶望の雨は止まない",
+          "誰か私に名前を付けて"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 11, "role": "metaphor_setup", "tech": "Fake flower vs Beauty"},
+          {"line": 2, "mora": 18, "role": "identity_breakdown", "tech": "Antipathy world logic"},
+          {"line": 3, "mora": 11, "role": "environment", "tech": "Despair rain (cliché subversion)"},
+          {"line": 4, "mora": 14, "role": "plea", "tech": "Naming / Identity request"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "explosive",
+        "lines": [
+          "パ・パ・パ・パ・フォニイ",
+          "嘘だよって笑って",
+          "鏡の中の誰かさん",
+          "さよなら、愛した私へ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 10, "role": "rhythmic_hook", "tech": "Staccato stutter"},
+          {"line": 2, "mora": 9, "role": "emotional_twist", "tech": "Laughter as a shield"},
+          {"line": 3, "mora": 11, "role": "mirror_motif", "tech": "Dissonant self"},
+          {"line": 4, "mora": 12, "role": "parting_shot", "tech": "Fatalistic goodbye"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["counterfeit self", "imitation happiness", "social masking"],
+    "emotional_thesis": "Happiness is a fake construct (Zouka) used to survive a world of antipathy; true identity is lost in the mirror."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

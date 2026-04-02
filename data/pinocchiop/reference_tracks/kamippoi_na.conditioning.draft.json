@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_kamippoi_na",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "神っぽいな",
+    "title_core": "神っぽい",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": [
+      "Draft scaffold created from conditioning queue.",
+      "Priority-1 PinocchioP anchor for ironic_meta mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "excluded",
+    "copyright_handling_note": "Draft scaffold only. Add internal lyric source before enabling prompting.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": ["god-complex parody", "internet self-performance"],
+    "emotional_thesis": "Draft only. Final thesis requires lyric and hook review.",
+    "contrast_device": ["self-deification vs visible insecurity"],
+    "dramatic_arc": ["persona inflation", "mask instability", "hook exposure"],
+    "narrative_role": ["ironic persona song"],
+    "title_function": "Treat the title as a slogan that both performs and mocks status inflation.",
+    "key_motifs": ["godlike pose", "performance mask", "self-contradiction"],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": ["front-loaded hook pressure", "fast conversational verse", "repeatable slogan chorus"],
+      "vocal_behavior": ["sharp synthetic delivery", "compressed attack", "slogan-first chorus delivery"],
+      "production_palette": ["subculture pop frame", "digital edge", "hook-forward rhythm bed"],
+      "arrangement_arc": ["immediate persona framing", "tight verse churn", "chorus slogan release"],
+      "dynamics_arc": ["assertive open", "compressed middle", "hook hold"],
+      "confidence": "low",
+      "evidence_basis": ["model_inference"]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrumentation until credits or verified listening notes are attached."
+    ]
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": ["copy_line", "internet slang", "persona monologue"],
+    "mora_control_notes": ["Need hook mora map after lyric import."],
+    "accent_risk_notes": ["Validate title-drop accent placement after section map is added."],
+    "critic_focus": ["hook_copy_force", "concept word density", "persona consistency"],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": ["ironic vocaloid pop", "subculture electro-pop"],
+    "tempo_feels": ["fast spoken cadence", "compressed pop pulse"],
+    "vocal_tones": ["smirking synthetic lead", "sharp attack", "high-copy chorus delivery"],
+    "production_palette": ["digital edge", "compressed drums", "bright-toxic synth frame"],
+    "energy_arc": ["immediate persona reveal", "verse churn", "slogan chorus repeat"],
+    "imagery_anchors": ["fake divinity", "internet persona", "status signaling"],
+    "exclude": ["do not smooth into generic wholesome pop", "do not dilute irony into vague angst"],
+    "source_basis": ["queue scaffold", "model inference"]
+  },
+  "quality_control": {
+    "missing_fields": [
+      "lyrics",
+      "credits",
+      "release date",
+      "runtime",
+      "hook lines",
+      "section map",
+      "section analysis",
+      "metadata sources",
+      "lyric sources"
+    ],
+    "manual_review_required_for": [
+      "title-function precision",
+      "exact hook slogans",
+      "section role mapping",
+      "sound claims"
+    ],
+    "warnings": [
+      "Draft scaffold only. Not ready for prompting until lyric_ground_truth and section_analysis are populated."
+    ],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

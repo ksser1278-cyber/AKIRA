@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_invincible",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "私は最強",
+    "title_core": "I'm Invincible",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "film",
+      "work_name": "ONE PIECE FILM RED",
+      "role_label": "insert_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "Motoki Ohmori",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Motoki Ohmori",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Mrs. GREEN APPLE",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_hw22060902",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Mrs. GREEN APPLE collaboration. Heroic radiant anthem. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "partial",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "さあ、震える手で今",
+          "ドアを開けるよ",
+          "私は最強"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "私は最強 溢れ出す想いに",
+          "身を任せて さあ",
+          "ありのままでいられたら"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "私は最強"
+    ],
+    "repetition_patterns": [
+      "Ascending melodic phrases",
+      "Joyful exclamatory hooks"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "heroism",
+      "self-confidence",
+      "radiant hope"
+    ],
+    "emotional_thesis": "The realization of one's own power to overcome any obstacle through will and music.",
+    "contrast_device": [
+      "shaking hands vs invincibility",
+      "past weakness vs current heroism"
+    ],
+    "dramatic_arc": [
+      "vulnerable start",
+      "rising heroic theme",
+      "triumphant apotheosis"
+    ],
+    "narrative_role": [
+      "self-awakening hero",
+      "radiant protagonist"
+    ],
+    "title_function": "Turns self-belief into the song's repeated heroic banner.",
+    "key_motifs": [
+      "Strongest",
+      "Opening doors",
+      "Overflowing emotion"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 134,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "G Major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "bright rock anthem",
+        "radiant groove",
+        "uplifting"
+      ],
+      "vocal_behavior": [
+        "clear radiant belting",
+        "authoritative power",
+        "joyful expression",
+        "wide melodic range",
+        "clean yet powerful"
+      ],
+      "production_palette": [
+        "bright electric guitars",
+        "energetic live drums",
+        "shimmering piano and synth layers",
+        "polished expansive mix"
+      ],
+      "arrangement_arc": [
+        "building energy throughout",
+        "full-band orchestral pop hybrid"
+      ],
+      "dynamics_arc": [
+        "wide emotional range climaxing in triumphant chorus"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "affirmation of strength",
+        "anthemic peak"
+      ],
+      "narrative_job": "The narrator declares their 'invincibility' to the world.",
+      "arrangement_role": {
+        "summary": "Full bright orchestration with driving guitars and triumphant brass/synths.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Soaring, diatonic melody with major-key triumph.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Radiant and powerful impact.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "absolute declaration",
+        "inviting the audience"
+      ],
+      "vocabulary_focus": [
+        "strongest",
+        "overflowing",
+        "self"
+      ],
+      "rhyme_features": [
+        "broad open-vowel endings support singalong lift"
+      ],
+      "rhythm_features": [
+        "anthemic downbeat emphasis",
+        "march-like forward motion"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Heroic J-pop Anthem",
+      "Mrs. GREEN APPLE-style J-rock",
+      "Uplifting Power Pop"
+    ],
+    "tempo_feels": [
+      "driving 134bpm",
+      "heroic and radiant"
+    ],
+    "vocal_tones": [
+      "radiant belts",
+      "authoritative power",
+      "joyful and clear",
+      "heroic resonance"
+    ],
+    "production_palette": [
+      "shimmering piano",
+      "bright electric guitars",
+      "energetic live band sound",
+      "expansive polished reverb"
+    ],
+    "energy_arc": [
+      "triumphant and ascending heroic drive"
+    ],
+    "imagery_anchors": [
+      "door to the future",
+      "invincibility",
+      "radiant light",
+      "strongest hero"
+    ],
+    "exclude": [
+      "dark industrial distortion",
+      "lazy blues",
+      "minor-key gloom"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "internal_monologue",
+      "copy_line"
+    ],
+    "mora_control_notes": [],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "full"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}
