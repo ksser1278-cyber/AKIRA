@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gen-lang-client-0639169752",
+  "private_key_id": "010246ab8be91335b700ba9903c4815c3019500d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/Q2fmx69gi9fw\n98ajB2qmcQ6rwQCa6aROvFJzIF/C2ZSCVwpoUMtf7F6it/uNo8XCvt+2EJ29Pa+j\nnDWnNrndi/vSOwHH9cF0xYpluNqFJJ2mol0pYBGXnGBJEh3uXDd7Ep8oX0B+K9eS\ndfkjtkcGUDH8AMHNVR34EoEzuOUJ3qkoQgClxEDaaMAb/96Fk+1n4AxPVN4WUXsi\n+hgE3oK5a6aDe4eNkSx1hHMQGg8fgDqD6a8bBROmkQ9cWKzaM1ttUJvCl7uwFGkF\nwce9XcNnNoyYsy39JomJgDR68GKAksK4CTDWYvkgWgIPYUBlfQF2EFQu6GYMc04K\nTAG/4Ce3AgMBAAECggEAKohk3K9fUssGdHHFXI/TqbvOlWdQKSL4BQJgG3YBlaUp\nH2sXx2bgMy6vRORBLphS7CHiQeykB2dmXa3pSIwk/R2aHIA+vybppHwhcMmQ3rbr\n0BifOwpAH0UJLHa47T7Yn6feeO3lu6koQUu24bgxRzgiRXYtoungxj/nN4dQd8cH\nHuoHwx6PwcT1yTy5+hkEOs/nqpjk9uxmNVmrG1Y+Q0p6lYWPrVUR5h4pU6He/bYV\nyMaXEete7UmVh3fW6IyCpe77V0lghvxMXDuKO3rDjkJz/tnTB+svOAjVpMT+vRzc\niWZechAD43B3lvli/HIZmHDravEU32Kng4/jcXHV8QKBgQD5Kg2JH0duGXoiny5C\njB7k52YPBvvAlKjXcwqEbQ3cY+95bUFjmK2jDX7ufV0PloZtWUtgxHMGITJjQ7ao\nGoH3/4m1eDx+DrdxPsczSZ0U5QFd3L1KolZMaB4sAY/qclbGi11kgeIG/Sv0iUIN\n52ambq7ilS9Tj4yqNyrOgIltOwKBgQDEgrL2QgvuiVeYNuYjvdKC3chAwrMg89iJ\nzNDULm7sE8bm7hraTmO+U/Xt71KcQxTKezzR7h4++VQVXZIz9Ucqizkok/p+Ot8R\n1c5OfQJ/xC8Ht0GP/kZCV/DGtzs9GpKE3WZGyhRJTqF5s8Zr+EoIWx/AS+YdDdwn\ns/Gdddb3tQKBgQDZsymCbmbtxqrVBznXATCZFakxZgue1wSywhwlWldrAZIiCRjB\n2YuU1FzcKYKe9QjdD9DxapOJfoXU/zvfotF+CrKacMSB63/SHWTU5fOuZuyLwytM\nw4wdVDdQgcjpsh8peGkQQP9o1dmK3kZteYpRzpFU/b4NB3aC3pKzPNFWMwKBgQCl\nsf7sniwpai0t77yGDpzeM9uSn5kjA/ll2AmNn8lvzg080zBZOxfneCw6AD4L/JQf\nV2KlML7YIqu/iDKrFPp46QO9L2lb3pARHdLjY40j5mwxeVgS7jiX4Ebph76veyRo\nW7bNob8RQPfvAqMgjy79dLiFEHprrTAhWh00xBQKsQKBgFA0jgDGS8c2FIbYGlex\nr+wYIUhy/wWseOC8eaYsgrnTyf6OmN74ik5NoIw/yhimgv4MAt4RtEaV3Po6Mccs\nBGmg2PHpI0wj5RHpIgSeumhAApbNN3yjvK5BjD/cGXUtsIpw4PHU1OzCKEpj8fOq\n6MB2lzXNp3+2ckIUyvVNYV7+\n-----END PRIVATE KEY-----\n",
+  "client_email": "akira-engine-admin@gen-lang-client-0639169752.iam.gserviceaccount.com",
+  "client_id": "105217815714757054839",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/akira-engine-admin%40gen-lang-client-0639169752.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Suno A/B Test Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_dir",
+    "output_dir",
+    "record_count",
+    "variant_count_per_pair",
+    "dimensions",
+    "pairs"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source_dir": {
+      "type": "string"
+    },
+    "output_dir": {
+      "type": "string"
+    },
+    "record_count": {
+      "type": "integer"
+    },
+    "variant_count_per_pair": {
+      "type": "integer"
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pairs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pair"
+      }
+    }
+  },
+  "$defs": {
+    "pair": {
+      "type": "object",
+      "required": [
+        "pair_id",
+        "label",
+        "source_type",
+        "variants"
+      ],
+      "properties": {
+        "pair_id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "variants": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/variant"
+          }
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "variant_id",
+        "variant_label",
+        "style_prompt",
+        "exclude_prompt"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string"
+        },
+        "variant_id": {
+          "type": "string"
+        },
+        "variant_label": {
+          "type": "string"
+        },
+        "style_prompt": {
+          "type": "string"
+        },
+        "exclude_prompt": {
+          "type": "string"
+        },
+        "lyric_markdown": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

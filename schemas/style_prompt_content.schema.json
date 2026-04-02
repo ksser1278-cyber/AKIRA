@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Style Prompt Content Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "display_name",
+    "global_atoms",
+    "axis_atoms",
+    "mode_atoms"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "reference_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "global_atoms": {
+      "$ref": "#/$defs/atom_group"
+    },
+    "axis_atoms": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/axis_group"
+      }
+    },
+    "mode_atoms": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/atom_group"
+      }
+    }
+  },
+  "$defs": {
+    "string_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "atom_group": {
+      "type": "object",
+      "properties": {
+        "genre_anchors": {
+          "$ref": "#/$defs/string_list"
+        },
+        "tempo_feels": {
+          "$ref": "#/$defs/string_list"
+        },
+        "groove_anchors": {
+          "$ref": "#/$defs/string_list"
+        },
+        "vocal_tones": {
+          "$ref": "#/$defs/string_list"
+        },
+        "vocal_behaviors": {
+          "$ref": "#/$defs/string_list"
+        },
+        "production_palette": {
+          "$ref": "#/$defs/string_list"
+        },
+        "arrangement_moves": {
+          "$ref": "#/$defs/string_list"
+        },
+        "energy_arcs": {
+          "$ref": "#/$defs/string_list"
+        },
+        "exclude_terms": {
+          "$ref": "#/$defs/string_list"
+        },
+        "default_theme_axes": {
+          "$ref": "#/$defs/string_list"
+        },
+        "default_form_tags": {
+          "$ref": "#/$defs/string_list"
+        },
+        "default_arc_label": {
+          "type": "string"
+        }
+      }
+    },
+    "axis_group": {
+      "type": "object",
+      "properties": {
+        "atmosphere_terms": {
+          "$ref": "#/$defs/string_list"
+        },
+        "production_palette": {
+          "$ref": "#/$defs/string_list"
+        },
+        "exclude_terms": {
+          "$ref": "#/$defs/string_list"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Curation Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "record_count",
+    "recommendation_counts",
+    "issue_counts"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "normalized_dir": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manifest_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "record_count": {
+      "type": "integer"
+    },
+    "recommendation_counts": {
+      "type": "object"
+    },
+    "issue_counts": {
+      "type": "object"
+    },
+    "structure_recovery_count": {
+      "type": "integer"
+    }
+  }
+}

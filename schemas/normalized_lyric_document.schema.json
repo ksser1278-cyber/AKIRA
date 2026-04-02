@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Normalized Lyric Document",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "artist_name",
+    "track_id",
+    "title",
+    "language",
+    "source_type",
+    "collection_method",
+    "source_manifest",
+    "source_lyric_path",
+    "raw_text",
+    "normalized_text",
+    "sections",
+    "stats"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "artist_name": {
+      "type": "string"
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "collection_method": {
+      "type": "string"
+    },
+    "source_manifest": {
+      "type": "string"
+    },
+    "source_lyric_path": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "source_site": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "normalized_text": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "section_id",
+          "label",
+          "line_count",
+          "lines",
+          "text"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string"
+          },
+          "line_count": {
+            "type": "integer"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "required": [
+        "raw_line_count",
+        "nonempty_line_count",
+        "section_count",
+        "repeated_line_count",
+        "unique_line_ratio"
+      ],
+      "properties": {
+        "raw_line_count": {
+          "type": "integer"
+        },
+        "nonempty_line_count": {
+          "type": "integer"
+        },
+        "section_count": {
+          "type": "integer"
+        },
+        "repeated_line_count": {
+          "type": "integer"
+        },
+        "unique_line_ratio": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Lyric Blueprint Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "split",
+    "artist_id",
+    "artist_name",
+    "mode_id",
+    "mode_label",
+    "source_type",
+    "contains_copyrighted_lyrics",
+    "instruction",
+    "input_context",
+    "target_blueprint",
+    "safety_notes"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "train",
+        "validation",
+        "test"
+      ]
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "artist_name": {
+      "type": "string"
+    },
+    "mode_id": {
+      "type": "string"
+    },
+    "mode_label": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "contains_copyrighted_lyrics": {
+      "type": "boolean"
+    },
+    "instruction": {
+      "type": "string"
+    },
+    "input_context": {
+      "type": "object"
+    },
+    "target_blueprint": {
+      "type": "object",
+      "required": [
+        "style_of_music",
+        "title_ideas",
+        "hook_ideas",
+        "suggested_structure",
+        "section_blueprint",
+        "generation_notes"
+      ],
+      "properties": {
+        "style_of_music": {
+          "type": "string"
+        },
+        "title_ideas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hook_ideas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_structure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "section_blueprint": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "section",
+              "goal",
+              "prompt"
+            ],
+            "properties": {
+              "section": {
+                "type": "string"
+              },
+              "goal": {
+                "type": "string"
+              },
+              "keyword_anchor": {
+                "type": "string"
+              },
+              "prompt": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "generation_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "safety_notes": {
+      "type": "object"
+    }
+  }
+}

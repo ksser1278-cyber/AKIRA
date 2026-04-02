@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Training Dataset Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_root",
+    "minimum_recommendation",
+    "outputs",
+    "counts",
+    "artists_included",
+    "skipped_artists"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project_root": { "type": "string" },
+    "minimum_recommendation": { "type": "string" },
+    "outputs": { "type": "object" },
+    "counts": { "type": "object" },
+    "artists_included": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "skipped_artists": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  }
+}

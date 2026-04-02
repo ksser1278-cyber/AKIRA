@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Conditioning Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artist_id",
+    "record_schema",
+    "record_count",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "record_schema": { "type": "string" },
+    "record_count": { "type": "integer", "minimum": 0 },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["track_id", "path", "ready_for_prompting"],
+        "properties": {
+          "track_id": { "type": "string" },
+          "title": { "type": "string" },
+          "path": { "type": "string" },
+          "ready_for_prompting": { "type": "boolean" },
+          "manual_review_required_for": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

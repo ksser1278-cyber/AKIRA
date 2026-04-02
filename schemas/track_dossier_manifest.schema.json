@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Dossier Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "record_count",
+    "ready_for_conditioning_count",
+    "release_year_coverage",
+    "intent_label_counts",
+    "average_section_count"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "record_count": { "type": "integer" },
+    "ready_for_conditioning_count": { "type": "integer" },
+    "release_year_coverage": { "type": "string" },
+    "intent_label_counts": { "type": "object" },
+    "average_section_count": { "type": "number" },
+    "intent_records_path": { "type": "string" }
+  }
+}

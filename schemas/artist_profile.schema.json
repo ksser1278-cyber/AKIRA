@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Artist Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "display_name",
+    "summary",
+    "base_style_tags",
+    "vocal_profile",
+    "language_policy",
+    "lyric_rules",
+    "modes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "reference_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "base_style_tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "vocal_profile": {
+      "type": "object",
+      "required": [
+        "range_hint",
+        "textures",
+        "delivery"
+      ],
+      "properties": {
+        "range_hint": {
+          "type": "string"
+        },
+        "textures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "delivery": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "language_policy": {
+      "type": "object",
+      "required": [
+        "primary_language",
+        "allowed_languages",
+        "avoid_languages"
+      ],
+      "properties": {
+        "primary_language": {
+          "type": "string"
+        },
+        "allowed_languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid_languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lyric_rules": {
+      "type": "object",
+      "required": [
+        "themes",
+        "imagery_bank",
+        "avoid_terms",
+        "structural_defaults"
+      ],
+      "properties": {
+        "themes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imagery_bank": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid_terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "structural_defaults": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "modes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/mode"
+      }
+    }
+  },
+  "$defs": {
+    "mode": {
+      "type": "object",
+      "required": [
+        "mode_id",
+        "label",
+        "description",
+        "tempo_bpm",
+        "energy",
+        "style_tags",
+        "sonic_elements",
+        "lyric_focus",
+        "title_seed_words",
+        "section_blueprint"
+      ],
+      "properties": {
+        "mode_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tempo_bpm": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "integer"
+          }
+        },
+        "energy": {
+          "type": "string"
+        },
+        "style_tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "sonic_elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lyric_focus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title_seed_words": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "section_blueprint": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          }
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "required": [
+        "section",
+        "goal"
+      ],
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "goal": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

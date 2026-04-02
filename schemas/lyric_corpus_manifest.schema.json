@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Lyric Corpus Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset_name",
+    "total_records",
+    "unique_artists",
+    "split_counts",
+    "artists",
+    "source_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "dataset_name": {
+      "type": "string"
+    },
+    "total_records": {
+      "type": "integer"
+    },
+    "unique_artists": {
+      "type": "integer"
+    },
+    "split_counts": {
+      "type": "object"
+    },
+    "artists": {
+      "type": "object"
+    },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

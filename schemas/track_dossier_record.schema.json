@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Dossier Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "track_id",
+    "artist_id",
+    "track_identity",
+    "high_level_intent",
+    "section_dossier",
+    "distilled_conditioning",
+    "quality_flags"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "track_id": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "track_identity": { "type": "object" },
+    "high_level_intent": { "type": "object" },
+    "section_dossier": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "distilled_conditioning": { "type": "object" },
+    "quality_flags": { "type": "object" }
+  }
+}

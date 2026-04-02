@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Derived Training Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "split",
+    "task_type",
+    "artist_id",
+    "contains_copyrighted_lyrics",
+    "instruction",
+    "input_context",
+    "target"
+  ],
+  "properties": {
+    "record_id": { "type": "string" },
+    "split": { "type": "string" },
+    "task_type": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "track_id": { "type": "string" },
+    "title": { "type": "string" },
+    "contains_copyrighted_lyrics": { "type": "boolean" },
+    "source_paths": { "type": "object" },
+    "instruction": { "type": "string" },
+    "input_context": { "type": "object" },
+    "target": { "type": "object" }
+  }
+}

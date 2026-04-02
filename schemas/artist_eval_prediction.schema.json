@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artist Eval Prediction",
+  "type": "object",
+  "required": [
+    "prediction_id",
+    "eval_id",
+    "task_type",
+    "artist_id",
+    "artist_name",
+    "track_id",
+    "title",
+    "split",
+    "model_name",
+    "prediction"
+  ],
+  "properties": {
+    "prediction_id": { "type": "string" },
+    "eval_id": { "type": "string" },
+    "task_type": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "artist_name": { "type": "string" },
+    "track_id": { "type": "string" },
+    "title": { "type": "string" },
+    "split": { "type": "string" },
+    "model_name": { "type": "string" },
+    "prediction": { "type": "object" }
+  }
+}

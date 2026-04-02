@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Intent Record",
+  "type": "object",
+  "required": [
+    "track_id",
+    "artist_id",
+    "title",
+    "title_core",
+    "curation_recommendation",
+    "metadata_intent",
+    "creative_intent",
+    "lyric_intent_signals",
+    "suno_conditioning_hints",
+    "training_value"
+  ],
+  "properties": {
+    "track_id": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "title": { "type": "string" },
+    "title_core": { "type": "string" },
+    "curation_recommendation": {
+      "type": "string",
+      "enum": ["ready", "needs_review", "reject"]
+    },
+    "source_paths": { "type": "object" },
+    "metadata_intent": { "type": "object" },
+    "creative_intent": { "type": "object" },
+    "lyric_intent_signals": { "type": "object" },
+    "suno_conditioning_hints": { "type": "object" },
+    "training_value": { "type": "object" }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Corpus Audit",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_root",
+    "artist_count",
+    "total_manifest_tracks",
+    "total_training_eligible_tracks",
+    "recommendation_counts",
+    "artists"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project_root": { "type": "string" },
+    "artist_count": { "type": "integer" },
+    "total_manifest_tracks": { "type": "integer" },
+    "total_training_eligible_tracks": { "type": "integer" },
+    "recommendation_counts": { "type": "object" },
+    "top_issue_codes": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "artists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artist_id",
+          "counts",
+          "coverage",
+          "scores",
+          "recommendation",
+          "track_details"
+        ]
+      }
+    }
+  }
+}

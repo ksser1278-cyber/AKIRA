@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs / temp / cache
+logs/
+*.log
+tmp/
+temp/
+cache/
+.cache/
+pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large generated outputs
+outputs/
+artifacts/
+exports/
+rendered/
+generated/
+runs/
+results/
+
+# AI / model assets
+models/
+checkpoints/
+weights/
+embeddings/
+loras/
+adapters/
+
+# Audio / video exports
+audio_exports/
+video_exports/
+stems/
+mixdowns/
+masters/
+
+# Archives / backups
+*.zip
+*.7z
+*.rar
+backup/
+backups/
+
+# Optional large data folders
+data/raw/
+data/intermediate/
+
+# AKIRA ENGINE Specific Exclusions
+artists/
+bundles/
+data/
+datasets/
+lyrics/
+reports/
+수정본/
+*.tmp.*
+
+# Allow specific small data folders if needed
+!data/sample/
+!data/refs/
+!data/reference_tracks/
+!data/anchor_sets/
+
+# Keep only lightweight sample data
+# !data/sample/
+# !data/sample/**

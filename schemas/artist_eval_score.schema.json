@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artist Eval Score",
+  "type": "object",
+  "required": [
+    "score_id",
+    "eval_id",
+    "prediction_id",
+    "task_type",
+    "artist_id",
+    "track_id",
+    "split",
+    "model_name",
+    "label",
+    "total_score",
+    "dimension_scores"
+  ],
+  "properties": {
+    "score_id": { "type": "string" },
+    "eval_id": { "type": "string" },
+    "prediction_id": { "type": "string" },
+    "task_type": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "track_id": { "type": "string" },
+    "split": { "type": "string" },
+    "model_name": { "type": "string" },
+    "label": { "type": "string" },
+    "total_score": { "type": "number" },
+    "dimension_scores": { "type": "object" }
+  }
+}

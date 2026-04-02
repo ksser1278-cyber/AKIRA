@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artist Eval Benchmark Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "model_name",
+    "source_eval_dir",
+    "output_dir",
+    "task_summaries",
+    "overall_summary",
+    "outputs"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "model_name": { "type": "string" },
+    "source_eval_dir": { "type": "string" },
+    "output_dir": { "type": "string" },
+    "task_summaries": { "type": "object" },
+    "overall_summary": { "type": "object" },
+    "outputs": { "type": "object" },
+    "manifest_path": { "type": "string" }
+  }
+}

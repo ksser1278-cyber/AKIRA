@@ -1,0 +1,789 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Conditioning Record",
+  "description": "Machine-oriented record that decomposes a deep song analysis sheet into reusable fields for prompting, retrieval, and dataset construction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "track_identity",
+    "source_provenance",
+    "lyric_ground_truth",
+    "song_intent",
+    "audio_fact_layer",
+    "section_analysis",
+    "prompt_conditioning",
+    "quality_control"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "record_type": {
+      "const": "track_conditioning_record"
+    },
+    "track_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "track_id",
+        "artist_id",
+        "artist_name",
+        "title",
+        "language",
+        "tie_in",
+        "credits",
+        "release"
+      ],
+      "properties": {
+        "track_id": { "type": "string" },
+        "artist_id": { "type": "string" },
+        "artist_name": { "type": "string" },
+        "title": { "type": "string" },
+        "title_core": { "type": "string" },
+        "language": { "type": "string" },
+        "tie_in": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["has_tie_in", "status"],
+          "properties": {
+            "has_tie_in": { "type": "boolean" },
+            "media_type": { "type": "string" },
+            "work_name": { "type": "string" },
+            "role_label": { "type": "string" },
+            "status": { "$ref": "#/$defs/status_enum" },
+            "sources": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/source_ref" }
+            }
+          }
+        },
+        "credits": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vocal", "lyrics", "composition", "arrangement"],
+          "properties": {
+            "vocal": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            },
+            "lyrics": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            },
+            "composition": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            },
+            "arrangement": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            },
+            "performance": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            },
+            "mix_master": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/attribution_item" }
+            }
+          }
+        },
+        "release": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["year"],
+          "properties": {
+            "date": { "$ref": "#/$defs/text_evidence" },
+            "year": { "$ref": "#/$defs/integer_evidence" },
+            "runtime": { "$ref": "#/$defs/runtime_evidence" }
+          }
+        }
+      }
+    },
+    "source_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lyric_sources", "metadata_sources"],
+      "properties": {
+        "lyric_sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        },
+        "metadata_sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        },
+        "analysis_sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "lyric_ground_truth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["full_text_status", "sections"],
+      "properties": {
+        "full_text_status": {
+          "type": "string",
+          "enum": ["included", "excluded", "partial"]
+        },
+        "copyright_handling_note": { "type": "string" },
+        "sections": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/lyric_section" }
+        },
+        "hook_lines": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "question_lines": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "repetition_patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "song_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core_theme",
+        "contrast_device",
+        "dramatic_arc",
+        "narrative_role",
+        "title_function",
+        "key_motifs"
+      ],
+      "properties": {
+        "core_theme": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "emotional_thesis": { "type": "string" },
+        "contrast_device": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "dramatic_arc": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "narrative_role": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tie_in_function": { "type": "string" },
+        "title_function": { "type": "string" },
+        "key_motifs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "interpretation_confidence": { "$ref": "#/$defs/confidence_enum" }
+      }
+    },
+    "audio_fact_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reported_facts", "proxy_inference"],
+      "properties": {
+        "reported_facts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "bpm": { "$ref": "#/$defs/numeric_evidence" },
+            "key": { "$ref": "#/$defs/key_evidence" },
+            "meter": { "$ref": "#/$defs/text_evidence" },
+            "confirmed_instrumentation": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/text_evidence" }
+            }
+          }
+        },
+        "proxy_inference": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "energy_profile",
+            "vocal_behavior",
+            "production_palette",
+            "arrangement_arc",
+            "dynamics_arc"
+          ],
+          "properties": {
+            "energy_profile": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "vocal_behavior": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "production_palette": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "arrangement_arc": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "dynamics_arc": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "confidence": { "$ref": "#/$defs/confidence_enum" },
+            "evidence_basis": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "lyrics",
+                  "credits",
+                  "official_copy",
+                  "third_party_db",
+                  "human_listening",
+                  "model_inference"
+                ]
+              }
+            }
+          }
+        },
+        "do_not_overclaim": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "section_analysis": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/section_analysis_entry" }
+    },
+    "japanese_lyric_profile": {
+      "$ref": "#/$defs/japanese_lyric_profile"
+    },
+    "prompt_conditioning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "genre_anchors",
+        "tempo_feels",
+        "vocal_tones",
+        "production_palette",
+        "energy_arc",
+        "imagery_anchors",
+        "exclude"
+      ],
+      "properties": {
+        "genre_anchors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tempo_feels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "vocal_tones": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "production_palette": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "energy_arc": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "imagery_anchors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exclude": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_basis": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "generation_safety": {
+      "$ref": "#/$defs/generation_safety"
+    },
+    "quality_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["missing_fields", "manual_review_required_for", "ready_for_prompting"],
+      "properties": {
+        "missing_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "manual_review_required_for": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "ready_for_prompting": { "type": "boolean" },
+        "ready_for_audio_claims": { "type": "boolean" }
+      }
+    }
+  },
+  "$defs": {
+    "status_enum": {
+      "type": "string",
+      "enum": ["confirmed", "cross_checked", "inferred", "estimated", "unknown"]
+    },
+    "confidence_enum": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "source_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "origin"],
+      "properties": {
+        "label": { "type": "string" },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "official",
+            "lyric_site",
+            "third_party_db",
+            "news",
+            "manual_note",
+            "streaming_metadata",
+            "other"
+          ]
+        },
+        "url": { "type": "string" },
+        "accessed_on": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "attribution_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role", "status"],
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "text_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": { "type": "string" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "integer_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": { "type": "integer" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "numeric_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": { "type": "number" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "runtime_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["display", "status"],
+      "properties": {
+        "display": { "type": "string" },
+        "seconds": { "type": "integer" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "key_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": { "type": "string" },
+        "tonic": { "type": "string" },
+        "mode": { "type": "string" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_ref" }
+        }
+      }
+    },
+    "lyric_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section_type", "lines"],
+      "properties": {
+        "section_type": {
+          "type": "string",
+          "enum": [
+            "intro",
+            "verse",
+            "pre_chorus",
+            "chorus",
+            "post_chorus",
+            "bridge",
+            "interlude",
+            "outro",
+            "hook",
+            "spoken",
+            "rap",
+            "other"
+          ]
+        },
+        "section_name": { "type": "string" },
+        "jp_section_role": { "$ref": "#/$defs/jp_section_role" },
+        "source_labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mora_density": { "$ref": "#/$defs/mora_density_enum" },
+        "spoken_speed_bias": { "$ref": "#/$defs/three_level_enum" },
+        "title_drop_role": { "$ref": "#/$defs/title_drop_role" },
+        "phrase_energy_role": { "$ref": "#/$defs/phrase_energy_role" },
+        "lines": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "analysis_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "status"],
+      "properties": {
+        "summary": { "type": "string" },
+        "status": { "$ref": "#/$defs/status_enum" },
+        "evidence_basis": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lyrics",
+              "credits",
+              "official_copy",
+              "third_party_db",
+              "human_listening",
+              "model_inference"
+            ]
+          }
+        }
+      }
+    },
+    "section_analysis_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section_name",
+        "section_type",
+        "lyric_function",
+        "rhetorical_pattern",
+        "vocabulary_focus",
+        "rhyme_features",
+        "rhythm_features",
+        "hook_weight"
+      ],
+      "properties": {
+        "section_name": { "type": "string" },
+        "jp_section_role": { "$ref": "#/$defs/jp_section_role" },
+        "section_type": {
+          "type": "string",
+          "enum": [
+            "intro",
+            "verse",
+            "pre_chorus",
+            "chorus",
+            "post_chorus",
+            "bridge",
+            "interlude",
+            "outro",
+            "hook",
+            "spoken",
+            "rap",
+            "other"
+          ]
+        },
+        "source_section_labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mora_density": { "$ref": "#/$defs/mora_density_enum" },
+        "spoken_speed_bias": { "$ref": "#/$defs/three_level_enum" },
+        "title_drop_role": { "$ref": "#/$defs/title_drop_role" },
+        "phrase_energy_role": { "$ref": "#/$defs/phrase_energy_role" },
+        "lyric_function": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "narrative_job": { "type": "string" },
+        "arrangement_role": { "$ref": "#/$defs/analysis_claim" },
+        "harmony_melody_role": { "$ref": "#/$defs/analysis_claim" },
+        "dynamics_role": { "$ref": "#/$defs/analysis_claim" },
+        "rhetorical_pattern": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "vocabulary_focus": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rhyme_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rhythm_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hook_weight": {
+          "type": "string",
+          "enum": ["none", "light", "medium", "heavy"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence_enum" }
+      }
+    },
+    "three_level_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "mora_density_enum": {
+      "type": "string",
+      "enum": ["sparse", "balanced", "dense", "compressed"]
+    },
+    "jp_section_role": {
+      "type": "string",
+      "enum": ["intro", "a_melo", "b_melo", "sabi", "dai_sabi", "c_melo", "outro", "other"]
+    },
+    "title_drop_role": {
+      "type": "string",
+      "enum": ["none", "foreshadow", "partial", "full", "reframe"]
+    },
+    "phrase_energy_role": {
+      "type": "string",
+      "enum": ["observation", "compression", "release", "pivot", "afterglow"]
+    },
+    "japanese_lyric_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "workflow_bias",
+        "hook_copy_force",
+        "title_ignition_style",
+        "modern_compression_bias",
+        "phrase_source_types",
+        "mora_control_notes",
+        "accent_risk_notes",
+        "critic_focus",
+        "section_features"
+      ],
+      "properties": {
+        "workflow_bias": {
+          "type": "string",
+          "enum": ["kyokusen", "shisen", "hybrid", "unknown"]
+        },
+        "hook_copy_force": { "$ref": "#/$defs/three_level_enum" },
+        "title_ignition_style": {
+          "type": "string",
+          "enum": ["immediate", "delayed", "reframing", "hidden", "unknown"]
+        },
+        "modern_compression_bias": { "$ref": "#/$defs/three_level_enum" },
+        "phrase_source_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mora_control_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "accent_risk_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "critic_focus": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "section_features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "section_name",
+              "section_type",
+              "jp_section_role",
+              "mora_density",
+              "spoken_speed_bias",
+              "title_drop_role",
+              "phrase_energy_role"
+            ],
+            "properties": {
+              "section_name": { "type": "string" },
+              "section_type": { "type": "string" },
+              "jp_section_role": { "$ref": "#/$defs/jp_section_role" },
+              "mora_density": { "$ref": "#/$defs/mora_density_enum" },
+              "spoken_speed_bias": { "$ref": "#/$defs/three_level_enum" },
+              "title_drop_role": { "$ref": "#/$defs/title_drop_role" },
+              "phrase_energy_role": { "$ref": "#/$defs/phrase_energy_role" }
+            }
+          }
+        }
+      }
+    },
+    "generation_verdict_enum": {
+      "type": "string",
+      "enum": ["invalid", "audit_only", "planner_safe", "generation_safe", "benchmark_safe"]
+    },
+    "risk_level_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "generation_safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "verdict",
+        "score",
+        "score_breakdown",
+        "allowed_layers",
+        "blockers"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string"
+        },
+        "verdict": {
+          "$ref": "#/$defs/generation_verdict_enum"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "score_breakdown": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provenance_trust",
+            "grounding_completeness",
+            "surface_safety",
+            "renderer_readiness"
+          ],
+          "properties": {
+            "provenance_trust": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "grounding_completeness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "surface_safety": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "renderer_readiness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "allowed_layers": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["planner", "renderer", "lexical_sampling", "benchmark"],
+          "properties": {
+            "planner": { "type": "boolean" },
+            "renderer": { "type": "boolean" },
+            "lexical_sampling": { "type": "boolean" },
+            "benchmark": { "type": "boolean" }
+          }
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "missing_provenance",
+              "partial_grounding",
+              "surface_noise_risk",
+              "renderer_policy_block",
+              "lexical_sampling_block",
+              "mode_fit_unverified",
+              "schema_drift_detected",
+              "anchor_leakage_risk"
+            ]
+          }
+        },
+        "requires_human_review": {
+          "type": "boolean"
+        },
+        "risk_levels": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "leakage": { "$ref": "#/$defs/risk_level_enum" },
+            "surface_contamination": { "$ref": "#/$defs/risk_level_enum" },
+            "anchor_similarity": { "$ref": "#/$defs/risk_level_enum" }
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

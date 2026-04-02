@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artist Eval Record",
+  "type": "object",
+  "required": [
+    "eval_id",
+    "split",
+    "task_type",
+    "artist_id",
+    "artist_name",
+    "track_id",
+    "title",
+    "difficulty",
+    "contains_copyrighted_lyrics",
+    "instruction",
+    "input_context",
+    "reference_target",
+    "reference_summary",
+    "rubric",
+    "judge_instructions",
+    "safety_checks",
+    "metadata"
+  ],
+  "properties": {
+    "eval_id": {
+      "type": "string"
+    },
+    "split": {
+      "type": "string",
+      "enum": ["validation", "test"]
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "artist_name": {
+      "type": "string"
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"]
+    },
+    "contains_copyrighted_lyrics": {
+      "type": "boolean"
+    },
+    "source_paths": {
+      "type": "object"
+    },
+    "instruction": {
+      "type": "string"
+    },
+    "input_context": {
+      "type": "object"
+    },
+    "reference_target": {
+      "type": "object"
+    },
+    "reference_summary": {
+      "type": "object"
+    },
+    "rubric": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dimension", "weight", "description"],
+        "properties": {
+          "dimension": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "judge_instructions": {
+      "type": "string"
+    },
+    "safety_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

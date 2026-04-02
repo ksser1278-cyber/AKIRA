@@ -1,0 +1,30 @@
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SRC_ROOT = PROJECT_ROOT / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
+
+from akira_engine.producer_expansion_prompt import write_producer_expansion_prompt
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build producer expansion delegation prompt.")
+    parser.add_argument("--artist-id", required=True)
+    parser.add_argument("--project-root", default=".")
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    project_root = Path(args.project_root).resolve()
+    output_path = write_producer_expansion_prompt(project_root, args.artist_id)
+    print(output_path)
+
+
+if __name__ == "__main__":
+    main()

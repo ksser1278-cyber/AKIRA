@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Suno A/B Result Record",
+  "type": "object",
+  "required": [
+    "pair_id",
+    "run_id",
+    "variant_id",
+    "variant_label",
+    "voice_fit",
+    "arrangement_fit",
+    "chorus_lift",
+    "emotional_arc",
+    "lyric_naturalness",
+    "overall",
+    "preference_rank"
+  ],
+  "properties": {
+    "pair_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "variant_label": {
+      "type": "string"
+    },
+    "voice_fit": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "arrangement_fit": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "chorus_lift": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "emotional_arc": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lyric_naturalness": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "overall": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "preference_rank": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "suno_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

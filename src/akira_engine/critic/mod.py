@@ -1,0 +1,218 @@
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass, field
+from typing import Any
+from src.akira_engine.normalize.mod import calculate_script_ratios, contains_bad_script
+
+@dataclass
+class HardGate:
+    passed: bool
+    reasons: list[str] = field(default_factory=list)
+
+@dataclass
+class CriticResult:
+    candidate_id: str
+    hard_gate: HardGate
+    scores: dict[str, float] = field(default_factory=dict)
+    diagnostics: dict[str, Any] = field(default_factory=dict)
+    notes: list[str] = field(default_factory=list)
+    honest_metrics_active: bool = False
+
+def _lyric_lines(text: str) -> list[str]:
+    lines = []
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or (line.startswith("[") and line.endswith("]")):
+            continue
+        # vNext: Filter out metadata-heavy common labels
+        if ":" in line and not any(q in line for q in ["「", "」", "『", "』"]):
+            continue
+        lines.append(line)
+    return lines
+
+def _extract_pure_lyric_body(text: str) -> str:
+    """Extraction logic for script ratio calculations (excludes metadata/brackets)."""
+    pure_lines = []
+    is_metadata_block = False
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line: continue
+        
+        # Detect metadata blocks
+        if line.lower().startswith("### style") or line.lower().startswith("# metadata") or line.lower().startswith("genre:") or line.lower().startswith("vocal:"):
+            is_metadata_block = True
+            continue
+            
+        # Detect end of metadata (usually a section bracket or first non-colon line)
+        if is_metadata_block and line.startswith("["):
+            is_metadata_block = False
+            
+        if is_metadata_block: continue
+        
+        # Skip section markers and headers for ratio purposes
+        if line.startswith("[") and line.endswith("]"): continue
+        if line.startswith("#"): continue
+        
+        pure_lines.append(line)
+    return "\n".join(pure_lines)
+
+def _calculate_honest_latin_ratio(text: str) -> float:
+    """Calculates Latin ratio while exempting allowlisted ad-libs."""
+    tokens = text.split()
+    if not tokens: return 0.0
+    
+    allowlist = {"(ah)", "(uh)", "(oh)", "(hey)", "(ah-hah)", "(ha)", "(nee)"}
+    latin_tokens = 0
+    for t in tokens:
+        clean_t = t.lower().strip(".,!?")
+        if clean_t in allowlist:
+            continue # Exempt
+        if re.search(r"[a-zA-Z]", t):
+            latin_tokens += 1
+            
+    return round(latin_tokens / len(tokens), 3)
+
+def _parse_sections(text: str) -> dict[str, list[str]]:
+    sections = {}
+    current = ""
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            current = line[1:-1]
+            sections.setdefault(current, [])
+            continue
+        sections.setdefault(current or "body", []).append(line)
+    return sections
+
+def _title_binding_score(title: str, lines: list[str]) -> float:
+    if not title or not lines: return 0.0
+    title_clean = title.replace(" ", "").lower()
+    joined = "".join(lines).lower()
+    if title_clean in joined:
+        hits = sum(1 for line in lines if title_clean in line.lower())
+        if hits >= 3: return 1.0
+        if hits >= 2: return 0.8
+        return 0.6
+    return 0.2
+
+def _singability_score(lines: list[str]) -> float:
+    if not lines: return 0.0
+    long_lines = sum(1 for line in lines if len(line.replace(" ", "")) > 24)
+    ratio = long_lines / len(lines)
+    return round(max(0.0, 1.0 - ratio * 1.5), 2)
+
+def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[float, list[str]]:
+    """Evaluates how many mandatory imagery anchors from the plan appear in the PURE lyrics (excluding metadata)."""
+    all_required = []
+    # vNext: Use section cards if available
+    for card in plan.get("section_cards", []):
+        all_required.extend(card.get("required_imagery", []))
+    
+    # Compatibility: Use motif_roster or keywords if no section cards
+    if not all_required:
+        roster = plan.get("motif_roster", [])
+        for item in roster:
+            if isinstance(item, dict):
+                # Extract motifs list from dictionary if present
+                all_required.extend(item.get("motifs", []))
+                if "text" in item: all_required.append(item["text"])
+            elif isinstance(item, str):
+                all_required.append(item)
+        all_required.extend(plan.get("keywords", []))
+    
+    # Ensure all items are strings and unique
+    clean_required = []
+    for item in all_required:
+        if isinstance(item, str):
+            clean_required.append(item)
+        elif isinstance(item, (list, tuple)):
+            clean_required.extend([str(x) for x in item if isinstance(x, (str, int, float))])
+            
+    unique_required = sorted(list(set(clean_required)))
+    if not unique_required: return 1.0, []
+    
+    hits = [atom for atom in unique_required if atom in pure_body]
+    coverage = len(hits) / len(unique_required)
+    return round(coverage, 2), hits
+
+def run_critic_stage(
+    plan: dict[str, Any],
+    candidate: dict[str, Any],
+    base_total: float = 0.0,
+) -> CriticResult:
+    """Execute Stage I: Critic (Honest Version)."""
+    from src.akira_engine.production_policy import BASELINE_2026_03_31 as Policy
+    
+    candidate_id = str(candidate.get("candidate_id", "unknown"))
+    markdown = str(candidate.get("markdown", ""))
+    title = str(candidate.get("title", "")).strip()
+    
+    # 1. Honest Extraction Pre-Audit
+    pure_body = _extract_pure_lyric_body(markdown)
+    lines = _lyric_lines(pure_body) # Now derived from pure body
+    
+    # 1. Hard Gate (Absolute Rules - Policy Driven)
+    jp_ratio, _ = calculate_script_ratios(pure_body)
+    latin_ratio = _calculate_honest_latin_ratio(pure_body)
+    has_bad_script = contains_bad_script(pure_body)
+    
+    reasons = []
+    # Baseline Freeze: Policy Enforced
+    if jp_ratio < 0.7: reasons.append("japanese_ratio_critical_low")
+    if latin_ratio > Policy.LATIN_TOKEN_RATIO_MAX * 2.5: reasons.append("latin_leakage_extreme")
+    if has_bad_script: reasons.append("script_contamination_detected")
+    
+    gate = HardGate(passed=len(reasons) == 0, reasons=reasons)
+    
+    # 2. Quality Scores (Baseline Threshold: Japanese >= Policy.JAPANESE_RATIO_MIN)
+    scaffold_mode = candidate.get("scaffold_mode", False)
+    
+    # Dual Policy: Production is strict, Scaffold is loose
+    if scaffold_mode:
+        surface_score = round(max(0.4, 1.0 - (latin_ratio * 1.2) - (0.75 - jp_ratio if jp_ratio < 0.75 else 0)), 2)
+    else:
+        # Production Strict (Frozen)
+        surface_score = round(max(0.0, 1.0 - (latin_ratio * 2.5) - (Policy.JAPANESE_RATIO_MIN - jp_ratio if jp_ratio < Policy.JAPANESE_RATIO_MIN else 0)), 2)
+        
+    singability = _singability_score(lines)
+    binding = _title_binding_score(title, lines)
+    imagery_cov, imagery_hits = _calculate_imagery_coverage(plan, pure_body)
+    
+    # 3. Diagnostics
+    template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
+    detected_templates = [m for m in template_markers if m in pure_body]
+    
+    result = CriticResult(
+        candidate_id=candidate_id,
+        hard_gate=gate,
+        scores={
+            "total": round(surface_score * 35 + singability * 25 + binding * 20 + imagery_cov * 20, 2),
+            "japanese_char_ratio": jp_ratio,
+            "latin_token_ratio": latin_ratio,
+            "surface_score": surface_score,
+            "singability": singability,
+            "title_binding": binding,
+            "imagery_coverage": imagery_cov,
+        },
+        diagnostics={
+            "template_hits": detected_templates,
+            "imagery_hits": imagery_hits,
+            "has_bad_script": has_bad_script,
+            "line_count": len(lines),
+            "scaffold_mode": scaffold_mode,
+            "pure_body_length": len(pure_body)
+        },
+        honest_metrics_active=True
+    )
+    
+    if not gate.passed: result.notes.append(f"Hard gate failed: {', '.join(reasons)}")
+    if latin_ratio > Policy.LATIN_TOKEN_RATIO_MAX and not scaffold_mode: 
+        result.notes.append("Linguistic leakage detected (Production Strict)")
+        
+    if imagery_cov <= Policy.IMAGERY_COVERAGE_HARD_FAIL_THRESHOLD and not scaffold_mode:
+        result.notes.append("CRITICAL: Imagery coverage hard fail (Grounding Bridge broken)")
+        
+    return result

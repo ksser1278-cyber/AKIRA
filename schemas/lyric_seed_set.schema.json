@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Lyric Seed Set",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "mode_id",
+          "theme",
+          "emotion",
+          "narrative",
+          "split"
+        ],
+        "properties": {
+          "mode_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          },
+          "theme": {
+            "type": "string"
+          },
+          "emotion": {
+            "type": "string"
+          },
+          "narrative": {
+            "type": "string"
+          },
+          "split": {
+            "type": "string",
+            "enum": [
+              "train",
+              "validation",
+              "test"
+            ]
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

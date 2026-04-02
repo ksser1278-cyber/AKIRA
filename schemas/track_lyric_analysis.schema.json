@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Track Lyric Analysis",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "artist_name",
+    "track_id",
+    "title",
+    "language",
+    "source_normalized_path",
+    "structure",
+    "repetition",
+    "lexical",
+    "imagery",
+    "emotion_arc",
+    "section_functions"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "artist_name": { "type": "string" },
+    "track_id": { "type": "string" },
+    "title": { "type": "string" },
+    "language": { "type": "string" },
+    "source_normalized_path": { "type": "string" },
+    "structure": { "type": "object" },
+    "repetition": { "type": "object" },
+    "lexical": { "type": "object" },
+    "imagery": { "type": "object" },
+    "emotion_arc": { "type": "object" },
+    "section_functions": { "type": "array" },
+    "analysis_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

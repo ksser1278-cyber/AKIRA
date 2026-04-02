@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Curated Lyric Record",
+  "type": "object",
+  "required": [
+    "track_id",
+    "artist_id",
+    "title",
+    "title_key",
+    "normalized_path",
+    "section_metrics",
+    "text_quality",
+    "recommendation",
+    "issues"
+  ],
+  "properties": {
+    "track_id": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_core": {
+      "type": "string"
+    },
+    "title_key": {
+      "type": "string"
+    },
+    "normalized_path": {
+      "type": "string"
+    },
+    "raw_path": {
+      "type": "string"
+    },
+    "track_analysis_path": {
+      "type": "string"
+    },
+    "source_site": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "section_metrics": {
+      "type": "object"
+    },
+    "inferred_structure": {
+      "type": "object"
+    },
+    "text_quality": {
+      "type": "object"
+    },
+    "recommendation": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "needs_review",
+        "reject"
+      ]
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duplicate_title_count": {
+      "type": "integer"
+    }
+  }
+}

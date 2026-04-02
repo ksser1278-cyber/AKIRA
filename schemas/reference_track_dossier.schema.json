@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Engine Reference Track Dossier",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "track_identity",
+    "high_level_intent",
+    "section_intent",
+    "distilled_conditioning"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "track_identity": {
+      "type": "object",
+      "required": ["title", "composer", "vocalist"],
+      "properties": {
+        "title": { "type": "string" },
+        "composer": { "type": "string" },
+        "vocalist": { "type": "string" },
+        "bpm": { "type": "number" },
+        "key": { "type": "string" },
+        "runtime": { "type": "string" },
+        "release_year": { "type": "integer" },
+        "instrumentation": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "high_level_intent": {
+      "type": "object"
+    },
+    "section_intent": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "distilled_conditioning": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

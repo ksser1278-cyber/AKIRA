@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artist Eval Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artist_id",
+    "source_package_dir",
+    "source_experiments_dir",
+    "output_dir",
+    "heldout_source_records",
+    "split_counts",
+    "difficulty_counts",
+    "counts",
+    "outputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "artist_id": {
+      "type": "string"
+    },
+    "source_package_dir": {
+      "type": "string"
+    },
+    "source_experiments_dir": {
+      "type": "string"
+    },
+    "output_dir": {
+      "type": "string"
+    },
+    "heldout_source_records": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "split_counts": {
+      "type": "object"
+    },
+    "difficulty_counts": {
+      "type": "object"
+    },
+    "counts": {
+      "type": "object"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "manifest_path": {
+      "type": "string"
+    }
+  }
+}

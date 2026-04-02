@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bulk Artist Registry",
+  "type": "object",
+  "required": ["schema_version", "artists"],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "defaults": {
+      "type": "object",
+      "properties": {
+        "language": { "type": "string" },
+        "spotify_market": { "type": "string" },
+        "spotify_include_groups": { "type": "string" },
+        "request_delay_seconds": { "type": "number", "minimum": 0 },
+        "artist_delay_seconds": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "artists": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["artist_id", "artist_name", "primary_discovery"],
+        "properties": {
+          "artist_id": { "type": "string" },
+          "artist_name": { "type": "string" },
+          "enabled": { "type": "boolean" },
+          "language": { "type": "string" },
+          "request_delay_seconds": { "type": "number", "minimum": 0 },
+          "spotify_artist_name": { "type": "string" },
+          "spotify_artist_id": { "type": "string" },
+          "spotify_market": { "type": "string" },
+          "spotify_include_groups": { "type": "string" },
+          "primary_discovery": {
+            "type": "object",
+            "required": ["site", "artist_url"],
+            "properties": {
+              "site": {
+                "type": "string",
+                "enum": ["utaten"]
+              },
+              "artist_url": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "secondary_backfill": {
+            "type": "object",
+            "required": ["site", "artist_url"],
+            "properties": {
+              "site": {
+                "type": "string",
+                "enum": ["petitlyrics"]
+              },
+              "artist_url": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "manual_backfill_manifest": { "type": "string" },
+          "primary_web_manifest": { "type": "string" },
+          "primary_manifest": { "type": "string" },
+          "secondary_web_manifest": { "type": "string" },
+          "secondary_manifest": { "type": "string" },
+          "merged_manifest": { "type": "string" },
+          "spotify_output": { "type": "string" },
+          "initial_coverage_report": { "type": "string" },
+          "final_coverage_report": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
