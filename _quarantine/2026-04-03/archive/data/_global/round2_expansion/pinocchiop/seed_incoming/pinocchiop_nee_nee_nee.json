@@ -1,0 +1,39 @@
+{
+  "artist_id": "pinocchiop",
+  "track_id": "pinocchiop_nee_nee_nee",
+  "title": "ねぇねぇねぇ。",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "repetitive_greeting",
+  "hook_behavior": [
+    "call and response",
+    "cloying cuteness",
+    "toxic dependence"
+  ],
+  "section_flow_guess": [
+    "verse_greeting",
+    "prechorus_ignoring",
+    "chorus_demanding_attention",
+    "bridge_anger",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "tapping shoulders",
+    "ignored texts",
+    "staring",
+    "smiles"
+  ],
+  "emotional_arc": [
+    "loneliness",
+    "needy demands",
+    "anger"
+  ],
+  "leakage_watchouts": [
+    "must feature extreme panned call-and-response vocals"
+  ],
+  "prompt_seed_terms": [
+    "cute electro pop",
+    "needy vocals",
+    "call and response"
+  ],
+  "grounding_status": "research_ready"
+}

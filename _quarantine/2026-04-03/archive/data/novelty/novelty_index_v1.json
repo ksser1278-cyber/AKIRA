@@ -1,0 +1,2133 @@
+{
+  "version": "1.0",
+  "corpus_size": 100,
+  "canon_size": 0,
+  "statistics": {
+    "external_similarity": {
+      "mean": 0.1756,
+      "min": 0.0393,
+      "max": 0.6469,
+      "median": 0.0869
+    },
+    "artist_imitation_risk": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "median": 1.0
+    },
+    "cliche_density": {
+      "mean": 0.0171,
+      "min": 0.0,
+      "max": 0.25,
+      "median": 0.0
+    },
+    "recombinative_novelty": {
+      "mean": 0.368,
+      "min": 0.1,
+      "max": 0.9,
+      "median": 0.3
+    }
+  },
+  "profiles": [
+    {
+      "track_id": "40mp/renai_saiban",
+      "external_similarity": 0.1,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.5,
+      "nearest_external": {
+        "track_id": "honeyworks/confession_rehearsal",
+        "artist_id": "honeyworks",
+        "similarity": 0.1
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/backlight",
+      "external_similarity": 0.0894,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.82,
+      "nearest_external": {
+        "track_id": "neru/abstract_nonsense",
+        "artist_id": "neru",
+        "similarity": 0.0894
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/invincible",
+      "external_similarity": 0.0899,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.8,
+      "nearest_external": {
+        "track_id": "chinozo/goodbye_declaration",
+        "artist_id": "chinozo",
+        "similarity": 0.0899
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/kokoro",
+      "external_similarity": 0.0788,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.14,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0788
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/newgenesis",
+      "external_similarity": 0.0808,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.1,
+      "composite_score": 72.2,
+      "nearest_external": {
+        "track_id": "hachi/panda_hero",
+        "artist_id": "hachi",
+        "similarity": 0.0808
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/odo",
+      "external_similarity": 0.0768,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.2,
+      "nearest_external": {
+        "track_id": "kairiki_bear/lemmingming",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0768
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/readymade",
+      "external_similarity": 0.0823,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.03,
+      "nearest_external": {
+        "track_id": "ado/backlight",
+        "artist_id": "ado",
+        "similarity": 0.0823
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "ado/usseewa",
+      "external_similarity": 0.3235,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 66.8,
+      "nearest_external": {
+        "track_id": "syudou/usseewa",
+        "artist_id": "syudou",
+        "similarity": 0.3235
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "atols/macaron",
+      "external_similarity": 0.0748,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.26,
+      "nearest_external": {
+        "track_id": "kairiki_bear/ruma",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0748
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "balloon/charles",
+      "external_similarity": 0.1169,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 78.99,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.1169
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "chinozo/goodbye_declaration",
+      "external_similarity": 0.1207,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 81.88,
+      "nearest_external": {
+        "track_id": "jin/inner_arts",
+        "artist_id": "jin",
+        "similarity": 0.1207
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "dazibee/urban_fantasy",
+      "external_similarity": 0.1388,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 72.34,
+      "nearest_external": {
+        "track_id": "jin/inner_arts",
+        "artist_id": "jin",
+        "similarity": 0.1388
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/ai_kotoba",
+      "external_similarity": 0.0393,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 81.32,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0393
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/android_girl",
+      "external_similarity": 0.0638,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.59,
+      "nearest_external": {
+        "track_id": "ado/readymade",
+        "artist_id": "ado",
+        "similarity": 0.0638
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/animal",
+      "external_similarity": 0.0807,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 83.08,
+      "nearest_external": {
+        "track_id": "kairiki_bear/ruma",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0807
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/cinderella",
+      "external_similarity": 0.0747,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.26,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0747
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/ghost_rule",
+      "external_similarity": 0.0574,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0732,
+      "recombinative_novelty": 0.9,
+      "composite_score": 85.68,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0574
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/hibana",
+      "external_similarity": 0.1146,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.06,
+      "nearest_external": {
+        "track_id": "kairiki_bear/bug",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.1146
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/love_doll",
+      "external_similarity": 0.0645,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.56,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0645
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/monitoring",
+      "external_similarity": 0.0804,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.09,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0804
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/mozaik_role",
+      "external_similarity": 0.0734,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.3,
+      "nearest_external": {
+        "track_id": "kairiki_bear/bug",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0734
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/poison_apple",
+      "external_similarity": 0.0849,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0455,
+      "recombinative_novelty": 0.9,
+      "composite_score": 85.27,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0849
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/rabbit_hole",
+      "external_similarity": 0.0726,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.32,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0726
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/salamander",
+      "external_similarity": 0.0677,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.5,
+      "composite_score": 78.59,
+      "nearest_external": {
+        "track_id": "ado/backlight",
+        "artist_id": "ado",
+        "similarity": 0.0677
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/tsumi_to_batsu",
+      "external_similarity": 0.0466,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 81.1,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0466
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/vampire",
+      "external_similarity": 0.0844,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 82.97,
+      "nearest_external": {
+        "track_id": "pinocchiop/nee_nee_nee",
+        "artist_id": "pinocchiop",
+        "similarity": 0.0844
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/yowamushi_montblanc",
+      "external_similarity": 0.0911,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.77,
+      "nearest_external": {
+        "track_id": "iyowa/apricot",
+        "artist_id": "iyowa",
+        "similarity": 0.0911
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "deco27/yumeyume",
+      "external_similarity": 0.0507,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 83.98,
+      "nearest_external": {
+        "track_id": "pinocchiop/slow_motion",
+        "artist_id": "pinocchiop",
+        "similarity": 0.0507
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "eve/dramaturgy",
+      "external_similarity": 0.1172,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 78.98,
+      "nearest_external": {
+        "track_id": "chinozo/goodbye_declaration",
+        "artist_id": "chinozo",
+        "similarity": 0.1172
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "hachi/donut_hole",
+      "external_similarity": 0.0821,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.25,
+      "recombinative_novelty": 0.3,
+      "composite_score": 73.29,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0821
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "hachi/panda_hero",
+      "external_similarity": 0.0963,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.3,
+      "composite_score": 74.74,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.0963
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "harumaki_gohan/melty_land_nightmare",
+      "external_similarity": 0.0911,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 79.77,
+      "nearest_external": {
+        "track_id": "honeyworks/confession_rehearsal",
+        "artist_id": "honeyworks",
+        "similarity": 0.0911
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "hiragi_kirai/autophagy",
+      "external_similarity": 0.1018,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.45,
+      "nearest_external": {
+        "track_id": "dazibee/urban_fantasy",
+        "artist_id": "dazibee",
+        "similarity": 0.1018
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "honeyworks/confession_rehearsal",
+      "external_similarity": 0.0928,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.72,
+      "nearest_external": {
+        "track_id": "balloon/charles",
+        "artist_id": "balloon",
+        "similarity": 0.0928
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "iyowa/1000_nen_ikiteiru",
+      "external_similarity": 0.0576,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.77,
+      "nearest_external": {
+        "track_id": "tsumiki/phony",
+        "artist_id": "tsumiki",
+        "similarity": 0.0576
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "iyowa/apricot",
+      "external_similarity": 0.0765,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.2,
+      "nearest_external": {
+        "track_id": "kairiki_bear/failure_girl",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0765
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "iyowa/heat_abnormal",
+      "external_similarity": 0.0864,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.91,
+      "nearest_external": {
+        "track_id": "kanaria/requiem",
+        "artist_id": "kanaria",
+        "similarity": 0.0864
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "iyowa/kyu_kurarin",
+      "external_similarity": 0.6113,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 61.16,
+      "nearest_external": {
+        "track_id": "kairiki_bear/ruma",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.6113
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "iyowa/ta_ku_san",
+      "external_similarity": 0.158,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 77.76,
+      "nearest_external": {
+        "track_id": "kairiki_bear/ruma",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.158
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "jin/inner_arts",
+      "external_similarity": 0.1325,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 78.53,
+      "nearest_external": {
+        "track_id": "magnetite/living_ghost",
+        "artist_id": "magnetite",
+        "similarity": 0.1325
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "jin/kagerou_daze",
+      "external_similarity": 0.0901,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.9,
+      "composite_score": 83.92,
+      "nearest_external": {
+        "track_id": "hachi/panda_hero",
+        "artist_id": "hachi",
+        "similarity": 0.0901
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/alkali_rettoushou",
+      "external_similarity": 0.0808,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.08,
+      "nearest_external": {
+        "track_id": "neru/abstract_nonsense",
+        "artist_id": "neru",
+        "similarity": 0.0808
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/angel",
+      "external_similarity": 0.1428,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 78.22,
+      "nearest_external": {
+        "track_id": "maretu/pink",
+        "artist_id": "maretu",
+        "similarity": 0.1428
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/bug",
+      "external_similarity": 0.1215,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 81.86,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.1215
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/darling_dance",
+      "external_similarity": 0.0965,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 82.61,
+      "nearest_external": {
+        "track_id": "kanaria/envy_baby",
+        "artist_id": "kanaria",
+        "similarity": 0.0965
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/failure_girl",
+      "external_similarity": 0.1758,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 71.23,
+      "nearest_external": {
+        "track_id": "kairiki_bear/ruma",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.1758
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/lemmingming",
+      "external_similarity": 0.3012,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 67.46,
+      "nearest_external": {
+        "track_id": "pinocchiop/nee_nee_nee",
+        "artist_id": "pinocchiop",
+        "similarity": 0.3012
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/ruma",
+      "external_similarity": 0.6113,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 61.16,
+      "nearest_external": {
+        "track_id": "iyowa/kyu_kurarin",
+        "artist_id": "iyowa",
+        "similarity": 0.6113
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/shippaisaku_shoujo",
+      "external_similarity": 0.0961,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.1111,
+      "recombinative_novelty": 0.1,
+      "composite_score": 71.95,
+      "nearest_external": {
+        "track_id": "kairiki_bear/failure_girl",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0961
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kairiki_bear/venom",
+      "external_similarity": 0.1185,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 75.94,
+      "nearest_external": {
+        "track_id": "kanaria/envy_baby",
+        "artist_id": "kanaria",
+        "similarity": 0.1185
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kanaria/daino_tekina_rendezvous",
+      "external_similarity": 0.0754,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.24,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0754
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kanaria/envy_baby",
+      "external_similarity": 0.1133,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 79.1,
+      "nearest_external": {
+        "track_id": "kairiki_bear/venom",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.1133
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kanaria/mira",
+      "external_similarity": 0.0649,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.55,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.0649
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kanaria/requiem",
+      "external_similarity": 0.2903,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.3,
+      "composite_score": 68.92,
+      "nearest_external": {
+        "track_id": "neru/snobbism",
+        "artist_id": "neru",
+        "similarity": 0.2903
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kanaria/yoidore_shirazu",
+      "external_similarity": 0.5388,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 66.34,
+      "nearest_external": {
+        "track_id": "iyowa/kyu_kurarin",
+        "artist_id": "iyowa",
+        "similarity": 0.5388
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "kuragep/chururira",
+      "external_similarity": 0.0869,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.89,
+      "nearest_external": {
+        "track_id": "teniwoha/villain",
+        "artist_id": "teniwoha",
+        "similarity": 0.0869
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "magnetite/living_ghost",
+      "external_similarity": 0.1325,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 75.53,
+      "nearest_external": {
+        "track_id": "jin/inner_arts",
+        "artist_id": "jin",
+        "similarity": 0.1325
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/brain_revolution_girl",
+      "external_similarity": 0.059,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.73,
+      "nearest_external": {
+        "track_id": "neru/abstract_nonsense",
+        "artist_id": "neru",
+        "similarity": 0.059
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/darling",
+      "external_similarity": 0.0602,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.69,
+      "nearest_external": {
+        "track_id": "maretu/pink",
+        "artist_id": "maretu",
+        "similarity": 0.0602
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/koukatsu",
+      "external_similarity": 0.6192,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 57.92,
+      "nearest_external": {
+        "track_id": "pinocchiop/apple_dot_com",
+        "artist_id": "pinocchiop",
+        "similarity": 0.6192
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/pink",
+      "external_similarity": 0.3682,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 68.45,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.3682
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/suji",
+      "external_similarity": 0.6091,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 58.23,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.6091
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/umitagari",
+      "external_similarity": 0.0612,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.66,
+      "nearest_external": {
+        "track_id": "ado/backlight",
+        "artist_id": "ado",
+        "similarity": 0.0612
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "maretu/white_happy",
+      "external_similarity": 0.0613,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.125,
+      "recombinative_novelty": 0.1,
+      "composite_score": 72.79,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0613
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "nanou/3331",
+      "external_similarity": 0.089,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 73.83,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.089
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "neru/abstract_nonsense",
+      "external_similarity": 0.0858,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.93,
+      "nearest_external": {
+        "track_id": "ado/backlight",
+        "artist_id": "ado",
+        "similarity": 0.0858
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "neru/law_evading_rock",
+      "external_similarity": 0.0672,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.48,
+      "nearest_external": {
+        "track_id": "kairiki_bear/bug",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0672
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "neru/lost_ones_weeping",
+      "external_similarity": 0.0551,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.85,
+      "nearest_external": {
+        "track_id": "pinocchiop/slow_motion",
+        "artist_id": "pinocchiop",
+        "similarity": 0.0551
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "neru/snobbism",
+      "external_similarity": 0.5697,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 59.41,
+      "nearest_external": {
+        "track_id": "pinocchiop/nee_nee_nee",
+        "artist_id": "pinocchiop",
+        "similarity": 0.5697
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "neru/tokyo_teddy_bear",
+      "external_similarity": 0.6351,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 57.45,
+      "nearest_external": {
+        "track_id": "pinocchiop/nee_nee_nee",
+        "artist_id": "pinocchiop",
+        "similarity": 0.6351
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "niki/error",
+      "external_similarity": 0.1058,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.25,
+      "recombinative_novelty": 0.3,
+      "composite_score": 72.58,
+      "nearest_external": {
+        "track_id": "magnetite/living_ghost",
+        "artist_id": "magnetite",
+        "similarity": 0.1058
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "nilfruits/ironina",
+      "external_similarity": 0.0972,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.2,
+      "recombinative_novelty": 0.1,
+      "composite_score": 70.58,
+      "nearest_external": {
+        "track_id": "hachi/donut_hole",
+        "artist_id": "hachi",
+        "similarity": 0.0972
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/aisarenakutemo_kimi_ga_iru",
+      "external_similarity": 0.0709,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 83.37,
+      "nearest_external": {
+        "track_id": "neru/abstract_nonsense",
+        "artist_id": "neru",
+        "similarity": 0.0709
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/apple_dot_com",
+      "external_similarity": 0.6311,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 57.57,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.6311
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/boku_nanka_inakutemo",
+      "external_similarity": 0.0727,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.32,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0727
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/common_world_domination",
+      "external_similarity": 0.0824,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.03,
+      "nearest_external": {
+        "track_id": "deco27/hibana",
+        "artist_id": "deco27",
+        "similarity": 0.0824
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/kamippoi_na",
+      "external_similarity": 0.0405,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 78.28,
+      "nearest_external": {
+        "track_id": "kairiki_bear/bug",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0405
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/kusare_gedou_to_chocolate",
+      "external_similarity": 0.0601,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.7,
+      "composite_score": 83.7,
+      "nearest_external": {
+        "track_id": "kanaria/requiem",
+        "artist_id": "kanaria",
+        "similarity": 0.0601
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/loveit",
+      "external_similarity": 0.0722,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.33,
+      "nearest_external": {
+        "track_id": "ado/kokoro",
+        "artist_id": "ado",
+        "similarity": 0.0722
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/mahou_shoujo_to_chocolate",
+      "external_similarity": 0.0604,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0323,
+      "recombinative_novelty": 0.9,
+      "composite_score": 86.2,
+      "nearest_external": {
+        "track_id": "kairiki_bear/failure_girl",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0604
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/motivation_is_dead",
+      "external_similarity": 0.6032,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 58.4,
+      "nearest_external": {
+        "track_id": "pinocchiop/slow_motion",
+        "artist_id": "pinocchiop",
+        "similarity": 0.6032
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/mushikui_psychedelism",
+      "external_similarity": 0.0797,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.11,
+      "nearest_external": {
+        "track_id": "kairiki_bear/venom",
+        "artist_id": "kairiki_bear",
+        "similarity": 0.0797
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/nee_nee_nee",
+      "external_similarity": 0.6351,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 57.45,
+      "nearest_external": {
+        "track_id": "neru/tokyo_teddy_bear",
+        "artist_id": "neru",
+        "similarity": 0.6351
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/non_breath_oblige",
+      "external_similarity": 0.0633,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.6,
+      "nearest_external": {
+        "track_id": "kanaria/envy_baby",
+        "artist_id": "kanaria",
+        "similarity": 0.0633
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/slow_motion",
+      "external_similarity": 0.5651,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 59.55,
+      "nearest_external": {
+        "track_id": "neru/snobbism",
+        "artist_id": "neru",
+        "similarity": 0.5651
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/suki_na_koto_dake_de_ii_desu",
+      "external_similarity": 0.6101,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 58.2,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.6101
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/tensei_ringo",
+      "external_similarity": 0.057,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.79,
+      "nearest_external": {
+        "track_id": "neru/tokyo_teddy_bear",
+        "artist_id": "neru",
+        "similarity": 0.057
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/tokumei_m",
+      "external_similarity": 0.0522,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.93,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.0522
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "pinocchiop/ultimate_senpai",
+      "external_similarity": 0.0687,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 80.44,
+      "nearest_external": {
+        "track_id": "iyowa/kyu_kurarin",
+        "artist_id": "iyowa",
+        "similarity": 0.0687
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "police_piccadilly/cynic",
+      "external_similarity": 0.0776,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.17,
+      "nearest_external": {
+        "track_id": "dazibee/urban_fantasy",
+        "artist_id": "dazibee",
+        "similarity": 0.0776
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "sasakure_uk/hello_planet",
+      "external_similarity": 0.097,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 76.59,
+      "nearest_external": {
+        "track_id": "hiragi_kirai/autophagy",
+        "artist_id": "hiragi_kirai",
+        "similarity": 0.097
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/bakushou",
+      "external_similarity": 0.0674,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.48,
+      "nearest_external": {
+        "track_id": "iyowa/ta_ku_san",
+        "artist_id": "iyowa",
+        "similarity": 0.0674
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/bitter_choco_decoration",
+      "external_similarity": 0.6098,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 58.21,
+      "nearest_external": {
+        "track_id": "pinocchiop/slow_motion",
+        "artist_id": "pinocchiop",
+        "similarity": 0.6098
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/call_boy",
+      "external_similarity": 0.0726,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.32,
+      "nearest_external": {
+        "track_id": "iyowa/heat_abnormal",
+        "artist_id": "iyowa",
+        "similarity": 0.0726
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/cute_na_kanojo",
+      "external_similarity": 0.6119,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 58.14,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.6119
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/gamble",
+      "external_similarity": 0.6469,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 57.09,
+      "nearest_external": {
+        "track_id": "maretu/koukatsu",
+        "artist_id": "maretu",
+        "similarity": 0.6469
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "syudou/usseewa",
+      "external_similarity": 0.3737,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 65.29,
+      "nearest_external": {
+        "track_id": "ado/usseewa",
+        "artist_id": "ado",
+        "similarity": 0.3737
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "teniwoha/villain",
+      "external_similarity": 0.1152,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.5,
+      "composite_score": 79.04,
+      "nearest_external": {
+        "track_id": "eve/dramaturgy",
+        "artist_id": "eve",
+        "similarity": 0.1152
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "tsumiki/phony",
+      "external_similarity": 0.0809,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.3,
+      "composite_score": 77.07,
+      "nearest_external": {
+        "track_id": "atols/macaron",
+        "artist_id": "atols",
+        "similarity": 0.0809
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    },
+    {
+      "track_id": "wowaka/rolling_girl",
+      "external_similarity": 0.0815,
+      "internal_similarity": 0.0,
+      "artist_imitation_risk": 1.0,
+      "cliche_density": 0.0,
+      "recombinative_novelty": 0.1,
+      "composite_score": 74.06,
+      "nearest_external": {
+        "track_id": "harumaki_gohan/melty_land_nightmare",
+        "artist_id": "harumaki_gohan",
+        "similarity": 0.0815
+      },
+      "nearest_internal": {
+        "track_id": "",
+        "similarity": 0.0
+      },
+      "top_k_external_count": 3,
+      "top_k_internal_count": 0,
+      "status": "scored"
+    }
+  ]
+}

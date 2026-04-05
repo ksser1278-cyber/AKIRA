@@ -1,0 +1,37 @@
+{
+  "artist_id": "neru",
+  "track_id": "neru_law_evading_rock",
+  "title": "脱法ロック",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "rebellious_noun",
+  "hook_behavior": [
+    "manic drug-reference chaos pop",
+    "nonsense hooks"
+  ],
+  "section_flow_guess": [
+    "verse_bouncy_nonsense",
+    "prechorus_clash",
+    "chorus_chaotic_party",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "medicines",
+    "dancing",
+    "laws",
+    "color explosions"
+  ],
+  "emotional_arc": [
+    "manic euphoria",
+    "rebellion",
+    "chaos"
+  ],
+  "leakage_watchouts": [
+    "incorporate absurd synth sirens and massive tempo elasticity"
+  ],
+  "prompt_seed_terms": [
+    "chaos pop rock",
+    "nonsense anthem",
+    "upbeat rebellion"
+  ],
+  "grounding_status": "research_ready"
+}

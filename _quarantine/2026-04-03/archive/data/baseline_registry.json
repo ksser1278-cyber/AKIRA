@@ -1,0 +1,641 @@
+{
+  "schema_version": "1.0",
+  "record_type": "baseline_status",
+  "snapshot_date": "2026-03-22",
+  "approved_anchor_benchmarks": [
+    {
+      "artist_id": "pinocchiop",
+      "approved_manifest_path": "C:/JPop_Songwriter/AKIRA ENGINE/outputs/_archive/songwriter_v2_anchor_matrix/pinocchiop_v2/benchmark_manifest.json",
+      "notes": [
+        "Pinned stable benchmark baseline."
+      ]
+    },
+    {
+      "artist_id": "deco27",
+      "approved_manifest_path": "C:/JPop_Songwriter/AKIRA ENGINE/outputs/songwriter_v2_anchor_matrix_audio_aligned_v66/deco27/anchor_matrix_manifest.json",
+      "notes": [
+        "Pinned stable benchmark baseline until direct_emotional hard cases are improved without regression."
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "artist_id": "pinocchiop",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\pinocchiop_conditioning_audit_active.json",
+      "benchmark_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\_archive\\songwriter_v2_anchor_matrix\\pinocchiop_v2\\benchmark_manifest.json",
+      "conditioning": {
+        "record_count": 5,
+        "gold_count": 5,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 97.2
+      },
+      "producer_expansion": {
+        "record_count": 5,
+        "gold_count": 0,
+        "usable_count": 5,
+        "weak_count": 0,
+        "average_score": 82.0
+      },
+      "benchmark": {
+        "track_count": 5,
+        "average_score": 92.836,
+        "weakest_tracks": [
+          {
+            "track_id": "pinocchiop_kamippoi_na",
+            "score": 91.38,
+            "notes": []
+          },
+          {
+            "track_id": "pinocchiop_tensei_ringo",
+            "score": 91.7,
+            "notes": []
+          },
+          {
+            "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+            "score": 93.1,
+            "notes": []
+          }
+        ]
+      },
+      "audio": {
+        "covered_track_count": 5,
+        "active_track_count": 5,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 0,
+        "latest_runs": []
+      },
+      "top_blockers": [
+        "demo smoke coverage is missing"
+      ]
+    },
+    {
+      "artist_id": "deco27",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\deco27_conditioning_audit_active.json",
+      "benchmark_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\songwriter_v2_anchor_matrix_audio_aligned_v71\\deco27\\anchor_matrix_manifest.json",
+      "conditioning": {
+        "record_count": 5,
+        "gold_count": 5,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 98.0
+      },
+      "producer_expansion": {
+        "record_count": 4,
+        "gold_count": 4,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 89.5
+      },
+      "benchmark": {
+        "track_count": 5,
+        "average_score": 90.26,
+        "weakest_tracks": [
+          {
+            "track_id": "deco27_yumeyume",
+            "score": 85.04,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          },
+          {
+            "track_id": "deco27_ghost_rule",
+            "score": 89.88,
+            "notes": [
+              "section motifs are not landing consistently"
+            ]
+          },
+          {
+            "track_id": "deco27_love_doll",
+            "score": 89.88,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          }
+        ]
+      },
+      "audio": {
+        "covered_track_count": 5,
+        "active_track_count": 5,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 0,
+        "latest_runs": []
+      },
+      "top_blockers": [
+        "demo smoke coverage is missing"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\kanaria_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 3,
+        "latest_runs": [
+          {
+            "mode_id": "ironic_meta",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 72.84,
+            "selected_score": 72.84,
+            "release_score": 0.8,
+            "imagery_specificity_score": 0.163,
+            "title_binding_score": 1.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk",
+              "V3: performance ad-libs detected (Fidelity Bonus)"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\kanaria\\ironic_meta\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\kairiki_bear_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 3,
+        "latest_runs": [
+          {
+            "mode_id": "dark_cute_breakdown",
+            "generation_mode": "",
+            "requested_generation_mode": "",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 82.9,
+            "selected_score": 33.7,
+            "release_score": 0.0,
+            "imagery_specificity_score": 0.0,
+            "title_binding_score": 0.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "section motifs are not landing consistently",
+              "final chorus does not release strongly enough"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_v2\\kairiki_bear\\dark_cute_breakdown\\run_manifest.json"
+          },
+          {
+            "mode_id": "direct_emotional_pop",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 73.43,
+            "selected_score": 73.43,
+            "release_score": 1.0,
+            "imagery_specificity_score": 0.333,
+            "title_binding_score": 1.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\kairiki_bear\\direct_emotional_pop\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "final chorus release is still weak in demo smoke",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\maretu_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 3,
+        "latest_runs": [
+          {
+            "mode_id": "dark_cute_breakdown",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 71.84,
+            "selected_score": 71.84,
+            "release_score": 1.0,
+            "imagery_specificity_score": 0.442,
+            "title_binding_score": 0.9,
+            "notes": [
+              "surface still contains too many latin-script tokens",
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\maretu\\dark_cute_breakdown\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    },
+    {
+      "artist_id": "iyowa",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\iyowa_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 3,
+        "latest_runs": [
+          {
+            "mode_id": "dark_cute_breakdown",
+            "generation_mode": "",
+            "requested_generation_mode": "",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 74.59,
+            "selected_score": 30.56,
+            "release_score": 0.0,
+            "imagery_specificity_score": 0.0,
+            "title_binding_score": 0.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "section motifs are not landing consistently",
+              "final chorus does not release strongly enough",
+              "A-melo / B-melo / Sabi flow still feels weak"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_v2\\iyowa\\dark_cute_breakdown\\run_manifest.json"
+          },
+          {
+            "mode_id": "ironic_meta",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 73.38,
+            "selected_score": 73.38,
+            "release_score": 1.0,
+            "imagery_specificity_score": 0.275,
+            "title_binding_score": 1.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\iyowa\\ironic_meta\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "final chorus release is still weak in demo smoke",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    },
+    {
+      "artist_id": "syudou",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\syudou_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 3,
+        "latest_runs": [
+          {
+            "mode_id": "direct_emotional_pop",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 73.46,
+            "selected_score": 73.46,
+            "release_score": 1.0,
+            "imagery_specificity_score": 0.333,
+            "title_binding_score": 1.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\syudou\\direct_emotional_pop\\run_manifest.json"
+          },
+          {
+            "mode_id": "ironic_meta",
+            "generation_mode": "",
+            "requested_generation_mode": "",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 82.48,
+            "selected_score": 47.1,
+            "release_score": 0.0,
+            "imagery_specificity_score": 0.0,
+            "title_binding_score": 0.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "final chorus does not release strongly enough",
+              "hook phrasing still lacks Japanese copy-force"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_v2\\syudou\\ironic_meta\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "final chorus release is still weak in demo smoke",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    },
+    {
+      "artist_id": "neru",
+      "conditioning_audit_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\quality\\conditioning\\neru_conditioning_audit_active.json",
+      "benchmark_manifest_path": "",
+      "conditioning": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "producer_expansion": {
+        "record_count": 0,
+        "gold_count": 0,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 0.0
+      },
+      "benchmark": {
+        "track_count": 0,
+        "average_score": 0.0,
+        "weakest_tracks": []
+      },
+      "audio": {
+        "covered_track_count": 0,
+        "active_track_count": 0,
+        "missing_track_ids": []
+      },
+      "demo_smoke": {
+        "run_count": 2,
+        "latest_runs": [
+          {
+            "mode_id": "ironic_meta",
+            "generation_mode": "template",
+            "requested_generation_mode": "template",
+            "fallback_reason": "",
+            "selected_demo_adjusted_score": 73.42,
+            "selected_score": 73.42,
+            "release_score": 1.0,
+            "imagery_specificity_score": 0.275,
+            "title_binding_score": 1.0,
+            "notes": [
+              "surface imagery is still too abstract",
+              "some lines have extreme character counts — singability risk"
+            ],
+            "manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\demo_smoke_hardened\\neru\\ironic_meta\\run_manifest.json"
+          }
+        ]
+      },
+      "top_blockers": [
+        "conditioning audit average is below 80",
+        "benchmark manifest is missing",
+        "demo smoke adjusted score is below 85",
+        "surface imagery is still too abstract in demo smoke"
+      ]
+    }
+  ],
+  "mode_support": {
+    "mode_count": 3,
+    "pending_artist_count": 0,
+    "scaffolded_artist_count": 10,
+    "ready_artist_count": 0,
+    "audits": [
+      {
+        "mode_id": "ironic_meta",
+        "record_count": 3,
+        "gold_count": 3,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 99.33
+      },
+      {
+        "mode_id": "direct_emotional_pop",
+        "record_count": 2,
+        "gold_count": 2,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 99.5
+      },
+      {
+        "mode_id": "dark_cute_breakdown",
+        "record_count": 3,
+        "gold_count": 3,
+        "usable_count": 0,
+        "weak_count": 0,
+        "average_score": 99.33
+      }
+    ],
+    "benchmarks": [
+      {
+        "mode_id": "ironic_meta",
+        "track_count": 3,
+        "average_score": 94.98,
+        "weakest_tracks": [
+          {
+            "track_id": "pinocchiop_common_world_domination",
+            "score": 92.34,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          },
+          {
+            "track_id": "kanaria_king",
+            "score": 95.7,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          }
+        ]
+      },
+      {
+        "mode_id": "direct_emotional_pop",
+        "track_count": 2,
+        "average_score": 93.4,
+        "weakest_tracks": [
+          {
+            "track_id": "kanaria_envy_baby",
+            "score": 90.6,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          },
+          {
+            "track_id": "deco27_animal",
+            "score": 96.2,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          }
+        ]
+      },
+      {
+        "mode_id": "dark_cute_breakdown",
+        "track_count": 3,
+        "average_score": 94.59,
+        "weakest_tracks": [
+          {
+            "track_id": "pinocchiop_mushikui_psychedelism",
+            "score": 91.78,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          },
+          {
+            "track_id": "maretu_brain_revolution_girl",
+            "score": 95.5,
+            "notes": [
+              "best candidate in this set; still review humanly before reuse"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hard_case": [
+    {
+      "artist_id": "deco27",
+      "benchmark_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\hard_case_benchmark_try14\\deco27\\hard_case_manifest.json",
+      "benchmark_average_score": 89.35,
+      "open_tracks": [],
+      "resolved_tracks": [
+        "deco27_ai_kotoba",
+        "deco27_love_doll"
+      ],
+      "deferred_tracks": [
+        {
+          "track_id": "deco27_yumeyume",
+          "reason": "requires brighter progression model than current direct-emotional renderer"
+        }
+      ]
+    }
+  ]
+}

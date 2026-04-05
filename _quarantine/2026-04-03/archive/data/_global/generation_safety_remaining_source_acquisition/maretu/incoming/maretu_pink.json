@@ -1,0 +1,64 @@
+{
+  "track_identity": {
+    "track_id": "maretu_pink"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/MARETU/%E3%83%94%E3%83%B3%E3%82%AF/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "OTOTOY",
+        "url": "https://ototoy.jp/_/default/p/1247346",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for maretu_pink. Workflow: source_plus_provenance.",
+      "Assigned single supported mode as dark_cute_breakdown based on Pink Guro aesthetics and visceral lyric contrast matching the artist profile."
+    ]
+  },
+  "song_intent": {
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また ピンク色に",
+          "僕の 大切な 部屋",
+          "染まってゆく",
+          "誰にも 見えない場所で"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ピンク ピンク ピンク ピンク",
+          "心を 抉るように",
+          "ピンク ピンク ピンク ピンク",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ピンク ピンク ピンク ピンク",
+      "心を 抉るように"
+    ]
+  }
+}

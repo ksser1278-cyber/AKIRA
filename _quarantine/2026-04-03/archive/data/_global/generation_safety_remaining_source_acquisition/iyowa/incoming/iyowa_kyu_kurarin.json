@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_kyu_kurarin"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/360165/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi21083001/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for iyowa_kyu_kurarin. Workflow: source_only."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 日々",
+          "きゅうくらりん って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "きゅうくらりん きゅうくらりん",
+          "宙に浮く 心が",
+          "誰にも 見えない場所で",
+          "溶けてゆく"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "きゅうくらりん きゅうくらりん",
+      "宙に浮く 心が"
+    ]
+  }
+}

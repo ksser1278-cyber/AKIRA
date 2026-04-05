@@ -1,0 +1,110 @@
+{
+  "artist_id": "iyowa",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Eccentric dissonant piano-pop x surreal anxiety",
+    "Internalized anxious dreamer persona",
+    "Beautiful abnormality and rhythmic instability"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "onomatopoeic_burst",
+      "description": "Titles built on cute or creepy sound motifs (e.g., Kyu-kurarin)",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "surreal_mundane_noun",
+      "description": "Pairing mundane daily objects with surreal internal states",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "overflowing_expressive",
+    "ignition": "rhythmic_gasp",
+    "repetition": "unstable_verb_loop",
+    "line_length": "unpredictable_accent_phrasing",
+    "forbidden": [
+      "stable_pop_rhythm",
+      "wholesome_cliches",
+      "resolved_harmonies"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "abnormal_everyday_establishment",
+      "surreal_anxiety_shift"
+    ],
+    "stance": [
+      "deeply_internalized",
+      "eccentrically_anxious"
+    ],
+    "pace": "frantic_fragile_piano_movement",
+    "shift_pattern": "off_kilter_to_clear_clarity"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "internal_breakdown_into_dissonant_layers",
+    "final_chorus_role": "total_dissolution_climax",
+    "release_markers": [
+      "piano_glissando",
+      "gasping_vocal_pause"
+    ]
+  },
+  "common_imagery": [
+    "organic_mechanical_fusion",
+    "surreal_everyday",
+    "internalized_anxiety",
+    "melting_breaking",
+    "distorted_childhood"
+  ],
+  "emotional_arc_types": [
+    "Mundane -> Surreal Decay -> Dissonant Break",
+    "Anxiety -> Manic Joy -> Total Dissolution"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "kurarin_motifs",
+      "heads_up_style_puns"
+    ],
+    "hook_leakage": [
+      "off_kilter_syncopation",
+      "piano_pop_stutter_rhythms"
+    ],
+    "scene_leakage": [
+      "literal_melting_objects",
+      "mechanical_innards_revelation"
+    ],
+    "phrase_leakage": [
+      "hontou_wa_questioning",
+      "clinical_katakana_sensations"
+    ]
+  },
+  "safe_originality_zone": [
+    "Beautiful discord in cluttered 4 AM settings",
+    "Internalized anxiety within high-energy piano-pop",
+    "Abnormal expressive persona avoiding stable pop cliches"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "IYO_01",
+      "rule": "Surreal transition from mundane details",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "IYO_04",
+      "rule": "Organic-mechanical fusion imagery",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "IYO_14",
+      "rule": "Rhythmic stuttering on emotional verbs (Warau, Warau)",
+      "risk": "high"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

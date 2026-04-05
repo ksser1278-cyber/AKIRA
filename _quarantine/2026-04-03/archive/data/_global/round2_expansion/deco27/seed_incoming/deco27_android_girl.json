@@ -1,0 +1,38 @@
+{
+  "artist_id": "deco27",
+  "track_id": "deco27_android_girl",
+  "title": "アンドロイドガール",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "sci_fi_noun",
+  "hook_behavior": [
+    "soaring emotional climax",
+    "vocal processing transitions"
+  ],
+  "section_flow_guess": [
+    "verse_robotic",
+    "prechorus_waking_up",
+    "chorus_human_cry",
+    "bridge_error",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "metal hearts",
+    "wires",
+    "tears",
+    "fake memories"
+  ],
+  "emotional_arc": [
+    "numbness",
+    "awakening",
+    "painful love"
+  ],
+  "leakage_watchouts": [
+    "chorus must feature a massive emotional and melodic widening"
+  ],
+  "prompt_seed_terms": [
+    "emotional synth rock",
+    "soaring chorus",
+    "robotic to human arc"
+  ],
+  "grounding_status": "research_ready"
+}

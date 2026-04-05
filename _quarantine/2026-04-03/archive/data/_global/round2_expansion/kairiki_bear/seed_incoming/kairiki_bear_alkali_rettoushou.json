@@ -1,0 +1,37 @@
+{
+  "artist_id": "kairiki_bear",
+  "track_id": "kairiki_bear_alkali_rettoushou",
+  "title": "アルカリレットウショウ",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "chemical_compound",
+  "hook_behavior": [
+    "self-deprecating chant",
+    "rock bounce"
+  ],
+  "section_flow_guess": [
+    "verse_complaint",
+    "prechorus_failure",
+    "chorus_resignation_dance",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "chemicals",
+    "failing grades",
+    "comparisons",
+    "trash"
+  ],
+  "emotional_arc": [
+    "inferiority",
+    "jealousy",
+    "manic acceptance"
+  ],
+  "leakage_watchouts": [
+    "keep the BPM extremely fast to mask the sad lyrics"
+  ],
+  "prompt_seed_terms": [
+    "fast pop punk",
+    "bouncy bass",
+    "self-deprecating"
+  ],
+  "grounding_status": "research_ready"
+}

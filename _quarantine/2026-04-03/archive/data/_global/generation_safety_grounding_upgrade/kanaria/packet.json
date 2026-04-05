@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "kanaria",
+  "track_count": 3,
+  "workflow_counts": {
+    "core_cleanup": 3,
+    "extended_cleanup": 0,
+    "provenance_plus_cleanup": 0
+  },
+  "tracks": [
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_daino_tekina_rendezvous",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\daino_tekina_rendezvous.conditioning.json",
+      "score": 0.67,
+      "blockers": [
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "promotion_class": "grounding_and_surface_upgrade",
+      "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+      "external_evidence_required": true,
+      "internal_review_candidate": false,
+      "priority": "medium",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": "",
+      "workflow_type": "core_cleanup",
+      "placeholder_field_paths": [
+        "generation_safety.notes[1]"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_eye",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\eye.conditioning.json",
+      "score": 0.67,
+      "blockers": [
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "promotion_class": "grounding_and_surface_upgrade",
+      "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+      "external_evidence_required": true,
+      "internal_review_candidate": false,
+      "priority": "medium",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": "",
+      "workflow_type": "core_cleanup",
+      "placeholder_field_paths": [
+        "generation_safety.notes[1]"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_mira",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\mira.conditioning.json",
+      "score": 0.67,
+      "blockers": [
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "promotion_class": "grounding_and_surface_upgrade",
+      "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+      "external_evidence_required": true,
+      "internal_review_candidate": false,
+      "priority": "medium",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": "",
+      "workflow_type": "core_cleanup",
+      "placeholder_field_paths": [
+        "generation_safety.notes[1]"
+      ]
+    }
+  ]
+}

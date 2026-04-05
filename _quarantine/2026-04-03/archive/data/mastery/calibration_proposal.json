@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-03-30T22:28:24Z",
+  "modes": {
+    "intimate_confessional": {
+      "confidence": 8238.861724378963,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.744"
+    },
+    "anthemic_cinematic": {
+      "confidence": 10875.212369464494,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.748"
+    },
+    "night_drive": {
+      "confidence": 16740.0,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.75"
+    },
+    "ironic_meta": {
+      "confidence": 3750.0,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.75"
+    },
+    "dark_cute_breakdown": {
+      "confidence": 17351.900312618585,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.749"
+    },
+    "direct_emotional_pop": {
+      "confidence": 33450.0,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.75"
+    },
+    "glitch_hyper_pop": {
+      "confidence": 10.0,
+      "proposed_mora_offset": -0.1,
+      "reason": "Mastery Alignment drift detected: -0.098"
+    },
+    "royal_minimalist": {
+      "confidence": 30.0,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.75"
+    },
+    "hachi_classic": {
+      "confidence": 160.0,
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.75"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+[
+  {
+    "artist_id": "deco27",
+    "mode_id": "direct_emotional_pop",
+    "reason_for_test": "baseline verification of obsessive/toxic dependency motifs",
+    "expected_failure_modes": [
+      "renderer fallback: too wholesome",
+      "artist-specific phrase bank coverage: missing bratty interjections (~jan, ~daro)"
+    ],
+    "what_success_looks_like": [
+      "section motif landing: somatic urgency in hooks",
+      "mode fit stability: performative vulnerability via direct address"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id deco27 --mode-id direct_emotional_pop",
+    "pass_metrics": [
+      "title binding stable",
+      "surface japanese quality > 95%",
+      "imagery specificity: somatic-obsessive"
+    ],
+    "failure_metrics": [
+      "template-heavy phrasing",
+      "weak motif landing",
+      "artist voice collapse"
+    ],
+    "priority": "highest"
+  },
+  {
+    "artist_id": "pinocchiop",
+    "mode_id": "ironic_meta",
+    "reason_for_test": "baseline verification of hyper-fast carnival irony",
+    "expected_failure_modes": [
+      "section motif landing: low informational density",
+      "mode fit stability: lyrical tempo mismatch"
+    ],
+    "what_success_looks_like": [
+      "title binding: sarcastic slogan adoption in chorus",
+      "imagery specificity: noun-lists for overstimulation"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id pinocchiop --mode-id ironic_meta",
+    "pass_metrics": [
+      "title binding stable",
+      "informational density > 80%",
+      "motif landing: carnival-sarcasm"
+    ],
+    "failure_metrics": [
+      "vague abstract imagery",
+      "renderer fallback to generic empathy"
+    ],
+    "priority": "highest"
+  },
+  {
+    "artist_id": "kanaria",
+    "mode_id": "ironic_meta",
+    "reason_for_test": "verification of royal-minimalist status patterns",
+    "expected_failure_modes": [
+      "imagery specificity: generic royal tropes (king/queen) without minimalist grit",
+      "surface quality: loss of phonetic-burst impact"
+    ],
+    "what_success_looks_like": [
+      "section motif landing: status-title drop ignition",
+      "mode fit stability: aggressive bass-sync staccato"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id kanaria --mode-id ironic_meta",
+    "pass_metrics": [
+      "status-title drop ignition verified",
+      "minimalist negative space constraints pass",
+      "surface japanese quality high"
+    ],
+    "failure_metrics": [
+      "title_overfitting: KING/QUEEN clones",
+      "renderer fallback into soft-pop"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "maretu",
+    "mode_id": "dark_cute_breakdown",
+    "reason_for_test": "high-friction test of mechanical trauma vs keigo-dissonance",
+    "expected_failure_modes": [
+      "mode fit stability: loss of Keigo-dissonance complexity",
+      "renderer fallback: overly graphic without psychological grounding"
+    ],
+    "what_success_looks_like": [
+      "imagery specificity: clinical social judgment via formal greetings",
+      "section motif landing: rigid rhythmic mora-stabs"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id maretu --mode-id dark_cute_breakdown",
+    "pass_metrics": [
+      "keigo-dissonance constraint pass",
+      "clinical cruelty motif verified",
+      "industrial-mechanical imagery landing"
+    ],
+    "failure_metrics": [
+      "artist voice collapse into gore",
+      "soft-pop narrative leakage"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "mode_id": "direct_emotional_pop",
+    "reason_for_test": "verification of hyper-density addiction/paralysis rock",
+    "expected_failure_modes": [
+      "surface quality: stuttering feels randomized (jitter error)",
+      "motif landing: toxicity metaphors decoupled from rhythm"
+    ],
+    "what_success_looks_like": [
+      "section motif landing: be-be-be-style stuttering loops",
+      "mode fit stability: internalized clinical monologue"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id kairiki_bear --mode-id direct_emotional_pop",
+    "pass_metrics": [
+      "hyper-mora stuttering stability pass",
+      "addiction motifs verified",
+      "mora-count constraint maintenance"
+    ],
+    "failure_metrics": [
+      "jitter in recursive loops",
+      "renderer fallback to healthy-emotion"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "iyowa",
+    "mode_id": "ironic_meta",
+    "reason_for_test": "testing surreal-mundane distortion threshold",
+    "expected_failure_modes": [
+      "imagery specificity: nonsensical output without 'beautiful dissonance'",
+      "renderer fallback: piano-pop phrasing lack sync"
+    ],
+    "what_success_looks_like": [
+      "section motif landing: organic-mechanical noun fusion",
+      "mode fit stability: expressive verb-loop stuttering"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id iyowa --mode-id ironic_meta",
+    "pass_metrics": [
+      "surreal-mundane noun fusion verified",
+      "dissonance vs logic balance pass",
+      "motif landing: organic-mechanical"
+    ],
+    "failure_metrics": [
+      "meaningless noise (logic collapse)",
+      "generic cute-pop leakage"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "syudou",
+    "mode_id": "direct_emotional_pop",
+    "reason_for_test": "verification of diagnostic-resentful irony",
+    "expected_failure_modes": [
+      "mode fit stability: pure aggressive energy without 'bitter' diagnostic report",
+      "section motif landing: loss of conversational 'swing' rhythm"
+    ],
+    "what_success_looks_like": [
+      "artist-specific phrase bank: disdainful interjections (Haa?, Are?)",
+      "title binding: societal pretense exposed via irony"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id syudou --mode-id direct_emotional_pop",
+    "pass_metrics": [
+      "diagnostic-irony motif landing",
+      "spiteful-swing rhythm verified",
+      "societal pretense exposure pass"
+    ],
+    "failure_metrics": [
+      "unrefined anger (loss of irony)",
+      "weak conversation interjection density"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "neru",
+    "mode_id": "ironic_meta",
+    "reason_for_test": "testing anti-authoritarian surgical rock tone",
+    "expected_failure_modes": [
+      "renderer fallback: excessive teenage angst without industrial backing",
+      "imagery specificity: surgical metaphors missing from chorus"
+    ],
+    "what_success_looks_like": [
+      "surface quality: percussive negative commands in English",
+      "section motif landing: carving/remaking metaphors used for identity"
+    ],
+    "test_command_template": "run_demo_songwriter --artist-id neru --mode-id ironic_meta",
+    "pass_metrics": [
+      "surgical-industrial motif landing",
+      "anti-authoritarian tone verified",
+      "identity-carving metaphors pass"
+    ],
+    "failure_metrics": [
+      "surrender to broad-rock genericism",
+      "weak percussive negative density"
+    ],
+    "priority": "high"
+  }
+]

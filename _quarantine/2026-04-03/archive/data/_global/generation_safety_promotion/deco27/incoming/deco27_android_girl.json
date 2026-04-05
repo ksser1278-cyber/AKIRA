@@ -1,0 +1,29 @@
+{
+  "track_identity": {
+    "track_id": "deco27_android_girl"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=isZ_uBv7C0o",
+        "status": "confirmed"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "DECO*27 Official Website (Release Info)",
+        "origin": "official_site",
+        "url": "https://deco27.com/discography/android_girl/",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance verified and narrative mode aligned to the existing round2 classification for planner_safe promotion review."
+    ]
+  },
+  "song_intent": {
+    "narrative_role": ["direct_emotional_pop"]
+  }
+}

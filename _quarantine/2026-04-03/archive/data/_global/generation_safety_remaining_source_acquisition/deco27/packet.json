@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_remaining_source_acquisition_packet",
+  "artist_id": "deco27",
+  "track_count": 2,
+  "workflow_counts": {
+    "source_only": 0,
+    "source_plus_mode": 1,
+    "source_plus_provenance": 1
+  },
+  "tracks": [
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_hibana",
+      "current_verdict": "audit_only",
+      "score": 0.54,
+      "blockers": [
+        "missing_provenance",
+        "mode_fit_unverified",
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_plus_provenance",
+      "recommended_action": "acquire trusted lyric sources, metadata sources, and exact Japanese grounding bundle",
+      "current_record_path": "current_records\\deco27_hibana.conditioning.json",
+      "round2_scaffold_path": "round2_records\\deco27_hibana.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": true,
+      "needs_mode_verification": true,
+      "needs_surface_replacement": true
+    },
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_yowamushi_montblanc",
+      "current_verdict": "audit_only",
+      "score": 0.67,
+      "blockers": [
+        "mode_fit_unverified",
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_plus_mode",
+      "recommended_action": "acquire trusted lyric sources and exact Japanese grounding bundle, then verify a single supported narrative_role",
+      "current_record_path": "current_records\\deco27_yowamushi_montblanc.conditioning.json",
+      "round2_scaffold_path": "round2_records\\deco27_yowamushi_montblanc.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": false,
+      "needs_mode_verification": true,
+      "needs_surface_replacement": true
+    }
+  ]
+}

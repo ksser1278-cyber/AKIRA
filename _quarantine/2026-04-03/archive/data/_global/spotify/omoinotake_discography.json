@@ -1,0 +1,3536 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "63ylN6WBUUxxMsySiDmr0B",
+    "name": "Omoinotake",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/63ylN6WBUUxxMsySiDmr0B"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 46,
+  "raw_track_total": 129,
+  "canonical_track_count": 91,
+  "primary_lyric_track_count": 90,
+  "redundant_variant_track_count": 1,
+  "canonical_tracks": [
+    {
+      "name": "1992",
+      "normalized_name": "1992",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "05R6HKP8B3n2AO2PO2UCK1",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Hit It Up",
+      "normalized_name": "hit it up",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "2fVZbFSECerUa97XZhxi85",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Moment",
+      "normalized_name": "moment",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "5xTKVOVQnug475v9TA6DMD",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Nightfly",
+      "normalized_name": "nightfly",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "0hCoIemZlOR2ozicVydBdC",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Winter Bloomer",
+      "normalized_name": "winter bloomer",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "1sdwzWdfH6uyBp3WlKa1zn",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "fake me",
+      "normalized_name": "fake me",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "6YhOQ1oKPAy8RXRPfEckp8",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "lake side",
+      "normalized_name": "lake side",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "1WeIzeS0VfoNPEkGHdjs6P",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "mei",
+      "normalized_name": "mei",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "3TfhK29JzRZHfVEo6Lv6Dw",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "ダイアローグ feat.森心言",
+      "normalized_name": "ダイアローグ feat 森心言",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "4FMPJNpAl9V7Q4H4dwEGz0",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "東京falling",
+      "normalized_name": "東京falling",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "4qHCndCXVrxHc4WBzm8hJv",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "All of love",
+      "normalized_name": "all of love",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "2iXSWnq8RgPLl21cJsHAKC",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Bed room",
+      "normalized_name": "bed room",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "5MoH3PXHcOTK1ITVzsZl2b",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Freaky Night",
+      "normalized_name": "freaky night",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "6qPfdy9k5eZ52syZkgAfdG",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Life goes on",
+      "normalized_name": "life goes on",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "231daiM4bqi0FqPYrznAKz",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Ride on",
+      "normalized_name": "ride on",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "0AHLZlg9S801h3yiQoNQFe",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Sunshine Girl",
+      "normalized_name": "sunshine girl",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "0wKmBynScvBe5OXZKf0Hse",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Stand Alone",
+      "normalized_name": "stand alone",
+      "first_release_date": "2018-09-26",
+      "spotify_track_id": "6Cypyg9aiPdfBbw4sEhguG",
+      "albums": [
+        "Stand Alone",
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Bitter Sweet",
+      "normalized_name": "bitter sweet",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "2Pbrxo9f5l97DQhhGnz6JI",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Friction",
+      "normalized_name": "friction",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "4AcT726vFLsrqtQ5bFFjLN",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Never Let You Go",
+      "normalized_name": "never let you go",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "4sqYQgNxo6CC1I53jvQEsa",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Still",
+      "normalized_name": "still",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "7BsX3urShU9sIgtvdawx0h",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Temptation",
+      "normalized_name": "temptation",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "5ZArUqkNEQ83Rzir9R7hqA",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "惑星",
+      "normalized_name": "惑星",
+      "first_release_date": "2019-07-31",
+      "spotify_track_id": "1HCUx4Q2A9qVwf3b3pEotn",
+      "albums": [
+        "惑星",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "Blanco",
+      "normalized_name": "blanco",
+      "first_release_date": "2019-09-06",
+      "spotify_track_id": "15vxxJiYb664VxbAWPZo32",
+      "albums": [
+        "Blanco",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "トニカ",
+      "normalized_name": "トニカ",
+      "first_release_date": "2019-12-18",
+      "spotify_track_id": "0EcpmJzEgXGTc8UKUEq342",
+      "albums": [
+        "トニカ",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "So Far So Good",
+      "normalized_name": "so far so good",
+      "first_release_date": "2020-02-19",
+      "spotify_track_id": "535K7QSuAXQ2TTxRI6rWAG",
+      "albums": [
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "モラトリアム",
+      "normalized_name": "モラトリアム",
+      "first_release_date": "2020-02-19",
+      "spotify_track_id": "1fYX8MUun2AK1F6gQyGwc6",
+      "albums": [
+        "モラトリアム",
+        "モラトリアム",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "欠伸",
+      "normalized_name": "欠伸",
+      "first_release_date": "2020-04-08",
+      "spotify_track_id": "5xEhMI9kqCfacTcuPwU4IH",
+      "albums": [
+        "欠伸",
+        "Long for"
+      ]
+    },
+    {
+      "name": "One Day",
+      "normalized_name": "one day",
+      "first_release_date": "2020-05-08",
+      "spotify_track_id": "1uGTPA1J9MDmgpShWNUDRU",
+      "albums": [
+        "One Day",
+        "Long for",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "夏の幻",
+      "normalized_name": "夏の幻",
+      "first_release_date": "2020-06-26",
+      "spotify_track_id": "177hvuiFy8DwJgsi39tvyX",
+      "albums": [
+        "夏の幻",
+        "Long for"
+      ]
+    },
+    {
+      "name": "産声",
+      "normalized_name": "産声",
+      "first_release_date": "2020-10-23",
+      "spotify_track_id": "4Qu3gqkXT4gbuKBGlelM36",
+      "albums": [
+        "産声",
+        "Long for"
+      ]
+    },
+    {
+      "name": "One Day - JQ from Nulbarich Remix",
+      "normalized_name": "one day jq from nulbarich remix",
+      "first_release_date": "2020-11-18",
+      "spotify_track_id": "1hJYQnk5dMdRtIKYECuDdC",
+      "albums": [
+        "Long for"
+      ]
+    },
+    {
+      "name": "東京",
+      "normalized_name": "東京",
+      "first_release_date": "2020-11-18",
+      "spotify_track_id": "6PiqighbYtK1vemTpYeqlR",
+      "albums": [
+        "Long for"
+      ]
+    },
+    {
+      "name": "One Day - From THE FIRST TAKE",
+      "normalized_name": "one day from the first take",
+      "first_release_date": "2020-12-25",
+      "spotify_track_id": "1EB2zYmSyrskmFusB9fFf1",
+      "albums": [
+        "One Day - From THE FIRST TAKE"
+      ]
+    },
+    {
+      "name": "By My Side",
+      "normalized_name": "by my side",
+      "first_release_date": "2021-03-29",
+      "spotify_track_id": "37fQS3RFBzvi39fnjwWhqH",
+      "albums": [
+        "By My Side",
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "彼方",
+      "normalized_name": "彼方",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "30btTZFAHkc4HnKvsTKDXY",
+      "albums": [
+        "彼方",
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "プリクエル",
+      "normalized_name": "プリクエル",
+      "first_release_date": "2021-06-30",
+      "spotify_track_id": "1YmX06N3vF55MdYoJwJHqB",
+      "albums": [
+        "プリクエル",
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "EVERBLUE",
+      "normalized_name": "everblue",
+      "first_release_date": "2021-10-01",
+      "spotify_track_id": "5RmtuRIe8FJg9FRegwCqzW",
+      "albums": [
+        "EVERBLUE",
+        "EVERBLUE",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "クロスワード",
+      "normalized_name": "クロスワード",
+      "first_release_date": "2021-11-17",
+      "spotify_track_id": "17MtWnbhmf0jSU4MjwoZpv",
+      "albums": [
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "漂流教室",
+      "normalized_name": "漂流教室",
+      "first_release_date": "2021-11-17",
+      "spotify_track_id": "0puH9EENNJmmCI0tu7YOZA",
+      "albums": [
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "心音",
+      "normalized_name": "心音",
+      "first_release_date": "2022-04-13",
+      "spotify_track_id": "3wxYirejZ1NWKp2uy3Ir5N",
+      "albums": [
+        "心音",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "空蝉",
+      "normalized_name": "空蝉",
+      "first_release_date": "2022-07-27",
+      "spotify_track_id": "3EV37MCj5MTEWjBxqrLLcR",
+      "albums": [
+        "空蝉",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "この夜のロマンス",
+      "normalized_name": "この夜のロマンス",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "2fxdjTezL2KpQFOn07bLEJ",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "カエデ",
+      "normalized_name": "カエデ",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "5AlQzzP4bENETFDZQRDN11",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "トロイメライ",
+      "normalized_name": "トロイメライ",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "3ilHK59gf2Rmw1QHr6bdnI",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "雨と喪失",
+      "normalized_name": "雨と喪失",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "61JiVtrI6a0Ys293ey02cY",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "オーダーメイド",
+      "normalized_name": "オーダーメイド",
+      "first_release_date": "2023-03-18",
+      "spotify_track_id": "1pxOoSLFcKScOKv76RANVb",
+      "albums": [
+        "オーダーメイド",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "EVERBLUE - With ensemble",
+      "normalized_name": "everblue with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "7paBCsRxoKogVIfwZaYG2l",
+      "albums": [
+        "EVERBLUE - With ensemble"
+      ]
+    },
+    {
+      "name": "モラトリアム - With ensemble",
+      "normalized_name": "モラトリアム with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "0proC0WvQ4SIMZZrwV7CSR",
+      "albums": [
+        "モラトリアム - With ensemble"
+      ]
+    },
+    {
+      "name": "心音 - With ensemble",
+      "normalized_name": "心音 with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "5mg4D8VpWhvYi9lTo9NbBo",
+      "albums": [
+        "心音 - With ensemble"
+      ]
+    },
+    {
+      "name": "空蝉 - With ensemble",
+      "normalized_name": "空蝉 with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "6AShrMJd38T3Iatk2ApUJS",
+      "albums": [
+        "空蝉 - With ensemble"
+      ]
+    },
+    {
+      "name": "渦幕",
+      "normalized_name": "渦幕",
+      "first_release_date": "2023-07-27",
+      "spotify_track_id": "7pcTevAQGcz4HxeyXDKkRg",
+      "albums": [
+        "渦幕",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "Ammonite",
+      "normalized_name": "ammonite",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "1BuXgUwI7GM44ZjuqRDDjI",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "Blessing",
+      "normalized_name": "blessing",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "6Yq1iNk6cL5enKZSrmkNL4",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "トートロジー",
+      "normalized_name": "トートロジー",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "3xZAPYhlhbuAU3bPk7er8Q",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "夏の魔法のせいじゃない",
+      "normalized_name": "夏の魔法のせいじゃない",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "5ZvwGmxvUnm5GJcMbtkJKi",
+      "albums": [
+        "幸せ"
+      ]
+    },
+    {
+      "name": "幸せ",
+      "normalized_name": "幸せ",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "6Y8R8KtWiBxHfyXimlWPfC",
+      "albums": [
+        "Ammolite",
+        "幸せ",
+        "幸せ"
+      ]
+    },
+    {
+      "name": "Blanco- SUEHIROGARI live ver. -",
+      "normalized_name": "blanco suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "1kUhCpFj5KMLbF7L8TNlwV",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "By My Side- SUEHIROGARI live ver. -",
+      "normalized_name": "by my side suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7j1CG0pjhk2HVqKeZ040kx",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "EVERBLUE- SUEHIROGARI live ver. -",
+      "normalized_name": "everblue suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7imfpOwbgkujxuRu5sSR8n",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "Never Let You Go- SUEHIROGARI live ver. -",
+      "normalized_name": "never let you go suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5qflSKc49aViWr38yVq46u",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "One Day- SUEHIROGARI live ver. -",
+      "normalized_name": "one day suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "6HSQLDj90L7jOnfdDDdRgc",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "So Far So Good- SUEHIROGARI live ver. -",
+      "normalized_name": "so far so good suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "02LlCfYoWYyaqFrwOp4YAo",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "Stand Alone- SUEHIROGARI live ver. -",
+      "normalized_name": "stand alone suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7DHU9HoTQsQ3YTQKMd4QoL",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "トロイメライ- SUEHIROGARI live ver. -",
+      "normalized_name": "トロイメライ suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "431zBf9ZhOrP3OPZPB9YFw",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "モラトリアム- SUEHIROGARI live ver. -",
+      "normalized_name": "モラトリアム suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "6PLYmmNV1IJtNkXcyWlhhG",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "彼方- SUEHIROGARI live ver. -",
+      "normalized_name": "彼方 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "2RhZvnxl03pyAXXGwS6rEV",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "心音- SUEHIROGARI live ver. -",
+      "normalized_name": "心音 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5mKZLvnsybza4kwxfDDsXk",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "惑星- SUEHIROGARI live ver. -",
+      "normalized_name": "惑星 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "1jZXc9ejIKjCc0k4uW4X1F",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "産声- SUEHIROGARI live ver. -",
+      "normalized_name": "産声 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5aYQ9iyEqUHq0Wkbh2emhU",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "空蝉- SUEHIROGARI live ver. -",
+      "normalized_name": "空蝉 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "08D2ksd8Dhinb9tiJ652AF",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "雨と喪失- SUEHIROGARI live ver. -",
+      "normalized_name": "雨と喪失 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "24FKfEtPNCiRwcOEAo9SUk",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "幾億光年",
+      "normalized_name": "幾億光年",
+      "first_release_date": "2024-01-24",
+      "spotify_track_id": "4dmruTsdHIOjfOIeaFitXK",
+      "albums": [
+        "幾億光年",
+        "幾億光年",
+        "幾億光年",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "アクトレス",
+      "normalized_name": "アクトレス",
+      "first_release_date": "2024-02-28",
+      "spotify_track_id": "63OcxkxY055VQZIsUODz3a",
+      "albums": [
+        "幾億光年",
+        "幾億光年"
+      ]
+    },
+    {
+      "name": "蕾",
+      "normalized_name": "蕾",
+      "first_release_date": "2024-05-05",
+      "spotify_track_id": "02J918WUY2J6jBLux5ONUI",
+      "albums": [
+        "蕾",
+        "蕾",
+        "蕾",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Ruler",
+      "normalized_name": "ruler",
+      "first_release_date": "2024-06-12",
+      "spotify_track_id": "7g1aLvx46cZTuBCfVuq5yF",
+      "albums": [
+        "蕾",
+        "蕾"
+      ]
+    },
+    {
+      "name": "ラストノート",
+      "normalized_name": "ラストノート",
+      "first_release_date": "2024-10-19",
+      "spotify_track_id": "6TsbJfhKnVsM2mr9OghsqX",
+      "albums": [
+        "ラストノート",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "アイオライト",
+      "normalized_name": "アイオライト",
+      "first_release_date": "2024-12-04",
+      "spotify_track_id": "3Vy8LQ1tRy5GEmd7guZMee",
+      "albums": [
+        "アイオライト",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Better Half (feat. Omoinotake)",
+      "normalized_name": "better half",
+      "first_release_date": "2025-01-27",
+      "spotify_track_id": "1beUALLSloBEvYre65QiW6",
+      "albums": [
+        "Better Half (feat. Omoinotake)"
+      ]
+    },
+    {
+      "name": "Better Half -Japanese ver.-",
+      "normalized_name": "better half japanese ver",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "2KG4bJIKnzH7ZOEBmKsevL",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "P.S.",
+      "normalized_name": "p s",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "7ymHR4v41sUnqvYXEuhk8Y",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Pieces",
+      "normalized_name": "pieces",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "7b5hSvYlJhvhxwd6DXYyUy",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "フラジャイル",
+      "normalized_name": "フラジャイル",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "2s2PmmMchkQMs6tuU6jKua",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "ホワイトアウト",
+      "normalized_name": "ホワイトアウト",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "1VgHU6fuqrVtZqL0ILJTV7",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "折々",
+      "normalized_name": "折々",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "5q1wUmnnk5Rl0vbkzQCtBo",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "ひとりごと",
+      "normalized_name": "ひとりごと",
+      "first_release_date": "2025-04-05",
+      "spotify_track_id": "43QChW7cZQdAmWbmamy2mZ",
+      "albums": [
+        "ひとりごと",
+        "ひとりごと",
+        "ひとりごと"
+      ]
+    },
+    {
+      "name": "在りか",
+      "normalized_name": "在りか",
+      "first_release_date": "2025-05-21",
+      "spotify_track_id": "5Y1jPu2xY9pLn4wbgRVP0r",
+      "albums": [
+        "ひとりごと",
+        "ひとりごと"
+      ]
+    },
+    {
+      "name": "フェイクショー",
+      "normalized_name": "フェイクショー",
+      "first_release_date": "2025-07-13",
+      "spotify_track_id": "1KwIWz6KCgX7wLhTPI2n7i",
+      "albums": [
+        "フェイクショー"
+      ]
+    },
+    {
+      "name": "イノセントブルー",
+      "normalized_name": "イノセントブルー",
+      "first_release_date": "2025-09-24",
+      "spotify_track_id": "5vy2GU5ypxi4DTt8ImfDAP",
+      "albums": [
+        "イノセントブルー",
+        "Gravity / イノセントブルー",
+        "Gravity / イノセントブルー"
+      ]
+    },
+    {
+      "name": "Gravity",
+      "normalized_name": "gravity",
+      "first_release_date": "2025-10-29",
+      "spotify_track_id": "445l20YWwFUp9EWyNB8HeR",
+      "albums": [
+        "Gravity / イノセントブルー",
+        "Gravity / イノセントブルー"
+      ]
+    },
+    {
+      "name": "Wonderland",
+      "normalized_name": "wonderland",
+      "first_release_date": "2026-01-21",
+      "spotify_track_id": "0ST6uGIS1Bm2x5eb0yNsRt",
+      "albums": [
+        "Wonderland"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "1992",
+      "normalized_name": "1992",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "05R6HKP8B3n2AO2PO2UCK1",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Hit It Up",
+      "normalized_name": "hit it up",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "2fVZbFSECerUa97XZhxi85",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Moment",
+      "normalized_name": "moment",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "5xTKVOVQnug475v9TA6DMD",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Nightfly",
+      "normalized_name": "nightfly",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "0hCoIemZlOR2ozicVydBdC",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "Winter Bloomer",
+      "normalized_name": "winter bloomer",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "1sdwzWdfH6uyBp3WlKa1zn",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "fake me",
+      "normalized_name": "fake me",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "6YhOQ1oKPAy8RXRPfEckp8",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "lake side",
+      "normalized_name": "lake side",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "1WeIzeS0VfoNPEkGHdjs6P",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "mei",
+      "normalized_name": "mei",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "3TfhK29JzRZHfVEo6Lv6Dw",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "ダイアローグ feat.森心言",
+      "normalized_name": "ダイアローグ feat 森心言",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "4FMPJNpAl9V7Q4H4dwEGz0",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "東京falling",
+      "normalized_name": "東京falling",
+      "first_release_date": "2017-01-11",
+      "spotify_track_id": "4qHCndCXVrxHc4WBzm8hJv",
+      "albums": [
+        "So far"
+      ]
+    },
+    {
+      "name": "All of love",
+      "normalized_name": "all of love",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "2iXSWnq8RgPLl21cJsHAKC",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Bed room",
+      "normalized_name": "bed room",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "5MoH3PXHcOTK1ITVzsZl2b",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Freaky Night",
+      "normalized_name": "freaky night",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "6qPfdy9k5eZ52syZkgAfdG",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Life goes on",
+      "normalized_name": "life goes on",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "231daiM4bqi0FqPYrznAKz",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Ride on",
+      "normalized_name": "ride on",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "0AHLZlg9S801h3yiQoNQFe",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Sunshine Girl",
+      "normalized_name": "sunshine girl",
+      "first_release_date": "2017-08-30",
+      "spotify_track_id": "0wKmBynScvBe5OXZKf0Hse",
+      "albums": [
+        "beside"
+      ]
+    },
+    {
+      "name": "Stand Alone",
+      "normalized_name": "stand alone",
+      "first_release_date": "2018-09-26",
+      "spotify_track_id": "6Cypyg9aiPdfBbw4sEhguG",
+      "albums": [
+        "Stand Alone",
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Bitter Sweet",
+      "normalized_name": "bitter sweet",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "2Pbrxo9f5l97DQhhGnz6JI",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Friction",
+      "normalized_name": "friction",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "4AcT726vFLsrqtQ5bFFjLN",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Never Let You Go",
+      "normalized_name": "never let you go",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "4sqYQgNxo6CC1I53jvQEsa",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Still",
+      "normalized_name": "still",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "7BsX3urShU9sIgtvdawx0h",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "Temptation",
+      "normalized_name": "temptation",
+      "first_release_date": "2018-10-10",
+      "spotify_track_id": "5ZArUqkNEQ83Rzir9R7hqA",
+      "albums": [
+        "Street Light"
+      ]
+    },
+    {
+      "name": "惑星",
+      "normalized_name": "惑星",
+      "first_release_date": "2019-07-31",
+      "spotify_track_id": "1HCUx4Q2A9qVwf3b3pEotn",
+      "albums": [
+        "惑星",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "Blanco",
+      "normalized_name": "blanco",
+      "first_release_date": "2019-09-06",
+      "spotify_track_id": "15vxxJiYb664VxbAWPZo32",
+      "albums": [
+        "Blanco",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "トニカ",
+      "normalized_name": "トニカ",
+      "first_release_date": "2019-12-18",
+      "spotify_track_id": "0EcpmJzEgXGTc8UKUEq342",
+      "albums": [
+        "トニカ",
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "So Far So Good",
+      "normalized_name": "so far so good",
+      "first_release_date": "2020-02-19",
+      "spotify_track_id": "535K7QSuAXQ2TTxRI6rWAG",
+      "albums": [
+        "モラトリアム"
+      ]
+    },
+    {
+      "name": "モラトリアム",
+      "normalized_name": "モラトリアム",
+      "first_release_date": "2020-02-19",
+      "spotify_track_id": "1fYX8MUun2AK1F6gQyGwc6",
+      "albums": [
+        "モラトリアム",
+        "モラトリアム",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "欠伸",
+      "normalized_name": "欠伸",
+      "first_release_date": "2020-04-08",
+      "spotify_track_id": "5xEhMI9kqCfacTcuPwU4IH",
+      "albums": [
+        "欠伸",
+        "Long for"
+      ]
+    },
+    {
+      "name": "One Day",
+      "normalized_name": "one day",
+      "first_release_date": "2020-05-08",
+      "spotify_track_id": "1uGTPA1J9MDmgpShWNUDRU",
+      "albums": [
+        "One Day",
+        "Long for",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "夏の幻",
+      "normalized_name": "夏の幻",
+      "first_release_date": "2020-06-26",
+      "spotify_track_id": "177hvuiFy8DwJgsi39tvyX",
+      "albums": [
+        "夏の幻",
+        "Long for"
+      ]
+    },
+    {
+      "name": "産声",
+      "normalized_name": "産声",
+      "first_release_date": "2020-10-23",
+      "spotify_track_id": "4Qu3gqkXT4gbuKBGlelM36",
+      "albums": [
+        "産声",
+        "Long for"
+      ]
+    },
+    {
+      "name": "東京",
+      "normalized_name": "東京",
+      "first_release_date": "2020-11-18",
+      "spotify_track_id": "6PiqighbYtK1vemTpYeqlR",
+      "albums": [
+        "Long for"
+      ]
+    },
+    {
+      "name": "One Day - From THE FIRST TAKE",
+      "normalized_name": "one day from the first take",
+      "first_release_date": "2020-12-25",
+      "spotify_track_id": "1EB2zYmSyrskmFusB9fFf1",
+      "albums": [
+        "One Day - From THE FIRST TAKE"
+      ]
+    },
+    {
+      "name": "By My Side",
+      "normalized_name": "by my side",
+      "first_release_date": "2021-03-29",
+      "spotify_track_id": "37fQS3RFBzvi39fnjwWhqH",
+      "albums": [
+        "By My Side",
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "彼方",
+      "normalized_name": "彼方",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "30btTZFAHkc4HnKvsTKDXY",
+      "albums": [
+        "彼方",
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "プリクエル",
+      "normalized_name": "プリクエル",
+      "first_release_date": "2021-06-30",
+      "spotify_track_id": "1YmX06N3vF55MdYoJwJHqB",
+      "albums": [
+        "プリクエル",
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "EVERBLUE",
+      "normalized_name": "everblue",
+      "first_release_date": "2021-10-01",
+      "spotify_track_id": "5RmtuRIe8FJg9FRegwCqzW",
+      "albums": [
+        "EVERBLUE",
+        "EVERBLUE",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "クロスワード",
+      "normalized_name": "クロスワード",
+      "first_release_date": "2021-11-17",
+      "spotify_track_id": "17MtWnbhmf0jSU4MjwoZpv",
+      "albums": [
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "漂流教室",
+      "normalized_name": "漂流教室",
+      "first_release_date": "2021-11-17",
+      "spotify_track_id": "0puH9EENNJmmCI0tu7YOZA",
+      "albums": [
+        "EVERBLUE"
+      ]
+    },
+    {
+      "name": "心音",
+      "normalized_name": "心音",
+      "first_release_date": "2022-04-13",
+      "spotify_track_id": "3wxYirejZ1NWKp2uy3Ir5N",
+      "albums": [
+        "心音",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "空蝉",
+      "normalized_name": "空蝉",
+      "first_release_date": "2022-07-27",
+      "spotify_track_id": "3EV37MCj5MTEWjBxqrLLcR",
+      "albums": [
+        "空蝉",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "この夜のロマンス",
+      "normalized_name": "この夜のロマンス",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "2fxdjTezL2KpQFOn07bLEJ",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "カエデ",
+      "normalized_name": "カエデ",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "5AlQzzP4bENETFDZQRDN11",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "トロイメライ",
+      "normalized_name": "トロイメライ",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "3ilHK59gf2Rmw1QHr6bdnI",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "雨と喪失",
+      "normalized_name": "雨と喪失",
+      "first_release_date": "2022-12-21",
+      "spotify_track_id": "61JiVtrI6a0Ys293ey02cY",
+      "albums": [
+        "Dear DECADE,"
+      ]
+    },
+    {
+      "name": "オーダーメイド",
+      "normalized_name": "オーダーメイド",
+      "first_release_date": "2023-03-18",
+      "spotify_track_id": "1pxOoSLFcKScOKv76RANVb",
+      "albums": [
+        "オーダーメイド",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "EVERBLUE - With ensemble",
+      "normalized_name": "everblue with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "7paBCsRxoKogVIfwZaYG2l",
+      "albums": [
+        "EVERBLUE - With ensemble"
+      ]
+    },
+    {
+      "name": "モラトリアム - With ensemble",
+      "normalized_name": "モラトリアム with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "0proC0WvQ4SIMZZrwV7CSR",
+      "albums": [
+        "モラトリアム - With ensemble"
+      ]
+    },
+    {
+      "name": "心音 - With ensemble",
+      "normalized_name": "心音 with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "5mg4D8VpWhvYi9lTo9NbBo",
+      "albums": [
+        "心音 - With ensemble"
+      ]
+    },
+    {
+      "name": "空蝉 - With ensemble",
+      "normalized_name": "空蝉 with ensemble",
+      "first_release_date": "2023-03-22",
+      "spotify_track_id": "6AShrMJd38T3Iatk2ApUJS",
+      "albums": [
+        "空蝉 - With ensemble"
+      ]
+    },
+    {
+      "name": "渦幕",
+      "normalized_name": "渦幕",
+      "first_release_date": "2023-07-27",
+      "spotify_track_id": "7pcTevAQGcz4HxeyXDKkRg",
+      "albums": [
+        "渦幕",
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "Ammonite",
+      "normalized_name": "ammonite",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "1BuXgUwI7GM44ZjuqRDDjI",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "Blessing",
+      "normalized_name": "blessing",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "6Yq1iNk6cL5enKZSrmkNL4",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "トートロジー",
+      "normalized_name": "トートロジー",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "3xZAPYhlhbuAU3bPk7er8Q",
+      "albums": [
+        "Ammolite"
+      ]
+    },
+    {
+      "name": "夏の魔法のせいじゃない",
+      "normalized_name": "夏の魔法のせいじゃない",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "5ZvwGmxvUnm5GJcMbtkJKi",
+      "albums": [
+        "幸せ"
+      ]
+    },
+    {
+      "name": "幸せ",
+      "normalized_name": "幸せ",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "6Y8R8KtWiBxHfyXimlWPfC",
+      "albums": [
+        "Ammolite",
+        "幸せ",
+        "幸せ"
+      ]
+    },
+    {
+      "name": "Blanco- SUEHIROGARI live ver. -",
+      "normalized_name": "blanco suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "1kUhCpFj5KMLbF7L8TNlwV",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "By My Side- SUEHIROGARI live ver. -",
+      "normalized_name": "by my side suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7j1CG0pjhk2HVqKeZ040kx",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "EVERBLUE- SUEHIROGARI live ver. -",
+      "normalized_name": "everblue suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7imfpOwbgkujxuRu5sSR8n",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "Never Let You Go- SUEHIROGARI live ver. -",
+      "normalized_name": "never let you go suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5qflSKc49aViWr38yVq46u",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "One Day- SUEHIROGARI live ver. -",
+      "normalized_name": "one day suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "6HSQLDj90L7jOnfdDDdRgc",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "So Far So Good- SUEHIROGARI live ver. -",
+      "normalized_name": "so far so good suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "02LlCfYoWYyaqFrwOp4YAo",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "Stand Alone- SUEHIROGARI live ver. -",
+      "normalized_name": "stand alone suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "7DHU9HoTQsQ3YTQKMd4QoL",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "トロイメライ- SUEHIROGARI live ver. -",
+      "normalized_name": "トロイメライ suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "431zBf9ZhOrP3OPZPB9YFw",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "モラトリアム- SUEHIROGARI live ver. -",
+      "normalized_name": "モラトリアム suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "6PLYmmNV1IJtNkXcyWlhhG",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "彼方- SUEHIROGARI live ver. -",
+      "normalized_name": "彼方 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "2RhZvnxl03pyAXXGwS6rEV",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "心音- SUEHIROGARI live ver. -",
+      "normalized_name": "心音 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5mKZLvnsybza4kwxfDDsXk",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "惑星- SUEHIROGARI live ver. -",
+      "normalized_name": "惑星 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "1jZXc9ejIKjCc0k4uW4X1F",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "産声- SUEHIROGARI live ver. -",
+      "normalized_name": "産声 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "5aYQ9iyEqUHq0Wkbh2emhU",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "空蝉- SUEHIROGARI live ver. -",
+      "normalized_name": "空蝉 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "08D2ksd8Dhinb9tiJ652AF",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "雨と喪失- SUEHIROGARI live ver. -",
+      "normalized_name": "雨と喪失 suehirogari live ver",
+      "first_release_date": "2023-12-20",
+      "spotify_track_id": "24FKfEtPNCiRwcOEAo9SUk",
+      "albums": [
+        "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)"
+      ]
+    },
+    {
+      "name": "幾億光年",
+      "normalized_name": "幾億光年",
+      "first_release_date": "2024-01-24",
+      "spotify_track_id": "4dmruTsdHIOjfOIeaFitXK",
+      "albums": [
+        "幾億光年",
+        "幾億光年",
+        "幾億光年",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "アクトレス",
+      "normalized_name": "アクトレス",
+      "first_release_date": "2024-02-28",
+      "spotify_track_id": "63OcxkxY055VQZIsUODz3a",
+      "albums": [
+        "幾億光年",
+        "幾億光年"
+      ]
+    },
+    {
+      "name": "蕾",
+      "normalized_name": "蕾",
+      "first_release_date": "2024-05-05",
+      "spotify_track_id": "02J918WUY2J6jBLux5ONUI",
+      "albums": [
+        "蕾",
+        "蕾",
+        "蕾",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Ruler",
+      "normalized_name": "ruler",
+      "first_release_date": "2024-06-12",
+      "spotify_track_id": "7g1aLvx46cZTuBCfVuq5yF",
+      "albums": [
+        "蕾",
+        "蕾"
+      ]
+    },
+    {
+      "name": "ラストノート",
+      "normalized_name": "ラストノート",
+      "first_release_date": "2024-10-19",
+      "spotify_track_id": "6TsbJfhKnVsM2mr9OghsqX",
+      "albums": [
+        "ラストノート",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "アイオライト",
+      "normalized_name": "アイオライト",
+      "first_release_date": "2024-12-04",
+      "spotify_track_id": "3Vy8LQ1tRy5GEmd7guZMee",
+      "albums": [
+        "アイオライト",
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Better Half (feat. Omoinotake)",
+      "normalized_name": "better half",
+      "first_release_date": "2025-01-27",
+      "spotify_track_id": "1beUALLSloBEvYre65QiW6",
+      "albums": [
+        "Better Half (feat. Omoinotake)"
+      ]
+    },
+    {
+      "name": "Better Half -Japanese ver.-",
+      "normalized_name": "better half japanese ver",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "2KG4bJIKnzH7ZOEBmKsevL",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "P.S.",
+      "normalized_name": "p s",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "7ymHR4v41sUnqvYXEuhk8Y",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "Pieces",
+      "normalized_name": "pieces",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "7b5hSvYlJhvhxwd6DXYyUy",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "フラジャイル",
+      "normalized_name": "フラジャイル",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "2s2PmmMchkQMs6tuU6jKua",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "ホワイトアウト",
+      "normalized_name": "ホワイトアウト",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "1VgHU6fuqrVtZqL0ILJTV7",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "折々",
+      "normalized_name": "折々",
+      "first_release_date": "2025-01-29",
+      "spotify_track_id": "5q1wUmnnk5Rl0vbkzQCtBo",
+      "albums": [
+        "Pieces"
+      ]
+    },
+    {
+      "name": "ひとりごと",
+      "normalized_name": "ひとりごと",
+      "first_release_date": "2025-04-05",
+      "spotify_track_id": "43QChW7cZQdAmWbmamy2mZ",
+      "albums": [
+        "ひとりごと",
+        "ひとりごと",
+        "ひとりごと"
+      ]
+    },
+    {
+      "name": "在りか",
+      "normalized_name": "在りか",
+      "first_release_date": "2025-05-21",
+      "spotify_track_id": "5Y1jPu2xY9pLn4wbgRVP0r",
+      "albums": [
+        "ひとりごと",
+        "ひとりごと"
+      ]
+    },
+    {
+      "name": "フェイクショー",
+      "normalized_name": "フェイクショー",
+      "first_release_date": "2025-07-13",
+      "spotify_track_id": "1KwIWz6KCgX7wLhTPI2n7i",
+      "albums": [
+        "フェイクショー"
+      ]
+    },
+    {
+      "name": "イノセントブルー",
+      "normalized_name": "イノセントブルー",
+      "first_release_date": "2025-09-24",
+      "spotify_track_id": "5vy2GU5ypxi4DTt8ImfDAP",
+      "albums": [
+        "イノセントブルー",
+        "Gravity / イノセントブルー",
+        "Gravity / イノセントブルー"
+      ]
+    },
+    {
+      "name": "Gravity",
+      "normalized_name": "gravity",
+      "first_release_date": "2025-10-29",
+      "spotify_track_id": "445l20YWwFUp9EWyNB8HeR",
+      "albums": [
+        "Gravity / イノセントブルー",
+        "Gravity / イノセントブルー"
+      ]
+    },
+    {
+      "name": "Wonderland",
+      "normalized_name": "wonderland",
+      "first_release_date": "2026-01-21",
+      "spotify_track_id": "0ST6uGIS1Bm2x5eb0yNsRt",
+      "albums": [
+        "Wonderland"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [
+    {
+      "name": "One Day - JQ from Nulbarich Remix",
+      "normalized_name": "one day jq from nulbarich remix",
+      "first_release_date": "2020-11-18",
+      "spotify_track_id": "1hJYQnk5dMdRtIKYECuDdC",
+      "albums": [
+        "Long for"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "album_id": "3Rt2IekO4dgSou9XJxvYPV",
+      "name": "So far",
+      "album_type": "album",
+      "release_date": "2017-01-11",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "spotify_url": "https://open.spotify.com/album/3Rt2IekO4dgSou9XJxvYPV",
+      "tracks": [
+        {
+          "track_id": "2fVZbFSECerUa97XZhxi85",
+          "name": "Hit It Up",
+          "normalized_name": "hit it up",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 245560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2fVZbFSECerUa97XZhxi85"
+        },
+        {
+          "track_id": "6YhOQ1oKPAy8RXRPfEckp8",
+          "name": "fake me",
+          "normalized_name": "fake me",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 298893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6YhOQ1oKPAy8RXRPfEckp8"
+        },
+        {
+          "track_id": "4FMPJNpAl9V7Q4H4dwEGz0",
+          "name": "ダイアローグ feat.森心言",
+          "normalized_name": "ダイアローグ feat 森心言",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 195826,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4FMPJNpAl9V7Q4H4dwEGz0"
+        },
+        {
+          "track_id": "1WeIzeS0VfoNPEkGHdjs6P",
+          "name": "lake side",
+          "normalized_name": "lake side",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 226226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1WeIzeS0VfoNPEkGHdjs6P"
+        },
+        {
+          "track_id": "1sdwzWdfH6uyBp3WlKa1zn",
+          "name": "Winter Bloomer",
+          "normalized_name": "winter bloomer",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 181600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1sdwzWdfH6uyBp3WlKa1zn"
+        },
+        {
+          "track_id": "3TfhK29JzRZHfVEo6Lv6Dw",
+          "name": "mei",
+          "normalized_name": "mei",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 237533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3TfhK29JzRZHfVEo6Lv6Dw"
+        },
+        {
+          "track_id": "4qHCndCXVrxHc4WBzm8hJv",
+          "name": "東京falling",
+          "normalized_name": "東京falling",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 260000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4qHCndCXVrxHc4WBzm8hJv"
+        },
+        {
+          "track_id": "0hCoIemZlOR2ozicVydBdC",
+          "name": "Nightfly",
+          "normalized_name": "nightfly",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 225773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0hCoIemZlOR2ozicVydBdC"
+        },
+        {
+          "track_id": "5xTKVOVQnug475v9TA6DMD",
+          "name": "Moment",
+          "normalized_name": "moment",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 212533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5xTKVOVQnug475v9TA6DMD"
+        },
+        {
+          "track_id": "05R6HKP8B3n2AO2PO2UCK1",
+          "name": "1992",
+          "normalized_name": "1992",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 204093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/05R6HKP8B3n2AO2PO2UCK1"
+        }
+      ]
+    },
+    {
+      "album_id": "6T00siUkUt70HwCOk0eg9A",
+      "name": "beside",
+      "album_type": "single",
+      "release_date": "2017-08-30",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/6T00siUkUt70HwCOk0eg9A",
+      "tracks": [
+        {
+          "track_id": "0AHLZlg9S801h3yiQoNQFe",
+          "name": "Ride on",
+          "normalized_name": "ride on",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 251200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0AHLZlg9S801h3yiQoNQFe"
+        },
+        {
+          "track_id": "6qPfdy9k5eZ52syZkgAfdG",
+          "name": "Freaky Night",
+          "normalized_name": "freaky night",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 219600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6qPfdy9k5eZ52syZkgAfdG"
+        },
+        {
+          "track_id": "2iXSWnq8RgPLl21cJsHAKC",
+          "name": "All of love",
+          "normalized_name": "all of love",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 194066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2iXSWnq8RgPLl21cJsHAKC"
+        },
+        {
+          "track_id": "231daiM4bqi0FqPYrznAKz",
+          "name": "Life goes on",
+          "normalized_name": "life goes on",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 227626,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/231daiM4bqi0FqPYrznAKz"
+        },
+        {
+          "track_id": "0wKmBynScvBe5OXZKf0Hse",
+          "name": "Sunshine Girl",
+          "normalized_name": "sunshine girl",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 242840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0wKmBynScvBe5OXZKf0Hse"
+        },
+        {
+          "track_id": "5MoH3PXHcOTK1ITVzsZl2b",
+          "name": "Bed room",
+          "normalized_name": "bed room",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 297253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5MoH3PXHcOTK1ITVzsZl2b"
+        }
+      ]
+    },
+    {
+      "album_id": "3JVyZYAodKAyF4UuJifD5g",
+      "name": "Stand Alone",
+      "album_type": "single",
+      "release_date": "2018-09-26",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3JVyZYAodKAyF4UuJifD5g",
+      "tracks": [
+        {
+          "track_id": "6Cypyg9aiPdfBbw4sEhguG",
+          "name": "Stand Alone",
+          "normalized_name": "stand alone",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 209000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Cypyg9aiPdfBbw4sEhguG"
+        }
+      ]
+    },
+    {
+      "album_id": "4epqZvuN87X963VSO6gFpF",
+      "name": "Street Light",
+      "album_type": "single",
+      "release_date": "2018-10-10",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/4epqZvuN87X963VSO6gFpF",
+      "tracks": [
+        {
+          "track_id": "2XpvU4Naf4uoetvmGEn3nT",
+          "name": "Stand Alone",
+          "normalized_name": "stand alone",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 209000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2XpvU4Naf4uoetvmGEn3nT"
+        },
+        {
+          "track_id": "4sqYQgNxo6CC1I53jvQEsa",
+          "name": "Never Let You Go",
+          "normalized_name": "never let you go",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 239069,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4sqYQgNxo6CC1I53jvQEsa"
+        },
+        {
+          "track_id": "7BsX3urShU9sIgtvdawx0h",
+          "name": "Still",
+          "normalized_name": "still",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 225486,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7BsX3urShU9sIgtvdawx0h"
+        },
+        {
+          "track_id": "5ZArUqkNEQ83Rzir9R7hqA",
+          "name": "Temptation",
+          "normalized_name": "temptation",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 225943,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5ZArUqkNEQ83Rzir9R7hqA"
+        },
+        {
+          "track_id": "2Pbrxo9f5l97DQhhGnz6JI",
+          "name": "Bitter Sweet",
+          "normalized_name": "bitter sweet",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 175000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2Pbrxo9f5l97DQhhGnz6JI"
+        },
+        {
+          "track_id": "4AcT726vFLsrqtQ5bFFjLN",
+          "name": "Friction",
+          "normalized_name": "friction",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 247532,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4AcT726vFLsrqtQ5bFFjLN"
+        }
+      ]
+    },
+    {
+      "album_id": "34dDq748DImyTWouhQIdPC",
+      "name": "惑星",
+      "album_type": "single",
+      "release_date": "2019-07-31",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/34dDq748DImyTWouhQIdPC",
+      "tracks": [
+        {
+          "track_id": "1HCUx4Q2A9qVwf3b3pEotn",
+          "name": "惑星",
+          "normalized_name": "惑星",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 262581,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1HCUx4Q2A9qVwf3b3pEotn"
+        }
+      ]
+    },
+    {
+      "album_id": "5dl1oRQvm6Kd7P2vemfDZz",
+      "name": "Blanco",
+      "album_type": "single",
+      "release_date": "2019-09-06",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5dl1oRQvm6Kd7P2vemfDZz",
+      "tracks": [
+        {
+          "track_id": "15vxxJiYb664VxbAWPZo32",
+          "name": "Blanco",
+          "normalized_name": "blanco",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 272934,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/15vxxJiYb664VxbAWPZo32"
+        }
+      ]
+    },
+    {
+      "album_id": "7rQ7t7dsJFVuN1248J56B1",
+      "name": "トニカ",
+      "album_type": "single",
+      "release_date": "2019-12-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7rQ7t7dsJFVuN1248J56B1",
+      "tracks": [
+        {
+          "track_id": "0EcpmJzEgXGTc8UKUEq342",
+          "name": "トニカ",
+          "normalized_name": "トニカ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 268499,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0EcpmJzEgXGTc8UKUEq342"
+        }
+      ]
+    },
+    {
+      "album_id": "6Y6ogSmuZAzE76I5D4RTIH",
+      "name": "モラトリアム",
+      "album_type": "single",
+      "release_date": "2020-02-19",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/6Y6ogSmuZAzE76I5D4RTIH",
+      "tracks": [
+        {
+          "track_id": "1fYX8MUun2AK1F6gQyGwc6",
+          "name": "モラトリアム",
+          "normalized_name": "モラトリアム",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 287384,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1fYX8MUun2AK1F6gQyGwc6"
+        },
+        {
+          "track_id": "4ai7p9Ch7gBEXehQAUkoUG",
+          "name": "惑星",
+          "normalized_name": "惑星",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 262581,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4ai7p9Ch7gBEXehQAUkoUG"
+        },
+        {
+          "track_id": "2LQ40XSL5hNSF8wy7NPjQB",
+          "name": "トニカ",
+          "normalized_name": "トニカ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 268499,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2LQ40XSL5hNSF8wy7NPjQB"
+        },
+        {
+          "track_id": "4SFqUhTt4EjkNk9QtVvZSC",
+          "name": "Blanco",
+          "normalized_name": "blanco",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 272934,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4SFqUhTt4EjkNk9QtVvZSC"
+        },
+        {
+          "track_id": "535K7QSuAXQ2TTxRI6rWAG",
+          "name": "So Far So Good",
+          "normalized_name": "so far so good",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 267126,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/535K7QSuAXQ2TTxRI6rWAG"
+        }
+      ]
+    },
+    {
+      "album_id": "3wWqdbRezIHgiR8Ze2mURQ",
+      "name": "モラトリアム",
+      "album_type": "single",
+      "release_date": "2020-02-19",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3wWqdbRezIHgiR8Ze2mURQ",
+      "tracks": [
+        {
+          "track_id": "1a1wB12w5qTXLvz6et9ohH",
+          "name": "モラトリアム",
+          "normalized_name": "モラトリアム",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 287384,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1a1wB12w5qTXLvz6et9ohH"
+        }
+      ]
+    },
+    {
+      "album_id": "6gdPldWscaxy9pVZJWWYIJ",
+      "name": "欠伸",
+      "album_type": "single",
+      "release_date": "2020-04-08",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6gdPldWscaxy9pVZJWWYIJ",
+      "tracks": [
+        {
+          "track_id": "5xEhMI9kqCfacTcuPwU4IH",
+          "name": "欠伸",
+          "normalized_name": "欠伸",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 284693,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5xEhMI9kqCfacTcuPwU4IH"
+        }
+      ]
+    },
+    {
+      "album_id": "5jmJHs5l6Fl69EHdyrGglf",
+      "name": "One Day",
+      "album_type": "single",
+      "release_date": "2020-05-08",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5jmJHs5l6Fl69EHdyrGglf",
+      "tracks": [
+        {
+          "track_id": "1uGTPA1J9MDmgpShWNUDRU",
+          "name": "One Day",
+          "normalized_name": "one day",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 222271,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1uGTPA1J9MDmgpShWNUDRU"
+        }
+      ]
+    },
+    {
+      "album_id": "0D50qX2Bkq6YnlA0sE07jO",
+      "name": "夏の幻",
+      "album_type": "single",
+      "release_date": "2020-06-26",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0D50qX2Bkq6YnlA0sE07jO",
+      "tracks": [
+        {
+          "track_id": "177hvuiFy8DwJgsi39tvyX",
+          "name": "夏の幻",
+          "normalized_name": "夏の幻",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 296451,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/177hvuiFy8DwJgsi39tvyX"
+        }
+      ]
+    },
+    {
+      "album_id": "46Ver97lrdYTBhxMHqS1m0",
+      "name": "産声",
+      "album_type": "single",
+      "release_date": "2020-10-23",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/46Ver97lrdYTBhxMHqS1m0",
+      "tracks": [
+        {
+          "track_id": "4Qu3gqkXT4gbuKBGlelM36",
+          "name": "産声",
+          "normalized_name": "産声",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 200503,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4Qu3gqkXT4gbuKBGlelM36"
+        }
+      ]
+    },
+    {
+      "album_id": "31uGOHFSqE2vg4VFRrpXLh",
+      "name": "Long for",
+      "album_type": "single",
+      "release_date": "2020-11-18",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/31uGOHFSqE2vg4VFRrpXLh",
+      "tracks": [
+        {
+          "track_id": "2sKYwYUoNFCzWYCmLsoUjQ",
+          "name": "産声",
+          "normalized_name": "産声",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 200503,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2sKYwYUoNFCzWYCmLsoUjQ"
+        },
+        {
+          "track_id": "648sjoR2ga0PXixXttyqzJ",
+          "name": "One Day",
+          "normalized_name": "one day",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 223741,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/648sjoR2ga0PXixXttyqzJ"
+        },
+        {
+          "track_id": "701v1e9ImAmXloobV2ztDg",
+          "name": "欠伸",
+          "normalized_name": "欠伸",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 286120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/701v1e9ImAmXloobV2ztDg"
+        },
+        {
+          "track_id": "2KupYVG8q3fqBPtPdTxbbC",
+          "name": "夏の幻",
+          "normalized_name": "夏の幻",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 299236,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2KupYVG8q3fqBPtPdTxbbC"
+        },
+        {
+          "track_id": "6PiqighbYtK1vemTpYeqlR",
+          "name": "東京",
+          "normalized_name": "東京",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 301718,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6PiqighbYtK1vemTpYeqlR"
+        },
+        {
+          "track_id": "1hJYQnk5dMdRtIKYECuDdC",
+          "name": "One Day - JQ from Nulbarich Remix",
+          "normalized_name": "one day jq from nulbarich remix",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 259226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1hJYQnk5dMdRtIKYECuDdC"
+        }
+      ]
+    },
+    {
+      "album_id": "37azqzU5ZBZLNknRN9TBnN",
+      "name": "One Day - From THE FIRST TAKE",
+      "album_type": "single",
+      "release_date": "2020-12-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/37azqzU5ZBZLNknRN9TBnN",
+      "tracks": [
+        {
+          "track_id": "1EB2zYmSyrskmFusB9fFf1",
+          "name": "One Day - From THE FIRST TAKE",
+          "normalized_name": "one day from the first take",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 216723,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1EB2zYmSyrskmFusB9fFf1"
+        }
+      ]
+    },
+    {
+      "album_id": "1IVxRRi2bRE0TSqMtYSCTJ",
+      "name": "By My Side",
+      "album_type": "single",
+      "release_date": "2021-03-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1IVxRRi2bRE0TSqMtYSCTJ",
+      "tracks": [
+        {
+          "track_id": "37fQS3RFBzvi39fnjwWhqH",
+          "name": "By My Side",
+          "normalized_name": "by my side",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 243320,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/37fQS3RFBzvi39fnjwWhqH"
+        }
+      ]
+    },
+    {
+      "album_id": "06POE6XaEjWvLe3mTbIXg2",
+      "name": "彼方",
+      "album_type": "single",
+      "release_date": "2021-05-26",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/06POE6XaEjWvLe3mTbIXg2",
+      "tracks": [
+        {
+          "track_id": "30btTZFAHkc4HnKvsTKDXY",
+          "name": "彼方",
+          "normalized_name": "彼方",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/30btTZFAHkc4HnKvsTKDXY"
+        }
+      ]
+    },
+    {
+      "album_id": "09YcdFP9POK6AMbJw1Ktyw",
+      "name": "プリクエル",
+      "album_type": "single",
+      "release_date": "2021-06-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/09YcdFP9POK6AMbJw1Ktyw",
+      "tracks": [
+        {
+          "track_id": "1YmX06N3vF55MdYoJwJHqB",
+          "name": "プリクエル",
+          "normalized_name": "プリクエル",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 258519,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1YmX06N3vF55MdYoJwJHqB"
+        }
+      ]
+    },
+    {
+      "album_id": "2TWOBBZ8C8mqkNGerg2C5f",
+      "name": "EVERBLUE",
+      "album_type": "single",
+      "release_date": "2021-10-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2TWOBBZ8C8mqkNGerg2C5f",
+      "tracks": [
+        {
+          "track_id": "5RmtuRIe8FJg9FRegwCqzW",
+          "name": "EVERBLUE",
+          "normalized_name": "everblue",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5RmtuRIe8FJg9FRegwCqzW"
+        }
+      ]
+    },
+    {
+      "album_id": "6SHcfIJVWbS1JpLnIXb9gR",
+      "name": "EVERBLUE",
+      "album_type": "single",
+      "release_date": "2021-11-17",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/6SHcfIJVWbS1JpLnIXb9gR",
+      "tracks": [
+        {
+          "track_id": "2ifJEieMAeQqNM0edwhDqs",
+          "name": "EVERBLUE",
+          "normalized_name": "everblue",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ifJEieMAeQqNM0edwhDqs"
+        },
+        {
+          "track_id": "1GwVGd7avTZAh9XCtIy3FZ",
+          "name": "By My Side",
+          "normalized_name": "by my side",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 243960,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1GwVGd7avTZAh9XCtIy3FZ"
+        },
+        {
+          "track_id": "17MtWnbhmf0jSU4MjwoZpv",
+          "name": "クロスワード",
+          "normalized_name": "クロスワード",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 264093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/17MtWnbhmf0jSU4MjwoZpv"
+        },
+        {
+          "track_id": "0puH9EENNJmmCI0tu7YOZA",
+          "name": "漂流教室",
+          "normalized_name": "漂流教室",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 312066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0puH9EENNJmmCI0tu7YOZA"
+        }
+      ]
+    },
+    {
+      "album_id": "2sF3NUTrs7U4CV6d6qk2k6",
+      "name": "心音",
+      "album_type": "single",
+      "release_date": "2022-04-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2sF3NUTrs7U4CV6d6qk2k6",
+      "tracks": [
+        {
+          "track_id": "3wxYirejZ1NWKp2uy3Ir5N",
+          "name": "心音",
+          "normalized_name": "心音",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241989,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3wxYirejZ1NWKp2uy3Ir5N"
+        }
+      ]
+    },
+    {
+      "album_id": "2yko8r8I45wWgudBoKxNuF",
+      "name": "空蝉",
+      "album_type": "single",
+      "release_date": "2022-07-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2yko8r8I45wWgudBoKxNuF",
+      "tracks": [
+        {
+          "track_id": "3EV37MCj5MTEWjBxqrLLcR",
+          "name": "空蝉",
+          "normalized_name": "空蝉",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 229715,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3EV37MCj5MTEWjBxqrLLcR"
+        }
+      ]
+    },
+    {
+      "album_id": "2Q7v2wgfYIuZ2JoPa3Puhr",
+      "name": "Dear DECADE,",
+      "album_type": "single",
+      "release_date": "2022-12-21",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/2Q7v2wgfYIuZ2JoPa3Puhr",
+      "tracks": [
+        {
+          "track_id": "61JiVtrI6a0Ys293ey02cY",
+          "name": "雨と喪失",
+          "normalized_name": "雨と喪失",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 284226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/61JiVtrI6a0Ys293ey02cY"
+        },
+        {
+          "track_id": "6PO6iz8LvOePbTLFokdJJN",
+          "name": "彼方",
+          "normalized_name": "彼方",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 193600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6PO6iz8LvOePbTLFokdJJN"
+        },
+        {
+          "track_id": "3ilHK59gf2Rmw1QHr6bdnI",
+          "name": "トロイメライ",
+          "normalized_name": "トロイメライ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 192133,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3ilHK59gf2Rmw1QHr6bdnI"
+        },
+        {
+          "track_id": "7BgOriNkT1wMSKQkU8NefJ",
+          "name": "プリクエル",
+          "normalized_name": "プリクエル",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 258519,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7BgOriNkT1wMSKQkU8NefJ"
+        },
+        {
+          "track_id": "2fxdjTezL2KpQFOn07bLEJ",
+          "name": "この夜のロマンス",
+          "normalized_name": "この夜のロマンス",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 246773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2fxdjTezL2KpQFOn07bLEJ"
+        },
+        {
+          "track_id": "5AlQzzP4bENETFDZQRDN11",
+          "name": "カエデ",
+          "normalized_name": "カエデ",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 294010,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5AlQzzP4bENETFDZQRDN11"
+        }
+      ]
+    },
+    {
+      "album_id": "798BONgcfhhvsgwYAlB6SV",
+      "name": "オーダーメイド",
+      "album_type": "single",
+      "release_date": "2023-03-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/798BONgcfhhvsgwYAlB6SV",
+      "tracks": [
+        {
+          "track_id": "1pxOoSLFcKScOKv76RANVb",
+          "name": "オーダーメイド",
+          "normalized_name": "オーダーメイド",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238521,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1pxOoSLFcKScOKv76RANVb"
+        }
+      ]
+    },
+    {
+      "album_id": "1f2prD4Hnkc92YFudz2TVP",
+      "name": "EVERBLUE - With ensemble",
+      "album_type": "single",
+      "release_date": "2023-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1f2prD4Hnkc92YFudz2TVP",
+      "tracks": [
+        {
+          "track_id": "7paBCsRxoKogVIfwZaYG2l",
+          "name": "EVERBLUE - With ensemble",
+          "normalized_name": "everblue with ensemble",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 284250,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7paBCsRxoKogVIfwZaYG2l"
+        }
+      ]
+    },
+    {
+      "album_id": "0U3RxC8pc5yEuCT6fXfwON",
+      "name": "モラトリアム - With ensemble",
+      "album_type": "single",
+      "release_date": "2023-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0U3RxC8pc5yEuCT6fXfwON",
+      "tracks": [
+        {
+          "track_id": "0proC0WvQ4SIMZZrwV7CSR",
+          "name": "モラトリアム - With ensemble",
+          "normalized_name": "モラトリアム with ensemble",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 299112,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0proC0WvQ4SIMZZrwV7CSR"
+        }
+      ]
+    },
+    {
+      "album_id": "0wdpe9CPp1lrDv3flz4NMq",
+      "name": "心音 - With ensemble",
+      "album_type": "single",
+      "release_date": "2023-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0wdpe9CPp1lrDv3flz4NMq",
+      "tracks": [
+        {
+          "track_id": "5mg4D8VpWhvYi9lTo9NbBo",
+          "name": "心音 - With ensemble",
+          "normalized_name": "心音 with ensemble",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 261219,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5mg4D8VpWhvYi9lTo9NbBo"
+        }
+      ]
+    },
+    {
+      "album_id": "1Xb0M2lRwnVk0xdmxrt5Tb",
+      "name": "空蝉 - With ensemble",
+      "album_type": "single",
+      "release_date": "2023-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1Xb0M2lRwnVk0xdmxrt5Tb",
+      "tracks": [
+        {
+          "track_id": "6AShrMJd38T3Iatk2ApUJS",
+          "name": "空蝉 - With ensemble",
+          "normalized_name": "空蝉 with ensemble",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 248456,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6AShrMJd38T3Iatk2ApUJS"
+        }
+      ]
+    },
+    {
+      "album_id": "0RpAonftWJz2XX5Rrlc8TK",
+      "name": "渦幕",
+      "album_type": "single",
+      "release_date": "2023-07-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0RpAonftWJz2XX5Rrlc8TK",
+      "tracks": [
+        {
+          "track_id": "7pcTevAQGcz4HxeyXDKkRg",
+          "name": "渦幕",
+          "normalized_name": "渦幕",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 249677,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7pcTevAQGcz4HxeyXDKkRg"
+        }
+      ]
+    },
+    {
+      "album_id": "4TelhTcG92OqIhegkAFu9w",
+      "name": "Ammolite",
+      "album_type": "album",
+      "release_date": "2023-09-06",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "spotify_url": "https://open.spotify.com/album/4TelhTcG92OqIhegkAFu9w",
+      "tracks": [
+        {
+          "track_id": "6Yq1iNk6cL5enKZSrmkNL4",
+          "name": "Blessing",
+          "normalized_name": "blessing",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 244320,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Yq1iNk6cL5enKZSrmkNL4"
+        },
+        {
+          "track_id": "7FUOFvIWDp4QNZTNU0HGgH",
+          "name": "EVERBLUE",
+          "normalized_name": "everblue",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 239373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7FUOFvIWDp4QNZTNU0HGgH"
+        },
+        {
+          "track_id": "2cIptZ008X2ef7No6g54Px",
+          "name": "One Day",
+          "normalized_name": "one day",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 222813,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2cIptZ008X2ef7No6g54Px"
+        },
+        {
+          "track_id": "1BuXgUwI7GM44ZjuqRDDjI",
+          "name": "Ammonite",
+          "normalized_name": "ammonite",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 244786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1BuXgUwI7GM44ZjuqRDDjI"
+        },
+        {
+          "track_id": "0DeB9abggMZdtiBfHGJ1qm",
+          "name": "空蝉",
+          "normalized_name": "空蝉",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 230613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0DeB9abggMZdtiBfHGJ1qm"
+        },
+        {
+          "track_id": "23E3IcJA99vxnOdtlixJco",
+          "name": "渦幕",
+          "normalized_name": "渦幕",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 249933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/23E3IcJA99vxnOdtlixJco"
+        },
+        {
+          "track_id": "7sslhJXYXQFq4kqMEsJGVZ",
+          "name": "モラトリアム",
+          "normalized_name": "モラトリアム",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 286573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7sslhJXYXQFq4kqMEsJGVZ"
+        },
+        {
+          "track_id": "3xZAPYhlhbuAU3bPk7er8Q",
+          "name": "トートロジー",
+          "normalized_name": "トートロジー",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 232000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3xZAPYhlhbuAU3bPk7er8Q"
+        },
+        {
+          "track_id": "2DtLLaMUXt9jfX84aaxkrC",
+          "name": "心音",
+          "normalized_name": "心音",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 242653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2DtLLaMUXt9jfX84aaxkrC"
+        },
+        {
+          "track_id": "6Y8R8KtWiBxHfyXimlWPfC",
+          "name": "幸せ",
+          "normalized_name": "幸せ",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 261079,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Y8R8KtWiBxHfyXimlWPfC"
+        },
+        {
+          "track_id": "4enoZasNsjgWV7XpBDQTFV",
+          "name": "オーダーメイド",
+          "normalized_name": "オーダーメイド",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 239413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4enoZasNsjgWV7XpBDQTFV"
+        }
+      ]
+    },
+    {
+      "album_id": "0O7X1YenuiktjKDrI5ZUe9",
+      "name": "幸せ",
+      "album_type": "single",
+      "release_date": "2023-09-06",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/0O7X1YenuiktjKDrI5ZUe9",
+      "tracks": [
+        {
+          "track_id": "3gWfSYSzHIDILJj5ANECEj",
+          "name": "幸せ",
+          "normalized_name": "幸せ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 261173,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3gWfSYSzHIDILJj5ANECEj"
+        },
+        {
+          "track_id": "6PDlfq0unlpRDyBdVgdcf3",
+          "name": "幸せ（instrumental）",
+          "normalized_name": "幸せ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 261000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6PDlfq0unlpRDyBdVgdcf3"
+        },
+        {
+          "track_id": "5ZvwGmxvUnm5GJcMbtkJKi",
+          "name": "夏の魔法のせいじゃない",
+          "normalized_name": "夏の魔法のせいじゃない",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 227560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5ZvwGmxvUnm5GJcMbtkJKi"
+        }
+      ]
+    },
+    {
+      "album_id": "6Qo76bsedB9d4oRcMs1eOq",
+      "name": "Omoinotake SPECIAL LIVE 2023 “SUEHIROGARI” 2023.4.28 @Zepp DiverCity (TOKYO)",
+      "album_type": "album",
+      "release_date": "2023-12-20",
+      "release_date_precision": "day",
+      "total_tracks": 15,
+      "spotify_url": "https://open.spotify.com/album/6Qo76bsedB9d4oRcMs1eOq",
+      "tracks": [
+        {
+          "track_id": "7imfpOwbgkujxuRu5sSR8n",
+          "name": "EVERBLUE- SUEHIROGARI live ver. -",
+          "normalized_name": "everblue suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 308180,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7imfpOwbgkujxuRu5sSR8n"
+        },
+        {
+          "track_id": "02LlCfYoWYyaqFrwOp4YAo",
+          "name": "So Far So Good- SUEHIROGARI live ver. -",
+          "normalized_name": "so far so good suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 284048,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/02LlCfYoWYyaqFrwOp4YAo"
+        },
+        {
+          "track_id": "5aYQ9iyEqUHq0Wkbh2emhU",
+          "name": "産声- SUEHIROGARI live ver. -",
+          "normalized_name": "産声 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 210123,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5aYQ9iyEqUHq0Wkbh2emhU"
+        },
+        {
+          "track_id": "5mKZLvnsybza4kwxfDDsXk",
+          "name": "心音- SUEHIROGARI live ver. -",
+          "normalized_name": "心音 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 263000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5mKZLvnsybza4kwxfDDsXk"
+        },
+        {
+          "track_id": "6HSQLDj90L7jOnfdDDdRgc",
+          "name": "One Day- SUEHIROGARI live ver. -",
+          "normalized_name": "one day suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 229937,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6HSQLDj90L7jOnfdDDdRgc"
+        },
+        {
+          "track_id": "2RhZvnxl03pyAXXGwS6rEV",
+          "name": "彼方- SUEHIROGARI live ver. -",
+          "normalized_name": "彼方 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 193937,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2RhZvnxl03pyAXXGwS6rEV"
+        },
+        {
+          "track_id": "7j1CG0pjhk2HVqKeZ040kx",
+          "name": "By My Side- SUEHIROGARI live ver. -",
+          "normalized_name": "by my side suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 259122,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7j1CG0pjhk2HVqKeZ040kx"
+        },
+        {
+          "track_id": "08D2ksd8Dhinb9tiJ652AF",
+          "name": "空蝉- SUEHIROGARI live ver. -",
+          "normalized_name": "空蝉 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 229892,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/08D2ksd8Dhinb9tiJ652AF"
+        },
+        {
+          "track_id": "24FKfEtPNCiRwcOEAo9SUk",
+          "name": "雨と喪失- SUEHIROGARI live ver. -",
+          "normalized_name": "雨と喪失 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 300216,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/24FKfEtPNCiRwcOEAo9SUk"
+        },
+        {
+          "track_id": "6PLYmmNV1IJtNkXcyWlhhG",
+          "name": "モラトリアム- SUEHIROGARI live ver. -",
+          "normalized_name": "モラトリアム suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 288845,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6PLYmmNV1IJtNkXcyWlhhG"
+        },
+        {
+          "track_id": "1kUhCpFj5KMLbF7L8TNlwV",
+          "name": "Blanco- SUEHIROGARI live ver. -",
+          "normalized_name": "blanco suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 275860,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1kUhCpFj5KMLbF7L8TNlwV"
+        },
+        {
+          "track_id": "1jZXc9ejIKjCc0k4uW4X1F",
+          "name": "惑星- SUEHIROGARI live ver. -",
+          "normalized_name": "惑星 suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 264123,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1jZXc9ejIKjCc0k4uW4X1F"
+        },
+        {
+          "track_id": "7DHU9HoTQsQ3YTQKMd4QoL",
+          "name": "Stand Alone- SUEHIROGARI live ver. -",
+          "normalized_name": "stand alone suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 229205,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7DHU9HoTQsQ3YTQKMd4QoL"
+        },
+        {
+          "track_id": "431zBf9ZhOrP3OPZPB9YFw",
+          "name": "トロイメライ- SUEHIROGARI live ver. -",
+          "normalized_name": "トロイメライ suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 212824,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/431zBf9ZhOrP3OPZPB9YFw"
+        },
+        {
+          "track_id": "5qflSKc49aViWr38yVq46u",
+          "name": "Never Let You Go- SUEHIROGARI live ver. -",
+          "normalized_name": "never let you go suehirogari live ver",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 255000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5qflSKc49aViWr38yVq46u"
+        }
+      ]
+    },
+    {
+      "album_id": "6lVM8WvZY6lpBO9zrBRnE9",
+      "name": "幾億光年",
+      "album_type": "single",
+      "release_date": "2024-01-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6lVM8WvZY6lpBO9zrBRnE9",
+      "tracks": [
+        {
+          "track_id": "4dmruTsdHIOjfOIeaFitXK",
+          "name": "幾億光年",
+          "normalized_name": "幾億光年",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 276918,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4dmruTsdHIOjfOIeaFitXK"
+        }
+      ]
+    },
+    {
+      "album_id": "0rBEgMduJWpRUxqJ58miU3",
+      "name": "幾億光年",
+      "album_type": "single",
+      "release_date": "2024-02-28",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/0rBEgMduJWpRUxqJ58miU3",
+      "tracks": [
+        {
+          "track_id": "56BC0IdIow3PdAhPeci36H",
+          "name": "幾億光年",
+          "normalized_name": "幾億光年",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 276795,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/56BC0IdIow3PdAhPeci36H"
+        },
+        {
+          "track_id": "63OcxkxY055VQZIsUODz3a",
+          "name": "アクトレス",
+          "normalized_name": "アクトレス",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 293286,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/63OcxkxY055VQZIsUODz3a"
+        },
+        {
+          "track_id": "1siWvRkTubh8Ij2c9eC6rv",
+          "name": "幾億光年（instrumental）",
+          "normalized_name": "幾億光年",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 276787,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1siWvRkTubh8Ij2c9eC6rv"
+        },
+        {
+          "track_id": "4tf5Nf16XZMsD6aRM79Ppd",
+          "name": "アクトレス（instrumental）",
+          "normalized_name": "アクトレス",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 293854,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4tf5Nf16XZMsD6aRM79Ppd"
+        }
+      ]
+    },
+    {
+      "album_id": "0PuGKOl8H5w8Ar0esB1f2V",
+      "name": "蕾",
+      "album_type": "single",
+      "release_date": "2024-05-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0PuGKOl8H5w8Ar0esB1f2V",
+      "tracks": [
+        {
+          "track_id": "02J918WUY2J6jBLux5ONUI",
+          "name": "蕾",
+          "normalized_name": "蕾",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193012,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/02J918WUY2J6jBLux5ONUI"
+        }
+      ]
+    },
+    {
+      "album_id": "0vuTX8YIy1I79HJgbKgrC7",
+      "name": "蕾",
+      "album_type": "single",
+      "release_date": "2024-06-12",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/0vuTX8YIy1I79HJgbKgrC7",
+      "tracks": [
+        {
+          "track_id": "5yTCX0X4eoebhDKkjrhkzK",
+          "name": "蕾",
+          "normalized_name": "蕾",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 195069,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5yTCX0X4eoebhDKkjrhkzK"
+        },
+        {
+          "track_id": "7g1aLvx46cZTuBCfVuq5yF",
+          "name": "Ruler",
+          "normalized_name": "ruler",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 204508,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7g1aLvx46cZTuBCfVuq5yF"
+        },
+        {
+          "track_id": "06Xgm7GE9krw6PxdcyF7d5",
+          "name": "蕾（instrumental）",
+          "normalized_name": "蕾",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 193444,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/06Xgm7GE9krw6PxdcyF7d5"
+        },
+        {
+          "track_id": "1lyiNlgMrCXKYd4uerC2QR",
+          "name": "Ruler (instrumental)",
+          "normalized_name": "ruler",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 206443,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1lyiNlgMrCXKYd4uerC2QR"
+        }
+      ]
+    },
+    {
+      "album_id": "7zlKoWPkZsBwX7caxnuTIr",
+      "name": "ラストノート",
+      "album_type": "single",
+      "release_date": "2024-10-19",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7zlKoWPkZsBwX7caxnuTIr",
+      "tracks": [
+        {
+          "track_id": "6TsbJfhKnVsM2mr9OghsqX",
+          "name": "ラストノート",
+          "normalized_name": "ラストノート",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 269750,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6TsbJfhKnVsM2mr9OghsqX"
+        }
+      ]
+    },
+    {
+      "album_id": "6Mb5zRDQpkC5C8o1nUKdOI",
+      "name": "アイオライト",
+      "album_type": "single",
+      "release_date": "2024-12-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6Mb5zRDQpkC5C8o1nUKdOI",
+      "tracks": [
+        {
+          "track_id": "3Vy8LQ1tRy5GEmd7guZMee",
+          "name": "アイオライト",
+          "normalized_name": "アイオライト",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 176345,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Vy8LQ1tRy5GEmd7guZMee"
+        }
+      ]
+    },
+    {
+      "album_id": "6nIPGzCGclgKS7r5vt5oy9",
+      "name": "Better Half (feat. Omoinotake)",
+      "album_type": "single",
+      "release_date": "2025-01-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6nIPGzCGclgKS7r5vt5oy9",
+      "tracks": [
+        {
+          "track_id": "1beUALLSloBEvYre65QiW6",
+          "name": "Better Half (feat. Omoinotake)",
+          "normalized_name": "better half",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 234626,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1beUALLSloBEvYre65QiW6"
+        }
+      ]
+    },
+    {
+      "album_id": "12oRFHOYrtXpgdjGtUa5NM",
+      "name": "Pieces",
+      "album_type": "album",
+      "release_date": "2025-01-29",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "spotify_url": "https://open.spotify.com/album/12oRFHOYrtXpgdjGtUa5NM",
+      "tracks": [
+        {
+          "track_id": "7ymHR4v41sUnqvYXEuhk8Y",
+          "name": "P.S.",
+          "normalized_name": "p s",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 162305,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7ymHR4v41sUnqvYXEuhk8Y"
+        },
+        {
+          "track_id": "3Qe1Ev3IHhipXh4SgQPpCi",
+          "name": "アイオライト",
+          "normalized_name": "アイオライト",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 175368,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Qe1Ev3IHhipXh4SgQPpCi"
+        },
+        {
+          "track_id": "5Ak1F5nGzM4KRhE0H1Q3CP",
+          "name": "幾億光年",
+          "normalized_name": "幾億光年",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 276382,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5Ak1F5nGzM4KRhE0H1Q3CP"
+        },
+        {
+          "track_id": "09ClatOsrlbyxGnYnIqCWc",
+          "name": "蕾",
+          "normalized_name": "蕾",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 193668,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/09ClatOsrlbyxGnYnIqCWc"
+        },
+        {
+          "track_id": "0RPBRuqyBTJPvezi9hwczu",
+          "name": "ラストノート",
+          "normalized_name": "ラストノート",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 270688,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0RPBRuqyBTJPvezi9hwczu"
+        },
+        {
+          "track_id": "2s2PmmMchkQMs6tuU6jKua",
+          "name": "フラジャイル",
+          "normalized_name": "フラジャイル",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 242694,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2s2PmmMchkQMs6tuU6jKua"
+        },
+        {
+          "track_id": "2KG4bJIKnzH7ZOEBmKsevL",
+          "name": "Better Half -Japanese ver.-",
+          "normalized_name": "better half japanese ver",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 236245,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2KG4bJIKnzH7ZOEBmKsevL"
+        },
+        {
+          "track_id": "5q1wUmnnk5Rl0vbkzQCtBo",
+          "name": "折々",
+          "normalized_name": "折々",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 225193,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5q1wUmnnk5Rl0vbkzQCtBo"
+        },
+        {
+          "track_id": "1VgHU6fuqrVtZqL0ILJTV7",
+          "name": "ホワイトアウト",
+          "normalized_name": "ホワイトアウト",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 261722,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1VgHU6fuqrVtZqL0ILJTV7"
+        },
+        {
+          "track_id": "7b5hSvYlJhvhxwd6DXYyUy",
+          "name": "Pieces",
+          "normalized_name": "pieces",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 295326,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7b5hSvYlJhvhxwd6DXYyUy"
+        }
+      ]
+    },
+    {
+      "album_id": "1OGAMDzKGcyx5K5LZmHUeI",
+      "name": "ひとりごと",
+      "album_type": "single",
+      "release_date": "2025-04-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1OGAMDzKGcyx5K5LZmHUeI",
+      "tracks": [
+        {
+          "track_id": "43QChW7cZQdAmWbmamy2mZ",
+          "name": "ひとりごと",
+          "normalized_name": "ひとりごと",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 277444,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/43QChW7cZQdAmWbmamy2mZ"
+        }
+      ]
+    },
+    {
+      "album_id": "4Is3OFhwmavSwi0f6dKW88",
+      "name": "ひとりごと",
+      "album_type": "single",
+      "release_date": "2025-05-21",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/4Is3OFhwmavSwi0f6dKW88",
+      "tracks": [
+        {
+          "track_id": "5cfPlnK79acrh4weAhQNP7",
+          "name": "ひとりごと",
+          "normalized_name": "ひとりごと",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 280561,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5cfPlnK79acrh4weAhQNP7"
+        },
+        {
+          "track_id": "5Y1jPu2xY9pLn4wbgRVP0r",
+          "name": "在りか",
+          "normalized_name": "在りか",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 250429,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5Y1jPu2xY9pLn4wbgRVP0r"
+        },
+        {
+          "track_id": "0SOOxL9DkPVYeMZiTjRD7h",
+          "name": "ひとりごと（instrumental）",
+          "normalized_name": "ひとりごと",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 279944,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0SOOxL9DkPVYeMZiTjRD7h"
+        },
+        {
+          "track_id": "5bPaJDQSxse0lZVtrfMqT8",
+          "name": "在りか（instrumental）",
+          "normalized_name": "在りか",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 248923,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5bPaJDQSxse0lZVtrfMqT8"
+        }
+      ]
+    },
+    {
+      "album_id": "1fUVxGA4JFSACm5pDTczBb",
+      "name": "フェイクショー",
+      "album_type": "single",
+      "release_date": "2025-07-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1fUVxGA4JFSACm5pDTczBb",
+      "tracks": [
+        {
+          "track_id": "1KwIWz6KCgX7wLhTPI2n7i",
+          "name": "フェイクショー",
+          "normalized_name": "フェイクショー",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193931,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1KwIWz6KCgX7wLhTPI2n7i"
+        }
+      ]
+    },
+    {
+      "album_id": "1kWmrfi2SEltqcsJ200N44",
+      "name": "イノセントブルー",
+      "album_type": "single",
+      "release_date": "2025-09-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1kWmrfi2SEltqcsJ200N44",
+      "tracks": [
+        {
+          "track_id": "5vy2GU5ypxi4DTt8ImfDAP",
+          "name": "イノセントブルー",
+          "normalized_name": "イノセントブルー",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 203600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5vy2GU5ypxi4DTt8ImfDAP"
+        }
+      ]
+    },
+    {
+      "album_id": "7kfIVD1wznLWfIzxjMuJvw",
+      "name": "Gravity / イノセントブルー",
+      "album_type": "single",
+      "release_date": "2025-10-29",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/7kfIVD1wznLWfIzxjMuJvw",
+      "tracks": [
+        {
+          "track_id": "445l20YWwFUp9EWyNB8HeR",
+          "name": "Gravity",
+          "normalized_name": "gravity",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 266333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/445l20YWwFUp9EWyNB8HeR"
+        },
+        {
+          "track_id": "1PWqaxMMu4UvVzKwHBqltc",
+          "name": "イノセントブルー",
+          "normalized_name": "イノセントブルー",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 203600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1PWqaxMMu4UvVzKwHBqltc"
+        },
+        {
+          "track_id": "4IDjqnCyQ7JPAxi9d0c7Zs",
+          "name": "Gravity（instrumental）",
+          "normalized_name": "gravity",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 266300,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4IDjqnCyQ7JPAxi9d0c7Zs"
+        },
+        {
+          "track_id": "2dAiEHBx1LKUobqENWPJDC",
+          "name": "イノセントブルー（instrumental）",
+          "normalized_name": "イノセントブルー",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 203600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2dAiEHBx1LKUobqENWPJDC"
+        }
+      ]
+    },
+    {
+      "album_id": "6IXl2T3RNuvZgmsR6ns9ZI",
+      "name": "Wonderland",
+      "album_type": "single",
+      "release_date": "2026-01-21",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6IXl2T3RNuvZgmsR6ns9ZI",
+      "tracks": [
+        {
+          "track_id": "0ST6uGIS1Bm2x5eb0yNsRt",
+          "name": "Wonderland",
+          "normalized_name": "wonderland",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 184366,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0ST6uGIS1Bm2x5eb0yNsRt"
+        }
+      ]
+    }
+  ]
+}

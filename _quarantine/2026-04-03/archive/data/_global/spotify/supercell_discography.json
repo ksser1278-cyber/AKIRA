@@ -1,0 +1,2881 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "4Mc3zbnQx4wRb0tYg7A8sG",
+    "name": "supercell",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/4Mc3zbnQx4wRb0tYg7A8sG"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 24,
+  "raw_track_total": 112,
+  "canonical_track_count": 78,
+  "primary_lyric_track_count": 78,
+  "redundant_variant_track_count": 0,
+  "canonical_tracks": [
+    {
+      "name": "LOVE & ROLL",
+      "normalized_name": "love & roll",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "5BCmhME8xFhI0QNT1GdhZ7",
+      "albums": [
+        "君の知らない物語",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "LOVE&ROLL -Instrumental-",
+      "normalized_name": "love&roll instrumental",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "7dm0fIoqVId0EyFWzEqWdi",
+      "albums": [
+        "LOVE&ROLL -Instrumental-"
+      ]
+    },
+    {
+      "name": "theme of“CENCOROLL”",
+      "normalized_name": "theme of“cencoroll”",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "2agYbwN3LJg2eIPMWDGJDk",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "君の知らない物語",
+      "normalized_name": "君の知らない物語",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "2FXnjOr5iBbZLV0efg0Xgi",
+      "albums": [
+        "君の知らない物語",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "君の知らない物語 -Instrumental-",
+      "normalized_name": "君の知らない物語 instrumental",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "4n8eUHkUWZI5oVg46o4HgK",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "君の知らない物語 -TV Edit-",
+      "normalized_name": "君の知らない物語 tv edit",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "3hcxvXjflT9z5UV9IJHjgF",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "さよならメモリーズ",
+      "normalized_name": "さよならメモリーズ",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "3E4zj4mB2OM21qj4sEwLYU",
+      "albums": [
+        "さよならメモリーズ",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "さよならメモリーズ -Instrumental-",
+      "normalized_name": "さよならメモリーズ instrumental",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "0aKKg4XAAA8hKE8cqdrwQA",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "教えてあげる",
+      "normalized_name": "教えてあげる",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "1YeqSxlmvofdZgX2sx2fW2",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "教えてあげる -Instrumental-",
+      "normalized_name": "教えてあげる instrumental",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "7DL5zvTiEE4UdufB2aEDDO",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "約束をしよう",
+      "normalized_name": "約束をしよう",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "6AOiNtHv5e4yWNvfaDyPSE",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "Worldwide Love",
+      "normalized_name": "worldwide love",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "0rsLxKEbhcHEa0Z3avadQU",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "Worldwide Love -Instrumental-",
+      "normalized_name": "worldwide love instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3TY5m2uwXKMPErBY6Fh8yI",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "うたかた花火",
+      "normalized_name": "うたかた花火",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3VbpuVvobZbMJ86p1w3GKK",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "うたかた花火 -Instrumental-",
+      "normalized_name": "うたかた花火 instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "7Cp1fU9mlZUsT0zjq5Kqob",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に",
+      "normalized_name": "星が瞬くこんな夜に",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "6sDUM0cfmU5WX66eJG41dI",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に -Instrumental-",
+      "normalized_name": "星が瞬くこんな夜に instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3JYOlQEDkabDQrxS8nHH5M",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "Feel so good",
+      "normalized_name": "feel so good",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7KZdhGQMMrzeJj0ETX80km",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "Feel so good -Instrumental-",
+      "normalized_name": "feel so good instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "2NlK4YYx0FgCtcEF2BCxHq",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "Perfect Day",
+      "normalized_name": "perfect day",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "3kXp40tGwJeCKjRqTOj8di",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "Perfect Day -Instrumental-",
+      "normalized_name": "perfect day instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "5RgMraxDK6lngq7Uq3vgmJ",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "ヒーロー",
+      "normalized_name": "ヒーロー",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "66AUUnPIqk5LZe2W2Awywb",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "ヒーロー -Instrumental-",
+      "normalized_name": "ヒーロー instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7lAyhgFI707jaCZrlwAPpm",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "ロックンロールなんですの",
+      "normalized_name": "ロックンロールなんですの",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "3dsxt81Yf4biaFYJw5atsG",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "ロックンロールなんですの -Instrumental-",
+      "normalized_name": "ロックンロールなんですの instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7y77o2qB6DKViHq3BYLhGs",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "夜が明けるよ",
+      "normalized_name": "夜が明けるよ",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0ZNXttSMyZQalEd9YJjeQ2",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "夜が明けるよ -Instrumental-",
+      "normalized_name": "夜が明けるよ instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7k6LhoyEfMtLTqPmkg38Ou",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "復讐",
+      "normalized_name": "復讐",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0l4JUWdz8oS9B72VSJA0vj",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "復讐 -Instrumental-",
+      "normalized_name": "復讐 instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "05KMfIJOzmCftLbwQXdFcy",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "私へ",
+      "normalized_name": "私へ",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0iBIM1bNU5MFMxxGTQtu6E",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "私へ -Instrumental-",
+      "normalized_name": "私へ instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "1aoNnbgwpAA7UQcKPLH85T",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "終わりへ向かう始まりの歌",
+      "normalized_name": "終わりへ向かう始まりの歌",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "5RVFs7q4DHcL18qYvbuA6r",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "終わりへ向かう始まりの歌 -Instrumental-",
+      "normalized_name": "終わりへ向かう始まりの歌 instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0rThrEY3wFEUjK3HnLOIdm",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "My Dearest",
+      "normalized_name": "my dearest",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "5HhYHpxwdGTCO5YK7dycoT",
+      "albums": [
+        "My Dearest",
+        "My Dearest",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "My Dearest -Instrumental-",
+      "normalized_name": "my dearest instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "7HlIZ7FuNLFACEfTIujJK8",
+      "albums": [
+        "My Dearest",
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "大貧民",
+      "normalized_name": "大貧民",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "1p8UNB1SIJeW89ftMyCDyq",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "大貧民 -Instrumental-",
+      "normalized_name": "大貧民 instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "2tJ4Pd1RkMeWJ8aHHHBWER",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "罪人",
+      "normalized_name": "罪人",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "069LjPINznu2atnIqG5h5I",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "罪人 -Instrumental-",
+      "normalized_name": "罪人 instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "0j0QX0Dso4SbDwq9hkEwMj",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+      "normalized_name": "「僕らのあしあと」ピアノver",
+      "first_release_date": "2012-02-01",
+      "spotify_track_id": "4yh2cYQvTDULT3d36gSlnV",
+      "albums": [
+        "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+        "「僕らのあしあと」ピアノVer."
+      ]
+    },
+    {
+      "name": "カレ",
+      "normalized_name": "カレ",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "3Rhc6yWYr0vBkBes86sHDm",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "カレ -Instrumental-",
+      "normalized_name": "カレ instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "5F35fiGeH23iPu8Pou4gJq",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "僕らのあしあと",
+      "normalized_name": "僕らのあしあと",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "3GwcspDvZfXSJWkABdg0vO",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "僕らのあしあと -Instrumental-",
+      "normalized_name": "僕らのあしあと instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "5KiYrOpvU8YSaEEz90QhlB",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "僕らのあしあと / 告白"
+      ]
+    },
+    {
+      "name": "告白",
+      "normalized_name": "告白",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "16vNVNMiXE3Ygiq6hLDMAV",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと",
+        "告白 / 僕らのあしあと",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "告白 -Instrumental-",
+      "normalized_name": "告白 instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "2ywvClFAqZdBAYu9Fkkp3l",
+      "albums": [
+        "告白 / 僕らのあしあと",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に 〜オルゴールVer.〜",
+      "normalized_name": "星が瞬くこんな夜に 〜オルゴールver 〜",
+      "first_release_date": "2012-04-25",
+      "spotify_track_id": "2b2arUo0JgoiG2bCOAfWam",
+      "albums": [
+        "星が瞬くこんな夜に 〜オルゴールVer.〜"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に 〜ゲームVer.〜",
+      "normalized_name": "星が瞬くこんな夜に 〜ゲームver 〜",
+      "first_release_date": "2012-04-25",
+      "spotify_track_id": "0oSWboAnx1PXRmVPNJxUcT",
+      "albums": [
+        "星が瞬くこんな夜に 〜ゲームVer.〜"
+      ]
+    },
+    {
+      "name": "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+      "normalized_name": "劇場版アニメ映画「ねらわれた学園」特報用bgm by supercell",
+      "first_release_date": "2012-06-27",
+      "spotify_track_id": "60qEyyRVjCV22dd9kKf8kD",
+      "albums": [
+        "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "リルモア",
+      "normalized_name": "リルモア",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "7a3kkyha95HGkveGcIizuZ",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "リルモア -Instrumental-",
+      "normalized_name": "リルモア instrumental",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "45VFjcpV5O2SFulLkdcaKO",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "銀色飛行船",
+      "normalized_name": "銀色飛行船",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "3CApprxEYhjgRbe4hOSHsT",
+      "albums": [
+        "銀色飛行船",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "銀色飛行船 -Instrumental-",
+      "normalized_name": "銀色飛行船 instrumental",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "2oioPP74Ee8DFxiwnRQR3M",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "The Bravery -TV Edit-",
+      "normalized_name": "the bravery tv edit",
+      "first_release_date": "2013-02-20",
+      "spotify_track_id": "2hQExFDYsIrlbTL4Z6xndB",
+      "albums": [
+        "The Bravery -TV Edit-",
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "She is my senior",
+      "normalized_name": "she is my senior",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "0Gj6DwYSv9u7G7AxOHL8P5",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "The Bravery",
+      "normalized_name": "the bravery",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "4ZArDD9FZ3I4thJeQkoOPv",
+      "albums": [
+        "The Bravery",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "The Bravery -Instrumental-",
+      "normalized_name": "the bravery instrumental",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "2UQFbACf2hbj15N7jDdquX",
+      "albums": [
+        "The Bravery",
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "青空",
+      "normalized_name": "青空",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "6eKTQCvSjvRdr4HYvsBBCe",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "青空 -Instrumental-",
+      "normalized_name": "青空 instrumental",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "1ZFRI1FHROGqrF76ToEBAa",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "Yeah Oh Ahhh Oh !",
+      "normalized_name": "yeah oh ahhh oh",
+      "first_release_date": "2013-05-01",
+      "spotify_track_id": "4rsyJ39JBkkYjWzJSQOfbX",
+      "albums": [
+        "Yeah Oh Ahhh Oh !",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "M.K.O",
+      "normalized_name": "m k o",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "3Qg6PyJS1HhJFH2bxhDndo",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "夕焼けブルース",
+      "normalized_name": "夕焼けブルース",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "6qspyJ9uJhh8aNMxn7q46M",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "拍手喝采歌合",
+      "normalized_name": "拍手喝采歌合",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "5cZ9wLF6QyIQMitz5ojGBs",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）",
+        "拍手喝采歌合 （8 tracks）",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "M.K.O -Instrumental-",
+      "normalized_name": "m k o instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "6wHWtnbzkYmJtak3UU9YYK",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "夕焼けブルース -Instrumental-",
+      "normalized_name": "夕焼けブルース instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "4XcRlebQkbxr4XslWvWK7S",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "拍手喝采歌合 -Instrumental-",
+      "normalized_name": "拍手喝采歌合 instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "2cRtiC00lhp9KX7lUJ5uMV",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "No.525300887039",
+      "normalized_name": "no 525300887039",
+      "first_release_date": "2013-11-13",
+      "spotify_track_id": "3HSjxY63Qycq8zxZZVuzZK",
+      "albums": [
+        "No.525300887039",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "Journey's End",
+      "normalized_name": "journeys end",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "1tRkyd86waweuG9tfp1DUh",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "Mr.Downer",
+      "normalized_name": "mr downer",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "6rnl0cT68EPquBsohNhecn",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "We're Still Here",
+      "normalized_name": "were still here",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "4YheXJdZgDNNx35jj2GdwD",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "ホワイト製薬",
+      "normalized_name": "ホワイト製薬",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "4k2Kz2192n9UmCOgIwxoVW",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "従属人間",
+      "normalized_name": "従属人間",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "0B6mgYHZQKhuWIjYXwgruP",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "時間列車",
+      "normalized_name": "時間列車",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "3Tfp5vsEBeo2dzBkGCEGy6",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "百回目のキス",
+      "normalized_name": "百回目のキス",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "6nfz5StHQOmflba2QEuaOH",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "#Love",
+      "normalized_name": "#love",
+      "first_release_date": "2019-07-30",
+      "spotify_track_id": "2njs7jX9TH0IVHsAD6scFk",
+      "albums": [
+        "#Love",
+        "#Love"
+      ]
+    },
+    {
+      "name": "#Love -instrumental-",
+      "normalized_name": "#love instrumental",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "5xMoirtO4KKQBCR5QY6LL6",
+      "albums": [
+        "#Love"
+      ]
+    },
+    {
+      "name": "Nanairo night",
+      "normalized_name": "nanairo night",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "1Ko6u327lLD1rr6UkCfpOL",
+      "albums": [
+        "#Love"
+      ]
+    },
+    {
+      "name": "Nanairo night -instrumental-",
+      "normalized_name": "nanairo night instrumental",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "16YKc0XfUUIeqeaz90Q3Xa",
+      "albums": [
+        "#Love"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "LOVE & ROLL",
+      "normalized_name": "love & roll",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "5BCmhME8xFhI0QNT1GdhZ7",
+      "albums": [
+        "君の知らない物語",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "LOVE&ROLL -Instrumental-",
+      "normalized_name": "love&roll instrumental",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "7dm0fIoqVId0EyFWzEqWdi",
+      "albums": [
+        "LOVE&ROLL -Instrumental-"
+      ]
+    },
+    {
+      "name": "theme of“CENCOROLL”",
+      "normalized_name": "theme of“cencoroll”",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "2agYbwN3LJg2eIPMWDGJDk",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "君の知らない物語",
+      "normalized_name": "君の知らない物語",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "2FXnjOr5iBbZLV0efg0Xgi",
+      "albums": [
+        "君の知らない物語",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "君の知らない物語 -Instrumental-",
+      "normalized_name": "君の知らない物語 instrumental",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "4n8eUHkUWZI5oVg46o4HgK",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "君の知らない物語 -TV Edit-",
+      "normalized_name": "君の知らない物語 tv edit",
+      "first_release_date": "2009-08-12",
+      "spotify_track_id": "3hcxvXjflT9z5UV9IJHjgF",
+      "albums": [
+        "君の知らない物語"
+      ]
+    },
+    {
+      "name": "さよならメモリーズ",
+      "normalized_name": "さよならメモリーズ",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "3E4zj4mB2OM21qj4sEwLYU",
+      "albums": [
+        "さよならメモリーズ",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "さよならメモリーズ -Instrumental-",
+      "normalized_name": "さよならメモリーズ instrumental",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "0aKKg4XAAA8hKE8cqdrwQA",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "教えてあげる",
+      "normalized_name": "教えてあげる",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "1YeqSxlmvofdZgX2sx2fW2",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "教えてあげる -Instrumental-",
+      "normalized_name": "教えてあげる instrumental",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "7DL5zvTiEE4UdufB2aEDDO",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "約束をしよう",
+      "normalized_name": "約束をしよう",
+      "first_release_date": "2010-02-10",
+      "spotify_track_id": "6AOiNtHv5e4yWNvfaDyPSE",
+      "albums": [
+        "さよならメモリーズ"
+      ]
+    },
+    {
+      "name": "Worldwide Love",
+      "normalized_name": "worldwide love",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "0rsLxKEbhcHEa0Z3avadQU",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "Worldwide Love -Instrumental-",
+      "normalized_name": "worldwide love instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3TY5m2uwXKMPErBY6Fh8yI",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "うたかた花火",
+      "normalized_name": "うたかた花火",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3VbpuVvobZbMJ86p1w3GKK",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "うたかた花火 -Instrumental-",
+      "normalized_name": "うたかた花火 instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "7Cp1fU9mlZUsT0zjq5Kqob",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に",
+      "normalized_name": "星が瞬くこんな夜に",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "6sDUM0cfmU5WX66eJG41dI",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に",
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に -Instrumental-",
+      "normalized_name": "星が瞬くこんな夜に instrumental",
+      "first_release_date": "2010-08-25",
+      "spotify_track_id": "3JYOlQEDkabDQrxS8nHH5M",
+      "albums": [
+        "うたかた花火／星が瞬くこんな夜に"
+      ]
+    },
+    {
+      "name": "Feel so good",
+      "normalized_name": "feel so good",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7KZdhGQMMrzeJj0ETX80km",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "Feel so good -Instrumental-",
+      "normalized_name": "feel so good instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "2NlK4YYx0FgCtcEF2BCxHq",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "Perfect Day",
+      "normalized_name": "perfect day",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "3kXp40tGwJeCKjRqTOj8di",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "Perfect Day -Instrumental-",
+      "normalized_name": "perfect day instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "5RgMraxDK6lngq7Uq3vgmJ",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "ヒーロー",
+      "normalized_name": "ヒーロー",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "66AUUnPIqk5LZe2W2Awywb",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "ヒーロー -Instrumental-",
+      "normalized_name": "ヒーロー instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7lAyhgFI707jaCZrlwAPpm",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "ロックンロールなんですの",
+      "normalized_name": "ロックンロールなんですの",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "3dsxt81Yf4biaFYJw5atsG",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "ロックンロールなんですの -Instrumental-",
+      "normalized_name": "ロックンロールなんですの instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7y77o2qB6DKViHq3BYLhGs",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "夜が明けるよ",
+      "normalized_name": "夜が明けるよ",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0ZNXttSMyZQalEd9YJjeQ2",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "夜が明けるよ -Instrumental-",
+      "normalized_name": "夜が明けるよ instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "7k6LhoyEfMtLTqPmkg38Ou",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "復讐",
+      "normalized_name": "復讐",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0l4JUWdz8oS9B72VSJA0vj",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "復讐 -Instrumental-",
+      "normalized_name": "復讐 instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "05KMfIJOzmCftLbwQXdFcy",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "私へ",
+      "normalized_name": "私へ",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0iBIM1bNU5MFMxxGTQtu6E",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "私へ -Instrumental-",
+      "normalized_name": "私へ instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "1aoNnbgwpAA7UQcKPLH85T",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "終わりへ向かう始まりの歌",
+      "normalized_name": "終わりへ向かう始まりの歌",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "5RVFs7q4DHcL18qYvbuA6r",
+      "albums": [
+        "Today Is A Beautiful Day"
+      ]
+    },
+    {
+      "name": "終わりへ向かう始まりの歌 -Instrumental-",
+      "normalized_name": "終わりへ向かう始まりの歌 instrumental",
+      "first_release_date": "2011-03-16",
+      "spotify_track_id": "0rThrEY3wFEUjK3HnLOIdm",
+      "albums": [
+        "Today Is A Beautiful Day 〜カラオケ集〜"
+      ]
+    },
+    {
+      "name": "My Dearest",
+      "normalized_name": "my dearest",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "5HhYHpxwdGTCO5YK7dycoT",
+      "albums": [
+        "My Dearest",
+        "My Dearest",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "My Dearest -Instrumental-",
+      "normalized_name": "my dearest instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "7HlIZ7FuNLFACEfTIujJK8",
+      "albums": [
+        "My Dearest",
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "大貧民",
+      "normalized_name": "大貧民",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "1p8UNB1SIJeW89ftMyCDyq",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "大貧民 -Instrumental-",
+      "normalized_name": "大貧民 instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "2tJ4Pd1RkMeWJ8aHHHBWER",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "罪人",
+      "normalized_name": "罪人",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "069LjPINznu2atnIqG5h5I",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "罪人 -Instrumental-",
+      "normalized_name": "罪人 instrumental",
+      "first_release_date": "2011-11-23",
+      "spotify_track_id": "0j0QX0Dso4SbDwq9hkEwMj",
+      "albums": [
+        "My Dearest"
+      ]
+    },
+    {
+      "name": "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+      "normalized_name": "「僕らのあしあと」ピアノver",
+      "first_release_date": "2012-02-01",
+      "spotify_track_id": "4yh2cYQvTDULT3d36gSlnV",
+      "albums": [
+        "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+        "「僕らのあしあと」ピアノVer."
+      ]
+    },
+    {
+      "name": "カレ",
+      "normalized_name": "カレ",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "3Rhc6yWYr0vBkBes86sHDm",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "カレ -Instrumental-",
+      "normalized_name": "カレ instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "5F35fiGeH23iPu8Pou4gJq",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "僕らのあしあと",
+      "normalized_name": "僕らのあしあと",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "3GwcspDvZfXSJWkABdg0vO",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "僕らのあしあと -Instrumental-",
+      "normalized_name": "僕らのあしあと instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "5KiYrOpvU8YSaEEz90QhlB",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "僕らのあしあと / 告白"
+      ]
+    },
+    {
+      "name": "告白",
+      "normalized_name": "告白",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "16vNVNMiXE3Ygiq6hLDMAV",
+      "albums": [
+        "僕らのあしあと / 告白",
+        "告白 / 僕らのあしあと",
+        "告白 / 僕らのあしあと",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "告白 -Instrumental-",
+      "normalized_name": "告白 instrumental",
+      "first_release_date": "2012-03-07",
+      "spotify_track_id": "2ywvClFAqZdBAYu9Fkkp3l",
+      "albums": [
+        "告白 / 僕らのあしあと",
+        "告白 / 僕らのあしあと"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に 〜オルゴールVer.〜",
+      "normalized_name": "星が瞬くこんな夜に 〜オルゴールver 〜",
+      "first_release_date": "2012-04-25",
+      "spotify_track_id": "2b2arUo0JgoiG2bCOAfWam",
+      "albums": [
+        "星が瞬くこんな夜に 〜オルゴールVer.〜"
+      ]
+    },
+    {
+      "name": "星が瞬くこんな夜に 〜ゲームVer.〜",
+      "normalized_name": "星が瞬くこんな夜に 〜ゲームver 〜",
+      "first_release_date": "2012-04-25",
+      "spotify_track_id": "0oSWboAnx1PXRmVPNJxUcT",
+      "albums": [
+        "星が瞬くこんな夜に 〜ゲームVer.〜"
+      ]
+    },
+    {
+      "name": "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+      "normalized_name": "劇場版アニメ映画「ねらわれた学園」特報用bgm by supercell",
+      "first_release_date": "2012-06-27",
+      "spotify_track_id": "60qEyyRVjCV22dd9kKf8kD",
+      "albums": [
+        "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "リルモア",
+      "normalized_name": "リルモア",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "7a3kkyha95HGkveGcIizuZ",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "リルモア -Instrumental-",
+      "normalized_name": "リルモア instrumental",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "45VFjcpV5O2SFulLkdcaKO",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "銀色飛行船",
+      "normalized_name": "銀色飛行船",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "3CApprxEYhjgRbe4hOSHsT",
+      "albums": [
+        "銀色飛行船",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "銀色飛行船 -Instrumental-",
+      "normalized_name": "銀色飛行船 instrumental",
+      "first_release_date": "2012-12-12",
+      "spotify_track_id": "2oioPP74Ee8DFxiwnRQR3M",
+      "albums": [
+        "銀色飛行船"
+      ]
+    },
+    {
+      "name": "The Bravery -TV Edit-",
+      "normalized_name": "the bravery tv edit",
+      "first_release_date": "2013-02-20",
+      "spotify_track_id": "2hQExFDYsIrlbTL4Z6xndB",
+      "albums": [
+        "The Bravery -TV Edit-",
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "She is my senior",
+      "normalized_name": "she is my senior",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "0Gj6DwYSv9u7G7AxOHL8P5",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "The Bravery",
+      "normalized_name": "the bravery",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "4ZArDD9FZ3I4thJeQkoOPv",
+      "albums": [
+        "The Bravery",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "The Bravery -Instrumental-",
+      "normalized_name": "the bravery instrumental",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "2UQFbACf2hbj15N7jDdquX",
+      "albums": [
+        "The Bravery",
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "青空",
+      "normalized_name": "青空",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "6eKTQCvSjvRdr4HYvsBBCe",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "青空 -Instrumental-",
+      "normalized_name": "青空 instrumental",
+      "first_release_date": "2013-03-06",
+      "spotify_track_id": "1ZFRI1FHROGqrF76ToEBAa",
+      "albums": [
+        "The Bravery"
+      ]
+    },
+    {
+      "name": "Yeah Oh Ahhh Oh !",
+      "normalized_name": "yeah oh ahhh oh",
+      "first_release_date": "2013-05-01",
+      "spotify_track_id": "4rsyJ39JBkkYjWzJSQOfbX",
+      "albums": [
+        "Yeah Oh Ahhh Oh !",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "M.K.O",
+      "normalized_name": "m k o",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "3Qg6PyJS1HhJFH2bxhDndo",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "夕焼けブルース",
+      "normalized_name": "夕焼けブルース",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "6qspyJ9uJhh8aNMxn7q46M",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "拍手喝采歌合",
+      "normalized_name": "拍手喝采歌合",
+      "first_release_date": "2013-05-29",
+      "spotify_track_id": "5cZ9wLF6QyIQMitz5ojGBs",
+      "albums": [
+        "拍手喝采歌合",
+        "拍手喝采歌合",
+        "拍手喝采歌合 （8 tracks）",
+        "拍手喝采歌合 （8 tracks）",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "M.K.O -Instrumental-",
+      "normalized_name": "m k o instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "6wHWtnbzkYmJtak3UU9YYK",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "夕焼けブルース -Instrumental-",
+      "normalized_name": "夕焼けブルース instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "4XcRlebQkbxr4XslWvWK7S",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "拍手喝采歌合 -Instrumental-",
+      "normalized_name": "拍手喝采歌合 instrumental",
+      "first_release_date": "2013-06-12",
+      "spotify_track_id": "2cRtiC00lhp9KX7lUJ5uMV",
+      "albums": [
+        "拍手喝采歌合 （8 tracks）",
+        "拍手喝采歌合 （8 tracks）"
+      ]
+    },
+    {
+      "name": "No.525300887039",
+      "normalized_name": "no 525300887039",
+      "first_release_date": "2013-11-13",
+      "spotify_track_id": "3HSjxY63Qycq8zxZZVuzZK",
+      "albums": [
+        "No.525300887039",
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "Journey's End",
+      "normalized_name": "journeys end",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "1tRkyd86waweuG9tfp1DUh",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "Mr.Downer",
+      "normalized_name": "mr downer",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "6rnl0cT68EPquBsohNhecn",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "We're Still Here",
+      "normalized_name": "were still here",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "4YheXJdZgDNNx35jj2GdwD",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "ホワイト製薬",
+      "normalized_name": "ホワイト製薬",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "4k2Kz2192n9UmCOgIwxoVW",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "従属人間",
+      "normalized_name": "従属人間",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "0B6mgYHZQKhuWIjYXwgruP",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "時間列車",
+      "normalized_name": "時間列車",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "3Tfp5vsEBeo2dzBkGCEGy6",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "百回目のキス",
+      "normalized_name": "百回目のキス",
+      "first_release_date": "2013-11-27",
+      "spotify_track_id": "6nfz5StHQOmflba2QEuaOH",
+      "albums": [
+        "ZIGAEXPERIENTIA"
+      ]
+    },
+    {
+      "name": "#Love",
+      "normalized_name": "#love",
+      "first_release_date": "2019-07-30",
+      "spotify_track_id": "2njs7jX9TH0IVHsAD6scFk",
+      "albums": [
+        "#Love",
+        "#Love"
+      ]
+    },
+    {
+      "name": "#Love -instrumental-",
+      "normalized_name": "#love instrumental",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "5xMoirtO4KKQBCR5QY6LL6",
+      "albums": [
+        "#Love"
+      ]
+    },
+    {
+      "name": "Nanairo night",
+      "normalized_name": "nanairo night",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "1Ko6u327lLD1rr6UkCfpOL",
+      "albums": [
+        "#Love"
+      ]
+    },
+    {
+      "name": "Nanairo night -instrumental-",
+      "normalized_name": "nanairo night instrumental",
+      "first_release_date": "2019-09-11",
+      "spotify_track_id": "16YKc0XfUUIeqeaz90Q3Xa",
+      "albums": [
+        "#Love"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [],
+  "releases": [
+    {
+      "album_id": "4p4gZVF0VbN3pqaR190Pti",
+      "name": "LOVE&ROLL -Instrumental-",
+      "album_type": "single",
+      "release_date": "2009-08-12",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4p4gZVF0VbN3pqaR190Pti",
+      "tracks": [
+        {
+          "track_id": "7dm0fIoqVId0EyFWzEqWdi",
+          "name": "LOVE&ROLL -Instrumental-",
+          "normalized_name": "love&roll instrumental",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 293909,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7dm0fIoqVId0EyFWzEqWdi"
+        }
+      ]
+    },
+    {
+      "album_id": "75UFYCI7xGzNNBqqZmuznH",
+      "name": "君の知らない物語",
+      "album_type": "single",
+      "release_date": "2009-08-12",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/75UFYCI7xGzNNBqqZmuznH",
+      "tracks": [
+        {
+          "track_id": "2FXnjOr5iBbZLV0efg0Xgi",
+          "name": "君の知らない物語",
+          "normalized_name": "君の知らない物語",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 341053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2FXnjOr5iBbZLV0efg0Xgi"
+        },
+        {
+          "track_id": "5BCmhME8xFhI0QNT1GdhZ7",
+          "name": "LOVE & ROLL",
+          "normalized_name": "love & roll",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 294560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5BCmhME8xFhI0QNT1GdhZ7"
+        },
+        {
+          "track_id": "2agYbwN3LJg2eIPMWDGJDk",
+          "name": "theme of“CENCOROLL”",
+          "normalized_name": "theme of“cencoroll”",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 85146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2agYbwN3LJg2eIPMWDGJDk"
+        },
+        {
+          "track_id": "3hcxvXjflT9z5UV9IJHjgF",
+          "name": "君の知らない物語 -TV Edit-",
+          "normalized_name": "君の知らない物語 tv edit",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 93453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3hcxvXjflT9z5UV9IJHjgF"
+        },
+        {
+          "track_id": "4n8eUHkUWZI5oVg46o4HgK",
+          "name": "君の知らない物語 -Instrumental-",
+          "normalized_name": "君の知らない物語 instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 340400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4n8eUHkUWZI5oVg46o4HgK"
+        }
+      ]
+    },
+    {
+      "album_id": "3ZfKVxkmnuJcHv5Ml1d9eG",
+      "name": "さよならメモリーズ",
+      "album_type": "single",
+      "release_date": "2010-02-10",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/3ZfKVxkmnuJcHv5Ml1d9eG",
+      "tracks": [
+        {
+          "track_id": "3E4zj4mB2OM21qj4sEwLYU",
+          "name": "さよならメモリーズ",
+          "normalized_name": "さよならメモリーズ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 366880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3E4zj4mB2OM21qj4sEwLYU"
+        },
+        {
+          "track_id": "1YeqSxlmvofdZgX2sx2fW2",
+          "name": "教えてあげる",
+          "normalized_name": "教えてあげる",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 280560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1YeqSxlmvofdZgX2sx2fW2"
+        },
+        {
+          "track_id": "6AOiNtHv5e4yWNvfaDyPSE",
+          "name": "約束をしよう",
+          "normalized_name": "約束をしよう",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 210346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6AOiNtHv5e4yWNvfaDyPSE"
+        },
+        {
+          "track_id": "0aKKg4XAAA8hKE8cqdrwQA",
+          "name": "さよならメモリーズ -Instrumental-",
+          "normalized_name": "さよならメモリーズ instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 366893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0aKKg4XAAA8hKE8cqdrwQA"
+        },
+        {
+          "track_id": "7DL5zvTiEE4UdufB2aEDDO",
+          "name": "教えてあげる -Instrumental-",
+          "normalized_name": "教えてあげる instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 278733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7DL5zvTiEE4UdufB2aEDDO"
+        }
+      ]
+    },
+    {
+      "album_id": "0YrYEfC8jhCObNKbDZzfpq",
+      "name": "うたかた花火／星が瞬くこんな夜に",
+      "album_type": "album",
+      "release_date": "2010-08-25",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/0YrYEfC8jhCObNKbDZzfpq",
+      "tracks": [
+        {
+          "track_id": "3VbpuVvobZbMJ86p1w3GKK",
+          "name": "うたかた花火",
+          "normalized_name": "うたかた花火",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 361506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3VbpuVvobZbMJ86p1w3GKK"
+        },
+        {
+          "track_id": "6sDUM0cfmU5WX66eJG41dI",
+          "name": "星が瞬くこんな夜に",
+          "normalized_name": "星が瞬くこんな夜に",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 269346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6sDUM0cfmU5WX66eJG41dI"
+        },
+        {
+          "track_id": "0rsLxKEbhcHEa0Z3avadQU",
+          "name": "Worldwide Love",
+          "normalized_name": "worldwide love",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 286573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0rsLxKEbhcHEa0Z3avadQU"
+        },
+        {
+          "track_id": "7Cp1fU9mlZUsT0zjq5Kqob",
+          "name": "うたかた花火 -Instrumental-",
+          "normalized_name": "うたかた花火 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 361506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7Cp1fU9mlZUsT0zjq5Kqob"
+        },
+        {
+          "track_id": "3JYOlQEDkabDQrxS8nHH5M",
+          "name": "星が瞬くこんな夜に -Instrumental-",
+          "normalized_name": "星が瞬くこんな夜に instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 269346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3JYOlQEDkabDQrxS8nHH5M"
+        },
+        {
+          "track_id": "3TY5m2uwXKMPErBY6Fh8yI",
+          "name": "Worldwide Love -Instrumental-",
+          "normalized_name": "worldwide love instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 282920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3TY5m2uwXKMPErBY6Fh8yI"
+        }
+      ]
+    },
+    {
+      "album_id": "48KseHW22uKEJjgTKZCtk7",
+      "name": "Today Is A Beautiful Day",
+      "album_type": "album",
+      "release_date": "2011-03-16",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "spotify_url": "https://open.spotify.com/album/48KseHW22uKEJjgTKZCtk7",
+      "tracks": [
+        {
+          "track_id": "5RVFs7q4DHcL18qYvbuA6r",
+          "name": "終わりへ向かう始まりの歌",
+          "normalized_name": "終わりへ向かう始まりの歌",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 130412,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5RVFs7q4DHcL18qYvbuA6r"
+        },
+        {
+          "track_id": "434YBNY61Y9sqBSp7OINBa",
+          "name": "君の知らない物語",
+          "normalized_name": "君の知らない物語",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 339573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/434YBNY61Y9sqBSp7OINBa"
+        },
+        {
+          "track_id": "66AUUnPIqk5LZe2W2Awywb",
+          "name": "ヒーロー",
+          "normalized_name": "ヒーロー",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 311680,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/66AUUnPIqk5LZe2W2Awywb"
+        },
+        {
+          "track_id": "3kXp40tGwJeCKjRqTOj8di",
+          "name": "Perfect Day",
+          "normalized_name": "perfect day",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 286373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3kXp40tGwJeCKjRqTOj8di"
+        },
+        {
+          "track_id": "0l4JUWdz8oS9B72VSJA0vj",
+          "name": "復讐",
+          "normalized_name": "復讐",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 203480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0l4JUWdz8oS9B72VSJA0vj"
+        },
+        {
+          "track_id": "3dsxt81Yf4biaFYJw5atsG",
+          "name": "ロックンロールなんですの",
+          "normalized_name": "ロックンロールなんですの",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 216760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3dsxt81Yf4biaFYJw5atsG"
+        },
+        {
+          "track_id": "1CfHMJ4Ho8e7yCKusbTvEk",
+          "name": "LOVE & ROLL",
+          "normalized_name": "love & roll",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 295080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1CfHMJ4Ho8e7yCKusbTvEk"
+        },
+        {
+          "track_id": "7KZdhGQMMrzeJj0ETX80km",
+          "name": "Feel so good",
+          "normalized_name": "feel so good",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 301986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7KZdhGQMMrzeJj0ETX80km"
+        },
+        {
+          "track_id": "4Id1o42RrAbkhUPYaCMO5O",
+          "name": "星が瞬くこんな夜に",
+          "normalized_name": "星が瞬くこんな夜に",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 269293,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4Id1o42RrAbkhUPYaCMO5O"
+        },
+        {
+          "track_id": "5izr0cBTW8r4gzKqqAK8lY",
+          "name": "うたかた花火",
+          "normalized_name": "うたかた花火",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 360013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5izr0cBTW8r4gzKqqAK8lY"
+        },
+        {
+          "track_id": "0ZNXttSMyZQalEd9YJjeQ2",
+          "name": "夜が明けるよ",
+          "normalized_name": "夜が明けるよ",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 290573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0ZNXttSMyZQalEd9YJjeQ2"
+        },
+        {
+          "track_id": "30eaJSKH0UiTyH6d9JRHS6",
+          "name": "さよならメモリーズ",
+          "normalized_name": "さよならメモリーズ",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 368373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/30eaJSKH0UiTyH6d9JRHS6"
+        },
+        {
+          "track_id": "0iBIM1bNU5MFMxxGTQtu6E",
+          "name": "私へ",
+          "normalized_name": "私へ",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 126520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0iBIM1bNU5MFMxxGTQtu6E"
+        }
+      ]
+    },
+    {
+      "album_id": "738i3xaG908BHsMY2JYHHZ",
+      "name": "Today Is A Beautiful Day 〜カラオケ集〜",
+      "album_type": "album",
+      "release_date": "2011-03-16",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/738i3xaG908BHsMY2JYHHZ",
+      "tracks": [
+        {
+          "track_id": "0rThrEY3wFEUjK3HnLOIdm",
+          "name": "終わりへ向かう始まりの歌 -Instrumental-",
+          "normalized_name": "終わりへ向かう始まりの歌 instrumental",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 130412,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0rThrEY3wFEUjK3HnLOIdm"
+        },
+        {
+          "track_id": "7lAyhgFI707jaCZrlwAPpm",
+          "name": "ヒーロー -Instrumental-",
+          "normalized_name": "ヒーロー instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 311679,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7lAyhgFI707jaCZrlwAPpm"
+        },
+        {
+          "track_id": "5RgMraxDK6lngq7Uq3vgmJ",
+          "name": "Perfect Day -Instrumental-",
+          "normalized_name": "perfect day instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 286373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5RgMraxDK6lngq7Uq3vgmJ"
+        },
+        {
+          "track_id": "05KMfIJOzmCftLbwQXdFcy",
+          "name": "復讐 -Instrumental-",
+          "normalized_name": "復讐 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 203480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/05KMfIJOzmCftLbwQXdFcy"
+        },
+        {
+          "track_id": "7y77o2qB6DKViHq3BYLhGs",
+          "name": "ロックンロールなんですの -Instrumental-",
+          "normalized_name": "ロックンロールなんですの instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 216760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7y77o2qB6DKViHq3BYLhGs"
+        },
+        {
+          "track_id": "2NlK4YYx0FgCtcEF2BCxHq",
+          "name": "Feel so good -Instrumental-",
+          "normalized_name": "feel so good instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 301986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2NlK4YYx0FgCtcEF2BCxHq"
+        },
+        {
+          "track_id": "7k6LhoyEfMtLTqPmkg38Ou",
+          "name": "夜が明けるよ -Instrumental-",
+          "normalized_name": "夜が明けるよ instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 290573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7k6LhoyEfMtLTqPmkg38Ou"
+        },
+        {
+          "track_id": "1aoNnbgwpAA7UQcKPLH85T",
+          "name": "私へ -Instrumental-",
+          "normalized_name": "私へ instrumental",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 126520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1aoNnbgwpAA7UQcKPLH85T"
+        }
+      ]
+    },
+    {
+      "album_id": "3br2XeEnU6AIxzVr4vDqDt",
+      "name": "My Dearest",
+      "album_type": "album",
+      "release_date": "2011-11-23",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/3br2XeEnU6AIxzVr4vDqDt",
+      "tracks": [
+        {
+          "track_id": "5HhYHpxwdGTCO5YK7dycoT",
+          "name": "My Dearest",
+          "normalized_name": "my dearest",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 338520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5HhYHpxwdGTCO5YK7dycoT"
+        },
+        {
+          "track_id": "069LjPINznu2atnIqG5h5I",
+          "name": "罪人",
+          "normalized_name": "罪人",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 226720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/069LjPINznu2atnIqG5h5I"
+        },
+        {
+          "track_id": "1p8UNB1SIJeW89ftMyCDyq",
+          "name": "大貧民",
+          "normalized_name": "大貧民",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 260733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1p8UNB1SIJeW89ftMyCDyq"
+        },
+        {
+          "track_id": "6arxuFadvkw95LE8fNbypq",
+          "name": "My Dearest（TV Edit)",
+          "normalized_name": "my dearest",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 93680,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6arxuFadvkw95LE8fNbypq"
+        },
+        {
+          "track_id": "7HlIZ7FuNLFACEfTIujJK8",
+          "name": "My Dearest -Instrumental-",
+          "normalized_name": "my dearest instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 337946,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7HlIZ7FuNLFACEfTIujJK8"
+        },
+        {
+          "track_id": "0j0QX0Dso4SbDwq9hkEwMj",
+          "name": "罪人 -Instrumental-",
+          "normalized_name": "罪人 instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 226666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0j0QX0Dso4SbDwq9hkEwMj"
+        },
+        {
+          "track_id": "2tJ4Pd1RkMeWJ8aHHHBWER",
+          "name": "大貧民 -Instrumental-",
+          "normalized_name": "大貧民 instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 259359,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2tJ4Pd1RkMeWJ8aHHHBWER"
+        },
+        {
+          "track_id": "5obTVVfU1Xu8lBVjuy2g8t",
+          "name": "My Dearest (TV Edit) -Instrumental-",
+          "normalized_name": "my dearest instrumental",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 95546,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5obTVVfU1Xu8lBVjuy2g8t"
+        }
+      ]
+    },
+    {
+      "album_id": "2yBedsoPLWq8ORCIGk8Uws",
+      "name": "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+      "album_type": "single",
+      "release_date": "2012-02-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2yBedsoPLWq8ORCIGk8Uws",
+      "tracks": [
+        {
+          "track_id": "4yh2cYQvTDULT3d36gSlnV",
+          "name": "「僕らのあしあと」ピアノVer.(アニメサイズVer.)",
+          "normalized_name": "「僕らのあしあと」ピアノver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 124285,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4yh2cYQvTDULT3d36gSlnV"
+        }
+      ]
+    },
+    {
+      "album_id": "5UYxZhoGHWtiMfs3iN4JFw",
+      "name": "「僕らのあしあと」ピアノVer.",
+      "album_type": "single",
+      "release_date": "2012-02-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5UYxZhoGHWtiMfs3iN4JFw",
+      "tracks": [
+        {
+          "track_id": "7tQSNSuqcdLc1yoYQL83D2",
+          "name": "「僕らのあしあと」ピアノVer.",
+          "normalized_name": "「僕らのあしあと」ピアノver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 416571,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7tQSNSuqcdLc1yoYQL83D2"
+        }
+      ]
+    },
+    {
+      "album_id": "6DmRR86xWQrznILDbXav30",
+      "name": "僕らのあしあと / 告白",
+      "album_type": "album",
+      "release_date": "2012-03-07",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "spotify_url": "https://open.spotify.com/album/6DmRR86xWQrznILDbXav30",
+      "tracks": [
+        {
+          "track_id": "3GwcspDvZfXSJWkABdg0vO",
+          "name": "僕らのあしあと",
+          "normalized_name": "僕らのあしあと",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 426306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3GwcspDvZfXSJWkABdg0vO"
+        },
+        {
+          "track_id": "16vNVNMiXE3Ygiq6hLDMAV",
+          "name": "告白",
+          "normalized_name": "告白",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 326760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/16vNVNMiXE3Ygiq6hLDMAV"
+        },
+        {
+          "track_id": "3Rhc6yWYr0vBkBes86sHDm",
+          "name": "カレ",
+          "normalized_name": "カレ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 246400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Rhc6yWYr0vBkBes86sHDm"
+        },
+        {
+          "track_id": "2JCZmpCjePq7GZFljUpwf7",
+          "name": "僕らのあしあと (TV Edit)",
+          "normalized_name": "僕らのあしあと",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 91653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2JCZmpCjePq7GZFljUpwf7"
+        },
+        {
+          "track_id": "5KiYrOpvU8YSaEEz90QhlB",
+          "name": "僕らのあしあと -Instrumental-",
+          "normalized_name": "僕らのあしあと instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 426306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5KiYrOpvU8YSaEEz90QhlB"
+        },
+        {
+          "track_id": "5F35fiGeH23iPu8Pou4gJq",
+          "name": "カレ -Instrumental-",
+          "normalized_name": "カレ instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 246413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5F35fiGeH23iPu8Pou4gJq"
+        },
+        {
+          "track_id": "0kmHclL7f5vrwXDyutjeWx",
+          "name": "僕らのあしあと (TV Edit) -Instrumental-",
+          "normalized_name": "僕らのあしあと instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 90626,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0kmHclL7f5vrwXDyutjeWx"
+        }
+      ]
+    },
+    {
+      "album_id": "18eoQn1dpu6PBAxn6dwX6C",
+      "name": "告白 / 僕らのあしあと",
+      "album_type": "album",
+      "release_date": "2012-03-07",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "spotify_url": "https://open.spotify.com/album/18eoQn1dpu6PBAxn6dwX6C",
+      "tracks": [
+        {
+          "track_id": "6HKa0oFjsPBfohTBFkPy84",
+          "name": "告白",
+          "normalized_name": "告白",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 326760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6HKa0oFjsPBfohTBFkPy84"
+        },
+        {
+          "track_id": "3m5lTU2hLnIQnkqpjEuuyG",
+          "name": "僕らのあしあと",
+          "normalized_name": "僕らのあしあと",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 426306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3m5lTU2hLnIQnkqpjEuuyG"
+        },
+        {
+          "track_id": "2nvXwZtieq2eC3DJOCqMOW",
+          "name": "カレ",
+          "normalized_name": "カレ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 246413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2nvXwZtieq2eC3DJOCqMOW"
+        },
+        {
+          "track_id": "392tZAMWHlX9tXnghb7KGf",
+          "name": "告白 (TV Edit)",
+          "normalized_name": "告白",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 92000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/392tZAMWHlX9tXnghb7KGf"
+        },
+        {
+          "track_id": "2ywvClFAqZdBAYu9Fkkp3l",
+          "name": "告白 -Instrumental-",
+          "normalized_name": "告白 instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 325293,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ywvClFAqZdBAYu9Fkkp3l"
+        },
+        {
+          "track_id": "6T7RV5UfsHYZIHqFwEZjlY",
+          "name": "カレ -Instrumental-",
+          "normalized_name": "カレ instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 246413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6T7RV5UfsHYZIHqFwEZjlY"
+        },
+        {
+          "track_id": "3DT52YMKMr6rUTXtMNUxby",
+          "name": "告白 (TV Edit) -Instrumental-",
+          "normalized_name": "告白 instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 90986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3DT52YMKMr6rUTXtMNUxby"
+        }
+      ]
+    },
+    {
+      "album_id": "0wqQ5GPJtcG5r0NMGxg6tK",
+      "name": "星が瞬くこんな夜に 〜オルゴールVer.〜",
+      "album_type": "single",
+      "release_date": "2012-04-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0wqQ5GPJtcG5r0NMGxg6tK",
+      "tracks": [
+        {
+          "track_id": "2b2arUo0JgoiG2bCOAfWam",
+          "name": "星が瞬くこんな夜に 〜オルゴールVer.〜",
+          "normalized_name": "星が瞬くこんな夜に 〜オルゴールver 〜",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 139360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2b2arUo0JgoiG2bCOAfWam"
+        }
+      ]
+    },
+    {
+      "album_id": "04Z7hlT3uG5vBUpsratTDa",
+      "name": "星が瞬くこんな夜に 〜ゲームVer.〜",
+      "album_type": "single",
+      "release_date": "2012-04-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/04Z7hlT3uG5vBUpsratTDa",
+      "tracks": [
+        {
+          "track_id": "0oSWboAnx1PXRmVPNJxUcT",
+          "name": "星が瞬くこんな夜に 〜ゲームVer.〜",
+          "normalized_name": "星が瞬くこんな夜に 〜ゲームver 〜",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 228533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0oSWboAnx1PXRmVPNJxUcT"
+        }
+      ]
+    },
+    {
+      "album_id": "4jEsJGSoC4GPh2xCyiFkf9",
+      "name": "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+      "album_type": "single",
+      "release_date": "2012-06-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4jEsJGSoC4GPh2xCyiFkf9",
+      "tracks": [
+        {
+          "track_id": "60qEyyRVjCV22dd9kKf8kD",
+          "name": "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+          "normalized_name": "劇場版アニメ映画「ねらわれた学園」特報用bgm by supercell",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 139024,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/60qEyyRVjCV22dd9kKf8kD"
+        }
+      ]
+    },
+    {
+      "album_id": "1nl0K6AB6TVPVY6CyjS4Ch",
+      "name": "銀色飛行船",
+      "album_type": "single",
+      "release_date": "2012-12-12",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/1nl0K6AB6TVPVY6CyjS4Ch",
+      "tracks": [
+        {
+          "track_id": "3CApprxEYhjgRbe4hOSHsT",
+          "name": "銀色飛行船",
+          "normalized_name": "銀色飛行船",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 425453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3CApprxEYhjgRbe4hOSHsT"
+        },
+        {
+          "track_id": "7a3kkyha95HGkveGcIizuZ",
+          "name": "リルモア",
+          "normalized_name": "リルモア",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 234773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7a3kkyha95HGkveGcIizuZ"
+        },
+        {
+          "track_id": "0NpeoatJ78IJIYw5Qx4hws",
+          "name": "劇場版アニメ映画「ねらわれた学園」特報用BGM by supercell",
+          "normalized_name": "劇場版アニメ映画「ねらわれた学園」特報用bgm by supercell",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 142786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0NpeoatJ78IJIYw5Qx4hws"
+        },
+        {
+          "track_id": "2oioPP74Ee8DFxiwnRQR3M",
+          "name": "銀色飛行船 -Instrumental-",
+          "normalized_name": "銀色飛行船 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 425253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2oioPP74Ee8DFxiwnRQR3M"
+        },
+        {
+          "track_id": "45VFjcpV5O2SFulLkdcaKO",
+          "name": "リルモア -Instrumental-",
+          "normalized_name": "リルモア instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 234106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/45VFjcpV5O2SFulLkdcaKO"
+        }
+      ]
+    },
+    {
+      "album_id": "2bQ4jBDAW6FhhWC8zzze48",
+      "name": "The Bravery -TV Edit-",
+      "album_type": "single",
+      "release_date": "2013-02-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2bQ4jBDAW6FhhWC8zzze48",
+      "tracks": [
+        {
+          "track_id": "2hQExFDYsIrlbTL4Z6xndB",
+          "name": "The Bravery -TV Edit-",
+          "normalized_name": "the bravery tv edit",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 91803,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2hQExFDYsIrlbTL4Z6xndB"
+        }
+      ]
+    },
+    {
+      "album_id": "2E5SXUsTx8uo5jY4B87xyL",
+      "name": "The Bravery",
+      "album_type": "album",
+      "release_date": "2013-03-06",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "spotify_url": "https://open.spotify.com/album/2E5SXUsTx8uo5jY4B87xyL",
+      "tracks": [
+        {
+          "track_id": "4ZArDD9FZ3I4thJeQkoOPv",
+          "name": "The Bravery",
+          "normalized_name": "the bravery",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 366786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4ZArDD9FZ3I4thJeQkoOPv"
+        },
+        {
+          "track_id": "0Gj6DwYSv9u7G7AxOHL8P5",
+          "name": "She is my senior",
+          "normalized_name": "she is my senior",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 171773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0Gj6DwYSv9u7G7AxOHL8P5"
+        },
+        {
+          "track_id": "6eKTQCvSjvRdr4HYvsBBCe",
+          "name": "青空",
+          "normalized_name": "青空",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 211346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6eKTQCvSjvRdr4HYvsBBCe"
+        },
+        {
+          "track_id": "0GR7rzXfHn60vCEQjd2hrI",
+          "name": "The Bravery -TV Edit-",
+          "normalized_name": "the bravery tv edit",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 95280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0GR7rzXfHn60vCEQjd2hrI"
+        },
+        {
+          "track_id": "2UQFbACf2hbj15N7jDdquX",
+          "name": "The Bravery -Instrumental-",
+          "normalized_name": "the bravery instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 367093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2UQFbACf2hbj15N7jDdquX"
+        },
+        {
+          "track_id": "1ZFRI1FHROGqrF76ToEBAa",
+          "name": "青空 -Instrumental-",
+          "normalized_name": "青空 instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 210520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1ZFRI1FHROGqrF76ToEBAa"
+        },
+        {
+          "track_id": "6zGFXbzUY7w1E6lyWd6XVd",
+          "name": "The Bravery (TV Edit) -Instrumental-",
+          "normalized_name": "the bravery instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 93573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6zGFXbzUY7w1E6lyWd6XVd"
+        }
+      ]
+    },
+    {
+      "album_id": "1Pc2loeH5hHgDUMDAoVkej",
+      "name": "Yeah Oh Ahhh Oh !",
+      "album_type": "single",
+      "release_date": "2013-05-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1Pc2loeH5hHgDUMDAoVkej",
+      "tracks": [
+        {
+          "track_id": "4rsyJ39JBkkYjWzJSQOfbX",
+          "name": "Yeah Oh Ahhh Oh !",
+          "normalized_name": "yeah oh ahhh oh",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 236486,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4rsyJ39JBkkYjWzJSQOfbX"
+        }
+      ]
+    },
+    {
+      "album_id": "5Js0Lhp0tDQJpHknHatIGk",
+      "name": "拍手喝采歌合",
+      "album_type": "single",
+      "release_date": "2013-05-29",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/5Js0Lhp0tDQJpHknHatIGk",
+      "tracks": [
+        {
+          "track_id": "5cZ9wLF6QyIQMitz5ojGBs",
+          "name": "拍手喝采歌合",
+          "normalized_name": "拍手喝采歌合",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5cZ9wLF6QyIQMitz5ojGBs"
+        },
+        {
+          "track_id": "3Qg6PyJS1HhJFH2bxhDndo",
+          "name": "M.K.O",
+          "normalized_name": "m k o",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 255186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Qg6PyJS1HhJFH2bxhDndo"
+        },
+        {
+          "track_id": "6qspyJ9uJhh8aNMxn7q46M",
+          "name": "夕焼けブルース",
+          "normalized_name": "夕焼けブルース",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 311573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6qspyJ9uJhh8aNMxn7q46M"
+        },
+        {
+          "track_id": "1Qvbvsn0bSZ9NckpuZuaSJ",
+          "name": "拍手喝采歌合 (TV Edit)",
+          "normalized_name": "拍手喝采歌合",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 96680,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Qvbvsn0bSZ9NckpuZuaSJ"
+        }
+      ]
+    },
+    {
+      "album_id": "41aTwVzX67kHKe9AOU3xfJ",
+      "name": "拍手喝采歌合 （8 tracks）",
+      "album_type": "album",
+      "release_date": "2013-06-12",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/41aTwVzX67kHKe9AOU3xfJ",
+      "tracks": [
+        {
+          "track_id": "18OYdAqrZuJhCB4RJnH02n",
+          "name": "拍手喝采歌合",
+          "normalized_name": "拍手喝采歌合",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/18OYdAqrZuJhCB4RJnH02n"
+        },
+        {
+          "track_id": "675okcfQRXxabSFcabwKIM",
+          "name": "M.K.O",
+          "normalized_name": "m k o",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 255186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/675okcfQRXxabSFcabwKIM"
+        },
+        {
+          "track_id": "23Nel1qdDHgWOTW2HTMeht",
+          "name": "夕焼けブルース",
+          "normalized_name": "夕焼けブルース",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 311573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/23Nel1qdDHgWOTW2HTMeht"
+        },
+        {
+          "track_id": "6QRgrzwSevenmIGThs18e8",
+          "name": "拍手喝采歌合 (TV Edit)",
+          "normalized_name": "拍手喝采歌合",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 96680,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6QRgrzwSevenmIGThs18e8"
+        },
+        {
+          "track_id": "2cRtiC00lhp9KX7lUJ5uMV",
+          "name": "拍手喝采歌合 -Instrumental-",
+          "normalized_name": "拍手喝采歌合 instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 236520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2cRtiC00lhp9KX7lUJ5uMV"
+        },
+        {
+          "track_id": "6wHWtnbzkYmJtak3UU9YYK",
+          "name": "M.K.O -Instrumental-",
+          "normalized_name": "m k o instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 255186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6wHWtnbzkYmJtak3UU9YYK"
+        },
+        {
+          "track_id": "4XcRlebQkbxr4XslWvWK7S",
+          "name": "夕焼けブルース -Instrumental-",
+          "normalized_name": "夕焼けブルース instrumental",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 311573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4XcRlebQkbxr4XslWvWK7S"
+        },
+        {
+          "track_id": "3KGMht7QnhiKKn96jYTJQI",
+          "name": "拍手喝采歌合 (TV Edit) -Instrumental-",
+          "normalized_name": "拍手喝采歌合 instrumental",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 91800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3KGMht7QnhiKKn96jYTJQI"
+        }
+      ]
+    },
+    {
+      "album_id": "1Fmp6pZ9Ofes1uWCQbeqtJ",
+      "name": "No.525300887039",
+      "album_type": "single",
+      "release_date": "2013-11-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1Fmp6pZ9Ofes1uWCQbeqtJ",
+      "tracks": [
+        {
+          "track_id": "3HSjxY63Qycq8zxZZVuzZK",
+          "name": "No.525300887039",
+          "normalized_name": "no 525300887039",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 356853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3HSjxY63Qycq8zxZZVuzZK"
+        }
+      ]
+    },
+    {
+      "album_id": "4FaAd5JbAawLafdAskIX1V",
+      "name": "ZIGAEXPERIENTIA",
+      "album_type": "album",
+      "release_date": "2013-11-27",
+      "release_date_precision": "day",
+      "total_tracks": 15,
+      "spotify_url": "https://open.spotify.com/album/4FaAd5JbAawLafdAskIX1V",
+      "tracks": [
+        {
+          "track_id": "1tRkyd86waweuG9tfp1DUh",
+          "name": "Journey's End",
+          "normalized_name": "journeys end",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 109266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1tRkyd86waweuG9tfp1DUh"
+        },
+        {
+          "track_id": "0muKv4GgYOxKLYG9BvWggL",
+          "name": "No.525300887039",
+          "normalized_name": "no 525300887039",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 356853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0muKv4GgYOxKLYG9BvWggL"
+        },
+        {
+          "track_id": "6rnl0cT68EPquBsohNhecn",
+          "name": "Mr.Downer",
+          "normalized_name": "mr downer",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 251253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6rnl0cT68EPquBsohNhecn"
+        },
+        {
+          "track_id": "1O4GEIisLN8qLMIVx0lRkr",
+          "name": "My Dearest (Album Mix)",
+          "normalized_name": "my dearest",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 336626,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1O4GEIisLN8qLMIVx0lRkr"
+        },
+        {
+          "track_id": "0B6mgYHZQKhuWIjYXwgruP",
+          "name": "従属人間",
+          "normalized_name": "従属人間",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 214720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0B6mgYHZQKhuWIjYXwgruP"
+        },
+        {
+          "track_id": "4k2Kz2192n9UmCOgIwxoVW",
+          "name": "ホワイト製薬",
+          "normalized_name": "ホワイト製薬",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 200093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4k2Kz2192n9UmCOgIwxoVW"
+        },
+        {
+          "track_id": "4PiLSMexVhHfOSoid5Phch",
+          "name": "拍手喝采歌合",
+          "normalized_name": "拍手喝采歌合",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 238333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4PiLSMexVhHfOSoid5Phch"
+        },
+        {
+          "track_id": "5DeJAp87ZpTKKq4PZU5xpE",
+          "name": "Yeah Oh Ahhh Oh !",
+          "normalized_name": "yeah oh ahhh oh",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 221533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5DeJAp87ZpTKKq4PZU5xpE"
+        },
+        {
+          "track_id": "6nfz5StHQOmflba2QEuaOH",
+          "name": "百回目のキス",
+          "normalized_name": "百回目のキス",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 286000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6nfz5StHQOmflba2QEuaOH"
+        },
+        {
+          "track_id": "4ZrKbQOyeIHtVDQK4ofNka",
+          "name": "銀色飛行船",
+          "normalized_name": "銀色飛行船",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 423786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4ZrKbQOyeIHtVDQK4ofNka"
+        },
+        {
+          "track_id": "27tUC6QgbGlMZ85yiZ6via",
+          "name": "The Bravery (Album Mix)",
+          "normalized_name": "the bravery",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 364613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/27tUC6QgbGlMZ85yiZ6via"
+        },
+        {
+          "track_id": "3MhzuvzuL0DH61Adjt7PwT",
+          "name": "僕らのあしあと (Album Mix)",
+          "normalized_name": "僕らのあしあと",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 427613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3MhzuvzuL0DH61Adjt7PwT"
+        },
+        {
+          "track_id": "77d6ML0qrYAJdqQtMy32y5",
+          "name": "告白 (Album Mix)",
+          "normalized_name": "告白",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 326000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/77d6ML0qrYAJdqQtMy32y5"
+        },
+        {
+          "track_id": "3Tfp5vsEBeo2dzBkGCEGy6",
+          "name": "時間列車",
+          "normalized_name": "時間列車",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 236880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Tfp5vsEBeo2dzBkGCEGy6"
+        },
+        {
+          "track_id": "4YheXJdZgDNNx35jj2GdwD",
+          "name": "We're Still Here",
+          "normalized_name": "were still here",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 311960,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4YheXJdZgDNNx35jj2GdwD"
+        }
+      ]
+    },
+    {
+      "album_id": "3Ac96d2FLYKpCydErpQSsy",
+      "name": "#Love",
+      "album_type": "single",
+      "release_date": "2019-07-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3Ac96d2FLYKpCydErpQSsy",
+      "tracks": [
+        {
+          "track_id": "2njs7jX9TH0IVHsAD6scFk",
+          "name": "#Love",
+          "normalized_name": "#love",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 260905,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2njs7jX9TH0IVHsAD6scFk"
+        }
+      ]
+    },
+    {
+      "album_id": "3g2hr2jFwLl3ittIUCgFES",
+      "name": "#Love",
+      "album_type": "single",
+      "release_date": "2019-09-11",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/3g2hr2jFwLl3ittIUCgFES",
+      "tracks": [
+        {
+          "track_id": "6drb4QoNz74QaLqaEB4Tni",
+          "name": "#Love",
+          "normalized_name": "#love",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 262200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6drb4QoNz74QaLqaEB4Tni"
+        },
+        {
+          "track_id": "1Ko6u327lLD1rr6UkCfpOL",
+          "name": "Nanairo night",
+          "normalized_name": "nanairo night",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 181920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Ko6u327lLD1rr6UkCfpOL"
+        },
+        {
+          "track_id": "5xMoirtO4KKQBCR5QY6LL6",
+          "name": "#Love -instrumental-",
+          "normalized_name": "#love instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 261253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5xMoirtO4KKQBCR5QY6LL6"
+        },
+        {
+          "track_id": "16YKc0XfUUIeqeaz90Q3Xa",
+          "name": "Nanairo night -instrumental-",
+          "normalized_name": "nanairo night instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 181426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/16YKc0XfUUIeqeaz90Q3Xa"
+        }
+      ]
+    }
+  ]
+}

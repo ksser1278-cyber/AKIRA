@@ -1,0 +1,36 @@
+{
+  "artist_id": "kanaria",
+  "track_id": "kanaria_mira",
+  "title": "MIRA",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "single_roman_title",
+  "hook_behavior": [
+    "direct title hit",
+    "bright pressure hook"
+  ],
+  "section_flow_guess": [
+    "verse_confession",
+    "prechorus_climb",
+    "chorus_release",
+    "bridge_reflection",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "distance",
+    "light",
+    "staring"
+  ],
+  "emotional_arc": [
+    "distance",
+    "need",
+    "release"
+  ],
+  "leakage_watchouts": [
+    "avoid KING-like slogan repetition"
+  ],
+  "prompt_seed_terms": [
+    "bright alt-pop",
+    "synthetic lead"
+  ],
+  "grounding_status": "research_ready"
+}

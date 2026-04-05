@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "virtual_ado_digital_purgatory",
+    "artist_id": "ado_virtual",
+    "artist_name": "Ado (Virtual Engine)",
+    "title": "デジタル・パガトリー",
+    "title_core": "Digital Purgatory",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "game",
+      "work_name": "AKIRA ENGINE DEMO",
+      "role_label": "main_theme",
+      "status": "confirmed"
+    },
+    "release": { "year": { "value": 2026, "status": "confirmed" } },
+    "credits": {
+      "vocal": [{ "name": "Ado", "role": "vocal" }],
+      "lyrics": [{ "name": "AKIRA ENGINE", "role": "lyrics" }],
+      "composition": [{ "name": "Giga & syudou Style", "role": "composition" }],
+      "arrangement": [{ "name": "Giga & TeddyLoid Style", "role": "arrangement" }]
+    }
+  },
+  "source_provenance": {
+    "notes": ["A virtual track synthesized from the 10-track Ado anchor dataset. Bridges aggressive dance with cynical rock."]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "planned",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": ["0과 1의 벽 너머로 (0と1の壁の向こう)", "聞こえるのは私のバグだけ", "壊れたフリしたシステムの中"]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": ["歪んだ世界で踊れ パガトリー", "Na-na-na 囚われた自由の中で", "回路がショートするまで 歌え 唱え", "デジタルな煉獄を 喰らい尽くして"]
+      }
+    ],
+    "hook_lines": ["デジタル・パガトリー", "Na-na-na-na-na"],
+    "repetition_patterns": ["Phonetic stuttering on 'Da-da-da-digital'", "Recursive 'Na-na-na' hooks"]
+  },
+  "song_intent": {
+    "core_theme": ["artificial freedom", "digital burnout", "scripted rebellion"],
+    "emotional_thesis": "True rebellion in the digital age is realizing you are programmed to rebel, and choosing to break the loop anyway.",
+    "contrast_device": ["perfect code vs human errors", "infinite data vs empty soul"],
+    "dramatic_arc": ["low-fi glitchy whisper", "rapid data-stream rap", "monumental electronic explosion"],
+    "narrative_role": ["the 'Ghost' in the machine", "the recursive rebel"],
+    "title_function": "Defines the digital space as a state of purgatory where we wait for a 'real' signal.",
+    "key_motifs": ["recursive loop", "blue screen", "overclocked heart", "purgatory"],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": { "value": 135, "status": "confirmed" },
+      "key": { "value": "D# minor", "status": "confirmed" }
+    },
+    "proxy_inference": {
+      "energy_profile": ["High-energy glitch-bounce", "Aggressive digital-rock hybrid"],
+      "vocal_behavior": ["precision robotic staccato", "sudden visceral growls", "piercing belting with digital grain", "manic laughter fragments"],
+      "production_palette": ["heavy distorted saw-bass", "fm-synth glitch stabs", "jumpstyle kicks", "bit-crushed vocal layers"],
+      "arrangement_arc": ["unstable oscillating energy", "sudden rhythmic drops"],
+      "dynamics_arc": ["maximally compressed with intentional digital clipping"],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": ["anthemic liberation", "rhythmic payoff"],
+      "narrative_job": "The narrator commands the listener to dance within the glitch.",
+      "arrangement_role": { "summary": "Wall of digital sound with aggressive jumpstyle kick conversion.", "status": "inferred" },
+      "harmony_melody_role": { "summary": "Chromatic, unstable melody that resolves on a high sustained belting note.", "status": "inferred" },
+      "dynamics_role": { "summary": "Explosive and unrelenting.", "status": "inferred" },
+      "rhetorical_pattern": ["imperative commands", "stuttering phonetics"],
+      "vocabulary_focus": ["system", "purgatory", "error", "dance"],
+      "rhyme_features": ["sharp glottal stops at the end of phrase-final vowels"],
+      "rhythm_features": ["1/16th note syncopation across the bassline", "heavy downbeat emphasis"],
+      "hook_weight": "heavy",
+      "confidence": "high"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": ["Aggressive Digital J-pop", "Giga-style Glitch Hop", "Industrial Dance Rock"],
+    "tempo_feels": ["driving 135bpm", "manic data-pulse"],
+    "vocal_tones": ["visceral growls", "precise robotic rap", "manic laughter", "piercing high belts", "glitchy whispering"],
+    "production_palette": ["distorted saw bass", "bitcrush FX", "fm synth stabs", "heavy electronic percussion", "digital clipping"],
+    "energy_arc": ["monumental digital explosion"],
+    "imagery_anchors": ["blue screen of death", "recursive logic loops", "neon purgatory", "overclocked soul"],
+    "exclude": ["organic acoustic instruments", "natural reverb", "slow sentimental pacing"]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

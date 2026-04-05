@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "record_type": "audio_manifest",
+  "source_root": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함",
+  "notes": [
+    "This manifest maps externally stored owned audio files to canonical track_ids used by AKIRA ENGINE.",
+    "Files remain in the source_root and are not duplicated into the repository by default.",
+    "These mappings are intended for future audio analysis and provenance-aware enrichment."
+  ],
+  "tracks": [
+    {
+      "track_id": "pinocchiop_kamippoi_na",
+      "artist_id": "pinocchiop",
+      "title": "God-ish",
+      "source_filename": "PinocchioP-01-God-ish.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\PinocchioP-01-God-ish.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "pinocchiop_tensei_ringo",
+      "artist_id": "pinocchiop",
+      "title": "Reincarnation Apple",
+      "source_filename": "PinocchioP-01-Reincarnation Apple.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\PinocchioP-01-Reincarnation Apple.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "pinocchiop_tokumei_m",
+      "artist_id": "pinocchiop",
+      "title": "Anonymous M",
+      "source_filename": "PinocchioP-01-Anonymous M (feat. HATSUNE MIKU & ARuFa).flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\PinocchioP-01-Anonymous M (feat. HATSUNE MIKU & ARuFa).flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+      "artist_id": "pinocchiop",
+      "title": "Magical Girl and Chocolate",
+      "source_filename": "PinocchioP-01-Magical Girl and Chocolate.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\PinocchioP-01-Magical Girl and Chocolate.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "pinocchiop_non_breath_oblige",
+      "artist_id": "pinocchiop",
+      "title": "Non-breath oblige",
+      "source_filename": "PinocchioP-01-Non-breath oblige.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\PinocchioP-01-Non-breath oblige.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "deco27_ghost_rule",
+      "artist_id": "deco27",
+      "title": "Ghost Rule",
+      "source_filename": "DECO_27-01-Ghost Rule.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\DECO_27-01-Ghost Rule.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "deco27_love_doll",
+      "artist_id": "deco27",
+      "title": "LOVE DOLL",
+      "source_filename": "DECO_27-03-LOVE DOLL.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\DECO_27-03-LOVE DOLL.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "deco27_ai_kotoba",
+      "artist_id": "deco27",
+      "title": "Ai Kotoba",
+      "source_filename": "DECO_27-05-Ai Kotoba.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\DECO_27-05-Ai Kotoba.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "deco27_tsumi_to_batsu",
+      "artist_id": "deco27",
+      "title": "Tsumi to Batsu",
+      "source_filename": "DECO_27-10-Tsumi to Batsu.flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\DECO_27-10-Tsumi to Batsu.flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    },
+    {
+      "track_id": "deco27_yumeyume",
+      "artist_id": "deco27",
+      "title": "Yumeyume (Feat. Hatsune Miku)",
+      "source_filename": "DECO_27-01-Yumeyume (Feat. Hatsune Miku).flac",
+      "source_path": "C:\\Users\\hangi\\OneDrive\\문서\\멜론 보관함\\받은 파일함\\DECO_27-01-Yumeyume (Feat. Hatsune Miku).flac",
+      "audio_format": "flac",
+      "status": "owned",
+      "provenance": "melon_library"
+    }
+  ]
+}

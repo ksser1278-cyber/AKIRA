@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_promotion_artist_packet",
+  "artist_id": "deco27",
+  "track_count": 3,
+  "tracks": [
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_mozaik_role",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\mozaik_role.conditioning.json",
+      "score": 0.79,
+      "blockers": [
+        "missing_provenance",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "metadata_backfill",
+      "recommended_next_action": "add trusted metadata or lyric provenance and verify mode alignment",
+      "external_evidence_required": true,
+      "internal_review_candidate": true,
+      "priority": "high",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": ""
+    },
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_android_girl",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\android_girl.conditioning.json",
+      "score": 0.77,
+      "blockers": [
+        "missing_provenance",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "metadata_backfill",
+      "recommended_next_action": "add trusted metadata or lyric provenance and verify mode alignment",
+      "external_evidence_required": true,
+      "internal_review_candidate": true,
+      "priority": "high",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": ""
+    },
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_salamander",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\salamander.conditioning.json",
+      "score": 0.77,
+      "blockers": [
+        "missing_provenance",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "metadata_backfill",
+      "recommended_next_action": "add trusted metadata or lyric provenance and verify mode alignment",
+      "external_evidence_required": true,
+      "internal_review_candidate": true,
+      "priority": "high",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": ""
+    }
+  ]
+}

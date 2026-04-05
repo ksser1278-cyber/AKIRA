@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_nee_nee_nee",
+    "artist_id": "pinocchiop",
+    "artist_name": "pinocchiop",
+    "title": "ねぇねぇねぇ。",
+    "title_core": "ねぇねぇねぇ。",
+    "language": "ja",
+    "artist": "pinocchiop",
+    "status": "cross_checked"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      },
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Round 2 Expansion Scaffold Engine",
+        "origin": "manual_note",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Scaffold only. Full grounding and provenance required before audit promotion.",
+      "Upgraded 32 candidate seeds to usable status directly via python mapping."
+    ],
+    "trusted_ratio": 1.0
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Scaffold placeholder built from round2 seed, not full lyric grounding.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "Initial scenario setting",
+          "Establishing the baseline emotion"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "Rising tension",
+          "Preparing the twist"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "Call and response",
+          "Peak expression of the core intent"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "Thematic twist",
+          "Slower or disjointed reflection"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "Needy demands",
+          "Maximal sonic release",
+          "Ending note"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ねぇねぇねぇ。",
+      "call and response",
+      "Call and response",
+      "Needy demands"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "call and response",
+      "cloying cuteness"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "tapping shoulders",
+      "ignored texts",
+      "staring"
+    ],
+    "emotional_thesis": "Round2 scaffold awaiting full grounding.",
+    "contrast_device": "Cloying cute electro pop hiding severe toxic dependency.",
+    "dramatic_arc": [
+      "loneliness",
+      "needy demands",
+      "anger"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ],
+    "tie_in_function": "",
+    "title_function": "seed_centerpiece",
+    "key_motifs": [
+      "tapping shoulders",
+      "ignored texts",
+      "staring",
+      "smiles"
+    ],
+    "interpretation_confidence": "low",
+    "message": "Look at me, validate me.",
+    "core_emotion": "Loneliness/Anger",
+    "primary_target": "The listener or a toxic counterpart",
+    "status": "cross_checked"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Sets the mood and initial conflict.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Drives the instrumental forward.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hit"
+      ],
+      "narrative_job": "Explosive delivery of the title concept.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "reversal / silence"
+      ],
+      "narrative_job": "Subverts expectations before the finale.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Highest energy state of the track.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "medium",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "repetitive_greeting"
+    ],
+    "critic_focus": [
+      "needs_full_grounding",
+      "needs_provenance"
+    ],
+    "section_features": [
+      "verse_greeting",
+      "prechorus_ignoring",
+      "chorus_demanding_attention",
+      "bridge_anger",
+      "chorus_final"
+    ]
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": [
+        "loneliness",
+        "needy demands",
+        "anger"
+      ],
+      "vocal_behavior": [
+        "call and response",
+        "cloying cuteness",
+        "toxic dependence"
+      ],
+      "production_palette": [
+        "cute electro pop",
+        "needy vocals",
+        "call and response"
+      ],
+      "confidence": "estimated",
+      "evidence_basis": [
+        "round2_draft_seed"
+      ]
+    },
+    "do_not_overclaim": [
+      "BPM exactness",
+      "key exactness",
+      "arrangement exactness"
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark_cute_breakdown",
+      "vocaloid",
+      "subculture",
+      "cute electro pop",
+      "needy vocals"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "call and response",
+      "cloying cuteness",
+      "toxic dependence",
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "cute electro pop",
+      "needy vocals",
+      "call and response",
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "loneliness",
+      "needy demands",
+      "anger",
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "tapping shoulders",
+      "ignored texts",
+      "staring",
+      "smiles",
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "anchor leakage",
+      "verbatim hook reuse",
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "round2_draft_seed",
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "usable",
+    "missing_fields": [
+      "full lyrics",
+      "provenance",
+      "audio facts"
+    ],
+    "manual_review_required_for": [
+      "lyric grounding",
+      "source cross-check",
+      "section validation"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "notes": [
+      "Dialog-driven toxic cuteness."
+    ],
+    "warnings": []
+  },
+  "likely_mode": "dark_cute_breakdown",
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.67,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.1,
+      "renderer_readiness": 0.0
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "partial_grounding",
+      "surface_noise_risk",
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "high",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled",
+      "placeholder indicators: scaffold, placeholder, awaiting full grounding"
+    ]
+  }
+}

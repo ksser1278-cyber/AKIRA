@@ -15,8 +15,9 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def audio_index() -> dict[str, dict[str, Any]]:
-    summary_path = project_root() / "reports" / "audio" / "audio_analysis_summary.json"
+def audio_index(project_root_path: Path | None = None) -> dict[str, dict[str, Any]]:
+    root = project_root_path or project_root()
+    summary_path = root / "reports" / "audio" / "audio_analysis_summary.json"
     if not summary_path.exists():
         return {}
     payload = load_json(summary_path)
@@ -27,9 +28,10 @@ def audio_index() -> dict[str, dict[str, Any]]:
     }
 
 
-def conditioning_audit_payload(artist_id: str) -> dict[str, Any] | None:
+def conditioning_audit_payload(artist_id: str, project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
     report_path = (
-        project_root()
+        root
         / "reports"
         / "quality"
         / "conditioning"
@@ -40,9 +42,10 @@ def conditioning_audit_payload(artist_id: str) -> dict[str, Any] | None:
     return load_json(report_path)
 
 
-def producer_expansion_audit_payload(artist_id: str) -> dict[str, Any] | None:
+def producer_expansion_audit_payload(artist_id: str, project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
     report_path = (
-        project_root()
+        root
         / "reports"
         / "quality"
         / "conditioning"
@@ -57,12 +60,15 @@ def build_artist_health(
     artist_id: str,
     audio_tracks: dict[str, dict[str, Any]],
     generation_safety_by_artist: dict[str, dict[str, Any]],
+    *,
+    project_root_path: Path | None = None,
 ) -> dict[str, Any]:
-    benchmark_path = latest_benchmark_manifest(project_root(), artist_id)
+    root = project_root_path or project_root()
+    benchmark_path = latest_benchmark_manifest(root, artist_id)
     benchmark = load_json(benchmark_path) if benchmark_path else {}
-    audit = conditioning_audit_payload(artist_id) or {}
-    expansion_audit = producer_expansion_audit_payload(artist_id) or {}
-    demo_smoke = demo_smoke_payload(artist_id)
+    audit = conditioning_audit_payload(artist_id, root) or {}
+    expansion_audit = producer_expansion_audit_payload(artist_id, root) or {}
+    demo_smoke = demo_smoke_payload(artist_id, root)
     runs = benchmark.get("runs", [])
     if not runs and benchmark.get("rows"):
         runs = [
@@ -164,7 +170,7 @@ def build_artist_health(
     return {
         "artist_id": artist_id,
         "conditioning_audit_path": str(
-            project_root()
+            root
             / "reports"
             / "quality"
             / "conditioning"
@@ -211,23 +217,26 @@ def build_artist_health(
     }
 
 
-def mode_support_payload() -> dict[str, Any] | None:
-    report_path = project_root() / "reports" / "planning" / "mode_support_status.json"
+def mode_support_payload(project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
+    report_path = root / "reports" / "planning" / "mode_support_status.json"
     if not report_path.exists():
         return None
     return load_json(report_path)
 
 
-def mode_support_audit_payload(mode_id: str) -> dict[str, Any] | None:
-    report_path = project_root() / "reports" / "quality" / "mode_support_audit" / f"{mode_id}_mode_support_audit.json"
+def mode_support_audit_payload(mode_id: str, project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
+    report_path = root / "reports" / "quality" / "mode_support_audit" / f"{mode_id}_mode_support_audit.json"
     if not report_path.exists():
         return None
     return load_json(report_path)
 
 
-def mode_support_benchmark_payload(mode_id: str) -> dict[str, Any] | None:
+def mode_support_benchmark_payload(mode_id: str, project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
     report_path = (
-        project_root()
+        root
         / "outputs"
         / "mode_support_benchmark"
         / mode_id
@@ -238,15 +247,17 @@ def mode_support_benchmark_payload(mode_id: str) -> dict[str, Any] | None:
     return load_json(report_path)
 
 
-def round2_expansion_payload() -> dict[str, Any] | None:
-    report_path = project_root() / "reports" / "planning" / "round2_expansion_status.json"
+def round2_expansion_payload(project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
+    report_path = root / "reports" / "planning" / "round2_expansion_status.json"
     if not report_path.exists():
         return None
     return load_json(report_path)
 
 
-def generation_safety_payload() -> dict[str, Any] | None:
-    report_path = project_root() / "reports" / "planning" / "generation_safety_pilot_status.json"
+def generation_safety_payload(project_root_path: Path | None = None) -> dict[str, Any] | None:
+    root = project_root_path or project_root()
+    report_path = root / "reports" / "planning" / "generation_safety_pilot_status.json"
     if not report_path.exists():
         return None
     return load_json(report_path)
@@ -280,8 +291,9 @@ def _demo_smoke_candidate_summary(manifest: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def demo_smoke_payload(artist_id: str) -> dict[str, Any]:
-    outputs_root = project_root() / "outputs"
+def demo_smoke_payload(artist_id: str, project_root_path: Path | None = None) -> dict[str, Any]:
+    root = project_root_path or project_root()
+    outputs_root = root / "outputs"
     runs: list[dict[str, Any]] = []
     latest_by_mode: dict[str, dict[str, Any]] = {}
     if outputs_root.exists():
@@ -304,22 +316,23 @@ def demo_smoke_payload(artist_id: str) -> dict[str, Any]:
     }
 
 
-def build_engine_health(artist_ids: list[str]) -> dict[str, Any]:
-    audio_tracks = audio_index()
-    generation_safety = generation_safety_payload() or {}
+def build_engine_health(artist_ids: list[str], project_root_path: Path | None = None) -> dict[str, Any]:
+    root = project_root_path or project_root()
+    audio_tracks = audio_index(root)
+    generation_safety = generation_safety_payload(root) or {}
     generation_safety_by_artist = {
         str(item.get("artist_id", "")).strip(): item
         for item in generation_safety.get("artists", [])
         if str(item.get("artist_id", "")).strip()
     }
-    artists = [build_artist_health(artist_id, audio_tracks, generation_safety_by_artist) for artist_id in artist_ids]
-    mode_support = mode_support_payload() or {}
+    artists = [build_artist_health(artist_id, audio_tracks, generation_safety_by_artist, project_root_path=root) for artist_id in artist_ids]
+    mode_support = mode_support_payload(root) or {}
     mode_audits = []
     for mode in mode_support.get("modes", []):
         mode_id = str(mode.get("mode_id", "")).strip()
         if not mode_id:
             continue
-        audit = mode_support_audit_payload(mode_id)
+        audit = mode_support_audit_payload(mode_id, root)
         if not audit:
             continue
         mode_audits.append(
@@ -337,7 +350,7 @@ def build_engine_health(artist_ids: list[str]) -> dict[str, Any]:
         mode_id = str(mode.get("mode_id", "")).strip()
         if not mode_id:
             continue
-        benchmark = mode_support_benchmark_payload(mode_id)
+        benchmark = mode_support_benchmark_payload(mode_id, root)
         if not benchmark:
             continue
         runs = list(benchmark.get("runs", []))
@@ -357,10 +370,10 @@ def build_engine_health(artist_ids: list[str]) -> dict[str, Any]:
                 ],
             }
         )
-    hard_case_path = project_root() / "data" / "_global" / "hard_case_registry.json"
+    hard_case_path = root / "data" / "_global" / "hard_case_registry.json"
     hard_case_registry = load_json(hard_case_path) if hard_case_path.exists() else {}
     hard_case_artists = hard_case_registry.get("artists", [])
-    round2 = round2_expansion_payload() or {}
+    round2 = round2_expansion_payload(root) or {}
     return {
         "schema_version": "1.0",
         "artists": artists,

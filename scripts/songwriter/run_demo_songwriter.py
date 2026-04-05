@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.akira_engine.demo_runtime import run_demo_songwriter
+from src.akira_engine.cli import run_songwriter_demo
 
 
 def parse_args() -> argparse.Namespace:
@@ -64,16 +64,11 @@ def main() -> None:
             pass
 
     args = parse_args()
-    project_root = args.project_root.resolve()
-    output_root = args.output_dir if args.output_dir.is_absolute() else (project_root / args.output_dir).resolve()
-    mode_segment = args.mode_id or "auto"
-    output_dir = output_root / args.artist_id / mode_segment
-
-    manifest = run_demo_songwriter(
-        project_root,
+    manifest = run_songwriter_demo(
+        project_root=args.project_root.resolve(),
         artist_id=args.artist_id,
         mode_id=args.mode_id,
-        output_dir=output_dir,
+        output_dir=args.output_dir,
         candidate_count=args.candidate_count,
         intent=args.intent or "",
         title_seed=args.title_seed or "",
@@ -88,6 +83,7 @@ def main() -> None:
     print(f"Winning score: {manifest['selected_score']}")
     print(f"Requested generation mode: {manifest.get('requested_generation_mode', 'auto')}")
     print(f"Resolved generation mode: {manifest.get('generation_mode', 'template')}")
+    print(f"Source root: {manifest.get('source_root', args.project_root.resolve())}")
 
 
 if __name__ == "__main__":

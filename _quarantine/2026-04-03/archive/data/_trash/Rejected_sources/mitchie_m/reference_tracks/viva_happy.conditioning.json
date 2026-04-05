@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "mitchie_m_viva_happy",
+    "artist_id": "mitchie_m",
+    "artist_name": "Mitchie M",
+    "title": "ビバハピ",
+    "title_core": "Viva Happy"
+  },
+  "song_intent": {
+    "core_theme": ["Positivity", "Dance", "Self-Love"],
+    "emotional_target": "Infectious joy and high-tension energy.",
+    "key_motifs": ["Microphone", "Mini-skirt", "Happiness"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "あ あ… マイクオッケー。 イックよ～\nミニスカートで 襲撃だ (キュン)\nギャップ萌えして 衝撃だ (キュン)\n恋の妄想 回路暴走 デマ出ま ほら (ブーブー)\n\nビビビビビ ビバビバハピ (チュルチュチュ)\n弾ける笑顔で Fly Away\nビビビビビ ビバビバハピ (チュルチュチュ)\nハッピーに振る舞う キミが好きだよ",
+    "hook_lines": ["ビバビバハピ", "ハッピーに振る舞う キ미が好きだよ"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["ビビ비ビビ ビバビバハピ (チュルチュチュ)", "弾ける笑顔で Fly Away", "ビビ비비ビ ビバ비바ハピ (チュルチュチュ)"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Human-like", "Cheerful", "Rapping", "Bright"],
+    "production_palette": ["Funky bass", "Scratching", "Danceable disco beat"],
+    "energy_arc": "Sustained peak euphoria",
+    "imagery_anchors": ["Glitter", "Sparkling idols", "Stage lights", "Colorful candy"]
+  }
+}

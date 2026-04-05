@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "deco27_hibana"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/234731/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm17081001/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/522198/products/1247346/1/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for deco27_hibana. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "コンコン 敲いて",
+          "溢れ出した 感情が",
+          "僕の喉を 焼いてゆく",
+          "未完成な 言葉で"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "未だに 震えてる 胸に 突き刺さる",
+          "答えなんて 無いのに",
+          "ただ 叫びたいだけなんだ",
+          "ヒバナ 散らして"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ヒバナ 散らして",
+      "未だに 震えてる 胸に 突き刺さる"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_mira"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and cynical love themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "廃退して捨てれない、夢、妬み、愁い",
+          "嫌い、嫌い、すべてが"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "赤い糸絡まり縺れて",
+          "また何か、不穏な夜が来る"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ビビデビビデバッド",
+          "抱きしめて、ラブ、見せかけたラブ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "放棄された、夢の続きを",
+          "恨んで、妬んで、生きていく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ビビデビビデバッド",
+          "抱きしめて、ラブ、プラスチックなラブ",
+          "さよなら、偽りの愛"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ビビデビビデバッド",
+      "見せかけたラブ",
+      "赤い糸絡まり縺れて"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "Portrays a cynical and jaded outlook on love and abandoned dreams, using incantatory hooks and somatic imagery of tangled fate."
+  }
+}

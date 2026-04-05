@@ -1,0 +1,68 @@
+[
+  {
+    "artist_id": "kanaria",
+    "mode_id": "ironic_meta",
+    "test_command_template": "run_demo_songwriter --artist-id kanaria --mode-id ironic_meta",
+    "top_archetype_fields_to_watch": ["title_patterns", "hook_construction", "common_imagery"],
+    "likely_failure_signals": ["excessive title genericism (KING/QUEEN clones)", "phonetic energy loss in verses"],
+    "likely_renderer_gaps": ["lack of royal-minimalist lexicon weighting", "no specific bass-drop phonetic sync"],
+    "pass_gate": ["status-title drop ignition verified", "minimalist grit vs royal tropes balance"],
+    "review_focus": ["phonetic-burst impact", "title binding logic"],
+    "priority": "high"
+  },
+  {
+    "artist_id": "maretu",
+    "mode_id": "dark_cute_breakdown",
+    "test_command_template": "run_demo_songwriter --artist-id maretu --mode-id dark_cute_breakdown",
+    "top_archetype_fields_to_watch": ["hook_construction", "bridge_final_chorus_behavior", "core_identity"],
+    "likely_failure_signals": ["loss of keigo-dissonance complexity", "graphic gore without clinical distancing"],
+    "likely_renderer_gaps": ["no explicit 'polite-cruelty' phrase bank", "industrial trauma motifs not surfaced"],
+    "pass_gate": ["clinical cruelty preserved", "no soft-pop narrative leakage", "keigo logic pass"],
+    "review_focus": ["keigo-to-violence transition", "rhythmic mora-stabs"],
+    "priority": "high"
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "mode_id": "direct_emotional_pop",
+    "test_command_template": "run_demo_songwriter --artist-id kairiki_bear --mode-id direct_emotional_pop",
+    "top_archetype_fields_to_watch": ["hook_construction", "common_imagery", "leakage_risks"],
+    "likely_failure_signals": ["stuttering jitter (randomized feel)", "medical toxicity motifs feeling like generic tropes"],
+    "likely_renderer_gaps": ["stutter_pre_hook logic unstable in renderer", "no obsessive-recursive loop constraints"],
+    "pass_gate": ["be-be-be loops verified", "internalized clinical monologue stability"],
+    "review_focus": ["hyper-mora stuttering stability", "motif landing accuracy"],
+    "priority": "high"
+  },
+  {
+    "artist_id": "iyowa",
+    "mode_id": "ironic_meta",
+    "test_command_template": "run_demo_songwriter --artist-id iyowa --mode-id ironic_meta",
+    "top_archetype_fields_to_watch": ["common_imagery", "emotional_arc_types", "safe_originality_zone"],
+    "likely_failure_signals": ["logic-shatter (meaningless output)", "distorted imagery too abstract for pop structure"],
+    "likely_renderer_gaps": ["no organic-mechanical lexical sampling filter", "piano-pop phrasing lack distinct accents"],
+    "pass_gate": ["beautiful discord verified", "organic-mechanical fusion stable"],
+    "review_focus": ["surreal-mundane noun usage", "expressive verb-looping"],
+    "priority": "high"
+  },
+  {
+    "artist_id": "syudou",
+    "mode_id": "direct_emotional_pop",
+    "test_command_template": "run_demo_songwriter --artist-id syudou --mode-id direct_emotional_pop",
+    "top_archetype_fields_to_watch": ["core_identity", "hook_construction", "title_patterns"],
+    "likely_failure_signals": ["pure aggressive energy (loss of irony)", "generic anger fallback"],
+    "likely_renderer_gaps": ["diagnostic interjection density unverified", "no explicit 'bitter' diagnostic bank"],
+    "pass_gate": ["diagnostic irony motif landed", "spiteful-swing rhythm verified"],
+    "review_focus": ["diagnostic labels in lyrics", "conversational interjection quality"],
+    "priority": "high"
+  },
+  {
+    "artist_id": "neru",
+    "mode_id": "ironic_meta",
+    "test_command_template": "run_demo_songwriter --artist-id neru --mode-id ironic_meta",
+    "top_archetype_fields_to_watch": ["hook_construction", "common_imagery", "emotional_arc_types"],
+    "likely_failure_signals": ["pure teenage angst (loss of industrial grit)", "standard J-Rock tropes override surgical identity"],
+    "likely_renderer_gaps": ["surgical tool bank inactive", "anti-authoritarian rhetoric too verbal/not percussive"],
+    "pass_gate": ["surgical-industrial motif landing", "percussive negative commands verified"],
+    "review_focus": ["anti-authoritarian tone", "identity-carving metaphors"],
+    "priority": "high"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "artist_id": "neru",
+  "track_id": "neru_lost_ones_weeping",
+  "title": "ロストワンの号哭",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "dramatic_phrase",
+  "hook_behavior": [
+    "screaming rock chorus",
+    "fast guitar riffs"
+  ],
+  "section_flow_guess": [
+    "verse_math_problems",
+    "prechorus_failure",
+    "chorus_screaming_pain",
+    "bridge_crying",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "blackboards",
+    "math",
+    "choking",
+    "voiceless cries"
+  ],
+  "emotional_arc": [
+    "school anxiety",
+    "rebellion",
+    "anguish"
+  ],
+  "leakage_watchouts": [
+    "must be pure, high-BPM emo rock without electronic/kawaii elements"
+  ],
+  "prompt_seed_terms": [
+    "fast emo rock",
+    "screaming teen angst",
+    "driving guitar"
+  ],
+  "grounding_status": "research_ready"
+}

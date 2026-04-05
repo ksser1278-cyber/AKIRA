@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Suno Prompt Asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "asset_identity",
+    "concept_layer",
+    "sound_prompt_layer",
+    "lyric_prompt_layer",
+    "negative_control_layer"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "suno_prompt_asset"
+    },
+    "asset_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "track_id",
+        "artist_id"
+      ],
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "track_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artist_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode_id": {
+          "type": "string"
+        }
+      }
+    },
+    "concept_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_line",
+        "mood_core",
+        "story_core"
+      ],
+      "properties": {
+        "concept_line": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mood_core": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "story_core": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sound_prompt_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "style_prompt_detailed",
+        "style_prompt_compact",
+        "genre_anchors",
+        "tempo_anchors",
+        "arrangement_anchors",
+        "production_anchors",
+        "vocal_anchors"
+      ],
+      "properties": {
+        "style_prompt_detailed": {
+          "type": "string",
+          "minLength": 1
+        },
+        "style_prompt_compact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genre_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tempo_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "arrangement_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "production_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vocal_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lyric_prompt_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lyric_language_hint",
+        "hook_behavior_hint",
+        "section_arc_hint",
+        "imagery_hint",
+        "surface_hint"
+      ],
+      "properties": {
+        "lyric_language_hint": {
+          "type": "string"
+        },
+        "hook_behavior_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "section_arc_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imagery_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "surface_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "negative_control_layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exclude_styles",
+        "negative_sound_anchors",
+        "negative_lyric_anchors"
+      ],
+      "properties": {
+        "exclude_styles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "negative_sound_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "negative_lyric_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "optional_generation_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "slider_guidance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "style_influence": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "weirdness": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "prompt_influence": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        },
+        "persona_reuse_hint": {
+          "type": "string"
+        },
+        "edit_strategy_hint": {
+          "type": "string"
+        },
+        "inspire_pool_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

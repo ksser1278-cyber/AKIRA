@@ -1,0 +1,37 @@
+{
+  "artist_id": "pinocchiop",
+  "track_id": "pinocchiop_suki_na_koto_dake_de_ii_desu",
+  "title": "好きなことだけでいいです",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "passive_aggressive_fact",
+  "hook_behavior": [
+    "gospel/choir synth integration",
+    "sarcastic praise"
+  ],
+  "section_flow_guess": [
+    "verse_mocking_praise",
+    "prechorus_choir",
+    "chorus_sarcastic_anthem",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "hobbies",
+    "ignoring reality",
+    "bubbles",
+    "fake peace"
+  ],
+  "emotional_arc": [
+    "sarcasm",
+    "false euphoria",
+    "judgment"
+  ],
+  "leakage_watchouts": [
+    "the chorus must sound musically like a joyous gospel anthem while the lyrics are deeply cynical"
+  ],
+  "prompt_seed_terms": [
+    "sarcastic gospel pop",
+    "euphoric irony",
+    "choir synths"
+  ],
+  "grounding_status": "research_ready"
+}

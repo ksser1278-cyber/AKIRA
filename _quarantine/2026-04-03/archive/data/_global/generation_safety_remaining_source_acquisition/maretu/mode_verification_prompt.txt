@@ -1,0 +1,49 @@
+This task is a single-track mode verification for `maretu_pink`.
+
+Goal:
+- determine whether `maretu_pink` can be assigned exactly one supported `song_intent.narrative_role`
+- do not rebuild the lyric bundle
+- do not modify main conditioning records directly
+
+Project root:
+- `C:\JPop_Songwriter\AKIRA ENGINE`
+
+Read first:
+- `C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\generation_safety_maretu_pink_mode_verification.md`
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\maretu\mode_verification_packet.md`
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\maretu\incoming\maretu_pink.json`
+- `C:\JPop_Songwriter\AKIRA ENGINE\artists\maretu\profile.json`
+- `C:\JPop_Songwriter\AKIRA ENGINE\artists\maretu\representative_demo_profile.json`
+
+Allowed mode values:
+- `ironic_meta`
+- `direct_emotional_pop`
+- `dark_cute_breakdown`
+
+Task:
+1. use trusted external sources only to verify the best single mode for `maretu_pink`
+2. update the existing bundle file in place only if a single mode is well supported
+3. write the result back to:
+   - `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\maretu\incoming\maretu_pink.json`
+
+Allowed edits:
+- `song_intent.narrative_role`
+- optionally append one short factual note to `source_provenance.notes`
+
+Forbidden:
+- do not rewrite lyrics
+- do not rewrite sections
+- do not rewrite hook_lines
+- do not change lyric_sources
+- do not change metadata_sources
+- do not set multiple modes
+- do not force a mode if support is ambiguous
+- do not use AI summaries, fan wiki summaries, or unattributed mirrors as mode evidence
+
+If support is insufficient:
+- leave `maretu_pink.json` unchanged
+- do not guess
+
+Success condition:
+- the updated file supports exactly one `song_intent.narrative_role`
+- after local merge and recomputation, `mode_fit_unverified` should clear

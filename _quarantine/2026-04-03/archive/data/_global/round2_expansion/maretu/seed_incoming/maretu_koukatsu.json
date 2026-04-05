@@ -1,0 +1,39 @@
+{
+  "artist_id": "maretu",
+  "track_id": "maretu_koukatsu",
+  "title": "コウカツ",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "blunt_kanji",
+  "hook_behavior": [
+    "rapid fire syllables",
+    "metal blast beats",
+    "cynical truth"
+  ],
+  "section_flow_guess": [
+    "verse_blast",
+    "prechorus_halt",
+    "chorus_hammer",
+    "bridge_slow",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "spitting",
+    "scum",
+    "truth",
+    "society"
+  ],
+  "emotional_arc": [
+    "pure rage",
+    "judgment",
+    "cynicism"
+  ],
+  "leakage_watchouts": [
+    "vocal parsing must be incredibly fast against metal drums"
+  ],
+  "prompt_seed_terms": [
+    "speed metal vocaloid",
+    "blast beats",
+    "cynical shouting"
+  ],
+  "grounding_status": "research_ready"
+}

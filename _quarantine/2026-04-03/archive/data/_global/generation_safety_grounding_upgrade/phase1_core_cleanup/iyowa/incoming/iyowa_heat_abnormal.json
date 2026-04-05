@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_heat_abnormal"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "死んだ変数で繰り返す、数え事が孕んだ熱",
+          "異常な、あまりにも異常な静寂"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "世界が剥がれ落ちていく音がする",
+          "記録する、私の最後の独白"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "どこに送るあてもなく、あわれな独り言を記している",
+          "熱を帯びた磁気テープだけが、ここに残る"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "黒い星が私を見ている",
+          "すべてが呑み込まれていく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "消去しても、消えない熱",
+          "最後の一文字まで、異常な私の記録",
+          "さよなら、熱い世界"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "死んだ変数で繰り返す",
+      "どこに送るあてもなく",
+      "黒い星が私を見ている"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "終末の世界で、消去しても消えない「熱」を記し続ける孤独な独白。"
+  }
+}

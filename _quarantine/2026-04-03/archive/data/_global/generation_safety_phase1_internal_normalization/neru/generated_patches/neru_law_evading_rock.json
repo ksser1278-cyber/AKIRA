@@ -1,0 +1,89 @@
+{
+  "track_identity": {
+    "track_id": "neru_law_evading_rock"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "AWA",
+        "url": "https://awa.fm/song/5a690779f640f0477179",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm16061901/",
+        "status": "trusted"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): AWA, UtaTen. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "はー なんて時代に生まれたもんだ",
+          "ドラえもんは居ないし ポッケは無いし",
+          "バカは死んと治りゃしないし",
+          "もう どうにでもなれ"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "バカは死んと治りゃしないし",
+          "もう どうにでもなれ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "エビバリ 現実逃避に 縋れ 縋れ",
+          "負け犬になって 吠えろ 吠えろ",
+          "理想像なんて 捨てろ 捨てろ",
+          "それが脱法ロックの礼法なんですわ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "エビバリ 現実逃避に 縋れ 縋れ",
+          "負け犬になって 吠えろ 吠えろ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "エビバリ 現実逃避に 縋れ 縋れ",
+          "負け犬になって 吠えろ 吠えろ",
+          "理想像なんて 捨てろ 捨てろ",
+          "それが脱法ロックの礼法なんですわ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "エビバリ 現実逃避に",
+      "脱法ロック"
+    ]
+  },
+  "generation_safety": {
+    "notes": [
+      "pending recomputation after internal normalization"
+    ]
+  }
+}

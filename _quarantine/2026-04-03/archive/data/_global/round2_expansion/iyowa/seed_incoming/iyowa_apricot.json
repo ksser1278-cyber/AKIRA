@@ -1,0 +1,38 @@
+{
+  "artist_id": "iyowa",
+  "track_id": "iyowa_apricot",
+  "title": "アプリコット",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "soft_fruit",
+  "hook_behavior": [
+    "fragile high-pitched melody",
+    "gentle panic"
+  ],
+  "section_flow_guess": [
+    "verse_soft",
+    "prechorus_shivering",
+    "chorus_fragile_cry",
+    "bridge_silence",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "apricots",
+    "bruises",
+    "softness",
+    "crying"
+  ],
+  "emotional_arc": [
+    "gentle sorrow",
+    "fragility",
+    "dizziness"
+  ],
+  "leakage_watchouts": [
+    "must lack heavy rock drums; rely on soft synths and piano"
+  ],
+  "prompt_seed_terms": [
+    "fragile art pop",
+    "soft piano",
+    "gentle crying vocal"
+  ],
+  "grounding_status": "research_ready"
+}

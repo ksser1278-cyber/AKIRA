@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_phase1_internal_normalization_packet",
+  "artist_id": "maretu",
+  "track_count": 3,
+  "tracks": [
+    {
+      "track_id": "maretu_darling",
+      "artist_id": "maretu",
+      "current_record_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\darling.conditioning.json",
+      "source_bundle_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_lyric_grounding_source_acquisition\\maretu\\incoming\\maretu_darling.json",
+      "ready_bundle": true,
+      "can_reopen_phase1": false,
+      "current_section_names": [
+        "Verse 1",
+        "Pre-Chorus",
+        "Chorus 1",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "current_section_types": [
+        "verse",
+        "prechorus",
+        "chorus",
+        "bridge",
+        "chorus"
+      ],
+      "bundle_section_names": [
+        "Verse 1",
+        "Chorus 1"
+      ],
+      "bundle_section_types": [
+        "verse",
+        "chorus"
+      ],
+      "bundle_hook_line_count": 2,
+      "unresolved_section_slots": [
+        "Pre-Chorus",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "blockers": [
+        "section_schema_compression"
+      ],
+      "recommended_next_action": "internal_normalization"
+    },
+    {
+      "track_id": "maretu_umitagari",
+      "artist_id": "maretu",
+      "current_record_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\umitagari.conditioning.json",
+      "source_bundle_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_lyric_grounding_source_acquisition\\maretu\\incoming\\maretu_umitagari.json",
+      "ready_bundle": true,
+      "can_reopen_phase1": false,
+      "current_section_names": [
+        "Verse 1",
+        "Pre-Chorus",
+        "Chorus 1",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "current_section_types": [
+        "verse",
+        "prechorus",
+        "chorus",
+        "bridge",
+        "chorus"
+      ],
+      "bundle_section_names": [
+        "Verse 1",
+        "Chorus 1"
+      ],
+      "bundle_section_types": [
+        "verse",
+        "chorus"
+      ],
+      "bundle_hook_line_count": 2,
+      "unresolved_section_slots": [
+        "Pre-Chorus",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "blockers": [
+        "section_schema_compression"
+      ],
+      "recommended_next_action": "internal_normalization"
+    },
+    {
+      "track_id": "maretu_white_happy",
+      "artist_id": "maretu",
+      "current_record_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\white_happy.conditioning.json",
+      "source_bundle_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_lyric_grounding_source_acquisition\\maretu\\incoming\\maretu_white_happy.json",
+      "ready_bundle": true,
+      "can_reopen_phase1": false,
+      "current_section_names": [
+        "Verse 1",
+        "Pre-Chorus",
+        "Chorus 1",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "current_section_types": [
+        "verse",
+        "prechorus",
+        "chorus",
+        "bridge",
+        "chorus"
+      ],
+      "bundle_section_names": [
+        "Verse 1",
+        "Chorus 1"
+      ],
+      "bundle_section_types": [
+        "verse",
+        "chorus"
+      ],
+      "bundle_hook_line_count": 2,
+      "unresolved_section_slots": [
+        "Pre-Chorus",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "blockers": [
+        "section_schema_compression"
+      ],
+      "recommended_next_action": "internal_normalization"
+    }
+  ]
+}

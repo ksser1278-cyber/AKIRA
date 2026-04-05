@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_angel"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi19042502/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/h_U99S0pZ6M",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for kairiki_bear_angel. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "アンヘル アンヘル 舞い降りて",
+          "汚れた この 手を 取って",
+          "アンヘル アンヘル 導いて",
+          "光の 見えない 世界へ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "嘘吐きな 天使が 笑ってる",
+          "僕の 心を 嘲笑うように",
+          "嘘吐きな 天使が 歌ってる",
+          "終わりの 来ない 絶望を"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "アンヘル アンヘル 舞い降りて",
+      "嘘吐きな 天使が 笑ってる"
+    ]
+  }
+}

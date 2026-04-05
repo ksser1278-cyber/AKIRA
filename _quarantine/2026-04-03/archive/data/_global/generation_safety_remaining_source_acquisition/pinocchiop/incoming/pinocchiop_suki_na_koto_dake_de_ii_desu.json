@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "pinocchiop_suki_na_koto_dake_de_ii_desu"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm16062301/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for pinocchiop_suki_na_koto_dake_de_ii_desu. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "好きなことだけでいいです って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "心を 抉るように",
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "好きなことだけでいいです 好きなことだけでいいです",
+      "心を 抉るように"
+    ]
+  }
+}

@@ -1,71 +1,125 @@
-# AKIRA
+# AKIRA ENGINE
 
-## 목적
+AKIRA ENGINE is a reduced rebuild workspace for a Japanese lyric-generation system.
 
-AKIRA는 음악 생성 / 평가 / 선별 파이프라인 프로젝트입니다.
+The current goal is not to preserve every historical execution path.
+The goal is to keep a small, explicit surface and rebuild upward from stable core modules.
 
-## Canonical Structure
+Current scale guidance:
+- build for open-ended Vocaloid corpus accumulation
+- use numeric milestones only as checkpoints
+- do not treat any current number as a top-level cap
 
-- `src/akira_engine/`: 핵심 런타임 및 엔진 로직
-- `scripts/songwriter/`: 일반 실행용 CLI 진입점
-- `scripts/production/`: 배치 / 운영 실행 스크립트
-- `docs/`: 설계 및 운영 문서
-- `prompts/`: 프롬프트 자산
-- `data/<artist>/reference_tracks/`: 아티스트별 참조 트랙 데이터
-- `outputs/`, `artifacts/`, `bundles/`, `models/`, `logs/`: 생성 산출물 및 대용량 자산 (Git 추적 제외)
+## Active Workspace
 
-## Primary CLI Entry Point
+Top-level active structure:
 
-기본 실행 진입점은 `scripts/songwriter/run_demo_songwriter.py` 입니다.
+- `src/`
+- `schemas/`
+- `docs/`
+- `tests/`
+- `config/`
+- `scripts/`
+- `akira.py`
 
-```bash
-python scripts/songwriter/run_demo_songwriter.py --artist-id pinocchiop
+Historical assets, legacy outputs, and older workflow surfaces were moved to:
+
+- `C:\JPop_Songwriter\AKIRA ENGINE\_quarantine\2026-04-03`
+
+## Primary Entry Point
+
+Use `akira.py` first.
+
+```powershell
+python akira.py status
+python akira.py songwriter demo --artist-id maretu --mode-id dark_cute_breakdown
+python akira.py dataset build-derived
+python akira.py dataset bootstrap-rights
+python akira.py dataset export-supervised
+python akira.py dataset import-training-sources
+python akira.py report engine-health
+python akira.py report baseline
+python akira.py test
 ```
 
-## Production Workflows
+Detailed command notes:
 
-### RC-20 Pilot
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
 
-```bash
-python scripts/production/run_rc20_pilot.py
-```
+## Current Command Coverage
 
-### Elite 100 Bundle
+Already internalized behind `akira.py` and `src/akira_engine/cli/`:
 
-```bash
-python scripts/production/generate_elite_100.py
-```
+- songwriter demo
+- dataset build-derived
+- dataset bootstrap-rights
+- dataset export-supervised
+- dataset import-training-sources
+- report engine-health
+- report baseline
+
+Compatibility shims remain in `scripts/` only where needed.
+
+## Scripts Policy
+
+`scripts/` is no longer the main user-facing surface.
+
+Current intent:
+
+- `scripts/dataset/`: compatibility shims only
+- `scripts/songwriter/`: compatibility shim only
+- `scripts/pipeline/`: reduced legacy helper surface
+- `scripts/ingest/`, `scripts/eval/`, `scripts/analysis/`, `scripts/ops/`, `scripts/production/`, `scripts/research/`, `scripts/suno/`: pending triage
+
+Reference:
+
+- [C:\JPop_Songwriter\AKIRA ENGINE\scripts\README.md](C:\JPop_Songwriter\AKIRA ENGINE\scripts\README.md)
 
 ## Configuration
 
-API 키는 환경 변수 또는 `config/.env`에서 로드합니다.
+Environment and local config guidance:
 
-예:
+- [C:\JPop_Songwriter\AKIRA ENGINE\config\README.md](C:\JPop_Songwriter\AKIRA ENGINE\config\README.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\config\.env.example](C:\JPop_Songwriter\AKIRA ENGINE\config\.env.example)
 
-* `OPENAI_API_KEY`
-* `GEMINI_API_KEY`
+Typical environment variables:
 
-## Dependency Management
+- `OPENAI_API_KEY`
+- `GEMINI_API_KEY`
 
-```bash
+## Documentation Map
+
+Start here:
+
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\README.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\README.md)
+
+Important current docs:
+
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\training-data-shaping.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\training-data-shaping.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\rights-cleared-training-corpus.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\rights-cleared-training-corpus.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\autonomous_execution_doctrine.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\autonomous_execution_doctrine.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_execution_plan.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_execution_plan.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_execution_runbook.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_execution_runbook.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_success_metrics.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\one_week_success_metrics.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_execution_plan.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_execution_plan.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_execution_runbook.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_execution_runbook.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_fallback_ladders.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\ten_hour_fallback_ladders.md)
+
+## Dependency Install
+
+```powershell
 pip install -r requirements.txt
 ```
 
-## Git Tracking Policy
+## Rebuild Rule
 
-다음 항목은 GitHub에 올리지 않습니다.
+If a workflow needs to be kept, prefer this order:
 
-* `outputs/`
-* `artifacts/`
-* `bundles/`
-* `models/`
-* `logs/`
-* 기타 생성 산출물 / 캐시 / 대용량 자산
-
-참조용 소형 데이터는 추적할 수 있지만, 대용량 원천 데이터와 중간 산출물은 제외합니다.
-
-## 검토 포인트
-
-* 구조 분리
-* 평가 로직 정확성
-* 운영 안정성
+1. implement or move logic into `src/akira_engine/`
+2. expose it through `src/akira_engine/cli/`
+3. wire it into `akira.py`
+4. keep a `scripts/` shim only if external compatibility still matters

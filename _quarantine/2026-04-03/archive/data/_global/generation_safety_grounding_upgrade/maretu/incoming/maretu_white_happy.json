@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "maretu_white_happy"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and societal critique themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "素晴らしい、素晴らしい、この世界",
+          "また何か、綺麗な嘘で固めて"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "壊していく、私が壊していく",
+          "期待に応えて、偽善を捨てて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ホワイトハッピー、皮肉な幸せ",
+          "すべてが白く、塗りつぶされる"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "本物の愛なんて、どこにある？",
+          "虚像を壊して、裸になる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ホワイトハッピー、皮肉な幸せ",
+          "さよなら、偽りの愛",
+          "真っ白な、終わりの始まり"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ホワイトハッピー",
+      "素晴らしい、素晴らしい",
+      "皮肉な幸せ"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A disillusioned challenge to societal norms and facial expectations, advocating for the destruction of false pretenses in search of genuine connection."
+  }
+}

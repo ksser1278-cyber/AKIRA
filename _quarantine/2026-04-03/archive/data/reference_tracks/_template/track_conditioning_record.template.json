@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "artist_track_slug",
+    "artist_id": "artist_id",
+    "artist_name": "Artist Name",
+    "title": "Track Title",
+    "title_core": "Title core or hook noun",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [],
+      "lyrics": [],
+      "composition": [],
+      "arrangement": [],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2026,
+        "status": "unknown",
+        "sources": []
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [],
+    "metadata_sources": [],
+    "analysis_sources": [],
+    "notes": []
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "partial",
+    "copyright_handling_note": "Store only the minimum text needed for analysis and hook verification.",
+    "sections": [],
+    "hook_lines": [],
+    "question_lines": [],
+    "repetition_patterns": []
+  },
+  "song_intent": {
+    "core_theme": [],
+    "emotional_thesis": "",
+    "contrast_device": [],
+    "dramatic_arc": [],
+    "narrative_role": [],
+    "tie_in_function": "",
+    "title_function": "",
+    "key_motifs": [],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": [],
+      "vocal_behavior": [],
+      "production_palette": [],
+      "arrangement_arc": [],
+      "dynamics_arc": [],
+      "confidence": "medium",
+      "evidence_basis": []
+    },
+    "do_not_overclaim": []
+  },
+  "section_analysis": [],
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "medium",
+    "title_ignition_style": "unknown",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [],
+    "mora_control_notes": [],
+    "accent_risk_notes": [],
+    "critic_focus": [],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [],
+    "tempo_feels": [],
+    "vocal_tones": [],
+    "production_palette": [],
+    "energy_arc": [],
+    "imagery_anchors": [],
+    "exclude": [],
+    "source_basis": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.0,
+    "score_breakdown": {
+      "provenance_trust": 0.0,
+      "grounding_completeness": 0.0,
+      "surface_safety": 0.0,
+      "renderer_readiness": 0.0
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": []
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": false,
+    "ready_for_audio_claims": false
+  }
+}

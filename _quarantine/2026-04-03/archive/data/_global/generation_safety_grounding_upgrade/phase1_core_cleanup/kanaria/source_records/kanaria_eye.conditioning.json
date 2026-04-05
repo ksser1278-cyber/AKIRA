@@ -1,0 +1,257 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_eye",
+    "title": "EYE",
+    "artist": "kanaria",
+    "status": "cross_checked"
+  },
+  "likely_mode": "dark_cute_breakdown",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Linkcore",
+        "url": "https://linkco.re/503uD7S1/songs/1781254/lyrics",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): Linkcore / TuneCore distributor lyric page. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "E E EYE",
+      "L L LIFE"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "意中の瞬き火照りだあ",
+          "13 14 腐った調味スパイスでね",
+          "痛いなこの手にぐさりだあ",
+          "30 40 狂ったようにスマイルでね"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "痛いなこの手にぐさりだあ",
+          "30 40 狂ったようにスマイルでね"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "setting the stage"
+      ],
+      "narrative_job": "Establishes the emotional baseline.",
+      "rhyme_features": [
+        "standard"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension building"
+      ],
+      "narrative_job": "Prepares the listener for the contrast drop.",
+      "rhyme_features": [
+        "internal rhyming"
+      ],
+      "rhythm_features": [
+        "accelerating"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "hook delivery"
+      ],
+      "narrative_job": "Explosive delivery of the core title and emotion.",
+      "rhyme_features": [
+        "catchy ending rhymes"
+      ],
+      "rhythm_features": [
+        "heavy downbeats"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "perspective shift"
+      ],
+      "narrative_job": "Breaks the pattern established by the chorus.",
+      "rhyme_features": [
+        "none"
+      ],
+      "rhythm_features": [
+        "halftime or dropout"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "maximal climax"
+      ],
+      "narrative_job": "Total thematic release.",
+      "rhyme_features": [
+        "repeated hooks"
+      ],
+      "rhythm_features": [
+        "frantic energy"
+      ],
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "I see everything you are doing, and you are beneath me.",
+    "core_emotion": "Arrogance",
+    "primary_target": "The listener or a toxic partner",
+    "contrast_device": "Jazzy, sophisticated snapping rhythm hiding arrogant, aggressive dominance.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "jazz pop",
+      "syncopated vocaloid",
+      "snapping beat"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass",
+      "sharp transients"
+    ],
+    "energy_arc": [
+      "building",
+      "explosive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring standard pop"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.58,
+    "score_breakdown": {
+      "provenance_trust": 0.75,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.1,
+      "renderer_readiness": 0.0
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "partial_grounding",
+      "surface_noise_risk",
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "high",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled",
+      "placeholder indicators: scaffold, placeholder, setting the thematic stage"
+    ]
+  }
+}

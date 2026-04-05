@@ -1,0 +1,649 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_boku_nanka_inakutemo",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "僕なんかいないくても",
+    "title_core": "僕なんかいないくても",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "PinocchioP",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "PinocchioP",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "PinocchioP",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2020-03-24",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2020,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "4:01",
+        "seconds": 241,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_boku_nanka_inakutemo",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_boku_nanka_inakutemo",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "街の灯りは今日も綺麗で",
+          "行き交う人は足早に過ぎる",
+          "誰かの笑顔 誰かの涙",
+          "世界はちゃんと回っている"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "歯車の一つにもなれなくて",
+          "道の端っこで立ち止まる",
+          "透明人間みたいだな",
+          "誰も私を見ていない"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "僕なんか いなくても",
+          "明日も朝日は昇るし",
+          "僕なんか いなくても",
+          "誰も困ったりしないよ",
+          "それでも息をしてる馬鹿みたいだ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "SNSで繋がったフリ",
+          "本当の友達なんていない",
+          "いいねの数で価値を測って",
+          "虚無感だけが募っていく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "僕なんか いなくても",
+          "地球は止まらず回るし",
+          "僕なんか いなくても",
+          "歴史は作られていくよ",
+          "それでも泣いてる 馬鹿みたいだ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "僕なんか いなくても",
+      "誰も困ったりしないよ"
+    ],
+    "question_lines": [
+      "透明人間みたいだな？"
+    ],
+    "repetition_patterns": [
+      "The self-deprecating title anchors the sad realization in the chorus."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "insignificance",
+      "existential dread",
+      "alienation"
+    ],
+    "emotional_thesis": "The world works perfectly fine without me, and realizing that is devastating—yet I keep living.",
+    "contrast_device": [
+      "grand mechanics of the world vs the tiny useless individual"
+    ],
+    "dramatic_arc": [
+      "observing the functioning world",
+      "realizing one's own lack of impact",
+      "the painful resignation of existence"
+    ],
+    "narrative_role": [
+      "direct_emotional_pop"
+    ],
+    "tie_in_function": "",
+    "title_function": "The core thesis.",
+    "key_motifs": [
+      "いなくても (even if I'm not here)",
+      "回る (spinning/functioning)",
+      "馬鹿みたいだ (seems foolish)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "melancholic indie rock",
+        "mid-tempo steady drive"
+      ],
+      "vocal_behavior": [
+        "subdued",
+        "resigned"
+      ],
+      "production_palette": [
+        "acoustic guitars",
+        "clean electric guitars",
+        "synth pads"
+      ],
+      "arrangement_arc": [
+        "quiet verse",
+        "building emotion",
+        "crying guitar chorus"
+      ],
+      "dynamics_arc": [
+        "moderate swell of emotion"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "scene setting"
+      ],
+      "narrative_job": "Observing the indifferent world.",
+      "arrangement_role": {
+        "summary": "Subdued, ticking beat.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational, low.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Low.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "observation"
+      ],
+      "vocabulary_focus": [
+        "回っている"
+      ],
+      "rhyme_features": [
+        "gentle"
+      ],
+      "rhythm_features": [
+        "steady"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "internalizing"
+      ],
+      "narrative_job": "Feeling invisible.",
+      "arrangement_role": {
+        "summary": "Rising tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending climbs.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "simile"
+      ],
+      "vocabulary_focus": [
+        "透明人間"
+      ],
+      "rhyme_features": [
+        "parallel lines"
+      ],
+      "rhythm_features": [
+        "driving 8ths"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title declaration"
+      ],
+      "narrative_job": "The painful realization of insignificance.",
+      "arrangement_role": {
+        "summary": "Emotional rock drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Crying melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "declaration"
+      ],
+      "vocabulary_focus": [
+        "いなくても"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "anthem"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "modern context"
+      ],
+      "narrative_job": "The emptiness of digital connections.",
+      "arrangement_role": {
+        "summary": "Slight rhythm drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Introspective.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "SNS"
+      ],
+      "rhyme_features": [
+        "internal"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final statement"
+      ],
+      "narrative_job": "Accepting the indifference.",
+      "arrangement_role": {
+        "summary": "Explosive finale.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak emotion.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "vow"
+      ],
+      "vocabulary_focus": [
+        "地球"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "driving anthem"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "low",
+    "phrase_source_types": [
+      "existential dread",
+      "alienation"
+    ],
+    "mora_control_notes": [
+      "Requires emotionally expressive tuning."
+    ],
+    "accent_risk_notes": [
+      "Must sound sincere."
+    ],
+    "critic_focus": [
+      "emotional resonance"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "indie rock",
+      "melancholic pop"
+    ],
+    "tempo_feels": [
+      "steady drive"
+    ],
+    "vocal_tones": [
+      "earnest",
+      "resigned",
+      "sad"
+    ],
+    "production_palette": [
+      "acoustic guitars",
+      "rock drums"
+    ],
+    "energy_arc": [
+      "emotional chorus"
+    ],
+    "imagery_anchors": [
+      "invisible person",
+      "city lights"
+    ],
+    "exclude": [
+      "do not make it overly happy"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

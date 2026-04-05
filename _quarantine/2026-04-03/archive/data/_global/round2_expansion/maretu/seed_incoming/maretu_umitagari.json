@@ -1,0 +1,37 @@
+{
+  "artist_id": "maretu",
+  "track_id": "maretu_umitagari",
+  "title": "うみたがり",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "desire_verb",
+  "hook_behavior": [
+    "polyrhythmic stabs",
+    "accusing melody"
+  ],
+  "section_flow_guess": [
+    "verse_obsessive",
+    "prechorus_twist",
+    "chorus_heavy_drop",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "birth",
+    "wounds",
+    "dirt",
+    "inescapable ties"
+  ],
+  "emotional_arc": [
+    "obsession",
+    "pain",
+    "toxic attachment"
+  ],
+  "leakage_watchouts": [
+    "incorporate odd time signatures or triplets against a 4/4 beat"
+  ],
+  "prompt_seed_terms": [
+    "chiptune metal",
+    "odd meter",
+    "toxic lyrics"
+  ],
+  "grounding_status": "research_ready"
+}

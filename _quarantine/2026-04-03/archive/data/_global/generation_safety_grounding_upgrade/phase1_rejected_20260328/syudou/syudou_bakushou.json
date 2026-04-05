@@ -1,0 +1,65 @@
+{
+  "track_identity": {
+    "track_id": "syudou_bakushou"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and societal critique themes.",
+      "Scaffold indicators removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "圧倒的に多数の人が、無闇矢鱈と囃し立てる世じゃ",
+          "結局誰が悪いのかなんて、知らぬ存ぜぬ味方無し"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "人の背に立つあなたの目、その目、その目が嫌い",
+          "また安地でつぶやく僻み達"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "わはは！ははは！ぎゃはは！ははは！",
+          "聞かせてやる、だからこの名前くらいは憶えて帰れ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "これを辞めろだ？そうか分かったぜ、死ねってこったな？",
+          "絶好の優越を、味わわせてやれ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ぎゃはは！ははは！味気ない優越が、これがお前らの「答」だろう",
+          "さあ笑え笑え、この世の終わりに"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "わはは！ははは！ぎゃはは！ははは！",
+      "この名前くらいは憶えて帰れ",
+      "お前らの「答」だろう"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A defiant critique of a world that mindlessly cheers, using mockery and a 'burst of laughter' as an ironic form of self-assertion against anonymous judgment."
+  }
+}

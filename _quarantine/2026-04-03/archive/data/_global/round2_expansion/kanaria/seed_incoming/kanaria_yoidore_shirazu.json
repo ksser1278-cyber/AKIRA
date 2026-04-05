@@ -1,0 +1,39 @@
+{
+  "artist_id": "kanaria",
+  "track_id": "kanaria_yoidore_shirazu",
+  "title": "酔いどれ知らず",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "abstract_concept",
+  "hook_behavior": [
+    "sliding motif",
+    "intoxicated slur",
+    "syncopated drop"
+  ],
+  "section_flow_guess": [
+    "verse_drunk",
+    "prechorus_stumble",
+    "chorus_slide",
+    "verse2_haze",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "alcohol",
+    "dizziness",
+    "night lights",
+    "loss of control"
+  ],
+  "emotional_arc": [
+    "sober sadness",
+    "intoxication",
+    "escapism"
+  ],
+  "leakage_watchouts": [
+    "do not use screaming drops; use sliding jazz drops"
+  ],
+  "prompt_seed_terms": [
+    "jazz swing",
+    "drunken beat",
+    "sliding synth"
+  ],
+  "grounding_status": "research_ready"
+}

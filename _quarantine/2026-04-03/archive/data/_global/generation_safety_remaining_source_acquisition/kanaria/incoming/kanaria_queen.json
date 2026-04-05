@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_queen"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi22080601/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/852198/products/1447346/1/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kanaria_queen. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 壊しちゃった",
+          "僕の 大切な 日に",
+          "QUEEN QUEEN って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "QUEEN QUEEN QUEEN QUEEN",
+          "玉座を 守り抜け",
+          "QUEEN QUEEN QUEEN QUEEN",
+          "全てを 魅了しろ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "QUEEN QUEEN QUEEN QUEEN",
+      "玉座を 守り抜け"
+    ]
+  }
+}

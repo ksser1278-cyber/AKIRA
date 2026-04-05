@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_darling_dance"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/292850/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi20083001/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Sony Music",
+        "url": "https://www.sonymusic.co.jp/artist/kairikibear/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kairiki_bear_darling_dance. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "だーりんだーりん 踊りましょう",
+          "この 夜が 明けるまで",
+          "だーりんだーりん 笑いましょう",
+          "何もかも 忘れて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ダーリンダンス ダーリンダンス",
+          "狂おしいほど 抱きしめて",
+          "ダーリンダンス ダーリンダンス",
+          "壊れるくらいに 愛して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ダーリンダンス ダーリンダンス",
+      "だーりんだーりん 踊りましょう"
+    ]
+  }
+}

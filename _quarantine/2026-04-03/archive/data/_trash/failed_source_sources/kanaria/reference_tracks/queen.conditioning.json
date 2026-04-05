@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "kanaria_queen",
+    "artist_id": "kanaria",
+    "artist_name": "Kanaria",
+    "title": "QUEEN",
+    "title_core": "Queen"
+  },
+  "song_intent": {
+    "core_theme": [
+      "Boredom",
+      "Dalliance",
+      "Game of Love"
+    ],
+    "emotional_target": "Sophisticated invitation to a self-destructive game.",
+    "key_motifs": [
+      "Queen",
+      "Boredom",
+      "Dance"
+    ],
+    "emotional_thesis": "Sophisticated invitation to a self-destructive game."
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ライバイ ベイビー マイマイ マイライフ\nそれなら僕と踊りませんか\nライバイ ベイビー マイマイ マイライフ\nだってそれは退屈の合図\n\n最低な愛情を 欠いたって\n最終の態度に 飽いたって\n悲痛な叫びを 裂いたって\n全然 足りないわ\n\nLeft Side Right Side\n牙を剥き出して ワンワンワン\n照れくさいね\nYou are QUEEN\n\nYou are QUEEN",
+    "hook_lines": [
+      "QUEEN QUEEN QUEEN QUEEN",
+      "玉座を 守り抜け"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 壊しちゃった",
+          "僕の 大切な 日に",
+          "QUEEN QUEEN って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "QUEEN QUEEN って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "QUEEN QUEEN QUEEN QUEEN",
+          "玉座を 守り抜け",
+          "QUEEN QUEEN QUEEN QUEEN",
+          "全てを 魅了しろ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "QUEEN QUEEN QUEEN QUEEN",
+          "玉座を 守り抜け"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "QUEEN QUEEN QUEEN QUEEN",
+          "玉座を 守り抜け",
+          "QUEEN QUEEN QUEEN QUEEN",
+          "全てを 魅了しろ"
+        ]
+      }
+    ],
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "prompt_conditioning": {
+    "vocal_tones": [
+      "Sultry",
+      "Bored",
+      "Sophisticated"
+    ],
+    "production_palette": [
+      "Sleek synth bass",
+      "Snappy clap",
+      "Modern minimalist mix"
+    ],
+    "energy_arc": "Rhythmic, enticing tension",
+    "imagery_anchors": [
+      "Chess board",
+      "Lace curtains",
+      "Broken wine glass",
+      "Neon throne"
+    ]
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "benchmark_safe",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": true
+    },
+    "blockers": [],
+    "requires_human_review": false,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi22080601/",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kanaria_queen. Workflow: source_plus_provenance."
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/852198/products/1447346/1/",
+        "status": "cross_checked"
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  }
+}

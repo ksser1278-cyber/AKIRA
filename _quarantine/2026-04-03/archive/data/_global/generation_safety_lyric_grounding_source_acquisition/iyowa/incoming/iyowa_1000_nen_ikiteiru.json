@@ -1,0 +1,49 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_1000_nen_ikiteiru"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/301297/",
+        "status": "trusted"
+      },
+      {
+        "label": "piapro",
+        "url": "https://piapro.jp/t/Dq_j",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): Uta-Net, piapro. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "あー 決まった言葉垂れてまたヒューマン",
+          "ちょっとステキな晒し者ね",
+          "あ、そう 素敵だね それはどうだい",
+          "不確かな愛の 行き着く先"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "額縁の中で1000年生きてるのさ",
+          "泥まみれの人生でも、あなたの想いはここにある"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "1000年生きてる",
+      "額縁の中で1000年生きてるのさ"
+    ]
+  }
+}

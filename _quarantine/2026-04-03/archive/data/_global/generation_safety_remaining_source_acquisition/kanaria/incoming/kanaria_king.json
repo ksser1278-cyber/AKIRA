@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_king"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/289569/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi20081001/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "KKBOX",
+        "url": "https://kkbox.fm/Wl5J74",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kanaria_king. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "幽霊東京 霞んでゆく",
+          "僕の 心を 嘲笑うように",
+          "幽霊東京 霞んでゆく",
+          "光の 見えない 世界へ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "YOU ARE KING YOU ARE KING",
+          "玉座を 奪い取れ",
+          "YOU ARE KING YOU ARE KING",
+          "全てを 支配しろ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "YOU ARE KING YOU ARE KING",
+      "幽霊東京 霞んでゆく"
+    ]
+  }
+}

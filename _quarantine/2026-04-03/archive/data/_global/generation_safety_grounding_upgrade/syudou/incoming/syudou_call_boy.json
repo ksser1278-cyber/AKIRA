@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "syudou_call_boy"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and nightlife/addiction themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "裏通りの、小さなバー",
+          "また何か、独りの夜を埋めて"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "愛なんて、買えるもの",
+          "また何か、嘘を並べて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "コールボーイ、酔いしれた夜",
+          "すべてが、どうでもよくなっていく"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "飲み干して、記憶を消して",
+          "どこへ、行けばいいの？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "コールボーイ、酔いしれた夜",
+          "さよなら、昨日の酔い",
+          "不実な、私のままで"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "コールボーイ",
+      "酔いしれた夜",
+      "愛なんて、買えるもの"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A somber and gritty portrayal of loneliness and emptiness through the somatic imagery of addiction and transactional connections."
+  }
+}

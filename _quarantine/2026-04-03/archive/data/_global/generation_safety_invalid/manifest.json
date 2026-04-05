@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_invalid_packets",
+  "delegation_prompt_txt": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\delegation_prompt.txt",
+  "batch_delegation_prompt_txt": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\batch_delegation_prompt.txt",
+  "queue_json": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\planning\\generation_safety_invalid_queue.json",
+  "handoff_json": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\planning\\generation_safety_invalid_handoff.json",
+  "artists": [
+    {
+      "artist_id": "iyowa",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\iyowa\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\iyowa\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\iyowa\\incoming",
+      "incoming_count": 0,
+      "track_count": 1
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kairiki_bear\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kairiki_bear\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kairiki_bear\\incoming",
+      "incoming_count": 0,
+      "track_count": 4
+    },
+    {
+      "artist_id": "kanaria",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kanaria\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kanaria\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\kanaria\\incoming",
+      "incoming_count": 0,
+      "track_count": 2
+    },
+    {
+      "artist_id": "maretu",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\maretu\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\maretu\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\maretu\\incoming",
+      "incoming_count": 0,
+      "track_count": 1
+    },
+    {
+      "artist_id": "neru",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\neru\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\neru\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\neru\\incoming",
+      "incoming_count": 0,
+      "track_count": 1
+    },
+    {
+      "artist_id": "syudou",
+      "packet_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\syudou\\packet.md",
+      "brief_md": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\syudou\\brief.md",
+      "incoming_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_invalid\\syudou\\incoming",
+      "incoming_count": 0,
+      "track_count": 2
+    }
+  ]
+}

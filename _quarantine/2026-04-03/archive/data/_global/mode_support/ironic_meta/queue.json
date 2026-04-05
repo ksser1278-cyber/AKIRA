@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "record_type": "mode_support_queue",
+  "mode_id": "ironic_meta",
+  "target_count": 20,
+  "support_artists": [
+    "pinocchiop",
+    "kanaria",
+    "maretu"
+  ],
+  "queue": [
+    {
+      "artist_id": "pinocchiop",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "pinocchiop_common_world_domination"
+      ],
+      "notes": [
+        "single-track draft submission"
+      ],
+      "candidate_titles": [
+        "ありふれたせかいせいふく"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "kanaria_king"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "KING"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "maretu_mind_brand"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "Mind Brand"
+      ]
+    }
+  ]
+}

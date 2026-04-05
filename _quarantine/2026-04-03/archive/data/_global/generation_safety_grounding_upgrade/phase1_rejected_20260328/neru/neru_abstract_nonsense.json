@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "neru_abstract_nonsense"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and mental health struggle themes.",
+      "Scaffold indicators removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "飛び降りたいけど、勇気がない",
+          "また何か、無意味な明日が来る"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "誰かに見られている、笑われている",
+          "私が私でいられない、この世界で"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "アブストラクト・ナンセンス、無意味な言葉",
+          "すべてが、どうでもよくなっていく"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ボロボロの、心を引きずって",
+          "どこへ、行けばいいの？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "アブストラクト・ナンセンス、無意味な言葉",
+          "さよなら、終わらない絶望",
+          "まだここに、しがみついてる"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "アブストラクト・ナンセンス",
+      "飛び降りたいけど、勇気がない",
+      "無意味な言葉"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A raw depiction of emotional paralysis and depression, highlighting the struggle to find meaning in an absurd and judgmental world."
+  }
+}

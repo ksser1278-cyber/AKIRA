@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "phase_id": "phase2_extended_cleanup",
+  "artist_id": "deco27",
+  "track_count": 1,
+  "source_records_dir": "source_records",
+  "tracks": [
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_yowamushi_montblanc",
+      "score": 0.67,
+      "blockers": [
+        "partial_grounding",
+        "surface_noise_risk",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "grounding_and_surface_upgrade",
+      "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+      "external_evidence_required": true,
+      "internal_review_candidate": false,
+      "priority": "medium",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": "",
+      "workflow_type": "extended_cleanup",
+      "placeholder_field_paths": [
+        "source_provenance.analysis_sources[0].label",
+        "source_provenance.notes[0]",
+        "source_provenance.notes[1]",
+        "lyric_ground_truth.copyright_handling_note",
+        "lyric_ground_truth.sections[0].lines[0]",
+        "lyric_ground_truth.sections[0].lines[1]",
+        "lyric_ground_truth.sections[1].lines[0]",
+        "lyric_ground_truth.sections[1].lines[1]",
+        "lyric_ground_truth.sections[2].lines[1]",
+        "lyric_ground_truth.sections[3].lines[0]",
+        "lyric_ground_truth.sections[3].lines[1]",
+        "lyric_ground_truth.sections[4].lines[1]",
+        "lyric_ground_truth.sections[4].lines[2]",
+        "song_intent.emotional_thesis",
+        "generation_safety.notes[1]"
+      ],
+      "source_record_path": "source_records\\deco27_yowamushi_montblanc.conditioning.json"
+    }
+  ]
+}

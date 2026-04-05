@@ -1,0 +1,38 @@
+{
+  "artist_id": "syudou",
+  "track_id": "syudou_call_boy",
+  "title": "コールボーイ",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "occupation_noun",
+  "hook_behavior": [
+    "raw, alcoholic yell",
+    "jazz rock swagger"
+  ],
+  "section_flow_guess": [
+    "verse_drunk",
+    "prechorus_stumbling",
+    "chorus_desperate_yell",
+    "bridge_guitar",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "bottles",
+    "vomit",
+    "neon signs",
+    "regret"
+  ],
+  "emotional_arc": [
+    "drunk desperation",
+    "self-loathing",
+    "swagger"
+  ],
+  "leakage_watchouts": [
+    "incorporate jazz instrumentation (brass, upright bass) into the rock mix"
+  ],
+  "prompt_seed_terms": [
+    "jazz rock",
+    "drunk vocal",
+    "swaggering pain"
+  ],
+  "grounding_status": "research_ready"
+}

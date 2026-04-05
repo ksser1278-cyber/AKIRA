@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Lyric Technique Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "track_identity",
+    "source_integrity",
+    "structural_blueprint",
+    "hook_construction",
+    "emotional_arc",
+    "imagery_profile",
+    "diction_surface",
+    "narrative_stance",
+    "phonetic_profile",
+    "mode_evidence",
+    "task_eligibility"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "lyric_technique_record"
+    },
+    "track_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "track_id",
+        "artist_id",
+        "title",
+        "language"
+      ],
+      "properties": {
+        "track_id": { "type": "string", "minLength": 1 },
+        "artist_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "language": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source_integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rights_status",
+        "lyric_source_quality",
+        "section_alignment_status",
+        "text_cleanliness_status"
+      ],
+      "properties": {
+        "rights_status": { "type": "string", "minLength": 1 },
+        "lyric_source_quality": { "type": "string", "minLength": 1 },
+        "section_alignment_status": { "type": "string", "minLength": 1 },
+        "text_cleanliness_status": { "type": "string", "minLength": 1 }
+      }
+    },
+    "structural_blueprint": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "ordered_sections",
+        "section_count",
+        "chorus_anchor_sections",
+        "form_confidence"
+      ],
+      "properties": {
+        "ordered_sections": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "section_count": { "type": "integer", "minimum": 0 },
+        "chorus_anchor_sections": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "form_confidence": { "type": "string", "minLength": 1 }
+      }
+    },
+    "hook_construction": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "hook_lines",
+        "hook_density",
+        "chorus_repetition_score"
+      ],
+      "properties": {
+        "hook_lines": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hook_density": { "type": "string", "minLength": 1 },
+        "chorus_repetition_score": { "type": "number" }
+      }
+    },
+    "emotional_arc": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "overall_arc_label"
+      ],
+      "properties": {
+        "overall_arc_label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "imagery_profile": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "imagery_tags",
+        "motif_clusters"
+      ],
+      "properties": {
+        "imagery_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "motif_clusters": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "diction_surface": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "register",
+        "directness_level",
+        "abstraction_level"
+      ],
+      "properties": {
+        "register": { "type": "string", "minLength": 1 },
+        "directness_level": { "type": "string", "minLength": 1 },
+        "abstraction_level": { "type": "string", "minLength": 1 }
+      }
+    },
+    "narrative_stance": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "dominant_perspective",
+        "narrative_distance"
+      ],
+      "properties": {
+        "dominant_perspective": { "type": "string", "minLength": 1 },
+        "narrative_distance": { "type": "string", "minLength": 1 }
+      }
+    },
+    "phonetic_profile": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "line_length_profile",
+        "short_line_ratio",
+        "terminal_sound_profile"
+      ],
+      "properties": {
+        "line_length_profile": { "type": "object" },
+        "short_line_ratio": { "type": "number" },
+        "terminal_sound_profile": { "type": "object" }
+      }
+    },
+    "contrast_devices": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "mode_evidence": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "candidate_modes",
+        "mode_confidence"
+      ],
+      "properties": {
+        "candidate_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mode_confidence": { "type": "string", "minLength": 1 }
+      }
+    },
+    "task_eligibility": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "eligible_tasks",
+        "blocked_tasks",
+        "blocking_reasons"
+      ],
+      "properties": {
+        "eligible_tasks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "blocked_tasks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "blocking_reasons": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

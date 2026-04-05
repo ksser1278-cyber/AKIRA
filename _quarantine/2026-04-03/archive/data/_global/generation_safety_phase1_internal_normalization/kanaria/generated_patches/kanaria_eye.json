@@ -1,0 +1,80 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_eye"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Linkcore",
+        "url": "https://linkco.re/503uD7S1/songs/1781254/lyrics",
+        "status": "trusted"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): Linkcore / TuneCore distributor lyric page. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "意中の瞬き火照りだあ",
+          "13 14 腐った調味スパイスでね",
+          "痛いなこの手にぐさりだあ",
+          "30 40 狂ったようにスマイルでね"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "痛いなこの手にぐさりだあ",
+          "30 40 狂ったようにスマイルでね"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "L L LIFE ユーエンミー E E EYE 故にバッドプレイ 引っ張って",
+          "バラバラバララ K K KNIFE ユーエンミー E E EYE 既に底見れば悪"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "E E EYE",
+      "L L LIFE"
+    ]
+  },
+  "generation_safety": {
+    "notes": [
+      "pending recomputation after internal normalization"
+    ]
+  }
+}

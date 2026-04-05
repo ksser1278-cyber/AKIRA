@@ -1,0 +1,22 @@
+This is a mode support curation task for `dark_cute_breakdown`.
+
+Goal:
+- Curate support tracks for each listed artist that match this mode.
+- Do not create conditioning JSON yet.
+- Return only candidate track ids, titles, and short justification atoms.
+
+Rules:
+- Avoid duplicating current gold anchors and active producer expansion tracks.
+- Prefer tracks that diversify hook shape, section behavior, and lyrical framing.
+- Keep the output structured and mode-focused.
+
+Per-artist targets:
+- `deco27` / target `5`
+- `pinocchiop` / target `5`
+- `kairiki_bear` / target `5`
+- `maretu` / target `5`
+
+Required output format:
+- One JSON file per mode
+- Include `mode_id` and an `artist_candidates` array
+- Each artist entry should include `artist_id`, `candidate_track_ids`, `candidate_titles`, and `notes`

@@ -1,0 +1,91 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_shippaisaku_shoujo"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/181665/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi20061902/",
+        "status": "trusted"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with a second trusted lyric database that matches the existing transcription line-for-line."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "あぁ ほら また間違えた",
+          "これで何度？ 何回目？",
+          "ねえ ほら 塞いでたって",
+          "ぽっかり浮き出る傷跡"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "ねえ ほら 塞いでたって",
+          "ぽっかり浮き出る傷跡"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "わたしって失敗作だって",
+          "さっていらない困難だって",
+          "何やったって 頑張ったって ダメらしいや",
+          "愛 愛 愛されたくて 嘘ついて",
+          "もっともっと笑顔でいればいいかな"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "わたしって失敗作だって",
+          "さっていらない困難だって"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "わたしって失敗作だって",
+          "さっていらない困難だって",
+          "何やったって 頑張ったって ダメらしいや",
+          "愛 愛 愛されたくて 嘘ついて",
+          "もっともっと笑顔でいればいいかな"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "わたしって失敗作だって",
+      "愛 愛 愛されたくて"
+    ]
+  },
+  "generation_safety": {
+    "notes": [
+      "pending recomputation after internal normalization"
+    ]
+  }
+}

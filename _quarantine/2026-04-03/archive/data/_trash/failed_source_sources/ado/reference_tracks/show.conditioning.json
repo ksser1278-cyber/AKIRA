@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_show",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "唱",
+    "title_core": "Show",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "event",
+      "work_name": "USJ ゾンビ・デ・ダンス",
+      "role_label": "theme_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2023,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "TOPHAMHAT-KYO",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Giga",
+          "role": "composition",
+          "status": "confirmed"
+        },
+        {
+          "name": "TeddyLoid",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Giga",
+          "role": "arrangement",
+          "status": "confirmed"
+        },
+        {
+          "name": "TeddyLoid",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_tt23091305",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Peak Giga/TeddyLoid modern dance energy. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "Nah-Nah-Nah-Nah-Nah, Ready for my show",
+          "ヤーヤーヤーヤーヤー 唱タイム天辺の御成り",
+          "ほらおいで宵をコンプリート オーライ Hell yeah yeah yeah"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "Nah-Nah-Nah-Nah-Nah, Ready for my show",
+          "Na-na-na-na-na 唱タイム",
+          "蛇腹刃 蛇火 蛇 蛇 蛇蛇蛇"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "唱タイム",
+      "Nah-Nah-Nah-Nah-Nah"
+    ],
+    "repetition_patterns": [
+      "Extreme phonetic repetition",
+      "Fast-paced wordplay with 'Ja' sounds"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "festival energy",
+      "zombie dance",
+      "chaotic excitement"
+    ],
+    "emotional_thesis": "A high-octane invitation to lose oneself in a chaotic, monstrous dance party.",
+    "contrast_device": [
+      "festival invitation vs monstrous chaos",
+      "playful chant vs violent performance energy"
+    ],
+    "dramatic_arc": [
+      "manic invitation",
+      "rapid-fire rap build",
+      "explosive bounce chorus"
+    ],
+    "narrative_role": [
+      "chaotic ringleader",
+      "festival instigator"
+    ],
+    "title_function": "Frames the song as an order to step inside the dangerous spectacle.",
+    "key_motifs": [
+      "Showtime",
+      "Snake-blade (蛇腹刃)",
+      "Zombie",
+      "Hell yeah"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 132,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "A# minor",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "high-velocity modern dance",
+        "aggressive EDM/Jumpstyle",
+        "manic carnival energy"
+      ],
+      "vocal_behavior": [
+        "extreme rap-style delivery",
+        "manic laughter and screams",
+        "intricate vocal layering and chops",
+        "Vocaloid-like precision"
+      ],
+      "production_palette": [
+        "heavy distorted synth bass",
+        "piercing digital leads",
+        "clapping jumpstyle percussion",
+        "digital glitching"
+      ],
+      "arrangement_arc": [
+        "dense sound wall",
+        "non-stop rhythmic changes",
+        "high-tension buildup"
+      ],
+      "dynamics_arc": [
+        "maximally compressed, unrelenting impact"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "hypnotic dance command",
+        "vocal showcase"
+      ],
+      "narrative_job": "Convert the audience into rhythmic 'zombies' through phonetic repetition.",
+      "arrangement_role": {
+        "summary": "Aggressive bounce with complex vocal layering and heavy bass.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Repeating minor-key hooks with frequent chromaticism.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Explosive and unrelenting.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "onomatopoetic chants",
+        "aggressive call to action"
+      ],
+      "vocabulary_focus": [
+        "showtime",
+        "snake motifs",
+        "chaos"
+      ],
+      "rhyme_features": [
+        "phonetic chant loops act as the hook",
+        "repeated shout vowels intensify the refrain"
+      ],
+      "rhythm_features": [
+        "bounce-driven chant cadence",
+        "rapid call-and-response accents"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Modern Dance J-pop",
+      "Aggressive EDM",
+      "Jumpstyle J-pop",
+      "Vocaloid-dance"
+    ],
+    "tempo_feels": [
+      "driving 132bpm",
+      "manic festival swing"
+    ],
+    "vocal_tones": [
+      "manic rap",
+      "insane laughter",
+      "distorted screams",
+      "rapid-fire precise delivery"
+    ],
+    "production_palette": [
+      "distorted synth bass",
+      "piercing digital leads",
+      "jumpstyle kicks",
+      "intricate vocal chopping"
+    ],
+    "energy_arc": [
+      "constant peak energy",
+      "high-tension drive"
+    ],
+    "imagery_anchors": [
+      "shouting festival",
+      "zombie parade",
+      "snake-blade",
+      "neon chaos"
+    ],
+    "exclude": [
+      "organic instruments",
+      "melancholy balladry",
+      "simple acoustic guitars"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "internal_monologue",
+      "copy_line"
+    ],
+    "mora_control_notes": [
+      "Intro: compressed"
+    ],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse.",
+      "Compressed modern phrasing likely needs manual singability review."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "full"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

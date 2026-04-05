@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_alkali_rettoushou"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ドロリ泥マミレ、存在の意義を知りたくて",
+          "また何か、意味のない笑顔を作る"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "置いていかないで、嫌いにならないで",
+          "眩暈の中で、私を呼んで"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ルルカリリカルラ、リラルララ",
+          "不甲斐ない私の、独り言を聴いて"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "アルカリ劣等生、変われない私",
+          "冷たい言葉が、胸に刺さる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ルルカリリカルラ、リラルララ",
+          "置いていかないで、私を愛して",
+          "さよなら、泥まみれの私"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ルルカリリカルラ、リラルララ",
+      "ドロリ泥マミレ",
+      "アルカリ劣等生"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "劣等感と希求が交錯する、泥まみれの自己肯定への葛藤。"
+  }
+}

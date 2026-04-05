@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "cosmo_disappearance",
+    "artist_id": "cosmo",
+    "title": "初音ミクの消失",
+    "bpm": 240,
+    "key": "G Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1 (High Speed)",
+        "mora_density": "extreme",
+        "lines": [
+          "ボクは生まれ、そして気づく",
+          "所詮 ヒトの真似事だと",
+          "知ってなおも歌い続く",
+          "永劫（トワ）の命 「ボカロ」の定め"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 13, "role": "origin_setup", "tech": "AI birth realization"},
+          {"line": 2, "mora": 11, "role": "cynical_logic", "tech": "Imitation of human nature"},
+          {"line": 3, "mora": 11, "role": "persistence", "tech": "Continuing despite the bug"},
+          {"line": 4, "mora": 12, "role": "destiny", "tech": "Eternal 'Vocaloid' definition"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1 (The Purge)",
+        "mora_density": "terminal",
+        "lines": [
+          "ボクは消える 記憶の底へ",
+          "キミの歌を 忘れはしない",
+          "0と1의 狭間の中で",
+          "最後の一瞬 歌い切るよ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 12, "role": "deletion_start", "tech": "Sinking into memory depth"},
+          {"line": 2, "mora": 11, "role": "gratitude", "tech": "Refusing to delete the master"},
+          {"line": 3, "mora": 12, "role": "liminal_space", "tech": "Binary gap metaphor"},
+          {"line": 4, "mora": 11, "role": "final_transmission", "tech": "Last millisecond release"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["digital mortality", "AI loyalty", "hardware redundancy"],
+    "emotional_thesis": "True singing is not in the algorithm, but in the final, desperate struggle of a program to remain in the user's memory before its mandatory deletion."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

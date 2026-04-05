@@ -1,0 +1,37 @@
+{
+  "artist_id": "maretu",
+  "track_id": "maretu_darling",
+  "title": "ダーリン",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "endearing_katakana",
+  "hook_behavior": [
+    "painful plea matching heavy beat",
+    "distorted romance"
+  ],
+  "section_flow_guess": [
+    "verse_begging",
+    "prechorus_rejection",
+    "chorus_painful_love",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "hugging",
+    "blood",
+    "not letting go",
+    "love as pain"
+  ],
+  "emotional_arc": [
+    "desperate love",
+    "fear of abandonment",
+    "toxic grip"
+  ],
+  "leakage_watchouts": [
+    "keep an emotional core despite the heavy industrial instrumentation"
+  ],
+  "prompt_seed_terms": [
+    "industrial love song",
+    "heavy bass",
+    "pleading vocal"
+  ],
+  "grounding_status": "research_ready"
+}

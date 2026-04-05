@@ -1,0 +1,1036 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_love_doll",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ラブドール",
+    "title_core": "ラブドール",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "No tie-in noted in lyric and release references used for this record",
+          "origin": "other",
+          "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "GUMI",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki producer index",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki producer index",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki producer index",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki producer index",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2010-01-01",
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Estimated GUMI era DECO*27 release",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "year": {
+        "value": 2010,
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Estimated GUMI era DECO*27 release",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:02",
+        "seconds": 182,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-03-LOVE DOLL.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki producer index and linked lyric excerpts",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki producer index",
+        "origin": "other",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/DECO%2A27",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Local owned audio file metadata",
+        "origin": "other",
+        "notes": "FLAC tags from Melon library file",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section mapping for emotional progression."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking to map hook repetition and section energy.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "(Instrumental)"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "何が嫌って その顔が その心が 消えないのが",
+          "ありもしない妄想を並べ 君は僕の中、未だ生きてる",
+          "手遅れだって 気付いても"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "ジンジン この胸の痛みは",
+          "何度だって あなたを呼んでいた",
+          "でもどうやって縫い合わせればいい？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "『大好き』なんて馬鹿みたい",
+          "眠ったあなたを抱くたびに溶けてく",
+          "『大好きな人との、お別れです』"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "もうどうしようもない 穴が空いてしまった",
+          "塞ぐための言葉すら 持ってないのにね",
+          "ただ側にいて ほしかっただけ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "ガンガン 頭をノックする",
+          "思い出が あなたを連れてくる",
+          "もうやめにしようって わかってるのに"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "『大好き』なんて馬鹿みたい",
+          "凍ったあなたに触れるたび気付くの",
+          "『大好きな人との、お別れです』"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "心がないだけの 人形みたいだね",
+          "愛してる 愛してる 言葉だけが宙を舞う"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "私が ラブドールなら",
+          "『大好き』なんて馬鹿みたい",
+          "眠ったあなたを抱くたびに溶けてく",
+          "『大好きな人との、お別れです』",
+          "さよなら"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "『大好き』なんて馬鹿みたい",
+      "『大好きな人との、お別れです』"
+    ],
+    "question_lines": [
+      "でもどうやって縫い合わせればいい？"
+    ],
+    "repetition_patterns": [
+      "The song repeats breakup and attachment language as if the lost partner is still physically present.",
+      "The chorus frames love and separation as the same sentence, intensifying contradiction."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "breakup obsession",
+      "lingering attachment",
+      "doll-like fixation"
+    ],
+    "emotional_thesis": "The song treats a dead relationship like an object the speaker still holds, turning tenderness into grotesque persistence.",
+    "contrast_device": [
+      "love declaration vs breakup statement",
+      "missing person vs still-held body image"
+    ],
+    "dramatic_arc": [
+      "persistent afterimage setup",
+      "pain compression",
+      "chorus collision between love and separation",
+      "doll realization bridge",
+      "acceptance of the end"
+    ],
+    "narrative_role": [
+      "direct_emotional_pop",
+      "breakup fixation song"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title frames the loved person (and potentially the speaker) as a held object, highlighting possession and emotional distortion.",
+    "key_motifs": [
+      "ラブドール",
+      "大好き",
+      "お別れ",
+      "痛み",
+      "縫い合わせる"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1032415,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-03-LOVE DOLL.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -7.1,
+        "lra_lu": 3.9,
+        "rms_median_db": -10.257,
+        "rms_span_db": 112.243,
+        "early_rms_db": -10.606,
+        "mid_rms_db": -10.058,
+        "late_rms_db": -10.2,
+        "late_minus_early_db": 0.406,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "DECO_27-03-LOVE DOLL.flac"
+          }
+        ]
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "stable dark-pop pressure",
+        "moderate late lift"
+      ],
+      "vocal_behavior": [
+        "intimate fixation tone",
+        "pain-compressed chorus release"
+      ],
+      "production_palette": [
+        "dark glossy pop shell",
+        "late-peaking emotional frame"
+      ],
+      "arrangement_arc": [
+        "afterimage setup",
+        "pain compression",
+        "late chorus fixation release"
+      ],
+      "dynamics_arc": [
+        "steady pressure",
+        "small late rise"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference",
+        "other"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrument names without listening notes or direct credit proof."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "afterimage setup",
+        "obsessive observation"
+      ],
+      "narrative_job": "Describe the other person as a lingering internal object that cannot be erased.",
+      "arrangement_role": {
+        "summary": "Leaves room for lingering, image-driven lines before emotional compression.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference",
+          "other"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Works as a controlled dark-pop setup rather than an immediate rupture.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Starts already pressurized, but not yet torn open.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "lingering image",
+        "obsessive persistence"
+      ],
+      "vocabulary_focus": [
+        "顔",
+        "心",
+        "妄想",
+        "生きてる"
+      ],
+      "rhyme_features": [
+        "repeated emotional-object phrasing"
+      ],
+      "rhythm_features": [
+        "balanced clauses collapsing into short realization"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "pain compression",
+        "repair impossibility"
+      ],
+      "narrative_job": "Turn persistence into bodily pain and frame the relationship as something that can no longer be sewn back together.",
+      "arrangement_role": {
+        "summary": "Compresses toward the contradiction-driven chorus line.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Shortens the emotional distance before the chorus lands the contradiction.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tightens into pain rather than opening outward.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "pain focus",
+        "repair question"
+      ],
+      "vocabulary_focus": [
+        "胸",
+        "痛み",
+        "縫い合わせる"
+      ],
+      "rhyme_features": [
+        "short repeated pain accents"
+      ],
+      "rhythm_features": [
+        "compressed phrasing before release"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "contradiction hook",
+        "breakup release"
+      ],
+      "narrative_job": "Make the chorus land as both confession and obituary, so affection and loss hit at once.",
+      "arrangement_role": {
+        "summary": "Needs a clear emotional rupture built on the collision between love language and separation language.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference",
+          "other"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "The hook should make the breakup line feel devastatingly plain rather than abstract.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Main contradiction-release zone.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "love/breakup collision",
+        "plainspoken devastation"
+      ],
+      "vocabulary_focus": [
+        "大好き",
+        "お別れ",
+        "抱く",
+        "溶ける"
+      ],
+      "rhyme_features": [
+        "hook collision rather than overt rhyme"
+      ],
+      "rhythm_features": [
+        "short impact lines",
+        "chorus contradiction cadence"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "empty reality"
+      ],
+      "narrative_job": "Contrast the obsession of Verse 1 with the stark physical reality of loss.",
+      "arrangement_role": {
+        "summary": "Drop in intensity.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Colder, more matter-of-fact delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Quieter, more isolated.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "vacancy"
+      ],
+      "vocabulary_focus": [
+        "穴が空いて",
+        "側にいてほしかった"
+      ],
+      "rhyme_features": [
+        "simple end rhyme"
+      ],
+      "rhythm_features": [
+        "slower internal pacing"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "pain recurrence"
+      ],
+      "narrative_job": "The intrusive thoughts return forcefully.",
+      "arrangement_role": {
+        "summary": "Swelling pressure.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Matches Pre-Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Building toward the chorus drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "intrusive thought"
+      ],
+      "vocabulary_focus": [
+        "ガンガン",
+        "思い出"
+      ],
+      "rhyme_features": [
+        "onomatopoeia pairing"
+      ],
+      "rhythm_features": [
+        "pushing downbeat"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "contradiction hook repeat"
+      ],
+      "narrative_job": "A colder presentation of the breakup statement.",
+      "arrangement_role": {
+        "summary": "Full release similar to Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Desperate chorus melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High intensity.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "love/breakup collision"
+      ],
+      "vocabulary_focus": [
+        "凍った",
+        "気付く"
+      ],
+      "rhyme_features": [
+        "hook anchor"
+      ],
+      "rhythm_features": [
+        "chorus cadence"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "thematic reveal"
+      ],
+      "narrative_job": "The speaker realizes they (or the partner) are just an empty doll expressing meaningless love.",
+      "arrangement_role": {
+        "summary": "Textural dip, often isolating the vocal.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Slower, more reflective phrasing.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Quiet space before the finale.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "metaphor lock"
+      ],
+      "vocabulary_focus": [
+        "人形",
+        "愛してる"
+      ],
+      "rhyme_features": [
+        "empty repetition"
+      ],
+      "rhythm_features": [
+        "halftime feel"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final closure"
+      ],
+      "narrative_job": "Accepts the 'Love Doll' identity and explicitly says goodbye.",
+      "arrangement_role": {
+        "summary": "Maximum volume and emotional weight.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Highest peak vocal push.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loudest point.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "total submission to loss"
+      ],
+      "vocabulary_focus": [
+        "ラブドール",
+        "さよなら"
+      ],
+      "rhyme_features": [
+        "title drop resolution"
+      ],
+      "rhythm_features": [
+        "climactic stop"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "delayed",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "breakup declaration",
+      "obsessive afterimage",
+      "contradiction hook"
+    ],
+    "mora_control_notes": [
+      "The chorus contradiction line should remain plain enough to feel cruelly immediate.",
+      "The pre-chorus should compress pain into short repeatable units."
+    ],
+    "accent_risk_notes": [
+      "Do not romanticize the chorus too much.",
+      "The breakup line must remain colder than the surrounding attachment language."
+    ],
+    "critic_focus": [
+      "contradiction hook force",
+      "afterimage persistence",
+      "pain compression"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark emotional vocaloid pop",
+      "breakup fixation pop"
+    ],
+    "tempo_feels": [
+      "steady dark-pop pulse",
+      "late-peaking chorus pressure"
+    ],
+    "vocal_tones": [
+      "intimate fixation lead",
+      "pain-compressed chorus delivery"
+    ],
+    "production_palette": [
+      "dark glossy shell",
+      "controlled late lift",
+      "contradiction-driven hook frame"
+    ],
+    "energy_arc": [
+      "afterimage setup",
+      "pain compression",
+      "love/breakup collision release",
+      "cold bridge reality check",
+      "final goodbye drop"
+    ],
+    "imagery_anchors": [
+      "love doll",
+      "pain",
+      "breakup",
+      "afterimage",
+      "sown wounds"
+    ],
+    "exclude": [
+      "do not turn the song into healthy closure",
+      "do not make the chorus triumphant",
+      "do not flatten the contradiction between love and separation"
+    ],
+    "source_basis": [
+      "lyrics",
+      "model_inference",
+      "other"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Validated for planner use with full 9-section map detailing the DECO*27 structure.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

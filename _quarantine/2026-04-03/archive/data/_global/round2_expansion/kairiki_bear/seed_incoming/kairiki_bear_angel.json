@@ -1,0 +1,38 @@
+{
+  "artist_id": "kairiki_bear",
+  "track_id": "kairiki_bear_angel",
+  "title": "アンヘル",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "demonic_katakana",
+  "hook_behavior": [
+    "contrast hook",
+    "soaring yet sarcastic"
+  ],
+  "section_flow_guess": [
+    "verse_sneer",
+    "prechorus_rapid",
+    "chorus_angelic",
+    "verse2_demonic",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "halos",
+    "blood",
+    "falling from grace",
+    "feathers"
+  ],
+  "emotional_arc": [
+    "false purity",
+    "revelation of rot",
+    "panic"
+  ],
+  "leakage_watchouts": [
+    "ensure chorus melody opens up unlike typical stutter hooks"
+  ],
+  "prompt_seed_terms": [
+    "angelic pop rock",
+    "distorted guitar",
+    "sarcastic choir"
+  ],
+  "grounding_status": "research_ready"
+}

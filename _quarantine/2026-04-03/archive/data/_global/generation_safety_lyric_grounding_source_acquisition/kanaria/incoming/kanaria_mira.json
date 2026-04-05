@@ -1,0 +1,48 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_mira"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "KKBOX",
+        "url": "https://www.kkbox.com/jp/ja/song/8hUvj8oW7-7y88vC-Y",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm21021401/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): KKBOX, UtaTen. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "廃退して捨てれない夢 妬み愁い 嫌い",
+          "徘徊して捨てれない君 私 誰 誰か愛して"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "抱きしめて ラブ 見せかけた ラブ",
+          "憧れはない 慰めもない",
+          "血塗られてない 出てこないで ラブ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ビビデビビデバッド",
+      "抱きしめて ラブ"
+    ]
+  }
+}

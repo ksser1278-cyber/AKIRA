@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_remaining_source_acquisition_packet",
+  "artist_id": "iyowa",
+  "track_count": 2,
+  "workflow_counts": {
+    "source_only": 1,
+    "source_plus_mode": 1,
+    "source_plus_provenance": 0
+  },
+  "tracks": [
+    {
+      "artist_id": "iyowa",
+      "track_id": "iyowa_ta_ku_san",
+      "current_verdict": "audit_only",
+      "score": 0.67,
+      "blockers": [
+        "mode_fit_unverified",
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_plus_mode",
+      "recommended_action": "acquire trusted lyric sources and exact Japanese grounding bundle, then verify a single supported narrative_role",
+      "current_record_path": "current_records\\iyowa_ta_ku_san.conditioning.json",
+      "round2_scaffold_path": "round2_records\\iyowa_ta_ku_san.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": false,
+      "needs_mode_verification": true,
+      "needs_surface_replacement": true
+    },
+    {
+      "artist_id": "iyowa",
+      "track_id": "iyowa_kyu_kurarin",
+      "current_verdict": "audit_only",
+      "score": 0.67,
+      "blockers": [
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_only",
+      "recommended_action": "acquire trusted lyric sources and exact Japanese grounding bundle",
+      "current_record_path": "current_records\\iyowa_kyu_kurarin.conditioning.json",
+      "round2_scaffold_path": "round2_records\\iyowa_kyu_kurarin.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": false,
+      "needs_mode_verification": false,
+      "needs_surface_replacement": true
+    }
+  ]
+}

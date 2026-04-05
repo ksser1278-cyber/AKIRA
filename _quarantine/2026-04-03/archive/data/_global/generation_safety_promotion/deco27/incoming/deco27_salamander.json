@@ -1,0 +1,29 @@
+{
+  "track_identity": {
+    "track_id": "deco27_salamander"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=-H2PCK48698",
+        "status": "confirmed"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Project Sekai Fandom Page (Salamander cross-check)",
+        "origin": "third_party_wiki",
+        "url": "https://pjsekai.fandom.com/wiki/Salamander",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Provenance verified conservatively and narrative mode aligned to the existing round2 classification for planner_safe promotion review."
+    ]
+  },
+  "song_intent": {
+    "narrative_role": ["ironic_meta"]
+  }
+}

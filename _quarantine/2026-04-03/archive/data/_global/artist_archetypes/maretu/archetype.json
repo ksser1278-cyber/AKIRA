@@ -1,0 +1,110 @@
+{
+  "artist_id": "maretu",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Oppressive chiptune-metal fusion x psychological horror",
+    "Rigid mechanical detachment",
+    "Keigo dissonance (polite cruelty)"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "dark_social_noun",
+      "description": "Pairing taboo social phenomena with concrete nouns",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "clinical_kanji",
+      "description": "Scientific or formal kanji compounds for emotional distance",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "rhythmic_punishment",
+    "ignition": "accusatory_drop",
+    "repetition": "idiomatic_threat_loop",
+    "line_length": "tight_percussive_blocks",
+    "forbidden": [
+      "soaring_melodic_release",
+      "hope_redemption",
+      "soothing_textures"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "aggressive_accusation",
+      "traumatic_recounting"
+    ],
+    "stance": [
+      "coldly_detached",
+      "manic_raging"
+    ],
+    "pace": "rigid_mechanical_grid",
+    "shift_pattern": "formal_keigo_vs_visceral_gore"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "chaotic_descent_or_creepy_acoustic_void",
+    "final_chorus_role": "violent_rage_climax",
+    "release_markers": [
+      "discordant_piano",
+      "distorted_scream"
+    ]
+  },
+  "common_imagery": [
+    "abandonment_isolation",
+    "social_judgment",
+    "physical_trauma",
+    "mechanical_urban",
+    "bodily_breakdown"
+  ],
+  "emotional_arc_types": [
+    "Cold Keigo -> Rising Anger -> Violent Release",
+    "Societal Pressure -> Internal Fracture -> Lash Out"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "brand_motifs",
+      "baby_motifs"
+    ],
+    "hook_leakage": [
+      "pain_repetition_patterns",
+      "acoustic_to_metal_drops"
+    ],
+    "scene_leakage": [
+      "pure_edgelord_violence",
+      "literal_brain_revolution"
+    ],
+    "phrase_leakage": [
+      "bakame_insults",
+      "haa_nee_interjections"
+    ]
+  },
+  "safe_originality_zone": [
+    "Abstract psychological horror via mechanical lens",
+    "Polite emotional distance describing cruelty",
+    "Heavy rigid chiptune-metal with clinical revelations"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "MAR_01",
+      "rule": "Dismissive interjections (Haa?, Nee?)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "MAR_02",
+      "rule": "Medical/Somatic decay metaphors (Scab, Rotted brain)",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "MAR_09",
+      "rule": "Formal Keigo for the most violent lines",
+      "risk": "low"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_apricot"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/318353/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi21122201/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with a second trusted lyric database that matches the existing transcription line-for-line."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ゆりかごから墓場まで",
+          "行きと帰りのうたた寝",
+          "夕暮れの素敵な雨",
+          "無垢なる切符の片割れ",
+          "握りしめてみた"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "大事な大事な宝箱に",
+          "かわいいかわいい日々をしまった",
+          "想い出ごと引き出しで飼いましょう"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ゆりかごから墓場まで",
+      "大事な大事な宝箱に"
+    ]
+  }
+}

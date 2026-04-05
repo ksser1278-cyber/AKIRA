@@ -1,0 +1,165 @@
+[
+  {
+    "artist_id": "kanaria",
+    "mode_id": "ironic_meta",
+    "inspect_files": [
+      "run_manifest.json",
+      "selected_lyric.md",
+      "demo_critic_results.json"
+    ],
+    "pass_questions": [
+      "Does the title bind cleanly in the hook opening?",
+      "Does chorus phrasing avoid generic direct-emotional fallback?",
+      "Does the hook keep a clear artist-specific stance?"
+    ],
+    "fail_signals": [
+      "hook opens generically without title strategy",
+      "chorus loses artist-specific rhythmic stance",
+      "imagery remains abstract without concrete focus"
+    ],
+    "likely_root_cause": [
+      "artist-specific chorus opening templates missing",
+      "mode fallback priority too high"
+    ],
+    "renderer_followup_if_fail": [
+      "add artist-specific title-bound chorus templates",
+      "tighten title_strategy_seed mapping"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "maretu",
+    "mode_id": "dark_cute_breakdown",
+    "inspect_files": [
+      "selected_lyric.md",
+      "demo_run_report.md"
+    ],
+    "pass_questions": [
+      "Does repetition handling maintain mora stability?",
+      "Is the keigo-to-violence shift perceptible in the surface?",
+      "Do chorus motifs land in high-tension slots?"
+    ],
+    "fail_signals": [
+      "repetition breaks J-grammar (surface collapse)",
+      "polite-cruel phrasing defaults to generic dark rock",
+      "mora grid drift in bridge sections"
+    ],
+    "likely_root_cause": [
+      "polite-cruelty phrase shaping templates missing",
+      "mora-stretching constraints too loose in renderer"
+    ],
+    "renderer_followup_if_fail": [
+      "add constrained phrase templates for polite accusation",
+      "tighten repetition-aware surface rewrite rules"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "mode_id": "direct_emotional_pop",
+    "inspect_files": [
+      "selected_lyric.md",
+      "demo_critic_results.json"
+    ],
+    "pass_questions": [
+      "Does repetition handling remain stable across repeated openings?",
+      "Do high-tension motifs land in the pre-hook and chorus?",
+      "Does the voice avoid generic recovery or resolution?"
+    ],
+    "fail_signals": [
+      "stutter handling becomes nonsensical jitter",
+      "toxicity imagery scattered randomly across verses",
+      "protagonist shows healthy resolve (persona leak)"
+    ],
+    "likely_root_cause": [
+      "repetition handling templates missing or unstable",
+      "motif landing priority uncalibrated for pre-hook"
+    ],
+    "renderer_followup_if_fail": [
+      "tighten repeated-opening phrase templates",
+      "update imagery_seed_list weighting for pre-hook slots"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "iyowa",
+    "mode_id": "ironic_meta",
+    "inspect_files": [
+      "selected_lyric.md",
+      "run_manifest.json"
+    ],
+    "pass_questions": [
+      "Does surreal imagery maintain concrete grounding?",
+      "Do verbs and images stay section-specific?",
+      "Does the output avoid drifting into generic dream imagery?"
+    ],
+    "fail_signals": [
+      "surrealism goes abstract (dream sequence tropes)",
+      "imagery lacks domestic objects (e.g. household items)",
+      "surface is too smooth/standard"
+    ],
+    "likely_root_cause": [
+      "concrete imagery templates missing",
+      "section-specific imagery shaping not explicit"
+    ],
+    "renderer_followup_if_fail": [
+      "add concrete imagery templates for section transitions",
+      "tighten section-specific imagery shaping"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "syudou",
+    "mode_id": "direct_emotional_pop",
+    "inspect_files": [
+      "selected_lyric.md",
+      "demo_run_report.md"
+    ],
+    "pass_questions": [
+      "Are diagnostic interjections used as cynical labels?",
+      "Is the rhythm profile spiteful and conversational?",
+      "Does the title bind effectively in fast-talking sections?"
+    ],
+    "fail_signals": [
+      "tone collapses into generic aggressive shouting",
+      "interjections are standard pop fillers (e.g. 'Woah')",
+      "title strategy lost in high-density verse"
+    ],
+    "likely_root_cause": [
+      "diagnostic-resentful interjection bank missing",
+      "rhythmical swing constraint unverified"
+    ],
+    "renderer_followup_if_fail": [
+      "add diagnostic interjection prefixes",
+      "tighten spiteful-swing rhythm constraints"
+    ],
+    "priority": "high"
+  },
+  {
+    "artist_id": "neru",
+    "mode_id": "ironic_meta",
+    "inspect_files": [
+      "selected_lyric.md",
+      "demo_critic_results.json"
+    ],
+    "pass_questions": [
+      "Are industrial/surgical motifs specific and frequent?",
+      "Is the anti-authoritarian stance maintained in the hook?",
+      "Does the surface avoid melancholic rock tropes?"
+    ],
+    "fail_signals": [
+      "surgical specificity lost to generic j-rock tropes",
+      "motifs feel like standard 'heart/distance' filler",
+      "stance softens into generic sadness"
+    ],
+    "likely_root_cause": [
+      "industrial-surgical phrase shaping missing",
+      "leakage_guardrails too loose for standard rock"
+    ],
+    "renderer_followup_if_fail": [
+      "add constrained imperative templates for industrial imagery",
+      "tighten rock-trope guardrails"
+    ],
+    "priority": "high"
+  }
+]

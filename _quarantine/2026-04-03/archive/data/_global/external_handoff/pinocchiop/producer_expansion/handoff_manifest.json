@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "pinocchiop",
+  "queue_filename": "expansion_queue.json",
+  "target_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks",
+  "track_count": 5,
+  "tracks": [
+    {
+      "track_id": "pinocchiop_aisarenakutemo_kimi_ga_iru",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\aisarenakutemo_kimi_ga_iru.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": false,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_loveit",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\loveit.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": false,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_ultimate_senpai",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\ultimate_senpai.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": false,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_boku_nanka_inakutemo",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\boku_nanka_inakutemo.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": false,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_kusare_gedou_to_chocolate",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\kusare_gedou_to_chocolate.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": false,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    }
+  ]
+}

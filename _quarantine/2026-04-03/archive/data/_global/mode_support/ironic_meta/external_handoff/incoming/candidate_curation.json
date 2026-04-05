@@ -1,0 +1,50 @@
+{
+  "mode_id": "ironic_meta",
+  "artist_candidates": [
+    {
+      "artist_id": "pinocchiop",
+      "target_track_count": 2,
+      "candidate_track_ids": [
+        "pinocchiop_common_world_domination",
+        "pinocchiop_apple_dot_com"
+      ],
+      "candidate_titles": [
+        "ありふれたせかいせいふく",
+        "アップルドットコム"
+      ],
+      "notes": [
+        "mode-aligned support tracks for PinocchioP ironic meta style"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "kanaria_king",
+        "kanaria_queen"
+      ],
+      "candidate_titles": [
+        "KING",
+        "QUEEN"
+      ],
+      "notes": [
+        "mode-aligned support tracks"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "maretu_coin_locker_baby",
+        "maretu_mind_brand"
+      ],
+      "candidate_titles": [
+        "Coin Locker Baby",
+        "Mind Brand"
+      ],
+      "notes": [
+        "high-pressure subculture irony"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+=== Atlas v1 Trusted Review Sample ===
+Body Atoms: ['指先', '鼓動']
+Scene Atoms: ['ガラス', '教室']
+Sound Atoms: ['ノイズ', '叫び', 'メロディ']
+Top Motifs: ['繰り', '返す', '全て', '大切な', '呟いてみ', '抉るよう', '塗り', '潰して', '世界', '見え']

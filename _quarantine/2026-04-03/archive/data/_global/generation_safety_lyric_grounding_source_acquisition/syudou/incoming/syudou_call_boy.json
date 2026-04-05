@@ -1,0 +1,48 @@
+{
+  "track_identity": {
+    "track_id": "syudou_call_boy"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/272714/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi19100401/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with a second trusted lyric database that matches the existing transcription line-for-line."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "繁華街地下場末のバーは",
+          "ボンクラ酔いどれ自称非凡人",
+          "また何か、独りの夜を埋めて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "コールボーイ、僕の名を呼んでくれ",
+          "空っぽのグラスを、愛で満たしてくれ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "コールボーイ",
+      "繁華街地下場末のバーは"
+    ]
+  }
+}

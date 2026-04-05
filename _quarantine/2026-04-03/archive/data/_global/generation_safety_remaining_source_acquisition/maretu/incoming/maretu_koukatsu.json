@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "maretu_koukatsu"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/MARETU/%E9%AB%98%E6%B4%BB/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for maretu_koukatsu. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "高活 って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "高活 高活 高活 高活",
+          "心を 抉るように",
+          "高活 高活 高活 高活",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "高活 高活 高活 高活",
+      "心を 抉るように"
+    ]
+  }
+}

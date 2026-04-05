@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "neru_lost_ones_weeping"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/143525/",
+        "status": "trusted"
+      },
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/542267/lyrics/I169002/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Japanese lyric grounding bundle prepared from trusted lyric source(s): Uta-Net, Oricon. For later internal normalization and phase1 retry review."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "刃渡り数センチの不信感が 挙げ句の果て静脈を刺しちゃって",
+          "病弱な愛が飛び出すもんで レスポールさえも凶器に変えてしまいました",
+          "ノーフィクション 数学と理科は好きですが",
+          "国語がどうも駄目で嫌いでした"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "黒板のこの漢字が読めますか あの子の真相は読めますか",
+          "その心黒く染めたのは おい誰なんだよ おい誰なんだよ",
+          "算盤でこの式が解けますか あの子の首の輪もう解けますか",
+          "僕達このままで良いんですか おいどうすんだよ もうどうだっていいや"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "おい誰なんだよ おい誰なんだよ",
+      "ロストワンの号哭"
+    ]
+  }
+}

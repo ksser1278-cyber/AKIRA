@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "neru_law_evading_rock"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "社会の底で、笑い飛ばせ",
+          "また何か、意味のないルールを作って"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "常識を捨てて、自由になれ",
+          "また何か、不敵なダンスを"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "脱法ロック、頭を振れ",
+          "すべてが、どうでもよくなっていく"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "現実を忘れて、踊り狂え",
+          "どこへ、行けばいいの？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "脱法ロック、頭を振れ",
+          "さよなら、退屈な現実",
+          "不謹慎な、私のままで"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "脱法ロック",
+      "頭を振れ",
+      "社会の底で"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "既存の価値観や社会規範に対する、衝動的な反撥と解放。"
+  }
+}

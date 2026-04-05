@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_failure_girl"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/188406/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi15042401/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/542267/products/1124653/1/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kairiki_bear_failure_girl (失敗作少女). Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 壊しちゃった",
+          "僕の 大事な おもちゃ",
+          "失敗作だって",
+          "笑ってみせる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "失敗作少女 失敗作少女",
+          "誰にも 選ばれなかった",
+          "失敗作少女 失敗作少女",
+          "ゴミ箱に 捨てられた"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "失敗作少女 失敗作少女",
+      "また 壊しちゃった"
+    ]
+  }
+}

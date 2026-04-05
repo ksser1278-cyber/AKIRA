@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_totmusica",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "Tot Musica",
+    "title_core": "Tot Musica",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "media_type": "film",
+      "work_name": "ONE PIECE FILM RED",
+      "role_label": "insert_song",
+      "status": "confirmed"
+    },
+    "release": {
+      "year": {
+        "value": 2022,
+        "status": "confirmed"
+      }
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "cAnON.",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Hiroyuki Sawano",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Hiroyuki Sawano",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_hw22060905",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Sawano-core dark orchestral epic. Harmonized for high-fidelity consistency."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "Gah zan tak gah zan tat tat brak",
+          "雨打つ心 彷徨う何処",
+          "枯れ果てず湧く願いと涙",
+          "解き放つ 呪を紡ぐ言の葉"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "死をも転がす救いの讃歌",
+          "求められたる救世主",
+          "祈りの間で惑う",
+          "唯 海の凪ぐ未来を乞う"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "無条件 絶対 激昂なら Singing the song",
+          "如何せん罵詈雑言でも Singing the song",
+          "有象無象の Big Bang 慈しみ深く",
+          "怒れ 集え 謳え 破滅の譜を"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "Singing the song",
+      "破滅の譜を"
+    ],
+    "repetition_patterns": [
+      "Chanting of ancient-sounding rhythmic phrases",
+      "Aggressive 'Gah zan tak' refrain"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "destruction",
+      "divine rage",
+      "ancient curse",
+      "apocalyptic power"
+    ],
+    "emotional_thesis": "A world-ending hymn that transforms suffering into an absolute force of nature.",
+    "contrast_device": [
+      "prayer for peace vs destructive song",
+      "salvation vs apocalypse"
+    ],
+    "dramatic_arc": [
+      "menacing chant",
+      "theatrical orchestral buildup",
+      "apocalyptic choral explosion"
+    ],
+    "narrative_role": [
+      "apocalyptic vessel",
+      "forbidden hymn channel"
+    ],
+    "title_function": "Names the destructive song as both curse and revelation.",
+    "key_motifs": [
+      "curse",
+      "prophecy",
+      "runes",
+      "save through destruction"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 115,
+        "status": "estimated"
+      },
+      "key": {
+        "value": "A minor",
+        "status": "estimated"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "epic dark orchestral",
+        "industrial metal hybrid",
+        "menacing"
+      ],
+      "vocal_behavior": [
+        "visceral growls",
+        "piercing belting",
+        "operatic depth",
+        "ominous ritual chanting"
+      ],
+      "production_palette": [
+        "heavy orchestral strings",
+        "aggressive dark choir",
+        "industrial distortion",
+        "crushing bass"
+      ],
+      "arrangement_arc": [
+        "monolithic wall of sound",
+        "Sawano-style dramatic expansions"
+      ],
+      "dynamics_arc": [
+        "massive explosive peaks vs terrifyingly quiet tensions"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "apocalyptic climax",
+        "commanding presence"
+      ],
+      "narrative_job": "Command the destruction/rebirth of the world through forbidden music.",
+      "arrangement_role": {
+        "summary": "Wall of sound with choir, heavy strings, and industrial hits.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Dissonant yet majestic minor key melody.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Crushing and massive impact.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "imperative commands (怒れ, 集え, 謳え)"
+      ],
+      "vocabulary_focus": [
+        "rage",
+        "ruin",
+        "big bang"
+      ],
+      "rhyme_features": [
+        "imperative phrasing and dark-vowel repetition reinforce ritual weight"
+      ],
+      "rhythm_features": [
+        "processional march pulse",
+        "choral impact accents"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Dark Orchestral Metal Pop",
+      "Industrial J-pop",
+      "Sawano-core",
+      "Epic Dark Pop"
+    ],
+    "tempo_feels": [
+      "menacing mid-tempo",
+      "heavy stomping industrial pulse"
+    ],
+    "vocal_tones": [
+      "visceral growls",
+      "operatic power",
+      "piercing belts",
+      "ominous ritual chanting"
+    ],
+    "production_palette": [
+      "crushing orchestral strings",
+      "aggressive dark choir",
+      "industrial distortion",
+      "epic soundstages"
+    ],
+    "energy_arc": [
+      "apocalyptic peak energy"
+    ],
+    "imagery_anchors": [
+      "ancient runes",
+      "doom",
+      "hymn of destruction",
+      "apocalypse"
+    ],
+    "exclude": [
+      "bright upbeat synths",
+      "simple structures",
+      "happy tones"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "hidden",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "release",
+        "title_drop_role": "none"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "artist_id": "neru",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Self-destructive punk-rock x raw rage",
+    "Anti-authoritarian persona (Sensei trauma)",
+    "Surgical and industrial metaphors for identity"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "industrial_tool",
+      "description": "Titles referring to surgical or mechanical instruments of change",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "absolute_logic",
+      "description": "Titles claiming total knowledge or definitive solutions",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "violent_breathless",
+    "ignition": "percussive_command_burst",
+    "repetition": "negative_omnipotence_loop",
+    "line_length": "sharp_cutting_phrases",
+    "forbidden": [
+      "gentle_piano_ballads",
+      "wholesome_growth",
+      "soaring_romantic_vowels"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "surgical_identity_remake",
+      "social_wound_recounting"
+    ],
+    "stance": [
+      "desperate_and_raw",
+      "sarcastically_rebellious"
+    ],
+    "pace": "cutting_edge_punk_metal",
+    "shift_pattern": "violent_burst_to_resentful_mumble"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "existential_origin_collapse",
+    "final_chorus_role": "ultimate_self_destructive_climax",
+    "release_markers": [
+      "vocal_scream",
+      "industrial_noise"
+    ]
+  },
+  "common_imagery": [
+    "surgical_tools",
+    "industrial_urban",
+    "anti_authoritarian",
+    "negative_omnipotence",
+    "social_rejection"
+  ],
+  "emotional_arc_types": [
+    "Rejection -> Self-Remake -> Explosive Outburst",
+    "Obedience -> Sudden Fracture -> Industrial Rage"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "teddy_bear_motifs",
+      "world_domination_motifs"
+    ],
+    "hook_leakage": [
+      "zenchi_zennou_anchors",
+      "bye_bye_stuttering"
+    ],
+    "scene_leakage": [
+      "generic_school_anger",
+      "scissor_cutting_visuals"
+    ],
+    "phrase_leakage": [
+      "sensei_rhetoric",
+      "shut_up_interjections"
+    ]
+  },
+  "safe_originality_zone": [
+    "Industrial and surgical transformation metaphors",
+    "Raw teenage frustration in urban settings",
+    "Lyrics carved into school desks via punk energy"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "NER_01",
+      "rule": "Surgical metaphors for identity (Scissors, Needle)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "NER_02",
+      "rule": "Aggressive English interjections (Shut up!)",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "NER_03",
+      "rule": "Sarcastic address to authority figures (Sensei)",
+      "risk": "low"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "artist_id": "kanaria",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Royal-minimalist predation",
+    "Arrogant/calculated detachment",
+    "High-speed sleek pop with negative space"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "royal_status",
+      "description": "Adoption of English titles of power and rank",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "phonetic_burst",
+      "description": "Short, punchy phonetic titles with minimal syllables",
+      "strength": "high",
+      "leakage_risk": "low"
+    }
+  ],
+  "hook_construction": {
+    "density": "high_speed_minimal",
+    "ignition": "immediate_status_drop",
+    "repetition": "rhythmic_anchoring_loop",
+    "line_length": "breathless_staccato_to_sustained",
+    "forbidden": [
+      "emotional_whining",
+      "cluttered_instrumentation",
+      "domestic_cliches"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "power_play_observation",
+      "predatory_mood_setting"
+    ],
+    "stance": [
+      "superior_watching",
+      "coldly_detached"
+    ],
+    "pace": "point_blank_staccato",
+    "shift_pattern": "talk_burst_to_soar_climax"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "strategic_pause_or_predatory_growl",
+    "final_chorus_role": "throne_room_climax",
+    "release_markers": [
+      "high_vocal_peak",
+      "bass_heavy_drop"
+    ]
+  },
+  "common_imagery": [
+    "royal_status",
+    "predator_prey",
+    "spatial_power",
+    "sharp_textures",
+    "modern_luxury"
+  ],
+  "emotional_arc_types": [
+    "Observation -> Predation -> Royal Consumption",
+    "Boredom -> Intrigue -> Power Play Climax"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "king_queen_titles",
+      "eye_focus"
+    ],
+    "hook_leakage": [
+      "left_side_right_side_count",
+      "thirteen_fourteen_count"
+    ],
+    "scene_leakage": [
+      "ivory_tower_gaze",
+      "lion_in_cage"
+    ],
+    "phrase_leakage": [
+      "ah_ha_adlibs",
+      "stop_negation"
+    ]
+  },
+  "safe_originality_zone": [
+    "Collective power and predation metaphors",
+    "Wealth and status in sleek minimalist settings",
+    "Arrogant detached persona in high-energy electronic pop"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "KAN_01",
+      "rule": "English royal titles (KING, QUEEN) as anchors",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "KAN_02",
+      "rule": "Rhythmic directions (Left side, Right side)",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "KAN_07",
+      "rule": "Percussive arrogant ad-libs (Ah, Hey)",
+      "risk": "medium"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

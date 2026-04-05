@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_apricot"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ゆりかごから墓場まで",
+          "お昼寝の夢、夕暮れの雨"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "大人になっても、忘れないで",
+          "鍵をかけた、古い引き出し"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "大事な大事な宝箱に",
+          "かわいいかわいい日々をしまった"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "あんずの香りふわりと",
+          "懐かしい風が吹く"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "大事な大事な宝箱に",
+          "かわいいかわいい日々をしまった",
+          "さよなら、子供だった私"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ゆりかごから墓場まで",
+      "大事な大事な宝箱に",
+      "あんずの香りふわりと"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "幼少期の懐かしさと成長の切なさを、宝箱に閉じ込めた思い出として描く。"
+  }
+}

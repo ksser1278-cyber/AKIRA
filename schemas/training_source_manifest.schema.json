@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Rights-Cleared Training Source Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "updated_at",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "training_source_manifest"
+    },
+    "updated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "track_id",
+          "artist_id",
+          "rights_status",
+          "source_family",
+          "record_path"
+        ],
+        "properties": {
+          "track_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artist_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rights_status": {
+            "type": "string",
+            "enum": [
+              "cleared_for_training",
+              "licensed_for_training",
+              "internal_only_holdout",
+              "not_cleared",
+              "unknown"
+            ]
+          },
+          "source_family": {
+            "type": "string",
+            "enum": [
+              "direct_license",
+              "owned_original",
+              "partner_corpus",
+              "internal_eval_only"
+            ]
+          },
+          "record_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

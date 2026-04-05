@@ -1,0 +1,706 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_rabbit_hole",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ラビットホール",
+    "title_core": "ラビットホール",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2023-05-19",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2023,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "2:34",
+        "seconds": 154,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_rabbit_hole",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_rabbit_hole",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "Blah blah blah...",
+          "Blah blah blah..."
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "会いたいとか 言わないから",
+          "好きにしていいよ 全部あげる",
+          "愛の形なんて どうでもいいの",
+          "心なんて いらないから"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "ちゅっちゅっちゅっ 愛の合図",
+          "ちゅっちゅっちゅっ 溺れていく",
+          "落ちていくよ まっさかさま",
+          "もう何も 見えないの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "ラビットホール 深く深く",
+          "逃げられない 甘い罠",
+          "ラビットホール 君のせいだよ",
+          "ラビットホール 何度でも",
+          "この穴の中で 溶け合おうよ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "壊れるくらい 抱きしめて",
+          "息もできないくらい 塞いで",
+          "どうせみんないつか 死んじゃうから",
+          "今だけは 愛を頂戴"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "ラビットホール 深く深く",
+          "戻れないよ 甘い罠",
+          "ラビットホール 君のせいだよ",
+          "ラビットホール 終わらない",
+          "この穴の中で 堕ちていこうよ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ラビットホール 深く深く",
+      "ちゅっちゅっちゅっ 愛の合図"
+    ],
+    "question_lines": [
+      "愛の形なんて どうでもいいの？"
+    ],
+    "repetition_patterns": [
+      "Heavy reliance on non-lexical vocables (Blah blah, chu chu) for hypnotic framing."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "toxic attachment",
+      "hypnotic surrender"
+    ],
+    "emotional_thesis": "Love is a dangerous, inescapable descent.",
+    "contrast_device": [
+      "cute sounds vs dark toxic themes"
+    ],
+    "dramatic_arc": [
+      "numb setup",
+      "euphoric trap"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ],
+    "tie_in_function": "",
+    "title_function": "Frames the relationship as a trap.",
+    "key_motifs": [
+      "ラビットホール",
+      "ちゅっ",
+      "深く"
+    ],
+    "interpretation_confidence": "medium"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "driving club-rock pulse",
+        "heavy bass drop chorus"
+      ],
+      "vocal_behavior": [
+        "deadpan verses",
+        "breathy accents"
+      ],
+      "production_palette": [
+        "punchy kick drum",
+        "glitchy synth leads"
+      ],
+      "arrangement_arc": [
+        "heavy drop chorus"
+      ],
+      "dynamics_arc": [
+        "wall of sound peak"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM or Keys."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Intro",
+      "section_type": "intro",
+      "source_section_labels": [
+        "intro"
+      ],
+      "lyric_function": [
+        "hypnotic hook"
+      ],
+      "narrative_job": "Set tone.",
+      "arrangement_role": {
+        "summary": "Catchy synth.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Deadpan.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High energy.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "nonsense syllables"
+      ],
+      "vocabulary_focus": [
+        "Blah"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "staccato"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "intro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "toxic setup"
+      ],
+      "narrative_job": "Establish bond.",
+      "arrangement_role": {
+        "summary": "Tight verses.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Low, conversational.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Compressed tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "surrender"
+      ],
+      "vocabulary_focus": [
+        "全部あげる"
+      ],
+      "rhyme_features": [
+        "short parallel lines"
+      ],
+      "rhythm_features": [
+        "fast syllables"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "physical hook"
+      ],
+      "narrative_job": "Use cute sounds.",
+      "arrangement_role": {
+        "summary": "Filter sweeps.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending cute layers.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "onomatopoeia"
+      ],
+      "vocabulary_focus": [
+        "ちゅっ"
+      ],
+      "rhyme_features": [
+        "sound effects"
+      ],
+      "rhythm_features": [
+        "trip-hop"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title release"
+      ],
+      "narrative_job": "Surrender.",
+      "arrangement_role": {
+        "summary": "Heavy kick.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Euphoric.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximum.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "title statement"
+      ],
+      "vocabulary_focus": [
+        "ラビットホール"
+      ],
+      "rhyme_features": [
+        "repetitive"
+      ],
+      "rhythm_features": [
+        "driving club beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "return to apathy"
+      ],
+      "narrative_job": "Re-establish depression.",
+      "arrangement_role": {
+        "summary": "Groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Low.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Low.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "complaint"
+      ],
+      "vocabulary_focus": [
+        "頂戴"
+      ],
+      "rhyme_features": [
+        "staccato rhyme"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final plea"
+      ],
+      "narrative_job": "Fully takes over.",
+      "arrangement_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "invocation"
+      ],
+      "vocabulary_focus": [
+        "ラビットホール"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "nonsense vocals",
+      "title chant"
+    ],
+    "mora_control_notes": [
+      "Heavy reliance on non-lexical sounds."
+    ],
+    "accent_risk_notes": [
+      "Keep it cute and deadly."
+    ],
+    "critic_focus": [
+      "hypnotic repetition"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "hypnotic EDM pop"
+    ],
+    "tempo_feels": [
+      "driving dance rock pulse"
+    ],
+    "vocal_tones": [
+      "cute but empty"
+    ],
+    "production_palette": [
+      "thick bass synth"
+    ],
+    "energy_arc": [
+      "massive dark drop"
+    ],
+    "imagery_anchors": [
+      "rabbit hole"
+    ],
+    "exclude": [
+      "do not make it healthy or slow"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

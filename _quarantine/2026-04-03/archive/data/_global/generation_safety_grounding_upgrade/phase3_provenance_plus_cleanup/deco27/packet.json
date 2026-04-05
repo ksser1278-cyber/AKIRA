@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "phase_id": "phase3_provenance_plus_cleanup",
+  "artist_id": "deco27",
+  "track_count": 1,
+  "source_records_dir": "source_records",
+  "tracks": [
+    {
+      "artist_id": "deco27",
+      "track_id": "deco27_hibana",
+      "score": 0.54,
+      "blockers": [
+        "missing_provenance",
+        "partial_grounding",
+        "surface_noise_risk",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "grounding_and_surface_upgrade",
+      "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+      "external_evidence_required": true,
+      "internal_review_candidate": false,
+      "priority": "medium",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": "",
+      "workflow_type": "provenance_plus_cleanup",
+      "placeholder_field_paths": [
+        "source_provenance.notes[0]",
+        "generation_safety.notes[1]"
+      ],
+      "source_record_path": "source_records\\deco27_hibana.conditioning.json"
+    }
+  ]
+}

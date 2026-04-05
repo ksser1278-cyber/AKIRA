@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ado_giragira",
+    "artist_id": "ado",
+    "artist_name": "Ado",
+    "title": "ギラギラ",
+    "title_core": "Gira Gira",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed"
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "Ado",
+          "role": "vocal",
+          "status": "confirmed"
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "Teniwoha",
+          "role": "lyrics",
+          "status": "confirmed"
+        }
+      ],
+      "composition": [
+        {
+          "name": "Teniwoha",
+          "role": "composition",
+          "status": "confirmed"
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Teniwoha",
+          "role": "arrangement",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "release": {
+      "year": {
+        "value": 2021,
+        "status": "confirmed"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "utaten_mi21021201",
+        "origin": "lyric_site"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "web_search",
+        "origin": "other"
+      }
+    ],
+    "notes": [
+      "Teniwoha collaboration. High-fidelity dark glamour."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "included",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "lines": [
+          "あーもう本当になんて素晴らしき世界",
+          "んで今日もまた己の醜悪さに惑う"
+        ],
+        "jp_section_role": "intro",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "Ugly正直言って私の顔は",
+          "そう神様が左手で描いたみたい",
+          "必然 この世にあるラブソングはどれひとつ",
+          "絶対私向けなんかじゃないでしょう"
+        ],
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus",
+        "lines": [
+          "ギラギラ輝いて私は夜を呑み",
+          "RapTapTapTap",
+          "今に見てろこのluv",
+          "目に染みるは1mgの花火",
+          "DragonDragon"
+        ],
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "reframe",
+        "phrase_energy_role": "release"
+      }
+    ],
+    "hook_lines": [
+      "ギラ ギラギラ ギラ"
+    ],
+    "repetition_patterns": [
+      "Chant-like repetition of 'ギラ'"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "self-loathing",
+      "defiant glamour",
+      "monstrous beauty"
+    ],
+    "emotional_thesis": "Embracing one's 'monstrosity' as a source of dazzling, defiant light that swallows society's judgment.",
+    "contrast_device": [
+      "God's mistake vs self-made sparkle",
+      "inner despair vs outward shimmer"
+    ],
+    "dramatic_arc": [
+      "sneering observation",
+      "acceptance of madness",
+      "dazzling defiance"
+    ],
+    "narrative_role": [
+      "theatrical monster",
+      "defiant outcast"
+    ],
+    "title_function": "Turns glittering into a defiant identity statement rather than a decorative image.",
+    "key_motifs": [
+      "spangles",
+      "God's left hand",
+      "fireworks",
+      "wolf of the night"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "bpm": {
+        "value": 96,
+        "status": "confirmed"
+      },
+      "key": {
+        "value": "G major",
+        "status": "confirmed"
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "mid-tempo dark swagger",
+        "waltz-like rhythmic swing",
+        "theatrical expansion"
+      ],
+      "vocal_behavior": [
+        "theatrical smirking voice",
+        "rolling 'r's (growls)",
+        "emotional crackling in bridge",
+        "smooth low-register to sharp highs"
+      ],
+      "production_palette": [
+        "distorted synth bass",
+        "vintage organ/keys",
+        "punchy electronic drums",
+        "sparkling glitch SFX"
+      ],
+      "arrangement_arc": [
+        "monologue start",
+        "expanding glittery wall of sound",
+        "sudden dynamic cuts"
+      ],
+      "dynamics_arc": [
+        "controlled swagger",
+        "sudden intense peaks"
+      ],
+      "confidence": "high"
+    }
+  },
+  "section_analysis": [
+    {
+      "section_name": "Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "declaration of identity",
+        "blinding radiance"
+      ],
+      "narrative_job": "Transform self-loathing into a literal shining armor.",
+      "arrangement_role": {
+        "summary": "Full synth-bass driven groove with sparkling high-end percussion.",
+        "status": "inferred"
+      },
+      "harmony_melody_role": {
+        "summary": "Swinging melody that feels majestic yet unsettling.",
+        "status": "inferred"
+      },
+      "dynamics_role": {
+        "summary": "Expansive and bright.",
+        "status": "inferred"
+      },
+      "rhetorical_pattern": [
+        "onomatopoeia use (RapTapTapTap)",
+        "rhythmic repetition of 'ギラギラ'"
+      ],
+      "vocabulary_focus": [
+        "shimmer",
+        "night",
+        "fireworks",
+        "defiance"
+      ],
+      "rhyme_features": [
+        "internal rhymes and sharp vowel endings"
+      ],
+      "rhythm_features": [
+        "swing-feel 8th notes",
+        "syncopated bass"
+      ],
+      "hook_weight": "heavy",
+      "confidence": "high",
+      "jp_section_role": "dai_sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "reframe",
+      "phrase_energy_role": "release"
+    }
+  ],
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "Dark J-pop",
+      "Electronic Glam Rock",
+      "Theatrical V-pop"
+    ],
+    "tempo_feels": [
+      "mid-tempo swagger",
+      "dark majestic waltz"
+    ],
+    "vocal_tones": [
+      "theatrical smirking",
+      "rolling 'r's",
+      "expressive growls",
+      "emotional breaking"
+    ],
+    "production_palette": [
+      "distorted synth bass",
+      "vintage keys",
+      "electronic glitter SFX",
+      "punchy drums"
+    ],
+    "energy_arc": [
+      "theatrical buildup",
+      "constant rhythmic swagger"
+    ],
+    "imagery_anchors": [
+      "broken spangles",
+      "God's mistake",
+      "monstrous beauty",
+      "night neon"
+    ],
+    "exclude": [
+      "pure acoustic instruments",
+      "bright bubblegum pop"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "audio_fact_layer.reported_facts",
+      "audio_fact_layer.proxy_inference",
+      "section_analysis.arrangement_role",
+      "section_analysis.harmony_melody_role",
+      "section_analysis.dynamics_role"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  },
+  "japanese_lyric_profile": {
+    "workflow_bias": "unknown",
+    "hook_copy_force": "high",
+    "title_ignition_style": "reframing",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "copy_line"
+    ],
+    "mora_control_notes": [
+      "Intro: dense",
+      "Verse 1: dense"
+    ],
+    "accent_risk_notes": [
+      "High-copy hook should be checked against actual melodic accent placement before reuse."
+    ],
+    "critic_focus": [
+      "section_role_clarity",
+      "hook_copy_force",
+      "mora_density_control",
+      "spoken_speed_bias",
+      "title_drop_timing"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "low",
+        "phrase_energy_role": "observation",
+        "title_drop_role": "none"
+      },
+      {
+        "section_name": "Chorus",
+        "section_type": "chorus",
+        "jp_section_role": "dai_sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "phrase_energy_role": "release",
+        "title_drop_role": "reframe"
+      }
+    ]
+  }
+}

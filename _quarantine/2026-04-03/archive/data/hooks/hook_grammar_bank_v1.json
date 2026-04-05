@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "total_hooks": 559,
+  "top_patterns": [
+    {
+      "pattern": "1-1",
+      "count": 101,
+      "ratio": 0.1807
+    },
+    {
+      "pattern": "1-1-1",
+      "count": 38,
+      "ratio": 0.068
+    },
+    {
+      "pattern": "16-9-16-11",
+      "count": 16,
+      "ratio": 0.0286
+    },
+    {
+      "pattern": "6-6",
+      "count": 10,
+      "ratio": 0.0179
+    },
+    {
+      "pattern": "1-11-1-10",
+      "count": 8,
+      "ratio": 0.0143
+    },
+    {
+      "pattern": "14-9-14-11",
+      "count": 8,
+      "ratio": 0.0143
+    },
+    {
+      "pattern": "12-9-12-11",
+      "count": 8,
+      "ratio": 0.0143
+    },
+    {
+      "pattern": "23-17-10",
+      "count": 8,
+      "ratio": 0.0143
+    },
+    {
+      "pattern": "9-6",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "8-6",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "19-11-12-8",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "17-15",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "12-16-12-17-13-14-1",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "15-20-24",
+      "count": 6,
+      "ratio": 0.0107
+    },
+    {
+      "pattern": "14-13",
+      "count": 4,
+      "ratio": 0.0072
+    }
+  ],
+  "exclamations": {
+    "none": 441,
+    "chorus_loop": 110,
+    "anaphora": 8
+  },
+  "sample_grammar_count": 559
+}

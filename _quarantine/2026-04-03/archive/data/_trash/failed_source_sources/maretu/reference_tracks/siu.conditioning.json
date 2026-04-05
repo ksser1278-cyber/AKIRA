@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "maretu_siu",
+    "artist_id": "maretu",
+    "artist_name": "MARETU",
+    "title": "しう",
+    "title_core": "しう",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2019-11-09",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2019,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/しう_(Siu)",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "chorus_hook",
+        "section_name": "Slogan Hook",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "SUCK IT UP",
+          "SUCK IT UP",
+          "SUCK IT UP",
+          "SUCK IT UP"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "lines": [
+          "愛らしく、哀しく躓く あなたから",
+          "匂い立つ死の艱苦",
+          "慎ましく、つましくぬかづく あなたには",
+          "申し訳ない言い訳"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "explosive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "THIS IS LIFE (WOW)",
+          "最低の犠牲者に愛を",
+          "最低の犠牲者に愛を",
+          "最低の犠牲者に愛を",
+          "最低の犠牲者に愛を",
+          "差し上げたいけど"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Existence Interrogation",
+        "jp_section_role": "c_melo",
+        "mora_density": "obsessive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "どうしてこれをつくったの",
+          "どうしてここまでほうっておいたの",
+          "どうしてこのこをうんだの",
+          "どうしてそこにうまれてしまったの"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "SUCK IT UP",
+      "最低の犠牲者に愛を"
+    ],
+    "repetition_patterns": [
+      "Brutal slogan loops (SUCK IT UP)",
+      "Interrogative 'Doushite' (Why) loops"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "determinism",
+      "nihilism",
+      "life is a lottery"
+    ],
+    "emotional_thesis": "Existence is a 'Takarakuji' (Lottery) that most lose. Love is an impossible gift for the 'lowest victims' of biological and social neglect.",
+    "key_motifs": [
+      "lottery",
+      "victim",
+      "husk",
+      "suck it up"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "existential crisis",
+        "direct address"
+      ],
+      "narrative_job": "Uses repetitive child-like 'Doushite' (Why) questions to challenge the creator/parent/god.",
+      "vocabulary_focus": [
+        "ほうっておいた",
+        "うまれてしまった"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "absolute",
+    "title_ignition_style": "minimalist",
+    "modern_compression_bias": "extreme",
+    "phrase_source_types": [
+      "industrial_slang",
+      "theological_interrogation"
+    ],
+    "critic_focus": [
+      "repetition fatigue management",
+      "nihilistic tone consistency"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.77,
+    "score_breakdown": {
+      "provenance_trust": 0.8,
+      "grounding_completeness": 0.76,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "missing_provenance"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

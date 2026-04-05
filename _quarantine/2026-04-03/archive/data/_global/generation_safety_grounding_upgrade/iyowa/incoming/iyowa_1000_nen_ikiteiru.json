@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_1000_nen_ikiteiru"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and thematic analysis.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "あぁ、また格好つけてる人間だ",
+          "また何か素敵な振りをしてる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "進化したのか、退化したのか",
+          "誰にも見られず人を殺せる能力"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "額縁の中で、1000年生きてる",
+          "泥まみれの人生でも、あなたの想いはここにある"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "永遠は退屈なものね、そう思わない？",
+          "歴史から切り離された、静かな午後"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "額縁の中で、1000年生きてる",
+          "まだここにいるよ、格好つけてるよ",
+          "さよなら、素晴らしい人間"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "1000年生きてる",
+      "あぁ、また格好つけてる人間だ",
+      "額縁の中で、1000年生きてる"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "Explores the contrast between the boredom of eternity and the vibrancy of human creation within a jazz-inflected framework."
+  }
+}

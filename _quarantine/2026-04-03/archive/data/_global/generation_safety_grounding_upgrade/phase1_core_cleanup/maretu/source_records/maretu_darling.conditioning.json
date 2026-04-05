@@ -1,0 +1,237 @@
+{
+  "track_identity": {
+    "track_id": "maretu_darling",
+    "title": "ダーリン",
+    "artist": "maretu",
+    "status": "cross_checked"
+  },
+  "likely_mode": "direct_emotional_pop",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm17091201/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/YFg48Ai1SSo",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Cross-check bundle updated with an official creator upload exposing lyric text directly and existing lyric text retained."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "愛の眼球アイスピック",
+      "愛の強制ミューティレーション"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "魔法みたいな 夢みたいな ファンタジックな物語が",
+          "世界に感染 愉快に蔓延",
+          "脳細胞に 危険に発展",
+          "待って、こんなの聞いてないって、ダーリン"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "脳細胞に 危険に発展",
+          "待って、こんなの聞いてないって、ダーリン"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "宛てつけてばっかりね 拙い窺い ふざけないで",
+          "言えない 消えない 想い込め 愛の眼球アイスピック",
+          "誤魔化してばっかりね いらない、知らない 煽てないで",
+          "言えない 消えない 想い込め 愛の強制ミューティレーション"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "宛てつけてばっかりね 拙い窺い ふざけないで",
+          "言えない 消えない 想い込め 愛の眼球アイスピック"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "宛てつけてばっかりね 拙い窺い ふざけないで",
+          "言えない 消えない 想い込め 愛の眼球アイスピック",
+          "誤魔化してばっかりね いらない、知らない 煽てないで",
+          "言えない 消えない 想い込め 愛の強制ミューティレーション"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Sets the mood and initial conflict.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Drives the instrumental forward.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hit"
+      ],
+      "narrative_job": "Explosive delivery of the title concept.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "reversal / silence"
+      ],
+      "narrative_job": "Subverts expectations before the finale.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Highest energy state of the track.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "Do not let go of me even if it hurts.",
+    "core_emotion": "Toxic Dependency",
+    "primary_target": "The listener or a toxic counterpart",
+    "contrast_device": "Heavy industrial music masking a desperate plea for love.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "industrial love song",
+      "pleading vocal"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.55,
+    "score_breakdown": {
+      "provenance_trust": 0.67,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.1,
+      "renderer_readiness": 0.0
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "partial_grounding",
+      "surface_noise_risk",
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "high",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled",
+      "placeholder indicators: scaffold, placeholder, initial scenario setting"
+    ]
+  }
+}

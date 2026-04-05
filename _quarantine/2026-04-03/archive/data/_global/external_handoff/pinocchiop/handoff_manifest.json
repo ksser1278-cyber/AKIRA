@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "pinocchiop",
+  "target_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks",
+  "track_count": 5,
+  "tracks": [
+    {
+      "track_id": "pinocchiop_kamippoi_na",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\kamippoi_na.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_tensei_ringo",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\tensei_ringo.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_tokumei_m",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\tokumei_m.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_mahou_shoujo_to_chocolate",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\mahou_shoujo_to_chocolate.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "pinocchiop_non_breath_oblige",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\pinocchiop\\reference_tracks\\non_breath_oblige.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    }
+  ]
+}

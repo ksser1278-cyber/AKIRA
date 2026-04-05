@@ -1,0 +1,110 @@
+{
+  "artist_id": "deco27",
+  "schema_version": "1.0",
+  "core_identity": [
+    "High-energy pop-punk x obsessive/toxic dependency",
+    "Performative vulnerability engine",
+    "Bratty conversational direct address"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "single_noun",
+      "description": "Bold branding with a single object or entity",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "contradiction",
+      "description": "Thematic wordplay pairing positive/negative concepts",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "extremely_high",
+    "ignition": "title_first",
+    "repetition": "structural_loop",
+    "line_length": "symmetric_mora_pairs",
+    "forbidden": [
+      "abstract_poetry",
+      "polite_forms",
+      "third_person_narration"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "relationship_diagnosis",
+      "power_dynamic_observation"
+    ],
+    "stance": [
+      "self_deprecating",
+      "demanding_affection"
+    ],
+    "pace": "breathless_compression",
+    "shift_pattern": "internal_external_flip"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "structural_collapse_and_naked_confession",
+    "final_chorus_role": "maximalist_release_and_consumption",
+    "release_markers": [
+      "key_change",
+      "bratty_interjection"
+    ]
+  },
+  "common_imagery": [
+    "body_pain",
+    "predatory_affection",
+    "toxic_dependency",
+    "internet_artifacts",
+    "somatic_reactions"
+  ],
+  "emotional_arc_types": [
+    "Bluff -> Crack -> Obsessive Confession",
+    "Teasing -> Neediness -> Consumption"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "vampire_motifs",
+      "animal_motifs"
+    ],
+    "hook_leakage": [
+      "rabbit_hole_tempo",
+      "otome_dissection_rhythm"
+    ],
+    "scene_leakage": [
+      "bite_marks",
+      "eating_each_other"
+    ],
+    "phrase_leakage": [
+      "ai_ai_ai",
+      "da_mon"
+    ]
+  },
+  "safe_originality_zone": [
+    "Escalating everyday insecurity to life-or-death drama",
+    "Relationship tropes pushed to uncomfortable levels",
+    "Bratty direct address in high-speed rock context"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "DECO_01",
+      "rule": "Bratty conversational particles (~jan, ~daro)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "DECO_03",
+      "rule": "IT/Internet metaphors for relationships",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "DECO_06",
+      "rule": "Obsessive 3x word repetition in chorus",
+      "risk": "high"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

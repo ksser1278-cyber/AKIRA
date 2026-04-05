@@ -1,0 +1,1039 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_tsumi_to_batsu",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "罪と罰",
+    "title_core": "罪と罰",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "No tie-in noted in lyric and release references used for this record",
+          "origin": "other",
+          "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "DECO*27 self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2009-12-07",
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Earliest NicoNico upload date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "year": {
+        "value": 2009,
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "Earliest NicoNico upload date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:49",
+        "seconds": 229,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-10-Tsumi to Batsu.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Wiki lyric excerpt source",
+        "origin": "lyric_site",
+        "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Wiki song page",
+        "origin": "other",
+        "url": "https://vocaloid.fandom.com/wiki/%E7%BD%AA%E3%81%A8%E7%BD%B0_(Tsumi_to_Batsu)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Local owned audio file metadata",
+        "origin": "other",
+        "notes": "FLAC tags from Melon library file",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section mapping for dark-confession structure."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking to map hook repetition and section energy.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "(Instrumental)"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "もしも君に耳があったら この歌を聴かせてあげられるのに",
+          "もしも君に心があったら この好きで包んであげられるのに",
+          "嫌いになるなら僕を殺して"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "どうしよう こうしよう そうしよう 心中会議",
+          "でもしょうがないのさ こうでもしないと",
+          "君は僕を見ない"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "君に愛されない僕なんかいらない",
+          "どこにもいない いない いない ばぁ",
+          "君の耳なんていらない",
+          "君の心なんていらない"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "もしも君に耳がなくても この歌を聴かせてあげたいんだよ",
+          "もしも君に心がなくても この好きで包んであげたいんだよ",
+          "どうしてだろう ここが痛いや"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "どうしよう こうしよう そうしよう 心中会議",
+          "でもしょうがないのさ こうでもしないと",
+          "僕は僕を見ない"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "君に愛されない僕なんかいらない",
+          "どこにもいない いない いない ばぁ",
+          "君の耳なんていらない",
+          "君の心なんていらない"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "こんなに愛しているのに",
+          "こんなに愛しているのに",
+          "痛い 痛い 痛い 痛い 痛い 痛い 痛い 痛い…"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "君に愛されない僕なんかいらない",
+          "どこにもいない いない いない ばぁ",
+          "君も 誰も 彼も 何も",
+          "いらない いらない"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "君に愛されない僕なんかいらない",
+      "どこにもいない いない いない ばぁ"
+    ],
+    "question_lines": [
+      "どうしよう こうしよう そうしよう",
+      "どうしてだろう ここが痛いや"
+    ],
+    "repetition_patterns": [
+      "The chorus repeats negation and disappearance language to drive panic and obsession.",
+      "The phrase 'いない いない ばぁ' subverts a children's game into a statement of mental collapse.",
+      "The bridge uses high repetition of '痛い' (It hurts) as an emotional pressure cooker."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "obsession",
+      "unrequited attachment",
+      "punitive fantasy",
+      "mental breakdown"
+    ],
+    "emotional_thesis": "The song turns unreciprocated desire into a complete psychological collapse, where the only logical conclusion is the destruction of the self and the other.",
+    "contrast_device": [
+      "soft wish to care for the other vs destructive violence",
+      "playful nursery rhyme imagery (inai-inai-baa) vs psychotic panic"
+    ],
+    "dramatic_arc": [
+      "tender impossible setup",
+      "obsessive mental compression (Pre-Chorus)",
+      "disappearance-and-punishment chorus rupture",
+      "second verse descending into physical pain",
+      "screaming repetition bridge",
+      "total catastrophic finale"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown",
+      "obsessive confession song",
+      "yandere pop"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title frames the toxic attachment as a self-contained moral system: the Crime of not loving back, and the Punishment of destruction.",
+    "key_motifs": [
+      "罪 (Crime)",
+      "罰 (Punishment)",
+      "愛されない (Unloved)",
+      "いない (Gone)",
+      "殺して (Kill me)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 925636,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-10-Tsumi to Batsu.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -7.6,
+        "lra_lu": 9.0,
+        "rms_median_db": -9.687,
+        "rms_span_db": 109.994,
+        "early_rms_db": -11.164,
+        "mid_rms_db": -8.955,
+        "late_rms_db": -8.157,
+        "late_minus_early_db": 5.572,
+        "peak_zone": "mid",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "DECO_27-10-Tsumi to Batsu.flac"
+          }
+        ]
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "clear escalation into mid-to-late pressure",
+        "dark violent confession release",
+        "chaotic breakdown late"
+      ],
+      "vocal_behavior": [
+        "urgent emotional lead",
+        "rapid word packing in pre-chorus",
+        "screaming repetition in bridge"
+      ],
+      "production_palette": [
+        "dark vocaloid guitar rock shell",
+        "high-pressure frantic framing"
+      ],
+      "arrangement_arc": [
+        "tender impossibility",
+        "rapid mental tightening",
+        "explosive rock chorus",
+        "screaming guitar solo / breakdown"
+      ],
+      "dynamics_arc": [
+        "huge dynamic swings",
+        "noticeable lifting and collapsing",
+        "catastrophic finale"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference",
+        "human_listening"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact instrument names without listening notes or direct credit proof."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "impossible tenderness",
+        "dependency framing"
+      ],
+      "narrative_job": "Start from the fantasy of caring for the other and expose how quickly that desire requests its own death.",
+      "arrangement_role": {
+        "summary": "Leaves enough room for loaded conditional lines before pressure tightens.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Melody flows like a plea before turning sharp at the end.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Moderate setup tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "conditional fantasy",
+        "death request"
+      ],
+      "vocabulary_focus": [
+        "耳",
+        "心",
+        "好き",
+        "殺して"
+      ],
+      "rhyme_features": [
+        "parallel conditional 'もしも' structure"
+      ],
+      "rhythm_features": [
+        "longer clauses turning into short violent closure"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "obsessive thought spiral",
+        "compression"
+      ],
+      "narrative_job": "Condense the speaker into repetitive self-argument until the chorus can break through as raw panic.",
+      "arrangement_role": {
+        "summary": "Tightens the rhythm and cognitive pressure before release.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Works as a fast, chaotic corridor into the chorus impact line.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Rising pressure and tempo feel.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "self-argument chain",
+        "spiral phrasing"
+      ],
+      "vocabulary_focus": [
+        "どうしよう",
+        "心中会議",
+        "見ない"
+      ],
+      "rhyme_features": [
+        "stacked rhyming 'shiyou' (let's do)"
+      ],
+      "rhythm_features": [
+        "stacked thought fragments",
+        "fast word delivery"
+      ],
+      "hook_weight": "high",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "negation hook",
+        "disappearance release"
+      ],
+      "narrative_job": "Turn wounded attachment into a destructive shout about disappearance, masking abuse in nursery-rhyme cadences.",
+      "arrangement_role": {
+        "summary": "Heavy rock drop to contrast the nursery rhyme lyric.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Memorable descent emphasizing the 'いない' (not here).",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Full blast.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "negation slogan",
+        "dark childish chant"
+      ],
+      "vocabulary_focus": [
+        "愛されない",
+        "いらない",
+        "いない"
+      ],
+      "rhyme_features": [
+        "repeated negative endings ('ranai', 'nai')"
+      ],
+      "rhythm_features": [
+        "fast hook repetition",
+        "staccato bouncing on 'inai inai baa'"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "deepening delusion"
+      ],
+      "narrative_job": "The love shifts from 'if you had' to 'even if you don't have', showing a complete detachment from reality and moving into physical pain.",
+      "arrangement_role": {
+        "summary": "Back into the tight verse groove, building more nervous energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Parallels Verse 1 but feels more desperate.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tight nervous tension.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "impossible persistence"
+      ],
+      "vocabulary_focus": [
+        "なくても",
+        "痛いや"
+      ],
+      "rhyme_features": [
+        "parallel structure to V1"
+      ],
+      "rhythm_features": [
+        "syncopated delivery"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "spiral repeat"
+      ],
+      "narrative_job": "The same spiral, but ending on self-punishment ('I don't look at myself' instead of 'you don't look').",
+      "arrangement_role": {
+        "summary": "Harder build than the first pre-chorus.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending panic.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steep crescendo.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "self negation"
+      ],
+      "vocabulary_focus": [
+        "僕は僕を見ない"
+      ],
+      "rhyme_features": [
+        "stacked rhyming 'shiyou'"
+      ],
+      "rhythm_features": [
+        "fast packed syllables"
+      ],
+      "hook_weight": "high",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "re-release"
+      ],
+      "narrative_job": "Second explosion of the destructive hook.",
+      "arrangement_role": {
+        "summary": "Full drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Main melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loud, intense.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "negation slogan"
+      ],
+      "vocabulary_focus": [
+        "いらない"
+      ],
+      "rhyme_features": [
+        "revolving rhymes"
+      ],
+      "rhythm_features": [
+        "bounce"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "breakdown"
+      ],
+      "narrative_job": "The rational mind collapses completely into pure pain reporting.",
+      "arrangement_role": {
+        "summary": "Dissonant instrumental drop or solo framing a screaming vocal loop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Monotone or chaotic repetition abandoning melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Extreme emotional pressure.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "psychotic loop"
+      ],
+      "vocabulary_focus": [
+        "痛い"
+      ],
+      "rhyme_features": [
+        "total repetition"
+      ],
+      "rhythm_features": [
+        "machine-gun repetition of a single word"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final annihilation"
+      ],
+      "narrative_job": "Expands the negation from 'I don't need you' to 'I don't need anyone or anything', completing the destruction.",
+      "arrangement_role": {
+        "summary": "Maximum chaos and volume finale.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Desperate belting.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak of the entire track.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "nihilism limit"
+      ],
+      "vocabulary_focus": [
+        "誰も",
+        "彼も",
+        "何も"
+      ],
+      "rhyme_features": [
+        "negation stacking"
+      ],
+      "rhythm_features": [
+        "driving chaotic end"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "delayed",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "negation hook",
+      "obsessive thought chain",
+      "dark confession",
+      "nursery rhyme subversion"
+    ],
+    "mora_control_notes": [
+      "The chorus needs short negative-impact units that can be repeated without losing force.",
+      "The pre-chorus chain lines should feel like accelerating thought rather than smooth prose."
+    ],
+    "accent_risk_notes": [
+      "Do not sentimentalize the chorus; it is a violent panic.",
+      "The negation line must stay harsher than the opening fantasy lines."
+    ],
+    "critic_focus": [
+      "obsessive compression",
+      "negation hook force",
+      "nursery rhyme horror element"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark vocaloid confession pop",
+      "obsessive rock pop",
+      "yandere breakcore influence"
+    ],
+    "tempo_feels": [
+      "accelerating pressure pulse",
+      "frantic thought-chaining beat"
+    ],
+    "vocal_tones": [
+      "urgent emotional lead",
+      "strained panicked edge",
+      "screaming psychotic breakdown loop"
+    ],
+    "production_palette": [
+      "dark frantic pop-rock shell",
+      "sharp metallic guitars",
+      "dynamic collapse zones"
+    ],
+    "energy_arc": [
+      "conditional tenderness setup",
+      "fast thought-spiral compression",
+      "violent negation chorus drop",
+      "chaotic bridge breakdown",
+      "total annihilation finale"
+    ],
+    "imagery_anchors": [
+      "罪",
+      "罰",
+      "いないいないばあっ",
+      "痛い痛い痛い",
+      "殺して"
+    ],
+    "exclude": [
+      "do not turn the chorus into healthy empowerment",
+      "do not soften the violence of the emotional logic",
+      "do not slow it down to a ballad pace"
+    ],
+    "source_basis": [
+      "lyrics",
+      "human manual analysis",
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Validated for full 8-section psychological arc mapping.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

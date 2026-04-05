@@ -1,0 +1,89 @@
+{
+  "track_identity": {
+    "track_id": "maretu_umitagari"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm15091201/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/cqTgOnIMaJM",
+        "status": "trusted"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated lyric grounding source bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with an official creator upload exposing lyric text directly and existing lyric text retained."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "隠れて 見つめて 繋げて 射止めた？",
+          "（極めて控えめ） 気づいて 気づいて",
+          "足りないものばかりずっと増えてくの ほんのりつらいな",
+          "「情けない」じゃ済まされない"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "足りないものばかりずっと増えてくの ほんのりつらいな",
+          "「情けない」じゃ済まされない"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "（もっと大袈裟に痛がろう・・・！）",
+          "見初めて あわせて 見惚れて いままで 弱くて",
+          "あなたの電波に溶かされたい！",
+          "あなたの優しさが嬉しかったんだ！"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "（もっと大袈裟に痛がろう・・・！）",
+          "見初めて あわせて 見惚れて いままで 弱くて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "（もっと大袈裟に痛がろう・・・！）",
+          "見初めて あわせて 見惚れて いままで 弱くて",
+          "あなたの電波に溶かされたい！",
+          "あなたの優しさが嬉しかったんだ！"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "あなたの電波に溶かされたい！",
+      "もっと大袈裟に痛がろう"
+    ]
+  },
+  "generation_safety": {
+    "notes": [
+      "pending recomputation after internal normalization"
+    ]
+  }
+}

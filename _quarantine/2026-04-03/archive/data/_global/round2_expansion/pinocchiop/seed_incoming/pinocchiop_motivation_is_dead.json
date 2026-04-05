@@ -1,0 +1,37 @@
+{
+  "artist_id": "pinocchiop",
+  "track_id": "pinocchiop_motivation_is_dead",
+  "title": "モチベーションが死んでる",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "blunt_fact",
+  "hook_behavior": [
+    "lazy dragging rhythm",
+    "bouncy apathy"
+  ],
+  "section_flow_guess": [
+    "verse_tired",
+    "prechorus_yawning",
+    "chorus_lazy_bounce",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "beds",
+    "sleeping",
+    "dead motivation",
+    "giving up"
+  ],
+  "emotional_arc": [
+    "extreme laziness",
+    "burnout",
+    "peaceful apathy"
+  ],
+  "leakage_watchouts": [
+    "do not use driving rock beats; use dragging, slightly off swing beats"
+  ],
+  "prompt_seed_terms": [
+    "lazy pop",
+    "swinging apathy",
+    "bouncy synths"
+  ],
+  "grounding_status": "research_ready"
+}

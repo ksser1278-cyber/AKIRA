@@ -1,0 +1,314 @@
+[
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_eye",
+    "title": "EYE",
+    "likely_mode": "dark_cute_breakdown",
+    "title_pattern": "single_english_noun",
+    "hook_behavior": [
+      "Rhythmic vocal snaps",
+      "Syllable separation",
+      "Jazzy drop"
+    ],
+    "section_flow_guess": [
+      "verse_sneer",
+      "prechorus_climb",
+      "chorus_snap_release",
+      "verse2_sparse",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "eyes",
+      "sight/blindness",
+      "spotlights",
+      "judging looks"
+    ],
+    "emotional_arc": [
+      "arrogance",
+      "observation",
+      "dominance"
+    ],
+    "leakage_watchouts": [
+      "Avoid making it sound like KING by ensuring the swing/jazz feeling."
+    ],
+    "prompt_seed_terms": [
+      "jazz pop",
+      "syncopated vocaloid",
+      "snapping beat"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_ruma",
+    "title": "ルマ",
+    "likely_mode": "dark_cute_breakdown",
+    "title_pattern": "meaningless_katakana",
+    "hook_behavior": [
+      "Stuttering repetition",
+      "Screaming title drop",
+      "Frantic pace"
+    ],
+    "section_flow_guess": [
+      "verse_panic",
+      "prechorus_glitch",
+      "chorus_stutter",
+      "verse2_collapse",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "barking",
+      "inferiority",
+      "scratching",
+      "fever"
+    ],
+    "emotional_arc": [
+      "panic",
+      "desperation",
+      "glitching out"
+    ],
+    "leakage_watchouts": [
+      "Rhythms must be relentlessly 8th/16th note driven, no swelling pads."
+    ],
+    "prompt_seed_terms": [
+      "fast rock",
+      "vocal stutter",
+      "anxiety pop"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_suji",
+    "title": "スヂ",
+    "likely_mode": "dark_cute_breakdown",
+    "title_pattern": "single_kanji_katakana",
+    "hook_behavior": [
+      "Heavy electronic drop",
+      "Distorted screams",
+      "Atonal shifts"
+    ],
+    "section_flow_guess": [
+      "verse_mocking",
+      "prechorus_dissonant",
+      "chorus_heavy_drop",
+      "bridge_noise",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "bloodlines",
+      "dirt",
+      "inescapable fate",
+      "chains"
+    ],
+    "emotional_arc": [
+      "disgust",
+      "anger",
+      "violent release"
+    ],
+    "leakage_watchouts": [
+      "Do not let acoustic elements overpower the industrial noise."
+    ],
+    "prompt_seed_terms": [
+      "industrial vocaloid",
+      "heavy bass drop",
+      "screaming synth"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_hibana",
+    "title": "ヒバナ",
+    "likely_mode": "direct_emotional_pop",
+    "title_pattern": "noun_sparks",
+    "hook_behavior": [
+      "English chanting (Na na na)",
+      "Soaring emotional peak",
+      "Fast rock drive"
+    ],
+    "section_flow_guess": [
+      "verse_tension",
+      "prechorus_english",
+      "chorus_explosion",
+      "bridge_guitar_solo",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "sparks",
+      "fire",
+      "guns/shooting",
+      "blinding light"
+    ],
+    "emotional_arc": [
+      "conflict",
+      "painful realization",
+      "fighting through"
+    ],
+    "leakage_watchouts": [
+      "Must not sound like generic anime OP; keep the vocal chops modern."
+    ],
+    "prompt_seed_terms": [
+      "fast emotional rock",
+      "english chant hook",
+      "guitar driven"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_slow_motion",
+    "title": "すろぉもぉしょん",
+    "likely_mode": "ironic_meta",
+    "title_pattern": "hiragana_english",
+    "hook_behavior": [
+      "Sighing delivery",
+      "Breath-based rhythm",
+      "Slower BPM chant"
+    ],
+    "section_flow_guess": [
+      "verse_aging_facts",
+      "prechorus_fatigue",
+      "chorus_resignation_chant",
+      "verse2_sickness",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "fever",
+      "sneezing",
+      "aging",
+      "clocks"
+    ],
+    "emotional_arc": [
+      "tiredness",
+      "sickness",
+      "peaceful resignation"
+    ],
+    "leakage_watchouts": [
+      "Keep the BPM moderate, do not speed it up to Kamippoi na levels."
+    ],
+    "prompt_seed_terms": [
+      "mid-tempo irony",
+      "breathing rhythm",
+      "folk electronica"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_kyu_kurarin",
+    "title": "きゅうくらりん",
+    "likely_mode": "dark_cute_breakdown",
+    "title_pattern": "dizzy_onomatopoeia",
+    "hook_behavior": [
+      "Floating off-beat",
+      "Jazz chord resolution",
+      "Bright but sad tone"
+    ],
+    "section_flow_guess": [
+      "verse_rambling",
+      "prechorus_spinning",
+      "chorus_falling",
+      "bridge_silence",
+      "chorus_final_dizzy"
+    ],
+    "imagery_classes": [
+      "floating",
+      "falling",
+      "empty rooms",
+      "fake smiles"
+    ],
+    "emotional_arc": [
+      "dizziness",
+      "losing grip",
+      "quiet despair"
+    ],
+    "leakage_watchouts": [
+      "The piano must be slightly detuned and highly syncopated."
+    ],
+    "prompt_seed_terms": [
+      "dizzy pop",
+      "off-kilter piano",
+      "retro despair"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_bitter_choco_decoration",
+    "title": "ビターチョコデコレーション",
+    "likely_mode": "ironic_meta",
+    "title_pattern": "sweet_noun_dark_modifier",
+    "hook_behavior": [
+      "Swing rhythm",
+      "Cynical swagger",
+      "Brass stabs"
+    ],
+    "section_flow_guess": [
+      "verse_keigo_mocking",
+      "prechorus_fake_politeness",
+      "chorus_swaggering_truth",
+      "bridge_laughing",
+      "chorus_final"
+    ],
+    "imagery_classes": [
+      "sweets",
+      "bitterness",
+      "adult society",
+      "hidden tongues"
+    ],
+    "emotional_arc": [
+      "fake politeness",
+      "mockery",
+      "exhaustion"
+    ],
+    "leakage_watchouts": [
+      "Avoid high-speed rock. Anchor to hip-hop/swing pacing."
+    ],
+    "prompt_seed_terms": [
+      "cynical swing",
+      "brass hop",
+      "swaggering vocaloid"
+    ],
+    "grounding_status": "research_ready"
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_tokyo_teddy_bear",
+    "title": "東京テディベア",
+    "likely_mode": "direct_emotional_pop",
+    "title_pattern": "location_object",
+    "hook_behavior": [
+      "Raw guitar emotion",
+      "Desperate shout",
+      "Classic rock structure"
+    ],
+    "section_flow_guess": [
+      "verse_running_away",
+      "prechorus_regret",
+      "chorus_screaming_plea",
+      "bridge_scissors",
+      "chorus_final_tears"
+    ],
+    "imagery_classes": [
+      "scissors",
+      "ripped seams",
+      "running away",
+      "blank pages"
+    ],
+    "emotional_arc": [
+      "self hatred",
+      "running",
+      "desperate plea for love"
+    ],
+    "leakage_watchouts": [
+      "Keep the production raw and guitar-focused, avoid heavy modern shiny synths."
+    ],
+    "prompt_seed_terms": [
+      "raw emotional rock",
+      "desperate guitar",
+      "teen angst"
+    ],
+    "grounding_status": "research_ready"
+  }
+]

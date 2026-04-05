@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "maretu_darling"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and toxic relationship themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ダーリン、ダーリン、嘘つきな夜",
+          "また何か、優しいふりをしてる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "愛だと信じた、その言葉が",
+          "私を壊していく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "愛と間違えた、痛み",
+          "ダーリン、ダーリン、逃げられない"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ボロボロの、心を引きずって",
+          "まだここに、しがみついてる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "愛と間違えた、痛み",
+          "ダーリン、ダーリン、さよなら",
+          "終わらない、地獄のパレード"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ダーリン、ダーリン",
+      "愛と間違えた、痛み",
+      "嘘つきな夜"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "Navigates the grim reality of an abusive relationship masked by cynical affection, portraying the psychological entrapment and subsequent realization."
+  }
+}

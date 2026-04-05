@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "dazibee_aruku",
+    "artist_id": "dazibee",
+    "title": "Aruku (걷다)",
+    "bpm": 124,
+    "key": "Db Major",
+    "language": "ja/ko"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "crystalline",
+        "lines": [
+          "夜の街を ひとり歩く",
+          "차가운 공기 속에 흩어져",
+          "光と影の Prismatic night",
+          "どこまでも 続いていく"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 11, "role": "JP_setup", "tech": "Walking in the night city"},
+          {"line": 2, "lang": "ko", "role": "KR_expansion", "tech": "Cold air scattering (Syllabic depth)"},
+          {"line": 3, "mora": 12, "role": "bilingual_bridge", "tech": "Prismatic night metaphor (ENG anchor)"},
+          {"line": 4, "mora": 10, "role": "continuity", "tech": "Endless path theme"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "vanguard",
+        "lines": [
+          "歩き出すよ 다시 한번 더",
+          "僕らの声を 響かせて",
+          "Prismの中 熔けだす心",
+          "Aruku Aruku どこまでも"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 14, "role": "action_hook", "tech": "Bilingual 'Walking' start"},
+          {"line": 2, "mora": 11, "role": "vocal_release", "tech": "Resonating voice"},
+          {"line": 3, "mora": 13, "role": "refraction_peak", "tech": "Melting heart in the prism"},
+          {"line": 4, "mora": 12, "role": "title_anchor", "tech": "Repeating the walk motif"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["bilingual identity", "urban transit", "refracted emotions"],
+    "emotional_thesis": "Walking is a translation of self across borders; the night city functions as a prism that refracts one's voice into multiple languages and emotional colors."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

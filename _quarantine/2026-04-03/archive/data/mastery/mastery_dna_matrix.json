@@ -1,0 +1,110 @@
+{
+  "intimate_confessional": {
+    "mode": "intimate_confessional",
+    "sample_count": 1420,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.07235390609824051,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.006384177062458745,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 8238.861724378963
+  },
+  "anthemic_cinematic": {
+    "mode": "anthemic_cinematic",
+    "sample_count": 1547,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.042250095671113375,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.002145086977968797,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 10875.212369464494
+  },
+  "night_drive": {
+    "mode": "night_drive",
+    "sample_count": 1674,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 16740.0
+  },
+  "ironic_meta": {
+    "mode": "ironic_meta",
+    "sample_count": 375,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 3750.0
+  },
+  "dark_cute_breakdown": {
+    "mode": "dark_cute_breakdown",
+    "sample_count": 2201,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.026844896544235955,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0009895977363631116,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 17351.900312618585
+  },
+  "direct_emotional_pop": {
+    "mode": "direct_emotional_pop",
+    "sample_count": 3345,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 33450.0
+  },
+  "glitch_hyper_pop": {
+    "mode": "glitch_hyper_pop",
+    "sample_count": 1,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.8479486240869135,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 10.0
+  },
+  "royal_minimalist": {
+    "mode": "royal_minimalist",
+    "sample_count": 3,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 30.0
+  },
+  "hachi_classic": {
+    "mode": "hachi_classic",
+    "sample_count": 16,
+    "mora_mean": 0.0,
+    "mora_std_dev": 0.0,
+    "mora_median": 0.0,
+    "rep_mean": 0.0,
+    "rep_std_dev": 0.0,
+    "alignment_mean": 0.0,
+    "last_updated": "2026-03-30T22:28:24Z",
+    "confidence": 160.0
+  }
+}

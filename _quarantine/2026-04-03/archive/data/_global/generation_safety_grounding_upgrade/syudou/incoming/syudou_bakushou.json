@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "syudou_bakushou"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and societal critique themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "笑い飛ばせ、この世界",
+          "また何か、意味のない歓声が上がる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "誰かに見られている、笑われている",
+          "私が、私でいられる場所へ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "爆笑、皮肉な笑いを",
+          "すべてが、どうでもよくなっていく"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "成功も、失敗も、紙一重",
+          "私は、踊り続けるだけ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "爆笑、皮肉な笑いを",
+          "さよなら、退屈な観客",
+          "最後には、私が笑う"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "爆笑",
+      "笑い飛ばせ",
+      "皮肉な笑い"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A defiant critique of a world that mindlessly cheers, using mockery and a 'burst of laughter' as an ironic form of self-assertion."
+  }
+}

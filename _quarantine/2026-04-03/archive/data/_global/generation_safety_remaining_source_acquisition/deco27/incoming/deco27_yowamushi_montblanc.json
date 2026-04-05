@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "deco27_yowamushi_montblanc"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/97825/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm10071401/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for deco27_yowamushi_montblanc. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "夕暮れの街角で",
+          "君の手を 離した",
+          "サヨナラって 言えなくて",
+          "ただ 俯いていた"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "弱虫な僕は いつまでたっても",
+          "君の想いに 気づけなくて",
+          "モンブランみたいに 甘い嘘で",
+          "二人の時間を 埋めていた"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "弱虫な僕は いつまでたっても",
+      "モンブランみたいに 甘い嘘で"
+    ]
+  }
+}

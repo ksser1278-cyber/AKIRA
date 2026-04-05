@@ -1,0 +1,37 @@
+{
+  "artist_id": "deco27",
+  "track_id": "deco27_salamander",
+  "title": "サラマンダー",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "mythical_beast",
+  "hook_behavior": [
+    "rap flow verses",
+    "hip-hop influenced drop"
+  ],
+  "section_flow_guess": [
+    "verse_rap",
+    "prechorus_hype",
+    "chorus_swagger_drop",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "fire",
+    "spitting",
+    "confidence",
+    "burning up"
+  ],
+  "emotional_arc": [
+    "swagger",
+    "confidence",
+    "fun"
+  ],
+  "leakage_watchouts": [
+    "incorporate trap beats and triplet rap flows into the rock frame"
+  ],
+  "prompt_seed_terms": [
+    "rap rock",
+    "trap vocaloid",
+    "swaggering hook"
+  ],
+  "grounding_status": "research_ready"
+}

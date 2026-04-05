@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "syudou_cute_na_kanojo"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/299651/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi21031201/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for syudou_cute_na_kanojo (キュートなカノジョ). Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "キュートなカノジョ って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "キュートなカノジョ キュートなカノジョ",
+          "心を 抉るように",
+          "キュートなカノジョ キュートなカノジョ",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "キュートなカノジョ キュートなカノジョ",
+      "心を 抉るように"
+    ]
+  }
+}

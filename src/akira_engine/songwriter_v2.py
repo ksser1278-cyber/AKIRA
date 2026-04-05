@@ -27,7 +27,14 @@ from .alexandria_library import AlexandriaLibrary
 from .mastery_blueprint import validate_against_blueprint, get_universal_blueprint
 from .phonetic_engine import apply_stutter_glitch, optimize_for_suno_phonetics
 
-ALEXANDRIA = AlexandriaLibrary()
+_ALEXANDRIA: AlexandriaLibrary | None = None
+
+
+def _get_alexandria() -> AlexandriaLibrary:
+    global _ALEXANDRIA
+    if _ALEXANDRIA is None:
+        _ALEXANDRIA = AlexandriaLibrary()
+    return _ALEXANDRIA
 
 from .direct_emotional_profiles import (
     best_direct_emotional_keyword_match,
@@ -1370,8 +1377,9 @@ def motif_roster(record: dict[str, Any], rng: random.Random) -> list[dict[str, A
     
     # Alexandria Integration: Draw inspiration from thousands of high-fidelity tracks
     model_name = record.get("custom_model_cluster", "Model_B_Humanoid_Pop")
-    library_motifs = ALEXANDRIA.get_motifs_for_model(model_name, limit=6)
-    library_hint = ALEXANDRIA.get_structural_hint(model_name)
+    alexandria = _get_alexandria()
+    library_motifs = alexandria.get_motifs_for_model(model_name, limit=6)
+    library_hint = alexandria.get_structural_hint(model_name)
 
     roster: list[dict[str, Any]] = []
     for axis in axes:

@@ -1,0 +1,108 @@
+이번 작업은 round2 expansion scaffold 32곡을 weak에서 usable 이상으로 올리는 작업이다.
+
+현재 상태:
+- round2 candidates 40곡 중 8곡은 이미 validated/gold
+- 남은 32곡은 scaffolded weak
+- 공통 blocker:
+  - song_intent.contrast_device missing or empty
+  - ready_for_prompting is false
+  - high-trust evidence ratio is too low
+  - lyric_sources missing
+  - metadata_sources missing
+  - full_text_status = partial
+
+중요:
+- 창작이 아니라 conditioning 보강 작업이다.
+- 기존 track_id, likely_mode, title 방향은 유지할 것.
+- 기존 scaffold를 덮어쓸 수 있는 merge-friendly JSON을 곡당 1개씩 제출할 것.
+- confirmed / cross_checked / estimated / inferred를 정확히 구분할 것.
+- JSON만 제출할 것.
+
+프로젝트 기준:
+- 루트: C:\JPop_Songwriter\AKIRA ENGINE
+- reliability framework:
+  C:\JPop_Songwriter\AKIRA ENGINE\docs\conditioning-reliability-framework.md
+- conditioning spec:
+  C:\JPop_Songwriter\AKIRA ENGINE\docs\track-conditioning-records.md
+
+전역 참고:
+- round2 upgrade overview:
+  C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\round2_upgrade_overview.md
+- external handoff index:
+  C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\external_handoff_index.md
+
+artist별 참고 packet/brief:
+- C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\<artist_id>\packet.md
+- C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\<artist_id>\upgrade_brief.md
+- C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\<artist_id>\delegation_prompt.txt
+
+목표:
+- 32곡 전부에 대해
+  - lyric_sources / metadata_sources 추가
+  - full_text_status 가능하면 full로 승급
+  - section_analysis 5개 유지
+  - hook_lines 2개 이상 유지
+  - song_intent.contrast_device 채우기
+  - ready_for_prompting을 true로 올릴 수 있을 만큼 내용 보강
+
+우선순위:
+high priority:
+- deco27_android_girl (deco27 / direct_emotional_pop)
+- deco27_mozaik_role (deco27 / ironic_meta)
+- deco27_salamander (deco27 / ironic_meta)
+- iyowa_1000_nen_ikiteiru (iyowa / ironic_meta)
+- iyowa_heat_abnormal (iyowa / ironic_meta)
+- kairiki_bear_angel (kairiki_bear / dark_cute_breakdown)
+- kairiki_bear_shippaisaku_shoujo (kairiki_bear / direct_emotional_pop)
+- kanaria_daino_tekina_rendezvous (kanaria / ironic_meta)
+- kanaria_yoidore_shirazu (kanaria / dark_cute_breakdown)
+- maretu_darling (maretu / direct_emotional_pop)
+- maretu_white_happy (maretu / ironic_meta)
+- neru_law_evading_rock (neru / ironic_meta)
+- neru_lost_ones_weeping (neru / direct_emotional_pop)
+- pinocchiop_apple_dot_com (pinocchiop / ironic_meta)
+- pinocchiop_nee_nee_nee (pinocchiop / dark_cute_breakdown)
+- pinocchiop_suki_na_koto_dake_de_ii_desu (pinocchiop / ironic_meta)
+- syudou_bakushou (syudou / ironic_meta)
+- syudou_call_boy (syudou / direct_emotional_pop)
+
+medium priority:
+- deco27_yowamushi_montblanc (deco27 / direct_emotional_pop)
+- iyowa_apricot (iyowa / dark_cute_breakdown)
+- iyowa_ta_ku_san (iyowa / dark_cute_breakdown)
+- kairiki_bear_alkali_rettoushou (kairiki_bear / ironic_meta)
+- kairiki_bear_lemmingming (kairiki_bear / dark_cute_breakdown)
+- kanaria_mira (kanaria / direct_emotional_pop)
+- kanaria_requiem (kanaria / direct_emotional_pop)
+- maretu_koukatsu (maretu / ironic_meta)
+- maretu_umitagari (maretu / dark_cute_breakdown)
+- neru_abstract_nonsense (neru / ironic_meta)
+- neru_snobbism (neru / ironic_meta)
+- pinocchiop_motivation_is_dead (pinocchiop / ironic_meta)
+- syudou_cute_na_kanojo (syudou / dark_cute_breakdown)
+- syudou_gamble (syudou / direct_emotional_pop)
+
+low priority:
+- none
+
+출력 경로:
+- artist별 incoming 폴더
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\deco27\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\pinocchiop\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\kanaria\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\kairiki_bear\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\maretu\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\iyowa\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\syudou\incoming
+  - C:\JPop_Songwriter\AKIRA ENGINE\data\_global\round2_expansion\neru\incoming
+
+파일명:
+- <track_id>.json
+
+금지:
+- 새 track_id 생성 금지
+- likely_mode를 엉뚱하게 바꾸기 금지
+- partial인데 full로 속이기 금지
+- confirmed를 근거 없이 쓰기 금지
+- 자유서술 해설문만 제출 금지
+- 스키마 임의 변경 금지

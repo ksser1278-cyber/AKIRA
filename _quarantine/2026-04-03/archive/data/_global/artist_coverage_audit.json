@@ -1,0 +1,245 @@
+[
+  {
+    "artist_id": "deco27",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["direct_emotional_pop", "dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "ready",
+    "risk_level": "low",
+    "why_not_ready": [],
+    "known_renderer_support": [
+      "interjection placement branch exists",
+      "somatic keyword weighting unverified"
+    ],
+    "known_smoke_test_status": "verified_pass",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "baseline demo smoke test results available",
+      "no verified artist-specific phrase shaping attached"
+    ],
+    "recommended_next_action": "none",
+    "priority": "highest"
+  },
+  {
+    "artist_id": "pinocchiop",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["ironic_meta", "dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "ready",
+    "risk_level": "low",
+    "why_not_ready": [],
+    "known_renderer_support": [
+      "high-mora compression branch active",
+      "slogan injection constraints unverified"
+    ],
+    "known_smoke_test_status": "verified_pass",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "baseline demo smoke test results available"
+    ],
+    "recommended_next_action": "none",
+    "priority": "highest"
+  },
+  {
+    "artist_id": "kanaria",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["ironic_meta", "direct_emotional_pop", "dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "artist-specific phrase bank not yet verified in demo renderer"
+    ],
+    "known_renderer_support": [
+      "title pattern branch exists",
+      "renderer defaults to mode-level fallback in chorus"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support/round2 data (EYE, KING) exists",
+      "no verified smoke test output attached"
+    ],
+    "recommended_next_action": "run demo smoke test and verify title/hook surface quality",
+    "priority": "high"
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["direct_emotional_pop", "dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "stutter_pre_hook logic jitter in renderer unverified"
+    ],
+    "known_renderer_support": [
+      "repetition filter logic unverified for jitter",
+      "toxicity motif collision undetected"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support or round2 records (Ruma) exist",
+      "explicit phrase shaping not yet verified"
+    ],
+    "recommended_next_action": "verify stutter_pre_hook logic in renderer",
+    "priority": "high"
+  },
+  {
+    "artist_id": "maretu",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["dark_cute_breakdown", "ironic_meta"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "high",
+    "why_not_ready": [
+      "keigo-dissonance (polite cruelty) logic lacking rendering constraints"
+    ],
+    "known_renderer_support": [
+      "renderer lacks explicit polite-cruelty phrase shaping",
+      "behavior defaults to generic dark phrasing"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support or round2 records (Suji) exist",
+      "renderer branch limited or unverified"
+    ],
+    "recommended_next_action": "add constrained polite-cruel phrase templates to renderer",
+    "priority": "high"
+  },
+  {
+    "artist_id": "iyowa",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["ironic_meta", "dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "renderer-specific imagery shaping is limited"
+    ],
+    "known_renderer_support": [
+      "accent phrasing constraints unverified",
+      "surreal-mundane noun fusion logic unverified"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support or round2 records (Kyu-kurarin) exist",
+      "renderer branch limited or unverified"
+    ],
+    "recommended_next_action": "add constrained imagery templates for surreal-concrete transitions",
+    "priority": "high"
+  },
+  {
+    "artist_id": "syudou",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["direct_emotional_pop", "ironic_meta"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "low",
+    "why_not_ready": [
+      "diagnostic-resentful interjection density unstandardized"
+    ],
+    "known_renderer_support": [
+      "conversational temporal logic constraints active",
+      "diagnostic interjection shaping limited"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support or round2 records (BCD) exist",
+      "renderer branch limited or unverified"
+    ],
+    "recommended_next_action": "standardize diagnostic interjection prefixes",
+    "priority": "high"
+  },
+  {
+    "artist_id": "neru",
+    "has_canonical_archetype_json": true,
+    "likely_modes": ["ironic_meta", "direct_emotional_pop"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "partial",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "surgical-industrial tool bank not yet active"
+    ],
+    "known_renderer_support": [
+      "desperation tone prompt seeds unverified",
+      "industrial-surgical phrase shaping not explicit"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "canonical archetype json exists",
+      "mode support or round2 records (TTB) exist",
+      "renderer branch limited or unverified"
+    ],
+    "recommended_next_action": "connect surgical-instrument bank to renderer",
+    "priority": "high"
+  },
+  {
+    "artist_id": "eve",
+    "has_canonical_archetype_json": false,
+    "likely_modes": ["direct_emotional_pop"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "not_ready",
+    "risk_level": "low",
+    "why_not_ready": [
+      "missing canonical json"
+    ],
+    "known_renderer_support": [
+      "narrative storytelling logic active"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "archetype exists in .md format but lacks machine-readable JSON",
+      "storytelling pop structure unverified"
+    ],
+    "recommended_next_action": "upgrade to canonical md+json format",
+    "priority": "medium"
+  },
+  {
+    "artist_id": "giga",
+    "has_canonical_archetype_json": false,
+    "likely_modes": ["dark_cute_breakdown", "ironic_meta"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "not_ready",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "missing canonical json"
+    ],
+    "known_renderer_support": [
+      "edm staccato sync profile missing"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "high-energy DNA present in MD",
+      "requires explicit tempo flags for EDM lyrical sync"
+    ],
+    "recommended_next_action": "upgrade to canonical md+json; define edm-staccato flags",
+    "priority": "medium"
+  },
+  {
+    "artist_id": "vivinos",
+    "has_canonical_archetype_json": false,
+    "likely_modes": ["dark_cute_breakdown"],
+    "has_mode_support_or_round2_data": true,
+    "demo_renderer_readiness": "not_ready",
+    "risk_level": "medium",
+    "why_not_ready": [
+      "missing canonical json",
+      "korean-subculture lexical fusion unformatted"
+    ],
+    "known_renderer_support": [
+      "theatrical manic breakdown support exists"
+    ],
+    "known_smoke_test_status": "not_run",
+    "evidence_basis": [
+      "archetype exists in .md format but lacks machine-readable JSON",
+      "renderer branch for K-subculture hybrid unverified"
+    ],
+    "recommended_next_action": "upgrade to canonical md+json; define k-subculture transition rules",
+    "priority": "high"
+  }
+]

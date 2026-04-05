@@ -1,0 +1,110 @@
+{
+  "artist_id": "syudou",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Diagnostic-resentful irony x societal pretense",
+    "Model Student trauma engine",
+    "Cynical outsider persona"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "sarcastic_label",
+      "description": "Ironic adoption of educational or corporate success markers",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "bitter_consumption",
+      "description": "Titles referring to the ingestion of bitterness or resentment",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "conversational_biting",
+    "ignition": "immediate_interjection",
+    "repetition": "diagnostic_label_loop",
+    "line_length": "fast_talking_to_belting",
+    "forbidden": [
+      "positive_energy",
+      "soaring_romantic_vowels",
+      "sincere_domesticity"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "societal_pretense_diagnosis",
+      "interaction_critique"
+    ],
+    "stance": [
+      "resentful_disdainful",
+      "analytically_sharp"
+    ],
+    "pace": "spiteful_swing_rhythm",
+    "shift_pattern": "polite_report_to_raw_outburst"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "core_trauma_revelation",
+    "final_chorus_role": "ultimate_diagnostic_explosion",
+    "release_markers": [
+      "aggressive_belting",
+      "ironic_laughter"
+    ]
+  },
+  "common_imagery": [
+    "societal_pretense",
+    "diagnostic_educational",
+    "bitter_consumption",
+    "social_burnout",
+    "hypocrisy"
+  ],
+  "emotional_arc_types": [
+    "Observation -> Resentment -> Explosive Rejection",
+    "Compliance -> Internal Burnout -> Spiteful Outburst"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "usse_motifs",
+      "decoration_motifs"
+    ],
+    "hook_leakage": [
+      "usse_usse_rhythm",
+      "gizen_repetition"
+    ],
+    "scene_leakage": [
+      "office_burnout",
+      "curriculum_fatigue"
+    ],
+    "phrase_leakage": [
+      "are_haa_interjections",
+      "maji_yabanai_talk"
+    ]
+  },
+  "safe_originality_zone": [
+    "Secret diagnostic reports on adult failure",
+    "Vocabulary of corporate/academic burnout in song",
+    "Spiteful swing momentum with biting observations"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "SYU_01",
+      "rule": "Piercing conversational interjections (Haa?, Are?)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "SYU_02",
+      "rule": "Societal labels as ironic insults (Model student)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "SYU_05",
+      "rule": "Mask/Pretense vocabulary (Lip service, Hypocrisy)",
+      "risk": "low"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

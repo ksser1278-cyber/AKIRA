@@ -1,0 +1,878 @@
+[
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_eye",
+    "title": "EYE",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Provides vocal rhythmic variation and jazzier chords than KING."
+    ],
+    "style_gap_filled": [
+      "Syncopated jazz-pop integration."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_mira",
+    "title": "MIRA",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Early Kanaria track establishing baseline emotional tones."
+    ],
+    "style_gap_filled": [
+      "More traditional pop-rock structure."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_yoidore_shirazu",
+    "title": "酔いどれ知らず",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Broadens Kanaria beyond loud shouts into sliding intoxication."
+    ],
+    "style_gap_filled": [
+      "Smooth, dragging vocal phrasing."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_requiem",
+    "title": "レクイエム",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Hyper-energetic VTuber collaboration style."
+    ],
+    "style_gap_filled": [
+      "Extreme BPM pacing within simple pop."
+    ],
+    "overlap_risk_with_existing_set": "medium",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kanaria",
+    "track_id": "kanaria_daino_tekina_rendezvous",
+    "title": "大脳的なランデブー",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Shows adaptation to external narrative."
+    ],
+    "style_gap_filled": [
+      "Mainstream alt-rock fusion."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "official_available",
+    "audio_feasibility": "high",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_ruma",
+    "title": "ルマ",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "A defining track for vocal stutter drops."
+    ],
+    "style_gap_filled": [
+      "Stuttering hook logic mapping."
+    ],
+    "overlap_risk_with_existing_set": "medium",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_angel",
+    "title": "アンヘル",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Adds heavy angelic/demonic binary theme."
+    ],
+    "style_gap_filled": [
+      "Contrast between dark lyrics and upbeat tempo."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_alkali_rettoushou",
+    "title": "アルカリレットウショウ",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Establishes inferiority complex themes clearly."
+    ],
+    "style_gap_filled": [
+      "Self-deprecating irony."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_lemmingming",
+    "title": "レミングミング",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Explores mass psychology and suicidal ideation metaphors."
+    ],
+    "style_gap_filled": [
+      "Dark thematic depth."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "kairiki_bear",
+    "track_id": "kairiki_bear_shippaisaku_shoujo",
+    "title": "失敗作少女",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Deeply emotional, less glitchy, more desperate."
+    ],
+    "style_gap_filled": [
+      "Acoustic-to-rock emotional scaling."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_suji",
+    "title": "スヂ",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Extremely heavy drop mechanics missing in current set."
+    ],
+    "style_gap_filled": [
+      "Industrial vocaloid mapping."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_umitagari",
+    "title": "うみたがり",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Addresses toxic obsessive love in a different meter."
+    ],
+    "style_gap_filled": [
+      "Odd time signature hints."
+    ],
+    "overlap_risk_with_existing_set": "medium",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_white_happy",
+    "title": "ホワイトハッピー",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Sarcastic faux-happiness."
+    ],
+    "style_gap_filled": [
+      "Major key masking dark themes."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_koukatsu",
+    "title": "コウカツ",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Sharp, biting social critique."
+    ],
+    "style_gap_filled": [
+      "Fast vocal parsing in metal."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "maretu",
+    "track_id": "maretu_darling",
+    "title": "ダーリン",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Highly requested for intense emotional anchors."
+    ],
+    "style_gap_filled": [
+      "Straightforward emotional threat."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_hibana",
+    "title": "ヒバナ",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [],
+    "why_it_matters": [
+      "The definitive fast rock emotional anthem."
+    ],
+    "style_gap_filled": [
+      "English integration in hooks."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "high",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_mozaik_role",
+    "title": "モザイクロール",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Classic baseline for DECO*27 rock."
+    ],
+    "style_gap_filled": [
+      "Foundational verse-chorus dynamic."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "high",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_yowamushi_montblanc",
+    "title": "弱虫モンブラン",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Softer, more acoustic-driven anxiety."
+    ],
+    "style_gap_filled": [
+      "Acoustic groove."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "high",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_salamander",
+    "title": "サラマンダー",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Modern heavily-produced hip-hop/rock fusion."
+    ],
+    "style_gap_filled": [
+      "Flow and rap-like verses."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "deco27",
+    "track_id": "deco27_android_girl",
+    "title": "アンドロイドガール",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [],
+    "why_it_matters": [
+      "Vocal processing as narrative device."
+    ],
+    "style_gap_filled": [
+      "Heavy thematic sequel mechanics."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_slow_motion",
+    "title": "すろぉもぉしょん",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "A slower BPM ironic reflection."
+    ],
+    "style_gap_filled": [
+      "Slower, breathing rhythm."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "high",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_apple_dot_com",
+    "title": "アップルドットコム",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "High conceptual irony using digital branding."
+    ],
+    "style_gap_filled": [
+      "Absurdist chants."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_motivation_is_dead",
+    "title": "モチベーションが死んでる",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Ultimate apathy anthem."
+    ],
+    "style_gap_filled": [
+      "Flat vocal delivery contrasting upbeat music."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "medium",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_nee_nee_nee",
+    "title": "ねぇねぇねぇ。",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Dialog-driven toxic cuteness."
+    ],
+    "style_gap_filled": [
+      "Call and response hooks."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "pinocchiop",
+    "track_id": "pinocchiop_suki_na_koto_dake_de_ii_desu",
+    "title": "好きなことだけでいいです",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Sarcastic take on modern leisure."
+    ],
+    "style_gap_filled": [
+      "Gospel/choir synth integration."
+    ],
+    "overlap_risk_with_existing_set": "low",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "medium",
+    "priority": "high",
+    "recommended_dataset_tier": "producer_expansion",
+    "notes": []
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_kyu_kurarin",
+    "title": "きゅうくらりん",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Introduces dizzying, out-of-tune aesthetic."
+    ],
+    "style_gap_filled": [
+      "Jazz-chord off-kilter panic."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_1000_nen_ikiteiru",
+    "title": "1000年生きてる",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Broadens narrative scope."
+    ],
+    "style_gap_filled": [
+      "Distinct skipping beats."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_apricot",
+    "title": "アプリコット",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Soft, agonizing desperation."
+    ],
+    "style_gap_filled": [
+      "Whispery vocal tuning."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_heat_abnormal",
+    "title": "熱異常",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Extreme chaotic pacing mixed with apathy."
+    ],
+    "style_gap_filled": [
+      "Noise-pop elements."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "iyowa",
+    "track_id": "iyowa_ta_ku_san",
+    "title": "たうと",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Abstract psychological horror."
+    ],
+    "style_gap_filled": [
+      "Layered disjointed vocals."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_bitter_choco_decoration",
+    "title": "ビターチョコデコレーション",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Swing/jazz-hop rhythmic foundation."
+    ],
+    "style_gap_filled": [
+      "Adult cynical themes vs high school themes."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_call_boy",
+    "title": "コールボーイ",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Raw, alcoholic desperation."
+    ],
+    "style_gap_filled": [
+      "Jazz rock swagger."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_bakushou",
+    "title": "爆笑",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Manic laughter as a hook device."
+    ],
+    "style_gap_filled": [
+      "Aggressive drop dynamics."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_cute_na_kanojo",
+    "title": "キュートなカノジョ",
+    "likely_mode": "dark_cute_breakdown",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Sarcastic toxic romance."
+    ],
+    "style_gap_filled": [
+      "Minimalist funky basslines."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "syudou",
+    "track_id": "syudou_gamble",
+    "title": "ギャンブル",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "High stakes dramatic anthem."
+    ],
+    "style_gap_filled": [
+      "Orchestral integration."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_tokyo_teddy_bear",
+    "title": "東京テディベア",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "The grandaddy of vocaloid emotional rock."
+    ],
+    "style_gap_filled": [
+      "Raw guitar emotional arcs."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_lost_ones_weeping",
+    "title": "ロストワンの号哭",
+    "likely_mode": "direct_emotional_pop",
+    "secondary_modes": [
+      "ironic_meta"
+    ],
+    "why_it_matters": [
+      "Definitive track for school-system anxiety."
+    ],
+    "style_gap_filled": [
+      "Screaming rock chorus."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_law_evading_rock",
+    "title": "脱法ロック",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Manic drug-reference chaos pop."
+    ],
+    "style_gap_filled": [
+      "Nonsense hooks."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "high",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_snobbism",
+    "title": "SNOBBISM",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "direct_emotional_pop"
+    ],
+    "why_it_matters": [
+      "Funk rock social critique."
+    ],
+    "style_gap_filled": [
+      "Groove-based cynical verses."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  },
+  {
+    "artist_id": "neru",
+    "track_id": "neru_abstract_nonsense",
+    "title": "アブストラクト・ナンセンス",
+    "likely_mode": "ironic_meta",
+    "secondary_modes": [
+      "dark_cute_breakdown"
+    ],
+    "why_it_matters": [
+      "Early pioneer of despair-rock."
+    ],
+    "style_gap_filled": [
+      "Heavy syncopation in verse."
+    ],
+    "overlap_risk_with_existing_set": "none",
+    "grounding_feasibility": "high",
+    "provenance_feasibility": "high",
+    "audio_feasibility": "low",
+    "priority": "medium",
+    "recommended_dataset_tier": "mode_support",
+    "notes": []
+  }
+]

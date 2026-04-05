@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "syudou_gamble"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/305260/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi21071401/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for syudou_gamble. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "ギャンブル って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ギャンブル ギャンブル ギャンブル ギャンブル",
+          "心を 抉るように",
+          "ギャンブル ギャンブル ギャンブル ギャンブル",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ギャンブル ギャンブル ギャンブル ギャンブル",
+      "心を 抉るように"
+    ]
+  }
+}

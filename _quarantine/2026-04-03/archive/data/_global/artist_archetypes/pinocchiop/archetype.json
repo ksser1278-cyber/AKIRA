@@ -1,0 +1,110 @@
+{
+  "artist_id": "pinocchiop",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Hyper-fast carnival-esque irony x social autopsy",
+    "Exhausted observer persona",
+    "Overstimulation via informational overload"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "sarcastic_slogan",
+      "description": "Ironic adoption of internet or social catchphrases",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "blunt_observation",
+      "description": "Stating mundane or clinical facts as conceptual titles",
+      "strength": "high",
+      "leakage_risk": "medium"
+    }
+  ],
+  "hook_construction": {
+    "density": "hyper_dense",
+    "ignition": "sarcastic_chant",
+    "repetition": "manic_structural_loop",
+    "line_length": "short_percussive",
+    "forbidden": [
+      "soaring_vowels",
+      "pure_emotion",
+      "slow_pacing"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "societal_flaw_listing",
+      "hypocrisy_observation"
+    ],
+    "stance": [
+      "existentially_fatigued",
+      "cynically_detached"
+    ],
+    "pace": "extreme_syllabic_packing",
+    "shift_pattern": "macro_to_micro_zoom"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "brief_terrifying_sincerity_or_void",
+    "final_chorus_role": "manic_absurd_surrender",
+    "release_markers": [
+      "acoustic_cut_out",
+      "vocal_fatigue_shout"
+    ]
+  },
+  "common_imagery": [
+    "failed_supernatural",
+    "mundane_commercialism",
+    "physical_degradation",
+    "social_performativity",
+    "urban_insignificance"
+  ],
+  "emotional_arc_types": [
+    "Irony -> Social Pressure -> Sincere Crack -> Return to Irony",
+    "Existential Listing -> Overstimulation -> Total Apathy"
+  ],
+  "leakage_risks": {
+    "title_leakage": [
+      "kami_motifs",
+      "oblique_motifs"
+    ],
+    "hook_leakage": [
+      "non_breath_chanting",
+      "ppoi_na_suffixes"
+    ],
+    "scene_leakage": [
+      "internet_comment_sections",
+      "god_failing_at_work"
+    ],
+    "phrase_leakage": [
+      "sore_wa_sore_wa",
+      "human_autopsy_talk"
+    ]
+  },
+  "safe_originality_zone": [
+    "Cynical chanting about pop culture fluff",
+    "Escalating modern inconveniences to identity collapse",
+    "Cheerful manic energy paired with social anatomy"
+  ],
+  "fingerprint_pool": [
+    {
+      "weapon_id": "PINOC_01",
+      "rule": "Mindless repetitive interjections (La-la-la, Yeah)",
+      "risk": "low"
+    },
+    {
+      "weapon_id": "PINOC_05",
+      "rule": "Noun lists without verbs in 3-4 syllable blocks",
+      "risk": "high"
+    },
+    {
+      "weapon_id": "PINOC_06",
+      "rule": "Self-introduction interjections mid-chant",
+      "risk": "high"
+    }
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

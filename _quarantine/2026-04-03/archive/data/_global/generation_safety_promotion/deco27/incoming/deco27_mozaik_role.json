@@ -1,0 +1,29 @@
+{
+  "track_identity": {
+    "track_id": "deco27_mozaik_role"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "DECO*27 Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=R_S-pT_vI_o",
+        "status": "confirmed"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "NicoNico Douga (Original Upload)",
+        "origin": "official_channel",
+        "url": "https://www.nicovideo.jp/watch/sm11398357",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance and narrative mode verified for planner_safe promotion."
+    ]
+  },
+  "song_intent": {
+    "narrative_role": ["ironic_meta"]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "mode_id": "direct_emotional_pop",
+  "artist_candidates": [
+    {
+      "artist_id": "deco27",
+      "target_track_count": 2,
+      "candidate_track_ids": [
+        "deco27_animal",
+        "deco27_otome_dissection"
+      ],
+      "candidate_titles": [
+        "アニマル",
+        "乙女解剖"
+      ],
+      "notes": [
+        "mode-aligned support tracks for direct emotional pop"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "target_track_count": 4,
+      "candidate_track_ids": [
+        "kairiki_bear_venom",
+        "kairiki_bear_darling_dance"
+      ],
+      "candidate_titles": [
+        "ベノム",
+        "ダーリンダンス"
+      ],
+      "notes": [
+        "mode-aligned emotional intensity"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "target_track_count": 4,
+      "candidate_track_ids": [
+        "kanaria_envy_baby"
+      ],
+      "candidate_titles": [
+        "エンヴィーベイビー"
+      ],
+      "notes": [
+        "direct emotional pop support"
+      ]
+    }
+  ]
+}

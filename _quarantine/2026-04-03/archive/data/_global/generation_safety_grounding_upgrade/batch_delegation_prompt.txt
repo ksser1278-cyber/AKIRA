@@ -1,0 +1,100 @@
+This task is generation_safety grounding and surface upgrade batch 1.
+
+Goal:
+- Upgrade the remaining grounding_and_surface_upgrade records from `audit_only` toward `planner_safe` by replacing scaffold grounding, removing surface noise, and verifying mode only when required.
+
+Important:
+- Do not modify engine code.
+- Keep existing track_id values.
+- Submit merge-friendly JSON only.
+- Patch JSON is allowed if the merged record becomes planner_safe.
+- Validator evaluates the merged record after patch application.
+
+Required result per record:
+- full grounding replaces placeholder sections and hook lines
+- scaffold or placeholder notes are removed or overwritten
+- merged record must no longer trigger `partial_grounding` or `surface_noise_risk`
+- if the current blocker list includes `mode_fit_unverified`, set `song_intent.narrative_role` to exactly one supported mode
+- if the current blocker list includes `missing_provenance`, add trusted lyric_sources and metadata_sources
+
+Workflow types:
+- core_cleanup: `16`
+- extended_cleanup: `36`
+- provenance_plus_cleanup: `1`
+
+Outlier:
+- `deco27_hibana` still needs provenance along with grounding cleanup.
+
+Done when:
+- generation_safety verdict becomes at least `planner_safe` after merge and pilot recomputation.
+
+deco27:
+- deco27_hibana (provenance_plus_cleanup)
+- deco27_yowamushi_montblanc (extended_cleanup)
+
+iyowa:
+- iyowa_1000_nen_ikiteiru (core_cleanup)
+- iyowa_apricot (core_cleanup)
+- iyowa_heat_abnormal (core_cleanup)
+
+kairiki_bear:
+- kairiki_bear_alkali_rettoushou (core_cleanup)
+- kairiki_bear_shippaisaku_shoujo (core_cleanup)
+
+kanaria:
+- kanaria_daino_tekina_rendezvous (core_cleanup)
+- kanaria_eye (core_cleanup)
+- kanaria_mira (core_cleanup)
+
+maretu:
+- maretu_darling (core_cleanup)
+- maretu_umitagari (core_cleanup)
+- maretu_white_happy (core_cleanup)
+
+neru:
+- neru_abstract_nonsense (core_cleanup)
+- neru_law_evading_rock (core_cleanup)
+- neru_lost_ones_weeping (core_cleanup)
+
+pinocchiop:
+- pinocchiop_apple_dot_com (extended_cleanup)
+- pinocchiop_motivation_is_dead (extended_cleanup)
+- pinocchiop_nee_nee_nee (extended_cleanup)
+- pinocchiop_slow_motion (extended_cleanup)
+- pinocchiop_suki_na_koto_dake_de_ii_desu (extended_cleanup)
+
+syudou:
+- syudou_bakushou (core_cleanup)
+- syudou_call_boy (core_cleanup)
+
+unknown:
+- iyowa_1000_nen_ikiteiru (extended_cleanup)
+- iyowa_apricot (extended_cleanup)
+- iyowa_heat_abnormal (extended_cleanup)
+- iyowa_kyu_kurarin (extended_cleanup)
+- iyowa_ta_ku_san (extended_cleanup)
+- kairiki_bear_alkali_rettoushou (extended_cleanup)
+- kairiki_bear_angel (extended_cleanup)
+- kairiki_bear_lemmingming (extended_cleanup)
+- kairiki_bear_ruma (extended_cleanup)
+- kairiki_bear_shippaisaku_shoujo (extended_cleanup)
+- kanaria_daino_tekina_rendezvous (extended_cleanup)
+- kanaria_eye (extended_cleanup)
+- kanaria_mira (extended_cleanup)
+- kanaria_requiem (extended_cleanup)
+- kanaria_yoidore_shirazu (extended_cleanup)
+- maretu_darling (extended_cleanup)
+- maretu_koukatsu (extended_cleanup)
+- maretu_suji (extended_cleanup)
+- maretu_umitagari (extended_cleanup)
+- maretu_white_happy (extended_cleanup)
+- neru_abstract_nonsense (extended_cleanup)
+- neru_law_evading_rock (extended_cleanup)
+- neru_lost_ones_weeping (extended_cleanup)
+- neru_snobbism (extended_cleanup)
+- neru_tokyo_teddy_bear (extended_cleanup)
+- syudou_bakushou (extended_cleanup)
+- syudou_bitter_choco_decoration (extended_cleanup)
+- syudou_call_boy (extended_cleanup)
+- syudou_cute_na_kanojo (extended_cleanup)
+- syudou_gamble (extended_cleanup)

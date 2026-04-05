@@ -1,0 +1,3200 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "6wxfx1yhyqjCPYwwxJktR2",
+    "name": "King Gnu",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/6wxfx1yhyqjCPYwwxJktR2"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 33,
+  "raw_track_total": 113,
+  "canonical_track_count": 91,
+  "primary_lyric_track_count": 91,
+  "redundant_variant_track_count": 0,
+  "canonical_tracks": [
+    {
+      "name": "Tokyo Rendez-Vous",
+      "normalized_name": "tokyo rendez vous",
+      "first_release_date": "2017-07-19",
+      "spotify_track_id": "0gFDdpUNGyARDeUMgN2BAo",
+      "albums": [
+        "Tokyo Rendez-Vous",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "McDonald Romance",
+      "normalized_name": "mcdonald romance",
+      "first_release_date": "2017-08-09",
+      "spotify_track_id": "3suD1ZwytNJNDmTz59YFDZ",
+      "albums": [
+        "McDonald Romance",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "Vinyl",
+      "normalized_name": "vinyl",
+      "first_release_date": "2017-09-27",
+      "spotify_track_id": "0egeyMcrcQjFyn3CbVLT4p",
+      "albums": [
+        "Vinyl",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "NIGHT POOL",
+      "normalized_name": "night pool",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "79TdpfePV5FGcNrh0iXavF",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "あなたは蜃気楼",
+      "normalized_name": "あなたは蜃気楼",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "4RGo52porovSt3sOhx05Lo",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "サマーレイン・ダイバー",
+      "normalized_name": "サマーレイン・ダイバー",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "65dFo2NqYkduf8O8xJewH2",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "ロウラヴ",
+      "normalized_name": "ロウラヴ",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "14QUJsesLiDdZ4oifIWOxN",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "破裂",
+      "normalized_name": "破裂",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "13bs6bbMoNTQaRVc770Gww",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "Flash!!!",
+      "normalized_name": "flash",
+      "first_release_date": "2018-07-13",
+      "spotify_track_id": "5TnkbWVrVUdu2EGXze1qTc",
+      "albums": [
+        "Flash!!!",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Prayer X",
+      "normalized_name": "prayer x",
+      "first_release_date": "2018-08-10",
+      "spotify_track_id": "6VvXSjTQMP6eInrjz4kq2W",
+      "albums": [
+        "Prayer X",
+        "Prayer X (Acoustic)",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Slumberland",
+      "normalized_name": "slumberland",
+      "first_release_date": "2018-12-14",
+      "spotify_track_id": "089VYze40c7Eue8zrtMwJn",
+      "albums": [
+        "Slumberland",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Bedtown",
+      "normalized_name": "bedtown",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "4A3MCFV5Tvv0f3j843et3I",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Don't Stop the Clocks",
+      "normalized_name": "dont stop the clocks",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "40cjQFH3UG8bYB8RSuOCgB",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Hitman",
+      "normalized_name": "hitman",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "6t3cdmLb5aceE5cp2zD6Pf",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "It's a small world",
+      "normalized_name": "its a small world",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "7FTMEtx6gQhZ57wDWKdiz7",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sorrows",
+      "normalized_name": "sorrows",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "4P7JctttE0UvemJYpib33Z",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅰ",
+      "normalized_name": "sympa i",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "36w0cZUXiMm4MAeowfAtqm",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅱ",
+      "normalized_name": "sympa ii",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "26VISV8QUbnaTVhRR4rHox",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅲ",
+      "normalized_name": "sympa iii",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "6FAUQC109WAIDeAhsrO43y",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅳ",
+      "normalized_name": "sympa iv",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "2atBzKuVkvYWobWmc2MAyp",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "The hole",
+      "normalized_name": "the hole",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "07FmAEayRQIXBcVcbUvI5j",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "白日",
+      "normalized_name": "白日",
+      "first_release_date": "2019-02-22",
+      "spotify_track_id": "5iF0Yf9gju6ERpAch08JsC",
+      "albums": [
+        "白日",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "飛行艇",
+      "normalized_name": "飛行艇",
+      "first_release_date": "2019-08-09",
+      "spotify_track_id": "3gzhVnO32u1W4BrUECGwt3",
+      "albums": [
+        "飛行艇",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "傘",
+      "normalized_name": "傘",
+      "first_release_date": "2019-10-11",
+      "spotify_track_id": "4xVUTI1waBL5QctPQJhbPD",
+      "albums": [
+        "傘",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "飾りじゃないのよ 涙は",
+      "normalized_name": "飾りじゃないのよ 涙は",
+      "first_release_date": "2019-11-27",
+      "spotify_track_id": "5unR0gN8UJ7D9HEULNB1mX",
+      "albums": [
+        "飾りじゃないのよ 涙は"
+      ]
+    },
+    {
+      "name": "Teenager Forever",
+      "normalized_name": "teenager forever",
+      "first_release_date": "2019-12-20",
+      "spotify_track_id": "2F7OtRVmsqhDRhc5pB6E0d",
+      "albums": [
+        "Teenager Forever",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "Overflow",
+      "normalized_name": "overflow",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "5HdBTRrqGoju7DIZ0GkNYG",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "どろん",
+      "normalized_name": "どろん",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "5KQUugWVoDTgHXSN7UU5Qb",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "ユーモア",
+      "normalized_name": "ユーモア",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "0zXSk9N3L7XQb8GXwhjlXt",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "壇上",
+      "normalized_name": "壇上",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "3T5YrUdxtfaMp2bxJEb35e",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "小さな惑星",
+      "normalized_name": "小さな惑星",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "6Sk8FdL95YNN8Xru87BWez",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "幕間",
+      "normalized_name": "幕間",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "2TCibOLNyIRvr7ti4XSXQm",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "閉会式",
+      "normalized_name": "閉会式",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "7qWe4V22fK5QuIi2xkzQmr",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "開会式",
+      "normalized_name": "開会式",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "23XMhKtKHNnQ5hq22f40Rs",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "三文小説",
+      "normalized_name": "三文小説",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "56CevCV25XOXmbzskwl4L8",
+      "albums": [
+        "三文小説",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "千両役者",
+      "normalized_name": "千両役者",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "7lJ9q59rTO6R9wkXK3JFlk",
+      "albums": [
+        "千両役者",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "泡",
+      "normalized_name": "泡",
+      "first_release_date": "2021-03-05",
+      "spotify_track_id": "7vPjcqFUBCHeGlZQFijnIc",
+      "albums": [
+        "泡",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "BOY",
+      "normalized_name": "boy",
+      "first_release_date": "2021-12-01",
+      "spotify_track_id": "4GYfARUu6WGJbCqkAjWXQr",
+      "albums": [
+        "BOY",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "F.O.O.L",
+      "normalized_name": "f o o l",
+      "first_release_date": "2021-12-01",
+      "spotify_track_id": "5C1BhnH2RjQfShN1DzqyKy",
+      "albums": [
+        "BOY"
+      ]
+    },
+    {
+      "name": "一途",
+      "normalized_name": "一途",
+      "first_release_date": "2021-12-10",
+      "spotify_track_id": "7ncPjJBktLEOpstY5JOUMK",
+      "albums": [
+        "一途",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "逆夢",
+      "normalized_name": "逆夢",
+      "first_release_date": "2021-12-24",
+      "spotify_track_id": "6ZiEWet0uFRwWBCEKCQ8rY",
+      "albums": [
+        "逆夢",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "カメレオン",
+      "normalized_name": "カメレオン",
+      "first_release_date": "2022-02-28",
+      "spotify_track_id": "0J0P8iSE6l3pYHbUdNFYdS",
+      "albums": [
+        "カメレオン"
+      ]
+    },
+    {
+      "name": "雨燦々",
+      "normalized_name": "雨燦々",
+      "first_release_date": "2022-07-15",
+      "spotify_track_id": "34PR0zLBVl7VMF9E7dDwdo",
+      "albums": [
+        "雨燦々",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "Stardom",
+      "normalized_name": "stardom",
+      "first_release_date": "2022-11-17",
+      "spotify_track_id": "7gdbaUPut1M0ewKOSAqvyW",
+      "albums": [
+        "Stardom",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "SPECIALZ",
+      "normalized_name": "specialz",
+      "first_release_date": "2023-09-01",
+      "spotify_track_id": "0GWNtMohuYUEHVZ40tcnHF",
+      "albums": [
+        "SPECIALZ",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "硝子窓",
+      "normalized_name": "硝子窓",
+      "first_release_date": "2023-09-15",
+      "spotify_track_id": "5fhQl8OA678cElLUhnM9oE",
+      "albums": [
+        "硝子窓",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "):阿修羅:(",
+      "normalized_name": ") 阿修羅",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "0jSHwhowInP7AgP9BkWudl",
+      "albums": [
+        "THE GREATEST UNKNOWN",
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "2 Μ Ο Я Ο",
+      "normalized_name": "2 μ ο я ο",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "3i1YBIdZzBPvZectd5wLw0",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "CHAMELEON",
+      "normalized_name": "chameleon",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2x5ZR6Q11zgH8z7FtwY4H5",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "DARE??",
+      "normalized_name": "dare",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2Lc9jfH3cphfr9ZKkJdccp",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "IKAROS",
+      "normalized_name": "ikaros",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "4ct5cffZGIcSJ6P8iEToG2",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "MIRROR",
+      "normalized_name": "mirror",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "7o5Mjx1XHg7WBARjn9MVJu",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "SUNNY SIDE UP",
+      "normalized_name": "sunny side up",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "3pHpR8IA6qYqccOzSV8qRb",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "W●RKAHOLIC",
+      "normalized_name": "w●rkaholic",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "1sbnAdLtWFqzDvwcf3SuCF",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "δ",
+      "normalized_name": "δ",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "5H6WX29XQMNE4oZVooEGeH",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "ЯOЯЯIM",
+      "normalized_name": "яoяяim",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "6HarCUDU9WTswYLNRgRdJH",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "仝",
+      "normalized_name": "仝",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "34u33grofvFBfmHt1n8HmP",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "2 Μ Ο Я Ο - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "2 μ ο я ο king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6EYSpaClXZi9TMcI59MK7T",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "BOY - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "boy king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7qaGPwlcZGMtXuJeGMOTaB",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "CHAMELEON - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "chameleon king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6onB0LQKGdvf1y1Hfh5QaC",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "DARE?? - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "dare king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0uPtcldgOwqgfjkNRabMGq",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Flash!!! - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "flash king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2URjaRyASNd8xYkcSWv8BH",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "IKAROS - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "ikaros king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0jYvrm3XBxf89qJQiPX1JR",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "MASCARA",
+      "normalized_name": "mascara",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "25uU7huzrh4M91FXJvHWhY",
+      "albums": [
+        "MASCARA"
+      ]
+    },
+    {
+      "name": "MIRROR - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "mirror king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "4KNZUlF3Zn0QhPb9Hp4slS",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "SPECIALZ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "specialz king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "37gYGRxV1h6zSRbI12XG4a",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "STARDOM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "stardom king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1N6t3muDLpoBIWQiVFqWQi",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "SUNNY SIDE UP - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "sunny side up king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "3tYMzQ7ZR0wlGYCgcI7pJs",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Slumberland - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "slumberland king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0wltkv7IEhbo4bdm6Va5RT",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Sorrows - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "sorrows king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "67hT3pENd9EihxaicYfym2",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Teenager Forever - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "teenager forever king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5OKEAAFTzBo85sRg6jwcHo",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "VIVID RED - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "vivid red king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6Y2jiKa9ENLQHABRwn27j4",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Vinyl - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "vinyl king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0V69gQs5aMxGG85k7GgWu3",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "W●RK - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "w●rk king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1Gl2g67pEGlaxiP10NlsvQ",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "W●RKAHOLIC - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "w●rkaholic king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0NcoWxe4D9pslBLXLIMroZ",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "δ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "δ king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "47WPiu8Roy5GP1cDzbw3aK",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "ЯOЯЯIM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "яoяяim king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5avQqw5YmTghjwZmcR8rWp",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "一途 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "一途 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7wOpkoBoREDBOznqdcESUi",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "三文小説 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "三文小説 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "4HQTpVoKDJN0MaeDEUmWtD",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "仝 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "仝 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2IMi2e4pnnvgTIG1rMlDBN",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "千両役者 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "千両役者 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1Z2e8qLlb95xG8csS9RxAI",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "泡 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "泡 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2clYwV7t5kEL5kzeN0pHZe",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "白日 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "白日 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "60uEVnMHmqyf8wRrcBeaUL",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "硝子窓 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "硝子窓 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5r5egT1TI7BXbUU0P1c0Bn",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "逆夢 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "逆夢 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7CCe1rODyOs7fA15llR7aC",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "雨燦々 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "雨燦々 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6VFIADZDQymApCQO5J1PTH",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "飛行艇 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "飛行艇 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5OlqOcsa75Wa04zTREZqIj",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "ねっこ",
+      "normalized_name": "ねっこ",
+      "first_release_date": "2024-10-21",
+      "spotify_track_id": "4btYb7Tfjw5bQazC6bQXpl",
+      "albums": [
+        "ねっこ"
+      ]
+    },
+    {
+      "name": "TWILIGHT!!!",
+      "normalized_name": "twilight",
+      "first_release_date": "2025-04-18",
+      "spotify_track_id": "7rPEpMvt6O2Np1i7TFk3Hc",
+      "albums": [
+        "TWILIGHT!!!"
+      ]
+    },
+    {
+      "name": "SO BAD",
+      "normalized_name": "so bad",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "3Qa1rG4kSuGnmVHChIJUtU",
+      "albums": [
+        "SO BAD"
+      ]
+    },
+    {
+      "name": "AIZO",
+      "normalized_name": "aizo",
+      "first_release_date": "2026-01-09",
+      "spotify_track_id": "65X2koe1LhDgQmRkNdJFv9",
+      "albums": [
+        "AIZO"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "Tokyo Rendez-Vous",
+      "normalized_name": "tokyo rendez vous",
+      "first_release_date": "2017-07-19",
+      "spotify_track_id": "0gFDdpUNGyARDeUMgN2BAo",
+      "albums": [
+        "Tokyo Rendez-Vous",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "McDonald Romance",
+      "normalized_name": "mcdonald romance",
+      "first_release_date": "2017-08-09",
+      "spotify_track_id": "3suD1ZwytNJNDmTz59YFDZ",
+      "albums": [
+        "McDonald Romance",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "Vinyl",
+      "normalized_name": "vinyl",
+      "first_release_date": "2017-09-27",
+      "spotify_track_id": "0egeyMcrcQjFyn3CbVLT4p",
+      "albums": [
+        "Vinyl",
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "NIGHT POOL",
+      "normalized_name": "night pool",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "79TdpfePV5FGcNrh0iXavF",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "あなたは蜃気楼",
+      "normalized_name": "あなたは蜃気楼",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "4RGo52porovSt3sOhx05Lo",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "サマーレイン・ダイバー",
+      "normalized_name": "サマーレイン・ダイバー",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "65dFo2NqYkduf8O8xJewH2",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "ロウラヴ",
+      "normalized_name": "ロウラヴ",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "14QUJsesLiDdZ4oifIWOxN",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "破裂",
+      "normalized_name": "破裂",
+      "first_release_date": "2017-10-20",
+      "spotify_track_id": "13bs6bbMoNTQaRVc770Gww",
+      "albums": [
+        "Tokyo Rendez-Vous"
+      ]
+    },
+    {
+      "name": "Flash!!!",
+      "normalized_name": "flash",
+      "first_release_date": "2018-07-13",
+      "spotify_track_id": "5TnkbWVrVUdu2EGXze1qTc",
+      "albums": [
+        "Flash!!!",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Prayer X",
+      "normalized_name": "prayer x",
+      "first_release_date": "2018-08-10",
+      "spotify_track_id": "6VvXSjTQMP6eInrjz4kq2W",
+      "albums": [
+        "Prayer X",
+        "Prayer X (Acoustic)",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Slumberland",
+      "normalized_name": "slumberland",
+      "first_release_date": "2018-12-14",
+      "spotify_track_id": "089VYze40c7Eue8zrtMwJn",
+      "albums": [
+        "Slumberland",
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Bedtown",
+      "normalized_name": "bedtown",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "4A3MCFV5Tvv0f3j843et3I",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Don't Stop the Clocks",
+      "normalized_name": "dont stop the clocks",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "40cjQFH3UG8bYB8RSuOCgB",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Hitman",
+      "normalized_name": "hitman",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "6t3cdmLb5aceE5cp2zD6Pf",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "It's a small world",
+      "normalized_name": "its a small world",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "7FTMEtx6gQhZ57wDWKdiz7",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sorrows",
+      "normalized_name": "sorrows",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "4P7JctttE0UvemJYpib33Z",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅰ",
+      "normalized_name": "sympa i",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "36w0cZUXiMm4MAeowfAtqm",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅱ",
+      "normalized_name": "sympa ii",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "26VISV8QUbnaTVhRR4rHox",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅲ",
+      "normalized_name": "sympa iii",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "6FAUQC109WAIDeAhsrO43y",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "Sympa Ⅳ",
+      "normalized_name": "sympa iv",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "2atBzKuVkvYWobWmc2MAyp",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "The hole",
+      "normalized_name": "the hole",
+      "first_release_date": "2019-01-16",
+      "spotify_track_id": "07FmAEayRQIXBcVcbUvI5j",
+      "albums": [
+        "Sympa"
+      ]
+    },
+    {
+      "name": "白日",
+      "normalized_name": "白日",
+      "first_release_date": "2019-02-22",
+      "spotify_track_id": "5iF0Yf9gju6ERpAch08JsC",
+      "albums": [
+        "白日",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "飛行艇",
+      "normalized_name": "飛行艇",
+      "first_release_date": "2019-08-09",
+      "spotify_track_id": "3gzhVnO32u1W4BrUECGwt3",
+      "albums": [
+        "飛行艇",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "傘",
+      "normalized_name": "傘",
+      "first_release_date": "2019-10-11",
+      "spotify_track_id": "4xVUTI1waBL5QctPQJhbPD",
+      "albums": [
+        "傘",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "飾りじゃないのよ 涙は",
+      "normalized_name": "飾りじゃないのよ 涙は",
+      "first_release_date": "2019-11-27",
+      "spotify_track_id": "5unR0gN8UJ7D9HEULNB1mX",
+      "albums": [
+        "飾りじゃないのよ 涙は"
+      ]
+    },
+    {
+      "name": "Teenager Forever",
+      "normalized_name": "teenager forever",
+      "first_release_date": "2019-12-20",
+      "spotify_track_id": "2F7OtRVmsqhDRhc5pB6E0d",
+      "albums": [
+        "Teenager Forever",
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "Overflow",
+      "normalized_name": "overflow",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "5HdBTRrqGoju7DIZ0GkNYG",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "どろん",
+      "normalized_name": "どろん",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "5KQUugWVoDTgHXSN7UU5Qb",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "ユーモア",
+      "normalized_name": "ユーモア",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "0zXSk9N3L7XQb8GXwhjlXt",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "壇上",
+      "normalized_name": "壇上",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "3T5YrUdxtfaMp2bxJEb35e",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "小さな惑星",
+      "normalized_name": "小さな惑星",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "6Sk8FdL95YNN8Xru87BWez",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "幕間",
+      "normalized_name": "幕間",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "2TCibOLNyIRvr7ti4XSXQm",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "閉会式",
+      "normalized_name": "閉会式",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "7qWe4V22fK5QuIi2xkzQmr",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "開会式",
+      "normalized_name": "開会式",
+      "first_release_date": "2020-01-15",
+      "spotify_track_id": "23XMhKtKHNnQ5hq22f40Rs",
+      "albums": [
+        "CEREMONY"
+      ]
+    },
+    {
+      "name": "三文小説",
+      "normalized_name": "三文小説",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "56CevCV25XOXmbzskwl4L8",
+      "albums": [
+        "三文小説",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "千両役者",
+      "normalized_name": "千両役者",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "7lJ9q59rTO6R9wkXK3JFlk",
+      "albums": [
+        "千両役者",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "泡",
+      "normalized_name": "泡",
+      "first_release_date": "2021-03-05",
+      "spotify_track_id": "7vPjcqFUBCHeGlZQFijnIc",
+      "albums": [
+        "泡",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "BOY",
+      "normalized_name": "boy",
+      "first_release_date": "2021-12-01",
+      "spotify_track_id": "4GYfARUu6WGJbCqkAjWXQr",
+      "albums": [
+        "BOY",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "F.O.O.L",
+      "normalized_name": "f o o l",
+      "first_release_date": "2021-12-01",
+      "spotify_track_id": "5C1BhnH2RjQfShN1DzqyKy",
+      "albums": [
+        "BOY"
+      ]
+    },
+    {
+      "name": "一途",
+      "normalized_name": "一途",
+      "first_release_date": "2021-12-10",
+      "spotify_track_id": "7ncPjJBktLEOpstY5JOUMK",
+      "albums": [
+        "一途",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "逆夢",
+      "normalized_name": "逆夢",
+      "first_release_date": "2021-12-24",
+      "spotify_track_id": "6ZiEWet0uFRwWBCEKCQ8rY",
+      "albums": [
+        "逆夢",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "カメレオン",
+      "normalized_name": "カメレオン",
+      "first_release_date": "2022-02-28",
+      "spotify_track_id": "0J0P8iSE6l3pYHbUdNFYdS",
+      "albums": [
+        "カメレオン"
+      ]
+    },
+    {
+      "name": "雨燦々",
+      "normalized_name": "雨燦々",
+      "first_release_date": "2022-07-15",
+      "spotify_track_id": "34PR0zLBVl7VMF9E7dDwdo",
+      "albums": [
+        "雨燦々",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "Stardom",
+      "normalized_name": "stardom",
+      "first_release_date": "2022-11-17",
+      "spotify_track_id": "7gdbaUPut1M0ewKOSAqvyW",
+      "albums": [
+        "Stardom",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "SPECIALZ",
+      "normalized_name": "specialz",
+      "first_release_date": "2023-09-01",
+      "spotify_track_id": "0GWNtMohuYUEHVZ40tcnHF",
+      "albums": [
+        "SPECIALZ",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "硝子窓",
+      "normalized_name": "硝子窓",
+      "first_release_date": "2023-09-15",
+      "spotify_track_id": "5fhQl8OA678cElLUhnM9oE",
+      "albums": [
+        "硝子窓",
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "):阿修羅:(",
+      "normalized_name": ") 阿修羅",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "0jSHwhowInP7AgP9BkWudl",
+      "albums": [
+        "THE GREATEST UNKNOWN",
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "2 Μ Ο Я Ο",
+      "normalized_name": "2 μ ο я ο",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "3i1YBIdZzBPvZectd5wLw0",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "CHAMELEON",
+      "normalized_name": "chameleon",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2x5ZR6Q11zgH8z7FtwY4H5",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "DARE??",
+      "normalized_name": "dare",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2Lc9jfH3cphfr9ZKkJdccp",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "IKAROS",
+      "normalized_name": "ikaros",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "4ct5cffZGIcSJ6P8iEToG2",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "MIRROR",
+      "normalized_name": "mirror",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "7o5Mjx1XHg7WBARjn9MVJu",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "SUNNY SIDE UP",
+      "normalized_name": "sunny side up",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "3pHpR8IA6qYqccOzSV8qRb",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "W●RKAHOLIC",
+      "normalized_name": "w●rkaholic",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "1sbnAdLtWFqzDvwcf3SuCF",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "δ",
+      "normalized_name": "δ",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "5H6WX29XQMNE4oZVooEGeH",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "ЯOЯЯIM",
+      "normalized_name": "яoяяim",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "6HarCUDU9WTswYLNRgRdJH",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "仝",
+      "normalized_name": "仝",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "34u33grofvFBfmHt1n8HmP",
+      "albums": [
+        "THE GREATEST UNKNOWN"
+      ]
+    },
+    {
+      "name": "2 Μ Ο Я Ο - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "2 μ ο я ο king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6EYSpaClXZi9TMcI59MK7T",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "BOY - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "boy king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7qaGPwlcZGMtXuJeGMOTaB",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "CHAMELEON - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "chameleon king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6onB0LQKGdvf1y1Hfh5QaC",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "DARE?? - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "dare king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0uPtcldgOwqgfjkNRabMGq",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Flash!!! - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "flash king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2URjaRyASNd8xYkcSWv8BH",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "IKAROS - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "ikaros king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0jYvrm3XBxf89qJQiPX1JR",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "MASCARA",
+      "normalized_name": "mascara",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "25uU7huzrh4M91FXJvHWhY",
+      "albums": [
+        "MASCARA"
+      ]
+    },
+    {
+      "name": "MIRROR - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "mirror king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "4KNZUlF3Zn0QhPb9Hp4slS",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "SPECIALZ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "specialz king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "37gYGRxV1h6zSRbI12XG4a",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "STARDOM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "stardom king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1N6t3muDLpoBIWQiVFqWQi",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "SUNNY SIDE UP - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "sunny side up king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "3tYMzQ7ZR0wlGYCgcI7pJs",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Slumberland - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "slumberland king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0wltkv7IEhbo4bdm6Va5RT",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Sorrows - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "sorrows king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "67hT3pENd9EihxaicYfym2",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Teenager Forever - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "teenager forever king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5OKEAAFTzBo85sRg6jwcHo",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "VIVID RED - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "vivid red king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6Y2jiKa9ENLQHABRwn27j4",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "Vinyl - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "vinyl king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0V69gQs5aMxGG85k7GgWu3",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "W●RK - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "w●rk king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1Gl2g67pEGlaxiP10NlsvQ",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "W●RKAHOLIC - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "w●rkaholic king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "0NcoWxe4D9pslBLXLIMroZ",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "δ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "δ king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "47WPiu8Roy5GP1cDzbw3aK",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "ЯOЯЯIM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "яoяяim king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5avQqw5YmTghjwZmcR8rWp",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "一途 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "一途 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7wOpkoBoREDBOznqdcESUi",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "三文小説 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "三文小説 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "4HQTpVoKDJN0MaeDEUmWtD",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "仝 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "仝 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2IMi2e4pnnvgTIG1rMlDBN",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "千両役者 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "千両役者 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "1Z2e8qLlb95xG8csS9RxAI",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "泡 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "泡 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "2clYwV7t5kEL5kzeN0pHZe",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "白日 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "白日 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "60uEVnMHmqyf8wRrcBeaUL",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "硝子窓 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "硝子窓 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5r5egT1TI7BXbUU0P1c0Bn",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "逆夢 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "逆夢 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "7CCe1rODyOs7fA15llR7aC",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "雨燦々 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "雨燦々 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "6VFIADZDQymApCQO5J1PTH",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "飛行艇 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "normalized_name": "飛行艇 king gnu dome tour the greatest unknown at tokyo dome",
+      "first_release_date": "2024-10-04",
+      "spotify_track_id": "5OlqOcsa75Wa04zTREZqIj",
+      "albums": [
+        "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME"
+      ]
+    },
+    {
+      "name": "ねっこ",
+      "normalized_name": "ねっこ",
+      "first_release_date": "2024-10-21",
+      "spotify_track_id": "4btYb7Tfjw5bQazC6bQXpl",
+      "albums": [
+        "ねっこ"
+      ]
+    },
+    {
+      "name": "TWILIGHT!!!",
+      "normalized_name": "twilight",
+      "first_release_date": "2025-04-18",
+      "spotify_track_id": "7rPEpMvt6O2Np1i7TFk3Hc",
+      "albums": [
+        "TWILIGHT!!!"
+      ]
+    },
+    {
+      "name": "SO BAD",
+      "normalized_name": "so bad",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "3Qa1rG4kSuGnmVHChIJUtU",
+      "albums": [
+        "SO BAD"
+      ]
+    },
+    {
+      "name": "AIZO",
+      "normalized_name": "aizo",
+      "first_release_date": "2026-01-09",
+      "spotify_track_id": "65X2koe1LhDgQmRkNdJFv9",
+      "albums": [
+        "AIZO"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [],
+  "releases": [
+    {
+      "album_id": "6lEz1aowxK9TMtI9jEsIpC",
+      "name": "Tokyo Rendez-Vous",
+      "album_type": "single",
+      "release_date": "2017-07-19",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6lEz1aowxK9TMtI9jEsIpC",
+      "tracks": [
+        {
+          "track_id": "0gFDdpUNGyARDeUMgN2BAo",
+          "name": "Tokyo Rendez-Vous",
+          "normalized_name": "tokyo rendez vous",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0gFDdpUNGyARDeUMgN2BAo"
+        }
+      ]
+    },
+    {
+      "album_id": "3r6Y3VfDV0usORtuXUELq2",
+      "name": "McDonald Romance",
+      "album_type": "single",
+      "release_date": "2017-08-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3r6Y3VfDV0usORtuXUELq2",
+      "tracks": [
+        {
+          "track_id": "3suD1ZwytNJNDmTz59YFDZ",
+          "name": "McDonald Romance",
+          "normalized_name": "mcdonald romance",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 165733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3suD1ZwytNJNDmTz59YFDZ"
+        }
+      ]
+    },
+    {
+      "album_id": "5kqtCLrWBMBFB08Buf6eXN",
+      "name": "Vinyl",
+      "album_type": "single",
+      "release_date": "2017-09-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5kqtCLrWBMBFB08Buf6eXN",
+      "tracks": [
+        {
+          "track_id": "0egeyMcrcQjFyn3CbVLT4p",
+          "name": "Vinyl",
+          "normalized_name": "vinyl",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 294386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0egeyMcrcQjFyn3CbVLT4p"
+        }
+      ]
+    },
+    {
+      "album_id": "52Y1UmTf763sUUpVMLPYLO",
+      "name": "Tokyo Rendez-Vous",
+      "album_type": "album",
+      "release_date": "2017-10-20",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/52Y1UmTf763sUUpVMLPYLO",
+      "tracks": [
+        {
+          "track_id": "6in5HPPTBwqPmDIezhQOpj",
+          "name": "Tokyo Rendez-Vous",
+          "normalized_name": "tokyo rendez vous",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6in5HPPTBwqPmDIezhQOpj"
+        },
+        {
+          "track_id": "75Yz67wlMsVyXTP3SlS2D9",
+          "name": "McDonald Romance",
+          "normalized_name": "mcdonald romance",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 165733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/75Yz67wlMsVyXTP3SlS2D9"
+        },
+        {
+          "track_id": "4RGo52porovSt3sOhx05Lo",
+          "name": "あなたは蜃気楼",
+          "normalized_name": "あなたは蜃気楼",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 196426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4RGo52porovSt3sOhx05Lo"
+        },
+        {
+          "track_id": "2ANz2T37a2uN3d6w98h8vY",
+          "name": "Vinyl",
+          "normalized_name": "vinyl",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 294386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ANz2T37a2uN3d6w98h8vY"
+        },
+        {
+          "track_id": "13bs6bbMoNTQaRVc770Gww",
+          "name": "破裂",
+          "normalized_name": "破裂",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 318733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/13bs6bbMoNTQaRVc770Gww"
+        },
+        {
+          "track_id": "14QUJsesLiDdZ4oifIWOxN",
+          "name": "ロウラヴ",
+          "normalized_name": "ロウラヴ",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 212573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/14QUJsesLiDdZ4oifIWOxN"
+        },
+        {
+          "track_id": "79TdpfePV5FGcNrh0iXavF",
+          "name": "NIGHT POOL",
+          "normalized_name": "night pool",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 130345,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/79TdpfePV5FGcNrh0iXavF"
+        },
+        {
+          "track_id": "65dFo2NqYkduf8O8xJewH2",
+          "name": "サマーレイン・ダイバー",
+          "normalized_name": "サマーレイン・ダイバー",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 257265,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/65dFo2NqYkduf8O8xJewH2"
+        }
+      ]
+    },
+    {
+      "album_id": "0RoQFt5BklyHfL1mfJq8xL",
+      "name": "Flash!!!",
+      "album_type": "single",
+      "release_date": "2018-07-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0RoQFt5BklyHfL1mfJq8xL",
+      "tracks": [
+        {
+          "track_id": "5TnkbWVrVUdu2EGXze1qTc",
+          "name": "Flash!!!",
+          "normalized_name": "flash",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 170666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5TnkbWVrVUdu2EGXze1qTc"
+        }
+      ]
+    },
+    {
+      "album_id": "5oqxo7mNVyuFWsTgUAWy3H",
+      "name": "Prayer X",
+      "album_type": "single",
+      "release_date": "2018-08-10",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5oqxo7mNVyuFWsTgUAWy3H",
+      "tracks": [
+        {
+          "track_id": "6VvXSjTQMP6eInrjz4kq2W",
+          "name": "Prayer X",
+          "normalized_name": "prayer x",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 197856,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6VvXSjTQMP6eInrjz4kq2W"
+        }
+      ]
+    },
+    {
+      "album_id": "19OWUxmyvtU0U6QZhNv7hc",
+      "name": "Prayer X (Acoustic)",
+      "album_type": "single",
+      "release_date": "2018-09-19",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/19OWUxmyvtU0U6QZhNv7hc",
+      "tracks": [
+        {
+          "track_id": "1NzKTDTmYToDprHxpG82Zi",
+          "name": "Prayer X (Acoustic)",
+          "normalized_name": "prayer x",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 89000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1NzKTDTmYToDprHxpG82Zi"
+        }
+      ]
+    },
+    {
+      "album_id": "4oNjr7iJmnOwxbnpymxJiq",
+      "name": "Slumberland",
+      "album_type": "single",
+      "release_date": "2018-12-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4oNjr7iJmnOwxbnpymxJiq",
+      "tracks": [
+        {
+          "track_id": "089VYze40c7Eue8zrtMwJn",
+          "name": "Slumberland",
+          "normalized_name": "slumberland",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 184493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/089VYze40c7Eue8zrtMwJn"
+        }
+      ]
+    },
+    {
+      "album_id": "6Z3LT9uIwXDnbgypLFrBQb",
+      "name": "Sympa",
+      "album_type": "album",
+      "release_date": "2019-01-16",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "spotify_url": "https://open.spotify.com/album/6Z3LT9uIwXDnbgypLFrBQb",
+      "tracks": [
+        {
+          "track_id": "36w0cZUXiMm4MAeowfAtqm",
+          "name": "Sympa Ⅰ",
+          "normalized_name": "sympa i",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 50786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/36w0cZUXiMm4MAeowfAtqm"
+        },
+        {
+          "track_id": "5lyMIH0DJaG58plHd6mL7g",
+          "name": "Slumberland",
+          "normalized_name": "slumberland",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 184493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5lyMIH0DJaG58plHd6mL7g"
+        },
+        {
+          "track_id": "4XkJ7N5iX7UKR1uuwVr7A6",
+          "name": "Flash!!!",
+          "normalized_name": "flash",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 162586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4XkJ7N5iX7UKR1uuwVr7A6"
+        },
+        {
+          "track_id": "4P7JctttE0UvemJYpib33Z",
+          "name": "Sorrows",
+          "normalized_name": "sorrows",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 220893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4P7JctttE0UvemJYpib33Z"
+        },
+        {
+          "track_id": "26VISV8QUbnaTVhRR4rHox",
+          "name": "Sympa Ⅱ",
+          "normalized_name": "sympa ii",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 46066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/26VISV8QUbnaTVhRR4rHox"
+        },
+        {
+          "track_id": "6t3cdmLb5aceE5cp2zD6Pf",
+          "name": "Hitman",
+          "normalized_name": "hitman",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 313893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6t3cdmLb5aceE5cp2zD6Pf"
+        },
+        {
+          "track_id": "40cjQFH3UG8bYB8RSuOCgB",
+          "name": "Don't Stop the Clocks",
+          "normalized_name": "dont stop the clocks",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 136773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/40cjQFH3UG8bYB8RSuOCgB"
+        },
+        {
+          "track_id": "7FTMEtx6gQhZ57wDWKdiz7",
+          "name": "It's a small world",
+          "normalized_name": "its a small world",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 193893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7FTMEtx6gQhZ57wDWKdiz7"
+        },
+        {
+          "track_id": "6FAUQC109WAIDeAhsrO43y",
+          "name": "Sympa Ⅲ",
+          "normalized_name": "sympa iii",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 39213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6FAUQC109WAIDeAhsrO43y"
+        },
+        {
+          "track_id": "0r2PAeROizyyoFMpu0fvwI",
+          "name": "Prayer X",
+          "normalized_name": "prayer x",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 195226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0r2PAeROizyyoFMpu0fvwI"
+        },
+        {
+          "track_id": "4A3MCFV5Tvv0f3j843et3I",
+          "name": "Bedtown",
+          "normalized_name": "bedtown",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 185466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4A3MCFV5Tvv0f3j843et3I"
+        },
+        {
+          "track_id": "07FmAEayRQIXBcVcbUvI5j",
+          "name": "The hole",
+          "normalized_name": "the hole",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 275733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/07FmAEayRQIXBcVcbUvI5j"
+        },
+        {
+          "track_id": "2atBzKuVkvYWobWmc2MAyp",
+          "name": "Sympa Ⅳ",
+          "normalized_name": "sympa iv",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 95026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2atBzKuVkvYWobWmc2MAyp"
+        }
+      ]
+    },
+    {
+      "album_id": "0wbmGb0QV2XbioKkOfNycl",
+      "name": "白日",
+      "album_type": "single",
+      "release_date": "2019-02-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0wbmGb0QV2XbioKkOfNycl",
+      "tracks": [
+        {
+          "track_id": "5iF0Yf9gju6ERpAch08JsC",
+          "name": "白日",
+          "normalized_name": "白日",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 274912,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5iF0Yf9gju6ERpAch08JsC"
+        }
+      ]
+    },
+    {
+      "album_id": "37arn09dKv9LylYaAvMsgY",
+      "name": "飛行艇",
+      "album_type": "single",
+      "release_date": "2019-08-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/37arn09dKv9LylYaAvMsgY",
+      "tracks": [
+        {
+          "track_id": "3gzhVnO32u1W4BrUECGwt3",
+          "name": "飛行艇",
+          "normalized_name": "飛行艇",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 261910,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3gzhVnO32u1W4BrUECGwt3"
+        }
+      ]
+    },
+    {
+      "album_id": "54Q4vGx16FGJzq2I63oEMs",
+      "name": "傘",
+      "album_type": "single",
+      "release_date": "2019-10-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/54Q4vGx16FGJzq2I63oEMs",
+      "tracks": [
+        {
+          "track_id": "4xVUTI1waBL5QctPQJhbPD",
+          "name": "傘",
+          "normalized_name": "傘",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 202285,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4xVUTI1waBL5QctPQJhbPD"
+        }
+      ]
+    },
+    {
+      "album_id": "1jlWB5Gr33OirM1wdlW1bE",
+      "name": "飾りじゃないのよ 涙は",
+      "album_type": "single",
+      "release_date": "2019-11-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1jlWB5Gr33OirM1wdlW1bE",
+      "tracks": [
+        {
+          "track_id": "5unR0gN8UJ7D9HEULNB1mX",
+          "name": "飾りじゃないのよ 涙は",
+          "normalized_name": "飾りじゃないのよ 涙は",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 188957,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5unR0gN8UJ7D9HEULNB1mX"
+        }
+      ]
+    },
+    {
+      "album_id": "12yrRccsHEv4kkN9IP8N1u",
+      "name": "Teenager Forever",
+      "album_type": "single",
+      "release_date": "2019-12-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/12yrRccsHEv4kkN9IP8N1u",
+      "tracks": [
+        {
+          "track_id": "2F7OtRVmsqhDRhc5pB6E0d",
+          "name": "Teenager Forever",
+          "normalized_name": "teenager forever",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 189080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2F7OtRVmsqhDRhc5pB6E0d"
+        }
+      ]
+    },
+    {
+      "album_id": "1IYJeRjWNruxAKls5cBtqm",
+      "name": "CEREMONY",
+      "album_type": "album",
+      "release_date": "2020-01-15",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "spotify_url": "https://open.spotify.com/album/1IYJeRjWNruxAKls5cBtqm",
+      "tracks": [
+        {
+          "track_id": "23XMhKtKHNnQ5hq22f40Rs",
+          "name": "開会式",
+          "normalized_name": "開会式",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 48973,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/23XMhKtKHNnQ5hq22f40Rs"
+        },
+        {
+          "track_id": "5KQUugWVoDTgHXSN7UU5Qb",
+          "name": "どろん",
+          "normalized_name": "どろん",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 182853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5KQUugWVoDTgHXSN7UU5Qb"
+        },
+        {
+          "track_id": "7wnOPAiqvIG4dTvEInj0YT",
+          "name": "Teenager Forever",
+          "normalized_name": "teenager forever",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 189080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT"
+        },
+        {
+          "track_id": "0zXSk9N3L7XQb8GXwhjlXt",
+          "name": "ユーモア",
+          "normalized_name": "ユーモア",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 207426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0zXSk9N3L7XQb8GXwhjlXt"
+        },
+        {
+          "track_id": "172fMG26G2OoEzzg0wn26r",
+          "name": "白日",
+          "normalized_name": "白日",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 276373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/172fMG26G2OoEzzg0wn26r"
+        },
+        {
+          "track_id": "2TCibOLNyIRvr7ti4XSXQm",
+          "name": "幕間",
+          "normalized_name": "幕間",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 56480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2TCibOLNyIRvr7ti4XSXQm"
+        },
+        {
+          "track_id": "5vsM9UppL2iTgOfenMB6Gz",
+          "name": "飛行艇",
+          "normalized_name": "飛行艇",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 260893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5vsM9UppL2iTgOfenMB6Gz"
+        },
+        {
+          "track_id": "6Sk8FdL95YNN8Xru87BWez",
+          "name": "小さな惑星",
+          "normalized_name": "小さな惑星",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 151773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Sk8FdL95YNN8Xru87BWez"
+        },
+        {
+          "track_id": "5HdBTRrqGoju7DIZ0GkNYG",
+          "name": "Overflow",
+          "normalized_name": "overflow",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 201426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5HdBTRrqGoju7DIZ0GkNYG"
+        },
+        {
+          "track_id": "4Rbe954EM88dRNqZEws0rT",
+          "name": "傘",
+          "normalized_name": "傘",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 203213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4Rbe954EM88dRNqZEws0rT"
+        },
+        {
+          "track_id": "3T5YrUdxtfaMp2bxJEb35e",
+          "name": "壇上",
+          "normalized_name": "壇上",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 340480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3T5YrUdxtfaMp2bxJEb35e"
+        },
+        {
+          "track_id": "7qWe4V22fK5QuIi2xkzQmr",
+          "name": "閉会式",
+          "normalized_name": "閉会式",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 89640,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7qWe4V22fK5QuIi2xkzQmr"
+        }
+      ]
+    },
+    {
+      "album_id": "4tQOjQXbqjuH41VeYuEPAu",
+      "name": "三文小説",
+      "album_type": "single",
+      "release_date": "2020-10-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4tQOjQXbqjuH41VeYuEPAu",
+      "tracks": [
+        {
+          "track_id": "56CevCV25XOXmbzskwl4L8",
+          "name": "三文小説",
+          "normalized_name": "三文小説",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 280533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/56CevCV25XOXmbzskwl4L8"
+        }
+      ]
+    },
+    {
+      "album_id": "0gtPCw3pUBxdvZw16ZIcH9",
+      "name": "千両役者",
+      "album_type": "single",
+      "release_date": "2020-12-02",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0gtPCw3pUBxdvZw16ZIcH9",
+      "tracks": [
+        {
+          "track_id": "7lJ9q59rTO6R9wkXK3JFlk",
+          "name": "千両役者",
+          "normalized_name": "千両役者",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7lJ9q59rTO6R9wkXK3JFlk"
+        }
+      ]
+    },
+    {
+      "album_id": "5DwlOneWR9PtdqGQ0FuUge",
+      "name": "泡",
+      "album_type": "single",
+      "release_date": "2021-03-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5DwlOneWR9PtdqGQ0FuUge",
+      "tracks": [
+        {
+          "track_id": "7vPjcqFUBCHeGlZQFijnIc",
+          "name": "泡",
+          "normalized_name": "泡",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 273333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7vPjcqFUBCHeGlZQFijnIc"
+        }
+      ]
+    },
+    {
+      "album_id": "5eSF5iG7ICG4M6S5A948oX",
+      "name": "BOY",
+      "album_type": "single",
+      "release_date": "2021-12-01",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/5eSF5iG7ICG4M6S5A948oX",
+      "tracks": [
+        {
+          "track_id": "4GYfARUu6WGJbCqkAjWXQr",
+          "name": "BOY",
+          "normalized_name": "boy",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 233880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4GYfARUu6WGJbCqkAjWXQr"
+        },
+        {
+          "track_id": "5C1BhnH2RjQfShN1DzqyKy",
+          "name": "F.O.O.L",
+          "normalized_name": "f o o l",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 174920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5C1BhnH2RjQfShN1DzqyKy"
+        }
+      ]
+    },
+    {
+      "album_id": "5sCVCfINkiQ40ozBngqGaY",
+      "name": "一途",
+      "album_type": "single",
+      "release_date": "2021-12-10",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5sCVCfINkiQ40ozBngqGaY",
+      "tracks": [
+        {
+          "track_id": "7ncPjJBktLEOpstY5JOUMK",
+          "name": "一途",
+          "normalized_name": "一途",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 190606,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7ncPjJBktLEOpstY5JOUMK"
+        }
+      ]
+    },
+    {
+      "album_id": "4ViuBpPF350uPP6bVoDmQ2",
+      "name": "逆夢",
+      "album_type": "single",
+      "release_date": "2021-12-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4ViuBpPF350uPP6bVoDmQ2",
+      "tracks": [
+        {
+          "track_id": "6ZiEWet0uFRwWBCEKCQ8rY",
+          "name": "逆夢",
+          "normalized_name": "逆夢",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 307644,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6ZiEWet0uFRwWBCEKCQ8rY"
+        }
+      ]
+    },
+    {
+      "album_id": "2dZ3LDlFGj0D4dvb1iDx7z",
+      "name": "カメレオン",
+      "album_type": "single",
+      "release_date": "2022-02-28",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2dZ3LDlFGj0D4dvb1iDx7z",
+      "tracks": [
+        {
+          "track_id": "0J0P8iSE6l3pYHbUdNFYdS",
+          "name": "カメレオン",
+          "normalized_name": "カメレオン",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193990,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0J0P8iSE6l3pYHbUdNFYdS"
+        }
+      ]
+    },
+    {
+      "album_id": "2gv7KqKXqTEfXnNOUyu85q",
+      "name": "雨燦々",
+      "album_type": "single",
+      "release_date": "2022-07-15",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2gv7KqKXqTEfXnNOUyu85q",
+      "tracks": [
+        {
+          "track_id": "34PR0zLBVl7VMF9E7dDwdo",
+          "name": "雨燦々",
+          "normalized_name": "雨燦々",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 295681,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/34PR0zLBVl7VMF9E7dDwdo"
+        }
+      ]
+    },
+    {
+      "album_id": "5zieK5I6FAIjUR3I3OYThE",
+      "name": "Stardom",
+      "album_type": "single",
+      "release_date": "2022-11-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5zieK5I6FAIjUR3I3OYThE",
+      "tracks": [
+        {
+          "track_id": "7gdbaUPut1M0ewKOSAqvyW",
+          "name": "Stardom",
+          "normalized_name": "stardom",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 217000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7gdbaUPut1M0ewKOSAqvyW"
+        }
+      ]
+    },
+    {
+      "album_id": "16Wxo6FKPXPzU9IApZfdlc",
+      "name": "SPECIALZ",
+      "album_type": "single",
+      "release_date": "2023-09-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/16Wxo6FKPXPzU9IApZfdlc",
+      "tracks": [
+        {
+          "track_id": "0GWNtMohuYUEHVZ40tcnHF",
+          "name": "SPECIALZ",
+          "normalized_name": "specialz",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF"
+        }
+      ]
+    },
+    {
+      "album_id": "0RjjIsZlBkbjOZr6nuEdkG",
+      "name": "硝子窓",
+      "album_type": "single",
+      "release_date": "2023-09-15",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0RjjIsZlBkbjOZr6nuEdkG",
+      "tracks": [
+        {
+          "track_id": "5fhQl8OA678cElLUhnM9oE",
+          "name": "硝子窓",
+          "normalized_name": "硝子窓",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 217817,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5fhQl8OA678cElLUhnM9oE"
+        }
+      ]
+    },
+    {
+      "album_id": "2elSXVKJ2zpNaJkDC5T8fr",
+      "name": "THE GREATEST UNKNOWN",
+      "album_type": "album",
+      "release_date": "2023-11-29",
+      "release_date_precision": "day",
+      "total_tracks": 21,
+      "spotify_url": "https://open.spotify.com/album/2elSXVKJ2zpNaJkDC5T8fr",
+      "tracks": [
+        {
+          "track_id": "7o5Mjx1XHg7WBARjn9MVJu",
+          "name": "MIRROR",
+          "normalized_name": "mirror",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 88374,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7o5Mjx1XHg7WBARjn9MVJu"
+        },
+        {
+          "track_id": "2x5ZR6Q11zgH8z7FtwY4H5",
+          "name": "CHAMELEON",
+          "normalized_name": "chameleon",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 191853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2x5ZR6Q11zgH8z7FtwY4H5"
+        },
+        {
+          "track_id": "2Lc9jfH3cphfr9ZKkJdccp",
+          "name": "DARE??",
+          "normalized_name": "dare",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 38083,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2Lc9jfH3cphfr9ZKkJdccp"
+        },
+        {
+          "track_id": "5oQpH1uuZte4axR411rIlN",
+          "name": "SPECIALZ",
+          "normalized_name": "specialz",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 233857,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5oQpH1uuZte4axR411rIlN"
+        },
+        {
+          "track_id": "2MNBkwLzJuCzVQ8Z3G9qJo",
+          "name": "一途 (ALBUM ver.)",
+          "normalized_name": "一途",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 220205,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2MNBkwLzJuCzVQ8Z3G9qJo"
+        },
+        {
+          "track_id": "5H6WX29XQMNE4oZVooEGeH",
+          "name": "δ",
+          "normalized_name": "δ",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 36914,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5H6WX29XQMNE4oZVooEGeH"
+        },
+        {
+          "track_id": "2tymuyImEjfqVCearVpYCf",
+          "name": "逆夢",
+          "normalized_name": "逆夢",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 308207,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2tymuyImEjfqVCearVpYCf"
+        },
+        {
+          "track_id": "4ct5cffZGIcSJ6P8iEToG2",
+          "name": "IKAROS",
+          "normalized_name": "ikaros",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 218497,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4ct5cffZGIcSJ6P8iEToG2"
+        },
+        {
+          "track_id": "1sbnAdLtWFqzDvwcf3SuCF",
+          "name": "W●RKAHOLIC",
+          "normalized_name": "w●rkaholic",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 35364,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1sbnAdLtWFqzDvwcf3SuCF"
+        },
+        {
+          "track_id": "0jSHwhowInP7AgP9BkWudl",
+          "name": "):阿修羅:(",
+          "normalized_name": ") 阿修羅",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 151755,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0jSHwhowInP7AgP9BkWudl"
+        },
+        {
+          "track_id": "7Bo66ZWgFGwRUmsVrW6lT1",
+          "name": "千両役者 (ALBUM ver.)",
+          "normalized_name": "千両役者",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 179152,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7Bo66ZWgFGwRUmsVrW6lT1"
+        },
+        {
+          "track_id": "7jCSLx1qIlvj7LHiWe1sBD",
+          "name": "硝子窓",
+          "normalized_name": "硝子窓",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 219230,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7jCSLx1qIlvj7LHiWe1sBD"
+        },
+        {
+          "track_id": "1RVHkDoAuGib7L8b9c2tBz",
+          "name": "泡 (ALBUM ver.)",
+          "normalized_name": "泡",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 275882,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1RVHkDoAuGib7L8b9c2tBz"
+        },
+        {
+          "track_id": "3i1YBIdZzBPvZectd5wLw0",
+          "name": "2 Μ Ο Я Ο",
+          "normalized_name": "2 μ ο я ο",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 177192,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3i1YBIdZzBPvZectd5wLw0"
+        },
+        {
+          "track_id": "0lH9KLh9SAC8honP42ydkf",
+          "name": "STARDOM (ALBUM ver.)",
+          "normalized_name": "stardom",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 262821,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0lH9KLh9SAC8honP42ydkf"
+        },
+        {
+          "track_id": "3pHpR8IA6qYqccOzSV8qRb",
+          "name": "SUNNY SIDE UP",
+          "normalized_name": "sunny side up",
+          "disc_number": 1,
+          "track_number": 16,
+          "duration_ms": 44127,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3pHpR8IA6qYqccOzSV8qRb"
+        },
+        {
+          "track_id": "3PQ5uF2giqf4Ftqywmev1R",
+          "name": "雨燦々",
+          "normalized_name": "雨燦々",
+          "disc_number": 1,
+          "track_number": 17,
+          "duration_ms": 298043,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3PQ5uF2giqf4Ftqywmev1R"
+        },
+        {
+          "track_id": "4UShpOJdauir54vMuaFLEV",
+          "name": "BOY",
+          "normalized_name": "boy",
+          "disc_number": 1,
+          "track_number": 18,
+          "duration_ms": 234741,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4UShpOJdauir54vMuaFLEV"
+        },
+        {
+          "track_id": "34u33grofvFBfmHt1n8HmP",
+          "name": "仝",
+          "normalized_name": "仝",
+          "disc_number": 1,
+          "track_number": 19,
+          "duration_ms": 43531,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/34u33grofvFBfmHt1n8HmP"
+        },
+        {
+          "track_id": "7bDzGlcszZj9cMJipJK8uv",
+          "name": "三文小説 (ALBUM ver.)",
+          "normalized_name": "三文小説",
+          "disc_number": 1,
+          "track_number": 20,
+          "duration_ms": 247385,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7bDzGlcszZj9cMJipJK8uv"
+        },
+        {
+          "track_id": "6HarCUDU9WTswYLNRgRdJH",
+          "name": "ЯOЯЯIM",
+          "normalized_name": "яoяяim",
+          "disc_number": 1,
+          "track_number": 21,
+          "duration_ms": 94796,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6HarCUDU9WTswYLNRgRdJH"
+        }
+      ]
+    },
+    {
+      "album_id": "3PQvWVkG6BMX35oLr2iUfm",
+      "name": "King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+      "album_type": "album",
+      "release_date": "2024-10-04",
+      "release_date_precision": "day",
+      "total_tracks": 30,
+      "spotify_url": "https://open.spotify.com/album/3PQvWVkG6BMX35oLr2iUfm",
+      "tracks": [
+        {
+          "track_id": "37gYGRxV1h6zSRbI12XG4a",
+          "name": "SPECIALZ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "specialz king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239928,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/37gYGRxV1h6zSRbI12XG4a"
+        },
+        {
+          "track_id": "7wOpkoBoREDBOznqdcESUi",
+          "name": "一途 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "一途 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 222250,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7wOpkoBoREDBOznqdcESUi"
+        },
+        {
+          "track_id": "1Z2e8qLlb95xG8csS9RxAI",
+          "name": "千両役者 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "千両役者 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 194000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Z2e8qLlb95xG8csS9RxAI"
+        },
+        {
+          "track_id": "1N6t3muDLpoBIWQiVFqWQi",
+          "name": "STARDOM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "stardom king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 290012,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1N6t3muDLpoBIWQiVFqWQi"
+        },
+        {
+          "track_id": "4KNZUlF3Zn0QhPb9Hp4slS",
+          "name": "MIRROR - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "mirror king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 84571,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4KNZUlF3Zn0QhPb9Hp4slS"
+        },
+        {
+          "track_id": "6onB0LQKGdvf1y1Hfh5QaC",
+          "name": "CHAMELEON - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "chameleon king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 195213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6onB0LQKGdvf1y1Hfh5QaC"
+        },
+        {
+          "track_id": "0uPtcldgOwqgfjkNRabMGq",
+          "name": "DARE?? - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "dare king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 35246,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0uPtcldgOwqgfjkNRabMGq"
+        },
+        {
+          "track_id": "6Y2jiKa9ENLQHABRwn27j4",
+          "name": "VIVID RED - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "vivid red king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 151180,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Y2jiKa9ENLQHABRwn27j4"
+        },
+        {
+          "track_id": "60uEVnMHmqyf8wRrcBeaUL",
+          "name": "白日 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "白日 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 292409,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/60uEVnMHmqyf8wRrcBeaUL"
+        },
+        {
+          "track_id": "5r5egT1TI7BXbUU0P1c0Bn",
+          "name": "硝子窓 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "硝子窓 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 263471,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5r5egT1TI7BXbUU0P1c0Bn"
+        },
+        {
+          "track_id": "2clYwV7t5kEL5kzeN0pHZe",
+          "name": "泡 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "泡 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 291645,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2clYwV7t5kEL5kzeN0pHZe"
+        },
+        {
+          "track_id": "6EYSpaClXZi9TMcI59MK7T",
+          "name": "2 Μ Ο Я Ο - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "2 μ ο я ο king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 192871,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6EYSpaClXZi9TMcI59MK7T"
+        },
+        {
+          "track_id": "0V69gQs5aMxGG85k7GgWu3",
+          "name": "Vinyl - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "vinyl king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 300513,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0V69gQs5aMxGG85k7GgWu3"
+        },
+        {
+          "track_id": "0NcoWxe4D9pslBLXLIMroZ",
+          "name": "W●RKAHOLIC - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "w●rkaholic king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 38139,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0NcoWxe4D9pslBLXLIMroZ"
+        },
+        {
+          "track_id": "1Gl2g67pEGlaxiP10NlsvQ",
+          "name": "W●RK - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "w●rk king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 234084,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Gl2g67pEGlaxiP10NlsvQ"
+        },
+        {
+          "track_id": "14SXh50BF4E7lqe5x3360u",
+          "name": "):阿修羅:( - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": ") 阿修羅",
+          "disc_number": 1,
+          "track_number": 16,
+          "duration_ms": 267414,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/14SXh50BF4E7lqe5x3360u"
+        },
+        {
+          "track_id": "47WPiu8Roy5GP1cDzbw3aK",
+          "name": "δ - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "δ king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 17,
+          "duration_ms": 35383,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/47WPiu8Roy5GP1cDzbw3aK"
+        },
+        {
+          "track_id": "7CCe1rODyOs7fA15llR7aC",
+          "name": "逆夢 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "逆夢 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 18,
+          "duration_ms": 300774,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7CCe1rODyOs7fA15llR7aC"
+        },
+        {
+          "track_id": "0jYvrm3XBxf89qJQiPX1JR",
+          "name": "IKAROS - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "ikaros king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 19,
+          "duration_ms": 224123,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0jYvrm3XBxf89qJQiPX1JR"
+        },
+        {
+          "track_id": "0wltkv7IEhbo4bdm6Va5RT",
+          "name": "Slumberland - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "slumberland king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 20,
+          "duration_ms": 196558,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0wltkv7IEhbo4bdm6Va5RT"
+        },
+        {
+          "track_id": "67hT3pENd9EihxaicYfym2",
+          "name": "Sorrows - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "sorrows king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 21,
+          "duration_ms": 230773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/67hT3pENd9EihxaicYfym2"
+        },
+        {
+          "track_id": "2URjaRyASNd8xYkcSWv8BH",
+          "name": "Flash!!! - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "flash king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 22,
+          "duration_ms": 222768,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2URjaRyASNd8xYkcSWv8BH"
+        },
+        {
+          "track_id": "7qaGPwlcZGMtXuJeGMOTaB",
+          "name": "BOY - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "boy king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 23,
+          "duration_ms": 241128,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7qaGPwlcZGMtXuJeGMOTaB"
+        },
+        {
+          "track_id": "3tYMzQ7ZR0wlGYCgcI7pJs",
+          "name": "SUNNY SIDE UP - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "sunny side up king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 24,
+          "duration_ms": 42879,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3tYMzQ7ZR0wlGYCgcI7pJs"
+        },
+        {
+          "track_id": "6VFIADZDQymApCQO5J1PTH",
+          "name": "雨燦々 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "雨燦々 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 25,
+          "duration_ms": 315395,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6VFIADZDQymApCQO5J1PTH"
+        },
+        {
+          "track_id": "2IMi2e4pnnvgTIG1rMlDBN",
+          "name": "仝 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "仝 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 26,
+          "duration_ms": 42455,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2IMi2e4pnnvgTIG1rMlDBN"
+        },
+        {
+          "track_id": "4HQTpVoKDJN0MaeDEUmWtD",
+          "name": "三文小説 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "三文小説 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 27,
+          "duration_ms": 247546,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4HQTpVoKDJN0MaeDEUmWtD"
+        },
+        {
+          "track_id": "5avQqw5YmTghjwZmcR8rWp",
+          "name": "ЯOЯЯIM - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "яoяяim king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 28,
+          "duration_ms": 181938,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5avQqw5YmTghjwZmcR8rWp"
+        },
+        {
+          "track_id": "5OKEAAFTzBo85sRg6jwcHo",
+          "name": "Teenager Forever - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "teenager forever king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 29,
+          "duration_ms": 213780,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5OKEAAFTzBo85sRg6jwcHo"
+        },
+        {
+          "track_id": "5OlqOcsa75Wa04zTREZqIj",
+          "name": "飛行艇 - King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME",
+          "normalized_name": "飛行艇 king gnu dome tour the greatest unknown at tokyo dome",
+          "disc_number": 1,
+          "track_number": 30,
+          "duration_ms": 369411,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5OlqOcsa75Wa04zTREZqIj"
+        }
+      ]
+    },
+    {
+      "album_id": "25ljniOTN62coBIA6iD4iC",
+      "name": "MASCARA",
+      "album_type": "single",
+      "release_date": "2024-10-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/25ljniOTN62coBIA6iD4iC",
+      "tracks": [
+        {
+          "track_id": "25uU7huzrh4M91FXJvHWhY",
+          "name": "MASCARA",
+          "normalized_name": "mascara",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 215040,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/25uU7huzrh4M91FXJvHWhY"
+        }
+      ]
+    },
+    {
+      "album_id": "4NA5TeCtuhkYhIZ75JGACR",
+      "name": "ねっこ",
+      "album_type": "single",
+      "release_date": "2024-10-21",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4NA5TeCtuhkYhIZ75JGACR",
+      "tracks": [
+        {
+          "track_id": "4btYb7Tfjw5bQazC6bQXpl",
+          "name": "ねっこ",
+          "normalized_name": "ねっこ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239728,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4btYb7Tfjw5bQazC6bQXpl"
+        }
+      ]
+    },
+    {
+      "album_id": "3KbovyECUFkQQFfUVvwkD6",
+      "name": "TWILIGHT!!!",
+      "album_type": "single",
+      "release_date": "2025-04-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3KbovyECUFkQQFfUVvwkD6",
+      "tracks": [
+        {
+          "track_id": "7rPEpMvt6O2Np1i7TFk3Hc",
+          "name": "TWILIGHT!!!",
+          "normalized_name": "twilight",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 217160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7rPEpMvt6O2Np1i7TFk3Hc"
+        }
+      ]
+    },
+    {
+      "album_id": "4Qln8io3Qbczk1OSHVTTtG",
+      "name": "SO BAD",
+      "album_type": "single",
+      "release_date": "2025-09-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4Qln8io3Qbczk1OSHVTTtG",
+      "tracks": [
+        {
+          "track_id": "3Qa1rG4kSuGnmVHChIJUtU",
+          "name": "SO BAD",
+          "normalized_name": "so bad",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Qa1rG4kSuGnmVHChIJUtU"
+        }
+      ]
+    },
+    {
+      "album_id": "7BAFUXup2XFZpcnCmLjXmM",
+      "name": "AIZO",
+      "album_type": "single",
+      "release_date": "2026-01-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7BAFUXup2XFZpcnCmLjXmM",
+      "tracks": [
+        {
+          "track_id": "65X2koe1LhDgQmRkNdJFv9",
+          "name": "AIZO",
+          "normalized_name": "aizo",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 215858,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/65X2koe1LhDgQmRkNdJFv9"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_remaining_source_acquisition_packet",
+  "artist_id": "kanaria",
+  "track_count": 4,
+  "workflow_counts": {
+    "source_only": 0,
+    "source_plus_mode": 2,
+    "source_plus_provenance": 2
+  },
+  "tracks": [
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_king",
+      "current_verdict": "invalid",
+      "score": 0.2,
+      "blockers": [
+        "missing_provenance",
+        "partial_grounding",
+        "renderer_policy_block"
+      ],
+      "workflow_type": "source_plus_provenance",
+      "recommended_action": "acquire trusted lyric sources, metadata sources, and exact Japanese grounding bundle",
+      "current_record_path": "current_records\\kanaria_king.conditioning.json",
+      "round2_scaffold_path": "round2_records\\kanaria_king.json",
+      "round2_scaffold_available": false,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": true,
+      "needs_mode_verification": false,
+      "needs_surface_replacement": true
+    },
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_queen",
+      "current_verdict": "invalid",
+      "score": 0.2,
+      "blockers": [
+        "missing_provenance",
+        "partial_grounding",
+        "renderer_policy_block"
+      ],
+      "workflow_type": "source_plus_provenance",
+      "recommended_action": "acquire trusted lyric sources, metadata sources, and exact Japanese grounding bundle",
+      "current_record_path": "current_records\\kanaria_queen.conditioning.json",
+      "round2_scaffold_path": "round2_records\\kanaria_queen.json",
+      "round2_scaffold_available": false,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": true,
+      "needs_mode_verification": false,
+      "needs_surface_replacement": true
+    },
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_requiem",
+      "current_verdict": "audit_only",
+      "score": 0.67,
+      "blockers": [
+        "mode_fit_unverified",
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_plus_mode",
+      "recommended_action": "acquire trusted lyric sources and exact Japanese grounding bundle, then verify a single supported narrative_role",
+      "current_record_path": "current_records\\kanaria_requiem.conditioning.json",
+      "round2_scaffold_path": "round2_records\\kanaria_requiem.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": false,
+      "needs_mode_verification": true,
+      "needs_surface_replacement": true
+    },
+    {
+      "artist_id": "kanaria",
+      "track_id": "kanaria_yoidore_shirazu",
+      "current_verdict": "audit_only",
+      "score": 0.67,
+      "blockers": [
+        "mode_fit_unverified",
+        "partial_grounding",
+        "surface_noise_risk"
+      ],
+      "workflow_type": "source_plus_mode",
+      "recommended_action": "acquire trusted lyric sources and exact Japanese grounding bundle, then verify a single supported narrative_role",
+      "current_record_path": "current_records\\kanaria_yoidore_shirazu.conditioning.json",
+      "round2_scaffold_path": "round2_records\\kanaria_yoidore_shirazu.json",
+      "round2_scaffold_available": true,
+      "existing_lyric_source_count": 2,
+      "needs_provenance": false,
+      "needs_mode_verification": true,
+      "needs_surface_replacement": true
+    }
+  ]
+}

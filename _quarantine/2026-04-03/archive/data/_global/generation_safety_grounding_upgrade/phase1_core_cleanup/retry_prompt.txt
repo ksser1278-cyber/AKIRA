@@ -1,0 +1,46 @@
+This task is a retry for `phase1_core_cleanup`.
+
+Previous batch result:
+- `16` submitted
+- `16` rejected
+- common failure: merged record remained `audit_only` with `partial_grounding` and `surface_noise_risk`
+
+Retry goal:
+- submit only clean UTF-8 grounded patches that actually remove scaffold grounding and surface-noise issues
+- if a track cannot be safely grounded, leave it unsubmitted
+
+Mandatory rules:
+- do not modify engine code
+- keep existing `track_id` values
+- use the bundled `source_records/` files as the only input reference
+- write output JSON only to the matching artist `incoming/` directory
+- do not submit mojibake, unreadable text, replacement characters, or broken byte sequences
+- do not submit English summary lines in `sections` or `hook_lines`
+- do not replace placeholders with inferred paraphrases; edited `sections` and `hook_lines` must use clean grounded Japanese text copied or tightly aligned from bundled `source_records/`
+- do not add English cleanup commentary to `source_provenance.notes`, `song_intent.emotional_thesis`, or `lyric_ground_truth.copyright_handling_note`
+- before submission, verify zero replacement characters, zero mojibake, zero scaffold phrases, and zero English/meta commentary anywhere in edited fields
+- do not change `song_intent.narrative_role`
+- do not add or modify provenance in this retry
+
+Allowed patch scope:
+- `lyric_ground_truth.sections`
+- `lyric_ground_truth.hook_lines`
+- `source_provenance.notes`
+- `song_intent.emotional_thesis`
+- `lyric_ground_truth.copyright_handling_note`
+
+Submission format:
+- one merge-friendly JSON patch per track
+- filename must be `<track_id>.json`
+- if exact grounded source-aligned text cannot be supplied safely, do not submit that track
+
+Success condition:
+- merged record no longer triggers `partial_grounding`
+- merged record no longer triggers `surface_noise_risk`
+- merged record is eligible for `planner_safe` review after recomputation
+
+Negative examples:
+- `phase1_rejected_20260328\\iyowa\\iyowa_1000_nen_ikiteiru.json`
+- `phase1_rejected_20260328\\kanaria\\kanaria_eye.json`
+
+Do not reuse text from those rejected files.

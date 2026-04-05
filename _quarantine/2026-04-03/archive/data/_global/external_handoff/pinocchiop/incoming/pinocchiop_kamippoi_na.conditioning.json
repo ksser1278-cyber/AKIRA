@@ -1,0 +1,1084 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_kamippoi_na",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "神っぽいな",
+    "title_core": "神っぽいな",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "confirmed",
+      "sources": [
+        {
+          "label": "No tie-in listed in release references used for this record",
+          "origin": "official",
+          "url": "https://pinocchiop.bandcamp.com/track/god-ish",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Project SEKAI song information",
+              "origin": "other",
+              "url": "https://projectsekai.fandom.com/wiki/Kamippoi_na",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "ピノキオピー",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki credit snippet",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.miraheze.org/wiki/%E7%A5%9E%E3%81%A3%E3%81%BD%E3%81%84%E3%81%AA_%28Kamippoi_na%29",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "ピノキオピー",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki credit snippet",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.miraheze.org/wiki/%E7%A5%9E%E3%81%A3%E3%81%BD%E3%81%84%E3%81%AA_%28Kamippoi_na%29",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "ピノキオピー",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "PinocchioP official self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21",
+              "notes": "Treat as inferred until a direct arrangement credit source is attached."
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2021-09-19",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Release history reference",
+            "origin": "other",
+            "url": "https://en.wikipedia.org/wiki/God-ish",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Release history reference",
+            "origin": "other",
+            "url": "https://en.wikipedia.org/wiki/God-ish",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:24",
+        "seconds": 204,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-God-ish.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki snippet and line references",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.miraheze.org/wiki/%E7%A5%9E%E3%81%A3%E3%81%BD%E3%81%84%E3%81%AA_%28Kamippoi_na%29",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Amazon Music lyric snippet",
+        "origin": "streaming_metadata",
+        "url": "https://music.amazon.co.jp/tracks/B09GVHR2DP",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "PinocchioP Bandcamp track page",
+        "origin": "official",
+        "url": "https://pinocchiop.bandcamp.com/track/god-ish",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Project SEKAI song info",
+        "origin": "other",
+        "url": "https://projectsekai.fandom.com/wiki/Kamippoi_na",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "God-ish release history summary",
+        "origin": "other",
+        "url": "https://en.wikipedia.org/wiki/God-ish",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "OTOTOY META album description",
+        "origin": "official",
+        "url": "https://ototoy.jp/_/default/p/949113",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full grounded lyric analysis matching the real structural sections of the song."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded record tracking real sections for precision modeling."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking for AI modeling.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "愛のネタバレ 「別れ」っぽいな",
+          "人生のネタバレ 「死ぬ」っぽいな",
+          "なにそれ意味深でかっこいいじゃん",
+          "それっぽい単語集で踊ってんだ 失敬"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 1",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_1"
+        ],
+        "lines": [
+          "とぅ とぅる とぅ とぅ とぅる 風",
+          "とぅ とぅる とぅ とぅ とぅる 風",
+          "おっきいね おっきいね 夢",
+          "無為に生き延びるのは難しい",
+          "権力に飲まれて揺らぐ灯り"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "アイウォンチュー ウォンチュー チンピクるわ",
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "ぽいな ぽいな ぽい 憧れちゃうわ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "きゅうに スピードアップ",
+          "メタいね メタいね おもろいね",
+          "笑えるね あはは ははは",
+          "知ってる 知ってる 全てを理解したわ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "おっきいね おっきいね 夢",
+          "無為に生き延びるのは難しい",
+          "権力に飲まれて揺らぐ灯り"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "アイウォンチュー ウォンチュー チンピクるわ",
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "ぽいな ぽいな ぽい 憧れちゃうわ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "無邪気に踊っていたかった 人生",
+          "すべて理解して患った",
+          "どうにもならないことなんて",
+          "どうにでもなると誤魔化した"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "アイウォンチュー ウォンチュー チンピクるわ",
+          "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+          "ぽいな ぽいな ぽい 憧れちゃうわ",
+          "神っぽいな"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "神っぽいな それ 卑怯 神っぽいな それ \"My God\"",
+      "ぽいな ぽいな ぽい 憧れちゃうわ"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "The chorus repeatedly resolves to the title phrase as a slogan hit.",
+      "Verse sections stack '-っぽいな' judgments as a rhetorical catalog.",
+      "The Pre-Chorus utilizes onomatopoeia to build a rhythmic lock."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "performed divinity",
+      "internet-age self-branding",
+      "sloganized irony"
+    ],
+    "emotional_thesis": "The song mocks the desire to sound all-knowing and elevated while exposing the insecurity and imitation under that pose.",
+    "contrast_device": [
+      "godlike surface language vs obvious imitation",
+      "all-knowing posture vs childish craving for status"
+    ],
+    "dramatic_arc": [
+      "catalog of fake-deep declarations",
+      "compression into social and authority imagery",
+      "title-hook detonation",
+      "meta rap interlude breaking the 4th wall",
+      "bridge admission that innocence is already damaged"
+    ],
+    "narrative_role": [
+      "ironic persona song",
+      "subculture social satire"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title works as both accusation and aspiration; it names the false aura the singer keeps pointing at and half-desires.",
+    "key_motifs": [
+      "god-ishness",
+      "fake profundity",
+      "borrowed charisma",
+      "damaged innocence"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 962102,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "PinocchioP-01-God-ish.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -9.0,
+        "lra_lu": 4.8,
+        "rms_median_db": -11.513,
+        "rms_span_db": 97.007,
+        "early_rms_db": -12.983,
+        "mid_rms_db": -11.374,
+        "late_rms_db": -10.856,
+        "late_minus_early_db": 2.127,
+        "peak_zone": "mid",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "PinocchioP-01-God-ish.flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "fast pressure from the first verse",
+        "compressed build",
+        "repeatable chorus slogan release"
+      ],
+      "vocal_behavior": [
+        "sharp synthetic lead",
+        "speech-rhythm verse attack",
+        "mocking hook emphasis"
+      ],
+      "production_palette": [
+        "electropop frame",
+        "compressed rhythm section",
+        "digital vocaloid edge"
+      ],
+      "arrangement_arc": [
+        "immediate persona framing",
+        "tight pre-chorus compression",
+        "chorus slogan expansion",
+        "measured peak zone: mid"
+      ],
+      "dynamics_arc": [
+        "assertive open",
+        "sustained compression",
+        "hook-focused release",
+        "measured late energy lift"
+      ],
+      "confidence": "medium",
+      "evidence_basis": [
+        "human_listening",
+        "lyrics",
+        "model_inference",
+        "official_copy",
+        "other",
+        "third_party_db"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact synth patch, guitar presence, or detailed mix chain without direct audio verification."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "catalog sarcasm",
+        "fake-depth framing"
+      ],
+      "narrative_job": "Open by listing pseudo-profound statements and exposing how formulaic they already sound.",
+      "arrangement_role": {
+        "summary": "Should leave enough space for rapid text delivery and copy-driven cadence.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Functions more like a fast spoken-melodic setup than a wide melodic release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Starts already pressurized instead of gradually warming up.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "catalog",
+        "mock framing",
+        "copy-line stacking"
+      ],
+      "vocabulary_focus": [
+        "ネタバレ",
+        "別れ",
+        "死ぬ",
+        "それっぽい"
+      ],
+      "rhyme_features": [
+        "repeated '-っぽいな' ending",
+        "parallel phrase endings"
+      ],
+      "rhythm_features": [
+        "fast list phrasing",
+        "compressed clause chaining"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 1",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_1"
+      ],
+      "lyric_function": [
+        "escalation",
+        "social-pressure framing"
+      ],
+      "narrative_job": "Shift from internet-copy mockery into pressure, scale, authority, and instability.",
+      "arrangement_role": {
+        "summary": "Keep compression high and increase anticipation before the title hit.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Tightens the line delivery rather than opening out melodically.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Acts as a pressure lock before the chorus slogan breaks in.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "size callout",
+        "pressure escalation"
+      ],
+      "vocabulary_focus": [
+        "夢",
+        "権力",
+        "灯り"
+      ],
+      "rhyme_features": [
+        "repeated duplicated phrase openings"
+      ],
+      "rhythm_features": [
+        "chant-like repetition",
+        "tight compression before release"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "medium"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title accusation",
+        "slogan release"
+      ],
+      "narrative_job": "Land the title as both judgment and attraction, with repeatable chant energy.",
+      "arrangement_role": {
+        "summary": "Support hard slogan repetition and a clean, high-recognition hook contour.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "The title phrase should read instantly and survive repeated return.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "This is the first full release zone, but it stays sharp rather than sentimental.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "title hit",
+        "mocking admiration",
+        "repeat slogan"
+      ],
+      "vocabulary_focus": [
+        "神っぽいな",
+        "卑怯",
+        "憧れ"
+      ],
+      "rhyme_features": [
+        "title repetition",
+        "short phrase return"
+      ],
+      "rhythm_features": [
+        "slogan chant",
+        "hook punctuation"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "meta breakdown",
+        "rap interlude"
+      ],
+      "narrative_job": "Break the structural expectations with a sudden speed-up and meta-commentary.",
+      "arrangement_role": {
+        "summary": "Minimalistic backing to support the fast, conversational flow.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Mostly spoken word or monotonic rhythm delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Breathing room before the next build-up.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "meta commentary",
+        "laugh track"
+      ],
+      "vocabulary_focus": [
+        "メタいね",
+        "おもろいね",
+        "理解した"
+      ],
+      "rhyme_features": [
+        "internal '-ね' rhymes."
+      ],
+      "rhythm_features": [
+        "rapid-fire triplet feels",
+        "choppy cadence"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "escalation",
+        "social-pressure framing"
+      ],
+      "narrative_job": "Re-establish the tension leading to the second chorus.",
+      "arrangement_role": {
+        "summary": "Similar to Pre-Chorus 1, restoring the lock mechanism.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repetitive rhythmic tightening.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Increasing pressure lock.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "size callout",
+        "pressure escalation"
+      ],
+      "vocabulary_focus": [
+        "夢",
+        "権力"
+      ],
+      "rhyme_features": [
+        "duplicate phase openings"
+      ],
+      "rhythm_features": [
+        "tight compression"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "title accusation",
+        "slogan release"
+      ],
+      "narrative_job": "Second explosion of the main hook.",
+      "arrangement_role": {
+        "summary": "Support hard slogan repetition.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Main melodic payoff.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Sharp, bright release.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "repeat slogan"
+      ],
+      "vocabulary_focus": [
+        "神っぽいな"
+      ],
+      "rhyme_features": [
+        "title repetition"
+      ],
+      "rhythm_features": [
+        "slogan chant"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "damage reveal",
+        "persona crack"
+      ],
+      "narrative_job": "Expose the cost of all-knowing performance by admitting damaged innocence and over-understanding.",
+      "arrangement_role": {
+        "summary": "Should pivot the energy just enough to let the emotional wound register before the final return.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Bridge function is reframing, not a secondary slogan.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "A momentary pivot from sneer into exposed damage before the final hook cycle.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "admission",
+        "reframing"
+      ],
+      "vocabulary_focus": [
+        "無邪気",
+        "人生",
+        "理解",
+        "患う"
+      ],
+      "rhyme_features": [
+        "conceptual callback rather than overt rhyme"
+      ],
+      "rhythm_features": [
+        "slightly longer phrasing",
+        "bridge pivot cadence"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "medium"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final hook explosion"
+      ],
+      "narrative_job": "Final reiteration of the core thesis with elevated emotional and sonic energy.",
+      "arrangement_role": {
+        "summary": "Maximum release, possibly with added layers or variations.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "The peak of the song's melodic arc.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Highest energy band of the track.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "ultimate catchphrase drop"
+      ],
+      "vocabulary_focus": [
+        "神っぽいな"
+      ],
+      "rhyme_features": [
+        "classic hook rhyming"
+      ],
+      "rhythm_features": [
+        "pumping danceable hook"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "copy_line",
+      "internet slang",
+      "social sarcasm",
+      "persona monologue"
+    ],
+    "mora_control_notes": [
+      "The chorus relies on short, immediately repeatable slogan units.",
+      "Verse lines should preserve compressed list-like motion rather than broad lyricism."
+    ],
+    "accent_risk_notes": [
+      "The title phrase must fall cleanly on the chorus accent shape.",
+      "Overlong paraphrase in verse sections will weaken the copy-line feel."
+    ],
+    "critic_focus": [
+      "hook_copy_force",
+      "concept word density",
+      "section role clarity",
+      "compressed mora control"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 1",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "ironic vocaloid electro-pop",
+      "subculture slogan-pop"
+    ],
+    "tempo_feels": [
+      "fast compressed cadence",
+      "hook-forward pulse"
+    ],
+    "vocal_tones": [
+      "sharp synthetic lead",
+      "mocking verse delivery",
+      "high-copy chorus punch"
+    ],
+    "production_palette": [
+      "digital edge",
+      "compressed beat frame",
+      "bright-toxic chorus sheen"
+    ],
+    "energy_arc": [
+      "immediate persona framing",
+      "tight pressure build",
+      "title-slogan chorus release",
+      "bridge crack before return",
+      "final explosive hook"
+    ],
+    "imagery_anchors": [
+      "fake divinity",
+      "borrowed charisma",
+      "authority pressure",
+      "damaged innocence"
+    ],
+    "exclude": [
+      "do not smooth into wholesome uplifting pop",
+      "do not remove sarcasm from the hook",
+      "do not turn the bridge into generic healing"
+    ],
+    "source_basis": [
+      "lyrics",
+      "official release copy",
+      "third_party metadata",
+      "proxy sound inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "This record is upgraded to full lyric grounding matching real song structure.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

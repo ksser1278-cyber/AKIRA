@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_ruma"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi19112201/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/XfU7SDRas28",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for kairiki_bear_ruma. Workflow: source_only."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大事な おもちゃ",
+          "ルマ ルマ って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ルマ ルマ ルマ ルマ",
+          "宙に浮く 心が",
+          "誰にも 見えない場所で",
+          "溶けてゆく"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ルマ ルマ ルマ ルマ",
+      "宙に浮く 心が"
+    ]
+  }
+}

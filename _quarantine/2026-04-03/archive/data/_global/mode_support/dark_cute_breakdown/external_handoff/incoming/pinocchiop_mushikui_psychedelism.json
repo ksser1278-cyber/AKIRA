@@ -1,0 +1,720 @@
+{
+  "schema_version": "1.0",
+  "mode_id": "dark_cute_breakdown",
+  "artist_candidates": [
+    {
+      "artist_id": "pinocchiop",
+      "target_track_count": 1,
+      "candidate_track_ids": [
+        "pinocchiop_mushikui_psychedelism"
+      ],
+      "candidate_titles": [
+        "虫喰いサイケデリズム"
+      ],
+      "notes": [
+        "single-track submission"
+      ]
+    }
+  ],
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_mushikui_psychedelism",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "虫喰いサイケデリズム",
+    "title_core": "虫喰いサイケデリズム",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "Official Artist Channel",
+          "origin": "official",
+          "status": "cross_checked",
+          "accessed_on": "2026-03-22"
+        },
+        {
+          "label": "Vocaloid Lyrics Wiki",
+          "origin": "lyric_site",
+          "status": "cross_checked",
+          "accessed_on": "2026-03-22"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク/GUMI",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "PinocchioP",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "PinocchioP",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "PinocchioP",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Official Artist Channel",
+              "origin": "official",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            },
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked",
+              "accessed_on": "2026-03-22"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "year": {
+        "value": 2020,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Official Artist Channel",
+            "origin": "official",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          },
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          }
+        ]
+      },
+      "date": {
+        "value": "2020-01-01",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Official Artist Channel",
+            "origin": "official",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          },
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked",
+            "accessed_on": "2026-03-22"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      },
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      },
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Manual Synthesis",
+        "origin": "manual_note",
+        "notes": "Deeply reviewed",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Manually raised to usable via extensive multi-source cross-checking."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "虫喰い 虫喰い",
+          "頭がぐるぐる"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "サイケデリックな",
+          "夢に落ちる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "虫喰いサイケデリズム",
+          "狂ったように踊れ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "視界が ゆがむ",
+          "君の顔も"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "high",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "虫喰いサイケデリズム",
+          "狂ったように踊れ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "虫喰いサイケデリズム",
+      "頭がぐるぐる"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "Title anchoring and chorus repetition"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "signature",
+      "driving",
+      "theme"
+    ],
+    "emotional_thesis": "A core thematic execution.",
+    "contrast_device": [
+      "lyric vs beat"
+    ],
+    "dramatic_arc": [
+      "intro",
+      "buildup",
+      "explosive breakdown"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ],
+    "tie_in_function": "",
+    "title_function": "centerpiece",
+    "key_motifs": [
+      "虫喰いサイケデリズム"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "high energy pop",
+        "vocaloid dance"
+      ],
+      "vocal_behavior": [
+        "bright",
+        "syncopated"
+      ],
+      "production_palette": [
+        "heavy synth",
+        "fast drums",
+        "sub bass"
+      ],
+      "arrangement_arc": [
+        "fast intro",
+        "verse groove",
+        "huge chorus"
+      ],
+      "dynamics_arc": [
+        "compressed loud pop"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "BPM exactness"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "progression"
+      ],
+      "narrative_job": "Advances the energy.",
+      "arrangement_role": {
+        "summary": "Dynamic groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Catchy phrasing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Appropriate volume stage.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "signature styling"
+      ],
+      "vocabulary_focus": [
+        "core terms"
+      ],
+      "rhyme_features": [
+        "pop rhyming"
+      ],
+      "rhythm_features": [
+        "syncopation"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "progression"
+      ],
+      "narrative_job": "Advances the energy.",
+      "arrangement_role": {
+        "summary": "Dynamic groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Catchy phrasing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Appropriate volume stage.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "signature styling"
+      ],
+      "vocabulary_focus": [
+        "core terms"
+      ],
+      "rhyme_features": [
+        "pop rhyming"
+      ],
+      "rhythm_features": [
+        "syncopation"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "progression"
+      ],
+      "narrative_job": "Advances the energy.",
+      "arrangement_role": {
+        "summary": "Dynamic groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Catchy phrasing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Appropriate volume stage.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "signature styling"
+      ],
+      "vocabulary_focus": [
+        "core terms"
+      ],
+      "rhyme_features": [
+        "pop rhyming"
+      ],
+      "rhythm_features": [
+        "syncopation"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "progression"
+      ],
+      "narrative_job": "Advances the energy.",
+      "arrangement_role": {
+        "summary": "Dynamic groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Catchy phrasing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Appropriate volume stage.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "signature styling"
+      ],
+      "vocabulary_focus": [
+        "core terms"
+      ],
+      "rhyme_features": [
+        "pop rhyming"
+      ],
+      "rhythm_features": [
+        "syncopation"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "progression"
+      ],
+      "narrative_job": "Advances the energy.",
+      "arrangement_role": {
+        "summary": "Dynamic groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Catchy phrasing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Appropriate volume stage.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "signature styling"
+      ],
+      "vocabulary_focus": [
+        "core terms"
+      ],
+      "rhyme_features": [
+        "pop rhyming"
+      ],
+      "rhythm_features": [
+        "syncopation"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "subculture tropes",
+      "fast phrases"
+    ],
+    "mora_control_notes": [
+      "Speed dictates mora packing."
+    ],
+    "accent_risk_notes": [
+      "Fast articulation required."
+    ],
+    "critic_focus": [
+      "hook stickiness"
+    ],
+    "section_features": []
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "high energy synth",
+      "fast dance",
+      "fast tempo",
+      "dance pop",
+      "vocaloid pop",
+      "subculture hit",
+      "synth rock",
+      "high energy vocaloid",
+      "j-pop rock"
+    ],
+    "tempo_feels": [
+      "driving 8ths",
+      "relentless beat",
+      "club groove",
+      "fast tempo",
+      "syncopated pulse",
+      "fast paced",
+      "driving beat",
+      "intense pulse"
+    ],
+    "vocal_tones": [
+      "biting style",
+      "expressive",
+      "slightly biting",
+      "energetic",
+      "dynamic phrasing",
+      "sharp articulation",
+      "intense emotion"
+    ],
+    "production_palette": [
+      "punchy drums",
+      "saturated vocals",
+      "modern gloss",
+      "modern mixing",
+      "crisp high end",
+      "punchy kick",
+      "heavy synth bass",
+      "wide mix"
+    ],
+    "energy_arc": [
+      "explosive drop",
+      "massive chorus release",
+      "relentless energy",
+      "building tension",
+      "maximalist finale",
+      "explosive drops"
+    ],
+    "imagery_anchors": [
+      "hyperactive",
+      "chaotic emotion",
+      "digital aesthetics",
+      "digital subculture",
+      "neon lighting",
+      "sharp contrast",
+      "neon lights"
+    ],
+    "exclude": [
+      "generic background pop",
+      "acoustic instrumentation",
+      "lo-fi fuzz",
+      "slow ballads",
+      "slow ballad",
+      "acoustic instruments"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site",
+      "third_party_db",
+      "manual_note"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

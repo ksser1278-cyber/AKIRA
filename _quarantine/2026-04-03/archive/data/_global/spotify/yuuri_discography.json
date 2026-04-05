@@ -1,0 +1,3205 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "6qvVoPGEqNCyYSjYCgfV1v",
+    "name": "Choi Yu Ree",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/6qvVoPGEqNCyYSjYCgfV1v"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 37,
+  "raw_track_total": 103,
+  "canonical_track_count": 96,
+  "primary_lyric_track_count": 87,
+  "redundant_variant_track_count": 9,
+  "canonical_tracks": [
+    {
+      "name": "I Want to Get Close",
+      "normalized_name": "i want to get close",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "2Mxh5wP6AvXh5FNMn21cH9",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "More Often",
+      "normalized_name": "more often",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "4J7lm9SQLFXc3Ns0esSZL9",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "Regret",
+      "normalized_name": "regret",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "0xLzgUNJwtKJrwqBPOaYss",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1",
+        "Shape"
+      ]
+    },
+    {
+      "name": "Take Me There",
+      "normalized_name": "take me there",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "48vJMYxd7NHfZCdsn0tciQ",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "Reason",
+      "normalized_name": "reason",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "4H57Art1N8hVzXHYJcO3Mn",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Send My Mind",
+      "normalized_name": "send my mind",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "2PFArH9NGOqBRuU3sz1L0X",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Shape",
+      "normalized_name": "shape",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "4bA9FWOYtBp3eA42auvK72",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Stay",
+      "normalized_name": "stay",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "2PqAI7yzyvLzyVO4mtx9Ab",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Warmhearted",
+      "normalized_name": "warmhearted",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "5MZNGxnfhoOro2mvPjtVlA",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Home",
+      "normalized_name": "home",
+      "first_release_date": "2020-06-04",
+      "spotify_track_id": "5rofrd6ZAJdyEA5F0BXVqT",
+      "albums": [
+        "Home",
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Reply",
+      "normalized_name": "reply",
+      "first_release_date": "2020-09-20",
+      "spotify_track_id": "0YyiQpqioepmcYLBlpKPzj",
+      "albums": [
+        "Reply",
+        "At least only we"
+      ]
+    },
+    {
+      "name": "At least only we",
+      "normalized_name": "at least only we",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "580zTXFLtHOsKeMlLyNOhB",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Mom",
+      "normalized_name": "mom",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "59ooEpZVFrPKbjnU61ecNa",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Monologue",
+      "normalized_name": "monologue",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "0HXQnrYTYOrNs7Ug228lnB",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Pond",
+      "normalized_name": "pond",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "1ZZ5aUmxcqFQUjPNScvSlu",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Be my day",
+      "normalized_name": "be my day",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "4P9knL3YsUo3BojEf88QJE",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Hide and Seek",
+      "normalized_name": "hide and seek",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "6rHVDVq2yeM3JMwKvtYLXv",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Love",
+      "normalized_name": "love",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "4oBIqV6T0FmTWUtnHQCOEc",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Still",
+      "normalized_name": "still",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "56Nyv2dGc2FUqFOiwfPdoP",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Us",
+      "normalized_name": "us",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "2hbxrQwyGCirNhyzP46DEL",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "잘 지내자, 우리",
+      "normalized_name": "잘 지내자 우리",
+      "first_release_date": "2021-07-14",
+      "spotify_track_id": "20s4CVeJ9VgW2jdNLKr1EL",
+      "albums": [
+        "잘 지내자, 우리"
+      ]
+    },
+    {
+      "name": "Wish",
+      "normalized_name": "wish",
+      "first_release_date": "2021-09-25",
+      "spotify_track_id": "12n9WBfLII5EdQFzQiQFqv",
+      "albums": [
+        "Hometown Cha-Cha-Cha, Pt. 4 (Original Television Soundtrack)"
+      ]
+    },
+    {
+      "name": "Wish - Instrumental",
+      "normalized_name": "wish instrumental",
+      "first_release_date": "2021-09-25",
+      "spotify_track_id": "7IQkSif5JbmuDADk9pPPrF",
+      "albums": [
+        "Hometown Cha-Cha-Cha, Pt. 4 (Original Television Soundtrack)"
+      ]
+    },
+    {
+      "name": "And",
+      "normalized_name": "and",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "1sDXzLjsHiiuq07BlJsqPH",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Dejavu",
+      "normalized_name": "dejavu",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "4QVumF8HQMEqKAYtVb5xHW",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "I owe you",
+      "normalized_name": "i owe you",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "0VIgqujGMXj2hYHMNHJtVd",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Life goes on",
+      "normalized_name": "life goes on",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "2svtm7O8mhNGflEdsxsZtt",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Soothing",
+      "normalized_name": "soothing",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "4QqcXzZIdTcZeokmOT4mQb",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Try (Journey Epilogue)",
+      "normalized_name": "try",
+      "first_release_date": "2021-12-16",
+      "spotify_track_id": "7HK1elgUFULwdkMsiCbqoJ",
+      "albums": [
+        "Try (Journey Epilogue)"
+      ]
+    },
+    {
+      "name": "sleepless nights (My Sweden Laundry #1)",
+      "normalized_name": "sleepless nights",
+      "first_release_date": "2022-03-16",
+      "spotify_track_id": "4gOx9XctmKHQ42ytfKNbiC",
+      "albums": [
+        "sleepless nights (My Sweden Laundry #1)"
+      ]
+    },
+    {
+      "name": "That's all",
+      "normalized_name": "thats all",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "0GqnN396QOXYC0UWIiRkIs",
+      "albums": [
+        "39歳 オリジナル・サウンドトラック Part.3",
+        "39歳 オリジナル・サウンドトラック Part.3"
+      ]
+    },
+    {
+      "name": "Do my best",
+      "normalized_name": "do my best",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "7yoqyzY2QCccmuaiUe0pvn",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Friend",
+      "normalized_name": "friend",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "2ec9FQ12F4YRifHc8cVrXP",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "It's me",
+      "normalized_name": "its me",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "1gD1DHqJPQd7qcyLbQnw9n",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Lost",
+      "normalized_name": "lost",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "53DQ2kMinDD2uVNrQqIorg",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "To the other side of greed",
+      "normalized_name": "to the other side of greed",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "0DnSCHrXkoJgjvmZMtJiSz",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Won’t give up",
+      "normalized_name": "won’t give up",
+      "first_release_date": "2022-06-03",
+      "spotify_track_id": "1r0pKntnoTKaHHXbemwSGQ",
+      "albums": [
+        "별똥별 OST Part 5",
+        "별똥별 OST Part 5"
+      ]
+    },
+    {
+      "name": "Forest",
+      "normalized_name": "forest",
+      "first_release_date": "2022-08-24",
+      "spotify_track_id": "33xRp6ZX1DKraRFHR9ZDck",
+      "albums": [
+        "Stroll"
+      ]
+    },
+    {
+      "name": "Ocean",
+      "normalized_name": "ocean",
+      "first_release_date": "2022-08-24",
+      "spotify_track_id": "7mwdq1i8k1UP9NuxlATL9W",
+      "albums": [
+        "Stroll"
+      ]
+    },
+    {
+      "name": "Tonight",
+      "normalized_name": "tonight",
+      "first_release_date": "2022-10-05",
+      "spotify_track_id": "5zRPAxbJo5IXIHFTOETcJL",
+      "albums": [
+        "Tonight"
+      ]
+    },
+    {
+      "name": "Tonight - Instrumental",
+      "normalized_name": "tonight instrumental",
+      "first_release_date": "2022-10-05",
+      "spotify_track_id": "33GZ3zfj9mGkIekJZtQoz0",
+      "albums": [
+        "Tonight"
+      ]
+    },
+    {
+      "name": "A breath",
+      "normalized_name": "a breath",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "4U6kWdYE9dNsFjE6mrIaum",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Hey",
+      "normalized_name": "hey",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "4aPR8xWwFWsmvAK6yWHN5E",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Sudden worries",
+      "normalized_name": "sudden worries",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "0BJNzNbKIfb8nM3fPVQSiQ",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Trace",
+      "normalized_name": "trace",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "6qcNxQOnG0XIJTBJ4dj20S",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "What do you think of me?",
+      "normalized_name": "what do you think of me",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "6oGVz0TgzF5iVXCwdv7oXJ",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "You may live in happiness (2022)",
+      "normalized_name": "you may live in happiness",
+      "first_release_date": "2022-12-27",
+      "spotify_track_id": "0D5e4R40frQYkr2PzdMpHL",
+      "albums": [
+        "You may live in happiness (2022)"
+      ]
+    },
+    {
+      "name": "You may live in happiness (2022) - instrumental",
+      "normalized_name": "you may live in happiness instrumental",
+      "first_release_date": "2022-12-27",
+      "spotify_track_id": "0MVKfpIrbF7O676EQZD5HR",
+      "albums": [
+        "You may live in happiness (2022)"
+      ]
+    },
+    {
+      "name": "Honest",
+      "normalized_name": "honest",
+      "first_release_date": "2023-03-08",
+      "spotify_track_id": "0Ftnk4kRb28HYgiumfduSl",
+      "albums": [
+        "Dear."
+      ]
+    },
+    {
+      "name": "Your name",
+      "normalized_name": "your name",
+      "first_release_date": "2023-03-08",
+      "spotify_track_id": "5dJg9eVbselFdPqF1MJBwl",
+      "albums": [
+        "Dear."
+      ]
+    },
+    {
+      "name": "Calling the Star",
+      "normalized_name": "calling the star",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "5zxqCejnJChTtrnut3FnPl",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Calling the Star - Instrumental",
+      "normalized_name": "calling the star instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "6zSsgaeYURIBHDurI2tlhq",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Love Without Pain",
+      "normalized_name": "love without pain",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "114JstNdrTd5rsVce9lrpQ",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Love Without Pain - Instrumental",
+      "normalized_name": "love without pain instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "2dZKhQpqKiWXu7v5roeyUI",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Walk Slow",
+      "normalized_name": "walk slow",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "41dN9FUiIDhMpc0waRUfSb",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Walk Slow - Instrumental",
+      "normalized_name": "walk slow instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "4taKtDzmvgkQnexta97cwK",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Like a Dream",
+      "normalized_name": "like a dream",
+      "first_release_date": "2023-08-01",
+      "spotify_track_id": "3XkygPbUCWxhqLaS5U3KyN",
+      "albums": [
+        "Not Others, Pt. 3 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Like a Dream - Instrumental",
+      "normalized_name": "like a dream instrumental",
+      "first_release_date": "2023-08-01",
+      "spotify_track_id": "0SpvJAaVaSrrta6Jap7AV0",
+      "albums": [
+        "Not Others, Pt. 3 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Wandering Youth",
+      "normalized_name": "wandering youth",
+      "first_release_date": "2023-08-29",
+      "spotify_track_id": "0JNenWY0Dt33vfqHQGnX9F",
+      "albums": [
+        "Wandering Youth"
+      ]
+    },
+    {
+      "name": "Good Good Night",
+      "normalized_name": "good good night",
+      "first_release_date": "2023-10-21",
+      "spotify_track_id": "6FL8cNp1r1pjXhcbsL0LVl",
+      "albums": [
+        "[THE SEASONS VolⅡ. 6] <AKMU's Long day Long night> ReːWake x Choi Yuree"
+      ]
+    },
+    {
+      "name": "Night Sea",
+      "normalized_name": "night sea",
+      "first_release_date": "2023-10-29",
+      "spotify_track_id": "7zkut02u2ekBqbZeT395YF",
+      "albums": [
+        "Trip: playlist (Original Television Soundtrack), Pt.2"
+      ]
+    },
+    {
+      "name": "Night Sea - instrumental",
+      "normalized_name": "night sea instrumental",
+      "first_release_date": "2023-10-29",
+      "spotify_track_id": "4mMqSWEQnmXArPxD3fmTTA",
+      "albums": [
+        "Trip: playlist (Original Television Soundtrack), Pt.2"
+      ]
+    },
+    {
+      "name": "Dear love",
+      "normalized_name": "dear love",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "6l6zrxtopyeJ0UDdQFkLmF",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Dreaming",
+      "normalized_name": "dreaming",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "48QMvpFwDUOPGGVOyHe5mo",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Flashback",
+      "normalized_name": "flashback",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "4PT64bWtDiXV8J9cE5VdKb",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Only",
+      "normalized_name": "only",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "7li0cs7VNPzKTepvKWYHCf",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Serene",
+      "normalized_name": "serene",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "0DUKMs6qXVwE56WSRLTh3A",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "When I stop thinking",
+      "normalized_name": "when i stop thinking",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "2lC9w6JGMzBkiQrx8Wy6uM",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Last minute",
+      "normalized_name": "last minute",
+      "first_release_date": "2024-01-26",
+      "spotify_track_id": "7lNskvQuQ4fxtXpAa3I7nt",
+      "albums": [
+        "EXchange3, Pt. 5 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Last minute - Instrumental",
+      "normalized_name": "last minute instrumental",
+      "first_release_date": "2024-01-26",
+      "spotify_track_id": "6sPhFieJhkmMJRUg9SYSa4",
+      "albums": [
+        "EXchange3, Pt. 5 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Somehow Different",
+      "normalized_name": "somehow different",
+      "first_release_date": "2024-03-28",
+      "spotify_track_id": "1f74SwIBl0FgeFMhefsBbS",
+      "albums": [
+        "Somehow Different",
+        "Somehow Different"
+      ]
+    },
+    {
+      "name": "Promise",
+      "normalized_name": "promise",
+      "first_release_date": "2024-04-14",
+      "spotify_track_id": "5GWgui5m1Uvn5zTuuKKTDA",
+      "albums": [
+        "Queen of Tears (Original Television Soundtrack), Pt.9"
+      ]
+    },
+    {
+      "name": "Promise - Inst.",
+      "normalized_name": "promise inst",
+      "first_release_date": "2024-04-14",
+      "spotify_track_id": "7reKbT9Ukrs0H7qeIjh7VS",
+      "albums": [
+        "Queen of Tears (Original Television Soundtrack), Pt.9"
+      ]
+    },
+    {
+      "name": "It's been a while",
+      "normalized_name": "its been a while",
+      "first_release_date": "2024-05-02",
+      "spotify_track_id": "04SHCnVGwukIiqBQX1KCSH",
+      "albums": [
+        "It's been a while"
+      ]
+    },
+    {
+      "name": "Last Day",
+      "normalized_name": "last day",
+      "first_release_date": "2024-05-02",
+      "spotify_track_id": "3b9t8nowHkohoSoD1BjShM",
+      "albums": [
+        "It's been a while"
+      ]
+    },
+    {
+      "name": "Echo (feat. JUKJAE)",
+      "normalized_name": "echo",
+      "first_release_date": "2024-09-22",
+      "spotify_track_id": "2KzpyKIMLmOMVroRZ8RA6T",
+      "albums": [
+        "Echo (feat .JUKJAE)",
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "746",
+      "normalized_name": "746",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "6GPpcZv3AyOGx0nSBtqcGu",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "A Light Dream",
+      "normalized_name": "a light dream",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2jUCUwPq3CMzuzEtxsDdrZ",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "About Love",
+      "normalized_name": "about love",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "0YWmUamXSY5xo5bm37DoBy",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Four Seasons",
+      "normalized_name": "four seasons",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2Be2BN0xp8mqWtZY3FQvMK",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Honestly",
+      "normalized_name": "honestly",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "7c8SxUnmm12ihKXN28lrHU",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Keep Calm",
+      "normalized_name": "keep calm",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2h6SEpZIPatxBUuQDYFQlY",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Wave",
+      "normalized_name": "wave",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "5vO4isw2ZOxbL89Uc9NwYm",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Words of Us",
+      "normalized_name": "words of us",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "1N9fLIjmXzeTje6amS62ol",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Loneliness is",
+      "normalized_name": "loneliness is",
+      "first_release_date": "2025-03-04",
+      "spotify_track_id": "3dAhdpLHBetxcuEYoJaH2O",
+      "albums": [
+        "Loneliness is"
+      ]
+    },
+    {
+      "name": "Yellow Spring",
+      "normalized_name": "yellow spring",
+      "first_release_date": "2025-05-31",
+      "spotify_track_id": "0JyVtfJ6Z8T6VHXG1iD1pE",
+      "albums": [
+        "Our Unwritten Seoul (Original Soundtrack) Part.1"
+      ]
+    },
+    {
+      "name": "Yellow Spring - Inst.",
+      "normalized_name": "yellow spring inst",
+      "first_release_date": "2025-05-31",
+      "spotify_track_id": "4SPzuNcmQrIIT9Gs63lUkN",
+      "albums": [
+        "Our Unwritten Seoul (Original Soundtrack) Part.1"
+      ]
+    },
+    {
+      "name": "Dear World, Like a Fairy Tale",
+      "normalized_name": "dear world like a fairy tale",
+      "first_release_date": "2025-06-10",
+      "spotify_track_id": "4kxg5xxxIQbOPHHZQKhb0l",
+      "albums": [
+        "Song For You"
+      ]
+    },
+    {
+      "name": "Dive",
+      "normalized_name": "dive",
+      "first_release_date": "2025-06-10",
+      "spotify_track_id": "3b7odAg3MSxNapF29KCYu3",
+      "albums": [
+        "Song For You"
+      ]
+    },
+    {
+      "name": "Between Earth and Sky",
+      "normalized_name": "between earth and sky",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "5cQ9mS0qDlh4YPRQZBHhBm",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Beyond the Hill",
+      "normalized_name": "beyond the hill",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "3UEVBHoNbmNjetG8V2NIsO",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Falling",
+      "normalized_name": "falling",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "7DLvvLzAL0Sx4kdch3yWOn",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Journey to the Sun",
+      "normalized_name": "journey to the sun",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "1WC2LmRJZX9cgyprCbdZ9S",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Love Road",
+      "normalized_name": "love road",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "2bSKoTJqGVmipIf3ZdvxkR",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "たぶん、僕たち",
+      "normalized_name": "たぶん、僕たち",
+      "first_release_date": "2025-12-05",
+      "spotify_track_id": "1NXeWPvKNvkCLuaDGtIGXc",
+      "albums": [
+        "たぶん、僕たち"
+      ]
+    },
+    {
+      "name": "Early Spring",
+      "normalized_name": "early spring",
+      "first_release_date": "2026-02-22",
+      "spotify_track_id": "2GQ19vTX8j08Z6MN240E9n",
+      "albums": [
+        "Early Spring"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "I Want to Get Close",
+      "normalized_name": "i want to get close",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "2Mxh5wP6AvXh5FNMn21cH9",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "More Often",
+      "normalized_name": "more often",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "4J7lm9SQLFXc3Ns0esSZL9",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "Regret",
+      "normalized_name": "regret",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "0xLzgUNJwtKJrwqBPOaYss",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1",
+        "Shape"
+      ]
+    },
+    {
+      "name": "Take Me There",
+      "normalized_name": "take me there",
+      "first_release_date": "2019-10-24",
+      "spotify_track_id": "48vJMYxd7NHfZCdsn0tciQ",
+      "albums": [
+        "In Bloom', Cafe Shofar Compilation Vol.1"
+      ]
+    },
+    {
+      "name": "Reason",
+      "normalized_name": "reason",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "4H57Art1N8hVzXHYJcO3Mn",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Send My Mind",
+      "normalized_name": "send my mind",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "2PFArH9NGOqBRuU3sz1L0X",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Shape",
+      "normalized_name": "shape",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "4bA9FWOYtBp3eA42auvK72",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Stay",
+      "normalized_name": "stay",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "2PqAI7yzyvLzyVO4mtx9Ab",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Warmhearted",
+      "normalized_name": "warmhearted",
+      "first_release_date": "2020-02-24",
+      "spotify_track_id": "5MZNGxnfhoOro2mvPjtVlA",
+      "albums": [
+        "Shape"
+      ]
+    },
+    {
+      "name": "Home",
+      "normalized_name": "home",
+      "first_release_date": "2020-06-04",
+      "spotify_track_id": "5rofrd6ZAJdyEA5F0BXVqT",
+      "albums": [
+        "Home",
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Reply",
+      "normalized_name": "reply",
+      "first_release_date": "2020-09-20",
+      "spotify_track_id": "0YyiQpqioepmcYLBlpKPzj",
+      "albums": [
+        "Reply",
+        "At least only we"
+      ]
+    },
+    {
+      "name": "At least only we",
+      "normalized_name": "at least only we",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "580zTXFLtHOsKeMlLyNOhB",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Mom",
+      "normalized_name": "mom",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "59ooEpZVFrPKbjnU61ecNa",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Monologue",
+      "normalized_name": "monologue",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "0HXQnrYTYOrNs7Ug228lnB",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Pond",
+      "normalized_name": "pond",
+      "first_release_date": "2020-12-15",
+      "spotify_track_id": "1ZZ5aUmxcqFQUjPNScvSlu",
+      "albums": [
+        "At least only we"
+      ]
+    },
+    {
+      "name": "Be my day",
+      "normalized_name": "be my day",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "4P9knL3YsUo3BojEf88QJE",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Hide and Seek",
+      "normalized_name": "hide and seek",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "6rHVDVq2yeM3JMwKvtYLXv",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Love",
+      "normalized_name": "love",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "4oBIqV6T0FmTWUtnHQCOEc",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Still",
+      "normalized_name": "still",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "56Nyv2dGc2FUqFOiwfPdoP",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "Us",
+      "normalized_name": "us",
+      "first_release_date": "2021-04-13",
+      "spotify_track_id": "2hbxrQwyGCirNhyzP46DEL",
+      "albums": [
+        "Us"
+      ]
+    },
+    {
+      "name": "잘 지내자, 우리",
+      "normalized_name": "잘 지내자 우리",
+      "first_release_date": "2021-07-14",
+      "spotify_track_id": "20s4CVeJ9VgW2jdNLKr1EL",
+      "albums": [
+        "잘 지내자, 우리"
+      ]
+    },
+    {
+      "name": "Wish",
+      "normalized_name": "wish",
+      "first_release_date": "2021-09-25",
+      "spotify_track_id": "12n9WBfLII5EdQFzQiQFqv",
+      "albums": [
+        "Hometown Cha-Cha-Cha, Pt. 4 (Original Television Soundtrack)"
+      ]
+    },
+    {
+      "name": "And",
+      "normalized_name": "and",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "1sDXzLjsHiiuq07BlJsqPH",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Dejavu",
+      "normalized_name": "dejavu",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "4QVumF8HQMEqKAYtVb5xHW",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "I owe you",
+      "normalized_name": "i owe you",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "0VIgqujGMXj2hYHMNHJtVd",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Life goes on",
+      "normalized_name": "life goes on",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "2svtm7O8mhNGflEdsxsZtt",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Soothing",
+      "normalized_name": "soothing",
+      "first_release_date": "2021-10-05",
+      "spotify_track_id": "4QqcXzZIdTcZeokmOT4mQb",
+      "albums": [
+        "Journey"
+      ]
+    },
+    {
+      "name": "Try (Journey Epilogue)",
+      "normalized_name": "try",
+      "first_release_date": "2021-12-16",
+      "spotify_track_id": "7HK1elgUFULwdkMsiCbqoJ",
+      "albums": [
+        "Try (Journey Epilogue)"
+      ]
+    },
+    {
+      "name": "sleepless nights (My Sweden Laundry #1)",
+      "normalized_name": "sleepless nights",
+      "first_release_date": "2022-03-16",
+      "spotify_track_id": "4gOx9XctmKHQ42ytfKNbiC",
+      "albums": [
+        "sleepless nights (My Sweden Laundry #1)"
+      ]
+    },
+    {
+      "name": "That's all",
+      "normalized_name": "thats all",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "0GqnN396QOXYC0UWIiRkIs",
+      "albums": [
+        "39歳 オリジナル・サウンドトラック Part.3",
+        "39歳 オリジナル・サウンドトラック Part.3"
+      ]
+    },
+    {
+      "name": "Do my best",
+      "normalized_name": "do my best",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "7yoqyzY2QCccmuaiUe0pvn",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Friend",
+      "normalized_name": "friend",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "2ec9FQ12F4YRifHc8cVrXP",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "It's me",
+      "normalized_name": "its me",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "1gD1DHqJPQd7qcyLbQnw9n",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Lost",
+      "normalized_name": "lost",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "53DQ2kMinDD2uVNrQqIorg",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "To the other side of greed",
+      "normalized_name": "to the other side of greed",
+      "first_release_date": "2022-05-26",
+      "spotify_track_id": "0DnSCHrXkoJgjvmZMtJiSz",
+      "albums": [
+        "To the other side of greed"
+      ]
+    },
+    {
+      "name": "Won’t give up",
+      "normalized_name": "won’t give up",
+      "first_release_date": "2022-06-03",
+      "spotify_track_id": "1r0pKntnoTKaHHXbemwSGQ",
+      "albums": [
+        "별똥별 OST Part 5",
+        "별똥별 OST Part 5"
+      ]
+    },
+    {
+      "name": "Forest",
+      "normalized_name": "forest",
+      "first_release_date": "2022-08-24",
+      "spotify_track_id": "33xRp6ZX1DKraRFHR9ZDck",
+      "albums": [
+        "Stroll"
+      ]
+    },
+    {
+      "name": "Ocean",
+      "normalized_name": "ocean",
+      "first_release_date": "2022-08-24",
+      "spotify_track_id": "7mwdq1i8k1UP9NuxlATL9W",
+      "albums": [
+        "Stroll"
+      ]
+    },
+    {
+      "name": "Tonight",
+      "normalized_name": "tonight",
+      "first_release_date": "2022-10-05",
+      "spotify_track_id": "5zRPAxbJo5IXIHFTOETcJL",
+      "albums": [
+        "Tonight"
+      ]
+    },
+    {
+      "name": "A breath",
+      "normalized_name": "a breath",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "4U6kWdYE9dNsFjE6mrIaum",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Hey",
+      "normalized_name": "hey",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "4aPR8xWwFWsmvAK6yWHN5E",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Sudden worries",
+      "normalized_name": "sudden worries",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "0BJNzNbKIfb8nM3fPVQSiQ",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "Trace",
+      "normalized_name": "trace",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "6qcNxQOnG0XIJTBJ4dj20S",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "What do you think of me?",
+      "normalized_name": "what do you think of me",
+      "first_release_date": "2022-11-30",
+      "spotify_track_id": "6oGVz0TgzF5iVXCwdv7oXJ",
+      "albums": [
+        "Afterglow"
+      ]
+    },
+    {
+      "name": "You may live in happiness (2022)",
+      "normalized_name": "you may live in happiness",
+      "first_release_date": "2022-12-27",
+      "spotify_track_id": "0D5e4R40frQYkr2PzdMpHL",
+      "albums": [
+        "You may live in happiness (2022)"
+      ]
+    },
+    {
+      "name": "Honest",
+      "normalized_name": "honest",
+      "first_release_date": "2023-03-08",
+      "spotify_track_id": "0Ftnk4kRb28HYgiumfduSl",
+      "albums": [
+        "Dear."
+      ]
+    },
+    {
+      "name": "Your name",
+      "normalized_name": "your name",
+      "first_release_date": "2023-03-08",
+      "spotify_track_id": "5dJg9eVbselFdPqF1MJBwl",
+      "albums": [
+        "Dear."
+      ]
+    },
+    {
+      "name": "Calling the Star",
+      "normalized_name": "calling the star",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "5zxqCejnJChTtrnut3FnPl",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Love Without Pain",
+      "normalized_name": "love without pain",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "114JstNdrTd5rsVce9lrpQ",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Walk Slow",
+      "normalized_name": "walk slow",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "41dN9FUiIDhMpc0waRUfSb",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Like a Dream",
+      "normalized_name": "like a dream",
+      "first_release_date": "2023-08-01",
+      "spotify_track_id": "3XkygPbUCWxhqLaS5U3KyN",
+      "albums": [
+        "Not Others, Pt. 3 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Wandering Youth",
+      "normalized_name": "wandering youth",
+      "first_release_date": "2023-08-29",
+      "spotify_track_id": "0JNenWY0Dt33vfqHQGnX9F",
+      "albums": [
+        "Wandering Youth"
+      ]
+    },
+    {
+      "name": "Good Good Night",
+      "normalized_name": "good good night",
+      "first_release_date": "2023-10-21",
+      "spotify_track_id": "6FL8cNp1r1pjXhcbsL0LVl",
+      "albums": [
+        "[THE SEASONS VolⅡ. 6] <AKMU's Long day Long night> ReːWake x Choi Yuree"
+      ]
+    },
+    {
+      "name": "Night Sea",
+      "normalized_name": "night sea",
+      "first_release_date": "2023-10-29",
+      "spotify_track_id": "7zkut02u2ekBqbZeT395YF",
+      "albums": [
+        "Trip: playlist (Original Television Soundtrack), Pt.2"
+      ]
+    },
+    {
+      "name": "Dear love",
+      "normalized_name": "dear love",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "6l6zrxtopyeJ0UDdQFkLmF",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Dreaming",
+      "normalized_name": "dreaming",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "48QMvpFwDUOPGGVOyHe5mo",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Flashback",
+      "normalized_name": "flashback",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "4PT64bWtDiXV8J9cE5VdKb",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Only",
+      "normalized_name": "only",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "7li0cs7VNPzKTepvKWYHCf",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Serene",
+      "normalized_name": "serene",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "0DUKMs6qXVwE56WSRLTh3A",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "When I stop thinking",
+      "normalized_name": "when i stop thinking",
+      "first_release_date": "2023-11-21",
+      "spotify_track_id": "2lC9w6JGMzBkiQrx8Wy6uM",
+      "albums": [
+        "When I stop thinking"
+      ]
+    },
+    {
+      "name": "Last minute",
+      "normalized_name": "last minute",
+      "first_release_date": "2024-01-26",
+      "spotify_track_id": "7lNskvQuQ4fxtXpAa3I7nt",
+      "albums": [
+        "EXchange3, Pt. 5 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Somehow Different",
+      "normalized_name": "somehow different",
+      "first_release_date": "2024-03-28",
+      "spotify_track_id": "1f74SwIBl0FgeFMhefsBbS",
+      "albums": [
+        "Somehow Different",
+        "Somehow Different"
+      ]
+    },
+    {
+      "name": "Promise",
+      "normalized_name": "promise",
+      "first_release_date": "2024-04-14",
+      "spotify_track_id": "5GWgui5m1Uvn5zTuuKKTDA",
+      "albums": [
+        "Queen of Tears (Original Television Soundtrack), Pt.9"
+      ]
+    },
+    {
+      "name": "Promise - Inst.",
+      "normalized_name": "promise inst",
+      "first_release_date": "2024-04-14",
+      "spotify_track_id": "7reKbT9Ukrs0H7qeIjh7VS",
+      "albums": [
+        "Queen of Tears (Original Television Soundtrack), Pt.9"
+      ]
+    },
+    {
+      "name": "It's been a while",
+      "normalized_name": "its been a while",
+      "first_release_date": "2024-05-02",
+      "spotify_track_id": "04SHCnVGwukIiqBQX1KCSH",
+      "albums": [
+        "It's been a while"
+      ]
+    },
+    {
+      "name": "Last Day",
+      "normalized_name": "last day",
+      "first_release_date": "2024-05-02",
+      "spotify_track_id": "3b9t8nowHkohoSoD1BjShM",
+      "albums": [
+        "It's been a while"
+      ]
+    },
+    {
+      "name": "Echo (feat. JUKJAE)",
+      "normalized_name": "echo",
+      "first_release_date": "2024-09-22",
+      "spotify_track_id": "2KzpyKIMLmOMVroRZ8RA6T",
+      "albums": [
+        "Echo (feat .JUKJAE)",
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "746",
+      "normalized_name": "746",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "6GPpcZv3AyOGx0nSBtqcGu",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "A Light Dream",
+      "normalized_name": "a light dream",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2jUCUwPq3CMzuzEtxsDdrZ",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "About Love",
+      "normalized_name": "about love",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "0YWmUamXSY5xo5bm37DoBy",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Four Seasons",
+      "normalized_name": "four seasons",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2Be2BN0xp8mqWtZY3FQvMK",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Honestly",
+      "normalized_name": "honestly",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "7c8SxUnmm12ihKXN28lrHU",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Keep Calm",
+      "normalized_name": "keep calm",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "2h6SEpZIPatxBUuQDYFQlY",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Wave",
+      "normalized_name": "wave",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "5vO4isw2ZOxbL89Uc9NwYm",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Words of Us",
+      "normalized_name": "words of us",
+      "first_release_date": "2024-10-28",
+      "spotify_track_id": "1N9fLIjmXzeTje6amS62ol",
+      "albums": [
+        "746 - The 1st Album"
+      ]
+    },
+    {
+      "name": "Loneliness is",
+      "normalized_name": "loneliness is",
+      "first_release_date": "2025-03-04",
+      "spotify_track_id": "3dAhdpLHBetxcuEYoJaH2O",
+      "albums": [
+        "Loneliness is"
+      ]
+    },
+    {
+      "name": "Yellow Spring",
+      "normalized_name": "yellow spring",
+      "first_release_date": "2025-05-31",
+      "spotify_track_id": "0JyVtfJ6Z8T6VHXG1iD1pE",
+      "albums": [
+        "Our Unwritten Seoul (Original Soundtrack) Part.1"
+      ]
+    },
+    {
+      "name": "Yellow Spring - Inst.",
+      "normalized_name": "yellow spring inst",
+      "first_release_date": "2025-05-31",
+      "spotify_track_id": "4SPzuNcmQrIIT9Gs63lUkN",
+      "albums": [
+        "Our Unwritten Seoul (Original Soundtrack) Part.1"
+      ]
+    },
+    {
+      "name": "Dear World, Like a Fairy Tale",
+      "normalized_name": "dear world like a fairy tale",
+      "first_release_date": "2025-06-10",
+      "spotify_track_id": "4kxg5xxxIQbOPHHZQKhb0l",
+      "albums": [
+        "Song For You"
+      ]
+    },
+    {
+      "name": "Dive",
+      "normalized_name": "dive",
+      "first_release_date": "2025-06-10",
+      "spotify_track_id": "3b7odAg3MSxNapF29KCYu3",
+      "albums": [
+        "Song For You"
+      ]
+    },
+    {
+      "name": "Between Earth and Sky",
+      "normalized_name": "between earth and sky",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "5cQ9mS0qDlh4YPRQZBHhBm",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Beyond the Hill",
+      "normalized_name": "beyond the hill",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "3UEVBHoNbmNjetG8V2NIsO",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Falling",
+      "normalized_name": "falling",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "7DLvvLzAL0Sx4kdch3yWOn",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Journey to the Sun",
+      "normalized_name": "journey to the sun",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "1WC2LmRJZX9cgyprCbdZ9S",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "Love Road",
+      "normalized_name": "love road",
+      "first_release_date": "2025-10-23",
+      "spotify_track_id": "2bSKoTJqGVmipIf3ZdvxkR",
+      "albums": [
+        "Stay: One"
+      ]
+    },
+    {
+      "name": "たぶん、僕たち",
+      "normalized_name": "たぶん、僕たち",
+      "first_release_date": "2025-12-05",
+      "spotify_track_id": "1NXeWPvKNvkCLuaDGtIGXc",
+      "albums": [
+        "たぶん、僕たち"
+      ]
+    },
+    {
+      "name": "Early Spring",
+      "normalized_name": "early spring",
+      "first_release_date": "2026-02-22",
+      "spotify_track_id": "2GQ19vTX8j08Z6MN240E9n",
+      "albums": [
+        "Early Spring"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [
+    {
+      "name": "Wish - Instrumental",
+      "normalized_name": "wish instrumental",
+      "first_release_date": "2021-09-25",
+      "spotify_track_id": "7IQkSif5JbmuDADk9pPPrF",
+      "albums": [
+        "Hometown Cha-Cha-Cha, Pt. 4 (Original Television Soundtrack)"
+      ]
+    },
+    {
+      "name": "Tonight - Instrumental",
+      "normalized_name": "tonight instrumental",
+      "first_release_date": "2022-10-05",
+      "spotify_track_id": "33GZ3zfj9mGkIekJZtQoz0",
+      "albums": [
+        "Tonight"
+      ]
+    },
+    {
+      "name": "You may live in happiness (2022) - instrumental",
+      "normalized_name": "you may live in happiness instrumental",
+      "first_release_date": "2022-12-27",
+      "spotify_track_id": "0MVKfpIrbF7O676EQZD5HR",
+      "albums": [
+        "You may live in happiness (2022)"
+      ]
+    },
+    {
+      "name": "Calling the Star - Instrumental",
+      "normalized_name": "calling the star instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "6zSsgaeYURIBHDurI2tlhq",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Love Without Pain - Instrumental",
+      "normalized_name": "love without pain instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "2dZKhQpqKiWXu7v5roeyUI",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Walk Slow - Instrumental",
+      "normalized_name": "walk slow instrumental",
+      "first_release_date": "2023-03-16",
+      "spotify_track_id": "4taKtDzmvgkQnexta97cwK",
+      "albums": [
+        "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)"
+      ]
+    },
+    {
+      "name": "Like a Dream - Instrumental",
+      "normalized_name": "like a dream instrumental",
+      "first_release_date": "2023-08-01",
+      "spotify_track_id": "0SpvJAaVaSrrta6Jap7AV0",
+      "albums": [
+        "Not Others, Pt. 3 (Original Soundtrack)"
+      ]
+    },
+    {
+      "name": "Night Sea - instrumental",
+      "normalized_name": "night sea instrumental",
+      "first_release_date": "2023-10-29",
+      "spotify_track_id": "4mMqSWEQnmXArPxD3fmTTA",
+      "albums": [
+        "Trip: playlist (Original Television Soundtrack), Pt.2"
+      ]
+    },
+    {
+      "name": "Last minute - Instrumental",
+      "normalized_name": "last minute instrumental",
+      "first_release_date": "2024-01-26",
+      "spotify_track_id": "6sPhFieJhkmMJRUg9SYSa4",
+      "albums": [
+        "EXchange3, Pt. 5 (Original Soundtrack)"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "album_id": "42BHrVBnOMCvo8mqQBgnyc",
+      "name": "In Bloom', Cafe Shofar Compilation Vol.1",
+      "album_type": "single",
+      "release_date": "2019-10-24",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/42BHrVBnOMCvo8mqQBgnyc",
+      "tracks": [
+        {
+          "track_id": "4J7lm9SQLFXc3Ns0esSZL9",
+          "name": "More Often",
+          "normalized_name": "more often",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 196800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4J7lm9SQLFXc3Ns0esSZL9"
+        },
+        {
+          "track_id": "0xLzgUNJwtKJrwqBPOaYss",
+          "name": "Regret",
+          "normalized_name": "regret",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 217560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0xLzgUNJwtKJrwqBPOaYss"
+        },
+        {
+          "track_id": "48vJMYxd7NHfZCdsn0tciQ",
+          "name": "Take Me There",
+          "normalized_name": "take me there",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 220293,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/48vJMYxd7NHfZCdsn0tciQ"
+        },
+        {
+          "track_id": "2Mxh5wP6AvXh5FNMn21cH9",
+          "name": "I Want to Get Close",
+          "normalized_name": "i want to get close",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 245800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2Mxh5wP6AvXh5FNMn21cH9"
+        }
+      ]
+    },
+    {
+      "album_id": "1rXCbK2LqR1QFQ1LIaOugu",
+      "name": "Shape",
+      "album_type": "single",
+      "release_date": "2020-02-24",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/1rXCbK2LqR1QFQ1LIaOugu",
+      "tracks": [
+        {
+          "track_id": "2PqAI7yzyvLzyVO4mtx9Ab",
+          "name": "Stay",
+          "normalized_name": "stay",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 211880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2PqAI7yzyvLzyVO4mtx9Ab"
+        },
+        {
+          "track_id": "4bA9FWOYtBp3eA42auvK72",
+          "name": "Shape",
+          "normalized_name": "shape",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 294480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4bA9FWOYtBp3eA42auvK72"
+        },
+        {
+          "track_id": "5MZNGxnfhoOro2mvPjtVlA",
+          "name": "Warmhearted",
+          "normalized_name": "warmhearted",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 253586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5MZNGxnfhoOro2mvPjtVlA"
+        },
+        {
+          "track_id": "4H57Art1N8hVzXHYJcO3Mn",
+          "name": "Reason",
+          "normalized_name": "reason",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 263266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4H57Art1N8hVzXHYJcO3Mn"
+        },
+        {
+          "track_id": "2PFArH9NGOqBRuU3sz1L0X",
+          "name": "Send My Mind",
+          "normalized_name": "send my mind",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 202613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2PFArH9NGOqBRuU3sz1L0X"
+        },
+        {
+          "track_id": "7euWg3kwEiPPQ0OVu0dlJl",
+          "name": "Regret",
+          "normalized_name": "regret",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 217560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7euWg3kwEiPPQ0OVu0dlJl"
+        }
+      ]
+    },
+    {
+      "album_id": "1UVq8dhcbxeUpx8lTlMFtN",
+      "name": "Home",
+      "album_type": "single",
+      "release_date": "2020-06-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1UVq8dhcbxeUpx8lTlMFtN",
+      "tracks": [
+        {
+          "track_id": "5rofrd6ZAJdyEA5F0BXVqT",
+          "name": "Home",
+          "normalized_name": "home",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 266426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5rofrd6ZAJdyEA5F0BXVqT"
+        }
+      ]
+    },
+    {
+      "album_id": "0YNIxhGacBTVbldVYkcB5w",
+      "name": "Reply",
+      "album_type": "single",
+      "release_date": "2020-09-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0YNIxhGacBTVbldVYkcB5w",
+      "tracks": [
+        {
+          "track_id": "0YyiQpqioepmcYLBlpKPzj",
+          "name": "Reply",
+          "normalized_name": "reply",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0YyiQpqioepmcYLBlpKPzj"
+        }
+      ]
+    },
+    {
+      "album_id": "7qaaMiq2ZQOa5XBioK8Tjb",
+      "name": "At least only we",
+      "album_type": "single",
+      "release_date": "2020-12-15",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/7qaaMiq2ZQOa5XBioK8Tjb",
+      "tracks": [
+        {
+          "track_id": "1ZZ5aUmxcqFQUjPNScvSlu",
+          "name": "Pond",
+          "normalized_name": "pond",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 188120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1ZZ5aUmxcqFQUjPNScvSlu"
+        },
+        {
+          "track_id": "59ooEpZVFrPKbjnU61ecNa",
+          "name": "Mom",
+          "normalized_name": "mom",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 200053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/59ooEpZVFrPKbjnU61ecNa"
+        },
+        {
+          "track_id": "580zTXFLtHOsKeMlLyNOhB",
+          "name": "At least only we",
+          "normalized_name": "at least only we",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 237480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/580zTXFLtHOsKeMlLyNOhB"
+        },
+        {
+          "track_id": "0HXQnrYTYOrNs7Ug228lnB",
+          "name": "Monologue",
+          "normalized_name": "monologue",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 266506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0HXQnrYTYOrNs7Ug228lnB"
+        },
+        {
+          "track_id": "41J1PePLY2OGVXyYSO0L0n",
+          "name": "Reply",
+          "normalized_name": "reply",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 193840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/41J1PePLY2OGVXyYSO0L0n"
+        },
+        {
+          "track_id": "2bu4MfrvkaACYGemvq2Zzd",
+          "name": "Home",
+          "normalized_name": "home",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 266440,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2bu4MfrvkaACYGemvq2Zzd"
+        }
+      ]
+    },
+    {
+      "album_id": "6W5maKueRWuKffmaMfXUjp",
+      "name": "Us",
+      "album_type": "single",
+      "release_date": "2021-04-13",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/6W5maKueRWuKffmaMfXUjp",
+      "tracks": [
+        {
+          "track_id": "56Nyv2dGc2FUqFOiwfPdoP",
+          "name": "Still",
+          "normalized_name": "still",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 203013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/56Nyv2dGc2FUqFOiwfPdoP"
+        },
+        {
+          "track_id": "6rHVDVq2yeM3JMwKvtYLXv",
+          "name": "Hide and Seek",
+          "normalized_name": "hide and seek",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 235746,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6rHVDVq2yeM3JMwKvtYLXv"
+        },
+        {
+          "track_id": "2hbxrQwyGCirNhyzP46DEL",
+          "name": "Us",
+          "normalized_name": "us",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 207213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2hbxrQwyGCirNhyzP46DEL"
+        },
+        {
+          "track_id": "4P9knL3YsUo3BojEf88QJE",
+          "name": "Be my day",
+          "normalized_name": "be my day",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 230506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4P9knL3YsUo3BojEf88QJE"
+        },
+        {
+          "track_id": "4oBIqV6T0FmTWUtnHQCOEc",
+          "name": "Love",
+          "normalized_name": "love",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 213706,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4oBIqV6T0FmTWUtnHQCOEc"
+        }
+      ]
+    },
+    {
+      "album_id": "3xWFhctuIPjLu4KCsEeBhg",
+      "name": "잘 지내자, 우리",
+      "album_type": "single",
+      "release_date": "2021-07-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3xWFhctuIPjLu4KCsEeBhg",
+      "tracks": [
+        {
+          "track_id": "20s4CVeJ9VgW2jdNLKr1EL",
+          "name": "잘 지내자, 우리",
+          "normalized_name": "잘 지내자 우리",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 256026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/20s4CVeJ9VgW2jdNLKr1EL"
+        }
+      ]
+    },
+    {
+      "album_id": "0I9P3bt2K8NAB97yh7uBPf",
+      "name": "Hometown Cha-Cha-Cha, Pt. 4 (Original Television Soundtrack)",
+      "album_type": "single",
+      "release_date": "2021-09-25",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/0I9P3bt2K8NAB97yh7uBPf",
+      "tracks": [
+        {
+          "track_id": "12n9WBfLII5EdQFzQiQFqv",
+          "name": "Wish",
+          "normalized_name": "wish",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 237426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/12n9WBfLII5EdQFzQiQFqv"
+        },
+        {
+          "track_id": "7IQkSif5JbmuDADk9pPPrF",
+          "name": "Wish - Instrumental",
+          "normalized_name": "wish instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 237426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7IQkSif5JbmuDADk9pPPrF"
+        }
+      ]
+    },
+    {
+      "album_id": "2ZiNV3uCWEno9JIDtCaSaP",
+      "name": "Journey",
+      "album_type": "single",
+      "release_date": "2021-10-05",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/2ZiNV3uCWEno9JIDtCaSaP",
+      "tracks": [
+        {
+          "track_id": "1sDXzLjsHiiuq07BlJsqPH",
+          "name": "And",
+          "normalized_name": "and",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 219053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1sDXzLjsHiiuq07BlJsqPH"
+        },
+        {
+          "track_id": "2svtm7O8mhNGflEdsxsZtt",
+          "name": "Life goes on",
+          "normalized_name": "life goes on",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 223933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2svtm7O8mhNGflEdsxsZtt"
+        },
+        {
+          "track_id": "4QqcXzZIdTcZeokmOT4mQb",
+          "name": "Soothing",
+          "normalized_name": "soothing",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 242360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4QqcXzZIdTcZeokmOT4mQb"
+        },
+        {
+          "track_id": "0VIgqujGMXj2hYHMNHJtVd",
+          "name": "I owe you",
+          "normalized_name": "i owe you",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 259773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0VIgqujGMXj2hYHMNHJtVd"
+        },
+        {
+          "track_id": "4QVumF8HQMEqKAYtVb5xHW",
+          "name": "Dejavu",
+          "normalized_name": "dejavu",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 279786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4QVumF8HQMEqKAYtVb5xHW"
+        }
+      ]
+    },
+    {
+      "album_id": "5jb1JQY7bJhOWXlMjID9uQ",
+      "name": "Try (Journey Epilogue)",
+      "album_type": "single",
+      "release_date": "2021-12-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5jb1JQY7bJhOWXlMjID9uQ",
+      "tracks": [
+        {
+          "track_id": "7HK1elgUFULwdkMsiCbqoJ",
+          "name": "Try (Journey Epilogue)",
+          "normalized_name": "try",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 216026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7HK1elgUFULwdkMsiCbqoJ"
+        }
+      ]
+    },
+    {
+      "album_id": "4U33ucPMfJMmaMo0SA6kqd",
+      "name": "sleepless nights (My Sweden Laundry #1)",
+      "album_type": "single",
+      "release_date": "2022-03-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4U33ucPMfJMmaMo0SA6kqd",
+      "tracks": [
+        {
+          "track_id": "4gOx9XctmKHQ42ytfKNbiC",
+          "name": "sleepless nights (My Sweden Laundry #1)",
+          "normalized_name": "sleepless nights",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 220413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4gOx9XctmKHQ42ytfKNbiC"
+        }
+      ]
+    },
+    {
+      "album_id": "6cJWNyIyi4gR1EnkhflDpJ",
+      "name": "39歳 オリジナル・サウンドトラック Part.3",
+      "album_type": "single",
+      "release_date": "2022-03-23",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6cJWNyIyi4gR1EnkhflDpJ",
+      "tracks": [
+        {
+          "track_id": "0GqnN396QOXYC0UWIiRkIs",
+          "name": "That's all",
+          "normalized_name": "thats all",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 265048,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0GqnN396QOXYC0UWIiRkIs"
+        },
+        {
+          "track_id": "0ihKMnMpEFPbutsZHkRRQa",
+          "name": "That's all (Inst.)",
+          "normalized_name": "thats all",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 265048,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0ihKMnMpEFPbutsZHkRRQa"
+        }
+      ]
+    },
+    {
+      "album_id": "3BIiz6Akrive4laESm0Eip",
+      "name": "To the other side of greed",
+      "album_type": "single",
+      "release_date": "2022-05-26",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/3BIiz6Akrive4laESm0Eip",
+      "tracks": [
+        {
+          "track_id": "53DQ2kMinDD2uVNrQqIorg",
+          "name": "Lost",
+          "normalized_name": "lost",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 256560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/53DQ2kMinDD2uVNrQqIorg"
+        },
+        {
+          "track_id": "0DnSCHrXkoJgjvmZMtJiSz",
+          "name": "To the other side of greed",
+          "normalized_name": "to the other side of greed",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 227560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0DnSCHrXkoJgjvmZMtJiSz"
+        },
+        {
+          "track_id": "7yoqyzY2QCccmuaiUe0pvn",
+          "name": "Do my best",
+          "normalized_name": "do my best",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 195906,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7yoqyzY2QCccmuaiUe0pvn"
+        },
+        {
+          "track_id": "1gD1DHqJPQd7qcyLbQnw9n",
+          "name": "It's me",
+          "normalized_name": "its me",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 210853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1gD1DHqJPQd7qcyLbQnw9n"
+        },
+        {
+          "track_id": "2ec9FQ12F4YRifHc8cVrXP",
+          "name": "Friend",
+          "normalized_name": "friend",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 269426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ec9FQ12F4YRifHc8cVrXP"
+        }
+      ]
+    },
+    {
+      "album_id": "4noPMmoug2J8yZ11yOOwCl",
+      "name": "별똥별 OST Part 5",
+      "album_type": "single",
+      "release_date": "2022-06-03",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/4noPMmoug2J8yZ11yOOwCl",
+      "tracks": [
+        {
+          "track_id": "1r0pKntnoTKaHHXbemwSGQ",
+          "name": "Won’t give up",
+          "normalized_name": "won’t give up",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 229146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1r0pKntnoTKaHHXbemwSGQ"
+        },
+        {
+          "track_id": "1ZYi8JciuvN6ZfRzjVzPCW",
+          "name": "Won’t give up (Inst.)",
+          "normalized_name": "won’t give up",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 229146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1ZYi8JciuvN6ZfRzjVzPCW"
+        }
+      ]
+    },
+    {
+      "album_id": "2zTRBl0d9LGCNwuwlf63Wx",
+      "name": "Stroll",
+      "album_type": "single",
+      "release_date": "2022-08-24",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/2zTRBl0d9LGCNwuwlf63Wx",
+      "tracks": [
+        {
+          "track_id": "33xRp6ZX1DKraRFHR9ZDck",
+          "name": "Forest",
+          "normalized_name": "forest",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 228266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/33xRp6ZX1DKraRFHR9ZDck"
+        },
+        {
+          "track_id": "7mwdq1i8k1UP9NuxlATL9W",
+          "name": "Ocean",
+          "normalized_name": "ocean",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 262520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7mwdq1i8k1UP9NuxlATL9W"
+        }
+      ]
+    },
+    {
+      "album_id": "1S5zQMBBDIklg0QR97Zq9I",
+      "name": "Tonight",
+      "album_type": "single",
+      "release_date": "2022-10-05",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/1S5zQMBBDIklg0QR97Zq9I",
+      "tracks": [
+        {
+          "track_id": "5zRPAxbJo5IXIHFTOETcJL",
+          "name": "Tonight",
+          "normalized_name": "tonight",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 255666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5zRPAxbJo5IXIHFTOETcJL"
+        },
+        {
+          "track_id": "33GZ3zfj9mGkIekJZtQoz0",
+          "name": "Tonight - Instrumental",
+          "normalized_name": "tonight instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 255666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/33GZ3zfj9mGkIekJZtQoz0"
+        }
+      ]
+    },
+    {
+      "album_id": "739E4HVYrFVObgK0IFJYkA",
+      "name": "Afterglow",
+      "album_type": "single",
+      "release_date": "2022-11-30",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/739E4HVYrFVObgK0IFJYkA",
+      "tracks": [
+        {
+          "track_id": "6qcNxQOnG0XIJTBJ4dj20S",
+          "name": "Trace",
+          "normalized_name": "trace",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 231280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6qcNxQOnG0XIJTBJ4dj20S"
+        },
+        {
+          "track_id": "4U6kWdYE9dNsFjE6mrIaum",
+          "name": "A breath",
+          "normalized_name": "a breath",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 237280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4U6kWdYE9dNsFjE6mrIaum"
+        },
+        {
+          "track_id": "4aPR8xWwFWsmvAK6yWHN5E",
+          "name": "Hey",
+          "normalized_name": "hey",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 243066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4aPR8xWwFWsmvAK6yWHN5E"
+        },
+        {
+          "track_id": "6oGVz0TgzF5iVXCwdv7oXJ",
+          "name": "What do you think of me?",
+          "normalized_name": "what do you think of me",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 197240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6oGVz0TgzF5iVXCwdv7oXJ"
+        },
+        {
+          "track_id": "0BJNzNbKIfb8nM3fPVQSiQ",
+          "name": "Sudden worries",
+          "normalized_name": "sudden worries",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 199533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0BJNzNbKIfb8nM3fPVQSiQ"
+        }
+      ]
+    },
+    {
+      "album_id": "6Bnnguv7ITOcrnTcqGQIy8",
+      "name": "You may live in happiness (2022)",
+      "album_type": "single",
+      "release_date": "2022-12-27",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6Bnnguv7ITOcrnTcqGQIy8",
+      "tracks": [
+        {
+          "track_id": "0D5e4R40frQYkr2PzdMpHL",
+          "name": "You may live in happiness (2022)",
+          "normalized_name": "you may live in happiness",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 274880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0D5e4R40frQYkr2PzdMpHL"
+        },
+        {
+          "track_id": "0MVKfpIrbF7O676EQZD5HR",
+          "name": "You may live in happiness (2022) - instrumental",
+          "normalized_name": "you may live in happiness instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 274880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0MVKfpIrbF7O676EQZD5HR"
+        }
+      ]
+    },
+    {
+      "album_id": "6VAiBqirKlthgxPQUgP7Tb",
+      "name": "Dear.",
+      "album_type": "single",
+      "release_date": "2023-03-08",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6VAiBqirKlthgxPQUgP7Tb",
+      "tracks": [
+        {
+          "track_id": "5dJg9eVbselFdPqF1MJBwl",
+          "name": "Your name",
+          "normalized_name": "your name",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 281493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5dJg9eVbselFdPqF1MJBwl"
+        },
+        {
+          "track_id": "0Ftnk4kRb28HYgiumfduSl",
+          "name": "Honest",
+          "normalized_name": "honest",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 265360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0Ftnk4kRb28HYgiumfduSl"
+        }
+      ]
+    },
+    {
+      "album_id": "1bRYXvLc2G48EXhCxwxfyp",
+      "name": "Call It Love, Part 4 (Original Soundtrack from the Disney+ Original Series)",
+      "album_type": "single",
+      "release_date": "2023-03-16",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/1bRYXvLc2G48EXhCxwxfyp",
+      "tracks": [
+        {
+          "track_id": "114JstNdrTd5rsVce9lrpQ",
+          "name": "Love Without Pain",
+          "normalized_name": "love without pain",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 218066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/114JstNdrTd5rsVce9lrpQ"
+        },
+        {
+          "track_id": "41dN9FUiIDhMpc0waRUfSb",
+          "name": "Walk Slow",
+          "normalized_name": "walk slow",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 195653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/41dN9FUiIDhMpc0waRUfSb"
+        },
+        {
+          "track_id": "5zxqCejnJChTtrnut3FnPl",
+          "name": "Calling the Star",
+          "normalized_name": "calling the star",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 238493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5zxqCejnJChTtrnut3FnPl"
+        },
+        {
+          "track_id": "2dZKhQpqKiWXu7v5roeyUI",
+          "name": "Love Without Pain - Instrumental",
+          "normalized_name": "love without pain instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 218066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2dZKhQpqKiWXu7v5roeyUI"
+        },
+        {
+          "track_id": "4taKtDzmvgkQnexta97cwK",
+          "name": "Walk Slow - Instrumental",
+          "normalized_name": "walk slow instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 195653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4taKtDzmvgkQnexta97cwK"
+        },
+        {
+          "track_id": "6zSsgaeYURIBHDurI2tlhq",
+          "name": "Calling the Star - Instrumental",
+          "normalized_name": "calling the star instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 238506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6zSsgaeYURIBHDurI2tlhq"
+        }
+      ]
+    },
+    {
+      "album_id": "7CYYhlUL2om7VTp8oLTb9Y",
+      "name": "Not Others, Pt. 3 (Original Soundtrack)",
+      "album_type": "single",
+      "release_date": "2023-08-01",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/7CYYhlUL2om7VTp8oLTb9Y",
+      "tracks": [
+        {
+          "track_id": "3XkygPbUCWxhqLaS5U3KyN",
+          "name": "Like a Dream",
+          "normalized_name": "like a dream",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 184493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3XkygPbUCWxhqLaS5U3KyN"
+        },
+        {
+          "track_id": "0SpvJAaVaSrrta6Jap7AV0",
+          "name": "Like a Dream - Instrumental",
+          "normalized_name": "like a dream instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 184493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0SpvJAaVaSrrta6Jap7AV0"
+        }
+      ]
+    },
+    {
+      "album_id": "0ip2nIDp24gqxNieGpq56A",
+      "name": "Wandering Youth",
+      "album_type": "single",
+      "release_date": "2023-08-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0ip2nIDp24gqxNieGpq56A",
+      "tracks": [
+        {
+          "track_id": "0JNenWY0Dt33vfqHQGnX9F",
+          "name": "Wandering Youth",
+          "normalized_name": "wandering youth",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 256066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0JNenWY0Dt33vfqHQGnX9F"
+        }
+      ]
+    },
+    {
+      "album_id": "3taDTzIRUZ0vtJbtOxnlSe",
+      "name": "[THE SEASONS VolⅡ. 6] <AKMU's Long day Long night> ReːWake x Choi Yuree",
+      "album_type": "single",
+      "release_date": "2023-10-21",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3taDTzIRUZ0vtJbtOxnlSe",
+      "tracks": [
+        {
+          "track_id": "6FL8cNp1r1pjXhcbsL0LVl",
+          "name": "Good Good Night",
+          "normalized_name": "good good night",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239116,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6FL8cNp1r1pjXhcbsL0LVl"
+        }
+      ]
+    },
+    {
+      "album_id": "0n8M5xkvlhZSd8t7Mxp38s",
+      "name": "Trip: playlist (Original Television Soundtrack), Pt.2",
+      "album_type": "single",
+      "release_date": "2023-10-29",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/0n8M5xkvlhZSd8t7Mxp38s",
+      "tracks": [
+        {
+          "track_id": "7zkut02u2ekBqbZeT395YF",
+          "name": "Night Sea",
+          "normalized_name": "night sea",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 254840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7zkut02u2ekBqbZeT395YF"
+        },
+        {
+          "track_id": "4mMqSWEQnmXArPxD3fmTTA",
+          "name": "Night Sea - instrumental",
+          "normalized_name": "night sea instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 254840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4mMqSWEQnmXArPxD3fmTTA"
+        }
+      ]
+    },
+    {
+      "album_id": "5fYmB8cdgKh3GBzhXoDaLw",
+      "name": "When I stop thinking",
+      "album_type": "single",
+      "release_date": "2023-11-21",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/5fYmB8cdgKh3GBzhXoDaLw",
+      "tracks": [
+        {
+          "track_id": "2lC9w6JGMzBkiQrx8Wy6uM",
+          "name": "When I stop thinking",
+          "normalized_name": "when i stop thinking",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 196093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2lC9w6JGMzBkiQrx8Wy6uM"
+        },
+        {
+          "track_id": "7li0cs7VNPzKTepvKWYHCf",
+          "name": "Only",
+          "normalized_name": "only",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 299160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7li0cs7VNPzKTepvKWYHCf"
+        },
+        {
+          "track_id": "48QMvpFwDUOPGGVOyHe5mo",
+          "name": "Dreaming",
+          "normalized_name": "dreaming",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 247093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/48QMvpFwDUOPGGVOyHe5mo"
+        },
+        {
+          "track_id": "6l6zrxtopyeJ0UDdQFkLmF",
+          "name": "Dear love",
+          "normalized_name": "dear love",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 282453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6l6zrxtopyeJ0UDdQFkLmF"
+        },
+        {
+          "track_id": "4PT64bWtDiXV8J9cE5VdKb",
+          "name": "Flashback",
+          "normalized_name": "flashback",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 260200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4PT64bWtDiXV8J9cE5VdKb"
+        },
+        {
+          "track_id": "0DUKMs6qXVwE56WSRLTh3A",
+          "name": "Serene",
+          "normalized_name": "serene",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 130466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0DUKMs6qXVwE56WSRLTh3A"
+        }
+      ]
+    },
+    {
+      "album_id": "3IhnwWehcwHwLKfP2vgVYn",
+      "name": "EXchange3, Pt. 5 (Original Soundtrack)",
+      "album_type": "single",
+      "release_date": "2024-01-26",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/3IhnwWehcwHwLKfP2vgVYn",
+      "tracks": [
+        {
+          "track_id": "7lNskvQuQ4fxtXpAa3I7nt",
+          "name": "Last minute",
+          "normalized_name": "last minute",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 214600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7lNskvQuQ4fxtXpAa3I7nt"
+        },
+        {
+          "track_id": "6sPhFieJhkmMJRUg9SYSa4",
+          "name": "Last minute - Instrumental",
+          "normalized_name": "last minute instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 214600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6sPhFieJhkmMJRUg9SYSa4"
+        }
+      ]
+    },
+    {
+      "album_id": "2y0d9PR0HmZ3fiFpik1jQ7",
+      "name": "Somehow Different",
+      "album_type": "single",
+      "release_date": "2024-03-28",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/2y0d9PR0HmZ3fiFpik1jQ7",
+      "tracks": [
+        {
+          "track_id": "1f74SwIBl0FgeFMhefsBbS",
+          "name": "Somehow Different",
+          "normalized_name": "somehow different",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 222333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1f74SwIBl0FgeFMhefsBbS"
+        },
+        {
+          "track_id": "68JAXoKBOVwdneHeQdiFh9",
+          "name": "Somehow Different (Inst.)",
+          "normalized_name": "somehow different",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 222333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/68JAXoKBOVwdneHeQdiFh9"
+        }
+      ]
+    },
+    {
+      "album_id": "0jxxX5N7potKRXPJUOlUbC",
+      "name": "Queen of Tears (Original Television Soundtrack), Pt.9",
+      "album_type": "single",
+      "release_date": "2024-04-14",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/0jxxX5N7potKRXPJUOlUbC",
+      "tracks": [
+        {
+          "track_id": "5GWgui5m1Uvn5zTuuKKTDA",
+          "name": "Promise",
+          "normalized_name": "promise",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 236760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5GWgui5m1Uvn5zTuuKKTDA"
+        },
+        {
+          "track_id": "7reKbT9Ukrs0H7qeIjh7VS",
+          "name": "Promise - Inst.",
+          "normalized_name": "promise inst",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 236760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7reKbT9Ukrs0H7qeIjh7VS"
+        }
+      ]
+    },
+    {
+      "album_id": "3N7m8jfIAsOu3gBFuve1q6",
+      "name": "It's been a while",
+      "album_type": "single",
+      "release_date": "2024-05-02",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/3N7m8jfIAsOu3gBFuve1q6",
+      "tracks": [
+        {
+          "track_id": "04SHCnVGwukIiqBQX1KCSH",
+          "name": "It's been a while",
+          "normalized_name": "its been a while",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 294396,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/04SHCnVGwukIiqBQX1KCSH"
+        },
+        {
+          "track_id": "3b9t8nowHkohoSoD1BjShM",
+          "name": "Last Day",
+          "normalized_name": "last day",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 258346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3b9t8nowHkohoSoD1BjShM"
+        }
+      ]
+    },
+    {
+      "album_id": "52rbOdVSwBNZvhYGe2GgSj",
+      "name": "Echo (feat .JUKJAE)",
+      "album_type": "single",
+      "release_date": "2024-09-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/52rbOdVSwBNZvhYGe2GgSj",
+      "tracks": [
+        {
+          "track_id": "2KzpyKIMLmOMVroRZ8RA6T",
+          "name": "Echo (feat. JUKJAE)",
+          "normalized_name": "echo",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 192586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2KzpyKIMLmOMVroRZ8RA6T"
+        }
+      ]
+    },
+    {
+      "album_id": "1CjtCdzlNuBj9wxIJJEeAZ",
+      "name": "746 - The 1st Album",
+      "album_type": "album",
+      "release_date": "2024-10-28",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "spotify_url": "https://open.spotify.com/album/1CjtCdzlNuBj9wxIJJEeAZ",
+      "tracks": [
+        {
+          "track_id": "2Be2BN0xp8mqWtZY3FQvMK",
+          "name": "Four Seasons",
+          "normalized_name": "four seasons",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 130065,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2Be2BN0xp8mqWtZY3FQvMK"
+        },
+        {
+          "track_id": "1N9fLIjmXzeTje6amS62ol",
+          "name": "Words of Us",
+          "normalized_name": "words of us",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 241213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1N9fLIjmXzeTje6amS62ol"
+        },
+        {
+          "track_id": "7c8SxUnmm12ihKXN28lrHU",
+          "name": "Honestly",
+          "normalized_name": "honestly",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 165093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7c8SxUnmm12ihKXN28lrHU"
+        },
+        {
+          "track_id": "6GPpcZv3AyOGx0nSBtqcGu",
+          "name": "746",
+          "normalized_name": "746",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 105373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6GPpcZv3AyOGx0nSBtqcGu"
+        },
+        {
+          "track_id": "2jUCUwPq3CMzuzEtxsDdrZ",
+          "name": "A Light Dream",
+          "normalized_name": "a light dream",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 202760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2jUCUwPq3CMzuzEtxsDdrZ"
+        },
+        {
+          "track_id": "6nlF17mwKkJQF5hrFk3LlU",
+          "name": "Echo (feat. JUKJAE)",
+          "normalized_name": "echo",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 192586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6nlF17mwKkJQF5hrFk3LlU"
+        },
+        {
+          "track_id": "0YWmUamXSY5xo5bm37DoBy",
+          "name": "About Love",
+          "normalized_name": "about love",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 183053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0YWmUamXSY5xo5bm37DoBy"
+        },
+        {
+          "track_id": "2h6SEpZIPatxBUuQDYFQlY",
+          "name": "Keep Calm",
+          "normalized_name": "keep calm",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 166613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2h6SEpZIPatxBUuQDYFQlY"
+        },
+        {
+          "track_id": "5vO4isw2ZOxbL89Uc9NwYm",
+          "name": "Wave",
+          "normalized_name": "wave",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 281173,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5vO4isw2ZOxbL89Uc9NwYm"
+        }
+      ]
+    },
+    {
+      "album_id": "7dssDB3VPyxmNttWBkvmJo",
+      "name": "Loneliness is",
+      "album_type": "single",
+      "release_date": "2025-03-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7dssDB3VPyxmNttWBkvmJo",
+      "tracks": [
+        {
+          "track_id": "3dAhdpLHBetxcuEYoJaH2O",
+          "name": "Loneliness is",
+          "normalized_name": "loneliness is",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 261026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3dAhdpLHBetxcuEYoJaH2O"
+        }
+      ]
+    },
+    {
+      "album_id": "1Ik6DilWLiFqclv5tiJ4T8",
+      "name": "Our Unwritten Seoul (Original Soundtrack) Part.1",
+      "album_type": "single",
+      "release_date": "2025-05-31",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/1Ik6DilWLiFqclv5tiJ4T8",
+      "tracks": [
+        {
+          "track_id": "0JyVtfJ6Z8T6VHXG1iD1pE",
+          "name": "Yellow Spring",
+          "normalized_name": "yellow spring",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 240026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0JyVtfJ6Z8T6VHXG1iD1pE"
+        },
+        {
+          "track_id": "4SPzuNcmQrIIT9Gs63lUkN",
+          "name": "Yellow Spring - Inst.",
+          "normalized_name": "yellow spring inst",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 240026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4SPzuNcmQrIIT9Gs63lUkN"
+        }
+      ]
+    },
+    {
+      "album_id": "38RyVm53JzK8vL7lvuwIZ2",
+      "name": "Song For You",
+      "album_type": "single",
+      "release_date": "2025-06-10",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/38RyVm53JzK8vL7lvuwIZ2",
+      "tracks": [
+        {
+          "track_id": "3b7odAg3MSxNapF29KCYu3",
+          "name": "Dive",
+          "normalized_name": "dive",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 202026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3b7odAg3MSxNapF29KCYu3"
+        },
+        {
+          "track_id": "4kxg5xxxIQbOPHHZQKhb0l",
+          "name": "Dear World, Like a Fairy Tale",
+          "normalized_name": "dear world like a fairy tale",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 148106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4kxg5xxxIQbOPHHZQKhb0l"
+        }
+      ]
+    },
+    {
+      "album_id": "294zKrmWjAZZahTDOtOKd1",
+      "name": "Stay: One",
+      "album_type": "single",
+      "release_date": "2025-10-23",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/294zKrmWjAZZahTDOtOKd1",
+      "tracks": [
+        {
+          "track_id": "3UEVBHoNbmNjetG8V2NIsO",
+          "name": "Beyond the Hill",
+          "normalized_name": "beyond the hill",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 87000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3UEVBHoNbmNjetG8V2NIsO"
+        },
+        {
+          "track_id": "2bSKoTJqGVmipIf3ZdvxkR",
+          "name": "Love Road",
+          "normalized_name": "love road",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 216000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2bSKoTJqGVmipIf3ZdvxkR"
+        },
+        {
+          "track_id": "7DLvvLzAL0Sx4kdch3yWOn",
+          "name": "Falling",
+          "normalized_name": "falling",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 212000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7DLvvLzAL0Sx4kdch3yWOn"
+        },
+        {
+          "track_id": "5cQ9mS0qDlh4YPRQZBHhBm",
+          "name": "Between Earth and Sky",
+          "normalized_name": "between earth and sky",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 265000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5cQ9mS0qDlh4YPRQZBHhBm"
+        },
+        {
+          "track_id": "1WC2LmRJZX9cgyprCbdZ9S",
+          "name": "Journey to the Sun",
+          "normalized_name": "journey to the sun",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 231000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1WC2LmRJZX9cgyprCbdZ9S"
+        }
+      ]
+    },
+    {
+      "album_id": "3DQNtzC4vl1VoJuqmfDTTR",
+      "name": "たぶん、僕たち",
+      "album_type": "single",
+      "release_date": "2025-12-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3DQNtzC4vl1VoJuqmfDTTR",
+      "tracks": [
+        {
+          "track_id": "1NXeWPvKNvkCLuaDGtIGXc",
+          "name": "たぶん、僕たち",
+          "normalized_name": "たぶん、僕たち",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 213000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1NXeWPvKNvkCLuaDGtIGXc"
+        }
+      ]
+    },
+    {
+      "album_id": "6csLbsCdWoQh23NGqR6Bl7",
+      "name": "Early Spring",
+      "album_type": "single",
+      "release_date": "2026-02-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6csLbsCdWoQh23NGqR6Bl7",
+      "tracks": [
+        {
+          "track_id": "2GQ19vTX8j08Z6MN240E9n",
+          "name": "Early Spring",
+          "normalized_name": "early spring",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2GQ19vTX8j08Z6MN240E9n"
+        }
+      ]
+    }
+  ]
+}

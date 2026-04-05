@@ -509,43 +509,55 @@ def run_demo_songwriter(
         max_candidates=candidate_count
     )
     
-    winner = execution_result["selected_candidate"]
-    promotion = execution_result["promotion"]
-    critic_results = [r.scores for r in execution_result["batch_critics"]]
-    
-    # Selection Mapping
-    winner_score = execution_result["critic"]
-    candidates = execution_result["batch_candidates"]
+    ok = execution_result.get("ok", False)
+    winner = execution_result.get("selected_candidate")
+    promotion = execution_result.get("promotion")
+    winner_score = execution_result.get("critic")
+    candidates = execution_result.get("batch_candidates", [])
     
     # 7. Final selection & Output
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_utf8_json(output_dir / "demo_plan.json", demo_plan)
     _write_utf8_json(output_dir / "runtime_plan.json", runtime_plan)
     _write_utf8_json(output_dir / "candidates.json", {"track_id": runtime_plan["track_id"], "candidates": [{"id": c["candidate_id"]} for c in candidates]})
-    _write_utf8_json(output_dir / "critic_results.json", {"critic_results": critic_results})
-    winner_path = _write_utf8_text(output_dir / "selected_lyric.md", winner["markdown"], trailing_newline=False)
-    for c in candidates: _write_utf8_text(output_dir / f"{c['candidate_id']}.md", c["markdown"], trailing_newline=False)
+    _write_utf8_json(output_dir / "critic_results.json", {"critic_results": [r.scores for r in execution_result.get("batch_critics", [])]})
     
-    # RC Manifest (Baseline Schema)
+    winner_path = None
+    if winner:
+        winner_path = _write_utf8_text(output_dir / "selected_lyric.md", winner["markdown"], trailing_newline=False)
+    for c in candidates: 
+        _write_utf8_text(output_dir / f"{c['candidate_id']}.md", c["markdown"], trailing_newline=False)
+    
+    # Generate Prompt Package Hash for traceability
+    prompt_package = build_prompt_package(runtime_plan) if resolved_generation_mode == "llm" else {}
+    prompt_hash = hashlib.md5(json.dumps(prompt_package, sort_keys=True).encode("utf-8")).hexdigest()[:12] if prompt_package else "template"
+
+    # RC Manifest (Expanded Baseline Schema)
     manifest = {
-        "schema_version": "2.0",
+        "schema_version": "2.1",
         "record_type": "demo_run_manifest",
         "track_id": runtime_plan["track_id"],
         "artist_id": runtime_plan["artist_id"],
         "mode_id": _safe_text(runtime_plan.get("primary_mode")),
+        "router_mode": _safe_text(runtime_plan.get("primary_mode", "default")),
+        "policy_version": execution_result.get("policy_version", "unknown"),
+        "prompt_package_hash": prompt_hash,
+        "ok": ok,
+        "failure_reason": execution_result.get("failure_reason"),
+        "attempt_history": execution_result.get("attempt_history", []),
         "requested_generation_mode": generation_mode,
         "generation_mode": resolved_generation_mode,
         "generation_fallback_reason": fallback_reason,
         "model_provider": model_provider,
         "candidate_count": len(candidates),
-        "selected_candidate_id": winner["candidate_id"],
-        "honest_metrics": winner_score.honest_metrics_active,
-        "selected_score": winner_score.scores["total"],
-        "grade": promotion.grade,
+        "selected_candidate_id": winner["candidate_id"] if winner else None,
+        "honest_metrics": winner_score.honest_metrics_active if winner_score else True,
+        "selected_score": winner_score.scores["total"] if winner_score else 0.0,
+        "grade": promotion.grade if promotion else "Fail",
         "pre_audit": pre_audit_result.__dict__,
-        "critic": winner_score.scores,
-        "promotion_result": promotion.__dict__,
-        "selected_lyric_path": str(winner_path),
+        "critic": winner_score.scores if winner_score else {},
+        "promotion_result": promotion.__dict__ if promotion else {},
+        "selected_lyric_path": str(winner_path) if winner_path else None,
     }
     _write_utf8_text(output_dir / "run_report.md", render_demo_run_report(manifest), trailing_newline=False)
     manifest_path = _write_utf8_json(output_dir / "run_manifest.json", manifest)

@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "maretu_mind_brand",
+    "artist_id": "maretu",
+    "artist_name": "MARETU",
+    "title": "マインドブランド",
+    "title_core": "マインドブランド",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2015-05-29",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2015,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/マインドブランド_(Mind_Brand)",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Slogan Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "lines": [
+          "WELCOME TO THE MIND F××K"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "obsessive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "まてよ そこゆく嬢さん 逆子宿らせ",
+          "あどけの足らない そんな身体に",
+          "ただしく回らん 愚図の頭で",
+          "天真爛漫？！ ほざくな 馬鹿め"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "explosive",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "あぁ、触れ合って 埋め合って 勝ち取った幸せ을",
+          "盗られた正義のヒーローが泣いている",
+          "抱き合って 叩き合って 分か치合った あの頃を",
+          "忘れてしまえたら どれほど楽だろうか"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge (Incantation)",
+        "jp_section_role": "c_melo",
+        "mora_density": "rhythmic_staccato",
+        "spoken_speed_bias": "high",
+        "lines": [
+          "強がったって ウソはばれるぞ",
+          "怖가ったって 血は流れるぞ",
+          "匿った 傷口開くぞ",
+          "「嫌がったって、傷は痛むぞ」"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "あぁ、触れ合って 埋め合って 勝ち取った幸せを",
+      "WELCOME TO THE MIND FUCK"
+    ],
+    "repetition_patterns": [
+      "Rhyming verb pairs (~atte, ~atte)",
+      "Dark nursery rhyme callbacks (Kagome kagome)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "social rejection",
+      "mind-fuck",
+      "hopelessness"
+    ],
+    "emotional_thesis": "Love and justice are fragile constructs that collapse into 'Jigoku' (Hell) when reality hits. The ego is branded by communal trauma.",
+    "key_motifs": [
+      "hero",
+      "hell",
+      "scab",
+      "mind-fuck"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "aggressive provocation"
+      ],
+      "narrative_job": "Directly insults the listener/subject to establish a high-tension, cynical atmosphere.",
+      "vocabulary_focus": [
+        "ほざくな",
+        "馬鹿め",
+        "逆子"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "absolute",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "aggressive_slang",
+      "medical_horror"
+    ],
+    "critic_focus": [
+      "bit-crushed rhythm matching",
+      "cynicism intensity"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.77,
+    "score_breakdown": {
+      "provenance_trust": 0.8,
+      "grounding_completeness": 0.76,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "missing_provenance"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

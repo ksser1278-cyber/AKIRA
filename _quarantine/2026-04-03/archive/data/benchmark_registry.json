@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "record_type": "benchmark_registry",
+  "artists": [
+    {
+      "artist_id": "pinocchiop",
+      "approved_manifest_path": "C:/JPop_Songwriter/AKIRA ENGINE/outputs/_archive/songwriter_v2_anchor_matrix/pinocchiop_v2/benchmark_manifest.json",
+      "notes": [
+        "Pinned stable benchmark baseline."
+      ]
+    },
+    {
+      "artist_id": "deco27",
+      "approved_manifest_path": "C:/JPop_Songwriter/AKIRA ENGINE/outputs/songwriter_v2_anchor_matrix_audio_aligned_v66/deco27/anchor_matrix_manifest.json",
+      "notes": [
+        "Pinned stable benchmark baseline until direct_emotional hard cases are improved without regression."
+      ]
+    }
+  ]
+}

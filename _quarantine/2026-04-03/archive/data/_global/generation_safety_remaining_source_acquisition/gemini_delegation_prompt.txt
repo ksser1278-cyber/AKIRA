@@ -1,0 +1,51 @@
+이번 작업은 `generation_safety_remaining_source_acquisition` batch 1이다.
+
+목표:
+- 남아 있는 `audit_only / invalid` generation_safety 레코드 28곡에 대해 trusted Japanese lyric grounding source bundle을 수집한다.
+- main conditioning record는 직접 수정하지 않는다.
+
+프로젝트 루트:
+- `C:\JPop_Songwriter\AKIRA ENGINE`
+
+반드시 먼저 읽을 파일:
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\source_policy.md`
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\overview.md`
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\batch_delegation_prompt.txt`
+
+작업 원칙:
+- 외부 조사는 허용한다.
+- trusted lyric source만 사용한다.
+- official source 우선, 없으면 line-for-line로 맞는 두 번째 trusted source가 필요하다.
+- source가 충돌하면 그 track은 제출하지 말 것.
+- paraphrase 금지.
+- English summary 금지.
+- machine-translated page, unattributed mirror, fan lyric wiki mirror 금지.
+- clean UTF-8 Japanese만 허용.
+
+공통 필수 필드:
+- `track_identity.track_id`
+- `source_provenance.lyric_sources`
+- `source_provenance.notes`
+- `lyric_ground_truth.full_text_status` = `full`
+- `lyric_ground_truth.sections`
+- `lyric_ground_truth.hook_lines`
+
+추가 필드:
+- workflow가 `source_plus_provenance`인 track은 `source_provenance.metadata_sources`도 반드시 제출
+
+출력 규칙:
+- artist별 `incoming/`에 `<track_id>.json`으로 저장
+- 충분한 trusted support를 못 확보하면 그 track은 제출하지 말 것
+
+artist packet:
+
+workflow counts:
+- source_only `0`
+- source_plus_mode `0`
+- source_plus_provenance `0`
+
+제출 기준:
+- single-source lyric DB만으로는 제출 금지
+- official source가 없으면 독립된 trusted source 2개가 line-for-line로 맞아야 함
+- `sections`와 `hook_lines`에는 Japanese lyric text만 들어가야 함
+- 불확실한 track은 비워 두는 것이 맞다

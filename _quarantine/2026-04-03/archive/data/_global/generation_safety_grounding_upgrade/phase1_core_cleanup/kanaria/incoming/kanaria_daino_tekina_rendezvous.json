@@ -1,0 +1,69 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_daino_tekina_rendezvous"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "大脳的なランデブー",
+          "また何か、狂ったようなダンスを"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "だからして、甘えた乱舞",
+          "不遜な態度で、笑って"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "叫び出せ、笑い出せ、息ながら",
+          "大脳的なランデブー"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "すべてが、溶け合うような夜に",
+          "私たちは、何を見つける？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "叫び出せ、笑い出せ、息ながら",
+          "大脳的なランデブー"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "大脳的なランデブー",
+      "叫び出せ、笑い出せ、息ながら",
+      "甘えた乱舞"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "本能的でカオスな精神の繋がりと、剥き出しの感情の放出。"
+  }
+}

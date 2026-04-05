@@ -1,0 +1,39 @@
+This task is generation_safety remaining-source acquisition batch 1.
+
+Goal:
+- Collect trusted Japanese lyric grounding source bundles for the remaining non-runtime-safe generation_safety records.
+- Do not patch main conditioning records directly in this workflow.
+
+Read first:
+- `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_remaining_source_acquisition\source_policy.md`
+
+Important:
+- Do not modify engine code.
+- Keep existing track_id values.
+- Use the bundled `current_records/` and `round2_records/` copies inside each artist package only as local context.
+- Submit one JSON source bundle per track into the matching artist `incoming/` directory.
+- If trusted lyric support is insufficient, leave the track unsubmitted.
+- Do not submit English summaries, inferred paraphrases, or wiki-style prose in `sections` or `hook_lines`.
+- Do not submit machine-translated or unattributed lyric mirrors.
+
+Required output fields:
+- `track_identity.track_id`
+- `source_provenance.lyric_sources`
+- `source_provenance.notes`
+- `lyric_ground_truth.full_text_status`
+- `lyric_ground_truth.sections`
+- `lyric_ground_truth.hook_lines`
+- `source_provenance.metadata_sources` when workflow type is `source_plus_provenance`
+
+Workflow types:
+- source_only: `0`
+- source_plus_mode: `0`
+- source_plus_provenance: `0`
+
+Extra requirements by workflow type:
+- source_only: acquire trusted lyric-source support and exact or tightly transcribed Japanese sections/hook lines.
+- source_plus_mode: same as source_only, plus enough evidence for later internal single-mode verification.
+- source_plus_provenance: same as source_plus_mode, plus trusted metadata-source support suitable for later provenance restoration.
+
+Done when:
+- the submitted bundle passes the local lyric-source validator and no longer depends on a single unsupported lyric database.

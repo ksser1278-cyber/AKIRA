@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_type": "dataset_registry",
+  "dataset_layers": [
+    {
+      "layer_id": "gold_anchor",
+      "manifest_path": "data/anchor_sets/gold_anchor_set.json",
+      "primary_use": [
+        "benchmark",
+        "critic calibration",
+        "demo generation",
+        "regression"
+      ]
+    },
+    {
+      "layer_id": "producer_expansion",
+      "manifest_path": "data/anchor_sets/producer_expansion_set.json",
+      "primary_use": [
+        "producer generalization",
+        "mode coverage expansion"
+      ]
+    },
+    {
+      "layer_id": "mode_support",
+      "manifest_path": "data/anchor_sets/mode_support_set.json",
+      "primary_use": [
+        "cross-producer mode learning",
+        "anti-overfitting support"
+      ]
+    },
+    {
+      "layer_id": "audio_aligned",
+      "manifest_path": "data/anchor_sets/deco27_audio_aligned_anchor_set.json",
+      "primary_use": [
+        "audio fact enrichment",
+        "sound proxy validation"
+      ]
+    },
+    {
+      "layer_id": "prompt_validation",
+      "manifest_path": "data/anchor_sets/prompt_validation_set.json",
+      "primary_use": [
+        "bundle validation",
+        "demo stability checks"
+      ]
+    }
+  ],
+  "quality_rules": {
+    "gold_anchor_minimum_grade": "gold",
+    "gold_anchor_requires_full_lyric_grounding": true,
+    "gold_target_grade": "gold",
+    "producer_expansion_minimum_grade": "usable",
+    "mode_support_minimum_grade": "usable",
+    "audio_aligned_requires_audio_manifest": true
+  },
+  "notes": [
+    "Do not use the full reference_tracks tree directly as a benchmark source.",
+    "Engine tuning should target gold_anchor and prompt_validation first, then be checked against producer_expansion."
+  ]
+}

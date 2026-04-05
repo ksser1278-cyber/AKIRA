@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "maretu_pink",
+    "artist_id": "maretu",
+    "artist_name": "MARETU",
+    "title": "ピンク",
+    "title_core": "Pink"
+  },
+  "song_intent": {
+    "core_theme": [
+      "Uncomfortable Intimacy",
+      "Rotting Pop",
+      "Color of Decay"
+    ],
+    "emotional_target": "Visceral, heavy breakdown of a toxic, 'pink' colored relationship.",
+    "key_motifs": [
+      "Pink",
+      "Rotting",
+      "Glitch",
+      "Heavy Metal"
+    ],
+    "emotional_thesis": "Visceral, heavy breakdown of a toxic, 'pink' colored relationship."
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ピンクに 染まった 街の角 壊れた 夢を 拾うのさ\n愛して 殺して 笑って\n\n[Chorus]\nドロドロの 感情が 溢れ出す ピンクの 海に 溺れて\n苦しくて 楽しくて 壊れちゃうのさ\nピンク、ピンク、ピンク。 綺麗な 腐敗の 跡。",
+    "hook_lines": [
+      "ピンク ピンク ピンク ピンク",
+      "心を 抉るように"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また ピンク色に",
+          "僕の 大切な 部屋",
+          "染まってゆく",
+          "誰にも 見えない場所で"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "染まってゆく",
+          "誰にも 見えない場所で"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ピンク ピンク ピンク ピンク",
+          "心を 抉るように",
+          "ピンク ピンク ピンク ピンク",
+          "全てを 塗り潰して"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ピンク ピンク ピンク ピンク",
+          "心を 抉るように"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ピンク ピンク ピンク ピンク",
+          "心を 抉るように",
+          "ピンク ピンク ピンク ピンク",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "prompt_conditioning": {
+    "vocal_tones": [
+      "Distorted",
+      "Heavy",
+      "Flatly Cynical"
+    ],
+    "production_palette": [
+      "Heavy industrial fuzz",
+      "Crushing chiptune drums",
+      "Glitchy dissonance"
+    ],
+    "energy_arc": "Crushing industrial surge",
+    "imagery_anchors": [
+      "Pink sludge",
+      "Rusty iron",
+      "Melting plastic",
+      "Glitched monitor"
+    ]
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/MARETU/%E3%83%94%E3%83%B3%E3%82%AF/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for maretu_pink. Workflow: source_plus_provenance.",
+      "Assigned single supported mode as dark_cute_breakdown based on Pink Guro aesthetics and visceral lyric contrast matching the artist profile."
+    ],
+    "metadata_sources": [
+      {
+        "label": "OTOTOY",
+        "url": "https://ototoy.jp/_/default/p/1247346",
+        "status": "cross_checked"
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "artist_id": "deco27",
+  "track_id": "deco27_yowamushi_montblanc",
+  "title": "弱虫モンブラン",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "soft_noun",
+  "hook_behavior": [
+    "acoustic groove",
+    "gentle sadness"
+  ],
+  "section_flow_guess": [
+    "verse_acoustic",
+    "prechorus_build",
+    "chorus_soft_cry",
+    "bridge_soft",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "sweets",
+    "cowardice",
+    "falling apart",
+    "lies"
+  ],
+  "emotional_arc": [
+    "cowardice",
+    "regret",
+    "sadness"
+  ],
+  "leakage_watchouts": [
+    "avoid distorted guitars; use acoustic strumming and clean bass"
+  ],
+  "prompt_seed_terms": [
+    "acoustic pop rock",
+    "gentle vocal",
+    "melancholy pop"
+  ],
+  "grounding_status": "research_ready"
+}

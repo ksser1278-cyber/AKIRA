@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA VocaDB Lyric Grounding Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "track_identity",
+    "grounding_sources",
+    "content_assets",
+    "grounding_review"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "vocadb_lyric_grounding_record"
+    },
+    "track_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "track_id",
+        "artist_id",
+        "title"
+      ],
+      "properties": {
+        "track_id": { "type": "string", "minLength": 1 },
+        "artist_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 }
+      }
+    },
+    "grounding_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "vocadb_page",
+        "official_uploads",
+        "lyric_sources"
+      ],
+      "properties": {
+        "vocadb_page": { "type": "string", "minLength": 1 },
+        "official_uploads": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lyric_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "source_type",
+              "url"
+            ],
+            "properties": {
+              "label": { "type": "string" },
+              "source_type": { "type": "string" },
+              "url": { "type": "string" },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "content_assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lyric_text_ref",
+        "section_map_ref"
+      ],
+      "properties": {
+        "lyric_text_ref": { "type": "string", "minLength": 1 },
+        "section_map_ref": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+    "grounding_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "grounding_status",
+        "review_notes"
+      ],
+      "properties": {
+        "grounding_status": {
+          "type": "string",
+          "enum": [
+            "incoming",
+            "accepted",
+            "rejected",
+            "needs_patch"
+          ]
+        },
+        "review_notes": { "type": "string" }
+      }
+    },
+    "metadata_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "producer": { "type": "string" },
+        "engine_family": { "type": "string" },
+        "voicebanks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "original_platform": { "type": "string" },
+        "original_upload_date": { "type": "string" }
+      }
+    }
+  }
+}

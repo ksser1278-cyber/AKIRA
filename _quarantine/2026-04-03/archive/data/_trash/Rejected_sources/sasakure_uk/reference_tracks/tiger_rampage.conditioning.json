@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "sasakure_tiger_rampage",
+    "artist_id": "sasakure_uk",
+    "artist_name": "sasakure.UK",
+    "title": "タイガーランペイジ",
+    "title_core": "Tiger Rampage"
+  },
+  "song_intent": {
+    "core_theme": ["Rhythm Anxiety", "Rampage", "Complexity"],
+    "emotional_target": "Hyper-energetic, rhythmically challenging pursuit of a creative 'rampage'.",
+    "key_motifs": ["Tiger", "Beat", "Odd-meter", "Rampage"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "呼吸を 乱して 走り出した タイガーランペイジ\n5拍子の 鼓動が 響く 街の角\n\n[Chorus]\n踊れ 踊れ 複雑な リズムに 身を任せて\n全部 壊して 叫ぶのさ タイガーランペイジ\n誰にも 止められない 鼓動が ここにあるから",
+    "hook_lines": ["タイガーランペイジ", "5拍子の 鼓動が"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["踊れ 踊れ 複雑な リズムに 身を任せて", "全部 壊して 叫ぶの사 タイガーランペイジ", "誰にも 止められない 鼓動が ここにあるから"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["High-energy", "Fast", "Precise", "Jittery"],
+    "production_palette": ["Hyper-syncopated drums", "Odd-time synths", "Aggressive chiptune-rock fusion"],
+    "energy_arc": "Hyper-rhythmic frenzy",
+    "imagery_anchors": ["Striped glitches", "Vibrating lines", "Digital jungle", "Clock ticking at and irregular rate"]
+  }
+}

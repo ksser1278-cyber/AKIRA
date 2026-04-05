@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_phase1_internal_normalization_packet",
+  "artist_id": "syudou",
+  "track_count": 2,
+  "tracks": [
+    {
+      "track_id": "syudou_bakushou",
+      "artist_id": "syudou",
+      "current_record_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\syudou\\reference_tracks\\bakushou.conditioning.json",
+      "source_bundle_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_lyric_grounding_source_acquisition\\syudou\\incoming\\syudou_bakushou.json",
+      "ready_bundle": true,
+      "can_reopen_phase1": false,
+      "current_section_names": [
+        "Verse 1",
+        "Pre-Chorus",
+        "Chorus 1",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "current_section_types": [
+        "verse",
+        "prechorus",
+        "chorus",
+        "bridge",
+        "chorus"
+      ],
+      "bundle_section_names": [
+        "Verse 1",
+        "Chorus 1"
+      ],
+      "bundle_section_types": [
+        "verse",
+        "chorus"
+      ],
+      "bundle_hook_line_count": 2,
+      "unresolved_section_slots": [
+        "Pre-Chorus",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "blockers": [
+        "section_schema_compression"
+      ],
+      "recommended_next_action": "internal_normalization"
+    },
+    {
+      "track_id": "syudou_call_boy",
+      "artist_id": "syudou",
+      "current_record_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\syudou\\reference_tracks\\call_boy.conditioning.json",
+      "source_bundle_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_lyric_grounding_source_acquisition\\syudou\\incoming\\syudou_call_boy.json",
+      "ready_bundle": true,
+      "can_reopen_phase1": false,
+      "current_section_names": [
+        "Verse 1",
+        "Pre-Chorus",
+        "Chorus 1",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "current_section_types": [
+        "verse",
+        "prechorus",
+        "chorus",
+        "bridge",
+        "chorus"
+      ],
+      "bundle_section_names": [
+        "Verse 1",
+        "Chorus 1"
+      ],
+      "bundle_section_types": [
+        "verse",
+        "chorus"
+      ],
+      "bundle_hook_line_count": 2,
+      "unresolved_section_slots": [
+        "Pre-Chorus",
+        "Bridge",
+        "Final Chorus"
+      ],
+      "blockers": [
+        "section_schema_compression"
+      ],
+      "recommended_next_action": "internal_normalization"
+    }
+  ]
+}

@@ -9,8 +9,7 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from akira_engine.engine_health import build_engine_health, render_engine_health_markdown
-from akira_engine.reporting import write_utf8_json, write_utf8_text
+from akira_engine.cli import run_report_engine_health
 
 
 def parse_args() -> argparse.Namespace:
@@ -32,17 +31,14 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    project_root = PROJECT_ROOT
-    output_dir = args.output_dir if args.output_dir.is_absolute() else (project_root / args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    payload = build_engine_health(args.artists)
-    json_path = output_dir / "engine_health.json"
-    md_path = output_dir / "engine_health.md"
-    write_utf8_json(json_path, payload)
-    write_utf8_text(md_path, render_engine_health_markdown(payload), trailing_newline=False)
-    print(str(json_path))
-    print(str(md_path))
+    result = run_report_engine_health(
+        project_root=PROJECT_ROOT,
+        artists=args.artists,
+        output_dir=args.output_dir,
+    )
+    print(result["json_path"])
+    print(result["md_path"])
+    print(f"Source root: {result['source_root']}")
 
 
 if __name__ == "__main__":

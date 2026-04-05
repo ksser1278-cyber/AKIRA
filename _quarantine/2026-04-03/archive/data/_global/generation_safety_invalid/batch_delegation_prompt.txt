@@ -1,0 +1,27 @@
+이번 작업은 generation_safety invalid 11곡 전체를 remediation 하는 것이다.
+
+핵심 규칙:
+- trusted `lyric_sources`와 `metadata_sources`를 추가한다.
+- chorus-only 또는 compact grounding을 section-complete grounding으로 교체한다.
+- `mode_fit_unverified`가 있으면 mode alignment를 보강한다.
+- provenance와 grounding이 회복되기 전에는 `ready_for_prompting`을 true로 올리지 않는다.
+- 엔진 코드 수정 금지, merge-friendly JSON만 제출한다.
+
+artist packets:
+- iyowa: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\iyowa\packet.md
+- kairiki_bear: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\kairiki_bear\packet.md
+- kanaria: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\kanaria\packet.md
+- maretu: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\maretu\packet.md
+- neru: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\neru\packet.md
+- syudou: C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\syudou\packet.md
+
+공통 prompt:
+- C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_invalid\delegation_prompt.txt
+
+입력 대상:
+- iyowa: iyowa_kyukurarin
+- kairiki_bear: kairiki_bear_darling_dance, kairiki_bear_bug, kairiki_bear_failure_girl, kairiki_bear_ruma
+- kanaria: kanaria_king, kanaria_queen
+- maretu: maretu_pink
+- neru: neru_tokyo_teddy_bear
+- syudou: syudou_bitter_choco_decoration, syudou_usseewa

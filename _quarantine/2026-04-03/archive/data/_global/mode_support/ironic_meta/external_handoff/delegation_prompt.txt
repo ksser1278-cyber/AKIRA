@@ -1,0 +1,21 @@
+This is a mode support curation task for `ironic_meta`.
+
+Goal:
+- Curate support tracks for each listed artist that match this mode.
+- Do not create conditioning JSON yet.
+- Return only candidate track ids, titles, and short justification atoms.
+
+Rules:
+- Avoid duplicating current gold anchors and active producer expansion tracks.
+- Prefer tracks that diversify hook shape, section behavior, and lyrical framing.
+- Keep the output structured and mode-focused.
+
+Per-artist targets:
+- `pinocchiop` / target `6`
+- `kanaria` / target `6`
+- `maretu` / target `6`
+
+Required output format:
+- One JSON file per mode
+- Include `mode_id` and an `artist_candidates` array
+- Each artist entry should include `artist_id`, `candidate_track_ids`, `candidate_titles`, and `notes`

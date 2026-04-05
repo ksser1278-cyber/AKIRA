@@ -1,0 +1,39 @@
+{
+  "artist_id": "pinocchiop",
+  "track_id": "pinocchiop_apple_dot_com",
+  "title": "アップルドットコム",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "digital_domain",
+  "hook_behavior": [
+    "digital chants",
+    "flat delivery",
+    "absurdist listing"
+  ],
+  "section_flow_guess": [
+    "verse_listing",
+    "prechorus_glitch",
+    "chorus_deadpan_chant",
+    "verse2_listing",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "websites",
+    "apples",
+    "information overload",
+    "empty searches"
+  ],
+  "emotional_arc": [
+    "boredom",
+    "information fatigue",
+    "apathy"
+  ],
+  "leakage_watchouts": [
+    "the hook should sound like an annoying auto-playing ad"
+  ],
+  "prompt_seed_terms": [
+    "hyperpop",
+    "deadpan chant",
+    "digital noise"
+  ],
+  "grounding_status": "research_ready"
+}

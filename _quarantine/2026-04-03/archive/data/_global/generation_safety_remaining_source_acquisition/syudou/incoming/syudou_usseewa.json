@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "syudou_usseewa"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/293290/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi20102301/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Virgin Music (Universal Music Japan)",
+        "url": "https://www.universal-music.co.jp/ado/products/tyct-30119/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for syudou_usseewa. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "正しさとは 愚かさとは",
+          "それが 何か 見せつけてやる",
+          "ちっちゃな 頃から 優等生",
+          "気づけば 大人になっていた"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "うっせぇ うっせぇ うっせぇわ",
+          "あなたが 思うより 健康です",
+          "一切合切 凡庸な",
+          "あなたに じゃ わからないかもね"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "うっせぇ うっせぇ うっせぇわ",
+      "あなたが 思うより 健康です"
+    ]
+  }
+}

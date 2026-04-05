@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "hard_case_registry",
+  "artists": [
+    {
+      "artist_id": "deco27",
+      "tracks": [
+        {
+          "track_id": "deco27_yumeyume",
+          "score": 85.04,
+          "issues": [
+            "best candidate in this set; still review humanly before reuse"
+          ],
+          "status": "deferred",
+          "owner": "internal",
+          "deferred_reason": "requires brighter progression model than current direct-emotional renderer",
+          "current_best_score": 83.76,
+          "current_best_candidate_id": "deco27_yumeyume-candidate-9",
+          "current_best_notes": [
+            "best candidate in this set; still review humanly before reuse"
+          ]
+        },
+        {
+          "track_id": "deco27_ai_kotoba",
+          "score": 93.12,
+          "issues": [
+            "best candidate in this set; still review humanly before reuse"
+          ],
+          "status": "resolved",
+          "owner": "internal",
+          "resolution_note": "stabilized above active threshold in hard_case_benchmark_try14",
+          "current_best_score": 93.12,
+          "current_best_candidate_id": "deco27_ai_kotoba-candidate-4",
+          "current_best_notes": [
+            "best candidate in this set; still review humanly before reuse"
+          ]
+        },
+        {
+          "track_id": "deco27_love_doll",
+          "score": 89.88,
+          "issues": [
+            "best candidate in this set; still review humanly before reuse"
+          ],
+          "status": "resolved",
+          "owner": "internal",
+          "resolution_note": "stabilized above active threshold in hard_case_benchmark_try14",
+          "current_best_score": 88.62,
+          "current_best_candidate_id": "deco27_love_doll-candidate-7",
+          "current_best_notes": [
+            "section motifs are not landing consistently"
+          ]
+        }
+      ],
+      "benchmark_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\outputs\\hard_case_benchmark_try14\\deco27\\hard_case_manifest.json",
+      "benchmark_average_score": 89.35
+    }
+  ]
+}

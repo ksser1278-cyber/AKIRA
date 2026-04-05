@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "maretu_white_happy"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm17071201/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/vsevaTHk2zk",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with an official creator upload exposing lyric text directly and existing lyric text retained."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "ちょ待って、それって扇情？ じゃないよ、これって洗脳",
+          "歪んだ期待と判断違い、心躍れ！",
+          "ねーねー聞いて、これって重症？",
+          "決定打食らった急所 くらっときてもう、倒れたい"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "僕の一等賞を奪いに来て！ 奪いに来て 恥ずかしがらないで",
+          "一直線に迎えに来て！ 迎えに来て、今すぐにさあ？",
+          "いっそのこと夢の中へ 夢の中へ 蹴落として、として",
+          "一方的に捲し立てて！ 捲し立てて、意地悪にさあ？"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "僕の一等賞を奪いに来て",
+      "ちょ待って、それって扇情？"
+    ]
+  }
+}

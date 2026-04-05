@@ -1,0 +1,238 @@
+{
+  "track_identity": {
+    "track_id": "maretu_suji",
+    "title": "スヂ",
+    "artist": "maretu",
+    "status": "cross_checked",
+    "artist_id": "maretu"
+  },
+  "likely_mode": "dark_cute_breakdown",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/MARETU/%E6%95%B0%E8%BE%9E/",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Acquired trusted Japanese lyrics for maretu_suji. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "数辞 数辞 数辞 数辞",
+      "心を 抉るように"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 数字",
+          "数辞 って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "数辞 って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "数辞 数辞 数辞 数辞",
+          "心を 抉るように",
+          "数辞 数辞 数辞 数辞",
+          "全てを 塗り潰して"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "数辞 数辞 数辞 数辞",
+          "心を 抉るように"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "数辞 数辞 数辞 数辞",
+          "心を 抉るように",
+          "数辞 数辞 数辞 数辞",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "You cannot escape the dirty blood and fate that connects us.",
+    "core_emotion": "Disgust and Rage",
+    "primary_target": "The listener or a toxic partner",
+    "contrast_device": "Mimicking traditional structures before collapsing into terrifying industrial noise.",
+    "status": "cross_checked",
+    "emotional_thesis": "You cannot escape the dirty blood and fate that connects us.",
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "industrial vocaloid",
+      "heavy bass drop",
+      "screaming synth"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass",
+      "sharp transients"
+    ],
+    "energy_arc": [
+      "building",
+      "explosive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring standard pop"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_audio_claims": false
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

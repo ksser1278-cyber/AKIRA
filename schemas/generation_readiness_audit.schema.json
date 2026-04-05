@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Generation Readiness Audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "inputs",
+    "counts",
+    "quality_distribution",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "generation_readiness_audit"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation_root"
+      ],
+      "properties": {
+        "generation_root": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "records",
+        "joinable",
+        "prompt_ready",
+        "production_candidate",
+        "professional_target"
+      ],
+      "properties": {
+        "records": { "type": "integer", "minimum": 0 },
+        "joinable": { "type": "integer", "minimum": 0 },
+        "prompt_ready": { "type": "integer", "minimum": 0 },
+        "production_candidate": { "type": "integer", "minimum": 0 },
+        "professional_target": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "quality_distribution": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "track_id",
+          "artist_id",
+          "quality_level",
+          "joinable",
+          "prompt_ready",
+          "production_candidate",
+          "professional_target",
+          "reasons"
+        ],
+        "properties": {
+          "track_id": { "type": "string", "minLength": 1 },
+          "artist_id": { "type": "string", "minLength": 1 },
+          "quality_level": {
+            "type": "string",
+            "enum": [
+              "metadata_only",
+              "joinable",
+              "prompt_ready",
+              "production_candidate",
+              "professional_target"
+            ]
+          },
+          "joinable": { "type": "boolean" },
+          "prompt_ready": { "type": "boolean" },
+          "production_candidate": { "type": "boolean" },
+          "professional_target": { "type": "boolean" },
+          "reasons": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+This task is generation_safety promotion batch 1.
+
+Goal:
+- Upgrade 4 high-priority metadata_backfill records from `audit_only` toward `planner_safe` by repairing provenance and mode verification.
+
+Important:
+- Do not modify engine code.
+- Keep existing track_id values.
+- Submit merge-friendly JSON only.
+- Partial patch JSON is allowed.
+- Do not rewrite lyric structure.
+- Focus on trusted provenance and mode alignment verification.
+
+Required upgrades:
+- source_provenance.lyric_sources
+- source_provenance.metadata_sources
+- verify song_intent.narrative_role
+- extend source_provenance.notes only if needed
+
+Target files:
+
+Priority:
+- deco27_mozaik_role
+- deco27_android_girl
+- deco27_salamander
+- maretu_brain_revolution_girl
+
+Done when:
+- missing_provenance is cleared
+- mode_fit_unverified is cleared
+- the record can satisfy `planner_safe` conditions after provenance and verification updates

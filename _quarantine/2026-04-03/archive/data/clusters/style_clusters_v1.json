@@ -1,0 +1,2233 @@
+{
+  "version": "1.0",
+  "k": 10,
+  "clusters": [
+    {
+      "cluster_id": "cluster_00",
+      "label": "tender",
+      "size": 57,
+      "dominant_atoms": [
+        "愛",
+        "中",
+        "夢",
+        "想い",
+        "キミ",
+        "頃",
+        "最後",
+        "手",
+        "世界",
+        "笑って",
+        "ロンリー",
+        "正しさ",
+        "息",
+        "好き",
+        "足り"
+      ],
+      "dominant_categories": {
+        "body": 0.0078,
+        "scene": 0.007,
+        "sound": 0.0035,
+        "motif": 0.9818
+      },
+      "emotional_profile": [
+        "tender",
+        "melancholic",
+        "philosophical"
+      ],
+      "member_track_ids": [
+        "40mp/renai_saiban",
+        "ado/backlight",
+        "ado/invincible",
+        "ado/newgenesis",
+        "ado/odo",
+        "ado/readymade",
+        "ado/usseewa",
+        "atols/macaron",
+        "balloon/charles",
+        "chinozo/goodbye_declaration",
+        "dazibee/urban_fantasy",
+        "deco27/ai_kotoba",
+        "deco27/android_girl",
+        "deco27/mozaik_role",
+        "deco27/salamander",
+        "deco27/tsumi_to_batsu",
+        "deco27/yowamushi_montblanc",
+        "deco27/yumeyume",
+        "hachi/donut_hole",
+        "hachi/panda_hero",
+        "harumaki_gohan/melty_land_nightmare",
+        "hiragi_kirai/autophagy",
+        "honeyworks/confession_rehearsal",
+        "iyowa/1000_nen_ikiteiru",
+        "iyowa/apricot",
+        "iyowa/heat_abnormal",
+        "jin/kagerou_daze",
+        "kairiki_bear/alkali_rettoushou",
+        "kairiki_bear/angel",
+        "kairiki_bear/failure_girl",
+        "kairiki_bear/shippaisaku_shoujo",
+        "kairiki_bear/venom",
+        "kanaria/daino_tekina_rendezvous",
+        "kanaria/envy_baby",
+        "kuragep/chururira",
+        "magnetite/living_ghost",
+        "maretu/darling",
+        "maretu/umitagari",
+        "maretu/white_happy",
+        "nanou/3331",
+        "neru/abstract_nonsense",
+        "neru/law_evading_rock",
+        "neru/lost_ones_weeping",
+        "niki/error",
+        "nilfruits/ironina",
+        "pinocchiop/kamippoi_na",
+        "pinocchiop/kusare_gedou_to_chocolate",
+        "pinocchiop/mushikui_psychedelism",
+        "pinocchiop/non_breath_oblige",
+        "police_piccadilly/cynic",
+        "sasakure_uk/hello_planet",
+        "syudou/bakushou",
+        "syudou/call_boy",
+        "syudou/usseewa",
+        "teniwoha/villain",
+        "tsumiki/phony",
+        "wowaka/rolling_girl"
+      ]
+    },
+    {
+      "cluster_id": "cluster_06",
+      "label": "concrete_minimal_tender",
+      "size": 13,
+      "dominant_atoms": [
+        "大切な",
+        "心",
+        "抉るよう",
+        "全て",
+        "塗り",
+        "潰して",
+        "繰り",
+        "返す",
+        "呟いてみ",
+        "営み",
+        "毎日",
+        "高活",
+        "ピンク",
+        "色",
+        "部屋"
+      ],
+      "dominant_categories": {
+        "body": 0.0,
+        "scene": 0.0,
+        "sound": 0.0,
+        "motif": 1.0
+      },
+      "emotional_profile": [
+        "tender",
+        "introspective"
+      ],
+      "member_track_ids": [
+        "maretu/koukatsu",
+        "maretu/pink",
+        "maretu/suji",
+        "neru/snobbism",
+        "neru/tokyo_teddy_bear",
+        "pinocchiop/apple_dot_com",
+        "pinocchiop/motivation_is_dead",
+        "pinocchiop/nee_nee_nee",
+        "pinocchiop/slow_motion",
+        "pinocchiop/suki_na_koto_dake_de_ii_desu",
+        "syudou/bitter_choco_decoration",
+        "syudou/cute_na_kanojo",
+        "syudou/gamble"
+      ]
+    },
+    {
+      "cluster_id": "cluster_07",
+      "label": "minimal_tender",
+      "size": 6,
+      "dominant_atoms": [
+        "繰り",
+        "返す",
+        "呟いてみ",
+        "大切な",
+        "心",
+        "場所",
+        "宙",
+        "浮く",
+        "見え",
+        "溶けてゆく",
+        "大事な",
+        "日々",
+        "壊れちゃっ",
+        "繋ぎ",
+        "合わせて"
+      ],
+      "dominant_categories": {
+        "body": 0.0,
+        "scene": 0.0149,
+        "sound": 0.0149,
+        "motif": 0.9701
+      },
+      "emotional_profile": [
+        "tender",
+        "introspective",
+        "dark"
+      ],
+      "member_track_ids": [
+        "iyowa/kyu_kurarin",
+        "iyowa/ta_ku_san",
+        "kairiki_bear/lemmingming",
+        "kairiki_bear/ruma",
+        "kanaria/requiem",
+        "kanaria/yoidore_shirazu"
+      ]
+    },
+    {
+      "cluster_id": "cluster_01",
+      "label": "dense_introspective",
+      "size": 5,
+      "dominant_atoms": [
+        "心",
+        "夜",
+        "本当",
+        "世界",
+        "前",
+        "ルール",
+        "フリ",
+        "逃げ",
+        "全部全部",
+        "ヒーロー",
+        "今日",
+        "明日",
+        "ガラス",
+        "靴",
+        "投げ"
+      ],
+      "dominant_categories": {
+        "body": 0.0087,
+        "scene": 0.0216,
+        "sound": 0.0,
+        "motif": 0.9697
+      },
+      "emotional_profile": [
+        "introspective",
+        "philosophical"
+      ],
+      "member_track_ids": [
+        "deco27/cinderella",
+        "deco27/ghost_rule",
+        "deco27/monitoring",
+        "pinocchiop/common_world_domination",
+        "pinocchiop/ultimate_senpai"
+      ]
+    },
+    {
+      "cluster_id": "cluster_04",
+      "label": "dense_introspective",
+      "size": 5,
+      "dominant_atoms": [
+        "中",
+        "思い",
+        "何",
+        "顔",
+        "心",
+        "世界",
+        "毎日",
+        "本当",
+        "自分",
+        "嫌って",
+        "消え",
+        "妄想",
+        "並べ",
+        "未",
+        "生きて"
+      ],
+      "dominant_categories": {
+        "body": 0.0053,
+        "scene": 0.0,
+        "sound": 0.0106,
+        "motif": 0.984
+      },
+      "emotional_profile": [
+        "introspective",
+        "philosophical",
+        "melancholic"
+      ],
+      "member_track_ids": [
+        "deco27/love_doll",
+        "jin/inner_arts",
+        "pinocchiop/aisarenakutemo_kimi_ga_iru",
+        "pinocchiop/tensei_ringo",
+        "pinocchiop/tokumei_m"
+      ]
+    },
+    {
+      "cluster_id": "cluster_09",
+      "label": "concrete_energetic",
+      "size": 4,
+      "dominant_atoms": [
+        "感情",
+        "音",
+        "出し",
+        "言葉",
+        "叫び",
+        "瞬きをす",
+        "目",
+        "逸らし",
+        "音さえ",
+        "容易く",
+        "聞き",
+        "分けてみせ",
+        "寸分",
+        "狂いだって",
+        "正確"
+      ],
+      "dominant_categories": {
+        "body": 0.0323,
+        "scene": 0.0,
+        "sound": 0.043,
+        "motif": 0.9247
+      },
+      "emotional_profile": [
+        "energetic",
+        "chaotic"
+      ],
+      "member_track_ids": [
+        "ado/kokoro",
+        "deco27/hibana",
+        "kairiki_bear/bug",
+        "maretu/brain_revolution_girl"
+      ]
+    },
+    {
+      "cluster_id": "cluster_02",
+      "label": "abstract_dense_sweet",
+      "size": 3,
+      "dominant_atoms": [
+        "甘い",
+        "毒",
+        "飲み",
+        "込ん",
+        "落ち",
+        "合おう",
+        "欲しい",
+        "心",
+        "真っ",
+        "赤な",
+        "果実",
+        "一口かじって",
+        "汁",
+        "滴り",
+        "白雪姫"
+      ],
+      "dominant_categories": {
+        "body": 0.0,
+        "scene": 0.0066,
+        "sound": 0.0,
+        "motif": 0.9934
+      },
+      "emotional_profile": [
+        "sweet",
+        "dark",
+        "introspective"
+      ],
+      "member_track_ids": [
+        "deco27/poison_apple",
+        "deco27/vampire",
+        "pinocchiop/mahou_shoujo_to_chocolate"
+      ]
+    },
+    {
+      "cluster_id": "cluster_05",
+      "label": "dense_tender",
+      "size": 3,
+      "dominant_atoms": [
+        "抱きしめて",
+        "終わら",
+        "誰か",
+        "見え",
+        "愛してよ",
+        "痛い",
+        "心",
+        "愛",
+        "中",
+        "牙",
+        "剥いて",
+        "威嚇して",
+        "本当",
+        "寂しいだけ",
+        "強がって"
+      ],
+      "dominant_categories": {
+        "body": 0.0079,
+        "scene": 0.0,
+        "sound": 0.0,
+        "motif": 0.9921
+      },
+      "emotional_profile": [
+        "tender",
+        "introspective"
+      ],
+      "member_track_ids": [
+        "deco27/animal",
+        "deco27/rabbit_hole",
+        "pinocchiop/loveit"
+      ]
+    },
+    {
+      "cluster_id": "cluster_03",
+      "label": "concrete_warm",
+      "size": 2,
+      "dominant_atoms": [
+        "誰か",
+        "笑顔",
+        "頭でわかっ",
+        "心",
+        "追いつかな",
+        "真似をしてい",
+        "踊りましょ",
+        "ドラマツルギー",
+        "偽り",
+        "剥がして",
+        "僕だけ",
+        "声",
+        "響かせて",
+        "誰もい",
+        "舞台"
+      ],
+      "dominant_categories": {
+        "body": 0.0,
+        "scene": 0.0,
+        "sound": 0.0,
+        "motif": 1.0
+      },
+      "emotional_profile": [
+        "warm",
+        "introspective"
+      ],
+      "member_track_ids": [
+        "eve/dramaturgy",
+        "pinocchiop/boku_nanka_inakutemo"
+      ]
+    },
+    {
+      "cluster_id": "cluster_08",
+      "label": "tender",
+      "size": 2,
+      "dominant_atoms": [
+        "抱きしめて",
+        "愛して",
+        "踊りましょ",
+        "夜",
+        "明けるま",
+        "笑いましょ",
+        "何もか",
+        "忘れて",
+        "ダーリンダンス",
+        "狂おしいほ",
+        "壊れるくら",
+        "廃退して",
+        "捨てれ",
+        "夢",
+        "妬み"
+      ],
+      "dominant_categories": {
+        "body": 0.0,
+        "scene": 0.037,
+        "sound": 0.0,
+        "motif": 0.963
+      },
+      "emotional_profile": [
+        "tender",
+        "nostalgic",
+        "chaotic"
+      ],
+      "member_track_ids": [
+        "kairiki_bear/darling_dance",
+        "kanaria/mira"
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "track_id": "40mp/renai_saiban",
+      "primary": "cluster_00",
+      "secondary": "cluster_03",
+      "scores": {
+        "cluster_00": 0.1344,
+        "cluster_06": 0.0598,
+        "cluster_07": 0.0947,
+        "cluster_01": 0.0997,
+        "cluster_04": 0.1112,
+        "cluster_09": 0.1126,
+        "cluster_02": 0.0863,
+        "cluster_05": 0.0831,
+        "cluster_03": 0.1155,
+        "cluster_08": 0.1028
+      }
+    },
+    {
+      "track_id": "ado/backlight",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1399,
+        "cluster_06": 0.0599,
+        "cluster_07": 0.0963,
+        "cluster_01": 0.1022,
+        "cluster_04": 0.1136,
+        "cluster_09": 0.1243,
+        "cluster_02": 0.0789,
+        "cluster_05": 0.0822,
+        "cluster_03": 0.1002,
+        "cluster_08": 0.1025
+      }
+    },
+    {
+      "track_id": "ado/invincible",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1333,
+        "cluster_06": 0.0657,
+        "cluster_07": 0.0976,
+        "cluster_01": 0.1023,
+        "cluster_04": 0.1149,
+        "cluster_09": 0.1149,
+        "cluster_02": 0.0824,
+        "cluster_05": 0.0854,
+        "cluster_03": 0.1007,
+        "cluster_08": 0.1028
+      }
+    },
+    {
+      "track_id": "ado/kokoro",
+      "primary": "cluster_09",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1279,
+        "cluster_06": 0.0609,
+        "cluster_07": 0.096,
+        "cluster_01": 0.1008,
+        "cluster_04": 0.1101,
+        "cluster_09": 0.1445,
+        "cluster_02": 0.0801,
+        "cluster_05": 0.0827,
+        "cluster_03": 0.098,
+        "cluster_08": 0.099
+      }
+    },
+    {
+      "track_id": "ado/newgenesis",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1288,
+        "cluster_06": 0.0618,
+        "cluster_07": 0.0919,
+        "cluster_01": 0.1095,
+        "cluster_04": 0.128,
+        "cluster_09": 0.1127,
+        "cluster_02": 0.0782,
+        "cluster_05": 0.0895,
+        "cluster_03": 0.0951,
+        "cluster_08": 0.1044
+      }
+    },
+    {
+      "track_id": "ado/odo",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1323,
+        "cluster_06": 0.0642,
+        "cluster_07": 0.0966,
+        "cluster_01": 0.1018,
+        "cluster_04": 0.1119,
+        "cluster_09": 0.1122,
+        "cluster_02": 0.0907,
+        "cluster_05": 0.0871,
+        "cluster_03": 0.0987,
+        "cluster_08": 0.1045
+      }
+    },
+    {
+      "track_id": "ado/readymade",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1391,
+        "cluster_06": 0.0598,
+        "cluster_07": 0.0958,
+        "cluster_01": 0.1042,
+        "cluster_04": 0.1152,
+        "cluster_09": 0.1184,
+        "cluster_02": 0.0808,
+        "cluster_05": 0.0837,
+        "cluster_03": 0.1009,
+        "cluster_08": 0.1021
+      }
+    },
+    {
+      "track_id": "ado/usseewa",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1404,
+        "cluster_06": 0.06,
+        "cluster_07": 0.0963,
+        "cluster_01": 0.1034,
+        "cluster_04": 0.1147,
+        "cluster_09": 0.1186,
+        "cluster_02": 0.08,
+        "cluster_05": 0.0831,
+        "cluster_03": 0.1008,
+        "cluster_08": 0.1026
+      }
+    },
+    {
+      "track_id": "atols/macaron",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1328,
+        "cluster_06": 0.0613,
+        "cluster_07": 0.0942,
+        "cluster_01": 0.1005,
+        "cluster_04": 0.1101,
+        "cluster_09": 0.1135,
+        "cluster_02": 0.0939,
+        "cluster_05": 0.0871,
+        "cluster_03": 0.0981,
+        "cluster_08": 0.1084
+      }
+    },
+    {
+      "track_id": "balloon/charles",
+      "primary": "cluster_00",
+      "secondary": "cluster_08",
+      "scores": {
+        "cluster_00": 0.1262,
+        "cluster_06": 0.0647,
+        "cluster_07": 0.0953,
+        "cluster_01": 0.1083,
+        "cluster_04": 0.1055,
+        "cluster_09": 0.1068,
+        "cluster_02": 0.0862,
+        "cluster_05": 0.0918,
+        "cluster_03": 0.1017,
+        "cluster_08": 0.1135
+      }
+    },
+    {
+      "track_id": "chinozo/goodbye_declaration",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1255,
+        "cluster_06": 0.064,
+        "cluster_07": 0.0923,
+        "cluster_01": 0.1007,
+        "cluster_04": 0.1218,
+        "cluster_09": 0.1246,
+        "cluster_02": 0.0805,
+        "cluster_05": 0.0909,
+        "cluster_03": 0.0958,
+        "cluster_08": 0.1038
+      }
+    },
+    {
+      "track_id": "dazibee/urban_fantasy",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1389,
+        "cluster_06": 0.0604,
+        "cluster_07": 0.0964,
+        "cluster_01": 0.1055,
+        "cluster_04": 0.1136,
+        "cluster_09": 0.116,
+        "cluster_02": 0.0819,
+        "cluster_05": 0.0839,
+        "cluster_03": 0.0991,
+        "cluster_08": 0.1044
+      }
+    },
+    {
+      "track_id": "deco27/ai_kotoba",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1232,
+        "cluster_06": 0.0676,
+        "cluster_07": 0.0926,
+        "cluster_01": 0.107,
+        "cluster_04": 0.1135,
+        "cluster_09": 0.116,
+        "cluster_02": 0.0889,
+        "cluster_05": 0.0975,
+        "cluster_03": 0.0966,
+        "cluster_08": 0.0971
+      }
+    },
+    {
+      "track_id": "deco27/android_girl",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1297,
+        "cluster_06": 0.0666,
+        "cluster_07": 0.0958,
+        "cluster_01": 0.1087,
+        "cluster_04": 0.1104,
+        "cluster_09": 0.1123,
+        "cluster_02": 0.0847,
+        "cluster_05": 0.091,
+        "cluster_03": 0.1001,
+        "cluster_08": 0.1006
+      }
+    },
+    {
+      "track_id": "deco27/animal",
+      "primary": "cluster_05",
+      "secondary": "cluster_01",
+      "scores": {
+        "cluster_00": 0.1016,
+        "cluster_06": 0.0645,
+        "cluster_07": 0.0914,
+        "cluster_01": 0.1077,
+        "cluster_04": 0.101,
+        "cluster_09": 0.0915,
+        "cluster_02": 0.0935,
+        "cluster_05": 0.1421,
+        "cluster_03": 0.1066,
+        "cluster_08": 0.1002
+      }
+    },
+    {
+      "track_id": "deco27/cinderella",
+      "primary": "cluster_01",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1116,
+        "cluster_06": 0.0651,
+        "cluster_07": 0.0931,
+        "cluster_01": 0.1453,
+        "cluster_04": 0.1167,
+        "cluster_09": 0.0984,
+        "cluster_02": 0.0866,
+        "cluster_05": 0.0883,
+        "cluster_03": 0.1014,
+        "cluster_08": 0.0936
+      }
+    },
+    {
+      "track_id": "deco27/ghost_rule",
+      "primary": "cluster_01",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1138,
+        "cluster_06": 0.0702,
+        "cluster_07": 0.0957,
+        "cluster_01": 0.1344,
+        "cluster_04": 0.105,
+        "cluster_09": 0.1103,
+        "cluster_02": 0.0861,
+        "cluster_05": 0.0914,
+        "cluster_03": 0.0968,
+        "cluster_08": 0.0962
+      }
+    },
+    {
+      "track_id": "deco27/hibana",
+      "primary": "cluster_09",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1245,
+        "cluster_06": 0.0628,
+        "cluster_07": 0.0932,
+        "cluster_01": 0.1049,
+        "cluster_04": 0.1072,
+        "cluster_09": 0.1505,
+        "cluster_02": 0.0798,
+        "cluster_05": 0.0824,
+        "cluster_03": 0.0967,
+        "cluster_08": 0.0982
+      }
+    },
+    {
+      "track_id": "deco27/love_doll",
+      "primary": "cluster_04",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1158,
+        "cluster_06": 0.0636,
+        "cluster_07": 0.0917,
+        "cluster_01": 0.1073,
+        "cluster_04": 0.1392,
+        "cluster_09": 0.1034,
+        "cluster_02": 0.0826,
+        "cluster_05": 0.0985,
+        "cluster_03": 0.0948,
+        "cluster_08": 0.1031
+      }
+    },
+    {
+      "track_id": "deco27/monitoring",
+      "primary": "cluster_01",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1133,
+        "cluster_06": 0.0646,
+        "cluster_07": 0.0934,
+        "cluster_01": 0.1283,
+        "cluster_04": 0.1086,
+        "cluster_09": 0.0975,
+        "cluster_02": 0.0939,
+        "cluster_05": 0.1058,
+        "cluster_03": 0.1,
+        "cluster_08": 0.0944
+      }
+    },
+    {
+      "track_id": "deco27/mozaik_role",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1175,
+        "cluster_06": 0.0692,
+        "cluster_07": 0.0913,
+        "cluster_01": 0.1055,
+        "cluster_04": 0.1048,
+        "cluster_09": 0.1162,
+        "cluster_02": 0.1092,
+        "cluster_05": 0.096,
+        "cluster_03": 0.0944,
+        "cluster_08": 0.0959
+      }
+    },
+    {
+      "track_id": "deco27/poison_apple",
+      "primary": "cluster_02",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1123,
+        "cluster_06": 0.0644,
+        "cluster_07": 0.0879,
+        "cluster_01": 0.0978,
+        "cluster_04": 0.1034,
+        "cluster_09": 0.104,
+        "cluster_02": 0.1453,
+        "cluster_05": 0.1007,
+        "cluster_03": 0.0922,
+        "cluster_08": 0.0921
+      }
+    },
+    {
+      "track_id": "deco27/rabbit_hole",
+      "primary": "cluster_05",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1139,
+        "cluster_06": 0.063,
+        "cluster_07": 0.0914,
+        "cluster_01": 0.096,
+        "cluster_04": 0.1075,
+        "cluster_09": 0.1016,
+        "cluster_02": 0.0991,
+        "cluster_05": 0.1365,
+        "cluster_03": 0.0893,
+        "cluster_08": 0.1017
+      }
+    },
+    {
+      "track_id": "deco27/salamander",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1372,
+        "cluster_06": 0.0573,
+        "cluster_07": 0.0918,
+        "cluster_01": 0.103,
+        "cluster_04": 0.1305,
+        "cluster_09": 0.1192,
+        "cluster_02": 0.0768,
+        "cluster_05": 0.0899,
+        "cluster_03": 0.0964,
+        "cluster_08": 0.0978
+      }
+    },
+    {
+      "track_id": "deco27/tsumi_to_batsu",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1358,
+        "cluster_06": 0.0588,
+        "cluster_07": 0.0945,
+        "cluster_01": 0.1054,
+        "cluster_04": 0.1128,
+        "cluster_09": 0.1161,
+        "cluster_02": 0.0842,
+        "cluster_05": 0.0925,
+        "cluster_03": 0.0987,
+        "cluster_08": 0.1012
+      }
+    },
+    {
+      "track_id": "deco27/vampire",
+      "primary": "cluster_02",
+      "secondary": "cluster_05",
+      "scores": {
+        "cluster_00": 0.1064,
+        "cluster_06": 0.0713,
+        "cluster_07": 0.0854,
+        "cluster_01": 0.0962,
+        "cluster_04": 0.1008,
+        "cluster_09": 0.0939,
+        "cluster_02": 0.156,
+        "cluster_05": 0.1079,
+        "cluster_03": 0.0868,
+        "cluster_08": 0.0951
+      }
+    },
+    {
+      "track_id": "deco27/yowamushi_montblanc",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1312,
+        "cluster_06": 0.0645,
+        "cluster_07": 0.0959,
+        "cluster_01": 0.1012,
+        "cluster_04": 0.11,
+        "cluster_09": 0.1131,
+        "cluster_02": 0.095,
+        "cluster_05": 0.0888,
+        "cluster_03": 0.0993,
+        "cluster_08": 0.101
+      }
+    },
+    {
+      "track_id": "deco27/yumeyume",
+      "primary": "cluster_00",
+      "secondary": "cluster_08",
+      "scores": {
+        "cluster_00": 0.12,
+        "cluster_06": 0.071,
+        "cluster_07": 0.0887,
+        "cluster_01": 0.1141,
+        "cluster_04": 0.1095,
+        "cluster_09": 0.1041,
+        "cluster_02": 0.0847,
+        "cluster_05": 0.0861,
+        "cluster_03": 0.107,
+        "cluster_08": 0.1148
+      }
+    },
+    {
+      "track_id": "eve/dramaturgy",
+      "primary": "cluster_03",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1142,
+        "cluster_06": 0.0637,
+        "cluster_07": 0.0928,
+        "cluster_01": 0.1039,
+        "cluster_04": 0.1031,
+        "cluster_09": 0.0995,
+        "cluster_02": 0.0822,
+        "cluster_05": 0.0901,
+        "cluster_03": 0.1468,
+        "cluster_08": 0.1037
+      }
+    },
+    {
+      "track_id": "hachi/donut_hole",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1421,
+        "cluster_06": 0.059,
+        "cluster_07": 0.0966,
+        "cluster_01": 0.1013,
+        "cluster_04": 0.1145,
+        "cluster_09": 0.116,
+        "cluster_02": 0.0823,
+        "cluster_05": 0.0837,
+        "cluster_03": 0.0984,
+        "cluster_08": 0.1062
+      }
+    },
+    {
+      "track_id": "hachi/panda_hero",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.122,
+        "cluster_06": 0.067,
+        "cluster_07": 0.0941,
+        "cluster_01": 0.1091,
+        "cluster_04": 0.1195,
+        "cluster_09": 0.1154,
+        "cluster_02": 0.085,
+        "cluster_05": 0.0907,
+        "cluster_03": 0.0951,
+        "cluster_08": 0.1021
+      }
+    },
+    {
+      "track_id": "harumaki_gohan/melty_land_nightmare",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1259,
+        "cluster_06": 0.0658,
+        "cluster_07": 0.1011,
+        "cluster_01": 0.1106,
+        "cluster_04": 0.1069,
+        "cluster_09": 0.1138,
+        "cluster_02": 0.0808,
+        "cluster_05": 0.0918,
+        "cluster_03": 0.1043,
+        "cluster_08": 0.0989
+      }
+    },
+    {
+      "track_id": "hiragi_kirai/autophagy",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1373,
+        "cluster_06": 0.0596,
+        "cluster_07": 0.0956,
+        "cluster_01": 0.1048,
+        "cluster_04": 0.1123,
+        "cluster_09": 0.1303,
+        "cluster_02": 0.0779,
+        "cluster_05": 0.0813,
+        "cluster_03": 0.0991,
+        "cluster_08": 0.1018
+      }
+    },
+    {
+      "track_id": "honeyworks/confession_rehearsal",
+      "primary": "cluster_00",
+      "secondary": "cluster_03",
+      "scores": {
+        "cluster_00": 0.1266,
+        "cluster_06": 0.063,
+        "cluster_07": 0.0936,
+        "cluster_01": 0.1116,
+        "cluster_04": 0.1075,
+        "cluster_09": 0.1105,
+        "cluster_02": 0.0839,
+        "cluster_05": 0.0824,
+        "cluster_03": 0.1224,
+        "cluster_08": 0.0986
+      }
+    },
+    {
+      "track_id": "iyowa/1000_nen_ikiteiru",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1339,
+        "cluster_06": 0.0596,
+        "cluster_07": 0.0915,
+        "cluster_01": 0.1033,
+        "cluster_04": 0.1226,
+        "cluster_09": 0.1131,
+        "cluster_02": 0.0834,
+        "cluster_05": 0.1002,
+        "cluster_03": 0.0943,
+        "cluster_08": 0.0982
+      }
+    },
+    {
+      "track_id": "iyowa/apricot",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1344,
+        "cluster_06": 0.0621,
+        "cluster_07": 0.0956,
+        "cluster_01": 0.1053,
+        "cluster_04": 0.1117,
+        "cluster_09": 0.1258,
+        "cluster_02": 0.0807,
+        "cluster_05": 0.0836,
+        "cluster_03": 0.0996,
+        "cluster_08": 0.1012
+      }
+    },
+    {
+      "track_id": "iyowa/heat_abnormal",
+      "primary": "cluster_00",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.1358,
+        "cluster_06": 0.0762,
+        "cluster_07": 0.1306,
+        "cluster_01": 0.101,
+        "cluster_04": 0.1095,
+        "cluster_09": 0.1141,
+        "cluster_02": 0.0691,
+        "cluster_05": 0.073,
+        "cluster_03": 0.094,
+        "cluster_08": 0.0965
+      }
+    },
+    {
+      "track_id": "iyowa/kyu_kurarin",
+      "primary": "cluster_07",
+      "secondary": "cluster_06",
+      "scores": {
+        "cluster_00": 0.1042,
+        "cluster_06": 0.1122,
+        "cluster_07": 0.1778,
+        "cluster_01": 0.0978,
+        "cluster_04": 0.0944,
+        "cluster_09": 0.0915,
+        "cluster_02": 0.0714,
+        "cluster_05": 0.0829,
+        "cluster_03": 0.0864,
+        "cluster_08": 0.0814
+      }
+    },
+    {
+      "track_id": "iyowa/ta_ku_san",
+      "primary": "cluster_07",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1197,
+        "cluster_06": 0.0866,
+        "cluster_07": 0.1367,
+        "cluster_01": 0.1069,
+        "cluster_04": 0.106,
+        "cluster_09": 0.1128,
+        "cluster_02": 0.0732,
+        "cluster_05": 0.0771,
+        "cluster_03": 0.0941,
+        "cluster_08": 0.0869
+      }
+    },
+    {
+      "track_id": "jin/inner_arts",
+      "primary": "cluster_04",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.118,
+        "cluster_06": 0.0643,
+        "cluster_07": 0.0937,
+        "cluster_01": 0.1156,
+        "cluster_04": 0.1325,
+        "cluster_09": 0.1045,
+        "cluster_02": 0.0923,
+        "cluster_05": 0.0958,
+        "cluster_03": 0.0945,
+        "cluster_08": 0.0888
+      }
+    },
+    {
+      "track_id": "jin/kagerou_daze",
+      "primary": "cluster_00",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.1255,
+        "cluster_06": 0.0774,
+        "cluster_07": 0.1187,
+        "cluster_01": 0.0986,
+        "cluster_04": 0.1164,
+        "cluster_09": 0.1077,
+        "cluster_02": 0.0777,
+        "cluster_05": 0.0916,
+        "cluster_03": 0.0925,
+        "cluster_08": 0.094
+      }
+    },
+    {
+      "track_id": "kairiki_bear/alkali_rettoushou",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1271,
+        "cluster_06": 0.0617,
+        "cluster_07": 0.0916,
+        "cluster_01": 0.1079,
+        "cluster_04": 0.1212,
+        "cluster_09": 0.1125,
+        "cluster_02": 0.0939,
+        "cluster_05": 0.0914,
+        "cluster_03": 0.0956,
+        "cluster_08": 0.0971
+      }
+    },
+    {
+      "track_id": "kairiki_bear/angel",
+      "primary": "cluster_00",
+      "secondary": "cluster_01",
+      "scores": {
+        "cluster_00": 0.1205,
+        "cluster_06": 0.069,
+        "cluster_07": 0.1047,
+        "cluster_01": 0.1148,
+        "cluster_04": 0.1142,
+        "cluster_09": 0.1033,
+        "cluster_02": 0.0878,
+        "cluster_05": 0.0951,
+        "cluster_03": 0.0979,
+        "cluster_08": 0.0928
+      }
+    },
+    {
+      "track_id": "kairiki_bear/bug",
+      "primary": "cluster_09",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.119,
+        "cluster_06": 0.0647,
+        "cluster_07": 0.091,
+        "cluster_01": 0.1023,
+        "cluster_04": 0.113,
+        "cluster_09": 0.1435,
+        "cluster_02": 0.0896,
+        "cluster_05": 0.0884,
+        "cluster_03": 0.0934,
+        "cluster_08": 0.0951
+      }
+    },
+    {
+      "track_id": "kairiki_bear/darling_dance",
+      "primary": "cluster_08",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1162,
+        "cluster_06": 0.0616,
+        "cluster_07": 0.0911,
+        "cluster_01": 0.1008,
+        "cluster_04": 0.1034,
+        "cluster_09": 0.1029,
+        "cluster_02": 0.0807,
+        "cluster_05": 0.0951,
+        "cluster_03": 0.0977,
+        "cluster_08": 0.1504
+      }
+    },
+    {
+      "track_id": "kairiki_bear/failure_girl",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1498,
+        "cluster_06": 0.0567,
+        "cluster_07": 0.096,
+        "cluster_01": 0.1018,
+        "cluster_04": 0.1154,
+        "cluster_09": 0.1213,
+        "cluster_02": 0.0762,
+        "cluster_05": 0.0799,
+        "cluster_03": 0.0999,
+        "cluster_08": 0.1029
+      }
+    },
+    {
+      "track_id": "kairiki_bear/lemmingming",
+      "primary": "cluster_07",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1156,
+        "cluster_06": 0.1082,
+        "cluster_07": 0.1504,
+        "cluster_01": 0.0933,
+        "cluster_04": 0.1057,
+        "cluster_09": 0.1025,
+        "cluster_02": 0.0707,
+        "cluster_05": 0.0737,
+        "cluster_03": 0.0889,
+        "cluster_08": 0.091
+      }
+    },
+    {
+      "track_id": "kairiki_bear/ruma",
+      "primary": "cluster_07",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1087,
+        "cluster_06": 0.0997,
+        "cluster_07": 0.1699,
+        "cluster_01": 0.1014,
+        "cluster_04": 0.0976,
+        "cluster_09": 0.0943,
+        "cluster_02": 0.072,
+        "cluster_05": 0.0847,
+        "cluster_03": 0.0886,
+        "cluster_08": 0.0831
+      }
+    },
+    {
+      "track_id": "kairiki_bear/shippaisaku_shoujo",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1419,
+        "cluster_06": 0.0586,
+        "cluster_07": 0.0943,
+        "cluster_01": 0.1041,
+        "cluster_04": 0.1118,
+        "cluster_09": 0.1149,
+        "cluster_02": 0.0837,
+        "cluster_05": 0.0918,
+        "cluster_03": 0.0978,
+        "cluster_08": 0.1012
+      }
+    },
+    {
+      "track_id": "kairiki_bear/venom",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1281,
+        "cluster_06": 0.0659,
+        "cluster_07": 0.0949,
+        "cluster_01": 0.1033,
+        "cluster_04": 0.1065,
+        "cluster_09": 0.1083,
+        "cluster_02": 0.0992,
+        "cluster_05": 0.0967,
+        "cluster_03": 0.0963,
+        "cluster_08": 0.1008
+      }
+    },
+    {
+      "track_id": "kanaria/daino_tekina_rendezvous",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1332,
+        "cluster_06": 0.0623,
+        "cluster_07": 0.0957,
+        "cluster_01": 0.1097,
+        "cluster_04": 0.1123,
+        "cluster_09": 0.1154,
+        "cluster_02": 0.086,
+        "cluster_05": 0.0841,
+        "cluster_03": 0.1,
+        "cluster_08": 0.1013
+      }
+    },
+    {
+      "track_id": "kanaria/envy_baby",
+      "primary": "cluster_00",
+      "secondary": "cluster_08",
+      "scores": {
+        "cluster_00": 0.1276,
+        "cluster_06": 0.0638,
+        "cluster_07": 0.0972,
+        "cluster_01": 0.1084,
+        "cluster_04": 0.1078,
+        "cluster_09": 0.1115,
+        "cluster_02": 0.0797,
+        "cluster_05": 0.0826,
+        "cluster_03": 0.1052,
+        "cluster_08": 0.1163
+      }
+    },
+    {
+      "track_id": "kanaria/mira",
+      "primary": "cluster_08",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1159,
+        "cluster_06": 0.0608,
+        "cluster_07": 0.0879,
+        "cluster_01": 0.0948,
+        "cluster_04": 0.1027,
+        "cluster_09": 0.1019,
+        "cluster_02": 0.0801,
+        "cluster_05": 0.1036,
+        "cluster_03": 0.1039,
+        "cluster_08": 0.1485
+      }
+    },
+    {
+      "track_id": "kanaria/requiem",
+      "primary": "cluster_07",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1157,
+        "cluster_06": 0.1042,
+        "cluster_07": 0.164,
+        "cluster_01": 0.0948,
+        "cluster_04": 0.0982,
+        "cluster_09": 0.1,
+        "cluster_02": 0.0716,
+        "cluster_05": 0.0734,
+        "cluster_03": 0.0867,
+        "cluster_08": 0.0914
+      }
+    },
+    {
+      "track_id": "kanaria/yoidore_shirazu",
+      "primary": "cluster_07",
+      "secondary": "cluster_01",
+      "scores": {
+        "cluster_00": 0.1113,
+        "cluster_06": 0.0885,
+        "cluster_07": 0.1465,
+        "cluster_01": 0.1115,
+        "cluster_04": 0.1002,
+        "cluster_09": 0.0969,
+        "cluster_02": 0.074,
+        "cluster_05": 0.087,
+        "cluster_03": 0.0909,
+        "cluster_08": 0.0931
+      }
+    },
+    {
+      "track_id": "kuragep/chururira",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1375,
+        "cluster_06": 0.0598,
+        "cluster_07": 0.096,
+        "cluster_01": 0.1082,
+        "cluster_04": 0.112,
+        "cluster_09": 0.1171,
+        "cluster_02": 0.0775,
+        "cluster_05": 0.081,
+        "cluster_03": 0.1088,
+        "cluster_08": 0.1021
+      }
+    },
+    {
+      "track_id": "magnetite/living_ghost",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.131,
+        "cluster_06": 0.0603,
+        "cluster_07": 0.1002,
+        "cluster_01": 0.1005,
+        "cluster_04": 0.1235,
+        "cluster_09": 0.1158,
+        "cluster_02": 0.0765,
+        "cluster_05": 0.0994,
+        "cluster_03": 0.0954,
+        "cluster_08": 0.0975
+      }
+    },
+    {
+      "track_id": "maretu/brain_revolution_girl",
+      "primary": "cluster_09",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1264,
+        "cluster_06": 0.0634,
+        "cluster_07": 0.0961,
+        "cluster_01": 0.1081,
+        "cluster_04": 0.1098,
+        "cluster_09": 0.1311,
+        "cluster_02": 0.0827,
+        "cluster_05": 0.0849,
+        "cluster_03": 0.0986,
+        "cluster_08": 0.0989
+      }
+    },
+    {
+      "track_id": "maretu/darling",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1313,
+        "cluster_06": 0.0627,
+        "cluster_07": 0.0932,
+        "cluster_01": 0.1128,
+        "cluster_04": 0.1153,
+        "cluster_09": 0.1101,
+        "cluster_02": 0.086,
+        "cluster_05": 0.0926,
+        "cluster_03": 0.0971,
+        "cluster_08": 0.0987
+      }
+    },
+    {
+      "track_id": "maretu/koukatsu",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0902,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0794
+      }
+    },
+    {
+      "track_id": "maretu/pink",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.1076,
+        "cluster_06": 0.1397,
+        "cluster_07": 0.1179,
+        "cluster_01": 0.0987,
+        "cluster_04": 0.1012,
+        "cluster_09": 0.0951,
+        "cluster_02": 0.0788,
+        "cluster_05": 0.0863,
+        "cluster_03": 0.0899,
+        "cluster_08": 0.0847
+      }
+    },
+    {
+      "track_id": "maretu/suji",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0978,
+        "cluster_06": 0.1968,
+        "cluster_07": 0.1274,
+        "cluster_01": 0.0903,
+        "cluster_04": 0.0924,
+        "cluster_09": 0.0874,
+        "cluster_02": 0.0736,
+        "cluster_05": 0.0725,
+        "cluster_03": 0.083,
+        "cluster_08": 0.0787
+      }
+    },
+    {
+      "track_id": "maretu/umitagari",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1386,
+        "cluster_06": 0.0595,
+        "cluster_07": 0.0955,
+        "cluster_01": 0.1065,
+        "cluster_04": 0.1138,
+        "cluster_09": 0.1175,
+        "cluster_02": 0.0794,
+        "cluster_05": 0.0876,
+        "cluster_03": 0.1,
+        "cluster_08": 0.1017
+      }
+    },
+    {
+      "track_id": "maretu/white_happy",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1333,
+        "cluster_06": 0.0599,
+        "cluster_07": 0.092,
+        "cluster_01": 0.1024,
+        "cluster_04": 0.1251,
+        "cluster_09": 0.1159,
+        "cluster_02": 0.0787,
+        "cluster_05": 0.0906,
+        "cluster_03": 0.0964,
+        "cluster_08": 0.1058
+      }
+    },
+    {
+      "track_id": "nanou/3331",
+      "primary": "cluster_00",
+      "secondary": "cluster_03",
+      "scores": {
+        "cluster_00": 0.1361,
+        "cluster_06": 0.0588,
+        "cluster_07": 0.0945,
+        "cluster_01": 0.1003,
+        "cluster_04": 0.1116,
+        "cluster_09": 0.1159,
+        "cluster_02": 0.0823,
+        "cluster_05": 0.0807,
+        "cluster_03": 0.1191,
+        "cluster_08": 0.1006
+      }
+    },
+    {
+      "track_id": "neru/abstract_nonsense",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1499,
+        "cluster_06": 0.0564,
+        "cluster_07": 0.0954,
+        "cluster_01": 0.1023,
+        "cluster_04": 0.1158,
+        "cluster_09": 0.1211,
+        "cluster_02": 0.0766,
+        "cluster_05": 0.0802,
+        "cluster_03": 0.0999,
+        "cluster_08": 0.1024
+      }
+    },
+    {
+      "track_id": "neru/law_evading_rock",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1495,
+        "cluster_06": 0.0561,
+        "cluster_07": 0.0948,
+        "cluster_01": 0.1029,
+        "cluster_04": 0.1162,
+        "cluster_09": 0.1209,
+        "cluster_02": 0.0772,
+        "cluster_05": 0.0806,
+        "cluster_03": 0.0999,
+        "cluster_08": 0.1019
+      }
+    },
+    {
+      "track_id": "neru/lost_ones_weeping",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1394,
+        "cluster_06": 0.0581,
+        "cluster_07": 0.0926,
+        "cluster_01": 0.1061,
+        "cluster_04": 0.1128,
+        "cluster_09": 0.114,
+        "cluster_02": 0.086,
+        "cluster_05": 0.0933,
+        "cluster_03": 0.098,
+        "cluster_08": 0.0996
+      }
+    },
+    {
+      "track_id": "neru/snobbism",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0978,
+        "cluster_06": 0.1968,
+        "cluster_07": 0.1274,
+        "cluster_01": 0.0903,
+        "cluster_04": 0.0924,
+        "cluster_09": 0.0874,
+        "cluster_02": 0.0736,
+        "cluster_05": 0.0725,
+        "cluster_03": 0.083,
+        "cluster_08": 0.0787
+      }
+    },
+    {
+      "track_id": "neru/tokyo_teddy_bear",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.098,
+        "cluster_06": 0.1838,
+        "cluster_07": 0.1278,
+        "cluster_01": 0.091,
+        "cluster_04": 0.0979,
+        "cluster_09": 0.0882,
+        "cluster_02": 0.0752,
+        "cluster_05": 0.0741,
+        "cluster_03": 0.0841,
+        "cluster_08": 0.08
+      }
+    },
+    {
+      "track_id": "niki/error",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1308,
+        "cluster_06": 0.0649,
+        "cluster_07": 0.0965,
+        "cluster_01": 0.1038,
+        "cluster_04": 0.1099,
+        "cluster_09": 0.1279,
+        "cluster_02": 0.0812,
+        "cluster_05": 0.0842,
+        "cluster_03": 0.0994,
+        "cluster_08": 0.1015
+      }
+    },
+    {
+      "track_id": "nilfruits/ironina",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1344,
+        "cluster_06": 0.0635,
+        "cluster_07": 0.0959,
+        "cluster_01": 0.1026,
+        "cluster_04": 0.1098,
+        "cluster_09": 0.111,
+        "cluster_02": 0.0881,
+        "cluster_05": 0.094,
+        "cluster_03": 0.0972,
+        "cluster_08": 0.1036
+      }
+    },
+    {
+      "track_id": "pinocchiop/aisarenakutemo_kimi_ga_iru",
+      "primary": "cluster_04",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1178,
+        "cluster_06": 0.0623,
+        "cluster_07": 0.0902,
+        "cluster_01": 0.1074,
+        "cluster_04": 0.1453,
+        "cluster_09": 0.1072,
+        "cluster_02": 0.0839,
+        "cluster_05": 0.0935,
+        "cluster_03": 0.0992,
+        "cluster_08": 0.0932
+      }
+    },
+    {
+      "track_id": "pinocchiop/apple_dot_com",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0902,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0794
+      }
+    },
+    {
+      "track_id": "pinocchiop/boku_nanka_inakutemo",
+      "primary": "cluster_03",
+      "secondary": "cluster_01",
+      "scores": {
+        "cluster_00": 0.1115,
+        "cluster_06": 0.0618,
+        "cluster_07": 0.0864,
+        "cluster_01": 0.1148,
+        "cluster_04": 0.1047,
+        "cluster_09": 0.1003,
+        "cluster_02": 0.0854,
+        "cluster_05": 0.0908,
+        "cluster_03": 0.1479,
+        "cluster_08": 0.0963
+      }
+    },
+    {
+      "track_id": "pinocchiop/common_world_domination",
+      "primary": "cluster_01",
+      "secondary": "cluster_03",
+      "scores": {
+        "cluster_00": 0.1084,
+        "cluster_06": 0.0667,
+        "cluster_07": 0.0919,
+        "cluster_01": 0.1245,
+        "cluster_04": 0.1132,
+        "cluster_09": 0.1044,
+        "cluster_02": 0.0861,
+        "cluster_05": 0.0963,
+        "cluster_03": 0.1148,
+        "cluster_08": 0.0938
+      }
+    },
+    {
+      "track_id": "pinocchiop/kamippoi_na",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1347,
+        "cluster_06": 0.0677,
+        "cluster_07": 0.0904,
+        "cluster_01": 0.1033,
+        "cluster_04": 0.1132,
+        "cluster_09": 0.1109,
+        "cluster_02": 0.0879,
+        "cluster_05": 0.0905,
+        "cluster_03": 0.0958,
+        "cluster_08": 0.1056
+      }
+    },
+    {
+      "track_id": "pinocchiop/kusare_gedou_to_chocolate",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1232,
+        "cluster_06": 0.0631,
+        "cluster_07": 0.1012,
+        "cluster_01": 0.105,
+        "cluster_04": 0.1126,
+        "cluster_09": 0.1098,
+        "cluster_02": 0.1014,
+        "cluster_05": 0.0892,
+        "cluster_03": 0.0977,
+        "cluster_08": 0.0968
+      }
+    },
+    {
+      "track_id": "pinocchiop/loveit",
+      "primary": "cluster_05",
+      "secondary": "cluster_08",
+      "scores": {
+        "cluster_00": 0.1014,
+        "cluster_06": 0.0662,
+        "cluster_07": 0.0845,
+        "cluster_01": 0.1015,
+        "cluster_04": 0.1048,
+        "cluster_09": 0.0914,
+        "cluster_02": 0.1002,
+        "cluster_05": 0.1475,
+        "cluster_03": 0.0958,
+        "cluster_08": 0.1067
+      }
+    },
+    {
+      "track_id": "pinocchiop/mahou_shoujo_to_chocolate",
+      "primary": "cluster_02",
+      "secondary": "cluster_03",
+      "scores": {
+        "cluster_00": 0.1031,
+        "cluster_06": 0.0675,
+        "cluster_07": 0.087,
+        "cluster_01": 0.1046,
+        "cluster_04": 0.1032,
+        "cluster_09": 0.0948,
+        "cluster_02": 0.1503,
+        "cluster_05": 0.0994,
+        "cluster_03": 0.1053,
+        "cluster_08": 0.0847
+      }
+    },
+    {
+      "track_id": "pinocchiop/motivation_is_dead",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0978,
+        "cluster_06": 0.1969,
+        "cluster_07": 0.1273,
+        "cluster_01": 0.0904,
+        "cluster_04": 0.0925,
+        "cluster_09": 0.0874,
+        "cluster_02": 0.0737,
+        "cluster_05": 0.0725,
+        "cluster_03": 0.083,
+        "cluster_08": 0.0787
+      }
+    },
+    {
+      "track_id": "pinocchiop/mushikui_psychedelism",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1412,
+        "cluster_06": 0.0597,
+        "cluster_07": 0.096,
+        "cluster_01": 0.1013,
+        "cluster_04": 0.1128,
+        "cluster_09": 0.1174,
+        "cluster_02": 0.0782,
+        "cluster_05": 0.0816,
+        "cluster_03": 0.0996,
+        "cluster_08": 0.1122
+      }
+    },
+    {
+      "track_id": "pinocchiop/nee_nee_nee",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.098,
+        "cluster_06": 0.1838,
+        "cluster_07": 0.1279,
+        "cluster_01": 0.0909,
+        "cluster_04": 0.0978,
+        "cluster_09": 0.0883,
+        "cluster_02": 0.0751,
+        "cluster_05": 0.0741,
+        "cluster_03": 0.0841,
+        "cluster_08": 0.0801
+      }
+    },
+    {
+      "track_id": "pinocchiop/non_breath_oblige",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1202,
+        "cluster_06": 0.0655,
+        "cluster_07": 0.0908,
+        "cluster_01": 0.1104,
+        "cluster_04": 0.1168,
+        "cluster_09": 0.1162,
+        "cluster_02": 0.0956,
+        "cluster_05": 0.0931,
+        "cluster_03": 0.0961,
+        "cluster_08": 0.0951
+      }
+    },
+    {
+      "track_id": "pinocchiop/slow_motion",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0978,
+        "cluster_06": 0.1968,
+        "cluster_07": 0.1274,
+        "cluster_01": 0.0903,
+        "cluster_04": 0.0924,
+        "cluster_09": 0.0874,
+        "cluster_02": 0.0736,
+        "cluster_05": 0.0725,
+        "cluster_03": 0.083,
+        "cluster_08": 0.0787
+      }
+    },
+    {
+      "track_id": "pinocchiop/suki_na_koto_dake_de_ii_desu",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0902,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0794
+      }
+    },
+    {
+      "track_id": "pinocchiop/tensei_ringo",
+      "primary": "cluster_04",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1245,
+        "cluster_06": 0.0701,
+        "cluster_07": 0.0921,
+        "cluster_01": 0.109,
+        "cluster_04": 0.1414,
+        "cluster_09": 0.1084,
+        "cluster_02": 0.0835,
+        "cluster_05": 0.0807,
+        "cluster_03": 0.0948,
+        "cluster_08": 0.0956
+      }
+    },
+    {
+      "track_id": "pinocchiop/tokumei_m",
+      "primary": "cluster_04",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1224,
+        "cluster_06": 0.0607,
+        "cluster_07": 0.0895,
+        "cluster_01": 0.1103,
+        "cluster_04": 0.1323,
+        "cluster_09": 0.1107,
+        "cluster_02": 0.0837,
+        "cluster_05": 0.0945,
+        "cluster_03": 0.1017,
+        "cluster_08": 0.0943
+      }
+    },
+    {
+      "track_id": "pinocchiop/ultimate_senpai",
+      "primary": "cluster_01",
+      "secondary": "cluster_00",
+      "scores": {
+        "cluster_00": 0.1139,
+        "cluster_06": 0.073,
+        "cluster_07": 0.1036,
+        "cluster_01": 0.1407,
+        "cluster_04": 0.1101,
+        "cluster_09": 0.1023,
+        "cluster_02": 0.0792,
+        "cluster_05": 0.0814,
+        "cluster_03": 0.1096,
+        "cluster_08": 0.0861
+      }
+    },
+    {
+      "track_id": "police_piccadilly/cynic",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1325,
+        "cluster_06": 0.0644,
+        "cluster_07": 0.1019,
+        "cluster_01": 0.1113,
+        "cluster_04": 0.1152,
+        "cluster_09": 0.1106,
+        "cluster_02": 0.0811,
+        "cluster_05": 0.085,
+        "cluster_03": 0.1026,
+        "cluster_08": 0.0954
+      }
+    },
+    {
+      "track_id": "sasakure_uk/hello_planet",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1409,
+        "cluster_06": 0.0605,
+        "cluster_07": 0.0972,
+        "cluster_01": 0.1025,
+        "cluster_04": 0.1141,
+        "cluster_09": 0.1189,
+        "cluster_02": 0.0791,
+        "cluster_05": 0.0825,
+        "cluster_03": 0.1008,
+        "cluster_08": 0.1034
+      }
+    },
+    {
+      "track_id": "syudou/bakushou",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1381,
+        "cluster_06": 0.0596,
+        "cluster_07": 0.0956,
+        "cluster_01": 0.1065,
+        "cluster_04": 0.1138,
+        "cluster_09": 0.1177,
+        "cluster_02": 0.0843,
+        "cluster_05": 0.0825,
+        "cluster_03": 0.1,
+        "cluster_08": 0.1018
+      }
+    },
+    {
+      "track_id": "syudou/bitter_choco_decoration",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0902,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0794
+      }
+    },
+    {
+      "track_id": "syudou/call_boy",
+      "primary": "cluster_00",
+      "secondary": "cluster_01",
+      "scores": {
+        "cluster_00": 0.1311,
+        "cluster_06": 0.0616,
+        "cluster_07": 0.0959,
+        "cluster_01": 0.1111,
+        "cluster_04": 0.108,
+        "cluster_09": 0.109,
+        "cluster_02": 0.0865,
+        "cluster_05": 0.0923,
+        "cluster_03": 0.0954,
+        "cluster_08": 0.1091
+      }
+    },
+    {
+      "track_id": "syudou/cute_na_kanojo",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0903,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0793
+      }
+    },
+    {
+      "track_id": "syudou/gamble",
+      "primary": "cluster_06",
+      "secondary": "cluster_07",
+      "scores": {
+        "cluster_00": 0.0972,
+        "cluster_06": 0.1977,
+        "cluster_07": 0.1242,
+        "cluster_01": 0.0902,
+        "cluster_04": 0.0922,
+        "cluster_09": 0.0875,
+        "cluster_02": 0.0746,
+        "cluster_05": 0.0735,
+        "cluster_03": 0.0834,
+        "cluster_08": 0.0794
+      }
+    },
+    {
+      "track_id": "syudou/usseewa",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1408,
+        "cluster_06": 0.0604,
+        "cluster_07": 0.097,
+        "cluster_01": 0.1027,
+        "cluster_04": 0.1143,
+        "cluster_09": 0.1188,
+        "cluster_02": 0.0793,
+        "cluster_05": 0.0827,
+        "cluster_03": 0.1008,
+        "cluster_08": 0.1032
+      }
+    },
+    {
+      "track_id": "teniwoha/villain",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1308,
+        "cluster_06": 0.0614,
+        "cluster_07": 0.0946,
+        "cluster_01": 0.0998,
+        "cluster_04": 0.1097,
+        "cluster_09": 0.1134,
+        "cluster_02": 0.0931,
+        "cluster_05": 0.082,
+        "cluster_03": 0.1065,
+        "cluster_08": 0.1088
+      }
+    },
+    {
+      "track_id": "tsumiki/phony",
+      "primary": "cluster_00",
+      "secondary": "cluster_04",
+      "scores": {
+        "cluster_00": 0.1195,
+        "cluster_06": 0.0672,
+        "cluster_07": 0.0929,
+        "cluster_01": 0.1002,
+        "cluster_04": 0.1135,
+        "cluster_09": 0.1055,
+        "cluster_02": 0.0903,
+        "cluster_05": 0.1004,
+        "cluster_03": 0.1042,
+        "cluster_08": 0.1062
+      }
+    },
+    {
+      "track_id": "wowaka/rolling_girl",
+      "primary": "cluster_00",
+      "secondary": "cluster_09",
+      "scores": {
+        "cluster_00": 0.1374,
+        "cluster_06": 0.0596,
+        "cluster_07": 0.0957,
+        "cluster_01": 0.1085,
+        "cluster_04": 0.1122,
+        "cluster_09": 0.117,
+        "cluster_02": 0.0777,
+        "cluster_05": 0.0811,
+        "cluster_03": 0.1088,
+        "cluster_08": 0.1018
+      }
+    }
+  ],
+  "atom_cluster_map_size": 168,
+  "distant_pairs": [
+    {
+      "a": "cluster_06",
+      "b": "cluster_05",
+      "distance": 3.591
+    },
+    {
+      "a": "cluster_06",
+      "b": "cluster_02",
+      "distance": 3.5763
+    },
+    {
+      "a": "cluster_06",
+      "b": "cluster_08",
+      "distance": 3.448
+    },
+    {
+      "a": "cluster_06",
+      "b": "cluster_03",
+      "distance": 3.3395
+    },
+    {
+      "a": "cluster_06",
+      "b": "cluster_09",
+      "distance": 3.2279
+    }
+  ],
+  "vocabulary": [
+    "心",
+    "繰り",
+    "返す",
+    "中",
+    "全て",
+    "大切な",
+    "呟いてみ",
+    "愛",
+    "抉るよう",
+    "塗り",
+    "潰して",
+    "夢",
+    "世界",
+    "見え",
+    "夜",
+    "本当",
+    "想い",
+    "甘い",
+    "誰か",
+    "場所",
+    "笑顔",
+    "キミ",
+    "足り",
+    "出し",
+    "抱きしめて",
+    "前",
+    "飲み",
+    "毒",
+    "込ん",
+    "明日",
+    "今日",
+    "営み",
+    "笑って",
+    "頃",
+    "踊りましょ",
+    "最後",
+    "息",
+    "思い",
+    "痛い",
+    "終わら",
+    "逃げ",
+    "言葉",
+    "愛して",
+    "笑い",
+    "毎日",
+    "手",
+    "出す",
+    "音",
+    "感情",
+    "ロンリー"
+  ]
+}

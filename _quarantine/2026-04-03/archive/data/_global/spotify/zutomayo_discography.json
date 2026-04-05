@@ -1,0 +1,5107 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "5kVZa4lFUmAQlBogl1fkd6",
+    "name": "Aimyon",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/5kVZa4lFUmAQlBogl1fkd6"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 47,
+  "raw_track_total": 183,
+  "canonical_track_count": 148,
+  "primary_lyric_track_count": 122,
+  "redundant_variant_track_count": 26,
+  "canonical_tracks": [
+    {
+      "name": "○○ちゃん",
+      "normalized_name": "○○ちゃん",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "4rf6m9hF1RGwR57Vv5NXv8",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "お互い様やん",
+      "normalized_name": "お互い様やん",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "7sXEjgKp9aYqMOQnrGH8B6",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+      "normalized_name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6UfzyOza3E5A79BJrEKd3U",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "分かってくれよ",
+      "normalized_name": "分かってくれよ",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "1VYkyV2KfznZ2dg23HNRIN",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "夜行バス",
+      "normalized_name": "夜行バス",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "2ZQdj815zFC7lKTYQqjhSZ",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "幸せになりたい",
+      "normalized_name": "幸せになりたい",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6dZT5MmHLEfSJoLVlX76wo",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "強がりました",
+      "normalized_name": "強がりました",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6vcaiCF2960ECAVrO6g6mj",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "貴方解剖純愛歌〜死ね〜",
+      "normalized_name": "貴方解剖純愛歌〜死ね〜",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "2H3bOGOE50qEo5wAYoJiwL",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "19歳になりたくない",
+      "normalized_name": "19歳になりたくない",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "0X4mJkYZ7JzhqbpAlTbqLT",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "おっぱい",
+      "normalized_name": "おっぱい",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "08Xhmc5B5gDPYFrL1uKVJI",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "どうせ死ぬなら",
+      "normalized_name": "どうせ死ぬなら",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "7J9HCPtyUR6ZlGRhXmj7td",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "ほろ酔い",
+      "normalized_name": "ほろ酔い",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "4SZDkESMCRG61BhvbmLUqS",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "好きって言ってよ",
+      "normalized_name": "好きって言ってよ",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "7tBPxHhEhG7jqw37d6Epmu",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "泥だんごの天才いたよね",
+      "normalized_name": "泥だんごの天才いたよね",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "1NAkjqsp5HHJj9fA4kf4Td",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "私に彼氏ができない理由",
+      "normalized_name": "私に彼氏ができない理由",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "4L6ZAAjGMMK6IL1orx4zhJ",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "今日の芸術",
+      "normalized_name": "今日の芸術",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "6vOaJyty7o0nKgLGRNfNnH",
+      "albums": [
+        "生きていたんだよな"
+      ]
+    },
+    {
+      "name": "君がいない夜を越えられやしない",
+      "normalized_name": "君がいない夜を越えられやしない",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "22pn8HHUVwOiwpAe429zHu",
+      "albums": [
+        "生きていたんだよな"
+      ]
+    },
+    {
+      "name": "生きていたんだよな",
+      "normalized_name": "生きていたんだよな",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "2NsH0dlXCvarCtIgSPZpLJ",
+      "albums": [
+        "生きていたんだよな",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "MIO",
+      "normalized_name": "mio",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "08VGeXX2EvEtTnV2XNGfTi",
+      "albums": [
+        "愛を伝えたいだとか"
+      ]
+    },
+    {
+      "name": "ハッピー",
+      "normalized_name": "ハッピー",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "4goU64b7u75Lu0qltJtBCQ",
+      "albums": [
+        "愛を伝えたいだとか"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか",
+      "normalized_name": "愛を伝えたいだとか",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "3hnc4KOBcUB6bC7gGwlBPG",
+      "albums": [
+        "愛を伝えたいだとか",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "君はロックを聴かない",
+      "normalized_name": "君はロックを聴かない",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "01IZAuQsBO00iLKFO9LsFf",
+      "albums": [
+        "君はロックを聴かない",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "君はロックを聴かない - Instrumental",
+      "normalized_name": "君はロックを聴かない instrumental",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "3VE8TCehq7QJp0W0kgYGHL",
+      "albums": [
+        "君はロックを聴かない"
+      ]
+    },
+    {
+      "name": "青春と青春と青春",
+      "normalized_name": "青春と青春と青春",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "7Hg40WRVv4G6wsbmOXZ5Fi",
+      "albums": [
+        "君はロックを聴かない"
+      ]
+    },
+    {
+      "name": "RING DING",
+      "normalized_name": "ring ding",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "2DMHUE1Inway1eCAaq4Vua",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "いつまでも",
+      "normalized_name": "いつまでも",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "3Z6Li4ySCGc1Cqjm2QU6qT",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "ふたりの世界",
+      "normalized_name": "ふたりの世界",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "5xJgF12zKoxMqayN8YldLB",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "ジェニファー",
+      "normalized_name": "ジェニファー",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "7ySHoLhSRmWjfhuDmOcvTy",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "マトリョーシカ",
+      "normalized_name": "マトリョーシカ",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "4E88SLBhlKjBh2cpIHrYso",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "憧れてきたんだ",
+      "normalized_name": "憧れてきたんだ",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "6hCmUhgNYCYWMF6IYPS1um",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "漂白",
+      "normalized_name": "漂白",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "5lP7oqYYLpIhUv33KdS4HX",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "風のささやき",
+      "normalized_name": "風のささやき",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "1JKI1pTB2WZMMw7wF2jCTg",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "わかってない",
+      "normalized_name": "わかってない",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "3zMMws8RKXM1kuh5JFWowz",
+      "albums": [
+        "満月の夜なら"
+      ]
+    },
+    {
+      "name": "満月の夜なら",
+      "normalized_name": "満月の夜なら",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "1hXSgrWjLMLBOf9h6o4Xi2",
+      "albums": [
+        "満月の夜なら",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "満月の夜なら - Instrumental",
+      "normalized_name": "満月の夜なら instrumental",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "4s430D7RdGBh39MRmPed7W",
+      "albums": [
+        "満月の夜なら"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか Lil'Yukichi Remix",
+      "normalized_name": "愛を伝えたいだとか lilyukichi remix",
+      "first_release_date": "2018-05-10",
+      "spotify_track_id": "2YB3bCfwK39lU9iajd9ZG5",
+      "albums": [
+        "愛を伝えたいだとか Remix"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか Neetz ft. Ryohu \"studio991\" Remix",
+      "normalized_name": "愛を伝えたいだとか neetz ft ryohu studio991 remix",
+      "first_release_date": "2018-05-10",
+      "spotify_track_id": "5tLd2sNXKT5A5hnMshiGO2",
+      "albums": [
+        "愛を伝えたいだとか Remix"
+      ]
+    },
+    {
+      "name": "あなたのために",
+      "normalized_name": "あなたのために",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "4lfZIh0h4YCzfsZ5nWRFjl",
+      "albums": [
+        "マリーゴールド"
+      ]
+    },
+    {
+      "name": "マリーゴールド",
+      "normalized_name": "マリーゴールド",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "03V9Ypl9txWAY06UUirSJE",
+      "albums": [
+        "マリーゴールド",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "マリーゴールド - Instrumental",
+      "normalized_name": "マリーゴールド instrumental",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "4sd3bgBGyReNDbfPyuED1j",
+      "albums": [
+        "マリーゴールド"
+      ]
+    },
+    {
+      "name": "今夜このまま",
+      "normalized_name": "今夜このまま",
+      "first_release_date": "2018-10-24",
+      "spotify_track_id": "0sSG83UxY15ft1E2N9THYF",
+      "albums": [
+        "今夜このまま",
+        "今夜このまま",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "今夜このまま - Instrumental",
+      "normalized_name": "今夜このまま instrumental",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "03CxWAr50rdZYRO3igRqGs",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "猫 - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+      "normalized_name": "猫 2018 10 7 live at 上野恩賜公園 野外ステージ",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "2VqEVuY0NGIgkikBIj9cmn",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "風のささやき - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+      "normalized_name": "風のささやき 2018 10 7 live at 上野恩賜公園 野外ステージ",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "5YKZnooYjpGalbiTa9bOM3",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "GOOD NIGHT BABY",
+      "normalized_name": "good night baby",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "4WWlxCFO5M0gva6GYgFGHs",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "from 四階の角部屋",
+      "normalized_name": "from 四階の角部屋",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "6TFzT4oCM5vamJWRI4sWlu",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "あした世界が終わるとしても",
+      "normalized_name": "あした世界が終わるとしても",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "4cKEW1EDlagnqmExM6lVcm",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ひかりもの",
+      "normalized_name": "ひかりもの",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "6YjimBPZFdK0svohmSxjXv",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ら、のはなし",
+      "normalized_name": "ら、のはなし",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "2tgWF9EZzqiq4Qzdzeow1A",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "プレゼント",
+      "normalized_name": "プレゼント",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "1i6F01jxN0Qy7xFk3EldRO",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "二人だけの国",
+      "normalized_name": "二人だけの国",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "47ykT7pfFgvjCpk0c2MxBI",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "夢追いベンガル",
+      "normalized_name": "夢追いベンガル",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "526NsA2BI2b10l05a13VWm",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "恋をしたから",
+      "normalized_name": "恋をしたから",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "7EzYNSIxeihNDrYHSlU9Ak",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ハルノヒ",
+      "normalized_name": "ハルノヒ",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "7jFcbwPkMcEZK3bQhTzeAU",
+      "albums": [
+        "ハルノヒ",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "ハルノヒ - Instrumental",
+      "normalized_name": "ハルノヒ instrumental",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "5yVprEnWITaOSRgzZgyb08",
+      "albums": [
+        "ハルノヒ"
+      ]
+    },
+    {
+      "name": "鯉",
+      "normalized_name": "鯉",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "1L5nG7AwmjCAcxfuubekFb",
+      "albums": [
+        "ハルノヒ"
+      ]
+    },
+    {
+      "name": "テレパしい",
+      "normalized_name": "テレパしい",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "61Kvg3tFjHfVGikpkX1QBu",
+      "albums": [
+        "真夏の夜の匂いがする"
+      ]
+    },
+    {
+      "name": "真夏の夜の匂いがする",
+      "normalized_name": "真夏の夜の匂いがする",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "249Y5N1oHlVP4TZwogLYe7",
+      "albums": [
+        "真夏の夜の匂いがする",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "真夏の夜の匂いがする - Instrumental",
+      "normalized_name": "真夏の夜の匂いがする instrumental",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "5n3Mh1oOLVAJqf5ClLUdZI",
+      "albums": [
+        "真夏の夜の匂いがする"
+      ]
+    },
+    {
+      "name": "空の青さを知る人よ",
+      "normalized_name": "空の青さを知る人よ",
+      "first_release_date": "2019-09-13",
+      "spotify_track_id": "3u0e8pyoVc7l2u3T5thohY",
+      "albums": [
+        "空の青さを知る人よ",
+        "空の青さを知る人よ",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "空の青さを知る人よ - Instrumental",
+      "normalized_name": "空の青さを知る人よ instrumental",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "5JImfPbt7x2NROjK0Mn3k9",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "葵",
+      "normalized_name": "葵",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "0nvvaKnWZABiknO5fcRifn",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "葵 - Instrumental",
+      "normalized_name": "葵 instrumental",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "0t5QVal7wgz5o1dVaDYCjE",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "さよならの今日に",
+      "normalized_name": "さよならの今日に",
+      "first_release_date": "2020-02-14",
+      "spotify_track_id": "5B7hOlz4fU7LV5i6sfFBx2",
+      "albums": [
+        "さよならの今日に",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "裸の心 - Karaoke ver.",
+      "normalized_name": "裸の心 karaoke ver",
+      "first_release_date": "2020-05-22",
+      "spotify_track_id": "0ihhD5lEvBMwnfTjCsTmVQ",
+      "albums": [
+        "裸の心 (Karaoke ver.)"
+      ]
+    },
+    {
+      "name": "ユラユラ",
+      "normalized_name": "ユラユラ",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "5lRU5STufdgCrLV6CrVLMW",
+      "albums": [
+        "裸の心"
+      ]
+    },
+    {
+      "name": "裸の心",
+      "normalized_name": "裸の心",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "5yECjffMyY4SNW3SMayD5z",
+      "albums": [
+        "裸の心",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "裸の心 - Instrumental",
+      "normalized_name": "裸の心 instrumental",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "3QWYa8HHkynls24hKh0LfU",
+      "albums": [
+        "裸の心"
+      ]
+    },
+    {
+      "name": "朝陽",
+      "normalized_name": "朝陽",
+      "first_release_date": "2020-08-21",
+      "spotify_track_id": "2N3c4wGis6MNjshZ8X6o4s",
+      "albums": [
+        "朝陽",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "そんな風に生きている",
+      "normalized_name": "そんな風に生きている",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "27cClYTwaqWUvUQDqHJGqB",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "シガレット",
+      "normalized_name": "シガレット",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "4612XUQyCsuz4OOrOhbZej",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "チカ",
+      "normalized_name": "チカ",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "2XjxZtf0SXeeHG88TPIidm",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "ポプリの葉",
+      "normalized_name": "ポプリの葉",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "0iOqy0KqvYrAEXbh0tqqrk",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "マシマロ",
+      "normalized_name": "マシマロ",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "3BRHmDkirmIySxQF2M2TP2",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "黄昏にバカ話をしたあの日を思い出す時を",
+      "normalized_name": "黄昏にバカ話をしたあの日を思い出す時を",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "1pPpX61D2KTyx5IbKA0UCj",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "桜が降る夜は",
+      "normalized_name": "桜が降る夜は",
+      "first_release_date": "2021-02-17",
+      "spotify_track_id": "1iEsGutpDvMJG0zYqoKKmQ",
+      "albums": [
+        "桜が降る夜は",
+        "愛を知るまでは / 桜が降る夜は",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "スーパーガール",
+      "normalized_name": "スーパーガール",
+      "first_release_date": "2021-03-17",
+      "spotify_track_id": "2dwixhkS67B45PMId3tVyL",
+      "albums": [
+        "スーパーガール",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "愛を知るまでは",
+      "normalized_name": "愛を知るまでは",
+      "first_release_date": "2021-05-07",
+      "spotify_track_id": "5gh0y6ZmuppQvoPbAGkeE2",
+      "albums": [
+        "愛を知るまでは",
+        "愛を知るまでは / 桜が降る夜は",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "ミニスカートとハイライト",
+      "normalized_name": "ミニスカートとハイライト",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "6OEpa6LbabxmF1pFQLNJm4",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "愛を知るまでは - Instrumental",
+      "normalized_name": "愛を知るまでは instrumental",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "7MSAet0P9qx8FIdfyASaeX",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "桜が降る夜は - Instrumental",
+      "normalized_name": "桜が降る夜は instrumental",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "3bD4eHBf8GkKyPx9MPX0wy",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "ハート",
+      "normalized_name": "ハート",
+      "first_release_date": "2021-10-20",
+      "spotify_track_id": "6cvKfEw8rDcmXBslqSEC9G",
+      "albums": [
+        "ハート",
+        "ハート",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "ハート - Instrumental",
+      "normalized_name": "ハート instrumental",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "0kxncpP1rH0Pif07vypQx2",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "森のくまさん",
+      "normalized_name": "森のくまさん",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "4wWkjefqHMrVMjwnzvIAYT",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "森のくまさん - Instrumental",
+      "normalized_name": "森のくまさん instrumental",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "1KWPc5rrYputH3n4WEsnZd",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "双葉",
+      "normalized_name": "双葉",
+      "first_release_date": "2022-03-24",
+      "spotify_track_id": "0IAX0LbVY440WWJyOyuLw7",
+      "albums": [
+        "双葉",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "初恋が泣いている",
+      "normalized_name": "初恋が泣いている",
+      "first_release_date": "2022-05-11",
+      "spotify_track_id": "1vT6VdL9PrHOBziwubdt29",
+      "albums": [
+        "初恋が泣いている",
+        "初恋が泣いている",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "初恋が泣いている - Instrumental",
+      "normalized_name": "初恋が泣いている instrumental",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2boSxrUYWV6Iz9LC28G1XD",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "皐月",
+      "normalized_name": "皐月",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2tiex0oWYiAR9UWZ9SlFW3",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "皐月 - Instrumental",
+      "normalized_name": "皐月 instrumental",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "6pZNTZdzr1sW5ywOdSffrw",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "3636",
+      "normalized_name": "3636",
+      "first_release_date": "2022-07-29",
+      "spotify_track_id": "1v5PDAXZ2XHRNkdrbyjh6i",
+      "albums": [
+        "3636",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "インタビュー",
+      "normalized_name": "インタビュー",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "28plgD4ChGKy9DD6CJw9Iu",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "ペルソナの記憶",
+      "normalized_name": "ペルソナの記憶",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "3RxXuOv8Ek9ugFFRxxNc5J",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "君のこゝろ",
+      "normalized_name": "君のこゝろ",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "4z9eQafGoStgUATU9b7KNO",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "姿",
+      "normalized_name": "姿",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "5okAqlWhkOADHjd61PKslW",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "強くなっちゃったんだ、ブルー",
+      "normalized_name": "強くなっちゃったんだ、ブルー",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "6DjPoz2Abx4W7s8c0osJ3u",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "神秘の領域へ",
+      "normalized_name": "神秘の領域へ",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "6DgqBcs8YYhCunqicmABkT",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "愛の花",
+      "normalized_name": "愛の花",
+      "first_release_date": "2023-04-05",
+      "spotify_track_id": "4iBO3Jg6kSXZHw06db0ds3",
+      "albums": [
+        "愛の花",
+        "愛の花",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "彼氏有無",
+      "normalized_name": "彼氏有無",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "4vNSATS2LiCbgglkCicAuW",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "彼氏有無 - Instrumental",
+      "normalized_name": "彼氏有無 instrumental",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "6RCYHDFFABnCvaeOgQCZBy",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "愛の花 - Instrumental",
+      "normalized_name": "愛の花 instrumental",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "03jDTqnYzitsGv9iaZfgv8",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "3636 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "3636 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "4CMh0kdznyd79OYlLug9Ah",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "GOOD NIGHT BABY - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "good night baby live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1mNClbAkK6THcQEBXST0CE",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "tower of the sun - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "tower of the sun live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "4xB3TzAnujIx3zgiZ6nmvr",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "さよならの今日に - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "さよならの今日に live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7pEs3bUgzljHhq3ex9IIiK",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ら、のはなし - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ら、のはなし live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2XBuEJSz9AZL2JRNlmptA1",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "サーチライト - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "サーチライト live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2CMTkwbIVFHHxo1OCJMutu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ジェニファー - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ジェニファー live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2d2ja3Nc5FhDjbjl94gFOA",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ハルノヒ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ハルノヒ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2iTopxfOmrIayG8kXw3gx3",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "マトリョーシカ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "マトリョーシカ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3OUvxzk35IoOWTryE9khuu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "マリーゴールド - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "マリーゴールド live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7ahBYwmvay15bovT0Fihju",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "分かってくれよ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "分かってくれよ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3u4xJcGNnhLJmGoUdIxeU9",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "君はロックを聴かない - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "君はロックを聴かない live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7dQkqgvW0NTfb1PIlCH372",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "姿 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "姿 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6cNcUd4EoXvCyh6vaqnpAG",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "愛を伝えたいだとか live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3NFpYIF0vPpqrf1E7UIMzU",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "憧れてきたんだ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "憧れてきたんだ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1SL6CGZaB86ImPFjLBkzcq",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "満月の夜なら - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "満月の夜なら live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "5sN8bvA6qowgTNKIKUM4lF",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "生きていたんだよな - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "生きていたんだよな live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6MsBaNYXjwt6KXrd0xx9Vu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "裸の心 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "裸の心 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6A89pDNnfulUlEyX24yvic",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "貴方解剖純愛歌～死ね～ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "貴方解剖純愛歌 死ね live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1FLxrslDIwBr4Ui1qzNCc2",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ノット・オーケー",
+      "normalized_name": "ノット・オーケー",
+      "first_release_date": "2023-10-03",
+      "spotify_track_id": "3DL6F8sLqcL3y0zJClSdIg",
+      "albums": [
+        "ノット・オーケー",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "あのね",
+      "normalized_name": "あのね",
+      "first_release_date": "2023-11-15",
+      "spotify_track_id": "2mUJj7zCnQYzM9vz3sIXAP",
+      "albums": [
+        "あのね",
+        "あのね",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "die die die",
+      "normalized_name": "die die die",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "4xgygQkGuHvz65JkboKJv8",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "die die die - Instrumental",
+      "normalized_name": "die die die instrumental",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "6AuWwD72zooG6mAWzktYZt",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "あのね - Instrumental",
+      "normalized_name": "あのね instrumental",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "6IGga3vrXFkhmeeRr1SCED",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "リズム64",
+      "normalized_name": "リズム64",
+      "first_release_date": "2024-02-02",
+      "spotify_track_id": "74GJbmNHys47ZfdoQCySpM",
+      "albums": [
+        "リズム64",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "ねむい",
+      "normalized_name": "ねむい",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "2bFD9IB70Zu4kYyjDOD4Yw",
+      "albums": [
+        "会いに行くのに"
+      ]
+    },
+    {
+      "name": "会いに行くのに",
+      "normalized_name": "会いに行くのに",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "4SqzPre17MGrtHxFUqd1yD",
+      "albums": [
+        "会いに行くのに",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "会いに行くのに - Instrumental",
+      "normalized_name": "会いに行くのに instrumental",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "1GG7Ad7ZYhr2iE6cGlCCha",
+      "albums": [
+        "会いに行くのに"
+      ]
+    },
+    {
+      "name": "ラッキーカラー",
+      "normalized_name": "ラッキーカラー",
+      "first_release_date": "2024-07-05",
+      "spotify_track_id": "5Fzv7ho7XOwvvEOvxFnnTp",
+      "albums": [
+        "ラッキーカラー",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "ざらめ",
+      "normalized_name": "ざらめ",
+      "first_release_date": "2024-07-29",
+      "spotify_track_id": "2FUtiVlT3BnqzHYd21Gy2e",
+      "albums": [
+        "ざらめ",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "偽者",
+      "normalized_name": "偽者",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "4JgL78Y8FKx7WnsMjOr6oC",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "朝が嫌い",
+      "normalized_name": "朝が嫌い",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "3gQF1xjIUKDJSPjd2U5fgo",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "炎曜日",
+      "normalized_name": "炎曜日",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "4ZpV3Qa0DTKX8Pv9FNv6df",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "猫にジェラシー",
+      "normalized_name": "猫にジェラシー",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "6Qr07C97QliK35ZQGs941S",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "私に見せてよ",
+      "normalized_name": "私に見せてよ",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "7AWiR6jX98SI0aj4ITCREc",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "駅前喫茶ポプラ",
+      "normalized_name": "駅前喫茶ポプラ",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "3DBFjSLqFWAl9EZnBZBFIl",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "スケッチ",
+      "normalized_name": "スケッチ",
+      "first_release_date": "2025-02-14",
+      "spotify_track_id": "1qyMHya2R2k57MApk6kBzI",
+      "albums": [
+        "スケッチ",
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "おばけがでるぞ",
+      "normalized_name": "おばけがでるぞ",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "7EZnpx682fove3OIZIj6wg",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "おばけがでるぞ - Instrumental",
+      "normalized_name": "おばけがでるぞ instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "4VuOh7nzJSYFXwINnYCFSE",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "スケッチ - Instrumental",
+      "normalized_name": "スケッチ instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "2h7OJPJ1tEBANfUDmSLv9U",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "君の夢を聞きながら、僕は笑えるアイデアを！",
+      "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "3MUMstYpfxZ1P6KI685xJq",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "君の夢を聞きながら、僕は笑えるアイデアを！ - Instrumental",
+      "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "6ZnApI0Wef4ZsJ9a1YDBP5",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "いちについて",
+      "normalized_name": "いちについて",
+      "first_release_date": "2025-07-23",
+      "spotify_track_id": "454rsP0XW1Yzi9yhdEENrT",
+      "albums": [
+        "いちについて"
+      ]
+    },
+    {
+      "name": "おじゃまします",
+      "normalized_name": "おじゃまします",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "39VhcTPK5SMSzNGxfO4O91",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    },
+    {
+      "name": "おじゃまします - Instrumental",
+      "normalized_name": "おじゃまします instrumental",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "6oa0VllXUfL21QqQu3i6Fi",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    },
+    {
+      "name": "ビーナスベルト",
+      "normalized_name": "ビーナスベルト",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "0fy6lDOFDzmt0ygCzkft4e",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    },
+    {
+      "name": "ビーナスベルト - Instrumental",
+      "normalized_name": "ビーナスベルト instrumental",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "38N4Dwxr3Yyvofq1IM00HZ",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "○○ちゃん",
+      "normalized_name": "○○ちゃん",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "4rf6m9hF1RGwR57Vv5NXv8",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "お互い様やん",
+      "normalized_name": "お互い様やん",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "7sXEjgKp9aYqMOQnrGH8B6",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+      "normalized_name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6UfzyOza3E5A79BJrEKd3U",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "分かってくれよ",
+      "normalized_name": "分かってくれよ",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "1VYkyV2KfznZ2dg23HNRIN",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "夜行バス",
+      "normalized_name": "夜行バス",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "2ZQdj815zFC7lKTYQqjhSZ",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "幸せになりたい",
+      "normalized_name": "幸せになりたい",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6dZT5MmHLEfSJoLVlX76wo",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "強がりました",
+      "normalized_name": "強がりました",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "6vcaiCF2960ECAVrO6g6mj",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "貴方解剖純愛歌〜死ね〜",
+      "normalized_name": "貴方解剖純愛歌〜死ね〜",
+      "first_release_date": "2015-08-05",
+      "spotify_track_id": "2H3bOGOE50qEo5wAYoJiwL",
+      "albums": [
+        "tamago"
+      ]
+    },
+    {
+      "name": "19歳になりたくない",
+      "normalized_name": "19歳になりたくない",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "0X4mJkYZ7JzhqbpAlTbqLT",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "おっぱい",
+      "normalized_name": "おっぱい",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "08Xhmc5B5gDPYFrL1uKVJI",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "どうせ死ぬなら",
+      "normalized_name": "どうせ死ぬなら",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "7J9HCPtyUR6ZlGRhXmj7td",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "ほろ酔い",
+      "normalized_name": "ほろ酔い",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "4SZDkESMCRG61BhvbmLUqS",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "好きって言ってよ",
+      "normalized_name": "好きって言ってよ",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "7tBPxHhEhG7jqw37d6Epmu",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "泥だんごの天才いたよね",
+      "normalized_name": "泥だんごの天才いたよね",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "1NAkjqsp5HHJj9fA4kf4Td",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "私に彼氏ができない理由",
+      "normalized_name": "私に彼氏ができない理由",
+      "first_release_date": "2015-12-02",
+      "spotify_track_id": "4L6ZAAjGMMK6IL1orx4zhJ",
+      "albums": [
+        "憎まれっ子世に憚る"
+      ]
+    },
+    {
+      "name": "今日の芸術",
+      "normalized_name": "今日の芸術",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "6vOaJyty7o0nKgLGRNfNnH",
+      "albums": [
+        "生きていたんだよな"
+      ]
+    },
+    {
+      "name": "君がいない夜を越えられやしない",
+      "normalized_name": "君がいない夜を越えられやしない",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "22pn8HHUVwOiwpAe429zHu",
+      "albums": [
+        "生きていたんだよな"
+      ]
+    },
+    {
+      "name": "生きていたんだよな",
+      "normalized_name": "生きていたんだよな",
+      "first_release_date": "2016-11-30",
+      "spotify_track_id": "2NsH0dlXCvarCtIgSPZpLJ",
+      "albums": [
+        "生きていたんだよな",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "MIO",
+      "normalized_name": "mio",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "08VGeXX2EvEtTnV2XNGfTi",
+      "albums": [
+        "愛を伝えたいだとか"
+      ]
+    },
+    {
+      "name": "ハッピー",
+      "normalized_name": "ハッピー",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "4goU64b7u75Lu0qltJtBCQ",
+      "albums": [
+        "愛を伝えたいだとか"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか",
+      "normalized_name": "愛を伝えたいだとか",
+      "first_release_date": "2017-05-03",
+      "spotify_track_id": "3hnc4KOBcUB6bC7gGwlBPG",
+      "albums": [
+        "愛を伝えたいだとか",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "君はロックを聴かない",
+      "normalized_name": "君はロックを聴かない",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "01IZAuQsBO00iLKFO9LsFf",
+      "albums": [
+        "君はロックを聴かない",
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "青春と青春と青春",
+      "normalized_name": "青春と青春と青春",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "7Hg40WRVv4G6wsbmOXZ5Fi",
+      "albums": [
+        "君はロックを聴かない"
+      ]
+    },
+    {
+      "name": "RING DING",
+      "normalized_name": "ring ding",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "2DMHUE1Inway1eCAaq4Vua",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "いつまでも",
+      "normalized_name": "いつまでも",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "3Z6Li4ySCGc1Cqjm2QU6qT",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "ふたりの世界",
+      "normalized_name": "ふたりの世界",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "5xJgF12zKoxMqayN8YldLB",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "ジェニファー",
+      "normalized_name": "ジェニファー",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "7ySHoLhSRmWjfhuDmOcvTy",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "マトリョーシカ",
+      "normalized_name": "マトリョーシカ",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "4E88SLBhlKjBh2cpIHrYso",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "憧れてきたんだ",
+      "normalized_name": "憧れてきたんだ",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "6hCmUhgNYCYWMF6IYPS1um",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "漂白",
+      "normalized_name": "漂白",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "5lP7oqYYLpIhUv33KdS4HX",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "風のささやき",
+      "normalized_name": "風のささやき",
+      "first_release_date": "2017-09-12",
+      "spotify_track_id": "1JKI1pTB2WZMMw7wF2jCTg",
+      "albums": [
+        "青春のエキサイトメント"
+      ]
+    },
+    {
+      "name": "わかってない",
+      "normalized_name": "わかってない",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "3zMMws8RKXM1kuh5JFWowz",
+      "albums": [
+        "満月の夜なら"
+      ]
+    },
+    {
+      "name": "満月の夜なら",
+      "normalized_name": "満月の夜なら",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "1hXSgrWjLMLBOf9h6o4Xi2",
+      "albums": [
+        "満月の夜なら",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか Lil'Yukichi Remix",
+      "normalized_name": "愛を伝えたいだとか lilyukichi remix",
+      "first_release_date": "2018-05-10",
+      "spotify_track_id": "2YB3bCfwK39lU9iajd9ZG5",
+      "albums": [
+        "愛を伝えたいだとか Remix"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか Neetz ft. Ryohu \"studio991\" Remix",
+      "normalized_name": "愛を伝えたいだとか neetz ft ryohu studio991 remix",
+      "first_release_date": "2018-05-10",
+      "spotify_track_id": "5tLd2sNXKT5A5hnMshiGO2",
+      "albums": [
+        "愛を伝えたいだとか Remix"
+      ]
+    },
+    {
+      "name": "あなたのために",
+      "normalized_name": "あなたのために",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "4lfZIh0h4YCzfsZ5nWRFjl",
+      "albums": [
+        "マリーゴールド"
+      ]
+    },
+    {
+      "name": "マリーゴールド",
+      "normalized_name": "マリーゴールド",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "03V9Ypl9txWAY06UUirSJE",
+      "albums": [
+        "マリーゴールド",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "今夜このまま",
+      "normalized_name": "今夜このまま",
+      "first_release_date": "2018-10-24",
+      "spotify_track_id": "0sSG83UxY15ft1E2N9THYF",
+      "albums": [
+        "今夜このまま",
+        "今夜このまま",
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "猫 - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+      "normalized_name": "猫 2018 10 7 live at 上野恩賜公園 野外ステージ",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "2VqEVuY0NGIgkikBIj9cmn",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "風のささやき - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+      "normalized_name": "風のささやき 2018 10 7 live at 上野恩賜公園 野外ステージ",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "5YKZnooYjpGalbiTa9bOM3",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "GOOD NIGHT BABY",
+      "normalized_name": "good night baby",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "4WWlxCFO5M0gva6GYgFGHs",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "from 四階の角部屋",
+      "normalized_name": "from 四階の角部屋",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "6TFzT4oCM5vamJWRI4sWlu",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "あした世界が終わるとしても",
+      "normalized_name": "あした世界が終わるとしても",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "4cKEW1EDlagnqmExM6lVcm",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ひかりもの",
+      "normalized_name": "ひかりもの",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "6YjimBPZFdK0svohmSxjXv",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ら、のはなし",
+      "normalized_name": "ら、のはなし",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "2tgWF9EZzqiq4Qzdzeow1A",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "プレゼント",
+      "normalized_name": "プレゼント",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "1i6F01jxN0Qy7xFk3EldRO",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "二人だけの国",
+      "normalized_name": "二人だけの国",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "47ykT7pfFgvjCpk0c2MxBI",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "夢追いベンガル",
+      "normalized_name": "夢追いベンガル",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "526NsA2BI2b10l05a13VWm",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "恋をしたから",
+      "normalized_name": "恋をしたから",
+      "first_release_date": "2019-02-13",
+      "spotify_track_id": "7EzYNSIxeihNDrYHSlU9Ak",
+      "albums": [
+        "瞬間的シックスセンス"
+      ]
+    },
+    {
+      "name": "ハルノヒ",
+      "normalized_name": "ハルノヒ",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "7jFcbwPkMcEZK3bQhTzeAU",
+      "albums": [
+        "ハルノヒ",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "鯉",
+      "normalized_name": "鯉",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "1L5nG7AwmjCAcxfuubekFb",
+      "albums": [
+        "ハルノヒ"
+      ]
+    },
+    {
+      "name": "テレパしい",
+      "normalized_name": "テレパしい",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "61Kvg3tFjHfVGikpkX1QBu",
+      "albums": [
+        "真夏の夜の匂いがする"
+      ]
+    },
+    {
+      "name": "真夏の夜の匂いがする",
+      "normalized_name": "真夏の夜の匂いがする",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "249Y5N1oHlVP4TZwogLYe7",
+      "albums": [
+        "真夏の夜の匂いがする",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "空の青さを知る人よ",
+      "normalized_name": "空の青さを知る人よ",
+      "first_release_date": "2019-09-13",
+      "spotify_track_id": "3u0e8pyoVc7l2u3T5thohY",
+      "albums": [
+        "空の青さを知る人よ",
+        "空の青さを知る人よ",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "葵",
+      "normalized_name": "葵",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "0nvvaKnWZABiknO5fcRifn",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "さよならの今日に",
+      "normalized_name": "さよならの今日に",
+      "first_release_date": "2020-02-14",
+      "spotify_track_id": "5B7hOlz4fU7LV5i6sfFBx2",
+      "albums": [
+        "さよならの今日に",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "ユラユラ",
+      "normalized_name": "ユラユラ",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "5lRU5STufdgCrLV6CrVLMW",
+      "albums": [
+        "裸の心"
+      ]
+    },
+    {
+      "name": "裸の心",
+      "normalized_name": "裸の心",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "5yECjffMyY4SNW3SMayD5z",
+      "albums": [
+        "裸の心",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "朝陽",
+      "normalized_name": "朝陽",
+      "first_release_date": "2020-08-21",
+      "spotify_track_id": "2N3c4wGis6MNjshZ8X6o4s",
+      "albums": [
+        "朝陽",
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "そんな風に生きている",
+      "normalized_name": "そんな風に生きている",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "27cClYTwaqWUvUQDqHJGqB",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "シガレット",
+      "normalized_name": "シガレット",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "4612XUQyCsuz4OOrOhbZej",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "チカ",
+      "normalized_name": "チカ",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "2XjxZtf0SXeeHG88TPIidm",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "ポプリの葉",
+      "normalized_name": "ポプリの葉",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "0iOqy0KqvYrAEXbh0tqqrk",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "マシマロ",
+      "normalized_name": "マシマロ",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "3BRHmDkirmIySxQF2M2TP2",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "黄昏にバカ話をしたあの日を思い出す時を",
+      "normalized_name": "黄昏にバカ話をしたあの日を思い出す時を",
+      "first_release_date": "2020-09-09",
+      "spotify_track_id": "1pPpX61D2KTyx5IbKA0UCj",
+      "albums": [
+        "おいしいパスタがあると聞いて"
+      ]
+    },
+    {
+      "name": "桜が降る夜は",
+      "normalized_name": "桜が降る夜は",
+      "first_release_date": "2021-02-17",
+      "spotify_track_id": "1iEsGutpDvMJG0zYqoKKmQ",
+      "albums": [
+        "桜が降る夜は",
+        "愛を知るまでは / 桜が降る夜は",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "スーパーガール",
+      "normalized_name": "スーパーガール",
+      "first_release_date": "2021-03-17",
+      "spotify_track_id": "2dwixhkS67B45PMId3tVyL",
+      "albums": [
+        "スーパーガール",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "愛を知るまでは",
+      "normalized_name": "愛を知るまでは",
+      "first_release_date": "2021-05-07",
+      "spotify_track_id": "5gh0y6ZmuppQvoPbAGkeE2",
+      "albums": [
+        "愛を知るまでは",
+        "愛を知るまでは / 桜が降る夜は",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "ミニスカートとハイライト",
+      "normalized_name": "ミニスカートとハイライト",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "6OEpa6LbabxmF1pFQLNJm4",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "ハート",
+      "normalized_name": "ハート",
+      "first_release_date": "2021-10-20",
+      "spotify_track_id": "6cvKfEw8rDcmXBslqSEC9G",
+      "albums": [
+        "ハート",
+        "ハート",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "森のくまさん",
+      "normalized_name": "森のくまさん",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "4wWkjefqHMrVMjwnzvIAYT",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "双葉",
+      "normalized_name": "双葉",
+      "first_release_date": "2022-03-24",
+      "spotify_track_id": "0IAX0LbVY440WWJyOyuLw7",
+      "albums": [
+        "双葉",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "初恋が泣いている",
+      "normalized_name": "初恋が泣いている",
+      "first_release_date": "2022-05-11",
+      "spotify_track_id": "1vT6VdL9PrHOBziwubdt29",
+      "albums": [
+        "初恋が泣いている",
+        "初恋が泣いている",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "皐月",
+      "normalized_name": "皐月",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2tiex0oWYiAR9UWZ9SlFW3",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "3636",
+      "normalized_name": "3636",
+      "first_release_date": "2022-07-29",
+      "spotify_track_id": "1v5PDAXZ2XHRNkdrbyjh6i",
+      "albums": [
+        "3636",
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "インタビュー",
+      "normalized_name": "インタビュー",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "28plgD4ChGKy9DD6CJw9Iu",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "ペルソナの記憶",
+      "normalized_name": "ペルソナの記憶",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "3RxXuOv8Ek9ugFFRxxNc5J",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "君のこゝろ",
+      "normalized_name": "君のこゝろ",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "4z9eQafGoStgUATU9b7KNO",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "姿",
+      "normalized_name": "姿",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "5okAqlWhkOADHjd61PKslW",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "強くなっちゃったんだ、ブルー",
+      "normalized_name": "強くなっちゃったんだ、ブルー",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "6DjPoz2Abx4W7s8c0osJ3u",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "神秘の領域へ",
+      "normalized_name": "神秘の領域へ",
+      "first_release_date": "2022-08-17",
+      "spotify_track_id": "6DgqBcs8YYhCunqicmABkT",
+      "albums": [
+        "瞳へ落ちるよレコード"
+      ]
+    },
+    {
+      "name": "愛の花",
+      "normalized_name": "愛の花",
+      "first_release_date": "2023-04-05",
+      "spotify_track_id": "4iBO3Jg6kSXZHw06db0ds3",
+      "albums": [
+        "愛の花",
+        "愛の花",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "彼氏有無",
+      "normalized_name": "彼氏有無",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "4vNSATS2LiCbgglkCicAuW",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "3636 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "3636 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "4CMh0kdznyd79OYlLug9Ah",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "GOOD NIGHT BABY - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "good night baby live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1mNClbAkK6THcQEBXST0CE",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "tower of the sun - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "tower of the sun live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "4xB3TzAnujIx3zgiZ6nmvr",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "さよならの今日に - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "さよならの今日に live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7pEs3bUgzljHhq3ex9IIiK",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ら、のはなし - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ら、のはなし live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2XBuEJSz9AZL2JRNlmptA1",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "サーチライト - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "サーチライト live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2CMTkwbIVFHHxo1OCJMutu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ジェニファー - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ジェニファー live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2d2ja3Nc5FhDjbjl94gFOA",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ハルノヒ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "ハルノヒ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "2iTopxfOmrIayG8kXw3gx3",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "マトリョーシカ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "マトリョーシカ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3OUvxzk35IoOWTryE9khuu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "マリーゴールド - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "マリーゴールド live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7ahBYwmvay15bovT0Fihju",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "分かってくれよ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "分かってくれよ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3u4xJcGNnhLJmGoUdIxeU9",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "君はロックを聴かない - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "君はロックを聴かない live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "7dQkqgvW0NTfb1PIlCH372",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "姿 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "姿 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6cNcUd4EoXvCyh6vaqnpAG",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "愛を伝えたいだとか - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "愛を伝えたいだとか live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3NFpYIF0vPpqrf1E7UIMzU",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "憧れてきたんだ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "憧れてきたんだ live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1SL6CGZaB86ImPFjLBkzcq",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "満月の夜なら - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "満月の夜なら live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "5sN8bvA6qowgTNKIKUM4lF",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "生きていたんだよな - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "生きていたんだよな live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6MsBaNYXjwt6KXrd0xx9Vu",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "裸の心 - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "裸の心 live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6A89pDNnfulUlEyX24yvic",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "貴方解剖純愛歌～死ね～ - Live in 阪神甲子園球場, 2022.11.05",
+      "normalized_name": "貴方解剖純愛歌 死ね live in 阪神甲子園球場 2022 11 05",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1FLxrslDIwBr4Ui1qzNCc2",
+      "albums": [
+        "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場"
+      ]
+    },
+    {
+      "name": "ノット・オーケー",
+      "normalized_name": "ノット・オーケー",
+      "first_release_date": "2023-10-03",
+      "spotify_track_id": "3DL6F8sLqcL3y0zJClSdIg",
+      "albums": [
+        "ノット・オーケー",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "あのね",
+      "normalized_name": "あのね",
+      "first_release_date": "2023-11-15",
+      "spotify_track_id": "2mUJj7zCnQYzM9vz3sIXAP",
+      "albums": [
+        "あのね",
+        "あのね",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "die die die",
+      "normalized_name": "die die die",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "4xgygQkGuHvz65JkboKJv8",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "リズム64",
+      "normalized_name": "リズム64",
+      "first_release_date": "2024-02-02",
+      "spotify_track_id": "74GJbmNHys47ZfdoQCySpM",
+      "albums": [
+        "リズム64",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "ねむい",
+      "normalized_name": "ねむい",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "2bFD9IB70Zu4kYyjDOD4Yw",
+      "albums": [
+        "会いに行くのに"
+      ]
+    },
+    {
+      "name": "会いに行くのに",
+      "normalized_name": "会いに行くのに",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "4SqzPre17MGrtHxFUqd1yD",
+      "albums": [
+        "会いに行くのに",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "ラッキーカラー",
+      "normalized_name": "ラッキーカラー",
+      "first_release_date": "2024-07-05",
+      "spotify_track_id": "5Fzv7ho7XOwvvEOvxFnnTp",
+      "albums": [
+        "ラッキーカラー",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "ざらめ",
+      "normalized_name": "ざらめ",
+      "first_release_date": "2024-07-29",
+      "spotify_track_id": "2FUtiVlT3BnqzHYd21Gy2e",
+      "albums": [
+        "ざらめ",
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "偽者",
+      "normalized_name": "偽者",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "4JgL78Y8FKx7WnsMjOr6oC",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "朝が嫌い",
+      "normalized_name": "朝が嫌い",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "3gQF1xjIUKDJSPjd2U5fgo",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "炎曜日",
+      "normalized_name": "炎曜日",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "4ZpV3Qa0DTKX8Pv9FNv6df",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "猫にジェラシー",
+      "normalized_name": "猫にジェラシー",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "6Qr07C97QliK35ZQGs941S",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "私に見せてよ",
+      "normalized_name": "私に見せてよ",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "7AWiR6jX98SI0aj4ITCREc",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "駅前喫茶ポプラ",
+      "normalized_name": "駅前喫茶ポプラ",
+      "first_release_date": "2024-09-11",
+      "spotify_track_id": "3DBFjSLqFWAl9EZnBZBFIl",
+      "albums": [
+        "猫にジェラシー"
+      ]
+    },
+    {
+      "name": "スケッチ",
+      "normalized_name": "スケッチ",
+      "first_release_date": "2025-02-14",
+      "spotify_track_id": "1qyMHya2R2k57MApk6kBzI",
+      "albums": [
+        "スケッチ",
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "おばけがでるぞ",
+      "normalized_name": "おばけがでるぞ",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "7EZnpx682fove3OIZIj6wg",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "君の夢を聞きながら、僕は笑えるアイデアを！",
+      "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "3MUMstYpfxZ1P6KI685xJq",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "いちについて",
+      "normalized_name": "いちについて",
+      "first_release_date": "2025-07-23",
+      "spotify_track_id": "454rsP0XW1Yzi9yhdEENrT",
+      "albums": [
+        "いちについて"
+      ]
+    },
+    {
+      "name": "おじゃまします",
+      "normalized_name": "おじゃまします",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "39VhcTPK5SMSzNGxfO4O91",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    },
+    {
+      "name": "ビーナスベルト",
+      "normalized_name": "ビーナスベルト",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "0fy6lDOFDzmt0ygCzkft4e",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [
+    {
+      "name": "君はロックを聴かない - Instrumental",
+      "normalized_name": "君はロックを聴かない instrumental",
+      "first_release_date": "2017-08-01",
+      "spotify_track_id": "3VE8TCehq7QJp0W0kgYGHL",
+      "albums": [
+        "君はロックを聴かない"
+      ]
+    },
+    {
+      "name": "満月の夜なら - Instrumental",
+      "normalized_name": "満月の夜なら instrumental",
+      "first_release_date": "2018-04-25",
+      "spotify_track_id": "4s430D7RdGBh39MRmPed7W",
+      "albums": [
+        "満月の夜なら"
+      ]
+    },
+    {
+      "name": "マリーゴールド - Instrumental",
+      "normalized_name": "マリーゴールド instrumental",
+      "first_release_date": "2018-08-08",
+      "spotify_track_id": "4sd3bgBGyReNDbfPyuED1j",
+      "albums": [
+        "マリーゴールド"
+      ]
+    },
+    {
+      "name": "今夜このまま - Instrumental",
+      "normalized_name": "今夜このまま instrumental",
+      "first_release_date": "2018-11-14",
+      "spotify_track_id": "03CxWAr50rdZYRO3igRqGs",
+      "albums": [
+        "今夜このまま"
+      ]
+    },
+    {
+      "name": "ハルノヒ - Instrumental",
+      "normalized_name": "ハルノヒ instrumental",
+      "first_release_date": "2019-04-17",
+      "spotify_track_id": "5yVprEnWITaOSRgzZgyb08",
+      "albums": [
+        "ハルノヒ"
+      ]
+    },
+    {
+      "name": "真夏の夜の匂いがする - Instrumental",
+      "normalized_name": "真夏の夜の匂いがする instrumental",
+      "first_release_date": "2019-07-24",
+      "spotify_track_id": "5n3Mh1oOLVAJqf5ClLUdZI",
+      "albums": [
+        "真夏の夜の匂いがする"
+      ]
+    },
+    {
+      "name": "空の青さを知る人よ - Instrumental",
+      "normalized_name": "空の青さを知る人よ instrumental",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "5JImfPbt7x2NROjK0Mn3k9",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "葵 - Instrumental",
+      "normalized_name": "葵 instrumental",
+      "first_release_date": "2019-10-02",
+      "spotify_track_id": "0t5QVal7wgz5o1dVaDYCjE",
+      "albums": [
+        "空の青さを知る人よ"
+      ]
+    },
+    {
+      "name": "裸の心 - Karaoke ver.",
+      "normalized_name": "裸の心 karaoke ver",
+      "first_release_date": "2020-05-22",
+      "spotify_track_id": "0ihhD5lEvBMwnfTjCsTmVQ",
+      "albums": [
+        "裸の心 (Karaoke ver.)"
+      ]
+    },
+    {
+      "name": "裸の心 - Instrumental",
+      "normalized_name": "裸の心 instrumental",
+      "first_release_date": "2020-06-17",
+      "spotify_track_id": "3QWYa8HHkynls24hKh0LfU",
+      "albums": [
+        "裸の心"
+      ]
+    },
+    {
+      "name": "愛を知るまでは - Instrumental",
+      "normalized_name": "愛を知るまでは instrumental",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "7MSAet0P9qx8FIdfyASaeX",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "桜が降る夜は - Instrumental",
+      "normalized_name": "桜が降る夜は instrumental",
+      "first_release_date": "2021-05-26",
+      "spotify_track_id": "3bD4eHBf8GkKyPx9MPX0wy",
+      "albums": [
+        "愛を知るまでは / 桜が降る夜は"
+      ]
+    },
+    {
+      "name": "ハート - Instrumental",
+      "normalized_name": "ハート instrumental",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "0kxncpP1rH0Pif07vypQx2",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "森のくまさん - Instrumental",
+      "normalized_name": "森のくまさん instrumental",
+      "first_release_date": "2021-11-24",
+      "spotify_track_id": "1KWPc5rrYputH3n4WEsnZd",
+      "albums": [
+        "ハート"
+      ]
+    },
+    {
+      "name": "初恋が泣いている - Instrumental",
+      "normalized_name": "初恋が泣いている instrumental",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2boSxrUYWV6Iz9LC28G1XD",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "皐月 - Instrumental",
+      "normalized_name": "皐月 instrumental",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "6pZNTZdzr1sW5ywOdSffrw",
+      "albums": [
+        "初恋が泣いている"
+      ]
+    },
+    {
+      "name": "彼氏有無 - Instrumental",
+      "normalized_name": "彼氏有無 instrumental",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "6RCYHDFFABnCvaeOgQCZBy",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "愛の花 - Instrumental",
+      "normalized_name": "愛の花 instrumental",
+      "first_release_date": "2023-06-07",
+      "spotify_track_id": "03jDTqnYzitsGv9iaZfgv8",
+      "albums": [
+        "愛の花"
+      ]
+    },
+    {
+      "name": "die die die - Instrumental",
+      "normalized_name": "die die die instrumental",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "6AuWwD72zooG6mAWzktYZt",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "あのね - Instrumental",
+      "normalized_name": "あのね instrumental",
+      "first_release_date": "2023-12-06",
+      "spotify_track_id": "6IGga3vrXFkhmeeRr1SCED",
+      "albums": [
+        "あのね"
+      ]
+    },
+    {
+      "name": "会いに行くのに - Instrumental",
+      "normalized_name": "会いに行くのに instrumental",
+      "first_release_date": "2024-05-22",
+      "spotify_track_id": "1GG7Ad7ZYhr2iE6cGlCCha",
+      "albums": [
+        "会いに行くのに"
+      ]
+    },
+    {
+      "name": "おばけがでるぞ - Instrumental",
+      "normalized_name": "おばけがでるぞ instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "4VuOh7nzJSYFXwINnYCFSE",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "スケッチ - Instrumental",
+      "normalized_name": "スケッチ instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "2h7OJPJ1tEBANfUDmSLv9U",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "君の夢を聞きながら、僕は笑えるアイデアを！ - Instrumental",
+      "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを instrumental",
+      "first_release_date": "2025-03-05",
+      "spotify_track_id": "6ZnApI0Wef4ZsJ9a1YDBP5",
+      "albums": [
+        "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！"
+      ]
+    },
+    {
+      "name": "おじゃまします - Instrumental",
+      "normalized_name": "おじゃまします instrumental",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "6oa0VllXUfL21QqQu3i6Fi",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    },
+    {
+      "name": "ビーナスベルト - Instrumental",
+      "normalized_name": "ビーナスベルト instrumental",
+      "first_release_date": "2025-10-22",
+      "spotify_track_id": "38N4Dwxr3Yyvofq1IM00HZ",
+      "albums": [
+        "ビーナスベルト"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "album_id": "2QDPEpzxtuvLuE21DtGTBh",
+      "name": "tamago",
+      "album_type": "album",
+      "release_date": "2015-08-05",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/2QDPEpzxtuvLuE21DtGTBh",
+      "tracks": [
+        {
+          "track_id": "2H3bOGOE50qEo5wAYoJiwL",
+          "name": "貴方解剖純愛歌〜死ね〜",
+          "normalized_name": "貴方解剖純愛歌〜死ね〜",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 266520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2H3bOGOE50qEo5wAYoJiwL"
+        },
+        {
+          "track_id": "1VYkyV2KfznZ2dg23HNRIN",
+          "name": "分かってくれよ",
+          "normalized_name": "分かってくれよ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 285413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1VYkyV2KfznZ2dg23HNRIN"
+        },
+        {
+          "track_id": "7sXEjgKp9aYqMOQnrGH8B6",
+          "name": "お互い様やん",
+          "normalized_name": "お互い様やん",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 181186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7sXEjgKp9aYqMOQnrGH8B6"
+        },
+        {
+          "track_id": "4rf6m9hF1RGwR57Vv5NXv8",
+          "name": "○○ちゃん",
+          "normalized_name": "○○ちゃん",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 273640,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4rf6m9hF1RGwR57Vv5NXv8"
+        },
+        {
+          "track_id": "2ZQdj815zFC7lKTYQqjhSZ",
+          "name": "夜行バス",
+          "normalized_name": "夜行バス",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 239533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ZQdj815zFC7lKTYQqjhSZ"
+        },
+        {
+          "track_id": "6dZT5MmHLEfSJoLVlX76wo",
+          "name": "幸せになりたい",
+          "normalized_name": "幸せになりたい",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 230573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6dZT5MmHLEfSJoLVlX76wo"
+        },
+        {
+          "track_id": "6vcaiCF2960ECAVrO6g6mj",
+          "name": "強がりました",
+          "normalized_name": "強がりました",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 304013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6vcaiCF2960ECAVrO6g6mj"
+        },
+        {
+          "track_id": "6UfzyOza3E5A79BJrEKd3U",
+          "name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+          "normalized_name": "ナウなヤングにバカウケするのは当たり前だのクラッ歌",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 217746,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6UfzyOza3E5A79BJrEKd3U"
+        }
+      ]
+    },
+    {
+      "album_id": "6qkgONFlIASOpkZinBbCAY",
+      "name": "憎まれっ子世に憚る",
+      "album_type": "album",
+      "release_date": "2015-12-02",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "spotify_url": "https://open.spotify.com/album/6qkgONFlIASOpkZinBbCAY",
+      "tracks": [
+        {
+          "track_id": "7J9HCPtyUR6ZlGRhXmj7td",
+          "name": "どうせ死ぬなら",
+          "normalized_name": "どうせ死ぬなら",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 307533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7J9HCPtyUR6ZlGRhXmj7td"
+        },
+        {
+          "track_id": "0X4mJkYZ7JzhqbpAlTbqLT",
+          "name": "19歳になりたくない",
+          "normalized_name": "19歳になりたくない",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 288933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0X4mJkYZ7JzhqbpAlTbqLT"
+        },
+        {
+          "track_id": "7tBPxHhEhG7jqw37d6Epmu",
+          "name": "好きって言ってよ",
+          "normalized_name": "好きって言ってよ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 223533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7tBPxHhEhG7jqw37d6Epmu"
+        },
+        {
+          "track_id": "1NAkjqsp5HHJj9fA4kf4Td",
+          "name": "泥だんごの天才いたよね",
+          "normalized_name": "泥だんごの天才いたよね",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 255333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1NAkjqsp5HHJj9fA4kf4Td"
+        },
+        {
+          "track_id": "08Xhmc5B5gDPYFrL1uKVJI",
+          "name": "おっぱい",
+          "normalized_name": "おっぱい",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 324400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/08Xhmc5B5gDPYFrL1uKVJI"
+        },
+        {
+          "track_id": "4L6ZAAjGMMK6IL1orx4zhJ",
+          "name": "私に彼氏ができない理由",
+          "normalized_name": "私に彼氏ができない理由",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 220266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4L6ZAAjGMMK6IL1orx4zhJ"
+        },
+        {
+          "track_id": "4SZDkESMCRG61BhvbmLUqS",
+          "name": "ほろ酔い",
+          "normalized_name": "ほろ酔い",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 351866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4SZDkESMCRG61BhvbmLUqS"
+        }
+      ]
+    },
+    {
+      "album_id": "6i5kMaxiCDivxwOsM9VgsX",
+      "name": "生きていたんだよな",
+      "album_type": "single",
+      "release_date": "2016-11-30",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/6i5kMaxiCDivxwOsM9VgsX",
+      "tracks": [
+        {
+          "track_id": "2NsH0dlXCvarCtIgSPZpLJ",
+          "name": "生きていたんだよな",
+          "normalized_name": "生きていたんだよな",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 194120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2NsH0dlXCvarCtIgSPZpLJ"
+        },
+        {
+          "track_id": "6vOaJyty7o0nKgLGRNfNnH",
+          "name": "今日の芸術",
+          "normalized_name": "今日の芸術",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 255653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6vOaJyty7o0nKgLGRNfNnH"
+        },
+        {
+          "track_id": "22pn8HHUVwOiwpAe429zHu",
+          "name": "君がいない夜を越えられやしない",
+          "normalized_name": "君がいない夜を越えられやしない",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 251906,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/22pn8HHUVwOiwpAe429zHu"
+        }
+      ]
+    },
+    {
+      "album_id": "1IXPc1QXhkXbk1FB2g2Kbq",
+      "name": "愛を伝えたいだとか",
+      "album_type": "single",
+      "release_date": "2017-05-03",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/1IXPc1QXhkXbk1FB2g2Kbq",
+      "tracks": [
+        {
+          "track_id": "3hnc4KOBcUB6bC7gGwlBPG",
+          "name": "愛を伝えたいだとか",
+          "normalized_name": "愛を伝えたいだとか",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 235240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3hnc4KOBcUB6bC7gGwlBPG"
+        },
+        {
+          "track_id": "4goU64b7u75Lu0qltJtBCQ",
+          "name": "ハッピー",
+          "normalized_name": "ハッピー",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 247200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4goU64b7u75Lu0qltJtBCQ"
+        },
+        {
+          "track_id": "08VGeXX2EvEtTnV2XNGfTi",
+          "name": "MIO",
+          "normalized_name": "mio",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 227840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/08VGeXX2EvEtTnV2XNGfTi"
+        }
+      ]
+    },
+    {
+      "album_id": "5bqla7nrcHyk47mFj0zvP9",
+      "name": "君はロックを聴かない",
+      "album_type": "single",
+      "release_date": "2017-08-01",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/5bqla7nrcHyk47mFj0zvP9",
+      "tracks": [
+        {
+          "track_id": "01IZAuQsBO00iLKFO9LsFf",
+          "name": "君はロックを聴かない",
+          "normalized_name": "君はロックを聴かない",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 246306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/01IZAuQsBO00iLKFO9LsFf"
+        },
+        {
+          "track_id": "7Hg40WRVv4G6wsbmOXZ5Fi",
+          "name": "青春と青春と青春",
+          "normalized_name": "青春と青春と青春",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 317400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7Hg40WRVv4G6wsbmOXZ5Fi"
+        },
+        {
+          "track_id": "3VE8TCehq7QJp0W0kgYGHL",
+          "name": "君はロックを聴かない - Instrumental",
+          "normalized_name": "君はロックを聴かない instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 245266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3VE8TCehq7QJp0W0kgYGHL"
+        }
+      ]
+    },
+    {
+      "album_id": "0ct8ESCAYEpDGYJOndCfft",
+      "name": "青春のエキサイトメント",
+      "album_type": "album",
+      "release_date": "2017-09-12",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "spotify_url": "https://open.spotify.com/album/0ct8ESCAYEpDGYJOndCfft",
+      "tracks": [
+        {
+          "track_id": "6hCmUhgNYCYWMF6IYPS1um",
+          "name": "憧れてきたんだ",
+          "normalized_name": "憧れてきたんだ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 145813,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6hCmUhgNYCYWMF6IYPS1um"
+        },
+        {
+          "track_id": "69jrtjVjyzRyPCDg0dHYCX",
+          "name": "生きていたんだよな",
+          "normalized_name": "生きていたんだよな",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 194120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/69jrtjVjyzRyPCDg0dHYCX"
+        },
+        {
+          "track_id": "59eluCMn0XbOWqeWQ91FTM",
+          "name": "君はロックを聴かない",
+          "normalized_name": "君はロックを聴かない",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 246306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/59eluCMn0XbOWqeWQ91FTM"
+        },
+        {
+          "track_id": "4E88SLBhlKjBh2cpIHrYso",
+          "name": "マトリョーシカ",
+          "normalized_name": "マトリョーシカ",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 222600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4E88SLBhlKjBh2cpIHrYso"
+        },
+        {
+          "track_id": "5xJgF12zKoxMqayN8YldLB",
+          "name": "ふたりの世界",
+          "normalized_name": "ふたりの世界",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 287866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5xJgF12zKoxMqayN8YldLB"
+        },
+        {
+          "track_id": "3Z6Li4ySCGc1Cqjm2QU6qT",
+          "name": "いつまでも",
+          "normalized_name": "いつまでも",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 183386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Z6Li4ySCGc1Cqjm2QU6qT"
+        },
+        {
+          "track_id": "0N8Xztr4pBHJ7V0moJWhbO",
+          "name": "愛を伝えたいだとか",
+          "normalized_name": "愛を伝えたいだとか",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 235240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0N8Xztr4pBHJ7V0moJWhbO"
+        },
+        {
+          "track_id": "1JKI1pTB2WZMMw7wF2jCTg",
+          "name": "風のささやき",
+          "normalized_name": "風のささやき",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 233240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1JKI1pTB2WZMMw7wF2jCTg"
+        },
+        {
+          "track_id": "2DMHUE1Inway1eCAaq4Vua",
+          "name": "RING DING",
+          "normalized_name": "ring ding",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 235693,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2DMHUE1Inway1eCAaq4Vua"
+        },
+        {
+          "track_id": "7ySHoLhSRmWjfhuDmOcvTy",
+          "name": "ジェニファー",
+          "normalized_name": "ジェニファー",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 223653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7ySHoLhSRmWjfhuDmOcvTy"
+        },
+        {
+          "track_id": "5lP7oqYYLpIhUv33KdS4HX",
+          "name": "漂白",
+          "normalized_name": "漂白",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 291240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5lP7oqYYLpIhUv33KdS4HX"
+        }
+      ]
+    },
+    {
+      "album_id": "2NFZD9ZVoLaCzeCRjLL1b5",
+      "name": "満月の夜なら",
+      "album_type": "single",
+      "release_date": "2018-04-25",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/2NFZD9ZVoLaCzeCRjLL1b5",
+      "tracks": [
+        {
+          "track_id": "1hXSgrWjLMLBOf9h6o4Xi2",
+          "name": "満月の夜なら",
+          "normalized_name": "満月の夜なら",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 205013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1hXSgrWjLMLBOf9h6o4Xi2"
+        },
+        {
+          "track_id": "3zMMws8RKXM1kuh5JFWowz",
+          "name": "わかってない",
+          "normalized_name": "わかってない",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 214026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3zMMws8RKXM1kuh5JFWowz"
+        },
+        {
+          "track_id": "4s430D7RdGBh39MRmPed7W",
+          "name": "満月の夜なら - Instrumental",
+          "normalized_name": "満月の夜なら instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 205046,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4s430D7RdGBh39MRmPed7W"
+        }
+      ]
+    },
+    {
+      "album_id": "67joIDGDBYTfyhY7xHDoah",
+      "name": "愛を伝えたいだとか Remix",
+      "album_type": "single",
+      "release_date": "2018-05-10",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/67joIDGDBYTfyhY7xHDoah",
+      "tracks": [
+        {
+          "track_id": "5tLd2sNXKT5A5hnMshiGO2",
+          "name": "愛を伝えたいだとか Neetz ft. Ryohu \"studio991\" Remix",
+          "normalized_name": "愛を伝えたいだとか neetz ft ryohu studio991 remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 205893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5tLd2sNXKT5A5hnMshiGO2"
+        },
+        {
+          "track_id": "2YB3bCfwK39lU9iajd9ZG5",
+          "name": "愛を伝えたいだとか Lil'Yukichi Remix",
+          "normalized_name": "愛を伝えたいだとか lilyukichi remix",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 226840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2YB3bCfwK39lU9iajd9ZG5"
+        }
+      ]
+    },
+    {
+      "album_id": "2VwFQwFEykGJ3AMJ6A97oQ",
+      "name": "マリーゴールド",
+      "album_type": "single",
+      "release_date": "2018-08-08",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/2VwFQwFEykGJ3AMJ6A97oQ",
+      "tracks": [
+        {
+          "track_id": "03V9Ypl9txWAY06UUirSJE",
+          "name": "マリーゴールド",
+          "normalized_name": "マリーゴールド",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 308106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/03V9Ypl9txWAY06UUirSJE"
+        },
+        {
+          "track_id": "4lfZIh0h4YCzfsZ5nWRFjl",
+          "name": "あなたのために",
+          "normalized_name": "あなたのために",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 260533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4lfZIh0h4YCzfsZ5nWRFjl"
+        },
+        {
+          "track_id": "4sd3bgBGyReNDbfPyuED1j",
+          "name": "マリーゴールド - Instrumental",
+          "normalized_name": "マリーゴールド instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 306120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4sd3bgBGyReNDbfPyuED1j"
+        }
+      ]
+    },
+    {
+      "album_id": "77kY0x3BXKfi7kjtEy7rCW",
+      "name": "今夜このまま",
+      "album_type": "single",
+      "release_date": "2018-10-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/77kY0x3BXKfi7kjtEy7rCW",
+      "tracks": [
+        {
+          "track_id": "0sSG83UxY15ft1E2N9THYF",
+          "name": "今夜このまま",
+          "normalized_name": "今夜このまま",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0sSG83UxY15ft1E2N9THYF"
+        }
+      ]
+    },
+    {
+      "album_id": "7BtPtj87hXOznh8D7YV6lm",
+      "name": "今夜このまま",
+      "album_type": "single",
+      "release_date": "2018-11-14",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/7BtPtj87hXOznh8D7YV6lm",
+      "tracks": [
+        {
+          "track_id": "3r0EHxw5HJTq71GS0Q5vbG",
+          "name": "今夜このまま",
+          "normalized_name": "今夜このまま",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 237933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3r0EHxw5HJTq71GS0Q5vbG"
+        },
+        {
+          "track_id": "2VqEVuY0NGIgkikBIj9cmn",
+          "name": "猫 - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+          "normalized_name": "猫 2018 10 7 live at 上野恩賜公園 野外ステージ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 278293,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2VqEVuY0NGIgkikBIj9cmn"
+        },
+        {
+          "track_id": "5YKZnooYjpGalbiTa9bOM3",
+          "name": "風のささやき - 2018.10.7 Live at 上野恩賜公園 野外ステージ",
+          "normalized_name": "風のささやき 2018 10 7 live at 上野恩賜公園 野外ステージ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 264120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5YKZnooYjpGalbiTa9bOM3"
+        },
+        {
+          "track_id": "03CxWAr50rdZYRO3igRqGs",
+          "name": "今夜このまま - Instrumental",
+          "normalized_name": "今夜このまま instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 237520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/03CxWAr50rdZYRO3igRqGs"
+        }
+      ]
+    },
+    {
+      "album_id": "7fIqmc4GIaueaiAoDifAaA",
+      "name": "瞬間的シックスセンス",
+      "album_type": "album",
+      "release_date": "2019-02-13",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "spotify_url": "https://open.spotify.com/album/7fIqmc4GIaueaiAoDifAaA",
+      "tracks": [
+        {
+          "track_id": "7DW5Dro8AHE7x19COl26E3",
+          "name": "満月の夜なら",
+          "normalized_name": "満月の夜なら",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 205013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7DW5Dro8AHE7x19COl26E3"
+        },
+        {
+          "track_id": "2cKiHG16JBiqHdi7Llq0r7",
+          "name": "マリーゴールド",
+          "normalized_name": "マリーゴールド",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 306626,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2cKiHG16JBiqHdi7Llq0r7"
+        },
+        {
+          "track_id": "2tgWF9EZzqiq4Qzdzeow1A",
+          "name": "ら、のはなし",
+          "normalized_name": "ら、のはなし",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 181226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2tgWF9EZzqiq4Qzdzeow1A"
+        },
+        {
+          "track_id": "47ykT7pfFgvjCpk0c2MxBI",
+          "name": "二人だけの国",
+          "normalized_name": "二人だけの国",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 271160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/47ykT7pfFgvjCpk0c2MxBI"
+        },
+        {
+          "track_id": "1i6F01jxN0Qy7xFk3EldRO",
+          "name": "プレゼント",
+          "normalized_name": "プレゼント",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 257933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1i6F01jxN0Qy7xFk3EldRO"
+        },
+        {
+          "track_id": "6YjimBPZFdK0svohmSxjXv",
+          "name": "ひかりもの",
+          "normalized_name": "ひかりもの",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 229360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6YjimBPZFdK0svohmSxjXv"
+        },
+        {
+          "track_id": "7EzYNSIxeihNDrYHSlU9Ak",
+          "name": "恋をしたから",
+          "normalized_name": "恋をしたから",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 269253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7EzYNSIxeihNDrYHSlU9Ak"
+        },
+        {
+          "track_id": "526NsA2BI2b10l05a13VWm",
+          "name": "夢追いベンガル",
+          "normalized_name": "夢追いベンガル",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 281280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/526NsA2BI2b10l05a13VWm"
+        },
+        {
+          "track_id": "6kKvmT4i0Dercz6f3kftg3",
+          "name": "今夜このまま",
+          "normalized_name": "今夜このまま",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 238093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6kKvmT4i0Dercz6f3kftg3"
+        },
+        {
+          "track_id": "4cKEW1EDlagnqmExM6lVcm",
+          "name": "あした世界が終わるとしても",
+          "normalized_name": "あした世界が終わるとしても",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 262720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4cKEW1EDlagnqmExM6lVcm"
+        },
+        {
+          "track_id": "4WWlxCFO5M0gva6GYgFGHs",
+          "name": "GOOD NIGHT BABY",
+          "normalized_name": "good night baby",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 330640,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4WWlxCFO5M0gva6GYgFGHs"
+        },
+        {
+          "track_id": "6TFzT4oCM5vamJWRI4sWlu",
+          "name": "from 四階の角部屋",
+          "normalized_name": "from 四階の角部屋",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 98853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6TFzT4oCM5vamJWRI4sWlu"
+        }
+      ]
+    },
+    {
+      "album_id": "6ZX9jsxdmxzo4h6g3g6YUH",
+      "name": "ハルノヒ",
+      "album_type": "single",
+      "release_date": "2019-04-17",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/6ZX9jsxdmxzo4h6g3g6YUH",
+      "tracks": [
+        {
+          "track_id": "7jFcbwPkMcEZK3bQhTzeAU",
+          "name": "ハルノヒ",
+          "normalized_name": "ハルノヒ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 326866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7jFcbwPkMcEZK3bQhTzeAU"
+        },
+        {
+          "track_id": "1L5nG7AwmjCAcxfuubekFb",
+          "name": "鯉",
+          "normalized_name": "鯉",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 229413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1L5nG7AwmjCAcxfuubekFb"
+        },
+        {
+          "track_id": "5yVprEnWITaOSRgzZgyb08",
+          "name": "ハルノヒ - Instrumental",
+          "normalized_name": "ハルノヒ instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 326386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5yVprEnWITaOSRgzZgyb08"
+        }
+      ]
+    },
+    {
+      "album_id": "0tkvLqubgBz8K52pHwB9yU",
+      "name": "真夏の夜の匂いがする",
+      "album_type": "single",
+      "release_date": "2019-07-24",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/0tkvLqubgBz8K52pHwB9yU",
+      "tracks": [
+        {
+          "track_id": "249Y5N1oHlVP4TZwogLYe7",
+          "name": "真夏の夜の匂いがする",
+          "normalized_name": "真夏の夜の匂いがする",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 233306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/249Y5N1oHlVP4TZwogLYe7"
+        },
+        {
+          "track_id": "61Kvg3tFjHfVGikpkX1QBu",
+          "name": "テレパしい",
+          "normalized_name": "テレパしい",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 257586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/61Kvg3tFjHfVGikpkX1QBu"
+        },
+        {
+          "track_id": "5n3Mh1oOLVAJqf5ClLUdZI",
+          "name": "真夏の夜の匂いがする - Instrumental",
+          "normalized_name": "真夏の夜の匂いがする instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 232813,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5n3Mh1oOLVAJqf5ClLUdZI"
+        }
+      ]
+    },
+    {
+      "album_id": "5AUnS2CxEylHubj6Ro9uDC",
+      "name": "空の青さを知る人よ",
+      "album_type": "single",
+      "release_date": "2019-09-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5AUnS2CxEylHubj6Ro9uDC",
+      "tracks": [
+        {
+          "track_id": "3u0e8pyoVc7l2u3T5thohY",
+          "name": "空の青さを知る人よ",
+          "normalized_name": "空の青さを知る人よ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 304933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3u0e8pyoVc7l2u3T5thohY"
+        }
+      ]
+    },
+    {
+      "album_id": "1ZFMwwGArP8qZ4HpHroXpE",
+      "name": "空の青さを知る人よ",
+      "album_type": "single",
+      "release_date": "2019-10-02",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/1ZFMwwGArP8qZ4HpHroXpE",
+      "tracks": [
+        {
+          "track_id": "67HnklgvnucBI6Azx6lV5O",
+          "name": "空の青さを知る人よ",
+          "normalized_name": "空の青さを知る人よ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 304933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/67HnklgvnucBI6Azx6lV5O"
+        },
+        {
+          "track_id": "0nvvaKnWZABiknO5fcRifn",
+          "name": "葵",
+          "normalized_name": "葵",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 252533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0nvvaKnWZABiknO5fcRifn"
+        },
+        {
+          "track_id": "5JImfPbt7x2NROjK0Mn3k9",
+          "name": "空の青さを知る人よ - Instrumental",
+          "normalized_name": "空の青さを知る人よ instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 304933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5JImfPbt7x2NROjK0Mn3k9"
+        },
+        {
+          "track_id": "0t5QVal7wgz5o1dVaDYCjE",
+          "name": "葵 - Instrumental",
+          "normalized_name": "葵 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 252533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0t5QVal7wgz5o1dVaDYCjE"
+        }
+      ]
+    },
+    {
+      "album_id": "6tv3dwXwbEJ8VcrikWWJ24",
+      "name": "さよならの今日に",
+      "album_type": "single",
+      "release_date": "2020-02-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6tv3dwXwbEJ8VcrikWWJ24",
+      "tracks": [
+        {
+          "track_id": "5B7hOlz4fU7LV5i6sfFBx2",
+          "name": "さよならの今日に",
+          "normalized_name": "さよならの今日に",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 341763,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5B7hOlz4fU7LV5i6sfFBx2"
+        }
+      ]
+    },
+    {
+      "album_id": "4tQlgB91P356cezUL3pSS9",
+      "name": "裸の心 (Karaoke ver.)",
+      "album_type": "single",
+      "release_date": "2020-05-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4tQlgB91P356cezUL3pSS9",
+      "tracks": [
+        {
+          "track_id": "0ihhD5lEvBMwnfTjCsTmVQ",
+          "name": "裸の心 - Karaoke ver.",
+          "normalized_name": "裸の心 karaoke ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 291131,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0ihhD5lEvBMwnfTjCsTmVQ"
+        }
+      ]
+    },
+    {
+      "album_id": "7kLiMvaG0yZcODgnXHkMPz",
+      "name": "裸の心",
+      "album_type": "single",
+      "release_date": "2020-06-17",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/7kLiMvaG0yZcODgnXHkMPz",
+      "tracks": [
+        {
+          "track_id": "5yECjffMyY4SNW3SMayD5z",
+          "name": "裸の心",
+          "normalized_name": "裸の心",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 296653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5yECjffMyY4SNW3SMayD5z"
+        },
+        {
+          "track_id": "5lRU5STufdgCrLV6CrVLMW",
+          "name": "ユラユラ",
+          "normalized_name": "ユラユラ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 179360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5lRU5STufdgCrLV6CrVLMW"
+        },
+        {
+          "track_id": "3QWYa8HHkynls24hKh0LfU",
+          "name": "裸の心 - Instrumental",
+          "normalized_name": "裸の心 instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 294160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3QWYa8HHkynls24hKh0LfU"
+        }
+      ]
+    },
+    {
+      "album_id": "3ImcXNph88KvsrgLfyqobT",
+      "name": "朝陽",
+      "album_type": "single",
+      "release_date": "2020-08-21",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3ImcXNph88KvsrgLfyqobT",
+      "tracks": [
+        {
+          "track_id": "2N3c4wGis6MNjshZ8X6o4s",
+          "name": "朝陽",
+          "normalized_name": "朝陽",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 203653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2N3c4wGis6MNjshZ8X6o4s"
+        }
+      ]
+    },
+    {
+      "album_id": "4UcEHspatQwGvtfR6AVwZl",
+      "name": "おいしいパスタがあると聞いて",
+      "album_type": "album",
+      "release_date": "2020-09-09",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "spotify_url": "https://open.spotify.com/album/4UcEHspatQwGvtfR6AVwZl",
+      "tracks": [
+        {
+          "track_id": "1pPpX61D2KTyx5IbKA0UCj",
+          "name": "黄昏にバカ話をしたあの日を思い出す時を",
+          "normalized_name": "黄昏にバカ話をしたあの日を思い出す時を",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 222760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1pPpX61D2KTyx5IbKA0UCj"
+        },
+        {
+          "track_id": "1oNeSCt0CMekCyyLo06kFs",
+          "name": "ハルノヒ",
+          "normalized_name": "ハルノヒ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 326866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1oNeSCt0CMekCyyLo06kFs"
+        },
+        {
+          "track_id": "4612XUQyCsuz4OOrOhbZej",
+          "name": "シガレット",
+          "normalized_name": "シガレット",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 209053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4612XUQyCsuz4OOrOhbZej"
+        },
+        {
+          "track_id": "1BMFlDfS1ZLTKhqBGkM6zb",
+          "name": "さよならの今日に",
+          "normalized_name": "さよならの今日に",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 341763,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1BMFlDfS1ZLTKhqBGkM6zb"
+        },
+        {
+          "track_id": "3WVmpqvvgKTykxDTWBXGI3",
+          "name": "朝陽",
+          "normalized_name": "朝陽",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 203653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3WVmpqvvgKTykxDTWBXGI3"
+        },
+        {
+          "track_id": "4Jv7U0JJpbQnOrjtDwDZTZ",
+          "name": "裸の心",
+          "normalized_name": "裸の心",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 296653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4Jv7U0JJpbQnOrjtDwDZTZ"
+        },
+        {
+          "track_id": "3BRHmDkirmIySxQF2M2TP2",
+          "name": "マシマロ",
+          "normalized_name": "マシマロ",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 167600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3BRHmDkirmIySxQF2M2TP2"
+        },
+        {
+          "track_id": "6pHcxtpwNOIATrwHCL5WNw",
+          "name": "空の青さを知る人よ",
+          "normalized_name": "空の青さを知る人よ",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 304933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6pHcxtpwNOIATrwHCL5WNw"
+        },
+        {
+          "track_id": "20mJp0Ix72iR2EF8BdCfE5",
+          "name": "真夏の夜の匂いがする",
+          "normalized_name": "真夏の夜の匂いがする",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 233306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/20mJp0Ix72iR2EF8BdCfE5"
+        },
+        {
+          "track_id": "0iOqy0KqvYrAEXbh0tqqrk",
+          "name": "ポプリの葉",
+          "normalized_name": "ポプリの葉",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 225973,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0iOqy0KqvYrAEXbh0tqqrk"
+        },
+        {
+          "track_id": "2XjxZtf0SXeeHG88TPIidm",
+          "name": "チカ",
+          "normalized_name": "チカ",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 187333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2XjxZtf0SXeeHG88TPIidm"
+        },
+        {
+          "track_id": "27cClYTwaqWUvUQDqHJGqB",
+          "name": "そんな風に生きている",
+          "normalized_name": "そんな風に生きている",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 183506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/27cClYTwaqWUvUQDqHJGqB"
+        }
+      ]
+    },
+    {
+      "album_id": "1SKFic1b0W6lWuXBVzupOF",
+      "name": "桜が降る夜は",
+      "album_type": "single",
+      "release_date": "2021-02-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1SKFic1b0W6lWuXBVzupOF",
+      "tracks": [
+        {
+          "track_id": "1iEsGutpDvMJG0zYqoKKmQ",
+          "name": "桜が降る夜は",
+          "normalized_name": "桜が降る夜は",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 274800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1iEsGutpDvMJG0zYqoKKmQ"
+        }
+      ]
+    },
+    {
+      "album_id": "0beG7ABe0ALqibLAyylzuv",
+      "name": "スーパーガール",
+      "album_type": "single",
+      "release_date": "2021-03-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0beG7ABe0ALqibLAyylzuv",
+      "tracks": [
+        {
+          "track_id": "2dwixhkS67B45PMId3tVyL",
+          "name": "スーパーガール",
+          "normalized_name": "スーパーガール",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 247336,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2dwixhkS67B45PMId3tVyL"
+        }
+      ]
+    },
+    {
+      "album_id": "2b8Sl0B5rhuLRTi1vS9yHa",
+      "name": "愛を知るまでは",
+      "album_type": "single",
+      "release_date": "2021-05-07",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2b8Sl0B5rhuLRTi1vS9yHa",
+      "tracks": [
+        {
+          "track_id": "5gh0y6ZmuppQvoPbAGkeE2",
+          "name": "愛を知るまでは",
+          "normalized_name": "愛を知るまでは",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 276253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5gh0y6ZmuppQvoPbAGkeE2"
+        }
+      ]
+    },
+    {
+      "album_id": "2KLRCuk72ProjU8lmOugSJ",
+      "name": "愛を知るまでは / 桜が降る夜は",
+      "album_type": "single",
+      "release_date": "2021-05-26",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "spotify_url": "https://open.spotify.com/album/2KLRCuk72ProjU8lmOugSJ",
+      "tracks": [
+        {
+          "track_id": "51F8k6GVAQXkTcYFhPzKgx",
+          "name": "愛を知るまでは",
+          "normalized_name": "愛を知るまでは",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 276253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/51F8k6GVAQXkTcYFhPzKgx"
+        },
+        {
+          "track_id": "5uzoWJZvoVMDSwfp4q2jrq",
+          "name": "桜が降る夜は",
+          "normalized_name": "桜が降る夜は",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 274800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5uzoWJZvoVMDSwfp4q2jrq"
+        },
+        {
+          "track_id": "6OEpa6LbabxmF1pFQLNJm4",
+          "name": "ミニスカートとハイライト",
+          "normalized_name": "ミニスカートとハイライト",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 168346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6OEpa6LbabxmF1pFQLNJm4"
+        },
+        {
+          "track_id": "7MSAet0P9qx8FIdfyASaeX",
+          "name": "愛を知るまでは - Instrumental",
+          "normalized_name": "愛を知るまでは instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 276253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7MSAet0P9qx8FIdfyASaeX"
+        },
+        {
+          "track_id": "3bD4eHBf8GkKyPx9MPX0wy",
+          "name": "桜が降る夜は - Instrumental",
+          "normalized_name": "桜が降る夜は instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 273133,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3bD4eHBf8GkKyPx9MPX0wy"
+        }
+      ]
+    },
+    {
+      "album_id": "2TMrGnNWnF1GgUwRY427zk",
+      "name": "ハート",
+      "album_type": "single",
+      "release_date": "2021-10-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2TMrGnNWnF1GgUwRY427zk",
+      "tracks": [
+        {
+          "track_id": "6cvKfEw8rDcmXBslqSEC9G",
+          "name": "ハート",
+          "normalized_name": "ハート",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 271280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6cvKfEw8rDcmXBslqSEC9G"
+        }
+      ]
+    },
+    {
+      "album_id": "2xfv7D7i4tVUMY6d4Zhev7",
+      "name": "ハート",
+      "album_type": "single",
+      "release_date": "2021-11-24",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/2xfv7D7i4tVUMY6d4Zhev7",
+      "tracks": [
+        {
+          "track_id": "5JVieSOgyRg2vB8HFGTAbf",
+          "name": "ハート",
+          "normalized_name": "ハート",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 271280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5JVieSOgyRg2vB8HFGTAbf"
+        },
+        {
+          "track_id": "4wWkjefqHMrVMjwnzvIAYT",
+          "name": "森のくまさん",
+          "normalized_name": "森のくまさん",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 201413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4wWkjefqHMrVMjwnzvIAYT"
+        },
+        {
+          "track_id": "0kxncpP1rH0Pif07vypQx2",
+          "name": "ハート - Instrumental",
+          "normalized_name": "ハート instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 271280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0kxncpP1rH0Pif07vypQx2"
+        },
+        {
+          "track_id": "1KWPc5rrYputH3n4WEsnZd",
+          "name": "森のくまさん - Instrumental",
+          "normalized_name": "森のくまさん instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 201426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1KWPc5rrYputH3n4WEsnZd"
+        }
+      ]
+    },
+    {
+      "album_id": "2iFDmdWIklUksYTCnbiuFw",
+      "name": "双葉",
+      "album_type": "single",
+      "release_date": "2022-03-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2iFDmdWIklUksYTCnbiuFw",
+      "tracks": [
+        {
+          "track_id": "0IAX0LbVY440WWJyOyuLw7",
+          "name": "双葉",
+          "normalized_name": "双葉",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 277223,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0IAX0LbVY440WWJyOyuLw7"
+        }
+      ]
+    },
+    {
+      "album_id": "3VEglNaW4ojsqUKftqryRf",
+      "name": "初恋が泣いている",
+      "album_type": "single",
+      "release_date": "2022-05-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3VEglNaW4ojsqUKftqryRf",
+      "tracks": [
+        {
+          "track_id": "1vT6VdL9PrHOBziwubdt29",
+          "name": "初恋が泣いている",
+          "normalized_name": "初恋が泣いている",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1vT6VdL9PrHOBziwubdt29"
+        }
+      ]
+    },
+    {
+      "album_id": "5ojxoUisAMA5Mon0amRHCE",
+      "name": "初恋が泣いている",
+      "album_type": "single",
+      "release_date": "2022-06-08",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/5ojxoUisAMA5Mon0amRHCE",
+      "tracks": [
+        {
+          "track_id": "7JyEo5ckuuTtt1zVyJUj1u",
+          "name": "初恋が泣いている",
+          "normalized_name": "初恋が泣いている",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7JyEo5ckuuTtt1zVyJUj1u"
+        },
+        {
+          "track_id": "2tiex0oWYiAR9UWZ9SlFW3",
+          "name": "皐月",
+          "normalized_name": "皐月",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 270146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2tiex0oWYiAR9UWZ9SlFW3"
+        },
+        {
+          "track_id": "2boSxrUYWV6Iz9LC28G1XD",
+          "name": "初恋が泣いている - Instrumental",
+          "normalized_name": "初恋が泣いている instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 239360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2boSxrUYWV6Iz9LC28G1XD"
+        },
+        {
+          "track_id": "6pZNTZdzr1sW5ywOdSffrw",
+          "name": "皐月 - Instrumental",
+          "normalized_name": "皐月 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 270666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6pZNTZdzr1sW5ywOdSffrw"
+        }
+      ]
+    },
+    {
+      "album_id": "0EMakxDK8NPNODi8e9ssVW",
+      "name": "3636",
+      "album_type": "single",
+      "release_date": "2022-07-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0EMakxDK8NPNODi8e9ssVW",
+      "tracks": [
+        {
+          "track_id": "1v5PDAXZ2XHRNkdrbyjh6i",
+          "name": "3636",
+          "normalized_name": "3636",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 251720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1v5PDAXZ2XHRNkdrbyjh6i"
+        }
+      ]
+    },
+    {
+      "album_id": "7yqN9LY6txINrErO79WNge",
+      "name": "瞳へ落ちるよレコード",
+      "album_type": "album",
+      "release_date": "2022-08-17",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "spotify_url": "https://open.spotify.com/album/7yqN9LY6txINrErO79WNge",
+      "tracks": [
+        {
+          "track_id": "66KE3cwbqJjtzjN3ezTmxy",
+          "name": "双葉",
+          "normalized_name": "双葉",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 277223,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/66KE3cwbqJjtzjN3ezTmxy"
+        },
+        {
+          "track_id": "3LMLiuJLD65xB5OddTKEEd",
+          "name": "スーパーガール",
+          "normalized_name": "スーパーガール",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 247336,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3LMLiuJLD65xB5OddTKEEd"
+        },
+        {
+          "track_id": "5okAqlWhkOADHjd61PKslW",
+          "name": "姿",
+          "normalized_name": "姿",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 207600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5okAqlWhkOADHjd61PKslW"
+        },
+        {
+          "track_id": "2qJknEIv5MCKjHG6LNLZvj",
+          "name": "初恋が泣いている",
+          "normalized_name": "初恋が泣いている",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 239333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2qJknEIv5MCKjHG6LNLZvj"
+        },
+        {
+          "track_id": "4z9eQafGoStgUATU9b7KNO",
+          "name": "君のこゝろ",
+          "normalized_name": "君のこゝろ",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 193546,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4z9eQafGoStgUATU9b7KNO"
+        },
+        {
+          "track_id": "0OF09VIq0rwxFoRRfI0lg2",
+          "name": "3636",
+          "normalized_name": "3636",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 251720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0OF09VIq0rwxFoRRfI0lg2"
+        },
+        {
+          "track_id": "6DjPoz2Abx4W7s8c0osJ3u",
+          "name": "強くなっちゃったんだ、ブルー",
+          "normalized_name": "強くなっちゃったんだ、ブルー",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 199333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6DjPoz2Abx4W7s8c0osJ3u"
+        },
+        {
+          "track_id": "0H2n6GpHAMlujiER71ubMB",
+          "name": "桜が降る夜は",
+          "normalized_name": "桜が降る夜は",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 274800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0H2n6GpHAMlujiER71ubMB"
+        },
+        {
+          "track_id": "3RxXuOv8Ek9ugFFRxxNc5J",
+          "name": "ペルソナの記憶",
+          "normalized_name": "ペルソナの記憶",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 200040,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3RxXuOv8Ek9ugFFRxxNc5J"
+        },
+        {
+          "track_id": "6DgqBcs8YYhCunqicmABkT",
+          "name": "神秘の領域へ",
+          "normalized_name": "神秘の領域へ",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 241440,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6DgqBcs8YYhCunqicmABkT"
+        },
+        {
+          "track_id": "6MkbBtxdVggObSGnqB8miZ",
+          "name": "ハート",
+          "normalized_name": "ハート",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 271280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6MkbBtxdVggObSGnqB8miZ"
+        },
+        {
+          "track_id": "28plgD4ChGKy9DD6CJw9Iu",
+          "name": "インタビュー",
+          "normalized_name": "インタビュー",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 172546,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/28plgD4ChGKy9DD6CJw9Iu"
+        },
+        {
+          "track_id": "6nR1ME1hJjgEVBPvygLRK2",
+          "name": "愛を知るまでは",
+          "normalized_name": "愛を知るまでは",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 276253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6nR1ME1hJjgEVBPvygLRK2"
+        }
+      ]
+    },
+    {
+      "album_id": "34svnrcYhteBFCSQMLnfYZ",
+      "name": "愛の花",
+      "album_type": "single",
+      "release_date": "2023-04-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/34svnrcYhteBFCSQMLnfYZ",
+      "tracks": [
+        {
+          "track_id": "4iBO3Jg6kSXZHw06db0ds3",
+          "name": "愛の花",
+          "normalized_name": "愛の花",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241481,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4iBO3Jg6kSXZHw06db0ds3"
+        }
+      ]
+    },
+    {
+      "album_id": "2NmG6Y6VLcADLZ9msKxcve",
+      "name": "愛の花",
+      "album_type": "single",
+      "release_date": "2023-06-07",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/2NmG6Y6VLcADLZ9msKxcve",
+      "tracks": [
+        {
+          "track_id": "3BxW9zjOxwVNsJ5AxnR3eE",
+          "name": "愛の花",
+          "normalized_name": "愛の花",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241481,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3BxW9zjOxwVNsJ5AxnR3eE"
+        },
+        {
+          "track_id": "4vNSATS2LiCbgglkCicAuW",
+          "name": "彼氏有無",
+          "normalized_name": "彼氏有無",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 215328,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4vNSATS2LiCbgglkCicAuW"
+        },
+        {
+          "track_id": "03jDTqnYzitsGv9iaZfgv8",
+          "name": "愛の花 - Instrumental",
+          "normalized_name": "愛の花 instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 242960,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/03jDTqnYzitsGv9iaZfgv8"
+        },
+        {
+          "track_id": "6RCYHDFFABnCvaeOgQCZBy",
+          "name": "彼氏有無 - Instrumental",
+          "normalized_name": "彼氏有無 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 213212,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6RCYHDFFABnCvaeOgQCZBy"
+        }
+      ]
+    },
+    {
+      "album_id": "01mT3XBos1ps8P1ELSTJYe",
+      "name": "AIMYON 弾き語りLIVE 2022 -サーチライト- in 阪神甲子園球場",
+      "album_type": "album",
+      "release_date": "2023-07-19",
+      "release_date_precision": "day",
+      "total_tracks": 19,
+      "spotify_url": "https://open.spotify.com/album/01mT3XBos1ps8P1ELSTJYe",
+      "tracks": [
+        {
+          "track_id": "1SL6CGZaB86ImPFjLBkzcq",
+          "name": "憧れてきたんだ - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "憧れてきたんだ live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 159613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1SL6CGZaB86ImPFjLBkzcq"
+        },
+        {
+          "track_id": "2iTopxfOmrIayG8kXw3gx3",
+          "name": "ハルノヒ - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "ハルノヒ live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 345426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2iTopxfOmrIayG8kXw3gx3"
+        },
+        {
+          "track_id": "2d2ja3Nc5FhDjbjl94gFOA",
+          "name": "ジェニファー - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "ジェニファー live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 220800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2d2ja3Nc5FhDjbjl94gFOA"
+        },
+        {
+          "track_id": "3NFpYIF0vPpqrf1E7UIMzU",
+          "name": "愛を伝えたいだとか - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "愛を伝えたいだとか live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 259680,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3NFpYIF0vPpqrf1E7UIMzU"
+        },
+        {
+          "track_id": "4CMh0kdznyd79OYlLug9Ah",
+          "name": "3636 - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "3636 live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 265880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4CMh0kdznyd79OYlLug9Ah"
+        },
+        {
+          "track_id": "2XBuEJSz9AZL2JRNlmptA1",
+          "name": "ら、のはなし - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "ら、のはなし live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 187440,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2XBuEJSz9AZL2JRNlmptA1"
+        },
+        {
+          "track_id": "5sN8bvA6qowgTNKIKUM4lF",
+          "name": "満月の夜なら - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "満月の夜なら live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 217453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5sN8bvA6qowgTNKIKUM4lF"
+        },
+        {
+          "track_id": "7pEs3bUgzljHhq3ex9IIiK",
+          "name": "さよならの今日に - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "さよならの今日に live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 321586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7pEs3bUgzljHhq3ex9IIiK"
+        },
+        {
+          "track_id": "6A89pDNnfulUlEyX24yvic",
+          "name": "裸の心 - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "裸の心 live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 361706,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6A89pDNnfulUlEyX24yvic"
+        },
+        {
+          "track_id": "1FLxrslDIwBr4Ui1qzNCc2",
+          "name": "貴方解剖純愛歌～死ね～ - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "貴方解剖純愛歌 死ね live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 302386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1FLxrslDIwBr4Ui1qzNCc2"
+        },
+        {
+          "track_id": "7ahBYwmvay15bovT0Fihju",
+          "name": "マリーゴールド - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "マリーゴールド live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 307146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7ahBYwmvay15bovT0Fihju"
+        },
+        {
+          "track_id": "4xB3TzAnujIx3zgiZ6nmvr",
+          "name": "tower of the sun - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "tower of the sun live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 293146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4xB3TzAnujIx3zgiZ6nmvr"
+        },
+        {
+          "track_id": "6cNcUd4EoXvCyh6vaqnpAG",
+          "name": "姿 - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "姿 live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 240106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6cNcUd4EoXvCyh6vaqnpAG"
+        },
+        {
+          "track_id": "6MsBaNYXjwt6KXrd0xx9Vu",
+          "name": "生きていたんだよな - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "生きていたんだよな live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 294533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6MsBaNYXjwt6KXrd0xx9Vu"
+        },
+        {
+          "track_id": "3OUvxzk35IoOWTryE9khuu",
+          "name": "マトリョーシカ - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "マトリョーシカ live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 225480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3OUvxzk35IoOWTryE9khuu"
+        },
+        {
+          "track_id": "3u4xJcGNnhLJmGoUdIxeU9",
+          "name": "分かってくれよ - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "分かってくれよ live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 16,
+          "duration_ms": 341560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3u4xJcGNnhLJmGoUdIxeU9"
+        },
+        {
+          "track_id": "2CMTkwbIVFHHxo1OCJMutu",
+          "name": "サーチライト - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "サーチライト live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 17,
+          "duration_ms": 411040,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2CMTkwbIVFHHxo1OCJMutu"
+        },
+        {
+          "track_id": "1mNClbAkK6THcQEBXST0CE",
+          "name": "GOOD NIGHT BABY - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "good night baby live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 18,
+          "duration_ms": 350733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1mNClbAkK6THcQEBXST0CE"
+        },
+        {
+          "track_id": "7dQkqgvW0NTfb1PIlCH372",
+          "name": "君はロックを聴かない - Live in 阪神甲子園球場, 2022.11.05",
+          "normalized_name": "君はロックを聴かない live in 阪神甲子園球場 2022 11 05",
+          "disc_number": 1,
+          "track_number": 19,
+          "duration_ms": 270373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7dQkqgvW0NTfb1PIlCH372"
+        }
+      ]
+    },
+    {
+      "album_id": "1sGrRkk96R4AgRq5a39bC5",
+      "name": "ノット・オーケー",
+      "album_type": "single",
+      "release_date": "2023-10-03",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1sGrRkk96R4AgRq5a39bC5",
+      "tracks": [
+        {
+          "track_id": "3DL6F8sLqcL3y0zJClSdIg",
+          "name": "ノット・オーケー",
+          "normalized_name": "ノット・オーケー",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 294649,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3DL6F8sLqcL3y0zJClSdIg"
+        }
+      ]
+    },
+    {
+      "album_id": "51IrCOKFFNz3tgimqoyBCm",
+      "name": "あのね",
+      "album_type": "single",
+      "release_date": "2023-11-15",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/51IrCOKFFNz3tgimqoyBCm",
+      "tracks": [
+        {
+          "track_id": "2mUJj7zCnQYzM9vz3sIXAP",
+          "name": "あのね",
+          "normalized_name": "あのね",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 409815,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2mUJj7zCnQYzM9vz3sIXAP"
+        }
+      ]
+    },
+    {
+      "album_id": "3Zr1XXjQWTazEcW7hnXJCV",
+      "name": "あのね",
+      "album_type": "single",
+      "release_date": "2023-12-06",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/3Zr1XXjQWTazEcW7hnXJCV",
+      "tracks": [
+        {
+          "track_id": "4nwG7c7u8602ibJ3bfn0VB",
+          "name": "あのね",
+          "normalized_name": "あのね",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 409815,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4nwG7c7u8602ibJ3bfn0VB"
+        },
+        {
+          "track_id": "4xgygQkGuHvz65JkboKJv8",
+          "name": "die die die",
+          "normalized_name": "die die die",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 209773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4xgygQkGuHvz65JkboKJv8"
+        },
+        {
+          "track_id": "6IGga3vrXFkhmeeRr1SCED",
+          "name": "あのね - Instrumental",
+          "normalized_name": "あのね instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 409653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6IGga3vrXFkhmeeRr1SCED"
+        },
+        {
+          "track_id": "6AuWwD72zooG6mAWzktYZt",
+          "name": "die die die - Instrumental",
+          "normalized_name": "die die die instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 208773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6AuWwD72zooG6mAWzktYZt"
+        }
+      ]
+    },
+    {
+      "album_id": "5ItDzD0v8osJxkUrUCPLJs",
+      "name": "リズム64",
+      "album_type": "single",
+      "release_date": "2024-02-02",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5ItDzD0v8osJxkUrUCPLJs",
+      "tracks": [
+        {
+          "track_id": "74GJbmNHys47ZfdoQCySpM",
+          "name": "リズム64",
+          "normalized_name": "リズム64",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 268788,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/74GJbmNHys47ZfdoQCySpM"
+        }
+      ]
+    },
+    {
+      "album_id": "5UzwsffwJN5qJ99w8jcgAO",
+      "name": "会いに行くのに",
+      "album_type": "single",
+      "release_date": "2024-05-22",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/5UzwsffwJN5qJ99w8jcgAO",
+      "tracks": [
+        {
+          "track_id": "4SqzPre17MGrtHxFUqd1yD",
+          "name": "会いに行くのに",
+          "normalized_name": "会いに行くのに",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 314473,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4SqzPre17MGrtHxFUqd1yD"
+        },
+        {
+          "track_id": "2bFD9IB70Zu4kYyjDOD4Yw",
+          "name": "ねむい",
+          "normalized_name": "ねむい",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 131453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2bFD9IB70Zu4kYyjDOD4Yw"
+        },
+        {
+          "track_id": "1GG7Ad7ZYhr2iE6cGlCCha",
+          "name": "会いに行くのに - Instrumental",
+          "normalized_name": "会いに行くのに instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 315400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1GG7Ad7ZYhr2iE6cGlCCha"
+        }
+      ]
+    },
+    {
+      "album_id": "6LYuCN75nHet5fz8Cvzs8H",
+      "name": "ラッキーカラー",
+      "album_type": "single",
+      "release_date": "2024-07-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6LYuCN75nHet5fz8Cvzs8H",
+      "tracks": [
+        {
+          "track_id": "5Fzv7ho7XOwvvEOvxFnnTp",
+          "name": "ラッキーカラー",
+          "normalized_name": "ラッキーカラー",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 218580,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5Fzv7ho7XOwvvEOvxFnnTp"
+        }
+      ]
+    },
+    {
+      "album_id": "4HT3Yf8OgUAtfCK7TfyjZB",
+      "name": "ざらめ",
+      "album_type": "single",
+      "release_date": "2024-07-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4HT3Yf8OgUAtfCK7TfyjZB",
+      "tracks": [
+        {
+          "track_id": "2FUtiVlT3BnqzHYd21Gy2e",
+          "name": "ざらめ",
+          "normalized_name": "ざらめ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 282464,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2FUtiVlT3BnqzHYd21Gy2e"
+        }
+      ]
+    },
+    {
+      "album_id": "10bxrO3VcayVLsFF30JFxO",
+      "name": "猫にジェラシー",
+      "album_type": "album",
+      "release_date": "2024-09-11",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "spotify_url": "https://open.spotify.com/album/10bxrO3VcayVLsFF30JFxO",
+      "tracks": [
+        {
+          "track_id": "7AWiR6jX98SI0aj4ITCREc",
+          "name": "私に見せてよ",
+          "normalized_name": "私に見せてよ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 135465,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7AWiR6jX98SI0aj4ITCREc"
+        },
+        {
+          "track_id": "53Hc2k7eomhtV8ubkB6yhZ",
+          "name": "会いに行くのに",
+          "normalized_name": "会いに行くのに",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 314473,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/53Hc2k7eomhtV8ubkB6yhZ"
+        },
+        {
+          "track_id": "2iNLH2YkRdplxPA09jndW6",
+          "name": "ラッキーカラー",
+          "normalized_name": "ラッキーカラー",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 218580,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2iNLH2YkRdplxPA09jndW6"
+        },
+        {
+          "track_id": "3DBFjSLqFWAl9EZnBZBFIl",
+          "name": "駅前喫茶ポプラ",
+          "normalized_name": "駅前喫茶ポプラ",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 258145,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3DBFjSLqFWAl9EZnBZBFIl"
+        },
+        {
+          "track_id": "5qozBIpV2RW6EXqtI73Gik",
+          "name": "あのね",
+          "normalized_name": "あのね",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 409815,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5qozBIpV2RW6EXqtI73Gik"
+        },
+        {
+          "track_id": "2S163j4vZgYxjsH1f6lDzC",
+          "name": "ノット・オーケー",
+          "normalized_name": "ノット・オーケー",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 294649,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2S163j4vZgYxjsH1f6lDzC"
+        },
+        {
+          "track_id": "58pNSb2bAU2Jq00BlTyOBN",
+          "name": "リズム64",
+          "normalized_name": "リズム64",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 268788,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/58pNSb2bAU2Jq00BlTyOBN"
+        },
+        {
+          "track_id": "4ZpV3Qa0DTKX8Pv9FNv6df",
+          "name": "炎曜日",
+          "normalized_name": "炎曜日",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 168609,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4ZpV3Qa0DTKX8Pv9FNv6df"
+        },
+        {
+          "track_id": "4JgL78Y8FKx7WnsMjOr6oC",
+          "name": "偽者",
+          "normalized_name": "偽者",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 182681,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4JgL78Y8FKx7WnsMjOr6oC"
+        },
+        {
+          "track_id": "3gQF1xjIUKDJSPjd2U5fgo",
+          "name": "朝が嫌い",
+          "normalized_name": "朝が嫌い",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 311361,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3gQF1xjIUKDJSPjd2U5fgo"
+        },
+        {
+          "track_id": "27PBcVFchorS3XP8WiFomx",
+          "name": "ざらめ",
+          "normalized_name": "ざらめ",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 282464,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/27PBcVFchorS3XP8WiFomx"
+        },
+        {
+          "track_id": "49DUifaclCSbxQa1upNXuO",
+          "name": "愛の花",
+          "normalized_name": "愛の花",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 241481,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/49DUifaclCSbxQa1upNXuO"
+        },
+        {
+          "track_id": "6Qr07C97QliK35ZQGs941S",
+          "name": "猫にジェラシー",
+          "normalized_name": "猫にジェラシー",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 194319,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Qr07C97QliK35ZQGs941S"
+        }
+      ]
+    },
+    {
+      "album_id": "1Dbxuuvd9UGmd6JGZCq9Qb",
+      "name": "スケッチ",
+      "album_type": "single",
+      "release_date": "2025-02-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1Dbxuuvd9UGmd6JGZCq9Qb",
+      "tracks": [
+        {
+          "track_id": "1qyMHya2R2k57MApk6kBzI",
+          "name": "スケッチ",
+          "normalized_name": "スケッチ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 266741,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1qyMHya2R2k57MApk6kBzI"
+        }
+      ]
+    },
+    {
+      "album_id": "40sgYW2MAqySgsspmqFdTK",
+      "name": "スケッチ / 君の夢を聞きながら、僕は笑えるアイデアを！",
+      "album_type": "single",
+      "release_date": "2025-03-05",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "spotify_url": "https://open.spotify.com/album/40sgYW2MAqySgsspmqFdTK",
+      "tracks": [
+        {
+          "track_id": "2CLRzZKRxBSsWbZ4gGNiye",
+          "name": "スケッチ",
+          "normalized_name": "スケッチ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 266741,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2CLRzZKRxBSsWbZ4gGNiye"
+        },
+        {
+          "track_id": "3MUMstYpfxZ1P6KI685xJq",
+          "name": "君の夢を聞きながら、僕は笑えるアイデアを！",
+          "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 190018,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3MUMstYpfxZ1P6KI685xJq"
+        },
+        {
+          "track_id": "7EZnpx682fove3OIZIj6wg",
+          "name": "おばけがでるぞ",
+          "normalized_name": "おばけがでるぞ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 174180,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7EZnpx682fove3OIZIj6wg"
+        },
+        {
+          "track_id": "2h7OJPJ1tEBANfUDmSLv9U",
+          "name": "スケッチ - Instrumental",
+          "normalized_name": "スケッチ instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 266741,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2h7OJPJ1tEBANfUDmSLv9U"
+        },
+        {
+          "track_id": "6ZnApI0Wef4ZsJ9a1YDBP5",
+          "name": "君の夢を聞きながら、僕は笑えるアイデアを！ - Instrumental",
+          "normalized_name": "君の夢を聞きながら、僕は笑えるアイデアを instrumental",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 190018,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6ZnApI0Wef4ZsJ9a1YDBP5"
+        },
+        {
+          "track_id": "4VuOh7nzJSYFXwINnYCFSE",
+          "name": "おばけがでるぞ - Instrumental",
+          "normalized_name": "おばけがでるぞ instrumental",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 174180,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4VuOh7nzJSYFXwINnYCFSE"
+        }
+      ]
+    },
+    {
+      "album_id": "0bzjjIHmafHh6T5fFTGcWj",
+      "name": "いちについて",
+      "album_type": "single",
+      "release_date": "2025-07-23",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0bzjjIHmafHh6T5fFTGcWj",
+      "tracks": [
+        {
+          "track_id": "454rsP0XW1Yzi9yhdEENrT",
+          "name": "いちについて",
+          "normalized_name": "いちについて",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 373068,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/454rsP0XW1Yzi9yhdEENrT"
+        }
+      ]
+    },
+    {
+      "album_id": "3cbM4knD7S1dO4byazrVFB",
+      "name": "ビーナスベルト",
+      "album_type": "single",
+      "release_date": "2025-10-22",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/3cbM4knD7S1dO4byazrVFB",
+      "tracks": [
+        {
+          "track_id": "0fy6lDOFDzmt0ygCzkft4e",
+          "name": "ビーナスベルト",
+          "normalized_name": "ビーナスベルト",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 329604,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0fy6lDOFDzmt0ygCzkft4e"
+        },
+        {
+          "track_id": "39VhcTPK5SMSzNGxfO4O91",
+          "name": "おじゃまします",
+          "normalized_name": "おじゃまします",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 268866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/39VhcTPK5SMSzNGxfO4O91"
+        },
+        {
+          "track_id": "38N4Dwxr3Yyvofq1IM00HZ",
+          "name": "ビーナスベルト - Instrumental",
+          "normalized_name": "ビーナスベルト instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 329606,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/38N4Dwxr3Yyvofq1IM00HZ"
+        },
+        {
+          "track_id": "6oa0VllXUfL21QqQu3i6Fi",
+          "name": "おじゃまします - Instrumental",
+          "normalized_name": "おじゃまします instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 268128,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6oa0VllXUfL21QqQu3i6Fi"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_phase1_internal_normalization_patch_manifest",
+  "track_count": 16,
+  "artist_count": 6,
+  "artists": [
+    {
+      "artist_id": "iyowa",
+      "track_count": 3,
+      "tracks": [
+        {
+          "track_id": "iyowa_1000_nen_ikiteiru",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\iyowa\\generated_patches\\iyowa_1000_nen_ikiteiru.json"
+        },
+        {
+          "track_id": "iyowa_apricot",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\iyowa\\generated_patches\\iyowa_apricot.json"
+        },
+        {
+          "track_id": "iyowa_heat_abnormal",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\iyowa\\generated_patches\\iyowa_heat_abnormal.json"
+        }
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "track_count": 2,
+      "tracks": [
+        {
+          "track_id": "kairiki_bear_alkali_rettoushou",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\kairiki_bear\\generated_patches\\kairiki_bear_alkali_rettoushou.json"
+        },
+        {
+          "track_id": "kairiki_bear_shippaisaku_shoujo",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\kairiki_bear\\generated_patches\\kairiki_bear_shippaisaku_shoujo.json"
+        }
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "track_count": 3,
+      "tracks": [
+        {
+          "track_id": "kanaria_daino_tekina_rendezvous",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\kanaria\\generated_patches\\kanaria_daino_tekina_rendezvous.json"
+        },
+        {
+          "track_id": "kanaria_eye",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\kanaria\\generated_patches\\kanaria_eye.json"
+        },
+        {
+          "track_id": "kanaria_mira",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\kanaria\\generated_patches\\kanaria_mira.json"
+        }
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "track_count": 3,
+      "tracks": [
+        {
+          "track_id": "maretu_darling",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\maretu\\generated_patches\\maretu_darling.json"
+        },
+        {
+          "track_id": "maretu_umitagari",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\maretu\\generated_patches\\maretu_umitagari.json"
+        },
+        {
+          "track_id": "maretu_white_happy",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\maretu\\generated_patches\\maretu_white_happy.json"
+        }
+      ]
+    },
+    {
+      "artist_id": "neru",
+      "track_count": 3,
+      "tracks": [
+        {
+          "track_id": "neru_abstract_nonsense",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\neru\\generated_patches\\neru_abstract_nonsense.json"
+        },
+        {
+          "track_id": "neru_law_evading_rock",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\neru\\generated_patches\\neru_law_evading_rock.json"
+        },
+        {
+          "track_id": "neru_lost_ones_weeping",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\neru\\generated_patches\\neru_lost_ones_weeping.json"
+        }
+      ]
+    },
+    {
+      "artist_id": "syudou",
+      "track_count": 2,
+      "tracks": [
+        {
+          "track_id": "syudou_bakushou",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\syudou\\generated_patches\\syudou_bakushou.json"
+        },
+        {
+          "track_id": "syudou_call_boy",
+          "patch_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\_global\\generation_safety_phase1_internal_normalization\\syudou\\generated_patches\\syudou_call_boy.json"
+        }
+      ]
+    }
+  ]
+}

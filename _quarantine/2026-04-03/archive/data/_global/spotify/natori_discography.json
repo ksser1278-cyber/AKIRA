@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "3lagKxU3X84fGgnH9gekjy",
+    "name": "なとり",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/3lagKxU3X84fGgnH9gekjy"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 0,
+  "raw_track_total": 0,
+  "canonical_track_count": 0,
+  "primary_lyric_track_count": 0,
+  "redundant_variant_track_count": 0,
+  "canonical_tracks": [],
+  "primary_lyric_tracks": [],
+  "redundant_variant_tracks": [],
+  "releases": []
+}

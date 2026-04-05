@@ -1,0 +1,40 @@
+This task is generation_safety lyric grounding source acquisition for the 16 tracks blocked in `phase1_core_cleanup`.
+
+Goal:
+- acquire trusted Japanese lyric grounding sources
+- acquire exact or tightly transcribed Japanese section text and hook lines
+- produce source bundles that can later be normalized into phase1 retry input
+
+Important:
+- do not modify engine code
+- do not patch main conditioning records directly
+- submit one JSON source bundle per track into the matching artist `incoming/` directory
+- external research is allowed in this workflow, but only trusted lyric sources should be used
+- each submitted bundle must include enough citation detail to support later internal review
+- if a trustworthy source cannot be secured for a track, leave that track unsubmitted
+
+Trusted source policy:
+- allowed: official artist / label / publisher lyric pages
+- allowed: official distributor lyric pages tied to the released track
+- allowed: official uploads that expose lyric text directly
+- allowed: cross-checked lyric databases only when two trusted sources agree line-for-line
+- disallowed: unattributed mirrors, forums, repost blogs, wiki summaries, fan-maintained lyric wiki mirrors, machine-translated pages, AI summaries
+- tie-break: official source wins; if only lyric databases are available, require two independent trusted sources that agree; a single-source lyric database bundle is not acceptable; if non-official sources disagree, do not submit the track
+
+Required output fields per track:
+- `track_identity.track_id`
+- `source_provenance.lyric_sources`
+- `source_provenance.notes`
+- `lyric_ground_truth.full_text_status`
+- `lyric_ground_truth.sections`
+- `lyric_ground_truth.hook_lines`
+
+Minimum quality bar:
+- clean UTF-8 only
+- `lyric_ground_truth.full_text_status` must be `full`
+- Japanese lyric text only in `sections` and `hook_lines`, except for artist-original non-Japanese tokens that are part of the source lyric text
+- no English summary lines
+- no paraphrases; if exact or tightly transcribed source text cannot be secured, leave the track unsubmitted
+
+Output rule:
+- write to `C:\JPop_Songwriter\AKIRA ENGINE\data\_global\generation_safety_lyric_grounding_source_acquisition\<artist>\incoming\<track_id>.json`

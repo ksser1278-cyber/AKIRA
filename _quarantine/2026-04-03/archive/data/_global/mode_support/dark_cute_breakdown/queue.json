@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "record_type": "mode_support_queue",
+  "mode_id": "dark_cute_breakdown",
+  "target_count": 20,
+  "support_artists": [
+    "deco27",
+    "pinocchiop",
+    "kairiki_bear",
+    "maretu"
+  ],
+  "queue": [
+    {
+      "artist_id": "deco27",
+      "status": "ready_for_scaffold",
+      "target_track_count": 5,
+      "candidate_track_ids": [
+        "deco27_poison_apple"
+      ],
+      "notes": [
+        "single-track draft submission"
+      ],
+      "candidate_titles": [
+        "毒林檎"
+      ]
+    },
+    {
+      "artist_id": "pinocchiop",
+      "status": "ready_for_scaffold",
+      "target_track_count": 5,
+      "candidate_track_ids": [
+        "pinocchiop_mushikui_psychedelism"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "虫喰いサイケデリズム"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "status": "ready_for_scaffold",
+      "target_track_count": 5,
+      "candidate_track_ids": [
+        "kairiki_bear_bug"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "バグ"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "status": "ready_for_scaffold",
+      "target_track_count": 5,
+      "candidate_track_ids": [
+        "maretu_brain_revolution_girl"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "脳内革命ガール"
+      ]
+    }
+  ]
+}

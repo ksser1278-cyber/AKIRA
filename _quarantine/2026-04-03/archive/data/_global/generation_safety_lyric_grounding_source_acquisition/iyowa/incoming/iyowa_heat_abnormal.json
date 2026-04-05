@@ -1,0 +1,49 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_heat_abnormal"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm22101301/",
+        "status": "trusted"
+      },
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/324683/",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Cross-check bundle updated with a second trusted lyric database that matches the existing transcription line-for-line."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "死んだ変数で繰り返す",
+          "数え事が孕んだ熱",
+          "どこに送るあてもなく",
+          "あわれな独り言を記している"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "熱、異常、脳が溶ける",
+          "熱、異常、脳が溶ける"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "死んだ変数で繰り返す",
+      "熱、異常、脳が溶ける"
+    ]
+  }
+}

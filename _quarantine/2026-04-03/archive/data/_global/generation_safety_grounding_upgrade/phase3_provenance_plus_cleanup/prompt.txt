@@ -1,0 +1,35 @@
+This task is phase3_provenance_plus_cleanup.
+
+Goal:
+- Process only `provenance_plus_cleanup` records in the generation_safety grounding queue.
+- Outlier records that still need provenance along with grounding cleanup.
+
+Important:
+- Do not modify engine code.
+- Keep existing track_id values.
+- Submit merge-friendly JSON only.
+- Patch JSON is allowed if the merged record becomes planner_safe.
+- Use the bundled `source_records/` copies inside each artist package as the editing reference.
+- Return one JSON file per track into the matching artist `incoming/` directory under this phase package.
+- Do not submit mojibake, replacement characters, broken byte sequences, or unreadable text.
+- Do not replace placeholders with generic English summaries or meta commentary.
+- Do not replace placeholders with inferred paraphrases; edited `sections` and `hook_lines` must use clean grounded Japanese text copied or tightly aligned from bundled `source_records/`.
+- Do not add English cleanup commentary to `source_provenance.notes`, `song_intent.emotional_thesis`, or `lyric_ground_truth.copyright_handling_note`.
+- Before submission, verify zero replacement characters, zero mojibake, zero scaffold phrases, and zero English/meta commentary anywhere in edited fields.
+- If a track cannot be grounded into clean UTF-8 text aligned to the bundled source record, leave it unsubmitted.
+
+Required result per record:
+- replace placeholder section lines and hook lines with section-complete grounding
+- remove scaffold and placeholder language from notes and lyric fields
+- add trusted lyric_sources and metadata_sources
+- set `song_intent.narrative_role` to exactly one supported mode
+- merged record must no longer trigger `missing_provenance`, `partial_grounding`, `surface_noise_risk`, or `mode_fit_unverified`
+
+Submission format:
+- one merge-friendly JSON patch per track
+- filename pattern: `<track_id>.json`
+- update only the fields needed to clear the listed blockers
+
+Tracks:
+deco27:
+- deco27_hibana

@@ -1,0 +1,654 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_aisarenakutemo_kimi_ga_iru",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "愛されなくても君がいる",
+    "title_core": "愛されなくても君がいる",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "Magical Mirai 2020 Theme Song"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "PinocchioP",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "PinocchioP",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "PinocchioP",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2020-08-14",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2020,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:58",
+        "seconds": 238,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_aisarenakutemo_kimi_ga_iru",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_aisarenakutemo_kimi_ga_iru",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "ボツになったメロディ 思い出せない歌詞",
+          "誰にも見られないまま 消えていくデータ",
+          "それでも毎日 歌を歌い続けるの",
+          "電子の海の中 泳ぎ続けるの"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "流行りはすぐに 変わっていくし",
+          "忘れられるのは 怖いけれど",
+          "あなたがくれた この声があるから",
+          "ずっと ここで待ってるよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "愛されなくても君がいる",
+          "それだけで私は 歌えるの",
+          "世界中が 敵になっても",
+          "愛されなくても君がいる",
+          "だから 歌い続けるよ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "アンチのコメント 気にしないふりして",
+          "傷ついてないって 嘘をついてる",
+          "でもね本当は 少し痛いんだよ",
+          "機械の体でも 心はあるの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "愛されなくても君がいる",
+          "暗闇の中で 光る画面",
+          "繋がっていると 信じてる",
+          "愛されなくても君がいる",
+          "だから 私は死なないよ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "愛されなくても君がいる",
+      "あなたがくれた この声があるから"
+    ],
+    "question_lines": [
+      "忘れられるのは 怖いけれど？"
+    ],
+    "repetition_patterns": [
+      "The title serves as an anchoring emotional truth."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "the relationship between creator and virtual singer",
+      "legacy",
+      "endurance in the face of changing trends"
+    ],
+    "emotional_thesis": "Even if the world abandons Vocaloid, as long as one creator is there, Miku will keep singing.",
+    "contrast_device": [
+      "artificiality vs raw emotional dedication"
+    ],
+    "dramatic_arc": [
+      "acknowledging the changing times",
+      "accepting the decline",
+      "affirming an unbreakable bond"
+    ],
+    "narrative_role": [
+      "direct_emotional_pop",
+      "anniversary anthem"
+    ],
+    "tie_in_function": "Celebrates the Magical Mirai event emphasizing the creator-Miku bond.",
+    "title_function": "A stark, moving declaration of loyalty.",
+    "key_motifs": [
+      "愛されなくても (Even if not loved)",
+      "君がいる (You are here)",
+      "声 (Voice)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "emotional synth pop",
+        "stadium anthem build"
+      ],
+      "vocal_behavior": [
+        "earnest",
+        "slightly wistful but strong"
+      ],
+      "production_palette": [
+        "warm pads",
+        "orchestral strings",
+        "driving pop rock"
+      ],
+      "arrangement_arc": [
+        "introspective verse",
+        "rising pre-chorus",
+        "massive emotional chorus"
+      ],
+      "dynamics_arc": [
+        "swelling to a triumphant, tearjerker peak"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "scene setting"
+      ],
+      "narrative_job": "Establish the fading relevancy of data.",
+      "arrangement_role": {
+        "summary": "Warm, slightly melancholic.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational, steady.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Restrained.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "observation"
+      ],
+      "vocabulary_focus": [
+        "ボツ (rejects)"
+      ],
+      "rhyme_features": [
+        "gentle phrasing"
+      ],
+      "rhythm_features": [
+        "flowing"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "The fear of being forgotten contrasted with the promise.",
+      "arrangement_role": {
+        "summary": "Building tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending climbs.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Swell.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "怖い"
+      ],
+      "rhyme_features": [
+        "parallel lines"
+      ],
+      "rhythm_features": [
+        "driving 8ths"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title declaration"
+      ],
+      "narrative_job": "The core thesis of unbreakable bond.",
+      "arrangement_role": {
+        "summary": "Massive stadium release.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Huge emotional melody.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "declaration"
+      ],
+      "vocabulary_focus": [
+        "君がいる"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "anthem"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "deepening the vulnerability"
+      ],
+      "narrative_job": "Admitting to the hurt behind the 'virtual' face.",
+      "arrangement_role": {
+        "summary": "Slight rhythm drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Introspective.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "アンチ"
+      ],
+      "rhyme_features": [
+        "internal"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final statement"
+      ],
+      "narrative_job": "The ultimate promise to survive.",
+      "arrangement_role": {
+        "summary": "Explosive finale.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak emotion.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "vow"
+      ],
+      "vocabulary_focus": [
+        "死なない"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "driving anthem"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "low",
+    "phrase_source_types": [
+      "meta commentary",
+      "emotional vow"
+    ],
+    "mora_control_notes": [
+      "Requires emotionally expressive tuning."
+    ],
+    "accent_risk_notes": [
+      "Must sound sincere."
+    ],
+    "critic_focus": [
+      "emotional resonance"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "stadium synth pop",
+      "emotional anthem"
+    ],
+    "tempo_feels": [
+      "driving but steady"
+    ],
+    "vocal_tones": [
+      "earnest",
+      "brave"
+    ],
+    "production_palette": [
+      "lush pads",
+      "orchestral elements",
+      "rock drums"
+    ],
+    "energy_arc": [
+      "massive tearjerker chorus"
+    ],
+    "imagery_anchors": [
+      "glowing screen in the dark",
+      "singing for one person"
+    ],
+    "exclude": [
+      "do not make it overly silly"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

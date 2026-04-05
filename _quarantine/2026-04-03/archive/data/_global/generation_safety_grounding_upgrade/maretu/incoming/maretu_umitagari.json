@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "maretu_umitagari"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and somatic/pregnancy themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "お腹の中に、小さな命",
+          "また何か、不穏な朝が来る"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "揺れる夜、消えない影",
+          "愛されていたい、ただそれだけ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "うみたがり、愛したがり",
+          "痛みを、抱きしめたまま"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ボロボロの、心を引きずって",
+          "この子と一緒に、生きていく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "うみたがり、愛したがり",
+          "私のまま、愛を受け取って",
+          "さよなら、昨日の私"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "うみたがり",
+      "愛したがり",
+      "お腹の中に"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "Delves into the complex emotional landscape of unintended pregnancy and the subsequent choice to find meaning and life within a troubled relationship."
+  }
+}

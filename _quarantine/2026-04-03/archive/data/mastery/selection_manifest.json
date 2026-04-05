@@ -1,0 +1,177 @@
+{
+  "version": "2.5.0",
+  "curation_date": "2026-03-30T14:00:00Z",
+  "summary": {
+    "total_candidates": 10,
+    "total_selected": 10,
+    "total_rejected": 0,
+    "mode_distribution": {
+      "universal": 8,
+      "glitch_hyper_pop": 1,
+      "dark_cute_breakdown": 1
+    }
+  },
+  "selected_tracks": [
+    {
+      "v2_5_id": "v2_5_13883",
+      "source_track_id": "13883",
+      "title": "Francium",
+      "artist": "kiichi feat. \u521d\u97f3\u30df\u30af",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:44Z"
+    },
+    {
+      "v2_5_id": "v2_5_17332",
+      "source_track_id": "17332",
+      "title": "\u6050\u6016\u30ac\u30fc\u30c7\u30f3",
+      "artist": "\u3061\u3083\u3041 feat. \u93e1\u97f3\u30ea\u30f3",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:38Z"
+    },
+    {
+      "v2_5_id": "v2_5_174236",
+      "source_track_id": "174236",
+      "title": "\u3044\u301c\u3084\u3044\u301c\u3084\u3044\u301c\u3084",
+      "artist": "Neru feat. \u93e1\u97f3\u30ec\u30f3 V4X (Power), \u93e1\u97f3\u30ea\u30f3 V4X (Power)",
+      "mode": "glitch_hyper_pop",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "glitch_hyper_pop",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:39Z"
+    },
+    {
+      "v2_5_id": "v2_5_231284",
+      "source_track_id": "231284",
+      "title": "\u30a2\u30f3\u30d8\u30eb",
+      "artist": "\u304b\u3044\u308a\u304d\u30d9\u30a2 feat. \u9cf4\u82b1\u30df\u30b3\u30c8",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:43Z"
+    },
+    {
+      "v2_5_id": "v2_5_260566",
+      "source_track_id": "260566",
+      "title": "\u30de\u30b8\u30ab\u30eb\u30c9\u30af\u30bf\u30fc",
+      "artist": "MARETU feat. \u521d\u97f3\u30df\u30af V4X (Original)",
+      "mode": "dark_cute_breakdown",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "dark_cute_breakdown",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:42Z"
+    },
+    {
+      "v2_5_id": "v2_5_3658",
+      "source_track_id": "3658",
+      "title": "\u30df\u30e9\u30af\u30eb\u30da\u30a4\u30f3\u30c8",
+      "artist": "OSTER project feat. \u521d\u97f3\u30df\u30af",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:47Z"
+    },
+    {
+      "v2_5_id": "v2_5_506793",
+      "source_track_id": "506793",
+      "title": "\u30e9\u30a4\u30a2\u30fc\u30c0\u30f3\u30b5\u30fc",
+      "artist": "\u30de\u30b5\u30e9\u30c0 feat. \u91cd\u97f3\u30c6\u30c8SV",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:40Z"
+    },
+    {
+      "v2_5_id": "v2_5_626191",
+      "source_track_id": "626191",
+      "title": "\u32f0\u8cac\u4efb\u96c6\u5408\u4f53",
+      "artist": "\u30de\u30b5\u30e9\u30c0 feat. \u91cd\u97f3\u30c6\u30c8SV",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:46Z"
+    },
+    {
+      "v2_5_id": "v2_5_734953",
+      "source_track_id": "734953",
+      "title": "Confessions of a Rotten Girl",
+      "artist": "SAWTOWNE feat. \u521d\u97f3\u30df\u30af V4 (English)",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:37Z"
+    },
+    {
+      "v2_5_id": "v2_5_8175",
+      "source_track_id": "8175",
+      "title": "\u30e1\u30c6\u30aa",
+      "artist": "\u3058\u3087\u3093 feat. \u521d\u97f3\u30df\u30af Append (Sweet), \u521d\u97f3\u30df\u30af Append (Dark)",
+      "mode": "universal",
+      "mastery_score": 0.8002905373197087,
+      "total_engine_score": 52.31,
+      "lint_result": {
+        "is_valid": true,
+        "reasons": [],
+        "mode_id": "universal",
+        "line_count": 41
+      },
+      "timestamp": "2026-03-30T23:11:45Z"
+    }
+  ],
+  "rejected_tracks": []
+}

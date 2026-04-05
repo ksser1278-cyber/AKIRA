@@ -1,0 +1,29 @@
+{
+  "track_identity": {
+    "track_id": "maretu_brain_revolution_girl"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "MARETU Official YouTube",
+        "origin": "official_channel",
+        "url": "https://www.youtube.com/watch?v=0h9VscH7J6E",
+        "status": "confirmed"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "NicoNico Douga (Original Upload)",
+        "origin": "official_channel",
+        "url": "https://www.nicovideo.jp/watch/sm21870906",
+        "status": "confirmed"
+      }
+    ],
+    "notes": [
+      "Provenance verified and narrative mode aligned to the existing mode-support classification for planner_safe promotion review."
+    ]
+  },
+  "song_intent": {
+    "narrative_role": ["dark_cute_breakdown"]
+  }
+}

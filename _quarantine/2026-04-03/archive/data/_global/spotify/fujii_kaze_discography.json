@@ -1,0 +1,2048 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "6bDWAcdtVR3WHz2xtiIPUi",
+    "name": "Fujii Kaze",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/6bDWAcdtVR3WHz2xtiIPUi"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 26,
+  "raw_track_total": 70,
+  "canonical_track_count": 56,
+  "primary_lyric_track_count": 51,
+  "redundant_variant_track_count": 5,
+  "canonical_tracks": [
+    {
+      "name": "何なんw",
+      "normalized_name": "何なんw",
+      "first_release_date": "2019-11-18",
+      "spotify_track_id": "4Mwj8RAcmYqX1U4RgJLjQz",
+      "albums": [
+        "何なんw",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "もうええわ",
+      "normalized_name": "もうええわ",
+      "first_release_date": "2019-12-24",
+      "spotify_track_id": "5agRD1X5OGaVGBEau5Gg1J",
+      "albums": [
+        "もうええわ",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "優しさ",
+      "normalized_name": "優しさ",
+      "first_release_date": "2020-04-17",
+      "spotify_track_id": "38oLPJMvxkUflwj1Si2Fks",
+      "albums": [
+        "優しさ",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "キリがないから",
+      "normalized_name": "キリがないから",
+      "first_release_date": "2020-05-15",
+      "spotify_track_id": "1TVDXZBWxGAfDGDSGD2uaq",
+      "albums": [
+        "キリがないから",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "さよならべいべ",
+      "normalized_name": "さよならべいべ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "58zXQUhb3NXbY2QjhRgTNL",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "帰ろう",
+      "normalized_name": "帰ろう",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "6Dmxt4rbi97c7sjoWRrJoj",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "死ぬのがいいわ",
+      "normalized_name": "死ぬのがいいわ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "0HYAsQwJIO6FLqpyTeD3l6",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "特にない",
+      "normalized_name": "特にない",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "5UiZWCqMerAvmiHtQwTKSj",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "罪の香り",
+      "normalized_name": "罪の香り",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "0tJmd8OMwEBesfTsvuGayw",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "調子のっちゃって",
+      "normalized_name": "調子のっちゃって",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "2fxqcSRl5dUiMAcSigsmkh",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "風よ",
+      "normalized_name": "風よ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "77NDAeUdOg9ODtEhbZjAb4",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "へでもねーよ",
+      "normalized_name": "へでもねーよ",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "1LjZnfncDtrn5YtbU4lQMf",
+      "albums": [
+        "へでもねーよ"
+      ]
+    },
+    {
+      "name": "青春病",
+      "normalized_name": "青春病",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "4EwKtJQT2ZHKzECGH3EjLx",
+      "albums": [
+        "青春病"
+      ]
+    },
+    {
+      "name": "旅路",
+      "normalized_name": "旅路",
+      "first_release_date": "2021-03-01",
+      "spotify_track_id": "1EM9pvygHqQm03as6sxLg9",
+      "albums": [
+        "旅路",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "きらり",
+      "normalized_name": "きらり",
+      "first_release_date": "2021-05-03",
+      "spotify_track_id": "3ciqhcLmXP4hVGBD98QlEj",
+      "albums": [
+        "きらり",
+        "Kirari Remixes (Asia Edition)",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "燃えよ",
+      "normalized_name": "燃えよ",
+      "first_release_date": "2021-09-04",
+      "spotify_track_id": "7nWkch2lxmVbHOgKabM8qd",
+      "albums": [
+        "燃えよ",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "Kirari - Daul Remix",
+      "normalized_name": "kirari daul remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "1zzJfOdraIBJtCAatSYzCt",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - FunkyMo Remix",
+      "normalized_name": "kirari funkymo remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "3jb5c2fEeALV2No7rdgVq0",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Kaze & Yaffle Just For Fun Remix",
+      "normalized_name": "kirari kaze & yaffle just for fun remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "4rt6pYHXo3hP8hjOqIR493",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Knopha Remix",
+      "normalized_name": "kirari knopha remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "5ojWaJSbVbLIYw5nBVcBVv",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Naken Remix",
+      "normalized_name": "kirari naken remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "4BvfcSZhOanpIanqnbIhJh",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Original Remix",
+      "normalized_name": "kirari original remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "3ny97Q3zPXS6C3YyS5zLKm",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Yaffle Remix",
+      "normalized_name": "kirari yaffle remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "077QnENawTNSUZWI5P4K5e",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - pxzvc Remix",
+      "normalized_name": "kirari pxzvc remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "0uWFA4yhEvuiHByNCK0pPF",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "まつり",
+      "normalized_name": "まつり",
+      "first_release_date": "2022-03-20",
+      "spotify_track_id": "14QNjDBXGCwEzJZUKkiTem",
+      "albums": [
+        "まつり",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "damn",
+      "normalized_name": "damn",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "7dNxxkapvf5eRkw24PHSpy",
+      "albums": [
+        "LOVE ALL SERVE ALL",
+        "damn"
+      ]
+    },
+    {
+      "name": "“青春病”",
+      "normalized_name": "“青春病”",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "6bioW1LHzS92xtmWT6NeWl",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "それでは、",
+      "normalized_name": "それでは、",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "5qGpsL9fCOr1sGYNMmFFtI",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "へでもねーよ - LASA edit",
+      "normalized_name": "へでもねーよ lasa edit",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "7LI2pQoE3fWfOQuds2paXs",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "やば。",
+      "normalized_name": "やば。",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "1FDCEz8kY256zhDO2GjWuW",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "ガーデン",
+      "normalized_name": "ガーデン",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "5U4PgFWzfzY7VEg9Ck4ziF",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "ロンリーラプソディ",
+      "normalized_name": "ロンリーラプソディ",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "2T2PRhaEQLPoo78E8zyVgw",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "damn - instrumental",
+      "normalized_name": "damn instrumental",
+      "first_release_date": "2022-09-30",
+      "spotify_track_id": "536rYPzOPx5HiP8UfKIomj",
+      "albums": [
+        "damn"
+      ]
+    },
+    {
+      "name": "damn - karaoke",
+      "normalized_name": "damn karaoke",
+      "first_release_date": "2022-09-30",
+      "spotify_track_id": "04CBg2ciDgmZZdLN0OMfKY",
+      "albums": [
+        "damn"
+      ]
+    },
+    {
+      "name": "grace",
+      "normalized_name": "grace",
+      "first_release_date": "2022-10-09",
+      "spotify_track_id": "7tnYsRepXLaNhqj4xtcWP2",
+      "albums": [
+        "grace"
+      ]
+    },
+    {
+      "name": "golden hour - Fujii Kaze Remix",
+      "normalized_name": "golden hour fujii kaze remix",
+      "first_release_date": "2023-04-21",
+      "spotify_track_id": "6KxgptZSrQC4Vv21ZBOG7S",
+      "albums": [
+        "golden hour (Fujii Kaze Remix)"
+      ]
+    },
+    {
+      "name": "Workin' Hard",
+      "normalized_name": "workin hard",
+      "first_release_date": "2023-08-24",
+      "spotify_track_id": "0Whfa8wikSDUvtB5mzYOGH",
+      "albums": [
+        "Workin' Hard"
+      ]
+    },
+    {
+      "name": "花",
+      "normalized_name": "花",
+      "first_release_date": "2023-10-12",
+      "spotify_track_id": "5RIQU2JDuXC4NkLiHNNMon",
+      "albums": [
+        "花",
+        "花"
+      ]
+    },
+    {
+      "name": "花 - Ballad",
+      "normalized_name": "花 ballad",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "4wmioqSrmIUAqqEKnZgvCf",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "花 - Instrumental",
+      "normalized_name": "花 instrumental",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "4czrewyeNgcdrecmMPHfn9",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "花 - demo",
+      "normalized_name": "花 demo",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "2AXYNbSuCRuxmrcID66yc5",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "満ちてゆく",
+      "normalized_name": "満ちてゆく",
+      "first_release_date": "2024-03-14",
+      "spotify_track_id": "5glPFBAuA1C85tBcVWVzvO",
+      "albums": [
+        "満ちてゆく"
+      ]
+    },
+    {
+      "name": "Feelin’ Go(o)d",
+      "normalized_name": "feelin’ god",
+      "first_release_date": "2024-07-25",
+      "spotify_track_id": "1C22EnQawXuIsqgnnWcrMR",
+      "albums": [
+        "Feelin’ Go(o)d"
+      ]
+    },
+    {
+      "name": "真っ白",
+      "normalized_name": "真っ白",
+      "first_release_date": "2025-02-27",
+      "spotify_track_id": "3GiADMmI5jfkhF2o4a2G8N",
+      "albums": [
+        "真っ白",
+        "真っ白"
+      ]
+    },
+    {
+      "name": "真っ白 - Acapella",
+      "normalized_name": "真っ白 acapella",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "7gvYORZTq66av3t0oqnLJA",
+      "albums": [
+        "真っ白"
+      ]
+    },
+    {
+      "name": "真っ白 - Instrumental",
+      "normalized_name": "真っ白 instrumental",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "6O6Z4UsyHSRgSpGyUHNwci",
+      "albums": [
+        "真っ白"
+      ]
+    },
+    {
+      "name": "真っ白 - KOBY SHY Remix",
+      "normalized_name": "真っ白 koby shy remix",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "2hBrwq58POZudqeqSEzT3B",
+      "albums": [
+        "真っ白"
+      ]
+    },
+    {
+      "name": "Hachikō",
+      "normalized_name": "hachikō",
+      "first_release_date": "2025-06-13",
+      "spotify_track_id": "4WhHNXBgRglnkjy7TMzgdh",
+      "albums": [
+        "Hachikō",
+        "Prema"
+      ]
+    },
+    {
+      "name": "Love Like This",
+      "normalized_name": "love like this",
+      "first_release_date": "2025-08-01",
+      "spotify_track_id": "1eULGMOdkcFd3xTD1zh2f5",
+      "albums": [
+        "Love Like This",
+        "Prema"
+      ]
+    },
+    {
+      "name": "Casket Girl",
+      "normalized_name": "casket girl",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "46LSraL1efyLHbM5DehGtN",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Forever Young",
+      "normalized_name": "forever young",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "3K0Xr4N0ccBKqBBHDARIFy",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "I Need U Back",
+      "normalized_name": "i need u back",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "2D7Bqzfa2pJqa0LUftrVgx",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "It Ain't Over",
+      "normalized_name": "it aint over",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "7xWKGIFGLxBJAyGSus7BOJ",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Okay, Goodbye",
+      "normalized_name": "okay goodbye",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "1Vw0JiY6Jk8vCypHzb3fo4",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Prema",
+      "normalized_name": "prema",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "0IByNT868RxZwmcj1rQgno",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "You",
+      "normalized_name": "you",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "2vQhYhGSBBamRhhJeWprr1",
+      "albums": [
+        "Prema"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "何なんw",
+      "normalized_name": "何なんw",
+      "first_release_date": "2019-11-18",
+      "spotify_track_id": "4Mwj8RAcmYqX1U4RgJLjQz",
+      "albums": [
+        "何なんw",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "もうええわ",
+      "normalized_name": "もうええわ",
+      "first_release_date": "2019-12-24",
+      "spotify_track_id": "5agRD1X5OGaVGBEau5Gg1J",
+      "albums": [
+        "もうええわ",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "優しさ",
+      "normalized_name": "優しさ",
+      "first_release_date": "2020-04-17",
+      "spotify_track_id": "38oLPJMvxkUflwj1Si2Fks",
+      "albums": [
+        "優しさ",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "キリがないから",
+      "normalized_name": "キリがないから",
+      "first_release_date": "2020-05-15",
+      "spotify_track_id": "1TVDXZBWxGAfDGDSGD2uaq",
+      "albums": [
+        "キリがないから",
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "さよならべいべ",
+      "normalized_name": "さよならべいべ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "58zXQUhb3NXbY2QjhRgTNL",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "帰ろう",
+      "normalized_name": "帰ろう",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "6Dmxt4rbi97c7sjoWRrJoj",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "死ぬのがいいわ",
+      "normalized_name": "死ぬのがいいわ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "0HYAsQwJIO6FLqpyTeD3l6",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "特にない",
+      "normalized_name": "特にない",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "5UiZWCqMerAvmiHtQwTKSj",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "罪の香り",
+      "normalized_name": "罪の香り",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "0tJmd8OMwEBesfTsvuGayw",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "調子のっちゃって",
+      "normalized_name": "調子のっちゃって",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "2fxqcSRl5dUiMAcSigsmkh",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "風よ",
+      "normalized_name": "風よ",
+      "first_release_date": "2020-05-20",
+      "spotify_track_id": "77NDAeUdOg9ODtEhbZjAb4",
+      "albums": [
+        "HELP EVER HURT NEVER"
+      ]
+    },
+    {
+      "name": "へでもねーよ",
+      "normalized_name": "へでもねーよ",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "1LjZnfncDtrn5YtbU4lQMf",
+      "albums": [
+        "へでもねーよ"
+      ]
+    },
+    {
+      "name": "青春病",
+      "normalized_name": "青春病",
+      "first_release_date": "2020-10-30",
+      "spotify_track_id": "4EwKtJQT2ZHKzECGH3EjLx",
+      "albums": [
+        "青春病"
+      ]
+    },
+    {
+      "name": "旅路",
+      "normalized_name": "旅路",
+      "first_release_date": "2021-03-01",
+      "spotify_track_id": "1EM9pvygHqQm03as6sxLg9",
+      "albums": [
+        "旅路",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "きらり",
+      "normalized_name": "きらり",
+      "first_release_date": "2021-05-03",
+      "spotify_track_id": "3ciqhcLmXP4hVGBD98QlEj",
+      "albums": [
+        "きらり",
+        "Kirari Remixes (Asia Edition)",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "燃えよ",
+      "normalized_name": "燃えよ",
+      "first_release_date": "2021-09-04",
+      "spotify_track_id": "7nWkch2lxmVbHOgKabM8qd",
+      "albums": [
+        "燃えよ",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "Kirari - Daul Remix",
+      "normalized_name": "kirari daul remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "1zzJfOdraIBJtCAatSYzCt",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - FunkyMo Remix",
+      "normalized_name": "kirari funkymo remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "3jb5c2fEeALV2No7rdgVq0",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Kaze & Yaffle Just For Fun Remix",
+      "normalized_name": "kirari kaze & yaffle just for fun remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "4rt6pYHXo3hP8hjOqIR493",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Knopha Remix",
+      "normalized_name": "kirari knopha remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "5ojWaJSbVbLIYw5nBVcBVv",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Naken Remix",
+      "normalized_name": "kirari naken remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "4BvfcSZhOanpIanqnbIhJh",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Original Remix",
+      "normalized_name": "kirari original remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "3ny97Q3zPXS6C3YyS5zLKm",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - Yaffle Remix",
+      "normalized_name": "kirari yaffle remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "077QnENawTNSUZWI5P4K5e",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "Kirari - pxzvc Remix",
+      "normalized_name": "kirari pxzvc remix",
+      "first_release_date": "2022-01-14",
+      "spotify_track_id": "0uWFA4yhEvuiHByNCK0pPF",
+      "albums": [
+        "Kirari Remixes (Asia Edition)"
+      ]
+    },
+    {
+      "name": "まつり",
+      "normalized_name": "まつり",
+      "first_release_date": "2022-03-20",
+      "spotify_track_id": "14QNjDBXGCwEzJZUKkiTem",
+      "albums": [
+        "まつり",
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "damn",
+      "normalized_name": "damn",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "7dNxxkapvf5eRkw24PHSpy",
+      "albums": [
+        "LOVE ALL SERVE ALL",
+        "damn"
+      ]
+    },
+    {
+      "name": "“青春病”",
+      "normalized_name": "“青春病”",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "6bioW1LHzS92xtmWT6NeWl",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "それでは、",
+      "normalized_name": "それでは、",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "5qGpsL9fCOr1sGYNMmFFtI",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "へでもねーよ - LASA edit",
+      "normalized_name": "へでもねーよ lasa edit",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "7LI2pQoE3fWfOQuds2paXs",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "やば。",
+      "normalized_name": "やば。",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "1FDCEz8kY256zhDO2GjWuW",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "ガーデン",
+      "normalized_name": "ガーデン",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "5U4PgFWzfzY7VEg9Ck4ziF",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "ロンリーラプソディ",
+      "normalized_name": "ロンリーラプソディ",
+      "first_release_date": "2022-03-23",
+      "spotify_track_id": "2T2PRhaEQLPoo78E8zyVgw",
+      "albums": [
+        "LOVE ALL SERVE ALL"
+      ]
+    },
+    {
+      "name": "grace",
+      "normalized_name": "grace",
+      "first_release_date": "2022-10-09",
+      "spotify_track_id": "7tnYsRepXLaNhqj4xtcWP2",
+      "albums": [
+        "grace"
+      ]
+    },
+    {
+      "name": "golden hour - Fujii Kaze Remix",
+      "normalized_name": "golden hour fujii kaze remix",
+      "first_release_date": "2023-04-21",
+      "spotify_track_id": "6KxgptZSrQC4Vv21ZBOG7S",
+      "albums": [
+        "golden hour (Fujii Kaze Remix)"
+      ]
+    },
+    {
+      "name": "Workin' Hard",
+      "normalized_name": "workin hard",
+      "first_release_date": "2023-08-24",
+      "spotify_track_id": "0Whfa8wikSDUvtB5mzYOGH",
+      "albums": [
+        "Workin' Hard"
+      ]
+    },
+    {
+      "name": "花",
+      "normalized_name": "花",
+      "first_release_date": "2023-10-12",
+      "spotify_track_id": "5RIQU2JDuXC4NkLiHNNMon",
+      "albums": [
+        "花",
+        "花"
+      ]
+    },
+    {
+      "name": "花 - Ballad",
+      "normalized_name": "花 ballad",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "4wmioqSrmIUAqqEKnZgvCf",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "花 - demo",
+      "normalized_name": "花 demo",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "2AXYNbSuCRuxmrcID66yc5",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "満ちてゆく",
+      "normalized_name": "満ちてゆく",
+      "first_release_date": "2024-03-14",
+      "spotify_track_id": "5glPFBAuA1C85tBcVWVzvO",
+      "albums": [
+        "満ちてゆく"
+      ]
+    },
+    {
+      "name": "Feelin’ Go(o)d",
+      "normalized_name": "feelin’ god",
+      "first_release_date": "2024-07-25",
+      "spotify_track_id": "1C22EnQawXuIsqgnnWcrMR",
+      "albums": [
+        "Feelin’ Go(o)d"
+      ]
+    },
+    {
+      "name": "真っ白",
+      "normalized_name": "真っ白",
+      "first_release_date": "2025-02-27",
+      "spotify_track_id": "3GiADMmI5jfkhF2o4a2G8N",
+      "albums": [
+        "真っ白",
+        "真っ白"
+      ]
+    },
+    {
+      "name": "真っ白 - Acapella",
+      "normalized_name": "真っ白 acapella",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "7gvYORZTq66av3t0oqnLJA",
+      "albums": [
+        "真っ白"
+      ]
+    },
+    {
+      "name": "Hachikō",
+      "normalized_name": "hachikō",
+      "first_release_date": "2025-06-13",
+      "spotify_track_id": "4WhHNXBgRglnkjy7TMzgdh",
+      "albums": [
+        "Hachikō",
+        "Prema"
+      ]
+    },
+    {
+      "name": "Love Like This",
+      "normalized_name": "love like this",
+      "first_release_date": "2025-08-01",
+      "spotify_track_id": "1eULGMOdkcFd3xTD1zh2f5",
+      "albums": [
+        "Love Like This",
+        "Prema"
+      ]
+    },
+    {
+      "name": "Casket Girl",
+      "normalized_name": "casket girl",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "46LSraL1efyLHbM5DehGtN",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Forever Young",
+      "normalized_name": "forever young",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "3K0Xr4N0ccBKqBBHDARIFy",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "I Need U Back",
+      "normalized_name": "i need u back",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "2D7Bqzfa2pJqa0LUftrVgx",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "It Ain't Over",
+      "normalized_name": "it aint over",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "7xWKGIFGLxBJAyGSus7BOJ",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Okay, Goodbye",
+      "normalized_name": "okay goodbye",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "1Vw0JiY6Jk8vCypHzb3fo4",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "Prema",
+      "normalized_name": "prema",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "0IByNT868RxZwmcj1rQgno",
+      "albums": [
+        "Prema"
+      ]
+    },
+    {
+      "name": "You",
+      "normalized_name": "you",
+      "first_release_date": "2025-09-05",
+      "spotify_track_id": "2vQhYhGSBBamRhhJeWprr1",
+      "albums": [
+        "Prema"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [
+    {
+      "name": "damn - instrumental",
+      "normalized_name": "damn instrumental",
+      "first_release_date": "2022-09-30",
+      "spotify_track_id": "536rYPzOPx5HiP8UfKIomj",
+      "albums": [
+        "damn"
+      ]
+    },
+    {
+      "name": "damn - karaoke",
+      "normalized_name": "damn karaoke",
+      "first_release_date": "2022-09-30",
+      "spotify_track_id": "04CBg2ciDgmZZdLN0OMfKY",
+      "albums": [
+        "damn"
+      ]
+    },
+    {
+      "name": "花 - Instrumental",
+      "normalized_name": "花 instrumental",
+      "first_release_date": "2023-11-02",
+      "spotify_track_id": "4czrewyeNgcdrecmMPHfn9",
+      "albums": [
+        "花"
+      ]
+    },
+    {
+      "name": "真っ白 - Instrumental",
+      "normalized_name": "真っ白 instrumental",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "6O6Z4UsyHSRgSpGyUHNwci",
+      "albums": [
+        "真っ白"
+      ]
+    },
+    {
+      "name": "真っ白 - KOBY SHY Remix",
+      "normalized_name": "真っ白 koby shy remix",
+      "first_release_date": "2025-03-13",
+      "spotify_track_id": "2hBrwq58POZudqeqSEzT3B",
+      "albums": [
+        "真っ白"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "album_id": "3pJBTNE5uJwOm6nvbzMT2K",
+      "name": "何なんw",
+      "album_type": "single",
+      "release_date": "2019-11-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3pJBTNE5uJwOm6nvbzMT2K",
+      "tracks": [
+        {
+          "track_id": "4Mwj8RAcmYqX1U4RgJLjQz",
+          "name": "何なんw",
+          "normalized_name": "何なんw",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 319973,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4Mwj8RAcmYqX1U4RgJLjQz"
+        }
+      ]
+    },
+    {
+      "album_id": "4Vc9S8yAl9dh8jQQQZQKPw",
+      "name": "もうええわ",
+      "album_type": "single",
+      "release_date": "2019-12-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4Vc9S8yAl9dh8jQQQZQKPw",
+      "tracks": [
+        {
+          "track_id": "5agRD1X5OGaVGBEau5Gg1J",
+          "name": "もうええわ",
+          "normalized_name": "もうええわ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 301733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5agRD1X5OGaVGBEau5Gg1J"
+        }
+      ]
+    },
+    {
+      "album_id": "3GQZmfknolba58pfe6uSUO",
+      "name": "優しさ",
+      "album_type": "single",
+      "release_date": "2020-04-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3GQZmfknolba58pfe6uSUO",
+      "tracks": [
+        {
+          "track_id": "38oLPJMvxkUflwj1Si2Fks",
+          "name": "優しさ",
+          "normalized_name": "優しさ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 238600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/38oLPJMvxkUflwj1Si2Fks"
+        }
+      ]
+    },
+    {
+      "album_id": "5tgkbwifJZ8e6fSI0Hb7ow",
+      "name": "キリがないから",
+      "album_type": "single",
+      "release_date": "2020-05-15",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5tgkbwifJZ8e6fSI0Hb7ow",
+      "tracks": [
+        {
+          "track_id": "1TVDXZBWxGAfDGDSGD2uaq",
+          "name": "キリがないから",
+          "normalized_name": "キリがないから",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 217306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1TVDXZBWxGAfDGDSGD2uaq"
+        }
+      ]
+    },
+    {
+      "album_id": "03QiFOKDh6xMiSTkOnsmMG",
+      "name": "HELP EVER HURT NEVER",
+      "album_type": "album",
+      "release_date": "2020-05-20",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "spotify_url": "https://open.spotify.com/album/03QiFOKDh6xMiSTkOnsmMG",
+      "tracks": [
+        {
+          "track_id": "2Nl3vx5qRnATIckVRZxb4T",
+          "name": "何なんw",
+          "normalized_name": "何なんw",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 320640,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2Nl3vx5qRnATIckVRZxb4T"
+        },
+        {
+          "track_id": "7vBvAgZizx6wvlVXMbvuf4",
+          "name": "もうええわ",
+          "normalized_name": "もうええわ",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 301933,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7vBvAgZizx6wvlVXMbvuf4"
+        },
+        {
+          "track_id": "0f3Ce9xjHymExIpEyHUC8D",
+          "name": "優しさ",
+          "normalized_name": "優しさ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 240080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0f3Ce9xjHymExIpEyHUC8D"
+        },
+        {
+          "track_id": "0puZUrjhNhWl98RdE7YfNM",
+          "name": "キリがないから",
+          "normalized_name": "キリがないから",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 217613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0puZUrjhNhWl98RdE7YfNM"
+        },
+        {
+          "track_id": "0tJmd8OMwEBesfTsvuGayw",
+          "name": "罪の香り",
+          "normalized_name": "罪の香り",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 214200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0tJmd8OMwEBesfTsvuGayw"
+        },
+        {
+          "track_id": "2fxqcSRl5dUiMAcSigsmkh",
+          "name": "調子のっちゃって",
+          "normalized_name": "調子のっちゃって",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 282240,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2fxqcSRl5dUiMAcSigsmkh"
+        },
+        {
+          "track_id": "5UiZWCqMerAvmiHtQwTKSj",
+          "name": "特にない",
+          "normalized_name": "特にない",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 205253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5UiZWCqMerAvmiHtQwTKSj"
+        },
+        {
+          "track_id": "0HYAsQwJIO6FLqpyTeD3l6",
+          "name": "死ぬのがいいわ",
+          "normalized_name": "死ぬのがいいわ",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 185573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0HYAsQwJIO6FLqpyTeD3l6"
+        },
+        {
+          "track_id": "77NDAeUdOg9ODtEhbZjAb4",
+          "name": "風よ",
+          "normalized_name": "風よ",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 284520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/77NDAeUdOg9ODtEhbZjAb4"
+        },
+        {
+          "track_id": "58zXQUhb3NXbY2QjhRgTNL",
+          "name": "さよならべいべ",
+          "normalized_name": "さよならべいべ",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 260533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/58zXQUhb3NXbY2QjhRgTNL"
+        },
+        {
+          "track_id": "6Dmxt4rbi97c7sjoWRrJoj",
+          "name": "帰ろう",
+          "normalized_name": "帰ろう",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 284480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Dmxt4rbi97c7sjoWRrJoj"
+        }
+      ]
+    },
+    {
+      "album_id": "7grlPzIHgZINOD2GhYBROR",
+      "name": "へでもねーよ",
+      "album_type": "single",
+      "release_date": "2020-10-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7grlPzIHgZINOD2GhYBROR",
+      "tracks": [
+        {
+          "track_id": "1LjZnfncDtrn5YtbU4lQMf",
+          "name": "へでもねーよ",
+          "normalized_name": "へでもねーよ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 190754,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1LjZnfncDtrn5YtbU4lQMf"
+        }
+      ]
+    },
+    {
+      "album_id": "4L6znWirdFX9BDIsaSi9Fb",
+      "name": "青春病",
+      "album_type": "single",
+      "release_date": "2020-10-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4L6znWirdFX9BDIsaSi9Fb",
+      "tracks": [
+        {
+          "track_id": "4EwKtJQT2ZHKzECGH3EjLx",
+          "name": "青春病",
+          "normalized_name": "青春病",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 321112,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4EwKtJQT2ZHKzECGH3EjLx"
+        }
+      ]
+    },
+    {
+      "album_id": "2SefMSCTkNiWFHHgs0uGz4",
+      "name": "旅路",
+      "album_type": "single",
+      "release_date": "2021-03-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2SefMSCTkNiWFHHgs0uGz4",
+      "tracks": [
+        {
+          "track_id": "1EM9pvygHqQm03as6sxLg9",
+          "name": "旅路",
+          "normalized_name": "旅路",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 277333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1EM9pvygHqQm03as6sxLg9"
+        }
+      ]
+    },
+    {
+      "album_id": "1fokTD5rDI2bHnFH1QSbPy",
+      "name": "きらり",
+      "album_type": "single",
+      "release_date": "2021-05-03",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1fokTD5rDI2bHnFH1QSbPy",
+      "tracks": [
+        {
+          "track_id": "3ciqhcLmXP4hVGBD98QlEj",
+          "name": "きらり",
+          "normalized_name": "きらり",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 231882,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3ciqhcLmXP4hVGBD98QlEj"
+        }
+      ]
+    },
+    {
+      "album_id": "1xiwypEIxYiYJZKO9ijx5P",
+      "name": "燃えよ",
+      "album_type": "single",
+      "release_date": "2021-09-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1xiwypEIxYiYJZKO9ijx5P",
+      "tracks": [
+        {
+          "track_id": "7nWkch2lxmVbHOgKabM8qd",
+          "name": "燃えよ",
+          "normalized_name": "燃えよ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 279617,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7nWkch2lxmVbHOgKabM8qd"
+        }
+      ]
+    },
+    {
+      "album_id": "2OXwORzPU4tm1Skiv6l9KT",
+      "name": "Kirari Remixes (Asia Edition)",
+      "album_type": "single",
+      "release_date": "2022-01-14",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "spotify_url": "https://open.spotify.com/album/2OXwORzPU4tm1Skiv6l9KT",
+      "tracks": [
+        {
+          "track_id": "3ny97Q3zPXS6C3YyS5zLKm",
+          "name": "Kirari - Original Remix",
+          "normalized_name": "kirari original remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 259866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3ny97Q3zPXS6C3YyS5zLKm"
+        },
+        {
+          "track_id": "1zzJfOdraIBJtCAatSYzCt",
+          "name": "Kirari - Daul Remix",
+          "normalized_name": "kirari daul remix",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 245330,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1zzJfOdraIBJtCAatSYzCt"
+        },
+        {
+          "track_id": "3jb5c2fEeALV2No7rdgVq0",
+          "name": "Kirari - FunkyMo Remix",
+          "normalized_name": "kirari funkymo remix",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 271059,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3jb5c2fEeALV2No7rdgVq0"
+        },
+        {
+          "track_id": "0uWFA4yhEvuiHByNCK0pPF",
+          "name": "Kirari - pxzvc Remix",
+          "normalized_name": "kirari pxzvc remix",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 287200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0uWFA4yhEvuiHByNCK0pPF"
+        },
+        {
+          "track_id": "4rt6pYHXo3hP8hjOqIR493",
+          "name": "Kirari - Kaze & Yaffle Just For Fun Remix",
+          "normalized_name": "kirari kaze & yaffle just for fun remix",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 221013,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4rt6pYHXo3hP8hjOqIR493"
+        },
+        {
+          "track_id": "5ojWaJSbVbLIYw5nBVcBVv",
+          "name": "Kirari - Knopha Remix",
+          "normalized_name": "kirari knopha remix",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 305789,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5ojWaJSbVbLIYw5nBVcBVv"
+        },
+        {
+          "track_id": "4BvfcSZhOanpIanqnbIhJh",
+          "name": "Kirari - Naken Remix",
+          "normalized_name": "kirari naken remix",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 249146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4BvfcSZhOanpIanqnbIhJh"
+        },
+        {
+          "track_id": "077QnENawTNSUZWI5P4K5e",
+          "name": "Kirari - Yaffle Remix",
+          "normalized_name": "kirari yaffle remix",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 184985,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/077QnENawTNSUZWI5P4K5e"
+        },
+        {
+          "track_id": "51oc6MEsXTpnPn6GOw5VuP",
+          "name": "きらり",
+          "normalized_name": "きらり",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 231882,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/51oc6MEsXTpnPn6GOw5VuP"
+        }
+      ]
+    },
+    {
+      "album_id": "3Pwex5PyfxbrNTAwl6FGo5",
+      "name": "まつり",
+      "album_type": "single",
+      "release_date": "2022-03-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3Pwex5PyfxbrNTAwl6FGo5",
+      "tracks": [
+        {
+          "track_id": "14QNjDBXGCwEzJZUKkiTem",
+          "name": "まつり",
+          "normalized_name": "まつり",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 225924,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/14QNjDBXGCwEzJZUKkiTem"
+        }
+      ]
+    },
+    {
+      "album_id": "6VJwkUQXD3DnqqUUaxqDzH",
+      "name": "LOVE ALL SERVE ALL",
+      "album_type": "album",
+      "release_date": "2022-03-23",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "spotify_url": "https://open.spotify.com/album/6VJwkUQXD3DnqqUUaxqDzH",
+      "tracks": [
+        {
+          "track_id": "3L7ISJTvKx56uhsF28aJ4p",
+          "name": "きらり",
+          "normalized_name": "きらり",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 227893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3L7ISJTvKx56uhsF28aJ4p"
+        },
+        {
+          "track_id": "3OdkC5pG8vc26S26qHyBo8",
+          "name": "まつり",
+          "normalized_name": "まつり",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 225920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3OdkC5pG8vc26S26qHyBo8"
+        },
+        {
+          "track_id": "7LI2pQoE3fWfOQuds2paXs",
+          "name": "へでもねーよ - LASA edit",
+          "normalized_name": "へでもねーよ lasa edit",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 188946,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7LI2pQoE3fWfOQuds2paXs"
+        },
+        {
+          "track_id": "1FDCEz8kY256zhDO2GjWuW",
+          "name": "やば。",
+          "normalized_name": "やば。",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 251880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1FDCEz8kY256zhDO2GjWuW"
+        },
+        {
+          "track_id": "3nPRJP6hLZx32covZfpB6p",
+          "name": "燃えよ",
+          "normalized_name": "燃えよ",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 277426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3nPRJP6hLZx32covZfpB6p"
+        },
+        {
+          "track_id": "5U4PgFWzfzY7VEg9Ck4ziF",
+          "name": "ガーデン",
+          "normalized_name": "ガーデン",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 229333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5U4PgFWzfzY7VEg9Ck4ziF"
+        },
+        {
+          "track_id": "7dNxxkapvf5eRkw24PHSpy",
+          "name": "damn",
+          "normalized_name": "damn",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 259026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7dNxxkapvf5eRkw24PHSpy"
+        },
+        {
+          "track_id": "2T2PRhaEQLPoo78E8zyVgw",
+          "name": "ロンリーラプソディ",
+          "normalized_name": "ロンリーラプソディ",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 286640,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2T2PRhaEQLPoo78E8zyVgw"
+        },
+        {
+          "track_id": "5qGpsL9fCOr1sGYNMmFFtI",
+          "name": "それでは、",
+          "normalized_name": "それでは、",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 230720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5qGpsL9fCOr1sGYNMmFFtI"
+        },
+        {
+          "track_id": "6bioW1LHzS92xtmWT6NeWl",
+          "name": "“青春病”",
+          "normalized_name": "“青春病”",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 324146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6bioW1LHzS92xtmWT6NeWl"
+        },
+        {
+          "track_id": "7uSLJCDetmdm3tQcoYLyty",
+          "name": "旅路",
+          "normalized_name": "旅路",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 277026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7uSLJCDetmdm3tQcoYLyty"
+        }
+      ]
+    },
+    {
+      "album_id": "3xMDL5v9ftUpE1I7XPO8oR",
+      "name": "damn",
+      "album_type": "single",
+      "release_date": "2022-09-30",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/3xMDL5v9ftUpE1I7XPO8oR",
+      "tracks": [
+        {
+          "track_id": "0cEill2tVJ38caZlb3LyFy",
+          "name": "damn",
+          "normalized_name": "damn",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 259237,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0cEill2tVJ38caZlb3LyFy"
+        },
+        {
+          "track_id": "536rYPzOPx5HiP8UfKIomj",
+          "name": "damn - instrumental",
+          "normalized_name": "damn instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 259237,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/536rYPzOPx5HiP8UfKIomj"
+        },
+        {
+          "track_id": "04CBg2ciDgmZZdLN0OMfKY",
+          "name": "damn - karaoke",
+          "normalized_name": "damn karaoke",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 259237,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/04CBg2ciDgmZZdLN0OMfKY"
+        }
+      ]
+    },
+    {
+      "album_id": "0i6jJH5oVQh0KL8INSSPpu",
+      "name": "grace",
+      "album_type": "single",
+      "release_date": "2022-10-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0i6jJH5oVQh0KL8INSSPpu",
+      "tracks": [
+        {
+          "track_id": "7tnYsRepXLaNhqj4xtcWP2",
+          "name": "grace",
+          "normalized_name": "grace",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 289541,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7tnYsRepXLaNhqj4xtcWP2"
+        }
+      ]
+    },
+    {
+      "album_id": "0Csmj0RDEYXg1ZW12fekwM",
+      "name": "golden hour (Fujii Kaze Remix)",
+      "album_type": "single",
+      "release_date": "2023-04-21",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0Csmj0RDEYXg1ZW12fekwM",
+      "tracks": [
+        {
+          "track_id": "6KxgptZSrQC4Vv21ZBOG7S",
+          "name": "golden hour - Fujii Kaze Remix",
+          "normalized_name": "golden hour fujii kaze remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 159000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6KxgptZSrQC4Vv21ZBOG7S"
+        }
+      ]
+    },
+    {
+      "album_id": "0BsBIukVE2pUB4xmWrkeAt",
+      "name": "Workin' Hard",
+      "album_type": "single",
+      "release_date": "2023-08-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0BsBIukVE2pUB4xmWrkeAt",
+      "tracks": [
+        {
+          "track_id": "0Whfa8wikSDUvtB5mzYOGH",
+          "name": "Workin' Hard",
+          "normalized_name": "workin hard",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239070,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0Whfa8wikSDUvtB5mzYOGH"
+        }
+      ]
+    },
+    {
+      "album_id": "5ZV6rLgTmKi9xVJxLEPKcw",
+      "name": "花",
+      "album_type": "single",
+      "release_date": "2023-10-12",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5ZV6rLgTmKi9xVJxLEPKcw",
+      "tracks": [
+        {
+          "track_id": "5RIQU2JDuXC4NkLiHNNMon",
+          "name": "花",
+          "normalized_name": "花",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 246699,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5RIQU2JDuXC4NkLiHNNMon"
+        }
+      ]
+    },
+    {
+      "album_id": "7DgOPJO8Lk4NUrfAjxtDCR",
+      "name": "花",
+      "album_type": "single",
+      "release_date": "2023-11-02",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/7DgOPJO8Lk4NUrfAjxtDCR",
+      "tracks": [
+        {
+          "track_id": "5W11dL9WmVjS8dx35wQpcq",
+          "name": "花",
+          "normalized_name": "花",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 246699,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5W11dL9WmVjS8dx35wQpcq"
+        },
+        {
+          "track_id": "4czrewyeNgcdrecmMPHfn9",
+          "name": "花 - Instrumental",
+          "normalized_name": "花 instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 246699,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4czrewyeNgcdrecmMPHfn9"
+        },
+        {
+          "track_id": "4wmioqSrmIUAqqEKnZgvCf",
+          "name": "花 - Ballad",
+          "normalized_name": "花 ballad",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 247554,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4wmioqSrmIUAqqEKnZgvCf"
+        },
+        {
+          "track_id": "2AXYNbSuCRuxmrcID66yc5",
+          "name": "花 - demo",
+          "normalized_name": "花 demo",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 247916,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2AXYNbSuCRuxmrcID66yc5"
+        }
+      ]
+    },
+    {
+      "album_id": "6eRVinhid9kY4g0A9nUh5W",
+      "name": "満ちてゆく",
+      "album_type": "single",
+      "release_date": "2024-03-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6eRVinhid9kY4g0A9nUh5W",
+      "tracks": [
+        {
+          "track_id": "5glPFBAuA1C85tBcVWVzvO",
+          "name": "満ちてゆく",
+          "normalized_name": "満ちてゆく",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 310997,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5glPFBAuA1C85tBcVWVzvO"
+        }
+      ]
+    },
+    {
+      "album_id": "72gjpz7C6dBlOULoVjzGzR",
+      "name": "Feelin’ Go(o)d",
+      "album_type": "single",
+      "release_date": "2024-07-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/72gjpz7C6dBlOULoVjzGzR",
+      "tracks": [
+        {
+          "track_id": "1C22EnQawXuIsqgnnWcrMR",
+          "name": "Feelin’ Go(o)d",
+          "normalized_name": "feelin’ god",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 259471,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1C22EnQawXuIsqgnnWcrMR"
+        }
+      ]
+    },
+    {
+      "album_id": "2aKu1BAfHa6EJBX4ibdaQI",
+      "name": "真っ白",
+      "album_type": "single",
+      "release_date": "2025-02-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2aKu1BAfHa6EJBX4ibdaQI",
+      "tracks": [
+        {
+          "track_id": "3GiADMmI5jfkhF2o4a2G8N",
+          "name": "真っ白",
+          "normalized_name": "真っ白",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 294141,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3GiADMmI5jfkhF2o4a2G8N"
+        }
+      ]
+    },
+    {
+      "album_id": "6fQu05XtukNtn8JP09Cwj3",
+      "name": "真っ白",
+      "album_type": "single",
+      "release_date": "2025-03-13",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/6fQu05XtukNtn8JP09Cwj3",
+      "tracks": [
+        {
+          "track_id": "7uKf9g2kmHutlXAdJi0ExX",
+          "name": "真っ白",
+          "normalized_name": "真っ白",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 297150,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7uKf9g2kmHutlXAdJi0ExX"
+        },
+        {
+          "track_id": "7gvYORZTq66av3t0oqnLJA",
+          "name": "真っ白 - Acapella",
+          "normalized_name": "真っ白 acapella",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 271940,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7gvYORZTq66av3t0oqnLJA"
+        },
+        {
+          "track_id": "6O6Z4UsyHSRgSpGyUHNwci",
+          "name": "真っ白 - Instrumental",
+          "normalized_name": "真っ白 instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 296758,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6O6Z4UsyHSRgSpGyUHNwci"
+        },
+        {
+          "track_id": "2hBrwq58POZudqeqSEzT3B",
+          "name": "真っ白 - KOBY SHY Remix",
+          "normalized_name": "真っ白 koby shy remix",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 262968,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2hBrwq58POZudqeqSEzT3B"
+        }
+      ]
+    },
+    {
+      "album_id": "0qxIGHOXFdqiJEOqbUv5DR",
+      "name": "Hachikō",
+      "album_type": "single",
+      "release_date": "2025-06-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0qxIGHOXFdqiJEOqbUv5DR",
+      "tracks": [
+        {
+          "track_id": "4WhHNXBgRglnkjy7TMzgdh",
+          "name": "Hachikō",
+          "normalized_name": "hachikō",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 270497,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4WhHNXBgRglnkjy7TMzgdh"
+        }
+      ]
+    },
+    {
+      "album_id": "2vPe5MKYCOM31HqnY0uZEw",
+      "name": "Love Like This",
+      "album_type": "single",
+      "release_date": "2025-08-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2vPe5MKYCOM31HqnY0uZEw",
+      "tracks": [
+        {
+          "track_id": "1eULGMOdkcFd3xTD1zh2f5",
+          "name": "Love Like This",
+          "normalized_name": "love like this",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 260778,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1eULGMOdkcFd3xTD1zh2f5"
+        }
+      ]
+    },
+    {
+      "album_id": "6ELurkxQnAif7u5Vv6Wly9",
+      "name": "Prema",
+      "album_type": "album",
+      "release_date": "2025-09-05",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "spotify_url": "https://open.spotify.com/album/6ELurkxQnAif7u5Vv6Wly9",
+      "tracks": [
+        {
+          "track_id": "46LSraL1efyLHbM5DehGtN",
+          "name": "Casket Girl",
+          "normalized_name": "casket girl",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 245157,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/46LSraL1efyLHbM5DehGtN"
+        },
+        {
+          "track_id": "2D7Bqzfa2pJqa0LUftrVgx",
+          "name": "I Need U Back",
+          "normalized_name": "i need u back",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 186350,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2D7Bqzfa2pJqa0LUftrVgx"
+        },
+        {
+          "track_id": "3Aj0zsny1zlTLevRxfEEKc",
+          "name": "Hachikō",
+          "normalized_name": "hachikō",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 270497,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Aj0zsny1zlTLevRxfEEKc"
+        },
+        {
+          "track_id": "45uzEq3hAOy8uayrvDLY2C",
+          "name": "Love Like This",
+          "normalized_name": "love like this",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 260778,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/45uzEq3hAOy8uayrvDLY2C"
+        },
+        {
+          "track_id": "0IByNT868RxZwmcj1rQgno",
+          "name": "Prema",
+          "normalized_name": "prema",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 262840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0IByNT868RxZwmcj1rQgno"
+        },
+        {
+          "track_id": "7xWKGIFGLxBJAyGSus7BOJ",
+          "name": "It Ain't Over",
+          "normalized_name": "it aint over",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 299492,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7xWKGIFGLxBJAyGSus7BOJ"
+        },
+        {
+          "track_id": "2vQhYhGSBBamRhhJeWprr1",
+          "name": "You",
+          "normalized_name": "you",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 281766,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2vQhYhGSBBamRhhJeWprr1"
+        },
+        {
+          "track_id": "1Vw0JiY6Jk8vCypHzb3fo4",
+          "name": "Okay, Goodbye",
+          "normalized_name": "okay goodbye",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 230908,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Vw0JiY6Jk8vCypHzb3fo4"
+        },
+        {
+          "track_id": "3K0Xr4N0ccBKqBBHDARIFy",
+          "name": "Forever Young",
+          "normalized_name": "forever young",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 353639,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3K0Xr4N0ccBKqBBHDARIFy"
+        }
+      ]
+    }
+  ]
+}

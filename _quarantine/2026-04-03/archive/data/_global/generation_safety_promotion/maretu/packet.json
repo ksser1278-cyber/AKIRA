@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_promotion_artist_packet",
+  "artist_id": "maretu",
+  "track_count": 1,
+  "tracks": [
+    {
+      "artist_id": "maretu",
+      "track_id": "maretu_brain_revolution_girl",
+      "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\brain_revolution_girl.conditioning.json",
+      "score": 0.75,
+      "blockers": [
+        "missing_provenance",
+        "mode_fit_unverified"
+      ],
+      "promotion_class": "metadata_backfill",
+      "recommended_next_action": "add trusted metadata or lyric provenance and verify mode alignment",
+      "external_evidence_required": true,
+      "internal_review_candidate": true,
+      "priority": "high",
+      "target_verdict": "planner_safe",
+      "promotion_status": "open",
+      "owner": ""
+    }
+  ]
+}

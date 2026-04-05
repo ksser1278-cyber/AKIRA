@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "deco27",
+  "queue_filename": "expansion_queue.json",
+  "target_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks",
+  "track_count": 4,
+  "tracks": [
+    {
+      "track_id": "deco27_monitoring",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\monitoring.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_rabbit_hole",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\rabbit_hole.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_vampire",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\vampire.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_cinderella",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\cinderella.conditioning.json",
+      "full_text_status": "partial",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "prompt_conditioning_completion",
+        "audio_enrichment_if_available"
+      ]
+    }
+  ]
+}

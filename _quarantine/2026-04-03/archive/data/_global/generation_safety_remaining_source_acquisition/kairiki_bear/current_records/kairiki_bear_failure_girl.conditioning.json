@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "kairiki_bear_failure_girl",
+    "artist_id": "kairiki_bear",
+    "artist_name": "Kairiki Bear",
+    "title": "失敗作少女",
+    "title_core": "Failure Girl"
+  },
+  "song_intent": {
+    "core_theme": [
+      "Identity Crisis",
+      "Self-Loathing",
+      "Parental Rejection"
+    ],
+    "emotional_target": "Desperate calling for love while accepting failure as innate.",
+    "key_motifs": [
+      "Failure",
+      "God",
+      "Crying pulses"
+    ],
+    "emotional_thesis": "Desperate calling for love while accepting failure as innate."
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ああ ほら また間違えた。\n「これで何度？」\nねえ ほら 塞いでたって。\nぽっかり浮き出る傷跡。\n\nああ ほら また誤魔化した。\n見て見ぬふりお上手ね。\nもう ほら 何言われたって。\n誰も私を望まない。\n\nむき出して 痛い痛い。\n強がって 痛い痛い。\n行き詰まって 痛い痛いんだよ。\n私って失敗作だって。\nさって いらない子なんだって…\n何やったって 頑張ったって ダメらしいや。\n愛 愛 愛されたくて 偽って。\nもっと もっと 笑顔でいればいいかな…\n\nああ ほら また擦りむいた。\n「これで何度？」\nねえ ほら 隠してたって。\nじわり浮き出るトラウマ。\n\nああ ほら また飲み込んだ。\n澄まし顔がお上手ね。\nもう ほら 何言われたって。\n嘲られ 痣だらけ。\n\n閉塞感に ゆらゆら。\n劣等感に くらくら。\n行き詰まって からからなの。\n私って失敗作だって。\nなって いらない子なんだって…\n何やったって 頑張ったって 無駄みたいだ。\n生まれてきた 意味が欲しくて。\nもっと もっと 自然に笑えばいいかな…\n\n神様 もしも生まれ変わる。\nことができたら。\n愛される子になれますように。\n泣き止んだ鼓動を子守唄に。\nきっと きっと 明日は笑えるよね。\n間違いだらけに。\nおやすみなさい。",
+    "hook_lines": [
+      "失敗作少女 失敗作少女",
+      "また 壊しちゃった"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 壊しちゃった",
+          "僕の 大事な おもちゃ",
+          "失敗作だって",
+          "笑ってみせる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "失敗作だって",
+          "笑ってみせる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "失敗作少女 失敗作少女",
+          "誰にも 選ばれなかった",
+          "失敗作少女 失敗作少女",
+          "ゴミ箱に 捨てられた"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "失敗作少女 失敗作少女",
+          "誰にも 選ばれなかった"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "失敗作少女 失敗作少女",
+          "誰にも 選ばれなかった",
+          "失敗作少女 失敗作少女",
+          "ゴミ箱に 捨てられた"
+        ]
+      }
+    ],
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "prompt_conditioning": {
+    "vocal_tones": [
+      "Anxious",
+      "Breathless",
+      "High-pitched",
+      "Trembling"
+    ],
+    "production_palette": [
+      "Fast chiptune",
+      "Aggressive rock drums",
+      "Glitch noise",
+      "Bit-crushed"
+    ],
+    "energy_arc": "High-velocity anxiety spiral",
+    "imagery_anchors": [
+      "Scars",
+      "Stitched skin",
+      "Classroom isolation",
+      "Cold clinical light"
+    ]
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "benchmark_safe",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": true
+    },
+    "blockers": [],
+    "requires_human_review": false,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/188406/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi15042401/",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kairiki_bear_failure_girl (失敗作少女). Workflow: source_plus_provenance."
+    ],
+    "metadata_sources": [
+      {
+        "label": "Oricon",
+        "url": "https://www.oricon.co.jp/prof/542267/products/1124653/1/",
+        "status": "cross_checked"
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  }
+}

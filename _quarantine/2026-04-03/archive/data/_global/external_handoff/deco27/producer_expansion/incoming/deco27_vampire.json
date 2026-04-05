@@ -1,0 +1,648 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_vampire",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ヴァンパイア",
+    "title_core": "ヴァンパイア",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "cross_checked",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2021-03-09",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2021,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "2:59",
+        "seconds": 179,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_vampire",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/deco27_vampire",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "あたしヴァンパイア",
+          "いいの？吸っちゃっていいの？",
+          "もう 無理もう 無理なんて",
+          "悪い子だね"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "試したいな 試したいな",
+          "君の全てを 貪りたいな",
+          "だから 覚悟しててね",
+          "逃がさないよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "ヴァンパイア ヴァンパイア",
+          "甘い首筋に キスをして",
+          "ヴァンパイア ヴァンパイア",
+          "永遠の愛を 誓い合おう",
+          "血が滲むくらい 強く抱きしめて"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "月が綺麗だねって",
+          "適当なこと 言わないで",
+          "私が欲しいのは",
+          "そんなんじゃないの"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "ヴァンパイア ヴァンパイア",
+          "君の心を 飲み込んで",
+          "ヴァンパイア ヴァンパイア",
+          "抜け出せない 罠に落ちる",
+          "毒が回るまで 離れないでね"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ヴァンパイア ヴァンパイア",
+      "いいの？吸っちゃっていいの？"
+    ],
+    "question_lines": [
+      "いいの？吸っちゃっていいの？"
+    ],
+    "repetition_patterns": [
+      "Title declaration drives the chorus."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "toxic romance",
+      "vampiric love",
+      "cute but deadly"
+    ],
+    "emotional_thesis": "Love is an infectious, possessive bite.",
+    "contrast_device": [
+      "cute aesthetic vs vampiric consumption"
+    ],
+    "dramatic_arc": [
+      "the invitation",
+      "the attack",
+      "total consumption"
+    ],
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ],
+    "tie_in_function": "",
+    "title_function": "The central metaphor.",
+    "key_motifs": [
+      "ヴァンパイア",
+      "吸う",
+      "首筋"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "driving club pop",
+        "bouncy rock"
+      ],
+      "vocal_behavior": [
+        "sassy",
+        "whispery accents"
+      ],
+      "production_palette": [
+        "heavy bass",
+        "synth sweeps",
+        "punchy drums"
+      ],
+      "arrangement_arc": [
+        "sassy verse",
+        "building pre-chorus",
+        "explosive pop chorus"
+      ],
+      "dynamics_arc": [
+        "highly compressed, peak energy in chorus"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "invitation"
+      ],
+      "narrative_job": "Establish the game of predator and prey.",
+      "arrangement_role": {
+        "summary": "Punchy groove.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Conversational, low.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tight.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "questioning"
+      ],
+      "vocabulary_focus": [
+        "吸っちゃって"
+      ],
+      "rhyme_features": [
+        "staccato"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "The hunt.",
+      "arrangement_role": {
+        "summary": "Rising tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending climbs.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Building.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "threat"
+      ],
+      "vocabulary_focus": [
+        "試したい"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "driving 8ths"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title statement"
+      ],
+      "narrative_job": "The bite.",
+      "arrangement_role": {
+        "summary": "Explosive club rock.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "High euphoric hook.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "declaration"
+      ],
+      "vocabulary_focus": [
+        "ヴァンパイア"
+      ],
+      "rhyme_features": [
+        "title chant"
+      ],
+      "rhythm_features": [
+        "anthem"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "rejection of normal romance"
+      ],
+      "narrative_job": "Dismissing mundane love.",
+      "arrangement_role": {
+        "summary": "Groove drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Sassy bounce.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "scoff"
+      ],
+      "vocabulary_focus": [
+        "適当"
+      ],
+      "rhyme_features": [
+        "staccato"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final consumption"
+      ],
+      "narrative_job": "Total infectious love.",
+      "arrangement_role": {
+        "summary": "Explosive finale.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "insistence"
+      ],
+      "vocabulary_focus": [
+        "離れない"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "formulaic",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "monster metaphors",
+      "obsessive romance"
+    ],
+    "mora_control_notes": [
+      "Staccato rhythm required."
+    ],
+    "accent_risk_notes": [
+      "Must sound cute but dangerous."
+    ],
+    "critic_focus": [
+      "attitude projection"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "club bounce",
+      "pop rock"
+    ],
+    "tempo_feels": [
+      "driving dance"
+    ],
+    "vocal_tones": [
+      "sassy",
+      "cute but deadly"
+    ],
+    "production_palette": [
+      "heavy bass synth",
+      "snappy drums"
+    ],
+    "energy_arc": [
+      "huge drop chorus"
+    ],
+    "imagery_anchors": [
+      "fangs",
+      "vampire bite"
+    ],
+    "exclude": [
+      "do not make it acoustic"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

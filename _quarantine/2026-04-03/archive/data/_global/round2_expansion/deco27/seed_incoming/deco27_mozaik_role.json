@@ -1,0 +1,38 @@
+{
+  "artist_id": "deco27",
+  "track_id": "deco27_mozaik_role",
+  "title": "モザイクロール",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "wordplay_noun",
+  "hook_behavior": [
+    "classic bouncy rock",
+    "driving chorus melody"
+  ],
+  "section_flow_guess": [
+    "verse_doubt",
+    "prechorus_realization",
+    "chorus_catchy_truth",
+    "bridge_guitar_solo",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "pixels",
+    "censorship",
+    "hiding truth",
+    "scissors"
+  ],
+  "emotional_arc": [
+    "doubt",
+    "betrayal",
+    "cutting ties"
+  ],
+  "leakage_watchouts": [
+    "anchor to late 2000s vocal-rock style; less dense than modern DECO"
+  ],
+  "prompt_seed_terms": [
+    "classic vocaloid rock",
+    "driving pop punk",
+    "catchy hook"
+  ],
+  "grounding_status": "research_ready"
+}

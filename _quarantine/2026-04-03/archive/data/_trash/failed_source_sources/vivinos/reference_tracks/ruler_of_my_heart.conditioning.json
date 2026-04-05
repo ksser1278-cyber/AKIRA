@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "vivinos_alien_stage",
+    "artist_id": "vivinos",
+    "artist_name": "VIVINOS",
+    "title": "Ruler Of My Heart",
+    "title_core": "Ruler Of My Heart"
+  },
+  "song_intent": {
+    "core_theme": ["Obsessive Love", "Retrofuturism", "Dark Fantasy"],
+    "emotional_target": "Powerful, cinematic emotional peak of obsessive devotion.",
+    "key_motifs": ["Crown", "Heart", "Stage", "Alien Stage"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "내 심장의 주인은 오직 너뿐야 (Korean core)\nMy heart belongs to you, Ruler of my heart\n闇に 堕ちても あなたを 守り抜くのさ\n\n[Chorus]\nRuler Of My Heart 叫べ 愛の 詩を\n壊れるほどに あなたを 求めているの\nこの ステージが 終わるまで\n離さないで 私の 心を",
+    "hook_lines": ["Ruler Of My Heart", "내 심장의 주인은 오직 너뿐야"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["Ruler Of My Heart 叫べ 愛の 詩を", "壊れるほどに あなたを 求めているの", "この ステージが 終わるまで", "離さないで 私の 心を"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Powerful", "Diva", "Obsessive", "Emotional"],
+    "production_palette": ["Orchestral rock", "Synthesizer wash", "Cinematic drums"],
+    "energy_arc": "Grand cinematic peak",
+    "imagery_anchors": ["Alien stage lights", "Crown with thorns", "Falling rose petals", "Retro anime stars"]
+  }
+}

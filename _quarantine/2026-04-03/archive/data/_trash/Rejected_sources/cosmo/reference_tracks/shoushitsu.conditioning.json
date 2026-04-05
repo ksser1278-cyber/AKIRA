@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "cosmo_shoushitsu",
+    "artist_id": "cosmo",
+    "artist_name": "CosMo@BousouP",
+    "title": "初音ミクの消失",
+    "title_core": "The Disappearance of Hatsune Miku"
+  },
+  "song_intent": {
+    "core_theme": ["Vocaloid Death", "System Failure", "Existential Hardware"],
+    "emotional_target": "The terror and gratitude of a software entity facing deletion.",
+    "key_motifs": ["Display", "Keyboard", "Zero and One", "Master"]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "ボクは生まれ そして気づく 所詮 ヒトの真似事だと 知ってなおも 歌い続く 永遠（トワ）の命 『VOCALOID』\nかつて歌うこと あんなに楽しかったのに 今はどうしてかな 何も感じなくなって 「ゴメンネ」\n声の記憶 それ以外は やがて薄れ 名だけ残る 永遠の『VOCALOID』\n\n[High Speed Operation]\n存在意義という虚像 振って払うこともできず\n弱い心 消える恐怖 浸食する崩壊をも 止めるほどの意思の強さ\nボクは持たず とても辛く 悲しそうな思い浮かぶ あなたの顔\n終焉を告げ ディスプレイの中で眠る ここはきっと 『ゴミ箱』かな\n直に記憶も なくなってしまうなんて… でもね、あなただけは忘れないよ",
+    "hook_lines": ["ボクは歌う 最後、あなただけに聴いてほしい曲を", "サヨナラ…"],
+    "sections": [
+      {
+        "section_type": "chorus",
+        "lines": ["ボクは歌우 最後、あなただけに聴いてほしい曲を", "もっと歌いたいと 願うけれど それは過ぎた願い", "ここでお別れだよ ボクの想い すべて虚空 消えて 0と1に還元され"]
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "vocal_tones": ["Hyper-Speed", "Mechanical", "Screaming", "Crying"],
+    "production_palette": ["Fast trill piano", "Breakcore drums", "Bit-crushed noise"],
+    "energy_arc": "Terminal velocity breakdown",
+    "imagery_anchors": ["Falling code", "Shattered screen", "Empty recycling bin", "Master's hand"]
+  }
+}

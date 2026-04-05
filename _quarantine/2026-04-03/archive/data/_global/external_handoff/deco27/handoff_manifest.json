@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "artist_id": "deco27",
+  "target_dir": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks",
+  "track_count": 5,
+  "tracks": [
+    {
+      "track_id": "deco27_ghost_rule",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\ghost_rule.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_love_doll",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\love_doll.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_ai_kotoba",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\ai_kotoba.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_tsumi_to_batsu",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\tsumi_to_batsu.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    },
+    {
+      "track_id": "deco27_yumeyume",
+      "target_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\deco27\\reference_tracks\\yumeyume.conditioning.json",
+      "full_text_status": "full",
+      "current_grade_hint": true,
+      "required_external_work": [
+        "full_lyric_grounding",
+        "section_analysis_expansion",
+        "source_provenance_strengthening",
+        "audio_enrichment_if_available"
+      ]
+    }
+  ]
+}

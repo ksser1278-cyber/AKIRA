@@ -1,0 +1,38 @@
+{
+  "artist_id": "iyowa",
+  "track_id": "iyowa_ta_ku_san",
+  "title": "たうと",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "abstract_dizzy",
+  "hook_behavior": [
+    "layered disjointed vocals",
+    "dissonant harmony"
+  ],
+  "section_flow_guess": [
+    "verse_creepy",
+    "prechorus_stacking",
+    "chorus_dissonant_burst",
+    "bridge_weird",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "shadows",
+    "spiders",
+    "whispers",
+    "too many things"
+  ],
+  "emotional_arc": [
+    "psychological overwhelm",
+    "creepiness",
+    "dread"
+  ],
+  "leakage_watchouts": [
+    "feature dense vocal harmonies that deliberately clash"
+  ],
+  "prompt_seed_terms": [
+    "dissonant pop",
+    "creepy vocal layers",
+    "dark jazz"
+  ],
+  "grounding_status": "research_ready"
+}

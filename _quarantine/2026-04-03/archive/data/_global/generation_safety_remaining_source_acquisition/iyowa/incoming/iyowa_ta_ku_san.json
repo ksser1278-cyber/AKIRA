@@ -1,0 +1,51 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_ta_ku_san"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi21092301/",
+        "status": "trusted"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for iyowa_ta_ku_san (Title: たうと). Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 壊れちゃった",
+          "僕の 大事な おもちゃ",
+          "繋ぎ合わせても",
+          "もう 動かない"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "たうと たうと 繰り返す",
+          "耳障りな その音が",
+          "僕の心を 蝕んで",
+          "逃げられない 迷宮へ"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "たうと たうと 繰り返す",
+      "耳障りな その音が"
+    ]
+  }
+}

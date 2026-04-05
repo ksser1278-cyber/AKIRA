@@ -1,0 +1,163 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_angel",
+    "artist_id": "kairiki_bear"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi19042502/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/h_U99S0pZ6M",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for kairiki_bear_angel. Workflow: source_plus_mode."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "アンヘル アンヘル 舞い降りて",
+          "汚れた この 手を 取って",
+          "アンヘル アンヘル 導いて",
+          "光の 見えない 世界へ"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "アンヘル アンヘル 導いて",
+          "光の 見えない 世界へ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "嘘吐きな 天使が 笑ってる",
+          "僕の 心を 嘲笑うように",
+          "嘘吐きな 天使が 歌ってる",
+          "終わりの 来ない 絶望を"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "嘘吐きな 天使が 笑ってる",
+          "僕の 心を 嘲笑うように"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "嘘吐きな 天使が 笑ってる",
+          "僕の 心を 嘲笑うように",
+          "嘘吐きな 天使が 歌ってる",
+          "終わりの 来ない 絶望を"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "アンヘル アンヘル 舞い降りて",
+      "嘘吐きな 天使が 笑ってる"
+    ],
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "song_intent": {
+    "emotional_thesis": "I am a falling angel and it hurts.",
+    "narrative_role": [
+      "dark_cute_breakdown"
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "generation_safety": {
+    "notes": [
+      "pending recomputation after remaining-source normalization"
+    ]
+  },
+  "likely_mode": "dark_cute_breakdown"
+}

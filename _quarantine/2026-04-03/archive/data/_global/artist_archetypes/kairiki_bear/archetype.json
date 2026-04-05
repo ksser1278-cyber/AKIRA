@@ -1,0 +1,87 @@
+{
+  "artist_id": "kairiki_bear",
+  "schema_version": "1.0",
+  "core_identity": [
+    "Venomous obsessive guitar rock",
+    "Internal toxicity and social paralysis",
+    "Addictive rhythmic stuttering"
+  ],
+  "title_patterns": [
+    {
+      "pattern_id": "poisonous_noun",
+      "description": "Single-word titles referring to chemical or biological hazards",
+      "strength": "high",
+      "leakage_risk": "high"
+    },
+    {
+      "pattern_id": "verb_repetition",
+      "description": "Titles built on obsessive repetition of a single action",
+      "strength": "high",
+      "leakage_risk": "medium"
+    },
+    {
+      "pattern_id": "clinical_status",
+      "description": "Titles using clinical or medical conditions to frame emotions",
+      "strength": "medium",
+      "leakage_risk": "low"
+    }
+  ],
+  "hook_construction": {
+    "density": "extremely_high_mora",
+    "ignition": "stutter_pre_hook",
+    "repetition": "obsessive_syllabic_loop",
+    "line_length": "compact_driving",
+    "forbidden": [
+      "bright_healthy_themes",
+      "spacious_ballads",
+      "wholesome_resolutions"
+    ]
+  },
+  "verse_behavior": {
+    "role": [
+      "toxicity_buildup",
+      "infected_perspective"
+    ],
+    "stance": [
+      "poisonous_cynical",
+      "addictively_obsessive"
+    ],
+    "pace": "relentless_high_speed",
+    "shift_pattern": "rock_shout_to_cynical_whisper"
+  },
+  "bridge_final_chorus_behavior": {
+    "bridge_role": "total_paralysis_or_rhythmic_collapse",
+    "final_chorus_role": "ultimate_addictive_saturation",
+    "release_markers": [
+      "high_velocity_stutter",
+      "cynical_sa_particle"
+    ]
+  },
+  "common_imagery": [
+    "toxicity_poison",
+    "physical_paralysis",
+    "synesthetic_disgust",
+    "clinical_sickroom",
+    "obsessive_love_hate"
+  ],
+  "emotional_arc_types": [
+    "Infection -> Rising Toxicity -> Total Paralysis",
+    "Love -> Obsessive Hate -> Shared Destruction"
+  ],
+  "leakage_risks": {
+    "title_leakage": ["venom_bug_acid", "alkali_motifs"],
+    "hook_leakage": ["be_be_be_stuttering", "ai_ai_ai_repetition"],
+    "scene_leakage": ["pill_consumption", "bandage_wrapping"],
+    "phrase_leakage": ["sakebe_interjections", "toxic_sa_endings"]
+  },
+  "safe_originality_zone": [
+    "Internal emotional sickness in dark laboratories",
+    "Aggressive poisonous rock anthems",
+    "Repetitive addictive hooks with social paralysis themes"
+  ],
+  "engine_flags": {
+    "safe_for_planner": true,
+    "safe_for_renderer": false,
+    "safe_for_lexical_sampling": false
+  }
+}

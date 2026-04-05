@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "neru_lost_ones_weeping"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and academic anxiety themes.",
+      "Scaffold indicators removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "疑い深い刃が、胸に刺さる",
+          "また何か、不穏な朝が来る"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "数学は解けるのに、国語は解けない",
+          "誰か、私を、見つけて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "黒板の文字が、読めますか？",
+          "あの子の、悲鳴が、聞こえますか？"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ボロボロの、ノートを、抱きしめて",
+          "どこへ、行けばいいの？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "この算式を、解けますか？",
+          "さよなら、私たちの、教室",
+          "もう、誰も、いない"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "黒板の文字が、読めますか？",
+      "この算式を、解けますか？",
+      "疑い深い刃が、胸に刺さる"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "A poignant exploration of identity-loss and distrust within the academic environment and its psychological impact."
+  }
+}

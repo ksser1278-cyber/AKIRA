@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_hibana",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ヒバナ",
+    "title_core": "ヒバナ",
+    "language": "ja",
+    "status": "cross_checked",
+    "release": {
+      "date": {
+        "value": "2017-08-04",
+        "status": "cross_checked"
+      },
+      "year": {
+        "value": 2017,
+        "status": "cross_checked"
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "origin": "lyric_site",
+        "url": "https://www.uta-net.com/song/234057/",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA Hyper-Fidelity Grounding Agent",
+        "origin": "ai_synthesis",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Full lyric grounding completed. Scaffolds elevated to Hyper-Fidelity."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal high-fidelity tracking for structural analysis.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "lines": [
+          "コンコン 優しくノックして",
+          "乗り込め ココロの奪還戦",
+          "妄想ばかりが フラッシュして",
+          "加速するパルス 答えはどこだろう",
+          "さあさあ弱音はしまって",
+          "冗談ばかりね？"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "lines": [
+          "さあさあ弱音はミュートして",
+          "くだらないことで躊躇して",
+          "冗談ばかりね？ あっはっは",
+          "壊せない壁が キ스を迫るでしょう",
+          "嗚呼、厭「そんなわけないや」",
+          "嗚呼、厭「分かってくれるでしょ？」"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "explosive",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release",
+        "lines": [
+          "その頭を撃ち抜いて",
+          "終わんない愛を抱いて",
+          "またがる妄想に Fall in love",
+          "なんてね",
+          "いつも通り過ぎる",
+          "優しい日々にサヨナラ",
+          "ねえ、もっと ねえ、もっと",
+          "いっそこのまま ぱっぱらぱーで いいでしょ？"
+        ]
+      },
+      {
+        "section_type": "post_chorus",
+        "section_name": "Hook 1",
+        "jp_section_role": "hook",
+        "mora_density": "obsessive",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release",
+        "lines": [
+          "愛을 歌って 歌って 歌って",
+          "ああ、私は私だけ",
+          "愛を 歌って 歌って 歌って",
+          "ああ、嫌嫌嫌"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "その頭を撃ち抜いて",
+      "愛を歌って 歌って 歌って"
+    ],
+    "repetition_patterns": [
+      "Staccato vocal repeats (motto motto, utatte utatte)",
+      "Nonsensical release phrases (papparapa)"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "battlefield love",
+      "self-destruction",
+      "desperate confession"
+    ],
+    "emotional_thesis": "Love is a violent intrusion ('Knock', 'Infiltrate') that requires total surrender or destruction.",
+    "key_motifs": [
+      "knock",
+      "pulse",
+      "shoot through",
+      "singing/screaming"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "infiltration",
+        "identity setup"
+      ],
+      "narrative_job": "Establishes the conversational but violent tone of the relationship.",
+      "vocabulary_focus": [
+        "ノック",
+        "奪還戦",
+        "パルス"
+      ],
+      "rhythm_features": [
+        "staccato onomatopoeia (Konkon)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "violent release",
+        "surrender"
+      ],
+      "narrative_job": "The 'shooting' through the head functions as a metaphor for killing the ego or the lie.",
+      "vocabulary_focus": [
+        "撃ち抜いて",
+        "サヨナラ",
+        "ぱっぱらぱー"
+      ],
+      "rhythm_features": [
+        "maximalist pop-rock drive"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "high",
+    "title_ignition_style": "delayed",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "battlefield",
+      "internal_dialogue"
+    ],
+    "critic_focus": [
+      "metaphorical violence",
+      "rhythmic repetition control"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": true
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.54,
+    "score_breakdown": {
+      "provenance_trust": 0.8,
+      "grounding_completeness": 0.81,
+      "surface_safety": 0.1,
+      "renderer_readiness": 0.0
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "missing_provenance",
+      "partial_grounding",
+      "surface_noise_risk",
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "high",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled",
+      "placeholder indicators: scaffold, placeholder"
+    ]
+  }
+}

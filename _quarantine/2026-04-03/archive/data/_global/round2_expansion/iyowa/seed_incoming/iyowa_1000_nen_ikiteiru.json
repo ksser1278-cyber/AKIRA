@@ -1,0 +1,38 @@
+{
+  "artist_id": "iyowa",
+  "track_id": "iyowa_1000_nen_ikiteiru",
+  "title": "1000年生きてる",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "grand_time_scale",
+  "hook_behavior": [
+    "skipping syncopated beats",
+    "layered whisper vocals"
+  ],
+  "section_flow_guess": [
+    "verse_narrative",
+    "prechorus_skip",
+    "chorus_grand_jazz",
+    "bridge_piano",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "millenniums",
+    "dirt",
+    "flowers",
+    "boredom"
+  ],
+  "emotional_arc": [
+    "ancient boredom",
+    "historical detachment",
+    "jazz swing"
+  ],
+  "leakage_watchouts": [
+    "time signature should be 4/4 but played with extremely swung 16ths"
+  ],
+  "prompt_seed_terms": [
+    "jazz pop",
+    "off-kilter swing",
+    "whisper layers"
+  ],
+  "grounding_status": "research_ready"
+}

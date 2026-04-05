@@ -1,0 +1,38 @@
+{
+  "artist_id": "kairiki_bear",
+  "track_id": "kairiki_bear_shippaisaku_shoujo",
+  "title": "失敗作少女",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "sad_noun",
+  "hook_behavior": [
+    "raw emotive cry",
+    "less glitch, more tearful"
+  ],
+  "section_flow_guess": [
+    "verse_sadness",
+    "prechorus_hope",
+    "chorus_shattering",
+    "bridge_acoustic",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "trash cans",
+    "defective parts",
+    "tears",
+    "apologies"
+  ],
+  "emotional_arc": [
+    "sadness",
+    "guilt",
+    "desperate plea"
+  ],
+  "leakage_watchouts": [
+    "avoid the e-e-error stutter; rely on raw sustained high notes"
+  ],
+  "prompt_seed_terms": [
+    "emotional guitar rock",
+    "tearful vocal",
+    "driving beat"
+  ],
+  "grounding_status": "research_ready"
+}

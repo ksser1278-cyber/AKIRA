@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "kairiki_bear_darling_dance",
+    "artist_id": "kairiki_bear",
+    "artist_name": "Kairiki Bear",
+    "title": "ダーリンダンス",
+    "title_core": "Darling Dance"
+  },
+  "song_intent": {
+    "core_theme": [
+      "Appearance Anxiety",
+      "Digital Validation",
+      "Toxic Affection"
+    ],
+    "emotional_target": "Performing attractiveness as a desperate plea for existence.",
+    "key_motifs": [
+      "Diet",
+      "Pretty",
+      "Obedient slave"
+    ],
+    "emotional_thesis": "Performing attractiveness as a desperate plea for existence.",
+    "narrative_role": [
+      "direct_emotional_pop"
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_lyric_jp": "存在証明 愛だって愛だって吐いたって\n嗚呼 寝転んゴロンて嫌ん嫌ん プリティプリティ ダイエットDAY\n曖昧一回楽に アイマイミー快楽に\n闇赤下手店だって愛だ恋だなんだってんだ\n生命線は愛だって愛だ嘆いたって\n嗚呼嗚呼 でも無いこうでも無いな 寂しい寂しいナンセンスDAY\nいっそ密会ラフに節操ないかい？ LOVE ME？\n溺れ奴隷踊れ踊れ亡霊だ\n\n何もない何もない私何もない ねえ\n変われない変われない私変われない ねえ\n分からない分からない「分かる」分からない はい\n目元以外は隠して",
+    "hook_lines": [
+      "ダーリンダンス ダーリンダンス",
+      "だーりんだーりん 踊りましょう"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "だーりんだーりん 踊りましょう",
+          "この 夜が 明けるまで",
+          "だーりんだーりん 笑いましょう",
+          "何もかも 忘れて"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "だーりんだーりん 笑いましょう",
+          "何もかも 忘れて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "ダーリンダンス ダーリンダンス",
+          "狂おしいほど 抱きしめて",
+          "ダーリンダンス ダーリンダンス",
+          "壊れるくらいに 愛して"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "ダーリンダンス ダーリンダンス",
+          "狂おしいほど 抱きしめて"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "ダーリンダンス ダーリンダンス",
+          "狂おしいほど 抱きしめて",
+          "ダーリンダンス ダーリンダンス",
+          "壊れるくらいに 愛して"
+        ]
+      }
+    ],
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization."
+  },
+  "prompt_conditioning": {
+    "vocal_tones": [
+      "Sultry",
+      "Anxious",
+      "Breathless"
+    ],
+    "production_palette": [
+      "Bouncy rock",
+      "Twinkling chiptune",
+      "Heavy bass stabs"
+    ],
+    "energy_arc": "Desperate rhythmic dance",
+    "imagery_anchors": [
+      "Mirror shards",
+      "Lipstick",
+      "Measuring tape",
+      "Masks"
+    ]
+  },
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "audit_only",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": false,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [
+      "mode_fit_unverified"
+    ],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pending recomputation after remaining-source normalization"
+    ]
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/292850/",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi20083001/",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kairiki_bear_darling_dance. Workflow: source_plus_provenance."
+    ],
+    "metadata_sources": [
+      {
+        "label": "Sony Music",
+        "url": "https://www.sonymusic.co.jp/artist/kairikibear/",
+        "status": "cross_checked"
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  },
+  "likely_mode": "direct_emotional_pop"
+}

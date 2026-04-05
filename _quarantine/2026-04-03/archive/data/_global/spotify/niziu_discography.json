@@ -1,0 +1,2633 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "3z8diLlUCkN1j9N9ZdnfBJ",
+    "name": "NiziU",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/3z8diLlUCkN1j9N9ZdnfBJ"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 36,
+  "raw_track_total": 95,
+  "canonical_track_count": 67,
+  "primary_lyric_track_count": 67,
+  "redundant_variant_track_count": 0,
+  "canonical_tracks": [
+    {
+      "name": "Baby I'm a star",
+      "normalized_name": "baby im a star",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "4R94oyl8tvZJxFiq9XGRln",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Boom Boom Boom",
+      "normalized_name": "boom boom boom",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "0BhiyPgBY5Bbjsth8IxCHO",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Make you happy",
+      "normalized_name": "make you happy",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "1LnJVIG1BaHTRznuOgR0yc",
+      "albums": [
+        "Make you happy",
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "虹の向こうへ",
+      "normalized_name": "虹の向こうへ",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "7GuQ29uGMvh4VbAKh2P66n",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Step and a step",
+      "normalized_name": "step and a step",
+      "first_release_date": "2020-11-25",
+      "spotify_track_id": "5DgAgJbHcm74RyA9YKj6k1",
+      "albums": [
+        "Step and a step",
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Joyful",
+      "normalized_name": "joyful",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "7ajqy7gdf4JzyZIJr21uUg",
+      "albums": [
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Sweet Bomb！",
+      "normalized_name": "sweet bomb",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "0YCL7egXNTkElDHH0QdoXJ",
+      "albums": [
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Poppin' Shakin'",
+      "normalized_name": "poppin shakin",
+      "first_release_date": "2021-02-20",
+      "spotify_track_id": "0jfFu1W96AlrsMqXSZZlSt",
+      "albums": [
+        "Poppin' Shakin'",
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Take a picture",
+      "normalized_name": "take a picture",
+      "first_release_date": "2021-03-29",
+      "spotify_track_id": "2kYdmjKcB7t29wQsYHktNO",
+      "albums": [
+        "Take a picture",
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "I AM",
+      "normalized_name": "i am",
+      "first_release_date": "2021-04-07",
+      "spotify_track_id": "6rhiIlzGwqVDDFHfe1dCtq",
+      "albums": [
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Take a picture -Instrumental-",
+      "normalized_name": "take a picture instrumental",
+      "first_release_date": "2021-04-07",
+      "spotify_track_id": "35L6hEDAAMFVn3QXPdqH1C",
+      "albums": [
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Super Summer",
+      "normalized_name": "super summer",
+      "first_release_date": "2021-07-05",
+      "spotify_track_id": "2cT06UlzGqsv38XqpRPk0o",
+      "albums": [
+        "Super Summer"
+      ]
+    },
+    {
+      "name": "Chopstick",
+      "normalized_name": "chopstick",
+      "first_release_date": "2021-11-11",
+      "spotify_track_id": "0X40DgD7jJr5DeiGXFAfcl",
+      "albums": [
+        "Chopstick"
+      ]
+    },
+    {
+      "name": "Need U",
+      "normalized_name": "need u",
+      "first_release_date": "2021-11-20",
+      "spotify_track_id": "0wjfpzImMvw0rtCbrY7BPB",
+      "albums": [
+        "Need U"
+      ]
+    },
+    {
+      "name": "ASOBO",
+      "normalized_name": "asobo",
+      "first_release_date": "2022-04-12",
+      "spotify_track_id": "4rdmyc70mJQEfhKeiFDLFZ",
+      "albums": [
+        "ASOBO",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "ASOBO -English ver.-",
+      "normalized_name": "asobo english ver",
+      "first_release_date": "2022-04-26",
+      "spotify_track_id": "4bxx8e12FbY0x77AuqOjPu",
+      "albums": [
+        "ASOBO -English ver.-"
+      ]
+    },
+    {
+      "name": "CLAP CLAP",
+      "normalized_name": "clap clap",
+      "first_release_date": "2022-07-13",
+      "spotify_track_id": "2b9qZ9JVxMD8DJJeSa35Gm",
+      "albums": [
+        "CLAP CLAP",
+        "CLAP CLAP",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "CLAP CLAP -Instrumental-",
+      "normalized_name": "clap clap instrumental",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "0pwCT6rN1pxEIELZMIybSj",
+      "albums": [
+        "CLAP CLAP"
+      ]
+    },
+    {
+      "name": "Short Trip",
+      "normalized_name": "short trip",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "3D0Jhnd9fUVWgUhafLxAjs",
+      "albums": [
+        "CLAP CLAP",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Short Trip -Instrumental-",
+      "normalized_name": "short trip instrumental",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "2cSC7Jo0KyfYAwmoxylA1r",
+      "albums": [
+        "CLAP CLAP"
+      ]
+    },
+    {
+      "name": "Blue Moon",
+      "normalized_name": "blue moon",
+      "first_release_date": "2022-11-20",
+      "spotify_track_id": "6VfMXMW0vm2vKMKzZJXEmN",
+      "albums": [
+        "Blue Moon",
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Already Special",
+      "normalized_name": "already special",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "6dokbYEukad6FSu3k19j3b",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Already Special -Instrumental-",
+      "normalized_name": "already special instrumental",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "7jDQG5oRnMB2B7VGP2dTT3",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Blue Moon -Instrumental-",
+      "normalized_name": "blue moon instrumental",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "5bA1EQYvtPKBlXMm6poTw3",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Paradise",
+      "normalized_name": "paradise",
+      "first_release_date": "2023-03-03",
+      "spotify_track_id": "4j3ZYby4xNDuqfHb3Crm4k",
+      "albums": [
+        "Paradise",
+        "COCONUT ‐Deluxe Edition‐",
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Paradise -Instrumental-",
+      "normalized_name": "paradise instrumental",
+      "first_release_date": "2023-03-03",
+      "spotify_track_id": "6MyhUcp7RcfcnsyxDdSbqx",
+      "albums": [
+        "Paradise"
+      ]
+    },
+    {
+      "name": "COCONUT",
+      "normalized_name": "coconut",
+      "first_release_date": "2023-06-29",
+      "spotify_track_id": "1BSnc9wwUe2RecyDJFQne0",
+      "albums": [
+        "COCONUT",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "All right",
+      "normalized_name": "all right",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6wKCMGBsTdsqgrFw1xUgXo",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "JUMP (MAYUKA & RIMA & NINA)",
+      "normalized_name": "jump",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1Oh2b03K5yQl6OexUpRJhr",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "LOOK AT ME",
+      "normalized_name": "look at me",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1zozElftWBOW7lVgBvyTBB",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "LOVE YOURSELF (MAKO ＆ AYAKA ＆ MIIHI)",
+      "normalized_name": "love yourself",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3NUlE2KaRpba22Oxo12hKI",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Love ＆ Like",
+      "normalized_name": "love & like",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3towgw5kCZbYqE7SxcGGkL",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "PRISM",
+      "normalized_name": "prism",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6yoht5FxNPUppBt5iUlRer",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Raindrops",
+      "normalized_name": "raindrops",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "5RcXM2ZhPPG0KNrJuuW5V8",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Take it (MAYUKA & RIMA)",
+      "normalized_name": "take it",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1VLKPmgj3wSFk1W9WS3PGA",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "secret (RIO ＆ MAYA ＆ RIKU)",
+      "normalized_name": "secret",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "0dPxk9QP9vk2URWLHYavH3",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "HEARTRIS",
+      "normalized_name": "heartris",
+      "first_release_date": "2023-10-30",
+      "spotify_track_id": "3ftr8VIFtTJq2pscGtRUli",
+      "albums": [
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Lucky Star",
+      "normalized_name": "lucky star",
+      "first_release_date": "2023-10-30",
+      "spotify_track_id": "0k9Bs87IdC8wYvZjphd6En",
+      "albums": [
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Memories",
+      "normalized_name": "memories",
+      "first_release_date": "2024-02-06",
+      "spotify_track_id": "4xOXlqUgehg1zyWhmFswQK",
+      "albums": [
+        "Memories",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "SWEET NONFICTION",
+      "normalized_name": "sweet nonfiction",
+      "first_release_date": "2024-03-14",
+      "spotify_track_id": "0fXXfojTJEeJEF0p69qmo2",
+      "albums": [
+        "SWEET NONFICTION",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "RISE UP",
+      "normalized_name": "rise up",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "4GdYcBziM4hqHJSXYSntQe",
+      "albums": [
+        "RISE UP",
+        "RISE UP",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "RISE UP -English ver.-",
+      "normalized_name": "rise up english ver",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "3G5OUenCfqeIGz8q71NRC6",
+      "albums": [
+        "RISE UP -English ver.-",
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "RISE UP -Korean ver.-",
+      "normalized_name": "rise up korean ver",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "5f6IUEQLR0gk6iiPccKqgP",
+      "albums": [
+        "RISE UP -Korean ver.-",
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "BELIEVE",
+      "normalized_name": "believe",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "0aCIecWooLfBx2by8LRx3J",
+      "albums": [
+        "RISE UP",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "BELIEVE -English ver.-",
+      "normalized_name": "believe english ver",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "003b5mEvRL4qwXpbr1ELFS",
+      "albums": [
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "BELIEVE -Instrumental-",
+      "normalized_name": "believe instrumental",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "6FNWAj169SFlLZwlY0DeUr",
+      "albums": [
+        "RISE UP"
+      ]
+    },
+    {
+      "name": "BELIEVE -Korean ver.-",
+      "normalized_name": "believe korean ver",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "0EDfnZXkCr8vLOJ5GEp8fY",
+      "albums": [
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "RISE UP -Instrumental-",
+      "normalized_name": "rise up instrumental",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "3wzIC2G59VyHE5jrCY2o0G",
+      "albums": [
+        "RISE UP"
+      ]
+    },
+    {
+      "name": "AlwayS",
+      "normalized_name": "always",
+      "first_release_date": "2024-12-03",
+      "spotify_track_id": "1JDhfeBJT1w9G4ToHpwJUO",
+      "albums": [
+        "AlwayS",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Buddy Buddy",
+      "normalized_name": "buddy buddy",
+      "first_release_date": "2024-12-11",
+      "spotify_track_id": "6Pl38sbKL7WsLCxEjvcU1F",
+      "albums": [
+        "Buddy Buddy",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "YOAKE",
+      "normalized_name": "yoake",
+      "first_release_date": "2025-01-08",
+      "spotify_track_id": "35e3eGGb3V9QTuTpaxQWIC",
+      "albums": [
+        "YOAKE",
+        "AWAKE",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "CRUSH",
+      "normalized_name": "crush",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "2HrikidMl3hOgDOFJu5CtT",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Life is Beautiful",
+      "normalized_name": "life is beautiful",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "1DSB3seYqJEDyZ4eJAYzDp",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Made of Love",
+      "normalized_name": "made of love",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "4YBnKuvLP4avqzga19k9OT",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "LOVE LINE (운명선)",
+      "normalized_name": "love line",
+      "first_release_date": "2025-03-31",
+      "spotify_track_id": "2RkJaS3fdYQqoME4O57Yoh",
+      "albums": [
+        "LOVE LINE"
+      ]
+    },
+    {
+      "name": "만약이라는 건 없어 (What if)",
+      "normalized_name": "만약이라는 건 없어",
+      "first_release_date": "2025-03-31",
+      "spotify_track_id": "0rBOXPE7af67Fx5WMgjETu",
+      "albums": [
+        "LOVE LINE"
+      ]
+    },
+    {
+      "name": "LOVE LINE -Japanese ver.-",
+      "normalized_name": "love line japanese ver",
+      "first_release_date": "2025-05-24",
+      "spotify_track_id": "2VOwuqPA5ucVrw9gtDoZz2",
+      "albums": [
+        "LOVE LINE -Japanese ver.-",
+        "LOVE LINE -Japanese ver.- ／ Shining day",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Shining day",
+      "normalized_name": "shining day",
+      "first_release_date": "2025-05-26",
+      "spotify_track_id": "1HQkuWiu6utLEsMPWqUdY0",
+      "albums": [
+        "LOVE LINE -Japanese ver.- ／ Shining day",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "What if -Japanese ver.-",
+      "normalized_name": "what if japanese ver",
+      "first_release_date": "2025-09-06",
+      "spotify_track_id": "7mQfu07fGNJGDdosq7z1Kf",
+      "albums": [
+        "What if -Japanese ver.-",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "♡Emotion",
+      "normalized_name": "♡emotion",
+      "first_release_date": "2025-10-17",
+      "spotify_track_id": "4iO9jhr2M1mwWKcszwFpk7",
+      "albums": [
+        "♡Emotion",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Come On Over",
+      "normalized_name": "come on over",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "2wguCP1z08IVRKTeMZ4GiO",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Fairy Magic",
+      "normalized_name": "fairy magic",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "2k2RfMiyMswMDV0nQN882s",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Happy day",
+      "normalized_name": "happy day",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "7rlKbA53lp8v5GpJOe0TNY",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "That's Me",
+      "normalized_name": "thats me",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "7sSltua2EuIUr7tYM20OwT",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Tip-Top",
+      "normalized_name": "tip top",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "6hqbNOf5HuJ9Lb7M6iGYaX",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Too Much",
+      "normalized_name": "too much",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "4oRGBlLJKFoTo1xfnUYF3s",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "VILLAIN",
+      "normalized_name": "villain",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "4h9RIm6tF75pOJLZsQyFij",
+      "albums": [
+        "New Emotion"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "Baby I'm a star",
+      "normalized_name": "baby im a star",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "4R94oyl8tvZJxFiq9XGRln",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Boom Boom Boom",
+      "normalized_name": "boom boom boom",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "0BhiyPgBY5Bbjsth8IxCHO",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Make you happy",
+      "normalized_name": "make you happy",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "1LnJVIG1BaHTRznuOgR0yc",
+      "albums": [
+        "Make you happy",
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "虹の向こうへ",
+      "normalized_name": "虹の向こうへ",
+      "first_release_date": "2020-06-30",
+      "spotify_track_id": "7GuQ29uGMvh4VbAKh2P66n",
+      "albums": [
+        "Make you happy"
+      ]
+    },
+    {
+      "name": "Step and a step",
+      "normalized_name": "step and a step",
+      "first_release_date": "2020-11-25",
+      "spotify_track_id": "5DgAgJbHcm74RyA9YKj6k1",
+      "albums": [
+        "Step and a step",
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Joyful",
+      "normalized_name": "joyful",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "7ajqy7gdf4JzyZIJr21uUg",
+      "albums": [
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Sweet Bomb！",
+      "normalized_name": "sweet bomb",
+      "first_release_date": "2020-12-02",
+      "spotify_track_id": "0YCL7egXNTkElDHH0QdoXJ",
+      "albums": [
+        "Step and a step"
+      ]
+    },
+    {
+      "name": "Poppin' Shakin'",
+      "normalized_name": "poppin shakin",
+      "first_release_date": "2021-02-20",
+      "spotify_track_id": "0jfFu1W96AlrsMqXSZZlSt",
+      "albums": [
+        "Poppin' Shakin'",
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Take a picture",
+      "normalized_name": "take a picture",
+      "first_release_date": "2021-03-29",
+      "spotify_track_id": "2kYdmjKcB7t29wQsYHktNO",
+      "albums": [
+        "Take a picture",
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "I AM",
+      "normalized_name": "i am",
+      "first_release_date": "2021-04-07",
+      "spotify_track_id": "6rhiIlzGwqVDDFHfe1dCtq",
+      "albums": [
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Take a picture -Instrumental-",
+      "normalized_name": "take a picture instrumental",
+      "first_release_date": "2021-04-07",
+      "spotify_track_id": "35L6hEDAAMFVn3QXPdqH1C",
+      "albums": [
+        "Take a picture／Poppin' Shakin'"
+      ]
+    },
+    {
+      "name": "Super Summer",
+      "normalized_name": "super summer",
+      "first_release_date": "2021-07-05",
+      "spotify_track_id": "2cT06UlzGqsv38XqpRPk0o",
+      "albums": [
+        "Super Summer"
+      ]
+    },
+    {
+      "name": "Chopstick",
+      "normalized_name": "chopstick",
+      "first_release_date": "2021-11-11",
+      "spotify_track_id": "0X40DgD7jJr5DeiGXFAfcl",
+      "albums": [
+        "Chopstick"
+      ]
+    },
+    {
+      "name": "Need U",
+      "normalized_name": "need u",
+      "first_release_date": "2021-11-20",
+      "spotify_track_id": "0wjfpzImMvw0rtCbrY7BPB",
+      "albums": [
+        "Need U"
+      ]
+    },
+    {
+      "name": "ASOBO",
+      "normalized_name": "asobo",
+      "first_release_date": "2022-04-12",
+      "spotify_track_id": "4rdmyc70mJQEfhKeiFDLFZ",
+      "albums": [
+        "ASOBO",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "ASOBO -English ver.-",
+      "normalized_name": "asobo english ver",
+      "first_release_date": "2022-04-26",
+      "spotify_track_id": "4bxx8e12FbY0x77AuqOjPu",
+      "albums": [
+        "ASOBO -English ver.-"
+      ]
+    },
+    {
+      "name": "CLAP CLAP",
+      "normalized_name": "clap clap",
+      "first_release_date": "2022-07-13",
+      "spotify_track_id": "2b9qZ9JVxMD8DJJeSa35Gm",
+      "albums": [
+        "CLAP CLAP",
+        "CLAP CLAP",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "CLAP CLAP -Instrumental-",
+      "normalized_name": "clap clap instrumental",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "0pwCT6rN1pxEIELZMIybSj",
+      "albums": [
+        "CLAP CLAP"
+      ]
+    },
+    {
+      "name": "Short Trip",
+      "normalized_name": "short trip",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "3D0Jhnd9fUVWgUhafLxAjs",
+      "albums": [
+        "CLAP CLAP",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Short Trip -Instrumental-",
+      "normalized_name": "short trip instrumental",
+      "first_release_date": "2022-07-20",
+      "spotify_track_id": "2cSC7Jo0KyfYAwmoxylA1r",
+      "albums": [
+        "CLAP CLAP"
+      ]
+    },
+    {
+      "name": "Blue Moon",
+      "normalized_name": "blue moon",
+      "first_release_date": "2022-11-20",
+      "spotify_track_id": "6VfMXMW0vm2vKMKzZJXEmN",
+      "albums": [
+        "Blue Moon",
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Already Special",
+      "normalized_name": "already special",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "6dokbYEukad6FSu3k19j3b",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Already Special -Instrumental-",
+      "normalized_name": "already special instrumental",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "7jDQG5oRnMB2B7VGP2dTT3",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Blue Moon -Instrumental-",
+      "normalized_name": "blue moon instrumental",
+      "first_release_date": "2022-12-14",
+      "spotify_track_id": "5bA1EQYvtPKBlXMm6poTw3",
+      "albums": [
+        "Blue Moon"
+      ]
+    },
+    {
+      "name": "Paradise",
+      "normalized_name": "paradise",
+      "first_release_date": "2023-03-03",
+      "spotify_track_id": "4j3ZYby4xNDuqfHb3Crm4k",
+      "albums": [
+        "Paradise",
+        "COCONUT ‐Deluxe Edition‐",
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Paradise -Instrumental-",
+      "normalized_name": "paradise instrumental",
+      "first_release_date": "2023-03-03",
+      "spotify_track_id": "6MyhUcp7RcfcnsyxDdSbqx",
+      "albums": [
+        "Paradise"
+      ]
+    },
+    {
+      "name": "COCONUT",
+      "normalized_name": "coconut",
+      "first_release_date": "2023-06-29",
+      "spotify_track_id": "1BSnc9wwUe2RecyDJFQne0",
+      "albums": [
+        "COCONUT",
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "All right",
+      "normalized_name": "all right",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6wKCMGBsTdsqgrFw1xUgXo",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "JUMP (MAYUKA & RIMA & NINA)",
+      "normalized_name": "jump",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1Oh2b03K5yQl6OexUpRJhr",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "LOOK AT ME",
+      "normalized_name": "look at me",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1zozElftWBOW7lVgBvyTBB",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "LOVE YOURSELF (MAKO ＆ AYAKA ＆ MIIHI)",
+      "normalized_name": "love yourself",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3NUlE2KaRpba22Oxo12hKI",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Love ＆ Like",
+      "normalized_name": "love & like",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "3towgw5kCZbYqE7SxcGGkL",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "PRISM",
+      "normalized_name": "prism",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "6yoht5FxNPUppBt5iUlRer",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Raindrops",
+      "normalized_name": "raindrops",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "5RcXM2ZhPPG0KNrJuuW5V8",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "Take it (MAYUKA & RIMA)",
+      "normalized_name": "take it",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "1VLKPmgj3wSFk1W9WS3PGA",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "secret (RIO ＆ MAYA ＆ RIKU)",
+      "normalized_name": "secret",
+      "first_release_date": "2023-07-19",
+      "spotify_track_id": "0dPxk9QP9vk2URWLHYavH3",
+      "albums": [
+        "COCONUT ‐Deluxe Edition‐"
+      ]
+    },
+    {
+      "name": "HEARTRIS",
+      "normalized_name": "heartris",
+      "first_release_date": "2023-10-30",
+      "spotify_track_id": "3ftr8VIFtTJq2pscGtRUli",
+      "albums": [
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Lucky Star",
+      "normalized_name": "lucky star",
+      "first_release_date": "2023-10-30",
+      "spotify_track_id": "0k9Bs87IdC8wYvZjphd6En",
+      "albums": [
+        "Press Play"
+      ]
+    },
+    {
+      "name": "Memories",
+      "normalized_name": "memories",
+      "first_release_date": "2024-02-06",
+      "spotify_track_id": "4xOXlqUgehg1zyWhmFswQK",
+      "albums": [
+        "Memories",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "SWEET NONFICTION",
+      "normalized_name": "sweet nonfiction",
+      "first_release_date": "2024-03-14",
+      "spotify_track_id": "0fXXfojTJEeJEF0p69qmo2",
+      "albums": [
+        "SWEET NONFICTION",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "RISE UP",
+      "normalized_name": "rise up",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "4GdYcBziM4hqHJSXYSntQe",
+      "albums": [
+        "RISE UP",
+        "RISE UP",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "RISE UP -English ver.-",
+      "normalized_name": "rise up english ver",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "3G5OUenCfqeIGz8q71NRC6",
+      "albums": [
+        "RISE UP -English ver.-",
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "RISE UP -Korean ver.-",
+      "normalized_name": "rise up korean ver",
+      "first_release_date": "2024-07-07",
+      "spotify_track_id": "5f6IUEQLR0gk6iiPccKqgP",
+      "albums": [
+        "RISE UP -Korean ver.-",
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "BELIEVE",
+      "normalized_name": "believe",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "0aCIecWooLfBx2by8LRx3J",
+      "albums": [
+        "RISE UP",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "BELIEVE -English ver.-",
+      "normalized_name": "believe english ver",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "003b5mEvRL4qwXpbr1ELFS",
+      "albums": [
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "BELIEVE -Instrumental-",
+      "normalized_name": "believe instrumental",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "6FNWAj169SFlLZwlY0DeUr",
+      "albums": [
+        "RISE UP"
+      ]
+    },
+    {
+      "name": "BELIEVE -Korean ver.-",
+      "normalized_name": "believe korean ver",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "0EDfnZXkCr8vLOJ5GEp8fY",
+      "albums": [
+        "RISE UP -English & Korean ver.-"
+      ]
+    },
+    {
+      "name": "RISE UP -Instrumental-",
+      "normalized_name": "rise up instrumental",
+      "first_release_date": "2024-07-24",
+      "spotify_track_id": "3wzIC2G59VyHE5jrCY2o0G",
+      "albums": [
+        "RISE UP"
+      ]
+    },
+    {
+      "name": "AlwayS",
+      "normalized_name": "always",
+      "first_release_date": "2024-12-03",
+      "spotify_track_id": "1JDhfeBJT1w9G4ToHpwJUO",
+      "albums": [
+        "AlwayS",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Buddy Buddy",
+      "normalized_name": "buddy buddy",
+      "first_release_date": "2024-12-11",
+      "spotify_track_id": "6Pl38sbKL7WsLCxEjvcU1F",
+      "albums": [
+        "Buddy Buddy",
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "YOAKE",
+      "normalized_name": "yoake",
+      "first_release_date": "2025-01-08",
+      "spotify_track_id": "35e3eGGb3V9QTuTpaxQWIC",
+      "albums": [
+        "YOAKE",
+        "AWAKE",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "CRUSH",
+      "normalized_name": "crush",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "2HrikidMl3hOgDOFJu5CtT",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Life is Beautiful",
+      "normalized_name": "life is beautiful",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "1DSB3seYqJEDyZ4eJAYzDp",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "Made of Love",
+      "normalized_name": "made of love",
+      "first_release_date": "2025-02-05",
+      "spotify_track_id": "4YBnKuvLP4avqzga19k9OT",
+      "albums": [
+        "AWAKE"
+      ]
+    },
+    {
+      "name": "LOVE LINE (운명선)",
+      "normalized_name": "love line",
+      "first_release_date": "2025-03-31",
+      "spotify_track_id": "2RkJaS3fdYQqoME4O57Yoh",
+      "albums": [
+        "LOVE LINE"
+      ]
+    },
+    {
+      "name": "만약이라는 건 없어 (What if)",
+      "normalized_name": "만약이라는 건 없어",
+      "first_release_date": "2025-03-31",
+      "spotify_track_id": "0rBOXPE7af67Fx5WMgjETu",
+      "albums": [
+        "LOVE LINE"
+      ]
+    },
+    {
+      "name": "LOVE LINE -Japanese ver.-",
+      "normalized_name": "love line japanese ver",
+      "first_release_date": "2025-05-24",
+      "spotify_track_id": "2VOwuqPA5ucVrw9gtDoZz2",
+      "albums": [
+        "LOVE LINE -Japanese ver.-",
+        "LOVE LINE -Japanese ver.- ／ Shining day",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Shining day",
+      "normalized_name": "shining day",
+      "first_release_date": "2025-05-26",
+      "spotify_track_id": "1HQkuWiu6utLEsMPWqUdY0",
+      "albums": [
+        "LOVE LINE -Japanese ver.- ／ Shining day",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "What if -Japanese ver.-",
+      "normalized_name": "what if japanese ver",
+      "first_release_date": "2025-09-06",
+      "spotify_track_id": "7mQfu07fGNJGDdosq7z1Kf",
+      "albums": [
+        "What if -Japanese ver.-",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "♡Emotion",
+      "normalized_name": "♡emotion",
+      "first_release_date": "2025-10-17",
+      "spotify_track_id": "4iO9jhr2M1mwWKcszwFpk7",
+      "albums": [
+        "♡Emotion",
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Come On Over",
+      "normalized_name": "come on over",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "2wguCP1z08IVRKTeMZ4GiO",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Fairy Magic",
+      "normalized_name": "fairy magic",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "2k2RfMiyMswMDV0nQN882s",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Happy day",
+      "normalized_name": "happy day",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "7rlKbA53lp8v5GpJOe0TNY",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "That's Me",
+      "normalized_name": "thats me",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "7sSltua2EuIUr7tYM20OwT",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Tip-Top",
+      "normalized_name": "tip top",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "6hqbNOf5HuJ9Lb7M6iGYaX",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "Too Much",
+      "normalized_name": "too much",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "4oRGBlLJKFoTo1xfnUYF3s",
+      "albums": [
+        "New Emotion"
+      ]
+    },
+    {
+      "name": "VILLAIN",
+      "normalized_name": "villain",
+      "first_release_date": "2025-11-19",
+      "spotify_track_id": "4h9RIm6tF75pOJLZsQyFij",
+      "albums": [
+        "New Emotion"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [],
+  "releases": [
+    {
+      "album_id": "1wIIu2i7A56TlMD99CVNQD",
+      "name": "Make you happy",
+      "album_type": "single",
+      "release_date": "2020-06-30",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/1wIIu2i7A56TlMD99CVNQD",
+      "tracks": [
+        {
+          "track_id": "1LnJVIG1BaHTRznuOgR0yc",
+          "name": "Make you happy",
+          "normalized_name": "make you happy",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 184520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1LnJVIG1BaHTRznuOgR0yc"
+        },
+        {
+          "track_id": "4R94oyl8tvZJxFiq9XGRln",
+          "name": "Baby I'm a star",
+          "normalized_name": "baby im a star",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 159493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4R94oyl8tvZJxFiq9XGRln"
+        },
+        {
+          "track_id": "0BhiyPgBY5Bbjsth8IxCHO",
+          "name": "Boom Boom Boom",
+          "normalized_name": "boom boom boom",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 201439,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0BhiyPgBY5Bbjsth8IxCHO"
+        },
+        {
+          "track_id": "7GuQ29uGMvh4VbAKh2P66n",
+          "name": "虹の向こうへ",
+          "normalized_name": "虹の向こうへ",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 196554,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7GuQ29uGMvh4VbAKh2P66n"
+        }
+      ]
+    },
+    {
+      "album_id": "1XnvWmRl5YIp6u4k8rvIwN",
+      "name": "Step and a step",
+      "album_type": "single",
+      "release_date": "2020-11-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1XnvWmRl5YIp6u4k8rvIwN",
+      "tracks": [
+        {
+          "track_id": "5DgAgJbHcm74RyA9YKj6k1",
+          "name": "Step and a step",
+          "normalized_name": "step and a step",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 201720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5DgAgJbHcm74RyA9YKj6k1"
+        }
+      ]
+    },
+    {
+      "album_id": "0YrdGKt2Oo4y86Jew33mnn",
+      "name": "Step and a step",
+      "album_type": "single",
+      "release_date": "2020-12-02",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/0YrdGKt2Oo4y86Jew33mnn",
+      "tracks": [
+        {
+          "track_id": "6Tyz5wyxOKuHYVW4Q7Pigf",
+          "name": "Step and a step",
+          "normalized_name": "step and a step",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 201720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Tyz5wyxOKuHYVW4Q7Pigf"
+        },
+        {
+          "track_id": "7ajqy7gdf4JzyZIJr21uUg",
+          "name": "Joyful",
+          "normalized_name": "joyful",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 210506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7ajqy7gdf4JzyZIJr21uUg"
+        },
+        {
+          "track_id": "0YCL7egXNTkElDHH0QdoXJ",
+          "name": "Sweet Bomb！",
+          "normalized_name": "sweet bomb",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 175586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0YCL7egXNTkElDHH0QdoXJ"
+        },
+        {
+          "track_id": "1dck7V6ZV5ep2kAvXeI1T3",
+          "name": "Make you happy",
+          "normalized_name": "make you happy",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 184693,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1dck7V6ZV5ep2kAvXeI1T3"
+        }
+      ]
+    },
+    {
+      "album_id": "3yTEI6nQJTTHPVlFauTCsv",
+      "name": "Poppin' Shakin'",
+      "album_type": "single",
+      "release_date": "2021-02-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3yTEI6nQJTTHPVlFauTCsv",
+      "tracks": [
+        {
+          "track_id": "0jfFu1W96AlrsMqXSZZlSt",
+          "name": "Poppin' Shakin'",
+          "normalized_name": "poppin shakin",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 192754,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0jfFu1W96AlrsMqXSZZlSt"
+        }
+      ]
+    },
+    {
+      "album_id": "3kkvvNdbd6zh91I7TAfUHz",
+      "name": "Take a picture",
+      "album_type": "single",
+      "release_date": "2021-03-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3kkvvNdbd6zh91I7TAfUHz",
+      "tracks": [
+        {
+          "track_id": "2kYdmjKcB7t29wQsYHktNO",
+          "name": "Take a picture",
+          "normalized_name": "take a picture",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 181346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2kYdmjKcB7t29wQsYHktNO"
+        }
+      ]
+    },
+    {
+      "album_id": "2QCDIMyEQq3yUZsQ3HqvcL",
+      "name": "Take a picture／Poppin' Shakin'",
+      "album_type": "single",
+      "release_date": "2021-04-07",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/2QCDIMyEQq3yUZsQ3HqvcL",
+      "tracks": [
+        {
+          "track_id": "4J13sHEiUsbLm6K7KC9Jka",
+          "name": "Take a picture",
+          "normalized_name": "take a picture",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 181346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4J13sHEiUsbLm6K7KC9Jka"
+        },
+        {
+          "track_id": "3dw7irzRWoRJZigDQBqVJt",
+          "name": "Poppin' Shakin'",
+          "normalized_name": "poppin shakin",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 193973,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3dw7irzRWoRJZigDQBqVJt"
+        },
+        {
+          "track_id": "6rhiIlzGwqVDDFHfe1dCtq",
+          "name": "I AM",
+          "normalized_name": "i am",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 216666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6rhiIlzGwqVDDFHfe1dCtq"
+        },
+        {
+          "track_id": "35L6hEDAAMFVn3QXPdqH1C",
+          "name": "Take a picture -Instrumental-",
+          "normalized_name": "take a picture instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 180253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/35L6hEDAAMFVn3QXPdqH1C"
+        }
+      ]
+    },
+    {
+      "album_id": "7f28t4wyEvhLmXXuIGFNJx",
+      "name": "Super Summer",
+      "album_type": "single",
+      "release_date": "2021-07-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7f28t4wyEvhLmXXuIGFNJx",
+      "tracks": [
+        {
+          "track_id": "2cT06UlzGqsv38XqpRPk0o",
+          "name": "Super Summer",
+          "normalized_name": "super summer",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180531,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2cT06UlzGqsv38XqpRPk0o"
+        }
+      ]
+    },
+    {
+      "album_id": "3JZe3XL47MvVW571DbXN9S",
+      "name": "Chopstick",
+      "album_type": "single",
+      "release_date": "2021-11-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3JZe3XL47MvVW571DbXN9S",
+      "tracks": [
+        {
+          "track_id": "0X40DgD7jJr5DeiGXFAfcl",
+          "name": "Chopstick",
+          "normalized_name": "chopstick",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 177973,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0X40DgD7jJr5DeiGXFAfcl"
+        }
+      ]
+    },
+    {
+      "album_id": "6dOZmuVVrv1OYPx0XY1pG0",
+      "name": "Need U",
+      "album_type": "single",
+      "release_date": "2021-11-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6dOZmuVVrv1OYPx0XY1pG0",
+      "tracks": [
+        {
+          "track_id": "0wjfpzImMvw0rtCbrY7BPB",
+          "name": "Need U",
+          "normalized_name": "need u",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 253866,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0wjfpzImMvw0rtCbrY7BPB"
+        }
+      ]
+    },
+    {
+      "album_id": "7ablw9g7TrGJFlv8VrJi7d",
+      "name": "ASOBO",
+      "album_type": "single",
+      "release_date": "2022-04-12",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7ablw9g7TrGJFlv8VrJi7d",
+      "tracks": [
+        {
+          "track_id": "4rdmyc70mJQEfhKeiFDLFZ",
+          "name": "ASOBO",
+          "normalized_name": "asobo",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 181077,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4rdmyc70mJQEfhKeiFDLFZ"
+        }
+      ]
+    },
+    {
+      "album_id": "3HrYO8vY7K3pAQ59pFrZaV",
+      "name": "ASOBO -English ver.-",
+      "album_type": "single",
+      "release_date": "2022-04-26",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3HrYO8vY7K3pAQ59pFrZaV",
+      "tracks": [
+        {
+          "track_id": "4bxx8e12FbY0x77AuqOjPu",
+          "name": "ASOBO -English ver.-",
+          "normalized_name": "asobo english ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 181058,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4bxx8e12FbY0x77AuqOjPu"
+        }
+      ]
+    },
+    {
+      "album_id": "1VENoHMNvx1ebYLPkmM0A2",
+      "name": "CLAP CLAP",
+      "album_type": "single",
+      "release_date": "2022-07-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1VENoHMNvx1ebYLPkmM0A2",
+      "tracks": [
+        {
+          "track_id": "2b9qZ9JVxMD8DJJeSa35Gm",
+          "name": "CLAP CLAP",
+          "normalized_name": "clap clap",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 165720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2b9qZ9JVxMD8DJJeSa35Gm"
+        }
+      ]
+    },
+    {
+      "album_id": "3XQYeHWIHsP1qI3OUbZXP2",
+      "name": "CLAP CLAP",
+      "album_type": "single",
+      "release_date": "2022-07-20",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/3XQYeHWIHsP1qI3OUbZXP2",
+      "tracks": [
+        {
+          "track_id": "2V7LjhSj1wsF6HYxcuAfJp",
+          "name": "CLAP CLAP",
+          "normalized_name": "clap clap",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 165720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2V7LjhSj1wsF6HYxcuAfJp"
+        },
+        {
+          "track_id": "3D0Jhnd9fUVWgUhafLxAjs",
+          "name": "Short Trip",
+          "normalized_name": "short trip",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 217386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3D0Jhnd9fUVWgUhafLxAjs"
+        },
+        {
+          "track_id": "0pwCT6rN1pxEIELZMIybSj",
+          "name": "CLAP CLAP -Instrumental-",
+          "normalized_name": "clap clap instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 165733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0pwCT6rN1pxEIELZMIybSj"
+        },
+        {
+          "track_id": "2cSC7Jo0KyfYAwmoxylA1r",
+          "name": "Short Trip -Instrumental-",
+          "normalized_name": "short trip instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 210600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2cSC7Jo0KyfYAwmoxylA1r"
+        }
+      ]
+    },
+    {
+      "album_id": "0zaSplHkAU9oRt4Cl7Dx4O",
+      "name": "Blue Moon",
+      "album_type": "single",
+      "release_date": "2022-11-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0zaSplHkAU9oRt4Cl7Dx4O",
+      "tracks": [
+        {
+          "track_id": "6VfMXMW0vm2vKMKzZJXEmN",
+          "name": "Blue Moon",
+          "normalized_name": "blue moon",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 244110,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6VfMXMW0vm2vKMKzZJXEmN"
+        }
+      ]
+    },
+    {
+      "album_id": "5NlTRl9cL1WaWx4O2PzJsj",
+      "name": "Blue Moon",
+      "album_type": "single",
+      "release_date": "2022-12-14",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/5NlTRl9cL1WaWx4O2PzJsj",
+      "tracks": [
+        {
+          "track_id": "5R7kDYYgwKKBKkIYK8FM8G",
+          "name": "Blue Moon",
+          "normalized_name": "blue moon",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 245440,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5R7kDYYgwKKBKkIYK8FM8G"
+        },
+        {
+          "track_id": "6dokbYEukad6FSu3k19j3b",
+          "name": "Already Special",
+          "normalized_name": "already special",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 218213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6dokbYEukad6FSu3k19j3b"
+        },
+        {
+          "track_id": "5bA1EQYvtPKBlXMm6poTw3",
+          "name": "Blue Moon -Instrumental-",
+          "normalized_name": "blue moon instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 245453,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5bA1EQYvtPKBlXMm6poTw3"
+        },
+        {
+          "track_id": "7jDQG5oRnMB2B7VGP2dTT3",
+          "name": "Already Special -Instrumental-",
+          "normalized_name": "already special instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 214760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7jDQG5oRnMB2B7VGP2dTT3"
+        }
+      ]
+    },
+    {
+      "album_id": "5ItabiqjFEYWwMFL1jBfve",
+      "name": "Paradise",
+      "album_type": "single",
+      "release_date": "2023-03-03",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/5ItabiqjFEYWwMFL1jBfve",
+      "tracks": [
+        {
+          "track_id": "4j3ZYby4xNDuqfHb3Crm4k",
+          "name": "Paradise",
+          "normalized_name": "paradise",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 207160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4j3ZYby4xNDuqfHb3Crm4k"
+        },
+        {
+          "track_id": "6MyhUcp7RcfcnsyxDdSbqx",
+          "name": "Paradise -Instrumental-",
+          "normalized_name": "paradise instrumental",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 207880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6MyhUcp7RcfcnsyxDdSbqx"
+        }
+      ]
+    },
+    {
+      "album_id": "2NKPBCTEK6qd0aRrRvDzTi",
+      "name": "COCONUT",
+      "album_type": "single",
+      "release_date": "2023-06-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2NKPBCTEK6qd0aRrRvDzTi",
+      "tracks": [
+        {
+          "track_id": "1BSnc9wwUe2RecyDJFQne0",
+          "name": "COCONUT",
+          "normalized_name": "coconut",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 178426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1BSnc9wwUe2RecyDJFQne0"
+        }
+      ]
+    },
+    {
+      "album_id": "3gCyEsv6Qd36T0Ydii72l3",
+      "name": "COCONUT ‐Deluxe Edition‐",
+      "album_type": "album",
+      "release_date": "2023-07-19",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "spotify_url": "https://open.spotify.com/album/3gCyEsv6Qd36T0Ydii72l3",
+      "tracks": [
+        {
+          "track_id": "0SyPNyWWTV9DwsvlLDsXbQ",
+          "name": "COCONUT",
+          "normalized_name": "coconut",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 178426,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0SyPNyWWTV9DwsvlLDsXbQ"
+        },
+        {
+          "track_id": "1zozElftWBOW7lVgBvyTBB",
+          "name": "LOOK AT ME",
+          "normalized_name": "look at me",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 193946,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1zozElftWBOW7lVgBvyTBB"
+        },
+        {
+          "track_id": "426eOrJ79spCefobDY4Hl9",
+          "name": "Short Trip",
+          "normalized_name": "short trip",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 216573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/426eOrJ79spCefobDY4Hl9"
+        },
+        {
+          "track_id": "6gZCcdvZbEQnLGB4bEgpMx",
+          "name": "Paradise",
+          "normalized_name": "paradise",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 209773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6gZCcdvZbEQnLGB4bEgpMx"
+        },
+        {
+          "track_id": "33su45ZELjT8oD94l8dGiZ",
+          "name": "ASOBO",
+          "normalized_name": "asobo",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 183506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/33su45ZELjT8oD94l8dGiZ"
+        },
+        {
+          "track_id": "6yoht5FxNPUppBt5iUlRer",
+          "name": "PRISM",
+          "normalized_name": "prism",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 224440,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6yoht5FxNPUppBt5iUlRer"
+        },
+        {
+          "track_id": "6wKCMGBsTdsqgrFw1xUgXo",
+          "name": "All right",
+          "normalized_name": "all right",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 199906,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6wKCMGBsTdsqgrFw1xUgXo"
+        },
+        {
+          "track_id": "0diE1itc3GMcCXjuc3LVZW",
+          "name": "CLAP CLAP",
+          "normalized_name": "clap clap",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 164880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0diE1itc3GMcCXjuc3LVZW"
+        },
+        {
+          "track_id": "5RcXM2ZhPPG0KNrJuuW5V8",
+          "name": "Raindrops",
+          "normalized_name": "raindrops",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 167080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5RcXM2ZhPPG0KNrJuuW5V8"
+        },
+        {
+          "track_id": "3towgw5kCZbYqE7SxcGGkL",
+          "name": "Love ＆ Like",
+          "normalized_name": "love & like",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 172053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3towgw5kCZbYqE7SxcGGkL"
+        },
+        {
+          "track_id": "3NUlE2KaRpba22Oxo12hKI",
+          "name": "LOVE YOURSELF (MAKO ＆ AYAKA ＆ MIIHI)",
+          "normalized_name": "love yourself",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 199226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3NUlE2KaRpba22Oxo12hKI"
+        },
+        {
+          "track_id": "0dPxk9QP9vk2URWLHYavH3",
+          "name": "secret (RIO ＆ MAYA ＆ RIKU)",
+          "normalized_name": "secret",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 199026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0dPxk9QP9vk2URWLHYavH3"
+        },
+        {
+          "track_id": "1Oh2b03K5yQl6OexUpRJhr",
+          "name": "JUMP (MAYUKA & RIMA & NINA)",
+          "normalized_name": "jump",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 199386,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Oh2b03K5yQl6OexUpRJhr"
+        },
+        {
+          "track_id": "1VLKPmgj3wSFk1W9WS3PGA",
+          "name": "Take it (MAYUKA & RIMA)",
+          "normalized_name": "take it",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 198066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1VLKPmgj3wSFk1W9WS3PGA"
+        }
+      ]
+    },
+    {
+      "album_id": "5MJB31bpDXXiHbloXMTZ0I",
+      "name": "Press Play",
+      "album_type": "single",
+      "release_date": "2023-10-30",
+      "release_date_precision": "day",
+      "total_tracks": 3,
+      "spotify_url": "https://open.spotify.com/album/5MJB31bpDXXiHbloXMTZ0I",
+      "tracks": [
+        {
+          "track_id": "3ftr8VIFtTJq2pscGtRUli",
+          "name": "HEARTRIS",
+          "normalized_name": "heartris",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180883,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3ftr8VIFtTJq2pscGtRUli"
+        },
+        {
+          "track_id": "0k9Bs87IdC8wYvZjphd6En",
+          "name": "Lucky Star",
+          "normalized_name": "lucky star",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 177360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0k9Bs87IdC8wYvZjphd6En"
+        },
+        {
+          "track_id": "2V1QWKQrJbElsaukP9YlYv",
+          "name": "Paradise (Korean Version)",
+          "normalized_name": "paradise",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 207160,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2V1QWKQrJbElsaukP9YlYv"
+        }
+      ]
+    },
+    {
+      "album_id": "6mgGuA8yJqBsFKpwKWX0JC",
+      "name": "Memories",
+      "album_type": "single",
+      "release_date": "2024-02-06",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6mgGuA8yJqBsFKpwKWX0JC",
+      "tracks": [
+        {
+          "track_id": "4xOXlqUgehg1zyWhmFswQK",
+          "name": "Memories",
+          "normalized_name": "memories",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 208253,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4xOXlqUgehg1zyWhmFswQK"
+        }
+      ]
+    },
+    {
+      "album_id": "37XW4vuhNFKGUliZ3qkTv3",
+      "name": "SWEET NONFICTION",
+      "album_type": "single",
+      "release_date": "2024-03-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/37XW4vuhNFKGUliZ3qkTv3",
+      "tracks": [
+        {
+          "track_id": "0fXXfojTJEeJEF0p69qmo2",
+          "name": "SWEET NONFICTION",
+          "normalized_name": "sweet nonfiction",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 199693,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0fXXfojTJEeJEF0p69qmo2"
+        }
+      ]
+    },
+    {
+      "album_id": "0DMBH4ZFc1QS5XsAWKvdxM",
+      "name": "RISE UP",
+      "album_type": "single",
+      "release_date": "2024-07-07",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0DMBH4ZFc1QS5XsAWKvdxM",
+      "tracks": [
+        {
+          "track_id": "4GdYcBziM4hqHJSXYSntQe",
+          "name": "RISE UP",
+          "normalized_name": "rise up",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4GdYcBziM4hqHJSXYSntQe"
+        }
+      ]
+    },
+    {
+      "album_id": "55xDLs2SUps2LHeD42xSy5",
+      "name": "RISE UP -English ver.-",
+      "album_type": "single",
+      "release_date": "2024-07-07",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/55xDLs2SUps2LHeD42xSy5",
+      "tracks": [
+        {
+          "track_id": "3G5OUenCfqeIGz8q71NRC6",
+          "name": "RISE UP -English ver.-",
+          "normalized_name": "rise up english ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3G5OUenCfqeIGz8q71NRC6"
+        }
+      ]
+    },
+    {
+      "album_id": "5SsyK7yxt7AZd5uyNYAkSZ",
+      "name": "RISE UP -Korean ver.-",
+      "album_type": "single",
+      "release_date": "2024-07-07",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5SsyK7yxt7AZd5uyNYAkSZ",
+      "tracks": [
+        {
+          "track_id": "5f6IUEQLR0gk6iiPccKqgP",
+          "name": "RISE UP -Korean ver.-",
+          "normalized_name": "rise up korean ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5f6IUEQLR0gk6iiPccKqgP"
+        }
+      ]
+    },
+    {
+      "album_id": "799Kmhfy6h7UwCTot4gJ4e",
+      "name": "RISE UP",
+      "album_type": "single",
+      "release_date": "2024-07-24",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/799Kmhfy6h7UwCTot4gJ4e",
+      "tracks": [
+        {
+          "track_id": "7s0OdDiamqdrj7dTMjPtsf",
+          "name": "RISE UP",
+          "normalized_name": "rise up",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7s0OdDiamqdrj7dTMjPtsf"
+        },
+        {
+          "track_id": "0aCIecWooLfBx2by8LRx3J",
+          "name": "BELIEVE",
+          "normalized_name": "believe",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 209986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0aCIecWooLfBx2by8LRx3J"
+        },
+        {
+          "track_id": "3wzIC2G59VyHE5jrCY2o0G",
+          "name": "RISE UP -Instrumental-",
+          "normalized_name": "rise up instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3wzIC2G59VyHE5jrCY2o0G"
+        },
+        {
+          "track_id": "6FNWAj169SFlLZwlY0DeUr",
+          "name": "BELIEVE -Instrumental-",
+          "normalized_name": "believe instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 209346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6FNWAj169SFlLZwlY0DeUr"
+        }
+      ]
+    },
+    {
+      "album_id": "6uwhz6F4Vy1HpCTeNlSRCN",
+      "name": "RISE UP -English & Korean ver.-",
+      "album_type": "single",
+      "release_date": "2024-07-24",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/6uwhz6F4Vy1HpCTeNlSRCN",
+      "tracks": [
+        {
+          "track_id": "5xqUXYb8UJbiitYP0Dp7l0",
+          "name": "RISE UP -English ver.-",
+          "normalized_name": "rise up english ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5xqUXYb8UJbiitYP0Dp7l0"
+        },
+        {
+          "track_id": "003b5mEvRL4qwXpbr1ELFS",
+          "name": "BELIEVE -English ver.-",
+          "normalized_name": "believe english ver",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 209986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/003b5mEvRL4qwXpbr1ELFS"
+        },
+        {
+          "track_id": "2i3uYocqQy4mGT2Ua77yCP",
+          "name": "RISE UP -Korean ver.-",
+          "normalized_name": "rise up korean ver",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 180520,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2i3uYocqQy4mGT2Ua77yCP"
+        },
+        {
+          "track_id": "0EDfnZXkCr8vLOJ5GEp8fY",
+          "name": "BELIEVE -Korean ver.-",
+          "normalized_name": "believe korean ver",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 209400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0EDfnZXkCr8vLOJ5GEp8fY"
+        }
+      ]
+    },
+    {
+      "album_id": "3eIBSBfp00tC60r4udiZzH",
+      "name": "AlwayS",
+      "album_type": "single",
+      "release_date": "2024-12-03",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3eIBSBfp00tC60r4udiZzH",
+      "tracks": [
+        {
+          "track_id": "1JDhfeBJT1w9G4ToHpwJUO",
+          "name": "AlwayS",
+          "normalized_name": "always",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 260746,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1JDhfeBJT1w9G4ToHpwJUO"
+        }
+      ]
+    },
+    {
+      "album_id": "0WJM1QRl1NzzGGfHshzrW7",
+      "name": "Buddy Buddy",
+      "album_type": "single",
+      "release_date": "2024-12-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0WJM1QRl1NzzGGfHshzrW7",
+      "tracks": [
+        {
+          "track_id": "6Pl38sbKL7WsLCxEjvcU1F",
+          "name": "Buddy Buddy",
+          "normalized_name": "buddy buddy",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 130493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Pl38sbKL7WsLCxEjvcU1F"
+        }
+      ]
+    },
+    {
+      "album_id": "3wtGHoPkqJevONN3qusapV",
+      "name": "YOAKE",
+      "album_type": "single",
+      "release_date": "2025-01-08",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3wtGHoPkqJevONN3qusapV",
+      "tracks": [
+        {
+          "track_id": "35e3eGGb3V9QTuTpaxQWIC",
+          "name": "YOAKE",
+          "normalized_name": "yoake",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 195120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/35e3eGGb3V9QTuTpaxQWIC"
+        }
+      ]
+    },
+    {
+      "album_id": "2tGKYczA68d9ykd1YXRvQI",
+      "name": "AWAKE",
+      "album_type": "album",
+      "release_date": "2025-02-05",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/2tGKYczA68d9ykd1YXRvQI",
+      "tracks": [
+        {
+          "track_id": "2WSOmiYi6Gb5agqs8wCTHo",
+          "name": "YOAKE",
+          "normalized_name": "yoake",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 195120,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2WSOmiYi6Gb5agqs8wCTHo"
+        },
+        {
+          "track_id": "4G6JFzJVXqWlFLFqTUKO8m",
+          "name": "SWEET NONFICTION",
+          "normalized_name": "sweet nonfiction",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 200746,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4G6JFzJVXqWlFLFqTUKO8m"
+        },
+        {
+          "track_id": "3twy2Ec8CTYpmIUHEYwOq0",
+          "name": "Buddy Buddy",
+          "normalized_name": "buddy buddy",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 131493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3twy2Ec8CTYpmIUHEYwOq0"
+        },
+        {
+          "track_id": "4YBnKuvLP4avqzga19k9OT",
+          "name": "Made of Love",
+          "normalized_name": "made of love",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 200466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4YBnKuvLP4avqzga19k9OT"
+        },
+        {
+          "track_id": "1DSB3seYqJEDyZ4eJAYzDp",
+          "name": "Life is Beautiful",
+          "normalized_name": "life is beautiful",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 177946,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1DSB3seYqJEDyZ4eJAYzDp"
+        },
+        {
+          "track_id": "2HrikidMl3hOgDOFJu5CtT",
+          "name": "CRUSH",
+          "normalized_name": "crush",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 179880,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2HrikidMl3hOgDOFJu5CtT"
+        },
+        {
+          "track_id": "7IY4Drh0NuJu3wK4RlMbY7",
+          "name": "Memories",
+          "normalized_name": "memories",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 209413,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7IY4Drh0NuJu3wK4RlMbY7"
+        },
+        {
+          "track_id": "78sejdPUvDGFRwT6rdcJ3t",
+          "name": "AlwayS",
+          "normalized_name": "always",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 261600,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/78sejdPUvDGFRwT6rdcJ3t"
+        }
+      ]
+    },
+    {
+      "album_id": "66VrF6SkgX7cj4mcilaQtJ",
+      "name": "LOVE LINE",
+      "album_type": "single",
+      "release_date": "2025-03-31",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/66VrF6SkgX7cj4mcilaQtJ",
+      "tracks": [
+        {
+          "track_id": "2RkJaS3fdYQqoME4O57Yoh",
+          "name": "LOVE LINE (운명선)",
+          "normalized_name": "love line",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 191763,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2RkJaS3fdYQqoME4O57Yoh"
+        },
+        {
+          "track_id": "0rBOXPE7af67Fx5WMgjETu",
+          "name": "만약이라는 건 없어 (What if)",
+          "normalized_name": "만약이라는 건 없어",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 200773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0rBOXPE7af67Fx5WMgjETu"
+        }
+      ]
+    },
+    {
+      "album_id": "1Xo9ULjSqDm25LS7TTqoZN",
+      "name": "LOVE LINE -Japanese ver.-",
+      "album_type": "single",
+      "release_date": "2025-05-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1Xo9ULjSqDm25LS7TTqoZN",
+      "tracks": [
+        {
+          "track_id": "2VOwuqPA5ucVrw9gtDoZz2",
+          "name": "LOVE LINE -Japanese ver.-",
+          "normalized_name": "love line japanese ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 191763,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2VOwuqPA5ucVrw9gtDoZz2"
+        }
+      ]
+    },
+    {
+      "album_id": "6LGxKd95jIDxbuakyVb3aP",
+      "name": "LOVE LINE -Japanese ver.- ／ Shining day",
+      "album_type": "single",
+      "release_date": "2025-05-26",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6LGxKd95jIDxbuakyVb3aP",
+      "tracks": [
+        {
+          "track_id": "19f8DbsGyDRep4VMhQPGhc",
+          "name": "LOVE LINE -Japanese ver.-",
+          "normalized_name": "love line japanese ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 191763,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/19f8DbsGyDRep4VMhQPGhc"
+        },
+        {
+          "track_id": "1HQkuWiu6utLEsMPWqUdY0",
+          "name": "Shining day",
+          "normalized_name": "shining day",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 210026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1HQkuWiu6utLEsMPWqUdY0"
+        }
+      ]
+    },
+    {
+      "album_id": "0xeWX0wA1zhwhczMbSrWA3",
+      "name": "What if -Japanese ver.-",
+      "album_type": "single",
+      "release_date": "2025-09-06",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0xeWX0wA1zhwhczMbSrWA3",
+      "tracks": [
+        {
+          "track_id": "7mQfu07fGNJGDdosq7z1Kf",
+          "name": "What if -Japanese ver.-",
+          "normalized_name": "what if japanese ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 203054,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7mQfu07fGNJGDdosq7z1Kf"
+        }
+      ]
+    },
+    {
+      "album_id": "2zCqs1mLztvaNN9a6Tcue5",
+      "name": "♡Emotion",
+      "album_type": "single",
+      "release_date": "2025-10-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2zCqs1mLztvaNN9a6Tcue5",
+      "tracks": [
+        {
+          "track_id": "4iO9jhr2M1mwWKcszwFpk7",
+          "name": "♡Emotion",
+          "normalized_name": "♡emotion",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 219112,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4iO9jhr2M1mwWKcszwFpk7"
+        }
+      ]
+    },
+    {
+      "album_id": "5JBQFYFH4K37ybOzKEnFqu",
+      "name": "New Emotion",
+      "album_type": "album",
+      "release_date": "2025-11-19",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "spotify_url": "https://open.spotify.com/album/5JBQFYFH4K37ybOzKEnFqu",
+      "tracks": [
+        {
+          "track_id": "5dvGZVF4VEISwZfcmjVdvo",
+          "name": "♡Emotion",
+          "normalized_name": "♡emotion",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 220666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5dvGZVF4VEISwZfcmjVdvo"
+        },
+        {
+          "track_id": "3jqUXgT97YFoGiDK0WRkbi",
+          "name": "YOAKE",
+          "normalized_name": "yoake",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 195613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3jqUXgT97YFoGiDK0WRkbi"
+        },
+        {
+          "track_id": "2wguCP1z08IVRKTeMZ4GiO",
+          "name": "Come On Over",
+          "normalized_name": "come on over",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 193226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2wguCP1z08IVRKTeMZ4GiO"
+        },
+        {
+          "track_id": "6SQIVtlwuZwJu0o5hadm9L",
+          "name": "Shining day",
+          "normalized_name": "shining day",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 211280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6SQIVtlwuZwJu0o5hadm9L"
+        },
+        {
+          "track_id": "0xtOqAG2JMFBY4XOoA9zl5",
+          "name": "RISE UP",
+          "normalized_name": "rise up",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 180533,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0xtOqAG2JMFBY4XOoA9zl5"
+        },
+        {
+          "track_id": "6QgIHLvhMLIzzTVInyBkH2",
+          "name": "BELIEVE",
+          "normalized_name": "believe",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 211093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6QgIHLvhMLIzzTVInyBkH2"
+        },
+        {
+          "track_id": "4oRGBlLJKFoTo1xfnUYF3s",
+          "name": "Too Much",
+          "normalized_name": "too much",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 129119,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4oRGBlLJKFoTo1xfnUYF3s"
+        },
+        {
+          "track_id": "4h9RIm6tF75pOJLZsQyFij",
+          "name": "VILLAIN",
+          "normalized_name": "villain",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 184946,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4h9RIm6tF75pOJLZsQyFij"
+        },
+        {
+          "track_id": "7sSltua2EuIUr7tYM20OwT",
+          "name": "That's Me",
+          "normalized_name": "thats me",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 155546,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7sSltua2EuIUr7tYM20OwT"
+        },
+        {
+          "track_id": "6hqbNOf5HuJ9Lb7M6iGYaX",
+          "name": "Tip-Top",
+          "normalized_name": "tip top",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 119159,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6hqbNOf5HuJ9Lb7M6iGYaX"
+        },
+        {
+          "track_id": "2k2RfMiyMswMDV0nQN882s",
+          "name": "Fairy Magic",
+          "normalized_name": "fairy magic",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 180186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2k2RfMiyMswMDV0nQN882s"
+        },
+        {
+          "track_id": "0E4qHvp7rYcFmDZe1328Zp",
+          "name": "LOVE LINE -Japanese ver.-",
+          "normalized_name": "love line japanese ver",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 193573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0E4qHvp7rYcFmDZe1328Zp"
+        },
+        {
+          "track_id": "3Hr8Q05PY7lxUnh6bSKOn5",
+          "name": "What if -Japanese ver.-",
+          "normalized_name": "what if japanese ver",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 202786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Hr8Q05PY7lxUnh6bSKOn5"
+        },
+        {
+          "track_id": "7rlKbA53lp8v5GpJOe0TNY",
+          "name": "Happy day",
+          "normalized_name": "happy day",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 186026,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7rlKbA53lp8v5GpJOe0TNY"
+        }
+      ]
+    }
+  ]
+}

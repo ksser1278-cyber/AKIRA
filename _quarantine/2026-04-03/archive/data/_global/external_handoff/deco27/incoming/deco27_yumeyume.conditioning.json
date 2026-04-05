@@ -1,0 +1,1041 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_yumeyume",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ゆめゆめ",
+    "title_core": "ゆめゆめ",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "Theme song for Hatsune Miku and Future Stars: Project Mirai",
+          "origin": "other",
+          "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+          "accessed_on": "2026-03-21"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "DECO*27",
+          "role": "arrangement",
+          "status": "inferred",
+          "sources": [
+            {
+              "label": "DECO*27 self-produced release pattern",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2012-01-05",
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "NicoNico upload date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "year": {
+        "value": 2012,
+        "status": "estimated",
+        "sources": [
+          {
+            "label": "NicoNico upload date",
+            "origin": "manual_note"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:20",
+        "seconds": 200,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-01-Yumeyume (Feat. Hatsune Miku).flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Wiki lyric excerpt source",
+        "origin": "lyric_site",
+        "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Wiki song page",
+        "origin": "other",
+        "url": "https://vocaloid.fandom.com/wiki/%E3%82%86%E3%82%81%E3%82%86%E3%82%81_(Yumeyume)",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      },
+      {
+        "label": "Local owned audio file metadata",
+        "origin": "other",
+        "notes": "FLAC tags from Melon library file",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section mapping for hopeful direct-emotional structure."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking to map hook repetition and section energy.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "(Instrumental hook)"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "僕の事はさて置き 君のことが聞きたいんだ",
+          "色々あるんだホント それじゃあ今日はよろしくどうぞ",
+          "たくさんあったはずなのに 今ではもう覚えてないんだ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "でもまだ まだね 終われないんだ",
+          "君に話したいことが まだ残ってるんだ",
+          "今日もまた前を向くための助走を取る"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "ハロー まだ誰かにとっての夢であり続けてね",
+          "それが今の「ゆめ」だよ",
+          "君の明日を少しでも軽く出来たら良い"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "君の事はさて置き 僕の事を聞いてくれりゃ",
+          "色々あるんだホント それじゃあ今日はよろしくどうぞ",
+          "たくさんあったはずなのに 何一つ変わってないんだ"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus 2",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus_2"
+        ],
+        "lines": [
+          "でもまだ まだね 終われないんだ",
+          "僕に出来る事が まだ残ってるんだ",
+          "今日もまた前を向くための助走を取る"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "ハロー いつから僕はこんなに臆病になったんだろう",
+          "そんな今の「ゆめ」だよ",
+          "僕の今日を少しでも好きになれたら良い"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "夢を持つ事は簡単な事だ",
+          "夢を見る事は簡単な事だ",
+          "夢を叶えるのは難しい事だ",
+          "夢という物は美しい事だ",
+          "でもそのすべてが素晴らしい事だ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "ハロー まだ誰かにとっての夢であり続けてね",
+          "それが今の「ゆめ」だよ",
+          "君の明日を少しでも軽く出来たら良い",
+          "ハロー いつから僕はこんなに臆病になったんだろう",
+          "そんな今の「ゆめ」だよ",
+          "僕の全てを愛して上げられたら良い"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ハロー まだ誰かにとっての夢であり続けてね",
+      "それが今の「ゆめ」だよ"
+    ],
+    "question_lines": [
+      "いつから僕はこんなに臆病になったんだろう"
+    ],
+    "repetition_patterns": [
+      "The title returns as a gentle slogan that redefines dream as present-tense continuation.",
+      "The verse and pre-chorus parallel structures perfectly between V1 (focusing on 'you') and V2 (focusing on 'me').",
+      "The bridge stacks '事だ' (thing is/fact is) endings to build a definitive thesis before the final chorus double-header."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "continuing dream",
+      "encouragement",
+      "forward motion",
+      "shared vulnerability"
+    ],
+    "emotional_thesis": "The song reframes 'dream' as a present-tense act of continuing and supporting each other, turning casual conversation into a profound, light-bearing promise.",
+    "contrast_device": [
+      "forgetfulness and uncertainty vs continued forward motion",
+      "casual conversation tone vs sincere encouragement",
+      "the difficulty of achieving dreams vs the beauty of just having them"
+    ],
+    "dramatic_arc": [
+      "conversational opening listening to the 'other'",
+      "gentle recommitment",
+      "hopeful title chorus release",
+      "reversing the lens to the singer's own fears",
+      "philosophical bridge defining what dreams are",
+      "double grand chorus resolving both perspectives"
+    ],
+    "narrative_role": [
+      "direct_emotional_pop",
+      "hopeful encouragement anthem",
+      "theme song"
+    ],
+    "tie_in_function": "Serves as an upbeat, universally encouraging game theme song while maintaining DECO*27's trademark conversational lyrical intimacy.",
+    "title_function": "The title acts as a redefinition device: dream is not a distant aspiration but the act of still moving forward, repeatedly chanted ('yume, yume').",
+    "key_motifs": [
+      "ゆめ (Dream)",
+      "ハロー (Hello)",
+      "明日 (Tomorrow)",
+      "前を向く (Look forward)",
+      "助走 (Lead-up / run-up)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1078470,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-01-Yumeyume (Feat. Hatsune Miku).flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -6.2,
+        "lra_lu": 3.3,
+        "rms_median_db": -8.987,
+        "rms_span_db": 83.718,
+        "early_rms_db": -9.774,
+        "mid_rms_db": -8.829,
+        "late_rms_db": -8.565,
+        "late_minus_early_db": 1.209,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "DECO_27-01-Yumeyume (Feat. Hatsune Miku).flac"
+          }
+        ]
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "bright stable pop energy",
+        "clear conversational flow",
+        "noticeable late lift for final double chorus"
+      ],
+      "vocal_behavior": [
+        "friendly direct lead",
+        "light encouraging chorus delivery"
+      ],
+      "production_palette": [
+        "clean bright band-pop frame",
+        "uplifting rhythmic drive",
+        "sparkling hook accents"
+      ],
+      "arrangement_arc": [
+        "rhythmic conversation setup",
+        "gentle swelling build (Pre-Chorus)",
+        "hopeful wide release (Chorus)",
+        "double-length structural payoff (Chorus 3)"
+      ],
+      "dynamics_arc": [
+        "steady confident baseline",
+        "moderate lifting arcs",
+        "euphoric peak at the end"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "lyrics",
+        "model_inference",
+        "human_listening"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact synth or guitar patches without direct credit proof."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "conversational setup",
+        "shared-perspective framing"
+      ],
+      "narrative_job": "Open as a direct conversation asking about the listener first, making the upcoming encouragement feel earned and mutual.",
+      "arrangement_role": {
+        "summary": "Keeps enough openness for natural text flow before the brighter hook lands.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Accessible, speech-like setup rather than a tense melodic block.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Starts open and readable.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "casual talk",
+        "empathetic listening"
+      ],
+      "vocabulary_focus": [
+        "君",
+        "僕",
+        "よろしく"
+      ],
+      "rhyme_features": [
+        "informal particle endings ('nda')"
+      ],
+      "rhythm_features": [
+        "conversational pop cadence"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "recommitment",
+        "gentle compression"
+      ],
+      "narrative_job": "Push the speaker from conversation into active forward motion, setting up a 'run-up jump' into the chorus.",
+      "arrangement_role": {
+        "summary": "Narrows the phrasing slightly to prepare the hook without becoming heavily minor or tense.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Bridges spoken setup into a clearer pop-lift contour.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Gentle energetic build.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "self-encouragement",
+        "action cue"
+      ],
+      "vocabulary_focus": [
+        "まだ",
+        "前を向く",
+        "助走"
+      ],
+      "rhyme_features": [
+        "repetition of continuation language ('ndaa', 'toru')"
+      ],
+      "rhythm_features": [
+        "gentle tightening before release, matching 'taking a run-up' lyric"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "hopeful hook",
+        "title definition"
+      ],
+      "narrative_job": "Define the word 'dream' as just the act of being someone else's reason to keep going.",
+      "arrangement_role": {
+        "summary": "Supports a clear hopeful lift with a friendly, unified chorus wall.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Wide, uncomplicated, highly singable release.",
+        "status": "inferred",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Primary release point.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "greeting call",
+        "redefinition"
+      ],
+      "vocabulary_focus": [
+        "ハロー",
+        "ゆめ",
+        "明日"
+      ],
+      "rhyme_features": [
+        "hook repetition centered safely around the title"
+      ],
+      "rhythm_features": [
+        "open soaring quarter notes"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "perspective flip"
+      ],
+      "narrative_job": "Reverse the focus of Verse 1; now the speaker turns the camera onto their own vulnerabilities and lack of change.",
+      "arrangement_role": {
+        "summary": "Drops back into a steady confident groove.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Mirrors Verse 1 exactly for structural symmetry.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference",
+          "lyrics"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Resets the tension to a conversational level.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "structural parallel"
+      ],
+      "vocabulary_focus": [
+        "僕の事",
+        "変わってない"
+      ],
+      "rhyme_features": [
+        "matched end-rhymes with Verse 1"
+      ],
+      "rhythm_features": [
+        "steady pop verse flow"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus 2",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus_2"
+      ],
+      "lyric_function": [
+        "self-recommitment"
+      ],
+      "narrative_job": "The speaker decides to keep going not just for the other person, but because they have things left they can do.",
+      "arrangement_role": {
+        "summary": "Similar build to Pre 1, creating a reliable lift.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Familiar rising sequence.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Steady swell.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "internal resolve"
+      ],
+      "vocabulary_focus": [
+        "出来る事"
+      ],
+      "rhyme_features": [
+        "matching Pre 1"
+      ],
+      "rhythm_features": [
+        "driving lead-up"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "vulnerable confession"
+      ],
+      "narrative_job": "The chorus shifts from directing hope at the listener to the singer confessing their own cowardice, hoping they can learn to like their own 'today'.",
+      "arrangement_role": {
+        "summary": "Full energy release matching Chorus 1, but coloring a slightly more melancholy lyric.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "The same bright melody holds the self-doubt, providing built-in encouragement.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High pop energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "introspective query"
+      ],
+      "vocabulary_focus": [
+        "臆病",
+        "今日"
+      ],
+      "rhyme_features": [
+        "maintaining the 'Hello' structural anchor"
+      ],
+      "rhythm_features": [
+        "open belting rhythm"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "thematic manifesto"
+      ],
+      "narrative_job": "A direct, repeated philosophical breakdown of what 'dreams' are: simple to have, hard to fulfill, but entirely wonderful.",
+      "arrangement_role": {
+        "summary": "Likely features a breakdown in rhythm or a shift in chord progression to highlight the heavy repetitive lyrics.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Chanting or steady stepping melody that builds a staircase of thought.",
+        "status": "estimated",
+        "evidence_basis": [
+          "lyrics",
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Intense building pressure before the final drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "anaphoric list"
+      ],
+      "vocabulary_focus": [
+        "簡単",
+        "難しい",
+        "美しい",
+        "素晴らしい"
+      ],
+      "rhyme_features": [
+        "Five lines ending in identical '事だ' (it is a thing) structure"
+      ],
+      "rhythm_features": [
+        "steady marching or driving build"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "double payload finale"
+      ],
+      "narrative_job": "Merge Chorus 1 (about the listener) and Chorus 2 (about the singer) together into a massive, unifying finale.",
+      "arrangement_role": {
+        "summary": "Maximum volume and scale, double length to fit both lyrical ideas.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Uninterrupted flow of the main hook twice over.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Longest, brightest peak of the song.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "synthesis of themes"
+      ],
+      "vocabulary_focus": [
+        "全てを愛して上げられたら良い"
+      ],
+      "rhyme_features": [
+        "perfect resolution of earlier phrases"
+      ],
+      "rhythm_features": [
+        "driving finale energy"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "medium",
+    "title_ignition_style": "delayed",
+    "modern_compression_bias": "low",
+    "phrase_source_types": [
+      "conversation line",
+      "encouragement phrase",
+      "title re-definition",
+      "anaphoric manifesto"
+    ],
+    "mora_control_notes": [
+      "The chorus should stay simple, open, and easy to sing along to.",
+      "The bridge uses strict structural repetition ('のことだ') and benefits from a rigid marching rhythm.",
+      "The verse works best when it sounds like a literal conversation between two friends."
+    ],
+    "accent_risk_notes": [
+      "Do not harden the vocal delivery into an aggressive slogan.",
+      "The title line should feel affirming and empathetic, not blindly positive."
+    ],
+    "critic_focus": [
+      "hopeful clarity",
+      "conversational naturalness",
+      "narrative symmetry between verses and choruses"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus 2",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "hopeful vocaloid team-up pop",
+      "direct emotional encouragement theme"
+    ],
+    "tempo_feels": [
+      "steady bright driving pulse",
+      "friendly late-opening uplift"
+    ],
+    "vocal_tones": [
+      "friendly conversational lead",
+      "empathetic bright chorus"
+    ],
+    "production_palette": [
+      "clean bright pop-rock frame",
+      "uplifting synth and guitar layers"
+    ],
+    "energy_arc": [
+      "conversational setup",
+      "gentle recommitment run-up",
+      "hopeful title chorus release",
+      "philosophical bridge climb",
+      "massive double-chorus euphoric finish"
+    ],
+    "imagery_anchors": [
+      "dream",
+      "hello",
+      "tomorrow",
+      "encouragement",
+      "run-up"
+    ],
+    "exclude": [
+      "do not make it dark or ironically detached",
+      "do not make the chorus feel heavy or exhausting",
+      "do not bury the hook in noisy distortion"
+    ],
+    "source_basis": [
+      "lyrics",
+      "human manual analysis",
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Validated for full 8-section conversational pop mapping.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "record_type": "mode_support_queue",
+  "mode_id": "direct_emotional_pop",
+  "target_count": 20,
+  "support_artists": [
+    "deco27",
+    "kairiki_bear",
+    "kanaria"
+  ],
+  "queue": [
+    {
+      "artist_id": "deco27",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "deco27_animal"
+      ],
+      "notes": [
+        "single-track draft submission"
+      ],
+      "candidate_titles": [
+        "アニマル"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "kairiki_bear_venom"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "ベノム"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "status": "ready_for_scaffold",
+      "target_track_count": 6,
+      "candidate_track_ids": [
+        "kanaria_envy_baby"
+      ],
+      "notes": [
+        "single-track submission"
+      ],
+      "candidate_titles": [
+        "エンヴィーベイビー"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_type": "generation_safety_lyric_grounding_source_acquisition",
+  "status": "open",
+  "objective": "Acquire Japanese lyric grounding sources and exact grounded Japanese section and hook text for the 16 blocked phase1 tracks before any further phase1 retry.",
+  "track_count": 16,
+  "artist_count": 6,
+  "artists": [
+    {
+      "artist_id": "iyowa",
+      "track_count": 3,
+      "tracks": [
+        "iyowa_1000_nen_ikiteiru",
+        "iyowa_apricot",
+        "iyowa_heat_abnormal"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "track_count": 2,
+      "tracks": [
+        "kairiki_bear_alkali_rettoushou",
+        "kairiki_bear_shippaisaku_shoujo"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "track_count": 3,
+      "tracks": [
+        "kanaria_daino_tekina_rendezvous",
+        "kanaria_eye",
+        "kanaria_mira"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "track_count": 3,
+      "tracks": [
+        "maretu_darling",
+        "maretu_umitagari",
+        "maretu_white_happy"
+      ]
+    },
+    {
+      "artist_id": "neru",
+      "track_count": 3,
+      "tracks": [
+        "neru_abstract_nonsense",
+        "neru_law_evading_rock",
+        "neru_lost_ones_weeping"
+      ]
+    },
+    {
+      "artist_id": "syudou",
+      "track_count": 2,
+      "tracks": [
+        "syudou_bakushou",
+        "syudou_call_boy"
+      ]
+    }
+  ]
+}

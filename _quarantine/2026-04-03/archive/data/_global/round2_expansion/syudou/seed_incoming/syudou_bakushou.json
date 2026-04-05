@@ -1,0 +1,37 @@
+{
+  "artist_id": "syudou",
+  "track_id": "syudou_bakushou",
+  "title": "爆笑",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "violent_laughter",
+  "hook_behavior": [
+    "manic laughter hook",
+    "aggressive drop dynamics"
+  ],
+  "section_flow_guess": [
+    "verse_mocking",
+    "prechorus_breathing",
+    "chorus_laughing_drop",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "laughing at others",
+    "mirrors",
+    "comedy",
+    "clowns"
+  ],
+  "emotional_arc": [
+    "manic joy",
+    "mockery",
+    "superiority"
+  ],
+  "leakage_watchouts": [
+    "the hook must sound like violent, unhinged laughter"
+  ],
+  "prompt_seed_terms": [
+    "aggressive trap metal",
+    "manic laughter",
+    "heavy bass"
+  ],
+  "grounding_status": "research_ready"
+}

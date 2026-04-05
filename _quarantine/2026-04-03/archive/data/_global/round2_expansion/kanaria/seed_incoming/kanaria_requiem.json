@@ -1,0 +1,36 @@
+{
+  "artist_id": "kanaria",
+  "track_id": "kanaria_requiem",
+  "title": "レクイエム",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "religious_katakana",
+  "hook_behavior": [
+    "hyper speed chant",
+    "back and forth vocals"
+  ],
+  "section_flow_guess": [
+    "verse_fast",
+    "prechorus_climb",
+    "chorus_blast",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "stars",
+    "prayers",
+    "falling"
+  ],
+  "emotional_arc": [
+    "desperation",
+    "high energy joy",
+    "pleading"
+  ],
+  "leakage_watchouts": [
+    "avoid dark minor chords; keep it fiercely upbeat"
+  ],
+  "prompt_seed_terms": [
+    "hyper pop",
+    "fast synth rock",
+    "duet vocals"
+  ],
+  "grounding_status": "research_ready"
+}

@@ -1,0 +1,397 @@
+{
+  "phase_id": "phase1_core_cleanup",
+  "workflow_type": "core_cleanup",
+  "description": "Records that only need scaffold grounding replacement and surface cleanup.",
+  "track_count": 16,
+  "artist_count": 6,
+  "artists": [
+    {
+      "artist_id": "iyowa",
+      "track_count": 3,
+      "tracks": [
+        {
+          "artist_id": "iyowa",
+          "track_id": "iyowa_1000_nen_ikiteiru",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\iyowa\\reference_tracks\\1000_nen_ikiteiru.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "iyowa",
+          "track_id": "iyowa_apricot",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\iyowa\\reference_tracks\\apricot.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "iyowa",
+          "track_id": "iyowa_heat_abnormal",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\iyowa\\reference_tracks\\heat_abnormal.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "track_count": 2,
+      "tracks": [
+        {
+          "artist_id": "kairiki_bear",
+          "track_id": "kairiki_bear_alkali_rettoushou",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kairiki_bear\\reference_tracks\\alkali_rettoushou.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "kairiki_bear",
+          "track_id": "kairiki_bear_shippaisaku_shoujo",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kairiki_bear\\reference_tracks\\shippaisaku_shoujo.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "track_count": 3,
+      "tracks": [
+        {
+          "artist_id": "kanaria",
+          "track_id": "kanaria_daino_tekina_rendezvous",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\daino_tekina_rendezvous.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "kanaria",
+          "track_id": "kanaria_eye",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\eye.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "kanaria",
+          "track_id": "kanaria_mira",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\kanaria\\reference_tracks\\mira.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "track_count": 3,
+      "tracks": [
+        {
+          "artist_id": "maretu",
+          "track_id": "maretu_darling",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\darling.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "maretu",
+          "track_id": "maretu_umitagari",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\umitagari.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "maretu",
+          "track_id": "maretu_white_happy",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\maretu\\reference_tracks\\white_happy.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "artist_id": "neru",
+      "track_count": 3,
+      "tracks": [
+        {
+          "artist_id": "neru",
+          "track_id": "neru_abstract_nonsense",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\neru\\reference_tracks\\abstract_nonsense.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "neru",
+          "track_id": "neru_law_evading_rock",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\neru\\reference_tracks\\law_evading_rock.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "neru",
+          "track_id": "neru_lost_ones_weeping",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\neru\\reference_tracks\\lost_ones_weeping.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "artist_id": "syudou",
+      "track_count": 2,
+      "tracks": [
+        {
+          "artist_id": "syudou",
+          "track_id": "syudou_bakushou",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\syudou\\reference_tracks\\bakushou.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        },
+        {
+          "artist_id": "syudou",
+          "track_id": "syudou_call_boy",
+          "path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\data\\syudou\\reference_tracks\\call_boy.conditioning.json",
+          "score": 0.67,
+          "blockers": [
+            "partial_grounding",
+            "surface_noise_risk"
+          ],
+          "promotion_class": "grounding_and_surface_upgrade",
+          "recommended_next_action": "replace partial grounding with section-complete grounding and clean surface noise",
+          "external_evidence_required": true,
+          "internal_review_candidate": false,
+          "priority": "medium",
+          "target_verdict": "planner_safe",
+          "promotion_status": "open",
+          "owner": "",
+          "workflow_type": "core_cleanup",
+          "placeholder_field_paths": [
+            "generation_safety.notes[1]"
+          ]
+        }
+      ]
+    }
+  ]
+}

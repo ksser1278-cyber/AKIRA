@@ -7,8 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import argparse
 from pathlib import Path
 
-from src.akira_engine.audit import load_json
-from src.akira_engine.training_data import build_training_datasets
+from src.akira_engine.cli import run_build_derived_datasets
 
 
 def parse_args() -> argparse.Namespace:
@@ -43,18 +42,11 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    project_root = args.project_root.resolve()
-    output_dir = args.output_dir if args.output_dir.is_absolute() else (project_root / args.output_dir).resolve()
-    audit_payload = None
-    if args.audit_json:
-        audit_path = args.audit_json if args.audit_json.is_absolute() else (project_root / args.audit_json).resolve()
-        audit_payload = load_json(audit_path)
-
-    summary = build_training_datasets(
-        project_root,
-        audit_payload=audit_payload,
+    summary = run_build_derived_datasets(
+        project_root=args.project_root.resolve(),
+        audit_json=args.audit_json,
         minimum_recommendation=args.minimum_recommendation,
-        output_dir=output_dir,
+        output_dir=args.output_dir,
     )
 
     print(f"Training manifest: {summary['manifest_path']}")

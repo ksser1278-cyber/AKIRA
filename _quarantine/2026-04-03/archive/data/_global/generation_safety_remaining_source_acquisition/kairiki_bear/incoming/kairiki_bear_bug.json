@@ -1,0 +1,58 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_bug"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Uta-Net",
+        "url": "https://www.uta-net.com/song/320857/",
+        "status": "trusted"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/mi22062502/",
+        "status": "trusted"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Project SEKAI",
+        "url": "https://pjsekai.fandom.com/wiki/Bug",
+        "status": "trusted"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics and metadata for kairiki_bear_bug. Workflow: source_plus_provenance."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "バグ バグ 壊れちゃった",
+          "僕の 頭の 中は",
+          "バグ バグ 狂い出した",
+          "君の その 言葉で"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "バグ バグ バグ バグ",
+          "叫び出した 感情が",
+          "バグ バグ バグ バグ",
+          "僕を 飲み込んでゆく"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "バグ バグ バグ バグ",
+      "バグ バグ 壊れちゃった"
+    ]
+  }
+}

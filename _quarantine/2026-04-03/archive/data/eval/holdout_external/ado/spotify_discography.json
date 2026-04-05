@@ -1,0 +1,3583 @@
+{
+  "schema_version": "1.0",
+  "artist": {
+    "spotify_artist_id": "6mEQK9m2krja6X1cfsAjfl",
+    "name": "Ado",
+    "followers": 0,
+    "popularity": 0,
+    "genres": [],
+    "spotify_url": "https://open.spotify.com/artist/6mEQK9m2krja6X1cfsAjfl"
+  },
+  "market": "JP",
+  "include_groups": "album,single,compilation",
+  "release_count": 59,
+  "raw_track_total": 133,
+  "canonical_track_count": 82,
+  "primary_lyric_track_count": 72,
+  "redundant_variant_track_count": 10,
+  "canonical_tracks": [
+    {
+      "name": "Shake It Now.",
+      "normalized_name": "shake it now",
+      "first_release_date": "2020-09-23",
+      "spotify_track_id": "3Oi78rvUd4Li9bpQCNN2gz",
+      "albums": [
+        "Shake It Now."
+      ]
+    },
+    {
+      "name": "うっせぇわ",
+      "normalized_name": "うっせぇわ",
+      "first_release_date": "2020-10-23",
+      "spotify_track_id": "6EzZn96uOc9JsVGNRpx06n",
+      "albums": [
+        "うっせぇわ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "うっせぇわ - Piano Ver.",
+      "normalized_name": "うっせぇわ piano ver",
+      "first_release_date": "2020-12-24",
+      "spotify_track_id": "2ui683JiJBmZSiZvm0KBZx",
+      "albums": [
+        "レディメイド"
+      ]
+    },
+    {
+      "name": "レディメイド",
+      "normalized_name": "レディメイド",
+      "first_release_date": "2020-12-24",
+      "spotify_track_id": "6IP3GvRj6Rc65rly1rIHq5",
+      "albums": [
+        "レディメイド",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "うっせぇわ - Giga Remix",
+      "normalized_name": "うっせぇわ giga remix",
+      "first_release_date": "2021-02-05",
+      "spotify_track_id": "0DT1nb0hytfdzS1J9piX1W",
+      "albums": [
+        "うっせぇわ (Giga Remix)"
+      ]
+    },
+    {
+      "name": "ギラギラ",
+      "normalized_name": "ギラギラ",
+      "first_release_date": "2021-02-14",
+      "spotify_track_id": "7D7GCO3CtDT1WDcj2W5VDV",
+      "albums": [
+        "ギラギラ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "フールフールフール",
+      "normalized_name": "フールフールフール",
+      "first_release_date": "2021-03-07",
+      "spotify_track_id": "3TKDdOABoytZdchcgFkPGQ",
+      "albums": [
+        "フールフールフール"
+      ]
+    },
+    {
+      "name": "踊",
+      "normalized_name": "踊",
+      "first_release_date": "2021-04-27",
+      "spotify_track_id": "7z6qHGEKxRtwtYym2epV7l",
+      "albums": [
+        "踊",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "夜のピエロ",
+      "normalized_name": "夜のピエロ",
+      "first_release_date": "2021-06-14",
+      "spotify_track_id": "59bPgyrdKgjWkcjxcYoaox",
+      "albums": [
+        "夜のピエロ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "夜のピエロ - TeddyLoid Remix",
+      "normalized_name": "夜のピエロ teddyloid remix",
+      "first_release_date": "2021-07-29",
+      "spotify_track_id": "6OiZpa36iNzEmNiVszAkQv",
+      "albums": [
+        "夜のピエロ (TeddyLoid Remix)"
+      ]
+    },
+    {
+      "name": "会いたくて",
+      "normalized_name": "会いたくて",
+      "first_release_date": "2021-08-12",
+      "spotify_track_id": "2N8p4NIVVVpe74sz2Fp4yA",
+      "albums": [
+        "会いたくて",
+        "狂言"
+      ]
+    },
+    {
+      "name": "踊 - Bon-Odo Remix",
+      "normalized_name": "踊 bon odo remix",
+      "first_release_date": "2021-08-31",
+      "spotify_track_id": "2zs1PUVNJJxMuII48yJke8",
+      "albums": [
+        "踊 (Bon-Odo Remix)"
+      ]
+    },
+    {
+      "name": "会いたくて - Piano & Strings Ver.",
+      "normalized_name": "会いたくて piano & strings ver",
+      "first_release_date": "2021-09-30",
+      "spotify_track_id": "3gd4Ux9wShJxx4EnnnUipR",
+      "albums": [
+        "会いたくて (Piano & Strings Ver.)"
+      ]
+    },
+    {
+      "name": "阿修羅ちゃん",
+      "normalized_name": "阿修羅ちゃん",
+      "first_release_date": "2021-10-28",
+      "spotify_track_id": "4lEk6fyJu7LLPenqL0Raj5",
+      "albums": [
+        "阿修羅ちゃん",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "千本桜",
+      "normalized_name": "千本桜",
+      "first_release_date": "2021-12-29",
+      "spotify_track_id": "6pUBZKUGia5EN2uQ2mLKeT",
+      "albums": [
+        "千本桜"
+      ]
+    },
+    {
+      "name": "FREEDOM",
+      "normalized_name": "freedom",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "3GHjTZkgHUwE8INRTcJ9jh",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ドメスティックでバイオレンス",
+      "normalized_name": "ドメスティックでバイオレンス",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5gMv53mm2ArV5PqdPQHbC7",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "マザーランド",
+      "normalized_name": "マザーランド",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5SZWCBRpEujCFwETNvfxzz",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ラッキー・ブルート",
+      "normalized_name": "ラッキー・ブルート",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5ZRsRV8NEIM8DRTL60n6n6",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "心という名の不可解",
+      "normalized_name": "心という名の不可解",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5dwkmgutIFdurpXlzEyCtB",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "花火",
+      "normalized_name": "花火",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "445ClT4e6nCWUb8GzUXGjs",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "過学習",
+      "normalized_name": "過学習",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "0qHvJWrqgeznziTqJNq6m7",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "永遠のあくる日",
+      "normalized_name": "永遠のあくる日",
+      "first_release_date": "2022-03-14",
+      "spotify_track_id": "5WaSJKCZhmRZ8Pxn1oTjA5",
+      "albums": [
+        "永遠のあくる日",
+        "残夢"
+      ]
+    },
+    {
+      "name": "新時代 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "新時代 ウタ from one piece film red",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2l2yRJWgMiJkfPbRNiuC25",
+      "albums": [
+        "新時代 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "私は最強 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "私は最強 ウタ from one piece film red",
+      "first_release_date": "2022-06-22",
+      "spotify_track_id": "7bmAgiUc4W4bfyZRCc6lOh",
+      "albums": [
+        "私は最強 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "逆光 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "逆光 ウタ from one piece film red",
+      "first_release_date": "2022-07-05",
+      "spotify_track_id": "5GXYKnnzBlHvrzBQ5WoxME",
+      "albums": [
+        "逆光 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ウタカタララバイ",
+      "normalized_name": "ウタカタララバイ",
+      "first_release_date": "2022-08-05",
+      "spotify_track_id": "5HnfjLWXhy0xFvFEcEM1w3",
+      "albums": [
+        "ウタカタララバイ",
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "Tot Musica",
+      "normalized_name": "tot musica",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "5hL1l3xsH0ZyKl8yUI6woj",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ビンクスの酒",
+      "normalized_name": "ビンクスの酒",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "4wsKw43OnCzoDqfhcxBvRf",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "世界のつづき",
+      "normalized_name": "世界のつづき",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "17zp5n2rbiRJzQtCaZpXDD",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "新時代",
+      "normalized_name": "新時代",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "28MATCYDctW5EiBa2repxb",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "私は最強",
+      "normalized_name": "私は最強",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "5YQNjKZofFhlBCIzTVY6rW",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "逆光",
+      "normalized_name": "逆光",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "78MS9OT9Flm2V78fhTw4rk",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "風のゆくえ",
+      "normalized_name": "風のゆくえ",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "2JPT05xVbGuIkAc0LNRo3s",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "リベリオン",
+      "normalized_name": "リベリオン",
+      "first_release_date": "2022-09-18",
+      "spotify_track_id": "3AchaKyy2z6K85YGR729JQ",
+      "albums": [
+        "リベリオン",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "行方知れず",
+      "normalized_name": "行方知れず",
+      "first_release_date": "2022-10-09",
+      "spotify_track_id": "5eCSuo6fXYTzm6WyWkeOxV",
+      "albums": [
+        "行方知れず",
+        "残夢"
+      ]
+    },
+    {
+      "name": "アタシは問題作",
+      "normalized_name": "アタシは問題作",
+      "first_release_date": "2023-02-20",
+      "spotify_track_id": "2CzFckH57NqbC4n0VZDLLB",
+      "albums": [
+        "アタシは問題作",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "いばら",
+      "normalized_name": "いばら",
+      "first_release_date": "2023-05-09",
+      "spotify_track_id": "3xWRjOUp8oDOByEJbOVh6U",
+      "albums": [
+        "いばら",
+        "残夢"
+      ]
+    },
+    {
+      "name": "向日葵",
+      "normalized_name": "向日葵",
+      "first_release_date": "2023-07-11",
+      "spotify_track_id": "37EITaEG3UyWedRZrERoaK",
+      "albums": [
+        "向日葵",
+        "残夢"
+      ]
+    },
+    {
+      "name": "唱",
+      "normalized_name": "唱",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "2tlOVDJ3lQsUxz22vPJ4c4",
+      "albums": [
+        "唱",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "DIGNITY",
+      "normalized_name": "dignity",
+      "first_release_date": "2023-09-18",
+      "spotify_track_id": "1BDCBbdTDQo3JxC0kVDSqP",
+      "albums": [
+        "DIGNITY",
+        "残夢"
+      ]
+    },
+    {
+      "name": "クラクラ",
+      "normalized_name": "クラクラ",
+      "first_release_date": "2023-10-04",
+      "spotify_track_id": "1430GkKh9OD6jtKNV7pu0Q",
+      "albums": [
+        "クラクラ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "オールナイトレディオ",
+      "normalized_name": "オールナイトレディオ",
+      "first_release_date": "2023-10-14",
+      "spotify_track_id": "3dBFEPvQIgJEF8Vbk0AU4z",
+      "albums": [
+        "オールナイトレディオ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "unravel",
+      "normalized_name": "unravel",
+      "first_release_date": "2023-11-15",
+      "spotify_track_id": "3uyiyeKrVPjbMdFGe9sGas",
+      "albums": [
+        "unravel",
+        "Adoの歌ってみたアルバム",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ブリキノダンス",
+      "normalized_name": "ブリキノダンス",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2yVBhde18jnhFGgA52eDt2",
+      "albums": [
+        "ブリキノダンス",
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "ドライフラワー",
+      "normalized_name": "ドライフラワー",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "3Vv1nFQzl47ZKArinuF3Es",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "ヴィラン",
+      "normalized_name": "ヴィラン",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0f8sTi3wquQrV6cdflhbxl",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "可愛くてごめん",
+      "normalized_name": "可愛くてごめん",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "1HHFCfMYMnCXM8T3iofubG",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "夜明けと蛍",
+      "normalized_name": "夜明けと蛍",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "49rZSEjL1ZLjsAVCdnyKyD",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "愛して愛して愛して",
+      "normalized_name": "愛して愛して愛して",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0y51oilkHg6ZrtCqSoxb1W",
+      "albums": [
+        "Adoの歌ってみたアルバム",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "神っぽいな",
+      "normalized_name": "神っぽいな",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0eoZADXS1qo1b4RqoJl3Sh",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "罪と罰",
+      "normalized_name": "罪と罰",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "2NRQJbQmZ5BU8QpsEYY2jY",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "飾りじゃないのよ 涙は",
+      "normalized_name": "飾りじゃないのよ 涙は",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "2nGT86g8QCaZX3EDYoP2uJ",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "唱 - Jax Jones Remix",
+      "normalized_name": "唱 jax jones remix",
+      "first_release_date": "2023-12-31",
+      "spotify_track_id": "3k6aRyNiIahp3WJMeFIpOi",
+      "albums": [
+        "唱 (Jax Jones Remix)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "唱 - Jax Jones Remix / Extended Mix",
+      "normalized_name": "唱 jax jones remix extended mix",
+      "first_release_date": "2023-12-31",
+      "spotify_track_id": "3lUAYxdI4ua1bP0sJGUosX",
+      "albums": [
+        "唱 (Jax Jones Remix)"
+      ]
+    },
+    {
+      "name": "ショコラカタブラ",
+      "normalized_name": "ショコラカタブラ",
+      "first_release_date": "2024-01-31",
+      "spotify_track_id": "5tDluNOXu6r7z7u9NKjPCt",
+      "albums": [
+        "ショコラカタブラ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "Value",
+      "normalized_name": "value",
+      "first_release_date": "2024-02-23",
+      "spotify_track_id": "6BEnpVB7g2j8mzWs3MC2kh",
+      "albums": [
+        "Value",
+        "残夢"
+      ]
+    },
+    {
+      "name": "MIRROR",
+      "normalized_name": "mirror",
+      "first_release_date": "2024-05-30",
+      "spotify_track_id": "0NtfH5RUt4V3Vzh18Wuc23",
+      "albums": [
+        "MIRROR",
+        "残夢"
+      ]
+    },
+    {
+      "name": "ルル",
+      "normalized_name": "ルル",
+      "first_release_date": "2024-07-05",
+      "spotify_track_id": "6UuxnR9zgvzpFS6YvfCqFL",
+      "albums": [
+        "ルル",
+        "残夢"
+      ]
+    },
+    {
+      "name": "0",
+      "normalized_name": "0",
+      "first_release_date": "2024-07-09",
+      "spotify_track_id": "6oEiGXcxLVn1PUjiEoyCe9",
+      "albums": [
+        "残夢"
+      ]
+    },
+    {
+      "name": "抜け空",
+      "normalized_name": "抜け空",
+      "first_release_date": "2024-07-09",
+      "spotify_track_id": "35Kh8QvBqCwHA2pl1n6EqV",
+      "albums": [
+        "残夢"
+      ]
+    },
+    {
+      "name": "初夏",
+      "normalized_name": "初夏",
+      "first_release_date": "2024-10-13",
+      "spotify_track_id": "1VzOqNIocvr1fEePNNKt5G",
+      "albums": [
+        "初夏",
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "初夏 - Instrumental",
+      "normalized_name": "初夏 instrumental",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "6OK04bvUkzb6uCVzfRd14B",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "桜日和とタイムマシン with 初音ミク",
+      "normalized_name": "桜日和とタイムマシン with 初音ミク",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "1sEObTHGtsQxJj7nEp9kMY",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "桜日和とタイムマシン with 初音ミク - Instrumental",
+      "normalized_name": "桜日和とタイムマシン with 初音ミク instrumental",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "2VWxmA3tikLpdfuhgG8cpM",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "きっとコースター",
+      "normalized_name": "きっとコースター",
+      "first_release_date": "2024-11-01",
+      "spotify_track_id": "64eNiU0FxtHlqfGEP02kRr",
+      "albums": [
+        "きっとコースター"
+      ]
+    },
+    {
+      "name": "Episode X",
+      "normalized_name": "episode x",
+      "first_release_date": "2024-12-05",
+      "spotify_track_id": "3lsd1CbDC5ejAOJhPn5dB9",
+      "albums": [
+        "Episode X"
+      ]
+    },
+    {
+      "name": "Take Me to the Beach (feat. Ado)",
+      "normalized_name": "take me to the beach",
+      "first_release_date": "2024-12-16",
+      "spotify_track_id": "4n7nwDqrdx3qmJvEACOMrN",
+      "albums": [
+        "Take Me to the Beach (feat. Ado)"
+      ]
+    },
+    {
+      "name": "エルフ",
+      "normalized_name": "エルフ",
+      "first_release_date": "2025-01-24",
+      "spotify_track_id": "5pnqpz99CGAvdzmMRsB5sD",
+      "albums": [
+        "エルフ"
+      ]
+    },
+    {
+      "name": "わたしに花束",
+      "normalized_name": "わたしに花束",
+      "first_release_date": "2025-03-09",
+      "spotify_track_id": "1vLQ5s4eumtmUcov4cP9jt",
+      "albums": [
+        "わたしに花束"
+      ]
+    },
+    {
+      "name": "シャルル",
+      "normalized_name": "シャルル",
+      "first_release_date": "2025-04-16",
+      "spotify_track_id": "7FOrQDYmTBskAtuRxGNEwZ",
+      "albums": [
+        "シャルル"
+      ]
+    },
+    {
+      "name": "十戒（1984）",
+      "normalized_name": "十戒",
+      "first_release_date": "2025-05-01",
+      "spotify_track_id": "5dBtTJDNBmOYRjfsJ7i2E9",
+      "albums": [
+        "十戒（1984）"
+      ]
+    },
+    {
+      "name": "ゲゲゲの鬼太郎",
+      "normalized_name": "ゲゲゲの鬼太郎",
+      "first_release_date": "2025-05-16",
+      "spotify_track_id": "1V4OSucPmjnYJdiWuR1LFJ",
+      "albums": [
+        "ゲゲゲの鬼太郎"
+      ]
+    },
+    {
+      "name": "Stay Gold - from BEYBLADE X",
+      "normalized_name": "stay gold from beyblade x",
+      "first_release_date": "2025-06-13",
+      "spotify_track_id": "65hfbURMDstZkt5FDt0Tbd",
+      "albums": [
+        "Stay Gold (from BEYBLADE X)",
+        "Stay Gold (from BEYBLADE X / Jax Jones Y2J! Remix)"
+      ]
+    },
+    {
+      "name": "Stay Gold - from BEYBLADE X / Jax Jones Y2J! Remix",
+      "normalized_name": "stay gold from beyblade x jax jones y2j remix",
+      "first_release_date": "2025-08-15",
+      "spotify_track_id": "7D0so78hufzlHg51ZjCOUR",
+      "albums": [
+        "Stay Gold (from BEYBLADE X / Jax Jones Y2J! Remix)"
+      ]
+    },
+    {
+      "name": "CAT'S EYE",
+      "normalized_name": "cats eye",
+      "first_release_date": "2025-09-11",
+      "spotify_track_id": "5lzjvTvybxPQLlGO3SVm5l",
+      "albums": [
+        "CAT'S EYE"
+      ]
+    },
+    {
+      "name": "風と私の物語",
+      "normalized_name": "風と私の物語",
+      "first_release_date": "2025-09-25",
+      "spotify_track_id": "10QhAQvfHf4ztZlXlkgWFR",
+      "albums": [
+        "風と私の物語"
+      ]
+    },
+    {
+      "name": "MAGIC",
+      "normalized_name": "magic",
+      "first_release_date": "2025-10-30",
+      "spotify_track_id": "6hsBxoVdj9mg9m4tHlYE5K",
+      "albums": [
+        "MAGIC"
+      ]
+    },
+    {
+      "name": "おどるポンポコリン",
+      "normalized_name": "おどるポンポコリン",
+      "first_release_date": "2025-12-28",
+      "spotify_track_id": "4TLPjY3Gf0xcfF8ZtgrQ42",
+      "albums": [
+        "おどるポンポコリン"
+      ]
+    },
+    {
+      "name": "soldier game",
+      "normalized_name": "soldier game",
+      "first_release_date": "2026-01-14",
+      "spotify_track_id": "1BzBLiQeqwsOkIIIlKWbig",
+      "albums": [
+        "soldier game"
+      ]
+    },
+    {
+      "name": "エンゼルシーク",
+      "normalized_name": "エンゼルシーク",
+      "first_release_date": "2026-01-26",
+      "spotify_track_id": "54p6he9XRk2rKaFCMF75kg",
+      "albums": [
+        "エンゼルシーク"
+      ]
+    },
+    {
+      "name": "ビバリウム",
+      "normalized_name": "ビバリウム",
+      "first_release_date": "2026-02-17",
+      "spotify_track_id": "34q8wDVdYGG6rFUIenHrGK",
+      "albums": [
+        "ビバリウム"
+      ]
+    }
+  ],
+  "primary_lyric_tracks": [
+    {
+      "name": "Shake It Now.",
+      "normalized_name": "shake it now",
+      "first_release_date": "2020-09-23",
+      "spotify_track_id": "3Oi78rvUd4Li9bpQCNN2gz",
+      "albums": [
+        "Shake It Now."
+      ]
+    },
+    {
+      "name": "うっせぇわ",
+      "normalized_name": "うっせぇわ",
+      "first_release_date": "2020-10-23",
+      "spotify_track_id": "6EzZn96uOc9JsVGNRpx06n",
+      "albums": [
+        "うっせぇわ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "レディメイド",
+      "normalized_name": "レディメイド",
+      "first_release_date": "2020-12-24",
+      "spotify_track_id": "6IP3GvRj6Rc65rly1rIHq5",
+      "albums": [
+        "レディメイド",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ギラギラ",
+      "normalized_name": "ギラギラ",
+      "first_release_date": "2021-02-14",
+      "spotify_track_id": "7D7GCO3CtDT1WDcj2W5VDV",
+      "albums": [
+        "ギラギラ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "フールフールフール",
+      "normalized_name": "フールフールフール",
+      "first_release_date": "2021-03-07",
+      "spotify_track_id": "3TKDdOABoytZdchcgFkPGQ",
+      "albums": [
+        "フールフールフール"
+      ]
+    },
+    {
+      "name": "踊",
+      "normalized_name": "踊",
+      "first_release_date": "2021-04-27",
+      "spotify_track_id": "7z6qHGEKxRtwtYym2epV7l",
+      "albums": [
+        "踊",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "夜のピエロ",
+      "normalized_name": "夜のピエロ",
+      "first_release_date": "2021-06-14",
+      "spotify_track_id": "59bPgyrdKgjWkcjxcYoaox",
+      "albums": [
+        "夜のピエロ",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "会いたくて",
+      "normalized_name": "会いたくて",
+      "first_release_date": "2021-08-12",
+      "spotify_track_id": "2N8p4NIVVVpe74sz2Fp4yA",
+      "albums": [
+        "会いたくて",
+        "狂言"
+      ]
+    },
+    {
+      "name": "阿修羅ちゃん",
+      "normalized_name": "阿修羅ちゃん",
+      "first_release_date": "2021-10-28",
+      "spotify_track_id": "4lEk6fyJu7LLPenqL0Raj5",
+      "albums": [
+        "阿修羅ちゃん",
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "千本桜",
+      "normalized_name": "千本桜",
+      "first_release_date": "2021-12-29",
+      "spotify_track_id": "6pUBZKUGia5EN2uQ2mLKeT",
+      "albums": [
+        "千本桜"
+      ]
+    },
+    {
+      "name": "FREEDOM",
+      "normalized_name": "freedom",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "3GHjTZkgHUwE8INRTcJ9jh",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ドメスティックでバイオレンス",
+      "normalized_name": "ドメスティックでバイオレンス",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5gMv53mm2ArV5PqdPQHbC7",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "マザーランド",
+      "normalized_name": "マザーランド",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5SZWCBRpEujCFwETNvfxzz",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ラッキー・ブルート",
+      "normalized_name": "ラッキー・ブルート",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5ZRsRV8NEIM8DRTL60n6n6",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "心という名の不可解",
+      "normalized_name": "心という名の不可解",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "5dwkmgutIFdurpXlzEyCtB",
+      "albums": [
+        "狂言",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "花火",
+      "normalized_name": "花火",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "445ClT4e6nCWUb8GzUXGjs",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "過学習",
+      "normalized_name": "過学習",
+      "first_release_date": "2022-01-26",
+      "spotify_track_id": "0qHvJWrqgeznziTqJNq6m7",
+      "albums": [
+        "狂言"
+      ]
+    },
+    {
+      "name": "永遠のあくる日",
+      "normalized_name": "永遠のあくる日",
+      "first_release_date": "2022-03-14",
+      "spotify_track_id": "5WaSJKCZhmRZ8Pxn1oTjA5",
+      "albums": [
+        "永遠のあくる日",
+        "残夢"
+      ]
+    },
+    {
+      "name": "新時代 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "新時代 ウタ from one piece film red",
+      "first_release_date": "2022-06-08",
+      "spotify_track_id": "2l2yRJWgMiJkfPbRNiuC25",
+      "albums": [
+        "新時代 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "私は最強 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "私は最強 ウタ from one piece film red",
+      "first_release_date": "2022-06-22",
+      "spotify_track_id": "7bmAgiUc4W4bfyZRCc6lOh",
+      "albums": [
+        "私は最強 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "逆光 - ウタ from ONE PIECE FILM RED",
+      "normalized_name": "逆光 ウタ from one piece film red",
+      "first_release_date": "2022-07-05",
+      "spotify_track_id": "5GXYKnnzBlHvrzBQ5WoxME",
+      "albums": [
+        "逆光 (ウタ from ONE PIECE FILM RED)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ウタカタララバイ",
+      "normalized_name": "ウタカタララバイ",
+      "first_release_date": "2022-08-05",
+      "spotify_track_id": "5HnfjLWXhy0xFvFEcEM1w3",
+      "albums": [
+        "ウタカタララバイ",
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "Tot Musica",
+      "normalized_name": "tot musica",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "5hL1l3xsH0ZyKl8yUI6woj",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ビンクスの酒",
+      "normalized_name": "ビンクスの酒",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "4wsKw43OnCzoDqfhcxBvRf",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "世界のつづき",
+      "normalized_name": "世界のつづき",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "17zp5n2rbiRJzQtCaZpXDD",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "新時代",
+      "normalized_name": "新時代",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "28MATCYDctW5EiBa2repxb",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "私は最強",
+      "normalized_name": "私は最強",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "5YQNjKZofFhlBCIzTVY6rW",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "逆光",
+      "normalized_name": "逆光",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "78MS9OT9Flm2V78fhTw4rk",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED"
+      ]
+    },
+    {
+      "name": "風のゆくえ",
+      "normalized_name": "風のゆくえ",
+      "first_release_date": "2022-08-09",
+      "spotify_track_id": "2JPT05xVbGuIkAc0LNRo3s",
+      "albums": [
+        "ウタの歌 ONE PIECE FILM RED",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "リベリオン",
+      "normalized_name": "リベリオン",
+      "first_release_date": "2022-09-18",
+      "spotify_track_id": "3AchaKyy2z6K85YGR729JQ",
+      "albums": [
+        "リベリオン",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "行方知れず",
+      "normalized_name": "行方知れず",
+      "first_release_date": "2022-10-09",
+      "spotify_track_id": "5eCSuo6fXYTzm6WyWkeOxV",
+      "albums": [
+        "行方知れず",
+        "残夢"
+      ]
+    },
+    {
+      "name": "アタシは問題作",
+      "normalized_name": "アタシは問題作",
+      "first_release_date": "2023-02-20",
+      "spotify_track_id": "2CzFckH57NqbC4n0VZDLLB",
+      "albums": [
+        "アタシは問題作",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "いばら",
+      "normalized_name": "いばら",
+      "first_release_date": "2023-05-09",
+      "spotify_track_id": "3xWRjOUp8oDOByEJbOVh6U",
+      "albums": [
+        "いばら",
+        "残夢"
+      ]
+    },
+    {
+      "name": "向日葵",
+      "normalized_name": "向日葵",
+      "first_release_date": "2023-07-11",
+      "spotify_track_id": "37EITaEG3UyWedRZrERoaK",
+      "albums": [
+        "向日葵",
+        "残夢"
+      ]
+    },
+    {
+      "name": "唱",
+      "normalized_name": "唱",
+      "first_release_date": "2023-09-06",
+      "spotify_track_id": "2tlOVDJ3lQsUxz22vPJ4c4",
+      "albums": [
+        "唱",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "DIGNITY",
+      "normalized_name": "dignity",
+      "first_release_date": "2023-09-18",
+      "spotify_track_id": "1BDCBbdTDQo3JxC0kVDSqP",
+      "albums": [
+        "DIGNITY",
+        "残夢"
+      ]
+    },
+    {
+      "name": "クラクラ",
+      "normalized_name": "クラクラ",
+      "first_release_date": "2023-10-04",
+      "spotify_track_id": "1430GkKh9OD6jtKNV7pu0Q",
+      "albums": [
+        "クラクラ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "オールナイトレディオ",
+      "normalized_name": "オールナイトレディオ",
+      "first_release_date": "2023-10-14",
+      "spotify_track_id": "3dBFEPvQIgJEF8Vbk0AU4z",
+      "albums": [
+        "オールナイトレディオ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "unravel",
+      "normalized_name": "unravel",
+      "first_release_date": "2023-11-15",
+      "spotify_track_id": "3uyiyeKrVPjbMdFGe9sGas",
+      "albums": [
+        "unravel",
+        "Adoの歌ってみたアルバム",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "ブリキノダンス",
+      "normalized_name": "ブリキノダンス",
+      "first_release_date": "2023-11-29",
+      "spotify_track_id": "2yVBhde18jnhFGgA52eDt2",
+      "albums": [
+        "ブリキノダンス",
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "ドライフラワー",
+      "normalized_name": "ドライフラワー",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "3Vv1nFQzl47ZKArinuF3Es",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "ヴィラン",
+      "normalized_name": "ヴィラン",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0f8sTi3wquQrV6cdflhbxl",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "可愛くてごめん",
+      "normalized_name": "可愛くてごめん",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "1HHFCfMYMnCXM8T3iofubG",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "夜明けと蛍",
+      "normalized_name": "夜明けと蛍",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "49rZSEjL1ZLjsAVCdnyKyD",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "愛して愛して愛して",
+      "normalized_name": "愛して愛して愛して",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0y51oilkHg6ZrtCqSoxb1W",
+      "albums": [
+        "Adoの歌ってみたアルバム",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "神っぽいな",
+      "normalized_name": "神っぽいな",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "0eoZADXS1qo1b4RqoJl3Sh",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "罪と罰",
+      "normalized_name": "罪と罰",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "2NRQJbQmZ5BU8QpsEYY2jY",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "飾りじゃないのよ 涙は",
+      "normalized_name": "飾りじゃないのよ 涙は",
+      "first_release_date": "2023-12-13",
+      "spotify_track_id": "2nGT86g8QCaZX3EDYoP2uJ",
+      "albums": [
+        "Adoの歌ってみたアルバム"
+      ]
+    },
+    {
+      "name": "ショコラカタブラ",
+      "normalized_name": "ショコラカタブラ",
+      "first_release_date": "2024-01-31",
+      "spotify_track_id": "5tDluNOXu6r7z7u9NKjPCt",
+      "albums": [
+        "ショコラカタブラ",
+        "Ado \"Ready For My Show Playlist\"",
+        "残夢"
+      ]
+    },
+    {
+      "name": "Value",
+      "normalized_name": "value",
+      "first_release_date": "2024-02-23",
+      "spotify_track_id": "6BEnpVB7g2j8mzWs3MC2kh",
+      "albums": [
+        "Value",
+        "残夢"
+      ]
+    },
+    {
+      "name": "MIRROR",
+      "normalized_name": "mirror",
+      "first_release_date": "2024-05-30",
+      "spotify_track_id": "0NtfH5RUt4V3Vzh18Wuc23",
+      "albums": [
+        "MIRROR",
+        "残夢"
+      ]
+    },
+    {
+      "name": "ルル",
+      "normalized_name": "ルル",
+      "first_release_date": "2024-07-05",
+      "spotify_track_id": "6UuxnR9zgvzpFS6YvfCqFL",
+      "albums": [
+        "ルル",
+        "残夢"
+      ]
+    },
+    {
+      "name": "0",
+      "normalized_name": "0",
+      "first_release_date": "2024-07-09",
+      "spotify_track_id": "6oEiGXcxLVn1PUjiEoyCe9",
+      "albums": [
+        "残夢"
+      ]
+    },
+    {
+      "name": "抜け空",
+      "normalized_name": "抜け空",
+      "first_release_date": "2024-07-09",
+      "spotify_track_id": "35Kh8QvBqCwHA2pl1n6EqV",
+      "albums": [
+        "残夢"
+      ]
+    },
+    {
+      "name": "初夏",
+      "normalized_name": "初夏",
+      "first_release_date": "2024-10-13",
+      "spotify_track_id": "1VzOqNIocvr1fEePNNKt5G",
+      "albums": [
+        "初夏",
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "桜日和とタイムマシン with 初音ミク",
+      "normalized_name": "桜日和とタイムマシン with 初音ミク",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "1sEObTHGtsQxJj7nEp9kMY",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "きっとコースター",
+      "normalized_name": "きっとコースター",
+      "first_release_date": "2024-11-01",
+      "spotify_track_id": "64eNiU0FxtHlqfGEP02kRr",
+      "albums": [
+        "きっとコースター"
+      ]
+    },
+    {
+      "name": "Episode X",
+      "normalized_name": "episode x",
+      "first_release_date": "2024-12-05",
+      "spotify_track_id": "3lsd1CbDC5ejAOJhPn5dB9",
+      "albums": [
+        "Episode X"
+      ]
+    },
+    {
+      "name": "Take Me to the Beach (feat. Ado)",
+      "normalized_name": "take me to the beach",
+      "first_release_date": "2024-12-16",
+      "spotify_track_id": "4n7nwDqrdx3qmJvEACOMrN",
+      "albums": [
+        "Take Me to the Beach (feat. Ado)"
+      ]
+    },
+    {
+      "name": "エルフ",
+      "normalized_name": "エルフ",
+      "first_release_date": "2025-01-24",
+      "spotify_track_id": "5pnqpz99CGAvdzmMRsB5sD",
+      "albums": [
+        "エルフ"
+      ]
+    },
+    {
+      "name": "わたしに花束",
+      "normalized_name": "わたしに花束",
+      "first_release_date": "2025-03-09",
+      "spotify_track_id": "1vLQ5s4eumtmUcov4cP9jt",
+      "albums": [
+        "わたしに花束"
+      ]
+    },
+    {
+      "name": "シャルル",
+      "normalized_name": "シャルル",
+      "first_release_date": "2025-04-16",
+      "spotify_track_id": "7FOrQDYmTBskAtuRxGNEwZ",
+      "albums": [
+        "シャルル"
+      ]
+    },
+    {
+      "name": "十戒（1984）",
+      "normalized_name": "十戒",
+      "first_release_date": "2025-05-01",
+      "spotify_track_id": "5dBtTJDNBmOYRjfsJ7i2E9",
+      "albums": [
+        "十戒（1984）"
+      ]
+    },
+    {
+      "name": "ゲゲゲの鬼太郎",
+      "normalized_name": "ゲゲゲの鬼太郎",
+      "first_release_date": "2025-05-16",
+      "spotify_track_id": "1V4OSucPmjnYJdiWuR1LFJ",
+      "albums": [
+        "ゲゲゲの鬼太郎"
+      ]
+    },
+    {
+      "name": "Stay Gold - from BEYBLADE X",
+      "normalized_name": "stay gold from beyblade x",
+      "first_release_date": "2025-06-13",
+      "spotify_track_id": "65hfbURMDstZkt5FDt0Tbd",
+      "albums": [
+        "Stay Gold (from BEYBLADE X)",
+        "Stay Gold (from BEYBLADE X / Jax Jones Y2J! Remix)"
+      ]
+    },
+    {
+      "name": "CAT'S EYE",
+      "normalized_name": "cats eye",
+      "first_release_date": "2025-09-11",
+      "spotify_track_id": "5lzjvTvybxPQLlGO3SVm5l",
+      "albums": [
+        "CAT'S EYE"
+      ]
+    },
+    {
+      "name": "風と私の物語",
+      "normalized_name": "風と私の物語",
+      "first_release_date": "2025-09-25",
+      "spotify_track_id": "10QhAQvfHf4ztZlXlkgWFR",
+      "albums": [
+        "風と私の物語"
+      ]
+    },
+    {
+      "name": "MAGIC",
+      "normalized_name": "magic",
+      "first_release_date": "2025-10-30",
+      "spotify_track_id": "6hsBxoVdj9mg9m4tHlYE5K",
+      "albums": [
+        "MAGIC"
+      ]
+    },
+    {
+      "name": "おどるポンポコリン",
+      "normalized_name": "おどるポンポコリン",
+      "first_release_date": "2025-12-28",
+      "spotify_track_id": "4TLPjY3Gf0xcfF8ZtgrQ42",
+      "albums": [
+        "おどるポンポコリン"
+      ]
+    },
+    {
+      "name": "soldier game",
+      "normalized_name": "soldier game",
+      "first_release_date": "2026-01-14",
+      "spotify_track_id": "1BzBLiQeqwsOkIIIlKWbig",
+      "albums": [
+        "soldier game"
+      ]
+    },
+    {
+      "name": "エンゼルシーク",
+      "normalized_name": "エンゼルシーク",
+      "first_release_date": "2026-01-26",
+      "spotify_track_id": "54p6he9XRk2rKaFCMF75kg",
+      "albums": [
+        "エンゼルシーク"
+      ]
+    },
+    {
+      "name": "ビバリウム",
+      "normalized_name": "ビバリウム",
+      "first_release_date": "2026-02-17",
+      "spotify_track_id": "34q8wDVdYGG6rFUIenHrGK",
+      "albums": [
+        "ビバリウム"
+      ]
+    }
+  ],
+  "redundant_variant_tracks": [
+    {
+      "name": "うっせぇわ - Piano Ver.",
+      "normalized_name": "うっせぇわ piano ver",
+      "first_release_date": "2020-12-24",
+      "spotify_track_id": "2ui683JiJBmZSiZvm0KBZx",
+      "albums": [
+        "レディメイド"
+      ]
+    },
+    {
+      "name": "うっせぇわ - Giga Remix",
+      "normalized_name": "うっせぇわ giga remix",
+      "first_release_date": "2021-02-05",
+      "spotify_track_id": "0DT1nb0hytfdzS1J9piX1W",
+      "albums": [
+        "うっせぇわ (Giga Remix)"
+      ]
+    },
+    {
+      "name": "夜のピエロ - TeddyLoid Remix",
+      "normalized_name": "夜のピエロ teddyloid remix",
+      "first_release_date": "2021-07-29",
+      "spotify_track_id": "6OiZpa36iNzEmNiVszAkQv",
+      "albums": [
+        "夜のピエロ (TeddyLoid Remix)"
+      ]
+    },
+    {
+      "name": "踊 - Bon-Odo Remix",
+      "normalized_name": "踊 bon odo remix",
+      "first_release_date": "2021-08-31",
+      "spotify_track_id": "2zs1PUVNJJxMuII48yJke8",
+      "albums": [
+        "踊 (Bon-Odo Remix)"
+      ]
+    },
+    {
+      "name": "会いたくて - Piano & Strings Ver.",
+      "normalized_name": "会いたくて piano & strings ver",
+      "first_release_date": "2021-09-30",
+      "spotify_track_id": "3gd4Ux9wShJxx4EnnnUipR",
+      "albums": [
+        "会いたくて (Piano & Strings Ver.)"
+      ]
+    },
+    {
+      "name": "唱 - Jax Jones Remix",
+      "normalized_name": "唱 jax jones remix",
+      "first_release_date": "2023-12-31",
+      "spotify_track_id": "3k6aRyNiIahp3WJMeFIpOi",
+      "albums": [
+        "唱 (Jax Jones Remix)",
+        "Ado \"Ready For My Show Playlist\""
+      ]
+    },
+    {
+      "name": "唱 - Jax Jones Remix / Extended Mix",
+      "normalized_name": "唱 jax jones remix extended mix",
+      "first_release_date": "2023-12-31",
+      "spotify_track_id": "3lUAYxdI4ua1bP0sJGUosX",
+      "albums": [
+        "唱 (Jax Jones Remix)"
+      ]
+    },
+    {
+      "name": "初夏 - Instrumental",
+      "normalized_name": "初夏 instrumental",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "6OK04bvUkzb6uCVzfRd14B",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "桜日和とタイムマシン with 初音ミク - Instrumental",
+      "normalized_name": "桜日和とタイムマシン with 初音ミク instrumental",
+      "first_release_date": "2024-10-23",
+      "spotify_track_id": "2VWxmA3tikLpdfuhgG8cpM",
+      "albums": [
+        "桜日和とタイムマシン with 初音ミク／初夏"
+      ]
+    },
+    {
+      "name": "Stay Gold - from BEYBLADE X / Jax Jones Y2J! Remix",
+      "normalized_name": "stay gold from beyblade x jax jones y2j remix",
+      "first_release_date": "2025-08-15",
+      "spotify_track_id": "7D0so78hufzlHg51ZjCOUR",
+      "albums": [
+        "Stay Gold (from BEYBLADE X / Jax Jones Y2J! Remix)"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "album_id": "0TnLezmzzfi8op0kddb2JB",
+      "name": "Shake It Now.",
+      "album_type": "single",
+      "release_date": "2020-09-23",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0TnLezmzzfi8op0kddb2JB",
+      "tracks": [
+        {
+          "track_id": "3Oi78rvUd4Li9bpQCNN2gz",
+          "name": "Shake It Now.",
+          "normalized_name": "shake it now",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 198918,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Oi78rvUd4Li9bpQCNN2gz"
+        }
+      ]
+    },
+    {
+      "album_id": "5msh7Lspyh1jGbDM2BxwAy",
+      "name": "うっせぇわ",
+      "album_type": "single",
+      "release_date": "2020-10-23",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5msh7Lspyh1jGbDM2BxwAy",
+      "tracks": [
+        {
+          "track_id": "6EzZn96uOc9JsVGNRpx06n",
+          "name": "うっせぇわ",
+          "normalized_name": "うっせぇわ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 204920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6EzZn96uOc9JsVGNRpx06n"
+        }
+      ]
+    },
+    {
+      "album_id": "7hy4zddDO6zOMQxRipqQry",
+      "name": "レディメイド",
+      "album_type": "single",
+      "release_date": "2020-12-24",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/7hy4zddDO6zOMQxRipqQry",
+      "tracks": [
+        {
+          "track_id": "6IP3GvRj6Rc65rly1rIHq5",
+          "name": "レディメイド",
+          "normalized_name": "レディメイド",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 244377,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6IP3GvRj6Rc65rly1rIHq5"
+        },
+        {
+          "track_id": "2ui683JiJBmZSiZvm0KBZx",
+          "name": "うっせぇわ - Piano Ver.",
+          "normalized_name": "うっせぇわ piano ver",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 223053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2ui683JiJBmZSiZvm0KBZx"
+        }
+      ]
+    },
+    {
+      "album_id": "0LfBw9oEr73hmJzQS6QBqr",
+      "name": "うっせぇわ (Giga Remix)",
+      "album_type": "single",
+      "release_date": "2021-02-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0LfBw9oEr73hmJzQS6QBqr",
+      "tracks": [
+        {
+          "track_id": "0DT1nb0hytfdzS1J9piX1W",
+          "name": "うっせぇわ - Giga Remix",
+          "normalized_name": "うっせぇわ giga remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 190344,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0DT1nb0hytfdzS1J9piX1W"
+        }
+      ]
+    },
+    {
+      "album_id": "6PWrAq4x3xn2Y2HahVhiQF",
+      "name": "ギラギラ",
+      "album_type": "single",
+      "release_date": "2021-02-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6PWrAq4x3xn2Y2HahVhiQF",
+      "tracks": [
+        {
+          "track_id": "7D7GCO3CtDT1WDcj2W5VDV",
+          "name": "ギラギラ",
+          "normalized_name": "ギラギラ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 276213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7D7GCO3CtDT1WDcj2W5VDV"
+        }
+      ]
+    },
+    {
+      "album_id": "270qhXSO1nsyTef1pzXTL1",
+      "name": "フールフールフール",
+      "album_type": "single",
+      "release_date": "2021-03-07",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/270qhXSO1nsyTef1pzXTL1",
+      "tracks": [
+        {
+          "track_id": "3TKDdOABoytZdchcgFkPGQ",
+          "name": "フールフールフール",
+          "normalized_name": "フールフールフール",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 193000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3TKDdOABoytZdchcgFkPGQ"
+        }
+      ]
+    },
+    {
+      "album_id": "6jfXGkieuNnsFxi5pS3vJ2",
+      "name": "踊",
+      "album_type": "single",
+      "release_date": "2021-04-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6jfXGkieuNnsFxi5pS3vJ2",
+      "tracks": [
+        {
+          "track_id": "7z6qHGEKxRtwtYym2epV7l",
+          "name": "踊",
+          "normalized_name": "踊",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 208271,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7z6qHGEKxRtwtYym2epV7l"
+        }
+      ]
+    },
+    {
+      "album_id": "4BTP5USNnZAuk5Rvtx871q",
+      "name": "夜のピエロ",
+      "album_type": "single",
+      "release_date": "2021-06-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4BTP5USNnZAuk5Rvtx871q",
+      "tracks": [
+        {
+          "track_id": "59bPgyrdKgjWkcjxcYoaox",
+          "name": "夜のピエロ",
+          "normalized_name": "夜のピエロ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 200712,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/59bPgyrdKgjWkcjxcYoaox"
+        }
+      ]
+    },
+    {
+      "album_id": "0isciWk8sCLPlQQpocBftA",
+      "name": "夜のピエロ (TeddyLoid Remix)",
+      "album_type": "single",
+      "release_date": "2021-07-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0isciWk8sCLPlQQpocBftA",
+      "tracks": [
+        {
+          "track_id": "6OiZpa36iNzEmNiVszAkQv",
+          "name": "夜のピエロ - TeddyLoid Remix",
+          "normalized_name": "夜のピエロ teddyloid remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 209062,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6OiZpa36iNzEmNiVszAkQv"
+        }
+      ]
+    },
+    {
+      "album_id": "0EWvDLtFyMC9NiceYdNgDM",
+      "name": "会いたくて",
+      "album_type": "single",
+      "release_date": "2021-08-12",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0EWvDLtFyMC9NiceYdNgDM",
+      "tracks": [
+        {
+          "track_id": "2N8p4NIVVVpe74sz2Fp4yA",
+          "name": "会いたくて",
+          "normalized_name": "会いたくて",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 294542,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2N8p4NIVVVpe74sz2Fp4yA"
+        }
+      ]
+    },
+    {
+      "album_id": "7uyyDqRzJ2oTY2jS6LZYvn",
+      "name": "踊 (Bon-Odo Remix)",
+      "album_type": "single",
+      "release_date": "2021-08-31",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7uyyDqRzJ2oTY2jS6LZYvn",
+      "tracks": [
+        {
+          "track_id": "2zs1PUVNJJxMuII48yJke8",
+          "name": "踊 - Bon-Odo Remix",
+          "normalized_name": "踊 bon odo remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 172770,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2zs1PUVNJJxMuII48yJke8"
+        }
+      ]
+    },
+    {
+      "album_id": "7cdfYFwm3pvb23U6FOOyXM",
+      "name": "会いたくて (Piano & Strings Ver.)",
+      "album_type": "single",
+      "release_date": "2021-09-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7cdfYFwm3pvb23U6FOOyXM",
+      "tracks": [
+        {
+          "track_id": "3gd4Ux9wShJxx4EnnnUipR",
+          "name": "会いたくて - Piano & Strings Ver.",
+          "normalized_name": "会いたくて piano & strings ver",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 324772,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3gd4Ux9wShJxx4EnnnUipR"
+        }
+      ]
+    },
+    {
+      "album_id": "1VROw3eYJslM2bVEkR5Lnm",
+      "name": "阿修羅ちゃん",
+      "album_type": "single",
+      "release_date": "2021-10-28",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1VROw3eYJslM2bVEkR5Lnm",
+      "tracks": [
+        {
+          "track_id": "4lEk6fyJu7LLPenqL0Raj5",
+          "name": "阿修羅ちゃん",
+          "normalized_name": "阿修羅ちゃん",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 196285,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4lEk6fyJu7LLPenqL0Raj5"
+        }
+      ]
+    },
+    {
+      "album_id": "6tmjlRjA0nsZma10dnAPRX",
+      "name": "千本桜",
+      "album_type": "single",
+      "release_date": "2021-12-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6tmjlRjA0nsZma10dnAPRX",
+      "tracks": [
+        {
+          "track_id": "6pUBZKUGia5EN2uQ2mLKeT",
+          "name": "千本桜",
+          "normalized_name": "千本桜",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 241558,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6pUBZKUGia5EN2uQ2mLKeT"
+        }
+      ]
+    },
+    {
+      "album_id": "0tDsHtvN9YNuZjlqHvDY2P",
+      "name": "狂言",
+      "album_type": "album",
+      "release_date": "2022-01-26",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "spotify_url": "https://open.spotify.com/album/0tDsHtvN9YNuZjlqHvDY2P",
+      "tracks": [
+        {
+          "track_id": "3hkGr1uZjTdiAPZrk2NTiP",
+          "name": "レディメイド",
+          "normalized_name": "レディメイド",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 243186,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3hkGr1uZjTdiAPZrk2NTiP"
+        },
+        {
+          "track_id": "0871AdnvzzSGr5XdTJaDHC",
+          "name": "踊",
+          "normalized_name": "踊",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 210346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0871AdnvzzSGr5XdTJaDHC"
+        },
+        {
+          "track_id": "5gMv53mm2ArV5PqdPQHbC7",
+          "name": "ドメスティックでバイオレンス",
+          "normalized_name": "ドメスティックでバイオレンス",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 158480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5gMv53mm2ArV5PqdPQHbC7"
+        },
+        {
+          "track_id": "3GHjTZkgHUwE8INRTcJ9jh",
+          "name": "FREEDOM",
+          "normalized_name": "freedom",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 186106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3GHjTZkgHUwE8INRTcJ9jh"
+        },
+        {
+          "track_id": "445ClT4e6nCWUb8GzUXGjs",
+          "name": "花火",
+          "normalized_name": "花火",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 212373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/445ClT4e6nCWUb8GzUXGjs"
+        },
+        {
+          "track_id": "4QQ0LKm5FsoWCArRoPIflV",
+          "name": "会いたくて",
+          "normalized_name": "会いたくて",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 295146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4QQ0LKm5FsoWCArRoPIflV"
+        },
+        {
+          "track_id": "5ZRsRV8NEIM8DRTL60n6n6",
+          "name": "ラッキー・ブルート",
+          "normalized_name": "ラッキー・ブルート",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 209613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5ZRsRV8NEIM8DRTL60n6n6"
+        },
+        {
+          "track_id": "2mSRPQsUDIXJFfo3CpKJBA",
+          "name": "ギラギラ",
+          "normalized_name": "ギラギラ",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 276080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2mSRPQsUDIXJFfo3CpKJBA"
+        },
+        {
+          "track_id": "0cN6iBeCR7NgeBeTIKjLml",
+          "name": "阿修羅ちゃん",
+          "normalized_name": "阿修羅ちゃん",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 195080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0cN6iBeCR7NgeBeTIKjLml"
+        },
+        {
+          "track_id": "5dwkmgutIFdurpXlzEyCtB",
+          "name": "心という名の不可解",
+          "normalized_name": "心という名の不可解",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 269893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5dwkmgutIFdurpXlzEyCtB"
+        },
+        {
+          "track_id": "5QS01sq07pThdktoNUxXRZ",
+          "name": "うっせぇわ",
+          "normalized_name": "うっせぇわ",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 206893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5QS01sq07pThdktoNUxXRZ"
+        },
+        {
+          "track_id": "5SZWCBRpEujCFwETNvfxzz",
+          "name": "マザーランド",
+          "normalized_name": "マザーランド",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 260066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5SZWCBRpEujCFwETNvfxzz"
+        },
+        {
+          "track_id": "0qHvJWrqgeznziTqJNq6m7",
+          "name": "過学習",
+          "normalized_name": "過学習",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 215853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0qHvJWrqgeznziTqJNq6m7"
+        },
+        {
+          "track_id": "4QNwppLvPA4t4Ce642CPe8",
+          "name": "夜のピエロ",
+          "normalized_name": "夜のピエロ",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 200733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4QNwppLvPA4t4Ce642CPe8"
+        }
+      ]
+    },
+    {
+      "album_id": "4jFVggky7sWAA2JVf34gXf",
+      "name": "永遠のあくる日",
+      "album_type": "single",
+      "release_date": "2022-03-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4jFVggky7sWAA2JVf34gXf",
+      "tracks": [
+        {
+          "track_id": "5WaSJKCZhmRZ8Pxn1oTjA5",
+          "name": "永遠のあくる日",
+          "normalized_name": "永遠のあくる日",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 246333,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5WaSJKCZhmRZ8Pxn1oTjA5"
+        }
+      ]
+    },
+    {
+      "album_id": "7r72omJJLTajYYn9vImIcb",
+      "name": "新時代 (ウタ from ONE PIECE FILM RED)",
+      "album_type": "single",
+      "release_date": "2022-06-08",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7r72omJJLTajYYn9vImIcb",
+      "tracks": [
+        {
+          "track_id": "2l2yRJWgMiJkfPbRNiuC25",
+          "name": "新時代 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "新時代 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 228214,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2l2yRJWgMiJkfPbRNiuC25"
+        }
+      ]
+    },
+    {
+      "album_id": "4kSYCYHzG8vyNQcROLlHUq",
+      "name": "私は最強 (ウタ from ONE PIECE FILM RED)",
+      "album_type": "single",
+      "release_date": "2022-06-22",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4kSYCYHzG8vyNQcROLlHUq",
+      "tracks": [
+        {
+          "track_id": "7bmAgiUc4W4bfyZRCc6lOh",
+          "name": "私は最強 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "私は最強 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 257915,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7bmAgiUc4W4bfyZRCc6lOh"
+        }
+      ]
+    },
+    {
+      "album_id": "3ZARNbKk2zkYDeVQpHE564",
+      "name": "逆光 (ウタ from ONE PIECE FILM RED)",
+      "album_type": "single",
+      "release_date": "2022-07-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3ZARNbKk2zkYDeVQpHE564",
+      "tracks": [
+        {
+          "track_id": "5GXYKnnzBlHvrzBQ5WoxME",
+          "name": "逆光 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "逆光 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 237862,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5GXYKnnzBlHvrzBQ5WoxME"
+        }
+      ]
+    },
+    {
+      "album_id": "4vWfsyx7AkuLNuXwa075co",
+      "name": "ウタカタララバイ",
+      "album_type": "single",
+      "release_date": "2022-08-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4vWfsyx7AkuLNuXwa075co",
+      "tracks": [
+        {
+          "track_id": "5HnfjLWXhy0xFvFEcEM1w3",
+          "name": "ウタカタララバイ",
+          "normalized_name": "ウタカタララバイ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 173373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5HnfjLWXhy0xFvFEcEM1w3"
+        }
+      ]
+    },
+    {
+      "album_id": "5WStsinR0ZOQRoCI6rQPZA",
+      "name": "ウタの歌 ONE PIECE FILM RED",
+      "album_type": "album",
+      "release_date": "2022-08-09",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "spotify_url": "https://open.spotify.com/album/5WStsinR0ZOQRoCI6rQPZA",
+      "tracks": [
+        {
+          "track_id": "28MATCYDctW5EiBa2repxb",
+          "name": "新時代",
+          "normalized_name": "新時代",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 226813,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/28MATCYDctW5EiBa2repxb"
+        },
+        {
+          "track_id": "5YQNjKZofFhlBCIzTVY6rW",
+          "name": "私は最強",
+          "normalized_name": "私は最強",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 257079,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5YQNjKZofFhlBCIzTVY6rW"
+        },
+        {
+          "track_id": "78MS9OT9Flm2V78fhTw4rk",
+          "name": "逆光",
+          "normalized_name": "逆光",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 237666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/78MS9OT9Flm2V78fhTw4rk"
+        },
+        {
+          "track_id": "3IhHrBYZaxySuRu1zI7Vuk",
+          "name": "ウタカタララバイ",
+          "normalized_name": "ウタカタララバイ",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 173373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3IhHrBYZaxySuRu1zI7Vuk"
+        },
+        {
+          "track_id": "5hL1l3xsH0ZyKl8yUI6woj",
+          "name": "Tot Musica",
+          "normalized_name": "tot musica",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 195226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5hL1l3xsH0ZyKl8yUI6woj"
+        },
+        {
+          "track_id": "17zp5n2rbiRJzQtCaZpXDD",
+          "name": "世界のつづき",
+          "normalized_name": "世界のつづき",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 287986,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/17zp5n2rbiRJzQtCaZpXDD"
+        },
+        {
+          "track_id": "2JPT05xVbGuIkAc0LNRo3s",
+          "name": "風のゆくえ",
+          "normalized_name": "風のゆくえ",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 272466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2JPT05xVbGuIkAc0LNRo3s"
+        },
+        {
+          "track_id": "4wsKw43OnCzoDqfhcxBvRf",
+          "name": "ビンクスの酒",
+          "normalized_name": "ビンクスの酒",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 206053,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4wsKw43OnCzoDqfhcxBvRf"
+        }
+      ]
+    },
+    {
+      "album_id": "120fFIxJOERpjvhdC7xJSE",
+      "name": "リベリオン",
+      "album_type": "single",
+      "release_date": "2022-09-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/120fFIxJOERpjvhdC7xJSE",
+      "tracks": [
+        {
+          "track_id": "3AchaKyy2z6K85YGR729JQ",
+          "name": "リベリオン",
+          "normalized_name": "リベリオン",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 178064,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3AchaKyy2z6K85YGR729JQ"
+        }
+      ]
+    },
+    {
+      "album_id": "6VqJt1oGF2UvWBiKJNW97J",
+      "name": "行方知れず",
+      "album_type": "single",
+      "release_date": "2022-10-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6VqJt1oGF2UvWBiKJNW97J",
+      "tracks": [
+        {
+          "track_id": "5eCSuo6fXYTzm6WyWkeOxV",
+          "name": "行方知れず",
+          "normalized_name": "行方知れず",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 189565,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5eCSuo6fXYTzm6WyWkeOxV"
+        }
+      ]
+    },
+    {
+      "album_id": "21iY3NVr5gHtQ3qxLXFWOl",
+      "name": "アタシは問題作",
+      "album_type": "single",
+      "release_date": "2023-02-20",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/21iY3NVr5gHtQ3qxLXFWOl",
+      "tracks": [
+        {
+          "track_id": "2CzFckH57NqbC4n0VZDLLB",
+          "name": "アタシは問題作",
+          "normalized_name": "アタシは問題作",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 194515,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2CzFckH57NqbC4n0VZDLLB"
+        }
+      ]
+    },
+    {
+      "album_id": "2oSVsWCwiLaCMCR6bqONPY",
+      "name": "いばら",
+      "album_type": "single",
+      "release_date": "2023-05-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2oSVsWCwiLaCMCR6bqONPY",
+      "tracks": [
+        {
+          "track_id": "3xWRjOUp8oDOByEJbOVh6U",
+          "name": "いばら",
+          "normalized_name": "いばら",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 261045,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3xWRjOUp8oDOByEJbOVh6U"
+        }
+      ]
+    },
+    {
+      "album_id": "1DTVQMng1zrycLCDzxza0y",
+      "name": "向日葵",
+      "album_type": "single",
+      "release_date": "2023-07-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1DTVQMng1zrycLCDzxza0y",
+      "tracks": [
+        {
+          "track_id": "37EITaEG3UyWedRZrERoaK",
+          "name": "向日葵",
+          "normalized_name": "向日葵",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 259586,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/37EITaEG3UyWedRZrERoaK"
+        }
+      ]
+    },
+    {
+      "album_id": "18jn1n7WP5aYQcJORKwTxp",
+      "name": "唱",
+      "album_type": "single",
+      "release_date": "2023-09-06",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/18jn1n7WP5aYQcJORKwTxp",
+      "tracks": [
+        {
+          "track_id": "2tlOVDJ3lQsUxz22vPJ4c4",
+          "name": "唱",
+          "normalized_name": "唱",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 189772,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2tlOVDJ3lQsUxz22vPJ4c4"
+        }
+      ]
+    },
+    {
+      "album_id": "0yeSKha3HfhzdjVNnrqLks",
+      "name": "DIGNITY",
+      "album_type": "single",
+      "release_date": "2023-09-18",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0yeSKha3HfhzdjVNnrqLks",
+      "tracks": [
+        {
+          "track_id": "1BDCBbdTDQo3JxC0kVDSqP",
+          "name": "DIGNITY",
+          "normalized_name": "dignity",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 252396,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1BDCBbdTDQo3JxC0kVDSqP"
+        }
+      ]
+    },
+    {
+      "album_id": "55K68hk6VS7YBZj2sQkXhW",
+      "name": "クラクラ",
+      "album_type": "single",
+      "release_date": "2023-10-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/55K68hk6VS7YBZj2sQkXhW",
+      "tracks": [
+        {
+          "track_id": "1430GkKh9OD6jtKNV7pu0Q",
+          "name": "クラクラ",
+          "normalized_name": "クラクラ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 191105,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1430GkKh9OD6jtKNV7pu0Q"
+        }
+      ]
+    },
+    {
+      "album_id": "0HkrY8eSE16gMPiKWD0J3E",
+      "name": "オールナイトレディオ",
+      "album_type": "single",
+      "release_date": "2023-10-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0HkrY8eSE16gMPiKWD0J3E",
+      "tracks": [
+        {
+          "track_id": "3dBFEPvQIgJEF8Vbk0AU4z",
+          "name": "オールナイトレディオ",
+          "normalized_name": "オールナイトレディオ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 213000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3dBFEPvQIgJEF8Vbk0AU4z"
+        }
+      ]
+    },
+    {
+      "album_id": "3EvVwxsQkXYSuItQMbTshK",
+      "name": "unravel",
+      "album_type": "single",
+      "release_date": "2023-11-15",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3EvVwxsQkXYSuItQMbTshK",
+      "tracks": [
+        {
+          "track_id": "3uyiyeKrVPjbMdFGe9sGas",
+          "name": "unravel",
+          "normalized_name": "unravel",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 239400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3uyiyeKrVPjbMdFGe9sGas"
+        }
+      ]
+    },
+    {
+      "album_id": "0Rqk9EbfcSQRVS8cDEmyWz",
+      "name": "ブリキノダンス",
+      "album_type": "single",
+      "release_date": "2023-11-29",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0Rqk9EbfcSQRVS8cDEmyWz",
+      "tracks": [
+        {
+          "track_id": "2yVBhde18jnhFGgA52eDt2",
+          "name": "ブリキノダンス",
+          "normalized_name": "ブリキノダンス",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 199000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2yVBhde18jnhFGgA52eDt2"
+        }
+      ]
+    },
+    {
+      "album_id": "4cnBUmiIGHBHozAVteqWXT",
+      "name": "Adoの歌ってみたアルバム",
+      "album_type": "album",
+      "release_date": "2023-12-13",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "spotify_url": "https://open.spotify.com/album/4cnBUmiIGHBHozAVteqWXT",
+      "tracks": [
+        {
+          "track_id": "3Vv1nFQzl47ZKArinuF3Es",
+          "name": "ドライフラワー",
+          "normalized_name": "ドライフラワー",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 288800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3Vv1nFQzl47ZKArinuF3Es"
+        },
+        {
+          "track_id": "2nGT86g8QCaZX3EDYoP2uJ",
+          "name": "飾りじゃないのよ 涙は",
+          "normalized_name": "飾りじゃないのよ 涙は",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 252573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2nGT86g8QCaZX3EDYoP2uJ"
+        },
+        {
+          "track_id": "0y51oilkHg6ZrtCqSoxb1W",
+          "name": "愛して愛して愛して",
+          "normalized_name": "愛して愛して愛して",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 258372,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0y51oilkHg6ZrtCqSoxb1W"
+        },
+        {
+          "track_id": "2NRQJbQmZ5BU8QpsEYY2jY",
+          "name": "罪と罰",
+          "normalized_name": "罪と罰",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 290720,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2NRQJbQmZ5BU8QpsEYY2jY"
+        },
+        {
+          "track_id": "1HHFCfMYMnCXM8T3iofubG",
+          "name": "可愛くてごめん",
+          "normalized_name": "可愛くてごめん",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 219133,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1HHFCfMYMnCXM8T3iofubG"
+        },
+        {
+          "track_id": "0f8sTi3wquQrV6cdflhbxl",
+          "name": "ヴィラン",
+          "normalized_name": "ヴィラン",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 199800,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0f8sTi3wquQrV6cdflhbxl"
+        },
+        {
+          "track_id": "0eoZADXS1qo1b4RqoJl3Sh",
+          "name": "神っぽいな",
+          "normalized_name": "神っぽいな",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 204506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0eoZADXS1qo1b4RqoJl3Sh"
+        },
+        {
+          "track_id": "70uXZOjJ3snY8wmodXnr9Q",
+          "name": "unravel",
+          "normalized_name": "unravel",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 238360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/70uXZOjJ3snY8wmodXnr9Q"
+        },
+        {
+          "track_id": "1jJR9vHfvEOdHnmYuYkgl3",
+          "name": "ブリキノダンス",
+          "normalized_name": "ブリキノダンス",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 198893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1jJR9vHfvEOdHnmYuYkgl3"
+        },
+        {
+          "track_id": "49rZSEjL1ZLjsAVCdnyKyD",
+          "name": "夜明けと蛍",
+          "normalized_name": "夜明けと蛍",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 308840,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/49rZSEjL1ZLjsAVCdnyKyD"
+        }
+      ]
+    },
+    {
+      "album_id": "6pzvBOpdiWP8kCyjFUcV90",
+      "name": "唱 (Jax Jones Remix)",
+      "album_type": "single",
+      "release_date": "2023-12-31",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6pzvBOpdiWP8kCyjFUcV90",
+      "tracks": [
+        {
+          "track_id": "3k6aRyNiIahp3WJMeFIpOi",
+          "name": "唱 - Jax Jones Remix",
+          "normalized_name": "唱 jax jones remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 154906,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3k6aRyNiIahp3WJMeFIpOi"
+        },
+        {
+          "track_id": "3lUAYxdI4ua1bP0sJGUosX",
+          "name": "唱 - Jax Jones Remix / Extended Mix",
+          "normalized_name": "唱 jax jones remix extended mix",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 265093,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3lUAYxdI4ua1bP0sJGUosX"
+        }
+      ]
+    },
+    {
+      "album_id": "0bHJgay2GTCHvSgaq6xtYM",
+      "name": "ショコラカタブラ",
+      "album_type": "single",
+      "release_date": "2024-01-31",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/0bHJgay2GTCHvSgaq6xtYM",
+      "tracks": [
+        {
+          "track_id": "5tDluNOXu6r7z7u9NKjPCt",
+          "name": "ショコラカタブラ",
+          "normalized_name": "ショコラカタブラ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 183881,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5tDluNOXu6r7z7u9NKjPCt"
+        }
+      ]
+    },
+    {
+      "album_id": "31LvSRXGPVhYs2EZFK0BEU",
+      "name": "Ado \"Ready For My Show Playlist\"",
+      "album_type": "compilation",
+      "release_date": "2024-02-06",
+      "release_date_precision": "day",
+      "total_tracks": 25,
+      "spotify_url": "https://open.spotify.com/album/31LvSRXGPVhYs2EZFK0BEU",
+      "tracks": [
+        {
+          "track_id": "6nhGcCOyjnHshIJjPROEBF",
+          "name": "ショコラカタブラ",
+          "normalized_name": "ショコラカタブラ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 183881,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6nhGcCOyjnHshIJjPROEBF"
+        },
+        {
+          "track_id": "7o0TPSw494RG2Q4iWmd1v6",
+          "name": "唱",
+          "normalized_name": "唱",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 192653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7o0TPSw494RG2Q4iWmd1v6"
+        },
+        {
+          "track_id": "5sAMSMlvsX2BuLWc4lEbUH",
+          "name": "うっせぇわ",
+          "normalized_name": "うっせぇわ",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 204920,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5sAMSMlvsX2BuLWc4lEbUH"
+        },
+        {
+          "track_id": "08gWjDtdpciHl1yfgJfl6r",
+          "name": "新時代 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "新時代 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 228214,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/08gWjDtdpciHl1yfgJfl6r"
+        },
+        {
+          "track_id": "4EftPHa368qiFkGW9yicby",
+          "name": "逆光 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "逆光 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 237666,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4EftPHa368qiFkGW9yicby"
+        },
+        {
+          "track_id": "0JMx8j0nIAQmrDtQJ9F4Gn",
+          "name": "踊",
+          "normalized_name": "踊",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 210346,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0JMx8j0nIAQmrDtQJ9F4Gn"
+        },
+        {
+          "track_id": "7lcXrOj9HdsHFQfNNBR4XS",
+          "name": "クラクラ",
+          "normalized_name": "クラクラ",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 191105,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7lcXrOj9HdsHFQfNNBR4XS"
+        },
+        {
+          "track_id": "640Yjx26eFq15UD8YN9kwr",
+          "name": "unravel",
+          "normalized_name": "unravel",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 239400,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/640Yjx26eFq15UD8YN9kwr"
+        },
+        {
+          "track_id": "785jb7uE95tP9ec8ewT9bD",
+          "name": "私は最強 - ウタ from ONE PIECE FILM RED",
+          "normalized_name": "私は最強 ウタ from one piece film red",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 257915,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/785jb7uE95tP9ec8ewT9bD"
+        },
+        {
+          "track_id": "2QYUGPGxk60nnOsSMTjxbh",
+          "name": "ウタカタララバイ",
+          "normalized_name": "ウタカタララバイ",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 173373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2QYUGPGxk60nnOsSMTjxbh"
+        },
+        {
+          "track_id": "10xUjTtH4gBwjYtdjtvP5G",
+          "name": "ラッキー・ブルート",
+          "normalized_name": "ラッキー・ブルート",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 209613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/10xUjTtH4gBwjYtdjtvP5G"
+        },
+        {
+          "track_id": "2CMv4CtTXbpwT4j19yq1Ye",
+          "name": "Tot Musica",
+          "normalized_name": "tot musica",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 195226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2CMv4CtTXbpwT4j19yq1Ye"
+        },
+        {
+          "track_id": "5nroBNhJ1ZEMbeDa3uOtuF",
+          "name": "阿修羅ちゃん",
+          "normalized_name": "阿修羅ちゃん",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 195080,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5nroBNhJ1ZEMbeDa3uOtuF"
+        },
+        {
+          "track_id": "0fnWzgyB1W9HgVNnr2kJEd",
+          "name": "ギラギラ",
+          "normalized_name": "ギラギラ",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 276213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0fnWzgyB1W9HgVNnr2kJEd"
+        },
+        {
+          "track_id": "7FVMpqfID4lFNBiiRGzI6N",
+          "name": "マザーランド",
+          "normalized_name": "マザーランド",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 260066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7FVMpqfID4lFNBiiRGzI6N"
+        },
+        {
+          "track_id": "3XNSjONdEIfCndvfVpH1Jd",
+          "name": "FREEDOM",
+          "normalized_name": "freedom",
+          "disc_number": 1,
+          "track_number": 16,
+          "duration_ms": 186106,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3XNSjONdEIfCndvfVpH1Jd"
+        },
+        {
+          "track_id": "3cQxOetb8SzYGPX6oeFOgA",
+          "name": "レディメイド",
+          "normalized_name": "レディメイド",
+          "disc_number": 1,
+          "track_number": 17,
+          "duration_ms": 244377,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3cQxOetb8SzYGPX6oeFOgA"
+        },
+        {
+          "track_id": "42tFJYF0ULs8QJms7aJCTr",
+          "name": "風のゆくえ",
+          "normalized_name": "風のゆくえ",
+          "disc_number": 1,
+          "track_number": 18,
+          "duration_ms": 272466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/42tFJYF0ULs8QJms7aJCTr"
+        },
+        {
+          "track_id": "0BhoPeHmFc2WZSPp2DI7oD",
+          "name": "愛して愛して愛して",
+          "normalized_name": "愛して愛して愛して",
+          "disc_number": 1,
+          "track_number": 19,
+          "duration_ms": 258372,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0BhoPeHmFc2WZSPp2DI7oD"
+        },
+        {
+          "track_id": "3JTIwNusgtT95H26DDadkc",
+          "name": "リベリオン",
+          "normalized_name": "リベリオン",
+          "disc_number": 1,
+          "track_number": 20,
+          "duration_ms": 178773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3JTIwNusgtT95H26DDadkc"
+        },
+        {
+          "track_id": "3owf91Zuzs67UzJRTRYeNg",
+          "name": "アタシは問題作",
+          "normalized_name": "アタシは問題作",
+          "disc_number": 1,
+          "track_number": 21,
+          "duration_ms": 194515,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3owf91Zuzs67UzJRTRYeNg"
+        },
+        {
+          "track_id": "7cojiKLtAxeBttS2zDPsYd",
+          "name": "オールナイトレディオ",
+          "normalized_name": "オールナイトレディオ",
+          "disc_number": 1,
+          "track_number": 22,
+          "duration_ms": 213000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7cojiKLtAxeBttS2zDPsYd"
+        },
+        {
+          "track_id": "770JJ8EAUfpQfuZR75ykv2",
+          "name": "夜のピエロ",
+          "normalized_name": "夜のピエロ",
+          "disc_number": 1,
+          "track_number": 23,
+          "duration_ms": 200712,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/770JJ8EAUfpQfuZR75ykv2"
+        },
+        {
+          "track_id": "7LRNCPLryLgrqgHOPOvIqq",
+          "name": "心という名の不可解",
+          "normalized_name": "心という名の不可解",
+          "disc_number": 1,
+          "track_number": 24,
+          "duration_ms": 269893,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7LRNCPLryLgrqgHOPOvIqq"
+        },
+        {
+          "track_id": "58xZuWXsN5bVVy1Cww6Pmt",
+          "name": "唱 - Jax Jones Remix",
+          "normalized_name": "唱 jax jones remix",
+          "disc_number": 1,
+          "track_number": 25,
+          "duration_ms": 154906,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/58xZuWXsN5bVVy1Cww6Pmt"
+        }
+      ]
+    },
+    {
+      "album_id": "63xNXfql8mdsOd1fZjodbf",
+      "name": "Value",
+      "album_type": "single",
+      "release_date": "2024-02-23",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/63xNXfql8mdsOd1fZjodbf",
+      "tracks": [
+        {
+          "track_id": "6BEnpVB7g2j8mzWs3MC2kh",
+          "name": "Value",
+          "normalized_name": "value",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 185000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6BEnpVB7g2j8mzWs3MC2kh"
+        }
+      ]
+    },
+    {
+      "album_id": "4bIo5w5xKztinGjv11NoOQ",
+      "name": "MIRROR",
+      "album_type": "single",
+      "release_date": "2024-05-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4bIo5w5xKztinGjv11NoOQ",
+      "tracks": [
+        {
+          "track_id": "0NtfH5RUt4V3Vzh18Wuc23",
+          "name": "MIRROR",
+          "normalized_name": "mirror",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 178000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0NtfH5RUt4V3Vzh18Wuc23"
+        }
+      ]
+    },
+    {
+      "album_id": "10iuG3s2Fry5JiUh0i0c75",
+      "name": "ルル",
+      "album_type": "single",
+      "release_date": "2024-07-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/10iuG3s2Fry5JiUh0i0c75",
+      "tracks": [
+        {
+          "track_id": "6UuxnR9zgvzpFS6YvfCqFL",
+          "name": "ルル",
+          "normalized_name": "ルル",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 197854,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6UuxnR9zgvzpFS6YvfCqFL"
+        }
+      ]
+    },
+    {
+      "album_id": "1sud4up8kAIa8MZJFupUMx",
+      "name": "残夢",
+      "album_type": "album",
+      "release_date": "2024-07-09",
+      "release_date_precision": "day",
+      "total_tracks": 16,
+      "spotify_url": "https://open.spotify.com/album/1sud4up8kAIa8MZJFupUMx",
+      "tracks": [
+        {
+          "track_id": "35Kh8QvBqCwHA2pl1n6EqV",
+          "name": "抜け空",
+          "normalized_name": "抜け空",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 188266,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/35Kh8QvBqCwHA2pl1n6EqV"
+        },
+        {
+          "track_id": "6m2xYZyN9AJVaDlESPh0ao",
+          "name": "行方知れず",
+          "normalized_name": "行方知れず",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 193146,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6m2xYZyN9AJVaDlESPh0ao"
+        },
+        {
+          "track_id": "0QtZaVuKKFBqt8z3atTjBr",
+          "name": "DIGNITY",
+          "normalized_name": "dignity",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 252760,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0QtZaVuKKFBqt8z3atTjBr"
+        },
+        {
+          "track_id": "1Wb6DopPNAuP20EIM9dIEO",
+          "name": "ショコラカタブラ",
+          "normalized_name": "ショコラカタブラ",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 184613,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1Wb6DopPNAuP20EIM9dIEO"
+        },
+        {
+          "track_id": "0dvM0qG13mbrZGBSHJVkBu",
+          "name": "クラクラ",
+          "normalized_name": "クラクラ",
+          "disc_number": 1,
+          "track_number": 5,
+          "duration_ms": 191786,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0dvM0qG13mbrZGBSHJVkBu"
+        },
+        {
+          "track_id": "6Rfc9TNGxbtRBkltxGhzSj",
+          "name": "アタシは問題作",
+          "normalized_name": "アタシは問題作",
+          "disc_number": 1,
+          "track_number": 6,
+          "duration_ms": 194506,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6Rfc9TNGxbtRBkltxGhzSj"
+        },
+        {
+          "track_id": "24atDE5GY6vJwPAAyRY6c0",
+          "name": "リベリオン",
+          "normalized_name": "リベリオン",
+          "disc_number": 1,
+          "track_number": 7,
+          "duration_ms": 178773,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/24atDE5GY6vJwPAAyRY6c0"
+        },
+        {
+          "track_id": "72i4fS8xte6PrbLDlERwol",
+          "name": "オールナイトレディオ",
+          "normalized_name": "オールナイトレディオ",
+          "disc_number": 1,
+          "track_number": 8,
+          "duration_ms": 212573,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/72i4fS8xte6PrbLDlERwol"
+        },
+        {
+          "track_id": "66fhCwKaIpI625T3TCpmBR",
+          "name": "向日葵",
+          "normalized_name": "向日葵",
+          "disc_number": 1,
+          "track_number": 9,
+          "duration_ms": 259733,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/66fhCwKaIpI625T3TCpmBR"
+        },
+        {
+          "track_id": "39G4P8noqIKkxpjiuMGqnC",
+          "name": "永遠のあくる日",
+          "normalized_name": "永遠のあくる日",
+          "disc_number": 1,
+          "track_number": 10,
+          "duration_ms": 246320,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/39G4P8noqIKkxpjiuMGqnC"
+        },
+        {
+          "track_id": "1gkF9A2OoQyhCIPYcWCfOt",
+          "name": "MIRROR",
+          "normalized_name": "mirror",
+          "disc_number": 1,
+          "track_number": 11,
+          "duration_ms": 180213,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1gkF9A2OoQyhCIPYcWCfOt"
+        },
+        {
+          "track_id": "1n2wGY2QlnhueSVOrZXsgF",
+          "name": "ルル",
+          "normalized_name": "ルル",
+          "disc_number": 1,
+          "track_number": 12,
+          "duration_ms": 197853,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1n2wGY2QlnhueSVOrZXsgF"
+        },
+        {
+          "track_id": "5yYsdZus3N5OH5w3gdTlJS",
+          "name": "唱",
+          "normalized_name": "唱",
+          "disc_number": 1,
+          "track_number": 13,
+          "duration_ms": 192653,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5yYsdZus3N5OH5w3gdTlJS"
+        },
+        {
+          "track_id": "7qjPh9kqSs0enk3LTRHnZX",
+          "name": "いばら",
+          "normalized_name": "いばら",
+          "disc_number": 1,
+          "track_number": 14,
+          "duration_ms": 262373,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7qjPh9kqSs0enk3LTRHnZX"
+        },
+        {
+          "track_id": "0zk8E32SiP3ZXZn0tKvPGV",
+          "name": "Value",
+          "normalized_name": "value",
+          "disc_number": 1,
+          "track_number": 15,
+          "duration_ms": 184200,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/0zk8E32SiP3ZXZn0tKvPGV"
+        },
+        {
+          "track_id": "6oEiGXcxLVn1PUjiEoyCe9",
+          "name": "0",
+          "normalized_name": "0",
+          "disc_number": 1,
+          "track_number": 16,
+          "duration_ms": 180226,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6oEiGXcxLVn1PUjiEoyCe9"
+        }
+      ]
+    },
+    {
+      "album_id": "1XQ717SnraQRSj55p2F79F",
+      "name": "初夏",
+      "album_type": "single",
+      "release_date": "2024-10-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1XQ717SnraQRSj55p2F79F",
+      "tracks": [
+        {
+          "track_id": "1VzOqNIocvr1fEePNNKt5G",
+          "name": "初夏",
+          "normalized_name": "初夏",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 228466,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1VzOqNIocvr1fEePNNKt5G"
+        }
+      ]
+    },
+    {
+      "album_id": "2vxWLmD9gv9RDgL4SM71Wg",
+      "name": "桜日和とタイムマシン with 初音ミク／初夏",
+      "album_type": "single",
+      "release_date": "2024-10-23",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "spotify_url": "https://open.spotify.com/album/2vxWLmD9gv9RDgL4SM71Wg",
+      "tracks": [
+        {
+          "track_id": "1sEObTHGtsQxJj7nEp9kMY",
+          "name": "桜日和とタイムマシン with 初音ミク",
+          "normalized_name": "桜日和とタイムマシン with 初音ミク",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 331560,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1sEObTHGtsQxJj7nEp9kMY"
+        },
+        {
+          "track_id": "5ENoF6tFyJiyaRXHPMfeAA",
+          "name": "初夏",
+          "normalized_name": "初夏",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 228480,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5ENoF6tFyJiyaRXHPMfeAA"
+        },
+        {
+          "track_id": "2VWxmA3tikLpdfuhgG8cpM",
+          "name": "桜日和とタイムマシン with 初音ミク - Instrumental",
+          "normalized_name": "桜日和とタイムマシン with 初音ミク instrumental",
+          "disc_number": 1,
+          "track_number": 3,
+          "duration_ms": 331000,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2VWxmA3tikLpdfuhgG8cpM"
+        },
+        {
+          "track_id": "6OK04bvUkzb6uCVzfRd14B",
+          "name": "初夏 - Instrumental",
+          "normalized_name": "初夏 instrumental",
+          "disc_number": 1,
+          "track_number": 4,
+          "duration_ms": 226493,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6OK04bvUkzb6uCVzfRd14B"
+        }
+      ]
+    },
+    {
+      "album_id": "5pQ8IWyJm8XaJDD55hymXK",
+      "name": "きっとコースター",
+      "album_type": "single",
+      "release_date": "2024-11-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5pQ8IWyJm8XaJDD55hymXK",
+      "tracks": [
+        {
+          "track_id": "64eNiU0FxtHlqfGEP02kRr",
+          "name": "きっとコースター",
+          "normalized_name": "きっとコースター",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 178419,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/64eNiU0FxtHlqfGEP02kRr"
+        }
+      ]
+    },
+    {
+      "album_id": "7ohQtSfUhD61t9OaO1jb39",
+      "name": "Episode X",
+      "album_type": "single",
+      "release_date": "2024-12-05",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7ohQtSfUhD61t9OaO1jb39",
+      "tracks": [
+        {
+          "track_id": "3lsd1CbDC5ejAOJhPn5dB9",
+          "name": "Episode X",
+          "normalized_name": "episode x",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 202962,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/3lsd1CbDC5ejAOJhPn5dB9"
+        }
+      ]
+    },
+    {
+      "album_id": "42qtC6akiL6crX1i4Sf4yJ",
+      "name": "Take Me to the Beach (feat. Ado)",
+      "album_type": "single",
+      "release_date": "2024-12-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/42qtC6akiL6crX1i4Sf4yJ",
+      "tracks": [
+        {
+          "track_id": "4n7nwDqrdx3qmJvEACOMrN",
+          "name": "Take Me to the Beach (feat. Ado)",
+          "normalized_name": "take me to the beach",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 167066,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN"
+        }
+      ]
+    },
+    {
+      "album_id": "7bstlR1nYVqjkyTlYKzv9D",
+      "name": "エルフ",
+      "album_type": "single",
+      "release_date": "2025-01-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7bstlR1nYVqjkyTlYKzv9D",
+      "tracks": [
+        {
+          "track_id": "5pnqpz99CGAvdzmMRsB5sD",
+          "name": "エルフ",
+          "normalized_name": "エルフ",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 260368,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5pnqpz99CGAvdzmMRsB5sD"
+        }
+      ]
+    },
+    {
+      "album_id": "2QNHCEUiNTXtcHSjoVWvNl",
+      "name": "わたしに花束",
+      "album_type": "single",
+      "release_date": "2025-03-09",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2QNHCEUiNTXtcHSjoVWvNl",
+      "tracks": [
+        {
+          "track_id": "1vLQ5s4eumtmUcov4cP9jt",
+          "name": "わたしに花束",
+          "normalized_name": "わたしに花束",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 228611,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1vLQ5s4eumtmUcov4cP9jt"
+        }
+      ]
+    },
+    {
+      "album_id": "1W1hTzAlhblqUpKQ6AY0EZ",
+      "name": "シャルル",
+      "album_type": "single",
+      "release_date": "2025-04-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1W1hTzAlhblqUpKQ6AY0EZ",
+      "tracks": [
+        {
+          "track_id": "7FOrQDYmTBskAtuRxGNEwZ",
+          "name": "シャルル",
+          "normalized_name": "シャルル",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 224280,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7FOrQDYmTBskAtuRxGNEwZ"
+        }
+      ]
+    },
+    {
+      "album_id": "1ixOKUZP0M5CrRlb57Y2cX",
+      "name": "十戒（1984）",
+      "album_type": "single",
+      "release_date": "2025-05-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/1ixOKUZP0M5CrRlb57Y2cX",
+      "tracks": [
+        {
+          "track_id": "5dBtTJDNBmOYRjfsJ7i2E9",
+          "name": "十戒（1984）",
+          "normalized_name": "十戒",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 214306,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5dBtTJDNBmOYRjfsJ7i2E9"
+        }
+      ]
+    },
+    {
+      "album_id": "2NaAcAcXjGRMpeKrWj99Bw",
+      "name": "ゲゲゲの鬼太郎",
+      "album_type": "single",
+      "release_date": "2025-05-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2NaAcAcXjGRMpeKrWj99Bw",
+      "tracks": [
+        {
+          "track_id": "1V4OSucPmjnYJdiWuR1LFJ",
+          "name": "ゲゲゲの鬼太郎",
+          "normalized_name": "ゲゲゲの鬼太郎",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 134681,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1V4OSucPmjnYJdiWuR1LFJ"
+        }
+      ]
+    },
+    {
+      "album_id": "5qyh3mcLstnqZhlmlY7njI",
+      "name": "Stay Gold (from BEYBLADE X)",
+      "album_type": "single",
+      "release_date": "2025-06-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5qyh3mcLstnqZhlmlY7njI",
+      "tracks": [
+        {
+          "track_id": "65hfbURMDstZkt5FDt0Tbd",
+          "name": "Stay Gold - from BEYBLADE X",
+          "normalized_name": "stay gold from beyblade x",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 206175,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/65hfbURMDstZkt5FDt0Tbd"
+        }
+      ]
+    },
+    {
+      "album_id": "6nxIvC62nozuHMcpXWD9Kx",
+      "name": "Stay Gold (from BEYBLADE X / Jax Jones Y2J! Remix)",
+      "album_type": "single",
+      "release_date": "2025-08-15",
+      "release_date_precision": "day",
+      "total_tracks": 2,
+      "spotify_url": "https://open.spotify.com/album/6nxIvC62nozuHMcpXWD9Kx",
+      "tracks": [
+        {
+          "track_id": "7D0so78hufzlHg51ZjCOUR",
+          "name": "Stay Gold - from BEYBLADE X / Jax Jones Y2J! Remix",
+          "normalized_name": "stay gold from beyblade x jax jones y2j remix",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 134412,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/7D0so78hufzlHg51ZjCOUR"
+        },
+        {
+          "track_id": "2jdsIQ9e051D2XMnKvCC7k",
+          "name": "Stay Gold - from BEYBLADE X",
+          "normalized_name": "stay gold from beyblade x",
+          "disc_number": 1,
+          "track_number": 2,
+          "duration_ms": 206175,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/2jdsIQ9e051D2XMnKvCC7k"
+        }
+      ]
+    },
+    {
+      "album_id": "3SEAcawf6EhTRl42ulumyd",
+      "name": "CAT'S EYE",
+      "album_type": "single",
+      "release_date": "2025-09-11",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/3SEAcawf6EhTRl42ulumyd",
+      "tracks": [
+        {
+          "track_id": "5lzjvTvybxPQLlGO3SVm5l",
+          "name": "CAT'S EYE",
+          "normalized_name": "cats eye",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 180631,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/5lzjvTvybxPQLlGO3SVm5l"
+        }
+      ]
+    },
+    {
+      "album_id": "5lcHri5ngUXxfx2V0DtaRo",
+      "name": "風と私の物語",
+      "album_type": "single",
+      "release_date": "2025-09-25",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/5lcHri5ngUXxfx2V0DtaRo",
+      "tracks": [
+        {
+          "track_id": "10QhAQvfHf4ztZlXlkgWFR",
+          "name": "風と私の物語",
+          "normalized_name": "風と私の物語",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 348367,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/10QhAQvfHf4ztZlXlkgWFR"
+        }
+      ]
+    },
+    {
+      "album_id": "2wzfAqKAR8tXWovPNbjqLM",
+      "name": "MAGIC",
+      "album_type": "single",
+      "release_date": "2025-10-30",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/2wzfAqKAR8tXWovPNbjqLM",
+      "tracks": [
+        {
+          "track_id": "6hsBxoVdj9mg9m4tHlYE5K",
+          "name": "MAGIC",
+          "normalized_name": "magic",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 172291,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/6hsBxoVdj9mg9m4tHlYE5K"
+        }
+      ]
+    },
+    {
+      "album_id": "4rlhpR801c5YsQTaJeJnDH",
+      "name": "おどるポンポコリン",
+      "album_type": "single",
+      "release_date": "2025-12-28",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/4rlhpR801c5YsQTaJeJnDH",
+      "tracks": [
+        {
+          "track_id": "4TLPjY3Gf0xcfF8ZtgrQ42",
+          "name": "おどるポンポコリン",
+          "normalized_name": "おどるポンポコリン",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 194530,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/4TLPjY3Gf0xcfF8ZtgrQ42"
+        }
+      ]
+    },
+    {
+      "album_id": "6j0Ape8NJoavCurbOeF0S1",
+      "name": "soldier game",
+      "album_type": "single",
+      "release_date": "2026-01-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/6j0Ape8NJoavCurbOeF0S1",
+      "tracks": [
+        {
+          "track_id": "1BzBLiQeqwsOkIIIlKWbig",
+          "name": "soldier game",
+          "normalized_name": "soldier game",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 221360,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/1BzBLiQeqwsOkIIIlKWbig"
+        }
+      ]
+    },
+    {
+      "album_id": "7yBoi05llEbqGBgnqdNwkh",
+      "name": "エンゼルシーク",
+      "album_type": "single",
+      "release_date": "2026-01-26",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/7yBoi05llEbqGBgnqdNwkh",
+      "tracks": [
+        {
+          "track_id": "54p6he9XRk2rKaFCMF75kg",
+          "name": "エンゼルシーク",
+          "normalized_name": "エンゼルシーク",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 229399,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/54p6he9XRk2rKaFCMF75kg"
+        }
+      ]
+    },
+    {
+      "album_id": "25vTelGNkp6zgyiYmx7TpI",
+      "name": "ビバリウム",
+      "album_type": "single",
+      "release_date": "2026-02-17",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "spotify_url": "https://open.spotify.com/album/25vTelGNkp6zgyiYmx7TpI",
+      "tracks": [
+        {
+          "track_id": "34q8wDVdYGG6rFUIenHrGK",
+          "name": "ビバリウム",
+          "normalized_name": "ビバリウム",
+          "disc_number": 1,
+          "track_number": 1,
+          "duration_ms": 243317,
+          "explicit": false,
+          "spotify_url": "https://open.spotify.com/track/34q8wDVdYGG6rFUIenHrGK"
+        }
+      ]
+    }
+  ]
+}

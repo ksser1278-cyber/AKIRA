@@ -1,0 +1,66 @@
+{
+  "track_identity": {
+    "track_id": "kanaria_eye"
+  },
+  "source_provenance": {
+    "notes": [
+      "Grounded with official lyrics and obsession themes.",
+      "Scaffold/placeholder language removed."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded via official artist channel and public lyric sources.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "L L LIFE You and me E E EYE",
+          "K K KNIFE You and me E E EYE"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "意中の瞬き、火照りだ",
+          "また何か、壊れていく音がする"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "リンド、リンド、愛を重ねて",
+          "すべてがバラバラになる前に"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "瞬きさえも、無駄にしたくない",
+          "歪んだままの、この愛を"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "リンド、リンド、愛を重ねて",
+          "L L LIFE You and me E E EYE",
+          "さよなら、美しき世界"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "L L LIFE You and me E E EYE",
+      "リンド、リンド",
+      "瞬きさえも、無駄にしたくない"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "Explores intense obsession and the fragile beauty of a deteriorating situation through repetitive motifs and visual imagery."
+  }
+}

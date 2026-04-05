@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_suki_na_koto_dake_de_ii_desu",
+    "artist_id": "pinocchiop",
+    "artist_name": "pinocchiop",
+    "title": "好きなことだけでいいです",
+    "title_core": "好きなことだけでいいです",
+    "language": "ja",
+    "artist": "pinocchiop",
+    "status": "cross_checked"
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "YouTube (Official)",
+        "url": "https://youtu.be/mSIn099R-G0",
+        "status": "cross_checked"
+      },
+      {
+        "label": "UtaTen",
+        "url": "https://utaten.com/lyric/nm16062301/",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "VDB Metadata",
+        "origin": "third_party_db",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Validated remaining source acquisition bundle",
+        "origin": "internal_bundle",
+        "status": "cross_checked"
+      }
+    ],
+    "notes": [
+      "Acquired trusted Japanese lyrics for pinocchiop_suki_na_koto_dake_de_ii_desu. Workflow: source_plus_mode."
+    ],
+    "trusted_ratio": 1.0
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Grounded lyric source bundle attached for internal normalization.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "また 繰り返す",
+          "僕の 大切な 営み",
+          "好きなことだけでいいです って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "好きなことだけでいいです って",
+          "呟いてみる"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "心を 抉るように",
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "全てを 塗り潰して"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "心を 抉るように"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "心を 抉るように",
+          "好きなことだけでいいです 好きなことだけでいいです",
+          "全てを 塗り潰して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "好きなことだけでいいです 好きなことだけでいいです",
+      "心を 抉るように"
+    ],
+    "question_lines": [],
+    "repetition_patterns": [
+      "gospel/choir synth integration",
+      "sarcastic praise"
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "hobbies",
+      "ignoring reality",
+      "bubbles"
+    ],
+    "emotional_thesis": "Just ignore reality and be happy.",
+    "contrast_device": "Joyous gospel synth pop expressing extreme sarcasm.",
+    "dramatic_arc": [
+      "sarcasm",
+      "false euphoria",
+      "judgment"
+    ],
+    "narrative_role": [
+      "ironic_meta"
+    ],
+    "tie_in_function": "",
+    "title_function": "seed_centerpiece",
+    "key_motifs": [
+      "hobbies",
+      "ignoring reality",
+      "bubbles",
+      "fake peace"
+    ],
+    "interpretation_confidence": "low",
+    "message": "Just ignore reality and be happy.",
+    "core_emotion": "Sarcastic Judgment",
+    "primary_target": "The listener or a toxic counterpart",
+    "status": "cross_checked"
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "scenario building"
+      ],
+      "narrative_job": "Establishes the song perspective.",
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension climb"
+      ],
+      "narrative_job": "Prepares the hook transition.",
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "primary hook"
+      ],
+      "narrative_job": "Delivers the core hook and title landing.",
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "contrast turn"
+      ],
+      "narrative_job": "Introduces contrast before the final return.",
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "catharsis"
+      ],
+      "narrative_job": "Delivers the highest-energy final release.",
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "hook_copy_force": "medium",
+    "title_ignition_style": "direct",
+    "modern_compression_bias": "medium",
+    "phrase_source_types": [
+      "passive_aggressive_fact"
+    ],
+    "critic_focus": [
+      "needs_full_grounding",
+      "needs_provenance"
+    ],
+    "section_features": [
+      "verse_mocking_praise",
+      "prechorus_choir",
+      "chorus_sarcastic_anthem",
+      "chorus_final"
+    ]
+  },
+  "audio_fact_layer": {
+    "reported_facts": {},
+    "proxy_inference": {
+      "energy_profile": [
+        "sarcasm",
+        "false euphoria",
+        "judgment"
+      ],
+      "vocal_behavior": [
+        "gospel/choir synth integration",
+        "sarcastic praise"
+      ],
+      "production_palette": [
+        "sarcastic gospel pop",
+        "euphoric irony",
+        "choir synths"
+      ],
+      "confidence": "estimated",
+      "evidence_basis": [
+        "round2_draft_seed"
+      ]
+    },
+    "do_not_overclaim": [
+      "BPM exactness",
+      "key exactness",
+      "arrangement exactness"
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "ironic_meta",
+      "vocaloid",
+      "subculture",
+      "sarcastic gospel pop",
+      "euphoric irony"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated pulse"
+    ],
+    "vocal_tones": [
+      "gospel/choir synth integration",
+      "sarcastic praise",
+      "desperate",
+      "crisp articulation"
+    ],
+    "production_palette": [
+      "sarcastic gospel pop",
+      "euphoric irony",
+      "choir synths",
+      "wide mix",
+      "heavy bass presence",
+      "modern digital gloss"
+    ],
+    "energy_arc": [
+      "sarcasm",
+      "false euphoria",
+      "judgment",
+      "building tension",
+      "massive drop"
+    ],
+    "imagery_anchors": [
+      "hobbies",
+      "ignoring reality",
+      "bubbles",
+      "fake peace",
+      "urban decay",
+      "emotional pain",
+      "digital anxiety"
+    ],
+    "exclude": [
+      "anchor leakage",
+      "verbatim hook reuse",
+      "acoustic ballad",
+      "boring adult contemporary",
+      "slow jazz lounge"
+    ],
+    "source_basis": [
+      "round2_draft_seed",
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "record_stage": "usable",
+    "missing_fields": [
+      "full lyrics",
+      "provenance",
+      "audio facts"
+    ],
+    "manual_review_required_for": [
+      "lyric grounding",
+      "source cross-check",
+      "section validation"
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false,
+    "notes": [
+      "Sarcastic take on modern leisure."
+    ],
+    "warnings": []
+  },
+  "likely_mode": "ironic_meta",
+  "generation_safety": {
+    "schema_version": "1.0",
+    "verdict": "planner_safe",
+    "score": 0.91,
+    "score_breakdown": {
+      "provenance_trust": 1.0,
+      "grounding_completeness": 1.0,
+      "surface_safety": 0.75,
+      "renderer_readiness": 0.75
+    },
+    "allowed_layers": {
+      "planner": true,
+      "renderer": false,
+      "lexical_sampling": false,
+      "benchmark": false
+    },
+    "blockers": [],
+    "requires_human_review": true,
+    "risk_levels": {
+      "leakage": "medium",
+      "surface_contamination": "medium",
+      "anchor_similarity": "medium"
+    },
+    "notes": [
+      "pilot relabel only; renderer and lexical sampling remain disabled"
+    ]
+  }
+}

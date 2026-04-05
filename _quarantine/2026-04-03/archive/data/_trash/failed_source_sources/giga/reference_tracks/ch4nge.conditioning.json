@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "giga_ch4nge",
+    "artist_id": "giga",
+    "title": "CH4NGE",
+    "bpm": 150,
+    "key": "F# Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "aggressive",
+        "lines": [
+          "Ready Steady 鳴らして",
+          "僕らの声を 今",
+          "溢れ出す Noiseの中で",
+          "踊り明かしたい"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 11, "role": "action_setup", "tech": "Ready Steady call + Sound trigger"},
+          {"line": 2, "mora": 8, "role": "vocal_assertion", "tech": "Directing our voice now"},
+          {"line": 3, "mora": 12, "role": "environmental_chaos", "tech": "Noise immersion metaphor"},
+          {"line": 4, "mora": 8, "role": "desire", "tech": "The drive to dance until morning"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "vocal_chop",
+        "lines": [
+          "CH4NGE CH4NGE 書き換えて",
+          "古い自分は 捨てて",
+          "Bassに乗せて 響かせろ",
+          "最後は 笑うんだ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 14, "role": "title_hook", "tech": "Leetspeak title drop + Transformation command"},
+          {"line": 2, "mora": 9, "role": "purgation", "tech": "Discarding the old self"},
+          {"line": 3, "mora": 11, "role": "bass_integration", "tech": "Resonating on the beat"},
+          {"line": 4, "mora": 8, "role": "final_victory", "tech": "The last laugh / Satisfaction"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["transformation", "self-assertion", "EDM/club energy"],
+    "emotional_thesis": "Identity is a mutable code; by overwriting the past with high-energy noise and bass, we achieve a state of 'CH4NGE' that is both aggressive and liberating."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "baker_celluloid",
+    "artist_id": "baker",
+    "title": "セルロイド",
+    "bpm": 115,
+    "key": "C Major",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "gentle",
+        "lines": [
+          "窓の外は 夏の色",
+          "揺れる光 影の街",
+          "懐かしい 声がした",
+          "それは夢の 中のこと"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 9, "role": "setting", "tech": "Summer color motif"},
+          {"line": 2, "mora": 9, "role": "light_play", "tech": "Swaying light/shadow focus"},
+          {"line": 3, "mora": 9, "role": "auditory_memory", "tech": "Distant nostalgic voice"},
+          {"line": 4, "mora": 9, "role": "framing", "tech": "Memory vs Dream distinction"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "lingering",
+        "lines": [
+          "セルロ이드 映る僕ら",
+          "褪せた日々に 恋をした",
+          "消えないように 抱きしめて",
+          "今のままで 笑ってて"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 10, "role": "title_hook", "tech": "Film metaphor reveal"},
+          {"line": 2, "mora": 10, "role": "nostalgia_peak", "tech": "Falling in love with faded days"},
+          {"line": 3, "mora": 11, "role": "plea", "tech": "Holding onto the fading memory"},
+          {"line": 4, "mora": 10, "role": "resolution", "tech": "Wishing for a frozen smile"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["fading film", "nostalgia as comfort", "preserving the past"],
+    "emotional_thesis": "Love is like a piece of celluloid; it's fragile, grainy, and beautiful because it's a fixed point in time that we can revisit but never truly return to."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

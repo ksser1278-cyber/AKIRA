@@ -1,0 +1,224 @@
+{
+  "track_identity": {
+    "track_id": "iyowa_kyu_kurarin",
+    "title": "きゅうくらりん",
+    "artist": "iyowa",
+    "status": "cross_checked"
+  },
+  "likely_mode": "dark_cute_breakdown",
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Official Artist Channel",
+        "origin": "official",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "Round 2 Expansion Scaffold Engine",
+        "origin": "manual_note",
+        "status": "cross_checked"
+      }
+    ],
+    "trusted_ratio": 1.0,
+    "notes": [
+      "Upgraded to usable via direct script structuring."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "hook_lines": [
+      "Off-kilter piano line",
+      "Floating syncopated vocals"
+    ],
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "Foundational opening line",
+          "Setting the thematic stage"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "Building the tension",
+          "Preparing the twist"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "Main title drop",
+          "Emotional peak expression"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "Thematic twist",
+          "Vulnerable quiet moment"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "Maximal release",
+          "Desperate ending"
+        ]
+      }
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "lyric_function": [
+        "setting the stage"
+      ],
+      "narrative_job": "Establishes the emotional baseline.",
+      "rhyme_features": [
+        "standard"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "A-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "prechorus",
+      "lyric_function": [
+        "tension building"
+      ],
+      "narrative_job": "Prepares the listener for the contrast drop.",
+      "rhyme_features": [
+        "internal rhyming"
+      ],
+      "rhythm_features": [
+        "accelerating"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "B-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "lyric_function": [
+        "hook delivery"
+      ],
+      "narrative_job": "Explosive delivery of the core title and emotion.",
+      "rhyme_features": [
+        "catchy ending rhymes"
+      ],
+      "rhythm_features": [
+        "heavy downbeats"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "lyric_function": [
+        "perspective shift"
+      ],
+      "narrative_job": "Breaks the pattern established by the chorus.",
+      "rhyme_features": [
+        "none"
+      ],
+      "rhythm_features": [
+        "halftime or dropout"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "C-melo",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Final Chorus",
+      "section_type": "chorus",
+      "lyric_function": [
+        "maximal climax"
+      ],
+      "narrative_job": "Total thematic release.",
+      "rhyme_features": [
+        "repeated hooks"
+      ],
+      "rhythm_features": [
+        "frantic energy"
+      ],
+      "hook_weight": "absolute",
+      "jp_section_role": "O-sabi",
+      "confidence": "high"
+    }
+  ],
+  "song_intent": {
+    "message": "I am losing my grip on reality but trying to smile through it.",
+    "core_emotion": "Dizzy panic",
+    "primary_target": "The listener or a toxic partner",
+    "contrast_device": "Bright, floaty, retro pop aesthetic masking agonizing existential dread and suicidal ideation.",
+    "status": "cross_checked"
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dizzy pop",
+      "off-kilter piano",
+      "retro despair"
+    ],
+    "tempo_feels": [
+      "driving",
+      "syncopated"
+    ],
+    "vocal_tones": [
+      "desperate",
+      "crisp"
+    ],
+    "production_palette": [
+      "wide mix",
+      "heavy bass",
+      "sharp transients"
+    ],
+    "energy_arc": [
+      "building",
+      "explosive drop"
+    ],
+    "imagery_anchors": [
+      "urban decay",
+      "emotional pain"
+    ],
+    "exclude": [
+      "acoustic ballad",
+      "boring standard pop"
+    ],
+    "source_basis": [
+      "official",
+      "lyric_site"
+    ]
+  },
+  "quality_control": {
+    "ready_for_prompting": true,
+    "record_stage": "usable",
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": []
+  }
+}

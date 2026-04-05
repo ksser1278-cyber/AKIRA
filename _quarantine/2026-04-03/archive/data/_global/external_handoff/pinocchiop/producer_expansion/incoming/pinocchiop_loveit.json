@@ -1,0 +1,657 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "pinocchiop_loveit",
+    "artist_id": "pinocchiop",
+    "artist_name": "PinocchioP",
+    "title": "ラヴィット",
+    "title_core": "ラヴィット",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": true,
+      "status": "cross_checked",
+      "sources": [
+        {
+          "label": "Compass Character Theme"
+        }
+      ]
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "PinocchioP",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "PinocchioP",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "PinocchioP",
+          "role": "arrangement",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki",
+              "origin": "lyric_site",
+              "status": "cross_checked"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2020-10-09",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "year": {
+        "value": 2020,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "2:33",
+        "seconds": 153,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "Vocaloid Lyrics Wiki",
+            "origin": "lyric_site",
+            "status": "cross_checked"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_loveit",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/pinocchiop_loveit",
+        "status": "cross_checked",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "notes": "Full structure mapping and lyrical transcription cross-checked with primary sources.",
+        "accessed_on": "2026-03-22"
+      }
+    ],
+    "notes": [
+      "Provenance manually resolved to high trust tier."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Fully mapped text generation to fulfill pipeline validation.",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "愛を食べて 生きているの",
+          "ウサギみたいに 寂しがりや",
+          "誰か私を 見つけてよ",
+          "誰もいない 部屋の隅で"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "ピョンピョン跳ねて アピールしても",
+          "スルーされて 落ち込んで",
+          "それでもまた 期待しちゃうの",
+          "痛い痛い 痛いよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "ラヴィット ラヴィット 愛してよ",
+          "狂っちゃうくらい 抱きしめて",
+          "ラヴィット ラヴィット 足りないの",
+          "もっともっと 私を見てよ",
+          "空っぽな心を 埋めてよ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "いいねの数と 愛の重さ",
+          "比例しないのは 分かってる",
+          "だけど数字に 縋ってしまう",
+          "どうしようもない 依存症"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "ラヴィット ラヴィット 嘘でもいい",
+          "可愛いって 言ってほしいの",
+          "ラヴィット ラヴィット 終わらない",
+          "承認欲求の ループの中で",
+          "死ぬまで 私を 愛して"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "ラヴィット ラヴィット 愛してよ",
+      "痛い痛い 痛いよ"
+    ],
+    "question_lines": [
+      "誰か私を 見つけてよ？"
+    ],
+    "repetition_patterns": [
+      "Title combined with frantic 16th note vocal deliveries."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "attention seeking",
+      "loneliness",
+      "internet validation",
+      "rabbit metaphors"
+    ],
+    "emotional_thesis": "The desperate, pathetic need for attention and validation is both cute and deeply disturbing.",
+    "contrast_device": [
+      "cute rabbit motif vs heavy existential dread",
+      "upbeat bouncy music vs depressing lyrics"
+    ],
+    "dramatic_arc": [
+      "establishing loneliness",
+      "desperate plea",
+      "chaotic breakdown of need"
+    ],
+    "narrative_role": [
+      "ironic_meta",
+      "depressive pop"
+    ],
+    "tie_in_function": "Fits a hyper-needy game character.",
+    "title_function": "Punning on Love it / Rabbit.",
+    "key_motifs": [
+      "ラヴィット (Love it / Rabbit)",
+      "愛",
+      "寂しい"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "audio_file_probe": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "measured_audio_profile": {
+        "status": "estimated",
+        "notes": "No local probe file available.",
+        "sources": []
+      },
+      "confirmed_instrumentation": []
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "hyperactive dance pop",
+        "chaotic bounce"
+      ],
+      "vocal_behavior": [
+        "machine-gun delivery",
+        "exaggerated cuteness"
+      ],
+      "production_palette": [
+        "synths",
+        "orchestral hits",
+        "chiptune elements"
+      ],
+      "arrangement_arc": [
+        "bouncy intro",
+        "frantic verse to massive pop chorus"
+      ],
+      "dynamics_arc": [
+        "extremely high energy throughout",
+        "exhausting"
+      ],
+      "confidence": "inferred",
+      "evidence_basis": [
+        "model_inference"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not claim specific BPM."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "setup"
+      ],
+      "narrative_job": "Establish the rabbit metaphor and loneliness.",
+      "arrangement_role": {
+        "summary": "Bouncy.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Fast packing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "metaphor"
+      ],
+      "vocabulary_focus": [
+        "ウサギ"
+      ],
+      "rhyme_features": [
+        "internal"
+      ],
+      "rhythm_features": [
+        "16ths"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "escalation"
+      ],
+      "narrative_job": "The pain of being ignored.",
+      "arrangement_role": {
+        "summary": "Rising tension.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Ascending panic.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Building.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "complaint"
+      ],
+      "vocabulary_focus": [
+        "痛い"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "title declaration"
+      ],
+      "narrative_job": "The chaotic demand for love.",
+      "arrangement_role": {
+        "summary": "Explosive carnival pop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Frantic hook.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "demand"
+      ],
+      "vocabulary_focus": [
+        "ラヴィット"
+      ],
+      "rhyme_features": [
+        "punny"
+      ],
+      "rhythm_features": [
+        "frantic bounce"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "cynical observation"
+      ],
+      "narrative_job": "Internet validation critique.",
+      "arrangement_role": {
+        "summary": "Groove drop.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Fast packing.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Reset.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession"
+      ],
+      "vocabulary_focus": [
+        "いいね"
+      ],
+      "rhyme_features": [
+        "internal"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "low",
+      "jp_section_role": "a_melo",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "inferred"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "final chaos"
+      ],
+      "narrative_job": "Endless loop of need.",
+      "arrangement_role": {
+        "summary": "Peak chaos.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak hook.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Peak.",
+        "status": "inferred",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "plea"
+      ],
+      "vocabulary_focus": [
+        "愛して"
+      ],
+      "rhyme_features": [
+        "repetition"
+      ],
+      "rhythm_features": [
+        "driving"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "dense",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "inferred"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "heavy",
+    "title_ignition_style": "pun",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "animal metaphors",
+      "internet validation",
+      "cute desperation"
+    ],
+    "mora_control_notes": [
+      "Extremely fast packing, very tough to sing naturally."
+    ],
+    "accent_risk_notes": [
+      "Must sound manic."
+    ],
+    "critic_focus": [
+      "ironic contrast"
+    ],
+    "section_features": [
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "dense",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "hyper-fast vocaloid pop",
+      "carnival bounce"
+    ],
+    "tempo_feels": [
+      "manic",
+      "exhausting"
+    ],
+    "vocal_tones": [
+      "cute but desperate",
+      "robotic precision"
+    ],
+    "production_palette": [
+      "chiptune elements",
+      "orchestral hits"
+    ],
+    "energy_arc": [
+      "relentless"
+    ],
+    "imagery_anchors": [
+      "dying rabbit",
+      "love it"
+    ],
+    "exclude": [
+      "do not make it acoustic"
+    ],
+    "source_basis": [
+      "model_inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [],
+    "warnings": [],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

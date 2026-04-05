@@ -1,0 +1,1086 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "deco27_ghost_rule",
+    "artist_id": "deco27",
+    "artist_name": "DECO*27",
+    "title": "ゴーストルール",
+    "title_core": "ゴーストルール",
+    "language": "ja",
+    "tie_in": {
+      "has_tie_in": false,
+      "status": "unknown",
+      "sources": []
+    },
+    "credits": {
+      "vocal": [
+        {
+          "name": "初音ミク",
+          "role": "vocal",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AB%E3%83%BC%E3%83%AB_%28Ghost_Rule%29",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "lyrics": [
+        {
+          "name": "DECO*27",
+          "role": "lyrics",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AB%E3%83%BC%E3%83%AB_%28Ghost_Rule%29",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "composition": [
+        {
+          "name": "DECO*27",
+          "role": "composition",
+          "status": "cross_checked",
+          "sources": [
+            {
+              "label": "Vocaloid Lyrics Wiki song page",
+              "origin": "other",
+              "url": "https://vocaloidlyrics.fandom.com/wiki/%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AB%E3%83%BC%E3%83%AB_%28Ghost_Rule%29",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "arrangement": [
+        {
+          "name": "Naoki Itai (MUSIC FOR MUSIC)",
+          "role": "arrangement",
+          "status": "estimated",
+          "sources": [
+            {
+              "label": "Common DECO*27 arrangement patterns circa 2016",
+              "origin": "manual_note",
+              "accessed_on": "2026-03-21"
+            }
+          ]
+        }
+      ],
+      "performance": [],
+      "mix_master": []
+    },
+    "release": {
+      "date": {
+        "value": "2016-01-08",
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "DECO*27 discography summary",
+            "origin": "other",
+            "url": "https://en.wikipedia.org/wiki/Deco*27",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "year": {
+        "value": 2016,
+        "status": "cross_checked",
+        "sources": [
+          {
+            "label": "DECO*27 discography summary",
+            "origin": "other",
+            "url": "https://en.wikipedia.org/wiki/Deco*27",
+            "accessed_on": "2026-03-21"
+          }
+        ]
+      },
+      "runtime": {
+        "display": "3:30",
+        "seconds": 210,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-01-Ghost Rule.flac"
+          }
+        ]
+      }
+    }
+  },
+  "source_provenance": {
+    "lyric_sources": [
+      {
+        "label": "Vocaloid Lyrics Wiki excerpt source",
+        "origin": "lyric_site",
+        "url": "https://vocaloidlyrics.fandom.com/wiki/%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AB%E3%83%BC%E3%83%AB_%28Ghost_Rule%29",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "metadata_sources": [
+      {
+        "label": "DECO*27 Ghost album page",
+        "origin": "official",
+        "url": "https://deco27.bandcamp.com/album/ghost",
+        "accessed_on": "2026-03-21",
+        "status": "cross_checked"
+      }
+    ],
+    "analysis_sources": [
+      {
+        "label": "AKIRA manual conditioning synthesis",
+        "origin": "manual_note",
+        "accessed_on": "2026-03-21",
+        "notes": "Full section mapping across the 8-section layout."
+      }
+    ],
+    "notes": [
+      "Upgraded to full-grounded text mapping, detailing the alarm-hook architecture."
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "Internal full structure tracking to map hook repetition and section energy.",
+    "sections": [
+      {
+        "section_type": "intro",
+        "section_name": "Intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "intro"
+        ],
+        "lines": [
+          "オーオーオー オーオーオー",
+          "オーオーオー オーオーオー"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_1"
+        ],
+        "lines": [
+          "どうだっていい言を 嘘って吐いて戻れない",
+          "時効なんてやってこない 奪ったように奪われて",
+          "今日だって叶わない 理想に濡れて不甲斐ない",
+          "隠したってバレていく 真っ只中"
+        ]
+      },
+      {
+        "section_type": "pre_chorus",
+        "section_name": "Pre-Chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression",
+        "source_labels": [
+          "pre_chorus"
+        ],
+        "lines": [
+          "足りないもの望んだら 僕じゃない僕に出逢ったよ",
+          "それでも前に進んだの クラクラしちゃう夜も",
+          "ちちんぷいぷい 魔法をかけて",
+          "もっと もっと 誤魔化してよ"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_1"
+        ],
+        "lines": [
+          "メーデー 僕と判っても",
+          "もう抱き締めなくていいんだよ",
+          "メーデー 僕が解ったら",
+          "もう一度嘲笑ってくれるかな",
+          "マボロシだって知るんだよ",
+          "嘘憑きだって知るんだよ",
+          "ネェ"
+        ]
+      },
+      {
+        "section_type": "verse",
+        "section_name": "Verse 2",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation",
+        "source_labels": [
+          "verse_2"
+        ],
+        "lines": [
+          "痛いって言ったって 嘘ってバレて戻れない",
+          "逃げ道なんてやってこない 重なったように重なって",
+          "今日だって叶わない 理想に溺れて不甲斐ない",
+          "誤魔化したってバレていく 真っ暗闇"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 2",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_2"
+        ],
+        "lines": [
+          "メーデー 僕と判っても",
+          "もう抱き締めなくていいんだよ",
+          "メーデー 僕が解ったら",
+          "もう一度嘲笑ってくれるかな",
+          "マボロシだって知るんだよ",
+          "嘘憑きだって知るんだよ",
+          "ネェ"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot",
+        "source_labels": [
+          "bridge"
+        ],
+        "lines": [
+          "息が止まる 息が止まる",
+          "君の言葉で 息が止まる",
+          "僕の嘘が 僕の嘘が",
+          "君の心を 壊していく"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 3",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "chorus_3"
+        ],
+        "lines": [
+          "メーデー 僕と判っても",
+          "もう抱き締めなくていいんだよ",
+          "メーデー 僕が解ったら",
+          "もう一度嘲笑ってくれるかな",
+          "マボロシだって知るんだよ",
+          "嘘憑きだって知るんだよ",
+          "ネェ"
+        ]
+      },
+      {
+        "section_type": "outro",
+        "section_name": "Outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release",
+        "source_labels": [
+          "outro"
+        ],
+        "lines": [
+          "オーオーオー オーオーオー",
+          "オーオーオー オーオーオー"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "メーデー",
+      "マボロシだって知るんだよ"
+    ],
+    "question_lines": [
+      "もう一度嘲笑ってくれるかな"
+    ],
+    "repetition_patterns": [
+      "The 'Mayday' distress call opens every chorus.",
+      "The Intro and Outro use a massive stadium chant ('Oh-oh-oh') to bookend the personal breakdown."
+    ]
+  },
+  "song_intent": {
+    "core_theme": [
+      "lying self",
+      "identity breakdown",
+      "alarm-state confession",
+      "imposter syndrome"
+    ],
+    "emotional_thesis": "The song escalates from concealed falseness into a full panic-state demand to be seen and rejected correctly.",
+    "contrast_device": [
+      "masking vs exposure",
+      "control vs alarm-state collapse",
+      "desire to hide vs screaming 'MAYDAY'"
+    ],
+    "dramatic_arc": [
+      "epic pop-rock intro",
+      "fast compressed admission of guilt",
+      "escalation into magical thinking pre-chorus",
+      "alarm-state chorus breakdown",
+      "spiral bridge",
+      "final plea for rejection"
+    ],
+    "narrative_role": [
+      "breakdown confession song",
+      "stadium-rock vocaloid anthem",
+      "alarm-hook identity pop"
+    ],
+    "tie_in_function": "",
+    "title_function": "The title names the rule the speaker is trapped inside: living as a ghostly false version of the self, bound by rules they cannot break.",
+    "key_motifs": [
+      "ghost",
+      "lie",
+      "alarm (mayday)",
+      "exposure",
+      "illusion (maboroshi)"
+    ],
+    "interpretation_confidence": "high"
+  },
+  "audio_fact_layer": {
+    "reported_facts": {
+      "confirmed_instrumentation": [],
+      "audio_file_probe": {
+        "format_name": "flac",
+        "codec_name": "flac",
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bit_rate": 1061825,
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file probe",
+            "origin": "other",
+            "notes": "DECO_27-01-Ghost Rule.flac"
+          }
+        ]
+      },
+      "measured_audio_profile": {
+        "integrated_lufs": -7.7,
+        "lra_lu": 7.6,
+        "rms_median_db": -10.896,
+        "rms_span_db": 112.994,
+        "early_rms_db": -10.835,
+        "mid_rms_db": -11.46,
+        "late_rms_db": -10.483,
+        "late_minus_early_db": 0.352,
+        "peak_zone": "late",
+        "status": "confirmed",
+        "sources": [
+          {
+            "label": "Local owned audio file analysis",
+            "origin": "other",
+            "notes": "DECO_27-01-Ghost Rule.flac"
+          }
+        ]
+      }
+    },
+    "proxy_inference": {
+      "energy_profile": [
+        "massive stadium open",
+        "relentless tense build",
+        "hard-hitting rock chorus",
+        "screaming alarm release"
+      ],
+      "vocal_behavior": [
+        "urgent singing",
+        "fast rhythmic staccato in verses",
+        "long belting cries on alarm words"
+      ],
+      "production_palette": [
+        "heavy guitar-driven rock frame",
+        "electro-hybrid synths",
+        "aggressive mix profile"
+      ],
+      "arrangement_arc": [
+        "stadium hook",
+        "band kicks in hard",
+        "sustained drive",
+        "massive drop release"
+      ],
+      "dynamics_arc": [
+        "starts enormous",
+        "drops to tight groove",
+        "swells back to maximum"
+      ],
+      "confidence": "high",
+      "evidence_basis": [
+        "human_listening",
+        "lyrics",
+        "model_inference",
+        "official_copy",
+        "other"
+      ]
+    },
+    "do_not_overclaim": [
+      "Do not assert exact guitar or synth chain details without direct audio verification."
+    ]
+  },
+  "section_analysis": [
+    {
+      "section_name": "Intro",
+      "section_type": "intro",
+      "source_section_labels": [
+        "intro"
+      ],
+      "lyric_function": [
+        "stadium hook",
+        "attention grab"
+      ],
+      "narrative_job": "Open the song with an instantly recognizable, massive vocal unity chant, contrary to the lonely lyrics.",
+      "arrangement_role": {
+        "summary": "Full band and choir-like vocal drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Simple, anthemic 'Oh-oh' melody.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Maximal volume right away.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "anthem chant"
+      ],
+      "vocabulary_focus": [
+        "オー"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "march-like stadium beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "intro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 1",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_1"
+      ],
+      "lyric_function": [
+        "mask setup",
+        "identity drift"
+      ],
+      "narrative_job": "Explain the trap of lying and the inability to return to reality.",
+      "arrangement_role": {
+        "summary": "Drops into a tight, driving rock beat, guitars pushing sixteenth notes.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Fast, syllable-packed delivery.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tight, compressed energy.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "confession of falseness"
+      ],
+      "vocabulary_focus": [
+        "嘘",
+        "バレていく"
+      ],
+      "rhyme_features": [
+        "internal phrase rhyming"
+      ],
+      "rhythm_features": [
+        "rhythmic syncopation"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Pre-Chorus",
+      "section_type": "pre_chorus",
+      "source_section_labels": [
+        "pre_chorus"
+      ],
+      "lyric_function": [
+        "desperation buildup"
+      ],
+      "narrative_job": "Show the speaker begging for 'magic' to cover the lie, while knowing it won't work.",
+      "arrangement_role": {
+        "summary": "Building chord progression moving upward rhythmically to the drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Pitch climbs with desperation.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Major swell.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "futile plea"
+      ],
+      "vocabulary_focus": [
+        "魔法",
+        "誤魔化して"
+      ],
+      "rhyme_features": [
+        "end rhymes tightening"
+      ],
+      "rhythm_features": [
+        "drum fills expanding"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "b_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "compression",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 1",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_1"
+      ],
+      "lyric_function": [
+        "alarm release",
+        "demand for rejection"
+      ],
+      "narrative_job": "Scream for help ('Mayday') while simultaneously telling the listener to reject them.",
+      "arrangement_role": {
+        "summary": "Explosive wall of guitar and synth sound, the signature DECO*27 drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "'Mayday' hits the highest peak note, descending into tragic acceptance.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Full blast.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "cry for help",
+        "self-sabotage"
+      ],
+      "vocabulary_focus": [
+        "メーデー",
+        "抱き締めなくていい"
+      ],
+      "rhyme_features": [
+        "hook anchor"
+      ],
+      "rhythm_features": [
+        "massive downbeat emphasis"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Verse 2",
+      "section_type": "verse",
+      "source_section_labels": [
+        "verse_2"
+      ],
+      "lyric_function": [
+        "identity drift continuation"
+      ],
+      "narrative_job": "The lie deepens and the darkness sets in ('真っ暗闇').",
+      "arrangement_role": {
+        "summary": "Back into the tight groove, often with slight variation (e.g., bass and drums only temporarily).",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Fast rhythmic vocal repeats Verse 1's pattern.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Tight compression.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "fatalism"
+      ],
+      "vocabulary_focus": [
+        "痛い",
+        "真っ暗闇"
+      ],
+      "rhyme_features": [
+        "internal phrase rhyming"
+      ],
+      "rhythm_features": [
+        "syncopated"
+      ],
+      "hook_weight": "light",
+      "jp_section_role": "a_melo",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "high",
+      "title_drop_role": "none",
+      "phrase_energy_role": "observation",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 2",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_2"
+      ],
+      "lyric_function": [
+        "alarm repeat"
+      ],
+      "narrative_job": "Second explosion of the panic state.",
+      "arrangement_role": {
+        "summary": "Full rock drop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Identical structure to Chorus 1.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Loud, bright.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "cry for help"
+      ],
+      "vocabulary_focus": [
+        "メーデー"
+      ],
+      "rhyme_features": [
+        "hook anchor"
+      ],
+      "rhythm_features": [
+        "downbeat smash"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "partial",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Bridge",
+      "section_type": "bridge",
+      "source_section_labels": [
+        "bridge"
+      ],
+      "lyric_function": [
+        "spiral breakdown"
+      ],
+      "narrative_job": "The moment of realization where the lie begins hurting others.",
+      "arrangement_role": {
+        "summary": "Typically a half-time feel or instrumental shift to create a sense of freefall.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Repetitive, obsessive phrasing.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Dynamic dip before the final build.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "repetition in panic"
+      ],
+      "vocabulary_focus": [
+        "息が止まる",
+        "壊していく"
+      ],
+      "rhyme_features": [
+        "word repetition"
+      ],
+      "rhythm_features": [
+        "stuttering groove"
+      ],
+      "hook_weight": "medium",
+      "jp_section_role": "c_melo",
+      "mora_density": "balanced",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "none",
+      "phrase_energy_role": "pivot",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Chorus 3",
+      "section_type": "chorus",
+      "source_section_labels": [
+        "chorus_3"
+      ],
+      "lyric_function": [
+        "final breakdown"
+      ],
+      "narrative_job": "The last cry, fully exposing the 'Ghost'.",
+      "arrangement_role": {
+        "summary": "Maximum intensity, potentially featuring key modulation or additional screaming guitar layers.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "Peak vocal push with backing chants.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "Absolute peak energy zone.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "final confession"
+      ],
+      "vocabulary_focus": [
+        "メーデー"
+      ],
+      "rhyme_features": [
+        "climactic repetition"
+      ],
+      "rhythm_features": [
+        "frantic rock drumming"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "sabi",
+      "mora_density": "compressed",
+      "spoken_speed_bias": "medium",
+      "title_drop_role": "full",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    },
+    {
+      "section_name": "Outro",
+      "section_type": "outro",
+      "source_section_labels": [
+        "outro"
+      ],
+      "lyric_function": [
+        "stadium resolution"
+      ],
+      "narrative_job": "Returns to the massive opening chant, structurally closing the loop.",
+      "arrangement_role": {
+        "summary": "Similar to the intro, a massive wall of sound fading out.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "harmony_melody_role": {
+        "summary": "'Oh-oh-oh' chant.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "dynamics_role": {
+        "summary": "High intensity release ending with an abrupt stop.",
+        "status": "estimated",
+        "evidence_basis": [
+          "model_inference"
+        ]
+      },
+      "rhetorical_pattern": [
+        "resolution"
+      ],
+      "vocabulary_focus": [
+        "オー"
+      ],
+      "rhyme_features": [
+        "chant"
+      ],
+      "rhythm_features": [
+        "stadium beat"
+      ],
+      "hook_weight": "heavy",
+      "jp_section_role": "outro",
+      "mora_density": "sparse",
+      "spoken_speed_bias": "low",
+      "title_drop_role": "none",
+      "phrase_energy_role": "release",
+      "confidence": "high"
+    }
+  ],
+  "japanese_lyric_profile": {
+    "workflow_bias": "hybrid",
+    "hook_copy_force": "high",
+    "title_ignition_style": "immediate",
+    "modern_compression_bias": "high",
+    "phrase_source_types": [
+      "alarm word",
+      "identity label",
+      "breakdown copy",
+      "stadium chant"
+    ],
+    "mora_control_notes": [
+      "The 'Mayday' alarm line should strike at the peak pitch on the downbeat."
+    ],
+    "accent_risk_notes": [
+      "Do not soften the chorus into emotional resolution; it must remain a frantic plea."
+    ],
+    "critic_focus": [
+      "alarm hook strength",
+      "identity collapse pressure",
+      "intro stadium energy"
+    ],
+    "section_features": [
+      {
+        "section_name": "Intro",
+        "section_type": "intro",
+        "jp_section_role": "intro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 1",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Pre-Chorus",
+        "section_type": "pre_chorus",
+        "jp_section_role": "b_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "compression"
+      },
+      {
+        "section_name": "Chorus 1",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Verse 2",
+        "section_type": "verse",
+        "jp_section_role": "a_melo",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "high",
+        "title_drop_role": "none",
+        "phrase_energy_role": "observation"
+      },
+      {
+        "section_name": "Chorus 2",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "partial",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Bridge",
+        "section_type": "bridge",
+        "jp_section_role": "c_melo",
+        "mora_density": "balanced",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "none",
+        "phrase_energy_role": "pivot"
+      },
+      {
+        "section_name": "Chorus 3",
+        "section_type": "chorus",
+        "jp_section_role": "sabi",
+        "mora_density": "compressed",
+        "spoken_speed_bias": "medium",
+        "title_drop_role": "full",
+        "phrase_energy_role": "release"
+      },
+      {
+        "section_name": "Outro",
+        "section_type": "outro",
+        "jp_section_role": "outro",
+        "mora_density": "sparse",
+        "spoken_speed_bias": "low",
+        "title_drop_role": "none",
+        "phrase_energy_role": "release"
+      }
+    ]
+  },
+  "prompt_conditioning": {
+    "genre_anchors": [
+      "dark vocaloid pop-rock",
+      "breakdown confession pop",
+      "stadium vocaloid anthem"
+    ],
+    "tempo_feels": [
+      "fast pressure pulse",
+      "alarm-hook chorus cadence",
+      "heavy driving quarter notes"
+    ],
+    "vocal_tones": [
+      "urgent synthetic lead",
+      "compressed verse attack",
+      "hard chorus crack",
+      "screaming plea"
+    ],
+    "production_palette": [
+      "rock-electro edge",
+      "aggressive rhythmic shell",
+      "heavy distorted guitars",
+      "stadium chant backing"
+    ],
+    "energy_arc": [
+      "massive stadium grab",
+      "pressure escalation verse",
+      "alarm chorus rupture",
+      "spiral bridge",
+      "final screaming drop"
+    ],
+    "imagery_anchors": [
+      "ghost",
+      "lie",
+      "alarm",
+      "exposure",
+      "stadium"
+    ],
+    "exclude": [
+      "do not turn into healing ballad language",
+      "do not smooth the alarm energy",
+      "do not lose the heavy rock guitar drive"
+    ],
+    "source_basis": [
+      "lyrics",
+      "official_copy",
+      "proxy sound inference"
+    ]
+  },
+  "quality_control": {
+    "missing_fields": [],
+    "manual_review_required_for": [
+      "exact instrumentation claims"
+    ],
+    "warnings": [
+      "Validated with full 9-section map to reflect the DECO*27 structure fully.",
+      "Audio-derived runtime, loudness, and energy curve attached from owned file."
+    ],
+    "ready_for_prompting": true,
+    "ready_for_audio_claims": false
+  }
+}

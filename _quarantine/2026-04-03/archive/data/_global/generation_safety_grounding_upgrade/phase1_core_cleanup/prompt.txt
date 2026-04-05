@@ -1,0 +1,61 @@
+This task is phase1_core_cleanup.
+
+Goal:
+- Process only `core_cleanup` records in the generation_safety grounding queue.
+- Records that only need scaffold grounding replacement and surface cleanup.
+
+Important:
+- Do not modify engine code.
+- Keep existing track_id values.
+- Submit merge-friendly JSON only.
+- Patch JSON is allowed if the merged record becomes planner_safe.
+- Use the bundled `source_records/` copies inside each artist package as the editing reference.
+- Return one JSON file per track into the matching artist `incoming/` directory under this phase package.
+- Do not submit mojibake, replacement characters, broken byte sequences, or unreadable text.
+- Do not replace placeholders with generic English summaries or meta commentary.
+- Do not replace placeholders with inferred paraphrases; edited `sections` and `hook_lines` must use clean grounded Japanese text copied or tightly aligned from bundled `source_records/`.
+- Do not add English cleanup commentary to `source_provenance.notes`, `song_intent.emotional_thesis`, or `lyric_ground_truth.copyright_handling_note`.
+- Before submission, verify zero replacement characters, zero mojibake, zero scaffold phrases, and zero English/meta commentary anywhere in edited fields.
+- If a track cannot be grounded into clean UTF-8 text aligned to the bundled source record, leave it unsubmitted.
+
+Required result per record:
+- replace placeholder section lines and hook lines with section-complete grounding
+- remove scaffold and placeholder language from notes and lyric fields
+- keep narrative_role and provenance unchanged unless the bundled record itself proves they are wrong
+- keep sections and hook lines free of mojibake and generic English rewrite lines
+- keep notes, thesis, and copyright fields free of English cleanup commentary
+- merged record must no longer trigger `partial_grounding` or `surface_noise_risk`
+
+Submission format:
+- one merge-friendly JSON patch per track
+- filename pattern: `<track_id>.json`
+- update only the fields needed to clear the listed blockers
+
+Tracks:
+iyowa:
+- iyowa_1000_nen_ikiteiru
+- iyowa_apricot
+- iyowa_heat_abnormal
+
+kairiki_bear:
+- kairiki_bear_alkali_rettoushou
+- kairiki_bear_shippaisaku_shoujo
+
+kanaria:
+- kanaria_daino_tekina_rendezvous
+- kanaria_eye
+- kanaria_mira
+
+maretu:
+- maretu_darling
+- maretu_umitagari
+- maretu_white_happy
+
+neru:
+- neru_abstract_nonsense
+- neru_law_evading_rock
+- neru_lost_ones_weeping
+
+syudou:
+- syudou_bakushou
+- syudou_call_boy

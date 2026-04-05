@@ -1,0 +1,38 @@
+{
+  "artist_id": "kanaria",
+  "track_id": "kanaria_daino_tekina_rendezvous",
+  "title": "大脳的なランデブー",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "scientific_noun_event",
+  "hook_behavior": [
+    "chill indie groove",
+    "dry delivery"
+  ],
+  "section_flow_guess": [
+    "verse_cynical",
+    "prechorus_steady",
+    "chorus_dry_hook",
+    "post_chorus_groove",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "brains",
+    "meetings",
+    "city streets",
+    "mundane facts"
+  ],
+  "emotional_arc": [
+    "apathy",
+    "slight amusement",
+    "detachment"
+  ],
+  "leakage_watchouts": [
+    "prevent overdrive guitars; stick to indie rock tones"
+  ],
+  "prompt_seed_terms": [
+    "indie rock",
+    "dry vocal",
+    "syncopated bass"
+  ],
+  "grounding_status": "research_ready"
+}

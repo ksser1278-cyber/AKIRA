@@ -1,0 +1,37 @@
+{
+  "artist_id": "maretu",
+  "track_id": "maretu_white_happy",
+  "title": "ホワイトハッピー",
+  "likely_mode": "ironic_meta",
+  "title_pattern": "sarcastic_noun",
+  "hook_behavior": [
+    "upbeat major key swing",
+    "hidden noise"
+  ],
+  "section_flow_guess": [
+    "verse_cheerful",
+    "prechorus_cracks",
+    "chorus_manic_joy",
+    "bridge_noise",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "white lies",
+    "forced smiles",
+    "hidden stains"
+  ],
+  "emotional_arc": [
+    "fake happiness",
+    "suppressed rage",
+    "collapse"
+  ],
+  "leakage_watchouts": [
+    "the music MUST sound genuinely happy until the bridge destroys it"
+  ],
+  "prompt_seed_terms": [
+    "happy ska metal",
+    "major key trap",
+    "forced smile"
+  ],
+  "grounding_status": "research_ready"
+}

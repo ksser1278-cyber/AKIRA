@@ -1,0 +1,37 @@
+{
+  "artist_id": "syudou",
+  "track_id": "syudou_gamble",
+  "title": "ギャンブル",
+  "likely_mode": "direct_emotional_pop",
+  "title_pattern": "risk_noun",
+  "hook_behavior": [
+    "high stakes dramatic anthem",
+    "orchestral integration"
+  ],
+  "section_flow_guess": [
+    "verse_betting",
+    "prechorus_rising_stakes",
+    "chorus_orchestral_explosion",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "chips",
+    "cards",
+    "life on the line",
+    "sweat"
+  ],
+  "emotional_arc": [
+    "high stakes thrill",
+    "desperation",
+    "glory"
+  ],
+  "leakage_watchouts": [
+    "use dramatic strings and brass alongside a trap/rock beat"
+  ],
+  "prompt_seed_terms": [
+    "orchestral rock",
+    "dramatic trap",
+    "high stakes anthem"
+  ],
+  "grounding_status": "research_ready"
+}

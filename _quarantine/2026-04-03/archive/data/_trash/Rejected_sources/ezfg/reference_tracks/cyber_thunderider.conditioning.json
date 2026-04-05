@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_type": "track_conditioning_record",
+  "track_identity": {
+    "track_id": "ezfg_cyber_thunderider",
+    "artist_id": "ezfg",
+    "title": "サイバーサンダーサイダー",
+    "bpm": 138,
+    "key": "A Minor",
+    "language": "ja"
+  },
+  "lyric_ground_truth": {
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "mora_density": "rigid",
+        "lines": [
+          "サイバーサンダーサイダー 0 1",
+          "僕らの声を 響かせて",
+          "電気の海に 飛び込んで",
+          "明日の扉を 叩くんだ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 14, "role": "cyber_setup", "tech": "Title + Binary logic start"},
+          {"line": 2, "mora": 11, "role": "vocal_release", "tech": "Resonating voice in digital space"},
+          {"line": 3, "mora": 11, "role": "environmental", "tech": "Sea of electricity metaphor"},
+          {"line": 4, "mora": 12, "role": "action", "tech": "Knocking on the future's door"}
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "mora_density": "locked",
+        "lines": [
+          "サイバーサンダーサイ더 踊りましょう",
+          "1와 0의 狭間の中で",
+          "全てを忘れて 駆け抜けて",
+          "最後の一瞬 刻むんだ"
+        ],
+        "analysis": [
+          {"line": 1, "mora": 16, "role": "title_hook", "tech": "Bilingual 'Dance' invitation"},
+          {"line": 2, "mora": 12, "role": "binary_climax", "tech": "In the gap of 1 and 0"},
+          {"line": 3, "mora": 13, "role": "liberation", "tech": "Running through the data"},
+          {"line": 4, "mora": 11, "role": "final_stamp", "tech": "Engraving the last moment"}
+        ]
+      }
+    ]
+  },
+  "song_intent": {
+    "core_theme": ["cyber-minimalism", "digital liberation", "rhythmic precision"],
+    "emotional_thesis": "Emotions are just packets of data; by embracing the binary limits of the system, we can achieve a state of perfect, electric freedom."
+  },
+  "quality_control": {
+    "record_stage": "validated",
+    "ready_for_prompting": true
+  }
+}

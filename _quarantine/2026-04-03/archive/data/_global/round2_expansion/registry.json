@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "record_type": "round2_expansion_registry",
+  "candidate_count": 40,
+  "seed_count": 8,
+  "artists": [
+    {
+      "artist_id": "deco27",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 4,
+      "track_ids": [
+        "deco27_hibana",
+        "deco27_mozaik_role",
+        "deco27_yowamushi_montblanc",
+        "deco27_salamander",
+        "deco27_android_girl"
+      ]
+    },
+    {
+      "artist_id": "iyowa",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "iyowa_kyu_kurarin",
+        "iyowa_1000_nen_ikiteiru",
+        "iyowa_apricot",
+        "iyowa_heat_abnormal",
+        "iyowa_ta_ku_san"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "kairiki_bear_ruma",
+        "kairiki_bear_angel",
+        "kairiki_bear_alkali_rettoushou",
+        "kairiki_bear_lemmingming",
+        "kairiki_bear_shippaisaku_shoujo"
+      ]
+    },
+    {
+      "artist_id": "kanaria",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "kanaria_eye",
+        "kanaria_mira",
+        "kanaria_yoidore_shirazu",
+        "kanaria_requiem",
+        "kanaria_daino_tekina_rendezvous"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "maretu_suji",
+        "maretu_umitagari",
+        "maretu_white_happy",
+        "maretu_koukatsu",
+        "maretu_darling"
+      ]
+    },
+    {
+      "artist_id": "neru",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "neru_tokyo_teddy_bear",
+        "neru_lost_ones_weeping",
+        "neru_law_evading_rock",
+        "neru_snobbism",
+        "neru_abstract_nonsense"
+      ]
+    },
+    {
+      "artist_id": "pinocchiop",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 4,
+      "track_ids": [
+        "pinocchiop_slow_motion",
+        "pinocchiop_apple_dot_com",
+        "pinocchiop_motivation_is_dead",
+        "pinocchiop_nee_nee_nee",
+        "pinocchiop_suki_na_koto_dake_de_ii_desu"
+      ]
+    },
+    {
+      "artist_id": "syudou",
+      "candidate_count": 5,
+      "seeded_count": 1,
+      "high_priority_count": 3,
+      "track_ids": [
+        "syudou_bitter_choco_decoration",
+        "syudou_call_boy",
+        "syudou_bakushou",
+        "syudou_cute_na_kanojo",
+        "syudou_gamble"
+      ]
+    }
+  ]
+}

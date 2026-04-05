@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-30T13:28:40Z",
+  "approved_by": "USER",
+  "modes": {
+    "dark_cute_breakdown": {
+      "proposed_mora_offset": 0.1,
+      "reason": "Mastery Alignment drift detected: 0.749",
+      "applied_at": "2026-03-30T13:28:40Z"
+    }
+  }
+}

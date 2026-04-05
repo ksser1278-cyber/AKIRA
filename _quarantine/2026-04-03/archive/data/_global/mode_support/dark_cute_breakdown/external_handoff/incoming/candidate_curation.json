@@ -1,0 +1,59 @@
+{
+  "mode_id": "dark_cute_breakdown",
+  "artist_candidates": [
+    {
+      "artist_id": "deco27",
+      "target_track_count": 2,
+      "candidate_track_ids": [
+        "deco27_poison_apple",
+        "deco27_zombie"
+      ],
+      "candidate_titles": [
+        "毒林檎",
+        "ゾンビ"
+      ],
+      "notes": [
+        "mode-aligned support tracks for dark cute breakdown"
+      ]
+    },
+    {
+      "artist_id": "pinocchiop",
+      "target_track_count": 4,
+      "candidate_track_ids": [
+        "pinocchiop_mushikui_psychedelism"
+      ],
+      "candidate_titles": [
+        "虫喰いサイケデリズム"
+      ],
+      "notes": [
+        "dark cuteness breakdown style"
+      ]
+    },
+    {
+      "artist_id": "kairiki_bear",
+      "target_track_count": 4,
+      "candidate_track_ids": [
+        "kairiki_bear_bug"
+      ],
+      "candidate_titles": [
+        "バグ"
+      ],
+      "notes": [
+        "hyperactive dark breakdown"
+      ]
+    },
+    {
+      "artist_id": "maretu",
+      "target_track_count": 4,
+      "candidate_track_ids": [
+        "maretu_brain_revolution_girl"
+      ],
+      "candidate_titles": [
+        "脳内革命ガール"
+      ],
+      "notes": [
+        "dark chaotic subculture"
+      ]
+    }
+  ]
+}

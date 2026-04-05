@@ -1,0 +1,38 @@
+{
+  "artist_id": "syudou",
+  "track_id": "syudou_cute_na_kanojo",
+  "title": "キュートなカノジョ",
+  "likely_mode": "dark_cute_breakdown",
+  "title_pattern": "sarcastic_description",
+  "hook_behavior": [
+    "minimalist funky bassline",
+    "whispered threats"
+  ],
+  "section_flow_guess": [
+    "verse_funky",
+    "prechorus_whisper",
+    "chorus_sarcastic_groove",
+    "bridge_dark",
+    "chorus_final"
+  ],
+  "imagery_classes": [
+    "makeup",
+    "knives",
+    "cute clothes",
+    "blood"
+  ],
+  "emotional_arc": [
+    "sarcastic love",
+    "underlying threat",
+    "toxic groove"
+  ],
+  "leakage_watchouts": [
+    "avoid heavy guitars; rely on funky, bouncy basslines to contrast the dark lyrics"
+  ],
+  "prompt_seed_terms": [
+    "dark funk pop",
+    "minimalist bass",
+    "whispered threat"
+  ],
+  "grounding_status": "research_ready"
+}

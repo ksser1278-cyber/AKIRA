@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "kairiki_bear_shippaisaku_shoujo"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "あぁ、ほら、また間違えた",
+          "これで何度？ 何回目？"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "もっともっと自然に笑えばいいかな",
+          "私は、誰からも愛されないの？"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "わたしって失敗作だってさって、いらない子なんだって",
+          "痛い、痛い、この胸が"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "むき出して、痛い痛い",
+          "強がって、痛い痛い"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "わたしって失敗作だってさって、いらない子なんだって",
+          "息詰まって、痛い痛いんだよ",
+          "さよなら、失敗作の私"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "わたしって失敗作だってさって",
+      "痛い、痛い",
+      "息詰まって、痛い痛いんだよ"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "自己否定と疎外感に苛まれる、痛切な孤独の叫び。"
+  }
+}

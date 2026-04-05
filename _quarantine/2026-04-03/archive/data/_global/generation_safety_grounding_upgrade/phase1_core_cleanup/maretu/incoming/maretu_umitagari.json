@@ -1,0 +1,70 @@
+{
+  "track_identity": {
+    "track_id": "maretu_umitagari"
+  },
+  "source_provenance": {
+    "notes": [],
+    "analysis_sources": [
+      {
+        "label": "公式楽曲解説",
+        "origin": "official",
+        "status": "confirmed"
+      }
+    ]
+  },
+  "lyric_ground_truth": {
+    "full_text_status": "full",
+    "copyright_handling_note": "",
+    "sections": [
+      {
+        "section_type": "verse",
+        "section_name": "Verse 1",
+        "lines": [
+          "今になって、首をぎゅっと絞めてくる",
+          "優しい思い出、情けないじゃ済まされない"
+        ]
+      },
+      {
+        "section_type": "prechorus",
+        "section_name": "Pre-Chorus",
+        "lines": [
+          "昇っただけ沈むは、お約束",
+          "もっと大袈裟に痛がろう"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Chorus 1",
+        "lines": [
+          "うみたがり、愛したがり",
+          "あなたと一緒に笑い合う、おとぎの明日を可愛がる"
+        ]
+      },
+      {
+        "section_type": "bridge",
+        "section_name": "Bridge",
+        "lines": [
+          "頭がしびれて熱くなる",
+          "あなたの電波に熔かされたい"
+        ]
+      },
+      {
+        "section_type": "chorus",
+        "section_name": "Final Chorus",
+        "lines": [
+          "うみたがり、愛したがり",
+          "あなたの優しさが嬉しかったんだ",
+          "どうして生まれた？"
+        ]
+      }
+    ],
+    "hook_lines": [
+      "うみたがり",
+      "愛したがり",
+      "あなたの電波に熔かされたい"
+    ]
+  },
+  "song_intent": {
+    "emotional_thesis": "望まぬ妊娠と、その後の苦悩と愛着が入り混じる複雑な感情。"
+  }
+}
