@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AKIRA Wiki Page Metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "page_id",
+    "page_type",
+    "title",
+    "track_ids",
+    "producer_ids",
+    "voicebank_ids",
+    "mode_ids",
+    "source_paths",
+    "wiki_links"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "akira_wiki_page"
+    },
+    "page_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "page_type": {
+      "type": "string",
+      "enum": [
+        "overview",
+        "track",
+        "producer",
+        "voicebank",
+        "mode",
+        "technique",
+        "sound",
+        "source",
+        "patch"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "track_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "producer_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "voicebank_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "mode_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "wiki_links": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

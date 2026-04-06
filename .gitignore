@@ -97,3 +97,6 @@ lyrics/
 reports/
 수정본/
 *.tmp.*
+
+# Skip AI wiki tracks indexing
+wiki/tracks/

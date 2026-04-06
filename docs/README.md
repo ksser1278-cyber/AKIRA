@@ -25,6 +25,8 @@ Use the files below as the current starting point.
   - rule for using VocaDB, Vocaloid Wiki, and other catalog sources as metadata-only support
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\vocaloid-corpus-inclusion-policy.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\vocaloid-corpus-inclusion-policy.md)
   - scope rule for keeping the large reference corpus strictly Vocaloid-focused
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-wiki-layer.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-wiki-layer.md)
+  - persistent wiki layer between raw corpus inputs and downstream generation assets
 - [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\vocaloid_metadata_10k_roadmap.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\vocaloid_metadata_10k_roadmap.md)
   - operating roadmap for scaling the Vocaloid metadata corpus to 10,000 tracks
 - [C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\rights_cleared_corpus_acquisition_plan.md](C:\JPop_Songwriter\AKIRA ENGINE\reports\planning\rights_cleared_corpus_acquisition_plan.md)

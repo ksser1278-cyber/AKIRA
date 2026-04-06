@@ -188,13 +188,14 @@ def build_lyric_technique_acquisition_queue(
 ) -> dict[str, Any]:
     corpus_root = corpus_root.resolve()
     output_root = output_root.resolve()
-    accepted_dir = corpus_root / "accepted"
     records_dir = output_root / "records"
     records_dir.mkdir(parents=True, exist_ok=True)
 
     records: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
-    for path in sorted(accepted_dir.glob("vocadb_*.json")):
+    # Support both flat 'accepted' folder and nested bulk folders from continuous cycles
+    # Specifically search for vocadb_*.json within any 'accepted' subdirectories
+    for path in sorted(corpus_root.rglob("accepted/vocadb_*.json")):
         try:
             payload = _load_json(path)
         except Exception as exc:
