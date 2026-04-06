@@ -100,3 +100,6 @@ reports/
 
 # Skip AI wiki tracks indexing
 wiki/tracks/
+
+# Antigravity artifacts
+__ANTIGRAVITY_RESPONDING.md
