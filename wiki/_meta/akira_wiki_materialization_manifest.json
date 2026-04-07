@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "record_type": "akira_wiki_materialization_manifest",
   "inputs": {
-    "canonical_corpus_root": "C:\\JPop_Songwriter\\AKIRA ENGINE\\datasets\\_global\\vocaloid_metadata_canonical\\tier1_map_seed",
-    "generation_root": "C:\\JPop_Songwriter\\AKIRA ENGINE\\datasets\\training\\generation_profiles\\tier1_map_seed_pilot10_sound_reviewed_v3",
-    "readiness_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\planning\\generation_readiness_audit\\tier1_map_seed_pilot10_sound_reviewed_v3\\generation_readiness_audit.json"
+    "canonical_corpus_root": "C:\\JPop_Songwriter\\AKIRA ENGINE\\datasets\\training\\lyric_technique_acquisition_queue\\batch_a100",
+    "generation_root": "C:\\JPop_Songwriter\\AKIRA ENGINE\\lyrics\\normalized",
+    "readiness_manifest_path": "C:\\JPop_Songwriter\\AKIRA ENGINE\\reports\\planning\\generation_readiness_audit\\batch_a100\\generation_readiness_audit.json"
   },
   "counts": {
-    "track_pages": 88,
-    "prompt_ready_tracks": 10,
-    "professional_target_tracks": 10
+    "track_pages": 45,
+    "prompt_ready_tracks": 45,
+    "professional_target_tracks": 45
   },
   "outputs": {
     "wiki_root": "C:\\JPop_Songwriter\\AKIRA ENGINE\\wiki",

@@ -48,6 +48,7 @@ def _single_section_map(lines: list[str], title: str) -> dict[str, Any]:
             {
                 "section": "full_lyric",
                 "line_count": len(lines),
+                "text_indices": [0, len(lines)]
             }
         ],
         "hook_lines": _detect_hook_lines(lines, title),
@@ -110,7 +111,10 @@ def auto_ground_vocadb_workspace_from_url_map(
         lyric_asset_path.write_text("\n".join(lyric_lines) + "\n", encoding="utf-8")
         write_json(section_map_path, _single_section_map(lyric_lines, title))
 
-        lyric_sources = list(record.get("grounding_sources", {}).get("lyric_sources", []))
+        if "grounding_sources" not in record:
+            record["grounding_sources"] = {}
+        
+        lyric_sources = list(record["grounding_sources"].get("lyric_sources", []))
         lyric_sources.append(
             {
                 "label": _safe_text(config.get("label")) or DEFAULT_SOURCE_LABEL,
@@ -122,7 +126,7 @@ def auto_ground_vocadb_workspace_from_url_map(
                 ),
             }
         )
-        official_uploads = list(record.get("grounding_sources", {}).get("official_uploads", []))
+        official_uploads = list(record["grounding_sources"].get("official_uploads", []))
         if _safe_text(config.get("official_upload")) and _safe_text(config.get("official_upload")) not in official_uploads:
             official_uploads.append(_safe_text(config.get("official_upload")))
 

@@ -1,17 +1,52 @@
 # Generation Readiness
 
-- prompt-ready tracks: `10`
-- professional-target tracks: `10`
+- prompt-ready tracks: `45`
+- professional-target tracks: `45`
 
 ## Professional Target Tracks
 
 - `vocadb_123661`
 - `vocadb_127519`
 - `vocadb_14294`
+- `vocadb_14339`
+- `vocadb_14474`
+- `vocadb_149275`
 - `vocadb_170353`
+- `vocadb_170354`
+- `vocadb_199709`
+- `vocadb_21671`
 - `vocadb_255477`
 - `vocadb_255478`
-- `vocadb_54261`
-- `vocadb_71295`
-- `vocadb_79672`
+- `vocadb_274624`
+- `vocadb_276642`
+- `vocadb_286030`
+- `vocadb_299495`
+- `vocadb_305369`
+- `vocadb_311404`
+- `vocadb_32547`
+- `vocadb_333923`
+- `vocadb_347879`
+- `vocadb_356953`
+- `vocadb_359223`
+- `vocadb_376358`
+- `vocadb_386958`
+- `vocadb_399442`
+- `vocadb_400359`
+- `vocadb_412165`
+- `vocadb_4419`
+- `vocadb_445823`
+- `vocadb_467850`
+- `vocadb_485151`
+- `vocadb_5245`
+- `vocadb_525062`
+- `vocadb_54556`
+- `vocadb_568735`
+- `vocadb_573589`
+- `vocadb_577906`
+- `vocadb_578843`
+- `vocadb_692288`
+- `vocadb_692574`
+- `vocadb_692910`
+- `vocadb_692936`
+- `vocadb_693114`
 - `vocadb_8479`

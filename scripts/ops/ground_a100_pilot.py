@@ -10,62 +10,14 @@ from src.akira_engine.vocadb_lyric_grounding_auto import auto_ground_vocadb_work
 def ground_pilot():
     workspace_root = project_root / "datasets/training/lyric_technique_acquisition_queue/batch_a100"
     
-    url_map = {
-        "vocadb_5245": {
-            "lyric_url": "https://utaten.com/lyric/nm14500147/",
-            "site_preset": "utaten",
-            "label": "UtaTen - ＊サヨナラ、ワールドエンド。",
-            "notes": "sasakure.UK priority grounding."
-        },
-        "vocadb_4476": {
-            "lyric_url": "https://utaten.com/lyric/jb11105021/",
-            "site_preset": "utaten",
-            "label": "UtaTen - ・・・ソバニ",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_12954": {
-            "lyric_url": "https://utaten.com/lyric/jb21010321/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 「ぼく」自身のために",
-            "notes": "fatmanP priority grounding."
-        },
-        "vocadb_1075": {
-            "lyric_url": "https://utaten.com/lyric/jb11105020/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 1000001Rooms",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_1524": {
-            "lyric_url": "https://utaten.com/lyric/jb11005085/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 121",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_1525": {
-            "lyric_url": "https://utaten.com/lyric/jb11005083/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 122",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_1534": {
-            "lyric_url": "https://utaten.com/lyric/jb11005084/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 123",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_1509": {
-            "lyric_url": "https://utaten.com/lyric/jb11005082/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 128",
-            "notes": "AVTechNO! priority grounding."
-        },
-        "vocadb_1510": {
-            "lyric_url": "https://utaten.com/lyric/jb11005081/",
-            "site_preset": "utaten",
-            "label": "UtaTen - 129",
-            "notes": "AVTechNO! priority grounding."
-        }
-    }
+    import json
+    url_map_path = workspace_root / "url_map_a100.json"
+    if url_map_path.exists():
+        with open(url_map_path, "r", encoding="utf-8") as f:
+            url_map = json.load(f)
+    else:
+        print("Warning: url_map_a100.json not found. Using defaults.")
+        url_map = {}
     
     # Ensure records exist in 'incoming' for the auto_grounding script
     # The script looks into 'incoming' and moves to 'accepted'
