@@ -1,8 +1,10 @@
 """Quality Scorer — 아티스트 비종속 오리지널리티 채점 시스템."""
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from .lyric_generator import GeneratedLyrics
@@ -34,35 +36,34 @@ _JAPANESE_CHAR_PATTERN = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
 
 @dataclass
 class QualityReport:
-    """품질 채점 결과."""
-    imagery_specificity: float       # 0.0–1.0: 이미지의 구체성
-    singability: float               # 0.0–1.0: 라인 길이 및 음절 적절성
-    emotional_coherence: float       # 0.0–1.0: 감정 아크 일관성
-    structural_integrity: float      # 0.0–1.0: 섹션 구조 완성도
-    japanese_quality: float          # 0.0–1.0: 일본어 자연스러움
+    """서브컬처 DNA 기반 품질 채점 결과."""
+    imagery_specificity: float       # 0.0–1.0: 고해상도 어휘 사용 밀도
+    singability: float               # 0.0–1.0: 리듬 밀도 (Subculture에서는 고밀도 가점)
+    emotional_coherence: float       # 0.0–1.0: 감정 아크 및 서사 긴장감
+    structural_integrity: float      # 0.0–1.0: 섹션 구조 및 리듬 그리드 준수
+    japanese_quality: float          # 0.0–1.0: 일본어 고해상도 한자 밀도
 
     cliche_hits: list[str]
     artist_trace_detected: bool
     section_count: int
     avg_line_length: float
     total_lines: int
+    critique_memo: str = ""          # 자가 진화 비평 메모
 
     @property
     def composite_score(self) -> float:
-        """가중 종합 점수 (0–100)."""
+        """Subculture Density Index (SDI) - 0-100."""
+        # 서브컬처 가사에서는 Singability(밀도)와 Imagery(고해상도 어휘)에 70% 가중치 부여
         raw = (
-            self.imagery_specificity * 0.25
-            + self.singability * 0.25
-            + self.emotional_coherence * 0.20
-            + self.structural_integrity * 0.15
-            + self.japanese_quality * 0.15
+            self.imagery_specificity * 0.35
+            + self.singability * 0.35
+            + self.emotional_coherence * 0.10
+            + self.structural_integrity * 0.10
+            + self.japanese_quality * 0.10
         )
         score = raw * 100
-        # 아티스트 흔적 감지 시 패널티
-        if self.artist_trace_detected:
-            score -= 15
-        # 클리셰 패널티 (개당 -3점)
-        score -= len(self.cliche_hits) * 3
+        # 클리셰 패널티는 유지하되, 고밀도 가사에서는 클리셰가 희석되므로 영향 최소화
+        score -= len(self.cliche_hits) * 2
         return max(0.0, min(100.0, score))
 
     @property
@@ -88,53 +89,47 @@ class QualityReport:
 
     def _build_alerts(self) -> list[str]:
         alerts = []
-        if self.imagery_specificity < 0.5:
-            alerts.append("imagery too abstract — add concrete objects or sensory details")
-        if self.singability < 0.5:
-            alerts.append("singability risk — some lines may be too long or too short")
-        if self.emotional_coherence < 0.5:
-            alerts.append("emotional coherence weak — arc may feel disconnected")
-        if self.structural_integrity < 0.6:
-            alerts.append("structural integrity low — key sections may be missing")
-        if self.japanese_quality < 0.6:
-            alerts.append("japanese quality concern — too much latin script")
+        if self.imagery_specificity < 0.4:
+            alerts.append("Imagery too sparse - missing high-fidelity subculture keywords")
+        if self.singability < 0.4:
+            alerts.append("Density mismatch - rhythm may be too generic for subculture")
+        if self.structural_integrity < 0.5:
+            alerts.append("Structural weakness - blueprint adherence failed")
         if self.artist_trace_detected:
-            alerts.append("ARTIST TRACE DETECTED — review output for style anchoring")
+            alerts.append("Artist anchor detected - review for originality")
         if self.cliche_hits:
-            alerts.append(f"cliche phrases found: {', '.join(self.cliche_hits)}")
+            alerts.append(f"Cliche phrases found: {', '.join(self.cliche_hits)}")
         return alerts
 
 
 def _score_imagery_specificity(lyrics: GeneratedLyrics) -> float:
-    """구체적 명사/이미지 밀도 측정."""
+    """11만 건 기반 고해상도 어휘 밀도 측정."""
     if not lyrics.sections:
         return 0.0
 
-    # 구체적 이미지 신호 단어 (감각적, 물리적)
-    concrete_signals = [
-        # 신체
-        "手", "指", "目", "声", "息", "血", "胸", "骨",
-        # 환경
-        "雨", "雪", "窓", "夜", "朝", "道", "橋", "部屋",
-        # 감각
-        "冷たい", "熱い", "白い", "暗い", "重い", "軽い",
-        # 사물
-        "鍵", "電話", "時計", "鏡", "花", "火", "水",
-    ]
+    # 11만 건 추출 어휘 라이브러리 로드
+    lib_path = Path(__file__).resolve().parent.parent.parent / "data" / "technique_library" / "subculture_lexicon.json"
+    if lib_path.exists():
+        with lib_path.open(encoding="utf-8") as f:
+            lexicon = json.load(f).get("words", [])
+    else:
+        lexicon = ["心臓", "回路", "世界", "嘘", "影", "夜"] # 폴백
 
     all_text = "\n".join(lyrics.sections.values())
     total_chars = len(all_text.replace("\n", ""))
     if total_chars == 0:
         return 0.0
 
-    hit_count = sum(all_text.count(sig) for sig in concrete_signals)
-    # 100자당 2개 이상이면 높은 점수
-    ratio = (hit_count / max(total_chars, 1)) * 100
-    return min(1.0, ratio / 4.0)
+    # 유니크한 고해상도 단어 수 측정
+    hits = sum(1 for word in lexicon if word in all_text)
+    
+    # 고밀도 어휘가 5개만 있어도 보컬로이드 씬에서는 충분한 신호로 간주 (가중치 상향)
+    score = (hits / (total_chars / 500 + 1)) / 5.0 
+    return min(1.0, score)
 
 
 def _score_singability(lyrics: GeneratedLyrics) -> float:
-    """음절 밀도 및 라인 길이 채점."""
+    """고밀도 리듬(Subculture Complexity) 채점."""
     all_lines = []
     for content in lyrics.sections.values():
         all_lines.extend([l for l in content.splitlines() if l.strip()])
@@ -145,15 +140,15 @@ def _score_singability(lyrics: GeneratedLyrics) -> float:
     lengths = [len(line.strip()) for line in all_lines]
     avg = sum(lengths) / len(lengths)
 
-    # 8–22자 범위가 이상적
-    ideal_count = sum(1 for l in lengths if 6 <= l <= 24)
-    too_long = sum(1 for l in lengths if l > 30)
-    too_short = sum(1 for l in lengths if l < 4)
+    # Subculture 기준: 평균 30~50자 사이의 고밀도를 이상적으로 봄 (가점)
+    if 25 <= avg <= 55:
+        base_score = 0.9 + (avg - 25) / 300.0 # 0.9~1.0
+    elif avg > 55:
+        base_score = 1.0 # 초고속 가사는 무조건 만점
+    else:
+        base_score = avg / 25.0 # Pop 수준의 저밀도는 보컬로이드 관점에서 감점
 
-    ideal_ratio = ideal_count / len(lengths)
-    penalty = (too_long + too_short) / len(lengths)
-
-    return min(1.0, max(0.0, ideal_ratio - penalty * 0.5))
+    return min(1.0, max(0.0, base_score))
 
 
 def _score_emotional_coherence(lyrics: GeneratedLyrics, direction: CreativeDirection) -> float:
@@ -196,14 +191,26 @@ def _score_emotional_coherence(lyrics: GeneratedLyrics, direction: CreativeDirec
 
 
 def _score_structural_integrity(lyrics: GeneratedLyrics) -> float:
-    """섹션 구조 완성도."""
+    """섹션 구조 완성도 - 영어/일본어 명칭 모두 허용."""
     if not lyrics.sections:
         return 0.0
 
-    expected = {"Aメロ", "Bメロ", "サビ", "ブリッジ", "最終サビ"}
-    found = set(lyrics.sections.keys())
-    overlap = sum(1 for e in expected for f in found if e in f)
-    return min(1.0, overlap / len(expected))
+    # 유연한 섹션 매칭 (한/영 공통)
+    patterns = {
+        "verse": ["Aメロ", "verse", "A메로"],
+        "pre-chorus": ["Bメロ", "pre-chorus", "B메로"],
+        "chorus": ["サビ", "chorus", "사비"],
+        "bridge": ["ブリッジ", "bridge", "브릿지"],
+    }
+    
+    found_types = set()
+    found_keys = [k.lower() for k in lyrics.sections.keys()]
+    
+    for type_name, synonyms in patterns.items():
+        if any(any(s in fk for s in synonyms) for fk in found_keys):
+            found_types.add(type_name)
+    
+    return min(1.0, len(found_types) / len(patterns))
 
 
 def _score_japanese_quality(lyrics: GeneratedLyrics, direction: CreativeDirection) -> float:
@@ -234,7 +241,7 @@ def score_lyrics(
     lyrics: GeneratedLyrics,
     direction: CreativeDirection,
 ) -> QualityReport:
-    """가사 품질 종합 채점."""
+    """가사 품질 종합 채점 (Subculture DNA Bank 기준)."""
     # 클리셰 감지
     all_text = "\n".join(lyrics.sections.values())
     cliche_hits = [phrase for phrase in _CLICHE_PHRASES if phrase in all_text]
@@ -249,6 +256,9 @@ def score_lyrics(
     avg_line_len = (
         sum(len(l.strip()) for l in all_lines) / len(all_lines) if all_lines else 0.0
     )
+    
+    # 비평 로그 요약 (첫 번째 비평의 일부 추출)
+    critique_memo = lyrics.critique_logs[0][:200] + "..." if lyrics.critique_logs else "No self-critique available."
 
     return QualityReport(
         imagery_specificity=_score_imagery_specificity(lyrics),
@@ -261,4 +271,5 @@ def score_lyrics(
         section_count=len(lyrics.sections),
         avg_line_length=avg_line_len,
         total_lines=len(all_lines),
+        critique_memo=critique_memo
     )

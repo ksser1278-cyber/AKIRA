@@ -10,7 +10,7 @@ from .direction_parser import CreativeDirection
 
 
 def _load_library(lib_root: Path) -> dict[str, Any]:
-    """5개 JSON 파일을 로드해 통합 라이브러리 반환."""
+    """6개 JSON 파일을 로드해 통합 라이브러리 반환."""
     library: dict[str, Any] = {}
     for name in [
         "hook_patterns",
@@ -18,6 +18,7 @@ def _load_library(lib_root: Path) -> dict[str, Any]:
         "emotional_arc_templates",
         "structural_templates",
         "syllable_profiles",
+        "rhythm_blueprints",
     ]:
         path = lib_root / f"{name}.json"
         if path.exists():
@@ -26,6 +27,22 @@ def _load_library(lib_root: Path) -> dict[str, Any]:
         else:
             library[name] = {}
     return library
+
+
+def _sample_rhythm_blueprint(direction: CreativeDirection, blueprints: dict) -> dict:
+    """11만 건 기반의 고밀도 리듬 패턴 중 하나를 가중 샘플링."""
+    items = blueprints.get("blueprints", [])
+    if not items:
+        return {}
+
+    # 조향(language_register)에 따라 복잡도가 높은 것 우선 선별
+    if direction.language_register in ["mixed", "pop"]:
+        # 고밀도(상위 50%) 중에서 선택
+        pool = items[: len(items) // 2]
+    else:
+        pool = items
+    
+    return random.choice(pool) if pool else {}
 
 
 def _match_emotional_arc(direction: CreativeDirection, templates: dict) -> dict:
@@ -130,12 +147,14 @@ class TechniqueContext:
         arc_template: dict,
         section_structure: list[dict],
         syllable_profile: dict,
+        rhythm_blueprint: dict = None,
     ) -> None:
         self.hook_pattern = hook_pattern
         self.imagery_bank = imagery_bank
         self.arc_template = arc_template
         self.section_structure = section_structure
         self.syllable_profile = syllable_profile
+        self.rhythm_blueprint = rhythm_blueprint or {}
 
     def to_prompt_fragment(self) -> str:
         """생성 프롬프트에 삽입될 기법 컨텍스트 텍스트."""
@@ -163,6 +182,14 @@ class TechniqueContext:
             avg = self.syllable_profile.get("avg_chars_per_line", 12)
             lines.append(f"\n### Phrasing Intensity\n~{avg} characters per line average (target density)")
 
+        if self.rhythm_blueprint:
+            lines.append("\n### DNA Rhythmic Blueprint (STRICT CONSTRAINT)")
+            lines.append("Follow these exact syllable counts (Mora) per line to achieve high-fidelity subculture density:")
+            for sec_data in self.rhythm_blueprint.get("sections", []):
+                sec_name = sec_data.get("section", "unknown")
+                mora_seq = sec_data.get("mora_sequence", [])
+                lines.append(f"- **{sec_name}**: {mora_seq} mora per line")
+
         return "\n".join(lines)
 
 
@@ -184,10 +211,14 @@ def sample_technique_context(
     register = direction.language_register
     syllable_profile = syllable_profiles.get(register) or syllable_profiles.get("colloquial") or {}
 
+    # 6. Rhythm Blueprint (DNA-backed physical grid)
+    rhythm_blueprint = _sample_rhythm_blueprint(direction, library.get("rhythm_blueprints", {}))
+
     return TechniqueContext(
         hook_pattern=hook_pattern,
         imagery_bank=imagery_bank,
         arc_template=arc_template,
         section_structure=section_structure,
         syllable_profile=syllable_profile,
+        rhythm_blueprint=rhythm_blueprint,
     )

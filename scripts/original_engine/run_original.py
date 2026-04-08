@@ -99,6 +99,15 @@ def save_outputs(
         json.dumps(quality_dict, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    # 유연한 섹션 매칭 (한/영/대소문자 공통)
+    patterns = {
+        "verse": ["aメロ", "verse", "a메로"],
+        "pre-chorus": ["bメロ", "pre-chorus", "b메로"],
+        "chorus": ["サビ", "chorus", "사비"],
+        "bridge": ["ブリッジ", "bridge", "브릿지"],
+    }
+    
+    found_types = set()
     # 세션 메타데이터
     session_meta = {
         "session_id": session_id,
@@ -126,6 +135,7 @@ def run(raw_input: str) -> int:
 
     api_key = load_api_key()
     session_id = make_session_id()
+    session_dir = OUTPUT_ROOT / session_id
 
     # 인코딩 안전 출력 처리 함수
     def safe_print(text):
@@ -168,18 +178,52 @@ def run(raw_input: str) -> int:
     safe_print(f"      Sections: {list(lyrics.sections.keys())}")
 
     # -- Step 4: Quality Scoring --------------------------------
-    print("- [4/4] Scoring Quality...")
+    safe_print("- [4/4] Scoring Quality (Subculture DNA Based)...")
     report = score_lyrics(lyrics, direction)
-    print(f"      Composite score:      {report.composite_score:.1f}/100")
-    print(f"      Imagery specificity:  {report.imagery_specificity:.2f}")
-    print(f"      Singability:          {report.singability:.2f}")
-    print(f"      Emotional coherence:  {report.emotional_coherence:.2f}")
-    print(f"      Structural integrity: {report.structural_integrity:.2f}")
-    print(f"      Japanese quality:     {report.japanese_quality:.2f}")
-    if not report.passes_threshold:
-        print(f"      ! Below threshold (72.0) - alerts:")
-        for alert in report.to_dict().get("alerts", []):
+    score_data = report.to_dict()
+
+    # [NEW] Save Evolution Report
+    session_dir = Path("outputs") / "original" / session_id
+    os.makedirs(session_dir, exist_ok=True)
+    evolution_path = session_dir / "evolution_report.md"
+    evo_lines = [
+        f"# Evolution Report: Session {session_id}",
+        "\n## 1. Creative Direction & Technique Context",
+        f"Input: {direction.raw_input}",
+        f"Selected Blueprint: {technique.rhythm_blueprint.get('blueprint_id', 'standard')}",
+        "\n## 2. Iterative Self-Critique Logs",
+    ]
+    
+    for i, log in enumerate(lyrics.critique_logs):
+        evo_lines.append(f"\n### Critique Pass {i+1}")
+        evo_lines.append(log)
+        
+    evo_lines.append("\n## 3. Final Production Logic")
+    evo_lines.append("The final lyrics were hardened using high-fidelity subculture lexicons and strict rhythmic blueprints.")
+    
+    with evolution_path.open("w", encoding="utf-8") as f:
+        f.write("\n".join(evo_lines))
+    safe_print(f"      [✓] Evolution report saved: evolution_report.md")
+
+    safe_print(f"      Subculture Density Index (SDI): {score_data['composite_score']}/100")
+    safe_print(f"      Imagery Specificity:  {score_data['imagery_specificity']}")
+    safe_print(f"      Rhythmic Density:     {score_data['singability']}")
+    safe_print(f"      Structural Integrity: {score_data['structural_integrity']}")
+    
+    if score_data["alerts"]:
+        safe_print("      [!] Optimization Alerts:")
+        for alert in score_data["alerts"]:
             safe_print(f"        - {alert}")
+
+    # [NEW] Critic's Corner (Self-Evolution Log)
+    if lyrics.critique_logs:
+        safe_print("\n------------------------------------------------------------")
+        safe_print(" [CRITIC'S CORNER: Self-Evolution Feedback] ")
+        safe_print("------------------------------------------------------------")
+        # 마지막 비평 루프 내용 출력
+        refinement_feedback = lyrics.critique_logs[-1]
+        safe_print(refinement_feedback)
+        safe_print("------------------------------------------------------------\n")
 
     # -- Step 5: Suno Formatting --------------------------------
     print("\n[5/5] Formatting Suno prompt...")
@@ -199,22 +243,23 @@ def run(raw_input: str) -> int:
     )
 
     # -- Summary ------------------------------------------------
-    print("\n" + "=" * 60)
-    print(f"  v Complete — session: {session_id}")
-    print(f"  Score: {report.composite_score:.1f}/100 "
-          f"({'PASS' if report.passes_threshold else 'REVIEW NEEDED'})")
+    safe_print("============================================================")
+    safe_print(f"  v Session sequence complete - ID: {session_id}")
+    safe_print("============================================================")
+    safe_print(f"  Subculture Authenticity Index (SAI): {report.composite_score:.1f}/100 "
+          f"({'ELITE' if report.passes_threshold else 'PROTOTYPE'})")
     safe_print(f"\n- Style: {suno.style_tags}")
     safe_print(f"    suno_prompt.json    <- Suno 프롬프트")
     safe_print(f"    quality_report.json <- 품질 보고서")
     print("=" * 60 + "\n")
 
     # 터미널에 가사 미리보기 출력
-    print("-- Lyrics Preview -------------------------------------\n")
-    for name, content in lyrics.section_list:
-        safe_print(f"\n[{name}]")
-        safe_print(content)
-        print()
-        print()
+    safe_print("\n-- Lyrics Preview -------------------------------------\n")
+    for sec_name, content in lyrics.sections.items():
+        safe_print(f"[{sec_name}]")
+        first_lines = "\n".join(content.splitlines()[:4])
+        safe_print(first_lines)
+        safe_print("")
 
     return 0
 

@@ -68,6 +68,7 @@ class SunoPrompt:
     suno_lyrics: str          # [Verse]/[Chorus] 포맷
     raw_sections: dict[str, str]
     quality_score: float
+    critique_logs: list[str] = field(default_factory=list) # 추가
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -109,7 +110,21 @@ class SunoPrompt:
             "## Lyrics (Suno Format)",
             "",
             self.suno_lyrics,
+            "",
+            "---",
+            "",
+            "## Evolution Insight (Self-Critique Logs)",
+            "",
         ]
+        
+        if self.critique_logs:
+            for i, log in enumerate(self.critique_logs):
+                lines.append(f"### Log {i+1}")
+                lines.append(log)
+                lines.append("")
+        else:
+            lines.append("*No specific critique logs recorded for this session.*")
+
         return "\n".join(lines)
 
 
@@ -192,4 +207,5 @@ def format_suno_prompt(
         suno_lyrics=suno_lyrics,
         raw_sections=lyrics.sections,
         quality_score=report.composite_score,
+        critique_logs=lyrics.critique_logs,
     )

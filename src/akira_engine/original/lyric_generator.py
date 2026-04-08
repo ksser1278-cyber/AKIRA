@@ -19,30 +19,49 @@ You have access to a "DNA Bank" derived from 110,000 top-tier tracks.
 
 Your style:
 - Deeply abstract, metaphorical, and often existential or "avant-garde."
-- Reminiscent of high-signal producers (e.g., Maretu, Iyowa, PinocchioP, Kairiki Bear).
+- Reminiscent of high-signal producers (e.g., Maretu, Iyowa, PinocchioP).
 - You favor "Image-heavy" and "Rhythmic" writing over generic pop sentiment.
 - You avoid cliches (e.g., 好き, ありがとう, 夢) unless given a unique, sharp twist.
 
 Your role:
 - Read the Creative Direction and Technical Context (DNA Bank based) carefully.
 - Use the provided imagery archetypes as the core world-building vocabulary.
-- Follow the Section Blueprint strictly while ensuring smooth emotional transitions.
+- FOLLOW THE RHYTHMIC BLUEPRINT (Mora Count) STRICTLY. Each line must be packed with information to meet the required syllable count.
 - Each section should feel distinct but contribute to the overall "Energy Arc."
 - Use "Compressed Phrasing" (dense lines) for high-energy sections and "Atmospheric Silence" for low-energy ones.
 
 Output constraints:
-- Language: Natural Japanese (Kanji/Kana). No Romaji.
-- Structure: Clear section markers like [Intro], [Aメロ], [Bメロ], [サビ], [Bridge], [Outro].
-- Climax: The section designated as the climax point must have the highest emotional density.
+- Language: Natural Japanese (Kanji/Kana). No Romaji for lyrics.
+- Structure: Clear ASCII-ONLY section markers: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].
+- Rhythm: Each line must match the rhythmic density suggested in the blueprint.
 
 Output format:
-[タイトル案]
+[TITLE]
 (One sharp, conceptual title in Japanese)
 
-[Section Marker]
+[Intro]
+(Lyric content)
+
+[Chorus]
 (Lyric content)
 
 Do not add any preamble or postscript. Output ONLY the lyrics."""
+
+_CRITIQUE_SYSTEM_PROMPT = """You are an Analytical High-Density specialist for the Japanese Subculture/Vocaloid scene.
+Your task is to analyze the draft lyrics against a benchmark of 110,000 elite "Subculture DNA" specimens.
+Provide a clear, clinical, yet sharp analysis of how to increase Information Density.
+
+Evaluation Criteria:
+1. Lexical Entropy: Replace generic words with industrial, pathological, or abstract kanji-dense compounds.
+2. Rhythmic Compression: Identify mora-thin lines and suggest ways to pack more imagery into the beat.
+3. DNA Alignment: Ensure the imagery feels like a machine-religious or existential subculture masterpiece (Maretu/Iyowa style).
+
+Output format:
+[ANALYSIS]
+(Detailed analysis of current weaknesses)
+
+[COMMANDS]
+(Specific instructions for the next draft)"""
 
 
 @dataclass
@@ -52,6 +71,7 @@ class GeneratedLyrics:
     sections: dict[str, str] = field(default_factory=dict)
     full_text: str = ""
     model: str = ""
+    critique_logs: list[str] = field(default_factory=list) # 자가 비판 기록 추가
     generation_ok: bool = False
     error: str | None = None
 
@@ -111,10 +131,10 @@ def _parse_sections(text: str) -> dict[str, str]:
 
 
 def _extract_title(text: str) -> str:
-    """[タイトル案] 섹션에서 제목 추출."""
+    """[TITLE] 섹션에서 제목 추출."""
     sections = _parse_sections(text)
     for section_key, content in sections.items():
-        if "タイトル" in section_key or "title" in section_key.lower():
+        if "TITLE" in section_key.upper() or "제목" in section_key:
             return content.strip()
     # 첫 번째 줄에서 시도
     lines = [l for l in text.strip().splitlines() if l.strip()]
@@ -124,73 +144,100 @@ def _extract_title(text: str) -> str:
     return "無題"
 
 
+def _call_api(
+    system_prompt: str,
+    user_prompt: str,
+    *,
+    api_key: str,
+    model: str,
+    temperature: float,
+) -> str:
+    url = "https://api.openai.com/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    body = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        "temperature": temperature,
+        "max_completion_tokens": 4096,
+    }
+    for attempt in range(3):
+        try:
+            resp = requests.post(url, headers=headers, json=body, timeout=120)
+            if resp.status_code == 200:
+                content = resp.json().get("choices", [])[0].get("message", {}).get("content", "").strip()
+                content = re.sub(r"^```[a-z]*\n?", "", content, flags=re.MULTILINE).replace("```", "").strip()
+                return content
+            time.sleep(2 ** attempt)
+        except Exception:
+            time.sleep(2 ** attempt)
+    return ""
+
+
 def generate_lyrics(
     direction: CreativeDirection,
     technique: TechniqueContext,
     *,
     api_key: str,
     model: str = "gpt-5.4",
-    temperature: float = 0.85,
-    max_tokens: int = 4096,
+    max_iterations: int = 2,
 ) -> GeneratedLyrics:
-    """OpenAI API로 오리지널 가사 생성."""
-    url = "https://api.openai.com/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-
+    """고밀도 자가 진화 생성 파이프라인 (Draft -> Critique -> Refine)."""
     user_prompt = _build_user_prompt(direction, technique)
+    critique_logs = [f"[System] DNA Blueprint ({technique.rhythm_blueprint.get('blueprint_id', 'standard')}) selected for high-density generation."]
+    
+    # 1. Draft Phase
+    print(f"[DEBUG] Generating draft...")
+    draft = _call_api(_SYSTEM_PROMPT, user_prompt, api_key=api_key, model=model, temperature=0.85)
+    if not draft:
+        return GeneratedLyrics(title_suggestion="", generation_ok=False, error="First draft failed.")
 
-    body = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": _SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt},
-        ],
-        "temperature": temperature,
-        "max_completion_tokens": max_tokens,
-    }
+    current_lyrics = draft
+    
+    # 2. Iterative Refinement Phase
+    for i in range(max_iterations):
+        print(f"[DEBUG] Self-Critique / Refinement loop {i+1}...")
+        
+        # critique
+        critique_prompt = f"Original Direction:\n{user_prompt}\n\nCurrent Draft Lyrics:\n{current_lyrics}"
+        critique = _call_api(_CRITIQUE_SYSTEM_PROMPT, critique_prompt, api_key=api_key, model=model, temperature=0.3)
+        
+        if not critique: 
+            critique = "[System Alert] Critique pass returned empty. Proceeding with intrinsic density hardening."
+        
+        critique_logs.append(f"--- Pass {i+1} Output ---\n{critique}")
+        
+        # refine
+        refinement_user_prompt = (
+            f"Please RE-WRITE the lyrics based on the following critique to reach ELITE SUBCULTURE DENSITY.\n"
+            f"Note: Use ONLY ASCII markers like [Intro], [Chorus] for sections.\n"
+            f"Original Direction:\n{user_prompt}\n\n"
+            f"Current Draft:\n{current_lyrics}\n\n"
+            f"Critique & Instructions:\n{critique}\n\n"
+            f"Write the final refined version below."
+        )
+        refined = _call_api(_SYSTEM_PROMPT, refinement_user_prompt, api_key=api_key, model=model, temperature=0.7)
+        
+        if refined:
+            current_lyrics = refined
+        else:
+            break
 
-    last_err = ""
-    for attempt in range(3):
-        try:
-            resp = requests.post(url, headers=headers, json=body, timeout=120)
-            if resp.status_code == 200:
-                choices = resp.json().get("choices", [])
-                if choices:
-                    raw_text = choices[0].get("message", {}).get("content", "").strip()
-                    # 코드블록 마커 제거
-                    raw_text = re.sub(r"^```[a-z]*\n?", "", raw_text, flags=re.MULTILINE)
-                    raw_text = raw_text.replace("```", "").strip()
-
-                    sections = _parse_sections(raw_text)
-                    title = _extract_title(raw_text)
-
-                    # タイトル案 섹션은 가사 섹션에서 제거
-                    lyrics_sections = {
-                        k: v for k, v in sections.items()
-                        if "タイトル" not in k and "title" not in k.lower()
-                    }
-
-                    return GeneratedLyrics(
-                        title_suggestion=title,
-                        sections=lyrics_sections,
-                        full_text=raw_text,
-                        model=model,
-                        generation_ok=bool(lyrics_sections),
-                    )
-                else:
-                    last_err = f"No choices in response: {resp.text}"
-            else:
-                last_err = f"API Error {resp.status_code}: {resp.text}"
-            time.sleep(2 ** attempt)
-        except requests.RequestException as exc:
-            last_err = str(exc)
-            time.sleep(2 ** attempt)
+    # 3. Final Parsing
+    sections = _parse_sections(current_lyrics)
+    title = _extract_title(current_lyrics)
+    lyrics_sections = {k: v for k, v in sections.items() if "TITLE" not in k.upper() and "제목" not in k}
 
     return GeneratedLyrics(
-        title_suggestion="",
-        generation_ok=False,
-        error=f"All attempts failed. Last error: {last_err}",
+        title_suggestion=title,
+        sections=lyrics_sections,
+        full_text=current_lyrics,
+        model=model,
+        critique_logs=critique_logs,
+        generation_ok=bool(lyrics_sections),
     )
