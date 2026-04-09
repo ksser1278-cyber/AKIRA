@@ -9,6 +9,12 @@ from typing import Any
 from .direction_parser import CreativeDirection
 from .lyric_generator import GeneratedLyrics
 from .quality_scorer import QualityReport
+from .section_names import (
+    normalize_sections,
+    ordered_sections,
+    to_display_name,
+    CANONICAL_ORDER,
+)
 
 
 # energy_arc → BPM 범위 매핑
@@ -44,17 +50,7 @@ _REGISTER_VOCAL_MAP: dict[str, list[str]] = {
     "formal":          ["theatrical vocals", "dramatic", "classical influence"],
 }
 
-# Suno 섹션 태그 매핑 (일본어 → Suno 영어 태그)
-_SECTION_TAG_MAP: dict[str, str] = {
-    "Aメロ":  "[Verse]",
-    "Aメロ2": "[Verse 2]",
-    "Bメロ":  "[Pre-Chorus]",
-    "サビ":   "[Chorus]",
-    "ブリッジ": "[Bridge]",
-    "最終サビ": "[Chorus]",
-    "アウトロ": "[Outro]",
-    "イントロ": "[Intro]",
-}
+# NOTE: Suno 섹션 태그 매핑은 이제 section_names.to_display_name(canonical, style="suno")를 사용합니다.
 
 
 @dataclass
@@ -129,25 +125,16 @@ class SunoPrompt:
 
 
 def _build_suno_lyrics(sections: dict[str, str]) -> str:
-    """일본어 섹션 → Suno [Tag] 포맷 변환."""
-    order = ["Aメロ", "Bメロ", "サビ", "Aメロ2", "ブリッジ", "最終サビ", "アウトロ"]
+    """섹션 딕셔너리 → Suno [Tag] 포맷 변환.
+
+    정규화된 canonical 키를 사용하여 Suno 태그로 변환합니다.
+    """
+    canonical = normalize_sections(sections)
     parts: list[str] = []
 
-    for key in order:
-        if key in sections:
-            suno_tag = _SECTION_TAG_MAP.get(key, f"[{key}]")
-            # 최終サビ는 두 번째 [Chorus] — 구분을 위해 노트 추가
-            if key == "最終サビ":
-                suno_tag = "[Chorus]"
-                parts.append(f"{suno_tag}\n{sections[key]}")
-            else:
-                parts.append(f"{suno_tag}\n{sections[key]}")
-
-    # 맵에 없는 나머지 섹션 처리
-    for key, content in sections.items():
-        if key not in order and content.strip():
-            suno_tag = _SECTION_TAG_MAP.get(key, f"[{key}]")
-            parts.append(f"{suno_tag}\n{content}")
+    for canonical_key, content in ordered_sections(canonical):
+        suno_tag = to_display_name(canonical_key, style="suno")
+        parts.append(f"{suno_tag}\n{content}")
 
     return "\n\n".join(parts)
 

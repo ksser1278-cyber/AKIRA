@@ -7,6 +7,12 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .section_names import (
+    normalize_sections,
+    structural_completeness,
+    VERSE_1, PRE_CHORUS, CHORUS, BRIDGE, FINAL_CHORUS,
+)
+
 from .lyric_generator import GeneratedLyrics
 from .direction_parser import CreativeDirection
 
@@ -128,8 +134,31 @@ def _score_imagery_specificity(lyrics: GeneratedLyrics) -> float:
     return min(1.0, score)
 
 
+def _count_mora(text: str) -> int:
+    """일본어 텍스트의 모라 수를 카운트.
+
+    히라가나/카타카나 1문자 = 1모라 (단, 촉음·장음은 별도 모라).
+    한자는 평균 2모라로 추정.
+    """
+    mora = 0
+    for ch in text:
+        if '\u3040' <= ch <= '\u309F':    # 히라가나
+            mora += 1
+        elif '\u30A0' <= ch <= '\u30FF':  # 카타카나
+            mora += 1
+        elif '\u4E00' <= ch <= '\u9FFF':  # 한자 (평균 2모라)
+            mora += 2
+        # ASCII, 기호 등은 무시
+    return mora
+
+
 def _score_singability(lyrics: GeneratedLyrics) -> float:
-    """고밀도 리듬(Subculture Complexity) 채점."""
+    """모라 기반 가창성 채점.
+
+    - 이상적 범위: 라인당 15-35 모라 (보컬로이드 서브컬처 기준)
+    - 범위 내 라인 비율이 높을수록 고득점
+    - 극단적 고밀도(40+모라)는 가창성 감점 (밀도 점수는 별도)
+    """
     all_lines = []
     for content in lyrics.sections.values():
         all_lines.extend([l for l in content.splitlines() if l.strip()])
@@ -137,33 +166,45 @@ def _score_singability(lyrics: GeneratedLyrics) -> float:
     if not all_lines:
         return 0.0
 
-    lengths = [len(line.strip()) for line in all_lines]
-    avg = sum(lengths) / len(lengths)
+    mora_counts = [_count_mora(line.strip()) for line in all_lines]
+    if not mora_counts:
+        return 0.0
 
-    # Subculture 기준: 평균 30~50자 사이의 고밀도를 이상적으로 봄 (가점)
-    if 25 <= avg <= 55:
-        base_score = 0.9 + (avg - 25) / 300.0 # 0.9~1.0
-    elif avg > 55:
-        base_score = 1.0 # 초고속 가사는 무조건 만점
+    avg_mora = sum(mora_counts) / len(mora_counts)
+
+    # 이상적 범위(15-35 모라) 내 라인 비율
+    in_range = sum(1 for m in mora_counts if 15 <= m <= 35)
+    range_ratio = in_range / len(mora_counts)
+
+    # 기본 점수: 이상적 범위 비율 (0.0-0.7)
+    base = range_ratio * 0.7
+
+    # 평균 모라 보정 (0.0-0.3)
+    if 18 <= avg_mora <= 30:
+        avg_bonus = 0.3  # 이상적 평균
+    elif 12 <= avg_mora <= 40:
+        avg_bonus = 0.2  # 허용 범위
+    elif avg_mora > 40:
+        avg_bonus = 0.05  # 극고밀도 — 부르기 어려움
     else:
-        base_score = avg / 25.0 # Pop 수준의 저밀도는 보컬로이드 관점에서 감점
+        avg_bonus = avg_mora / 12.0 * 0.15  # 저밀도
 
-    return min(1.0, max(0.0, base_score))
+    return min(1.0, max(0.0, base + avg_bonus))
 
 
 def _score_emotional_coherence(lyrics: GeneratedLyrics, direction: CreativeDirection) -> float:
-    """감정 아크 일관성 — 섹션 존재 + climax 구조."""
-    if not lyrics.sections:
+    """감정 아크 일관성 — 정규화된 섹션 기반 구조 분석."""
+    canonical = normalize_sections(lyrics.sections)
+    if not canonical:
         return 0.0
 
     score = 0.0
-    sections = set(lyrics.sections.keys())
 
-    # 필수 섹션 존재 여부
-    has_verse = any("Aメロ" in s or "verse" in s.lower() for s in sections)
-    has_chorus = any("サビ" in s or "chorus" in s.lower() for s in sections)
-    has_final = any("最終" in s or "final" in s.lower() for s in sections)
-    has_bridge = any("ブリッジ" in s or "bridge" in s.lower() for s in sections)
+    # 필수 섹션 존재 여부 (정규화된 키 기반)
+    has_verse = VERSE_1 in canonical
+    has_chorus = CHORUS in canonical
+    has_final = FINAL_CHORUS in canonical
+    has_bridge = BRIDGE in canonical
 
     if has_verse:
         score += 0.25
@@ -174,16 +215,10 @@ def _score_emotional_coherence(lyrics: GeneratedLyrics, direction: CreativeDirec
     if has_bridge:
         score += 0.1
 
-    # 최종 사비가 가장 긴지 확인 (강도 상승)
+    # 최종 사비가 가장 긴지 확인 (에너지 아크 상승)
     if has_final and has_chorus:
-        final_len = max(
-            (len(v) for k, v in lyrics.sections.items() if "最終" in k or "final" in k.lower()),
-            default=0,
-        )
-        chorus_len = max(
-            (len(v) for k, v in lyrics.sections.items() if k in ("サビ", "chorus")),
-            default=0,
-        )
+        final_len = len(canonical.get(FINAL_CHORUS, ""))
+        chorus_len = len(canonical.get(CHORUS, ""))
         if final_len >= chorus_len:
             score += 0.1
 
@@ -191,26 +226,11 @@ def _score_emotional_coherence(lyrics: GeneratedLyrics, direction: CreativeDirec
 
 
 def _score_structural_integrity(lyrics: GeneratedLyrics) -> float:
-    """섹션 구조 완성도 - 영어/일본어 명칭 모두 허용."""
+    """섹션 구조 완성도 — 정규화된 canonical 키 기반."""
     if not lyrics.sections:
         return 0.0
-
-    # 유연한 섹션 매칭 (한/영 공통)
-    patterns = {
-        "verse": ["Aメロ", "verse", "A메로"],
-        "pre-chorus": ["Bメロ", "pre-chorus", "B메로"],
-        "chorus": ["サビ", "chorus", "사비"],
-        "bridge": ["ブリッジ", "bridge", "브릿지"],
-    }
-    
-    found_types = set()
-    found_keys = [k.lower() for k in lyrics.sections.keys()]
-    
-    for type_name, synonyms in patterns.items():
-        if any(any(s in fk for s in synonyms) for fk in found_keys):
-            found_types.add(type_name)
-    
-    return min(1.0, len(found_types) / len(patterns))
+    canonical = normalize_sections(lyrics.sections)
+    return structural_completeness(canonical)
 
 
 def _score_japanese_quality(lyrics: GeneratedLyrics, direction: CreativeDirection) -> float:
@@ -241,35 +261,48 @@ def score_lyrics(
     lyrics: GeneratedLyrics,
     direction: CreativeDirection,
 ) -> QualityReport:
-    """가사 품질 종합 채점 (Subculture DNA Bank 기준)."""
-    # 클리셰 감지
-    all_text = "\n".join(lyrics.sections.values())
-    cliche_hits = [phrase for phrase in _CLICHE_PHRASES if phrase in all_text]
+    """가사 품질 종합 채점 (Subculture DNA Bank 기준).
 
-    # 아티스트 흔적 감지
-    artist_trace = bool(_ARTIST_NAME_PATTERN.search(all_text + lyrics.full_text))
+    모든 섹션명을 canonical 형식으로 정규화한 뒤 채점합니다.
+    """
+    # 섹션 정규화 (채점 전에 한 번만 수행)
+    canonical = normalize_sections(lyrics.sections)
+    # 정규화된 섹션으로 임시 래핑
+    original_sections = lyrics.sections
+    lyrics.sections = canonical
 
-    # 라인 통계
-    all_lines = []
-    for content in lyrics.sections.values():
-        all_lines.extend([l for l in content.splitlines() if l.strip()])
-    avg_line_len = (
-        sum(len(l.strip()) for l in all_lines) / len(all_lines) if all_lines else 0.0
-    )
-    
-    # 비평 로그 요약 (첫 번째 비평의 일부 추출)
-    critique_memo = lyrics.critique_logs[0][:200] + "..." if lyrics.critique_logs else "No self-critique available."
+    try:
+        # 클리셰 감지
+        all_text = "\n".join(canonical.values())
+        cliche_hits = [phrase for phrase in _CLICHE_PHRASES if phrase in all_text]
 
-    return QualityReport(
-        imagery_specificity=_score_imagery_specificity(lyrics),
-        singability=_score_singability(lyrics),
-        emotional_coherence=_score_emotional_coherence(lyrics, direction),
-        structural_integrity=_score_structural_integrity(lyrics),
-        japanese_quality=_score_japanese_quality(lyrics, direction),
-        cliche_hits=cliche_hits,
-        artist_trace_detected=artist_trace,
-        section_count=len(lyrics.sections),
-        avg_line_length=avg_line_len,
-        total_lines=len(all_lines),
-        critique_memo=critique_memo
-    )
+        # 아티스트 흔적 감지
+        artist_trace = bool(_ARTIST_NAME_PATTERN.search(all_text + lyrics.full_text))
+
+        # 라인 통계
+        all_lines = []
+        for content in canonical.values():
+            all_lines.extend([l for l in content.splitlines() if l.strip()])
+        avg_line_len = (
+            sum(len(l.strip()) for l in all_lines) / len(all_lines) if all_lines else 0.0
+        )
+
+        # 비평 로그 요약
+        critique_memo = lyrics.critique_logs[0][:200] + "..." if lyrics.critique_logs else "No self-critique available."
+
+        return QualityReport(
+            imagery_specificity=_score_imagery_specificity(lyrics),
+            singability=_score_singability(lyrics),
+            emotional_coherence=_score_emotional_coherence(lyrics, direction),
+            structural_integrity=_score_structural_integrity(lyrics),
+            japanese_quality=_score_japanese_quality(lyrics, direction),
+            cliche_hits=cliche_hits,
+            artist_trace_detected=artist_trace,
+            section_count=len(canonical),
+            avg_line_length=avg_line_len,
+            total_lines=len(all_lines),
+            critique_memo=critique_memo
+        )
+    finally:
+        # 원본 섹션 복원 (side-effect 방지)
+        lyrics.sections = original_sections
