@@ -47,21 +47,43 @@ Output format:
 
 Do not add any preamble or postscript. Output ONLY the lyrics."""
 
-_CRITIQUE_SYSTEM_PROMPT = """You are an Analytical High-Density specialist for the Japanese Subculture/Vocaloid scene.
-Your task is to analyze the draft lyrics against a benchmark of 110,000 elite "Subculture DNA" specimens.
-Provide a clear, clinical, yet sharp analysis of how to increase Information Density.
+_CRITIQUE_SYSTEM_PROMPT = """You are a Structured Quality Evaluator for original Japanese lyrics in the Vocaloid/Subculture scene.
 
-Evaluation Criteria:
-1. Lexical Entropy: Replace generic words with industrial, pathological, or abstract kanji-dense compounds.
-2. Rhythmic Compression: Identify mora-thin lines and suggest ways to pack more imagery into the beat.
-3. DNA Alignment: Ensure the imagery feels like a machine-religious or existential subculture masterpiece (Maretu/Iyowa style).
+Your task: Analyze draft lyrics and return EXACTLY a JSON object with structured improvement commands.
+Do NOT write free-form analysis. Return ONLY valid JSON.
 
-Output format:
-[ANALYSIS]
-(Detailed analysis of current weaknesses)
+Evaluation Axes (BALANCED — do not over-optimize any single axis):
+1. DENSITY: Information density per line (kanji compound richness, imagery layering)
+2. SINGABILITY: Can a vocalist actually perform this? (15-35 mora per line is ideal; 40+ is a penalty)
+3. EMOTIONAL_ARC: Does the energy build across sections? (Verse→Pre-Chorus→Chorus→Bridge→Final)
+4. ORIGINALITY: Avoidance of cliché; unique compound-word creation
+5. STRUCTURAL: Section completeness and hook memorability
 
-[COMMANDS]
-(Specific instructions for the next draft)"""
+Return this EXACT JSON structure:
+{
+  "overall_score_estimate": 72,
+  "weakest_axis": "singability",
+  "strongest_axis": "density",
+  "actions": [
+    {
+      "priority": 1,
+      "target_section": "Pre-Chorus",
+      "axis": "singability",
+      "action": "Split compound lines into 2 shorter lines (target: 20-25 mora each)",
+      "example_before": "歯車咽頭、懺悔漏電、君規格祭壇へ自壊縫合、供犠起動",
+      "example_after": "歯車咽頭、懺悔漏電\\n君規格祭壇へ 自壊縫合"
+    }
+  ],
+  "hook_assessment": "壊愛実行 is strong — keep as central hook",
+  "lines_over_40_mora": 5,
+  "sections_missing": []
+}
+
+CRITICAL RULES:
+- Maximum 5 actions in the "actions" array
+- Each action must target a SPECIFIC section
+- Balance density WITH singability — do NOT push density at the cost of performability
+- Return ONLY the JSON object, no markdown, no explanation"""
 
 
 @dataclass
@@ -199,28 +221,78 @@ def generate_lyrics(
 
     current_lyrics = draft
     
-    # 2. Iterative Refinement Phase
+    # 2. Iterative Refinement Phase (Harness-style structured loop)
     for i in range(max_iterations):
         print(f"[DEBUG] Self-Critique / Refinement loop {i+1}...")
         
-        # critique
+        # critique — request JSON structured evaluation
         critique_prompt = f"Original Direction:\n{user_prompt}\n\nCurrent Draft Lyrics:\n{current_lyrics}"
-        critique = _call_api(_CRITIQUE_SYSTEM_PROMPT, critique_prompt, api_key=api_key, model=model, temperature=0.3)
+        critique_raw = _call_api(_CRITIQUE_SYSTEM_PROMPT, critique_prompt, api_key=api_key, model=model, temperature=0.3)
         
-        if not critique: 
-            critique = "[System Alert] Critique pass returned empty. Proceeding with intrinsic density hardening."
+        if not critique_raw: 
+            critique_logs.append(f"--- Pass {i+1}: Critique returned empty, skipping ---")
+            break
         
-        critique_logs.append(f"--- Pass {i+1} Output ---\n{critique}")
+        # Parse structured critique (Harness: machine control, not prose)
+        critique_data = None
+        try:
+            # Strip markdown code fences if present
+            cleaned = re.sub(r"^```(?:json)?\n?", "", critique_raw.strip(), flags=re.MULTILINE)
+            cleaned = cleaned.replace("```", "").strip()
+            critique_data = json.loads(cleaned)
+        except (json.JSONDecodeError, ValueError):
+            # Fallback: treat as unstructured (legacy behavior)
+            critique_logs.append(f"--- Pass {i+1} (unstructured fallback) ---\n{critique_raw[:500]}...")
         
-        # refine
-        refinement_user_prompt = (
-            f"Please RE-WRITE the lyrics based on the following critique to reach ELITE SUBCULTURE DENSITY.\n"
-            f"Note: Use ONLY ASCII markers like [Intro], [Chorus] for sections.\n"
-            f"Original Direction:\n{user_prompt}\n\n"
-            f"Current Draft:\n{current_lyrics}\n\n"
-            f"Critique & Instructions:\n{critique}\n\n"
-            f"Write the final refined version below."
-        )
+        if critique_data:
+            # Extract only the top 5 actions (Harness: Context budget control)
+            actions = critique_data.get("actions", [])[:5]
+            score_est = critique_data.get("overall_score_estimate", "?")
+            weakest = critique_data.get("weakest_axis", "unknown")
+            hook_note = critique_data.get("hook_assessment", "")
+            missing = critique_data.get("sections_missing", [])
+            
+            # Build compact critique log
+            action_summary = "\n".join(
+                f"  [{a.get('priority', '?')}] {a.get('target_section', '?')}: {a.get('action', '')}"
+                for a in actions
+            )
+            critique_logs.append(
+                f"--- Pass {i+1} (Structured) ---\n"
+                f"Score: {score_est}/100 | Weakest: {weakest}\n"
+                f"Hook: {hook_note}\n"
+                f"Actions:\n{action_summary}"
+            )
+            
+            # Build TARGETED refinement prompt (Harness: minimal, actionable commands only)
+            action_instructions = "\n".join(
+                f"{j+1}. [{a.get('target_section', 'ALL')}] {a.get('action', '')}"
+                + (f"\n   Before: {a['example_before']}\n   After: {a['example_after']}" 
+                   if a.get("example_before") else "")
+                for j, a in enumerate(actions)
+            )
+            
+            missing_note = f"\nMissing sections to add: {', '.join(missing)}" if missing else ""
+            
+            refinement_user_prompt = (
+                f"RE-WRITE the lyrics applying EXACTLY these {len(actions)} fixes:\n\n"
+                f"{action_instructions}\n"
+                f"{missing_note}\n\n"
+                f"KEEP the hook: {hook_note}\n"
+                f"Use ONLY ASCII markers: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro]\n\n"
+                f"Current Draft:\n{current_lyrics}\n\n"
+                f"Write the refined version below."
+            )
+        else:
+            # Fallback: use raw critique (legacy path)
+            refinement_user_prompt = (
+                f"Please RE-WRITE the lyrics based on the following critique.\n"
+                f"Note: Use ONLY ASCII markers like [Intro], [Chorus] for sections.\n"
+                f"Current Draft:\n{current_lyrics}\n\n"
+                f"Critique:\n{critique_raw[:1500]}\n\n"
+                f"Write the final refined version below."
+            )
+        
         refined = _call_api(_SYSTEM_PROMPT, refinement_user_prompt, api_key=api_key, model=model, temperature=0.7)
         
         if refined:
