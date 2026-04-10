@@ -37,6 +37,13 @@ def _latest_in(root: Path, pattern: str) -> Path | None:
     return _latest([path for path in root.rglob(pattern) if path.is_file()])
 
 
+def _as_int(value: Any) -> int:
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
 def _parse_iso_date(value: str) -> date | None:
     text = _safe_text(value)
     if not text:
@@ -65,6 +72,101 @@ def _status_level(issues: list[dict[str, Any]]) -> str:
     return "operational"
 
 
+def _resolve_path(value: str, project_root: Path) -> Path | None:
+    text = _safe_text(value)
+    if not text:
+        return None
+    path = Path(text)
+    if not path.is_absolute():
+        path = (project_root / path).resolve()
+    if path.exists():
+        return path.resolve()
+    return None
+
+
+def _normalize_readiness(path: Path | None, payload: dict[str, Any]) -> dict[str, Any]:
+    records = payload.get("records", [])
+    counts = payload.get("counts", {})
+    inputs = payload.get("inputs", {})
+    generation_root = _safe_text(inputs.get("generation_root"))
+
+    normalized = {
+        "path": path,
+        "generation_root": generation_root,
+        "records": _as_int(counts.get("records")) or len(records),
+        "joinable": _as_int(counts.get("joinable")) or sum(1 for item in records if item.get("joinable")),
+        "prompt_ready": _as_int(counts.get("prompt_ready")) or sum(1 for item in records if item.get("prompt_ready")),
+        "production_candidate": _as_int(counts.get("production_candidate")) or sum(1 for item in records if item.get("production_candidate")),
+        "professional_target": _as_int(counts.get("professional_target")) or sum(1 for item in records if item.get("professional_target")),
+        "professional_track_ids": [
+            _safe_text(item.get("track_id"))
+            for item in records
+            if item.get("professional_target") and _safe_text(item.get("track_id"))
+        ],
+    }
+    return normalized
+
+
+def _readiness_score(item: dict[str, Any]) -> tuple[int, int, int, int, int, float]:
+    path = item.get("path")
+    generation_root = _safe_text(item.get("generation_root")).replace("/", "\\").lower()
+    path_text = str(path).replace("/", "\\").lower() if path else ""
+    trusted_generation_root = int("datasets\\training\\generation_profiles" in generation_root)
+    sound_reviewed_path = int("sound_reviewed" in path_text or "sound_reviewed" in generation_root)
+    professional_target = _as_int(item.get("professional_target"))
+    prompt_ready = _as_int(item.get("prompt_ready"))
+    records = _as_int(item.get("records"))
+    modified = path.stat().st_mtime if isinstance(path, Path) and path.exists() else 0.0
+    return (
+        trusted_generation_root,
+        sound_reviewed_path,
+        professional_target,
+        prompt_ready,
+        records,
+        modified,
+    )
+
+
+def _is_trusted_readiness_candidate(item: dict[str, Any]) -> bool:
+    generation_root = _safe_text(item.get("generation_root")).replace("/", "\\").lower()
+    path = item.get("path")
+    path_text = str(path).replace("/", "\\").lower() if path else ""
+    return (
+        "datasets\\training\\generation_profiles" in generation_root
+        or "sound_reviewed" in path_text
+        or "tier1_map_seed" in path_text
+    )
+
+
+def _select_authoritative_readiness(
+    project_root: Path,
+    readiness_root: Path,
+    generation_profiles_root: Path,
+) -> tuple[Path | None, Path | None]:
+    latest_raw_readiness_path = _latest_in(readiness_root, "generation_readiness_audit.json")
+    latest_professional_cycle_path = _latest_in(generation_profiles_root, "professional_quality_cycle_manifest.json")
+
+    preferred_paths: list[Path] = []
+    if latest_professional_cycle_path:
+        professional_cycle = _load_json(latest_professional_cycle_path)
+        professional_readiness_path = _resolve_path(
+            _safe_text(professional_cycle.get("outputs", {}).get("readiness_manifest")),
+            project_root,
+        )
+        if professional_readiness_path:
+            preferred_paths.append(professional_readiness_path)
+
+    candidates = [path for path in readiness_root.rglob("generation_readiness_audit.json") if path.is_file()]
+    normalized_candidates = [_normalize_readiness(path, _load_json(path)) for path in candidates]
+    normalized_candidates.sort(key=_readiness_score, reverse=True)
+
+    authoritative_readiness_path = preferred_paths[0] if preferred_paths else None
+    if authoritative_readiness_path is None and normalized_candidates:
+        authoritative_readiness_path = normalized_candidates[0]["path"]
+
+    return authoritative_readiness_path, latest_raw_readiness_path
+
+
 def build_engine_state(project_root: Path) -> dict[str, Any]:
     project_root = project_root.resolve()
     planning_root = project_root / "reports" / "planning"
@@ -80,7 +182,11 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
     latest_program_cycle_path = _latest(list(planning_root.glob("program_continuous_cycle_*.json")))
     latest_program_sweep_path = _latest(list(planning_root.glob("program_continuous_sweep_*.json")))
     latest_tier1_cycle_path = _latest_in(generation_profiles_root, "tier1_continuous_cycle_manifest.json")
-    latest_readiness_path = _latest_in(readiness_root, "generation_readiness_audit.json")
+    authoritative_readiness_path, latest_raw_readiness_path = _select_authoritative_readiness(
+        project_root,
+        readiness_root,
+        generation_profiles_root,
+    )
 
     latest_bulk_path = latest_program_cycle_path
     if latest_program_sweep_path and (
@@ -94,7 +200,14 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
     canonical_tier1 = _load_json(canonical_tier1_path)
     latest_bulk = _load_json(latest_bulk_path)
     latest_tier1 = _load_json(latest_tier1_cycle_path)
-    latest_readiness = _load_json(latest_readiness_path)
+    authoritative_readiness = _normalize_readiness(
+        authoritative_readiness_path,
+        _load_json(authoritative_readiness_path),
+    )
+    latest_raw_readiness = _normalize_readiness(
+        latest_raw_readiness_path,
+        _load_json(latest_raw_readiness_path),
+    )
 
     issues: list[dict[str, Any]] = []
 
@@ -106,6 +219,21 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
                 "baseline_snapshot_old",
                 f"Baseline snapshot is stale: {snapshot_date.isoformat()}",
                 baseline_path,
+            )
+        )
+
+    if (
+        latest_raw_readiness_path
+        and authoritative_readiness_path
+        and latest_raw_readiness_path != authoritative_readiness_path
+        and _is_trusted_readiness_candidate(latest_raw_readiness)
+    ):
+        issues.append(
+            _issue(
+                "warning",
+                "latest_readiness_superseded",
+                "Newest readiness audit was not selected as authoritative; a more trusted readiness source is being used.",
+                latest_raw_readiness_path,
             )
         )
 
@@ -125,8 +253,8 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
 
         wiki_prompt_ready = int(wiki_manifest.get("counts", {}).get("prompt_ready_tracks", 0) or 0)
         wiki_professional = int(wiki_manifest.get("counts", {}).get("professional_target_tracks", 0) or 0)
-        readiness_prompt_ready = int(latest_readiness.get("counts", {}).get("prompt_ready", 0) or 0)
-        readiness_professional = int(latest_readiness.get("counts", {}).get("professional_target", 0) or 0)
+        readiness_prompt_ready = _as_int(authoritative_readiness.get("prompt_ready"))
+        readiness_professional = _as_int(authoritative_readiness.get("professional_target"))
         if wiki_prompt_ready != readiness_prompt_ready or wiki_professional != readiness_professional:
             issues.append(
                 _issue(
@@ -156,13 +284,6 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
             )
         )
 
-    readiness_records = latest_readiness.get("records", [])
-    professional_track_ids = [
-        _safe_text(item.get("track_id"))
-        for item in readiness_records
-        if item.get("professional_target") and _safe_text(item.get("track_id"))
-    ]
-
     payload = {
         "schema_version": "1.0",
         "record_type": "akira_engine_state",
@@ -177,9 +298,13 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
                 "path": str(latest_tier1_cycle_path) if latest_tier1_cycle_path else "",
                 "modified_at": _modified_at(latest_tier1_cycle_path),
             },
-            "latest_readiness_audit": {
-                "path": str(latest_readiness_path) if latest_readiness_path else "",
-                "modified_at": _modified_at(latest_readiness_path),
+            "authoritative_readiness_audit": {
+                "path": str(authoritative_readiness_path) if authoritative_readiness_path else "",
+                "modified_at": _modified_at(authoritative_readiness_path),
+            },
+            "latest_readiness_audit_raw": {
+                "path": str(latest_raw_readiness_path) if latest_raw_readiness_path else "",
+                "modified_at": _modified_at(latest_raw_readiness_path),
             },
             "grounding_status": {
                 "path": str(grounding_path),
@@ -203,11 +328,11 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
             "grounding_total_incoming": int(grounding.get("counts", {}).get("total_incoming", 0) or 0),
             "grounding_total_accepted": grounding_total_accepted,
             "grounding_total_needs_patch": int(grounding.get("counts", {}).get("total_needs_patch", 0) or 0),
-            "readiness_records": int(latest_readiness.get("counts", {}).get("records", 0) or 0),
-            "readiness_joinable": int(latest_readiness.get("counts", {}).get("joinable", 0) or 0),
-            "readiness_prompt_ready": int(latest_readiness.get("counts", {}).get("prompt_ready", 0) or 0),
-            "readiness_production_candidate": int(latest_readiness.get("counts", {}).get("production_candidate", 0) or 0),
-            "readiness_professional_target": int(latest_readiness.get("counts", {}).get("professional_target", 0) or 0),
+            "readiness_records": _as_int(authoritative_readiness.get("records")),
+            "readiness_joinable": _as_int(authoritative_readiness.get("joinable")),
+            "readiness_prompt_ready": _as_int(authoritative_readiness.get("prompt_ready")),
+            "readiness_production_candidate": _as_int(authoritative_readiness.get("production_candidate")),
+            "readiness_professional_target": _as_int(authoritative_readiness.get("professional_target")),
             "tier1_active_valid": int(latest_tier1.get("counts", {}).get("pilot20_valid", 0) or 0),
             "tier1_active_invalid": int(latest_tier1.get("counts", {}).get("pilot20_invalid", 0) or 0),
             "tier1_active_overlap": int(latest_tier1.get("counts", {}).get("pilot20_overlap", 0) or 0),
@@ -216,7 +341,7 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
             "wiki_prompt_ready_tracks": int(wiki_manifest.get("counts", {}).get("prompt_ready_tracks", 0) or 0),
             "wiki_professional_target_tracks": int(wiki_manifest.get("counts", {}).get("professional_target_tracks", 0) or 0),
         },
-        "professional_target_tracks": professional_track_ids,
+        "professional_target_tracks": authoritative_readiness.get("professional_track_ids", []),
         "stale_or_conflicting_state": issues,
     }
     return payload
@@ -250,7 +375,8 @@ def render_engine_state_markdown(payload: dict[str, Any]) -> str:
             "",
             f"- latest bulk manifest: `{_safe_text(sources.get('latest_bulk_manifest', {}).get('path'))}`",
             f"- latest tier1 cycle: `{_safe_text(sources.get('latest_tier1_cycle', {}).get('path'))}`",
-            f"- latest readiness audit: `{_safe_text(sources.get('latest_readiness_audit', {}).get('path'))}`",
+            f"- authoritative readiness audit: `{_safe_text(sources.get('authoritative_readiness_audit', {}).get('path'))}`",
+            f"- latest readiness audit raw: `{_safe_text(sources.get('latest_readiness_audit_raw', {}).get('path'))}`",
             f"- grounding status: `{_safe_text(sources.get('grounding_status', {}).get('path'))}`",
             f"- baseline status: `{_safe_text(sources.get('baseline_status', {}).get('path'))}`",
             f"- wiki manifest: `{_safe_text(sources.get('wiki_manifest', {}).get('path'))}`",

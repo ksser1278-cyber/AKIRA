@@ -45,6 +45,9 @@ from . import (
     run_enrich_vocaloid_metadata,
     run_report_baseline,
     run_report_engine_health,
+    run_report_engine_state,
+    run_report_sync_authoritative_wiki,
+    run_report_sync_engine_surface,
     run_songwriter_demo,
 )
 
@@ -72,6 +75,9 @@ def cmd_status(root: Path, _: argparse.Namespace) -> int:
     print("- akira.py dataset export-supervised")
     print("- akira.py dataset import-training-sources")
     print("- akira.py report engine-health")
+    print("- akira.py report engine-state")
+    print("- akira.py report sync-authoritative-wiki")
+    print("- akira.py report sync-engine-surface")
     print("- akira.py report baseline")
     print("- akira.py test")
     return 0
@@ -518,6 +524,9 @@ def cmd_dataset_run_program_continuous_cycle(root: Path, args: argparse.Namespac
     print(f"Tier1 pilot20 invalid: {manifest['counts']['tier1_pilot20_invalid']}")
     print(f"Tier1 pilot20 overlap: {manifest['counts']['tier1_pilot20_overlap']}")
     print(f"Tier1 professional target: {manifest['counts']['tier1_pilot10_professional_target']}")
+    print(f"Engine surface prompt-ready: {manifest['counts']['engine_surface_readiness_prompt_ready']}")
+    print(f"Engine surface professional target: {manifest['counts']['engine_surface_readiness_professional_target']}")
+    print(f"Engine state: {manifest['outputs']['engine_state_json_path']}")
     return 0
 
 
@@ -544,6 +553,9 @@ def cmd_dataset_run_program_continuous_sweep(root: Path, args: argparse.Namespac
     print(f"Tier1 pilot20 invalid: {manifest['counts']['tier1_pilot20_invalid']}")
     print(f"Tier1 pilot20 overlap: {manifest['counts']['tier1_pilot20_overlap']}")
     print(f"Tier1 professional target: {manifest['counts']['tier1_pilot10_professional_target']}")
+    print(f"Engine surface prompt-ready: {manifest['counts']['engine_surface_readiness_prompt_ready']}")
+    print(f"Engine surface professional target: {manifest['counts']['engine_surface_readiness_professional_target']}")
+    print(f"Engine state: {manifest['outputs'].get('engine_state_json_path', '')}")
     return 0
 
 
@@ -692,6 +704,38 @@ def cmd_report_baseline(root: Path, args: argparse.Namespace) -> int:
     print(result["json_path"])
     print(result["md_path"])
     print(f"Source root: {result['source_root']}")
+    return 0
+
+
+def cmd_report_engine_state(root: Path, args: argparse.Namespace) -> int:
+    result = run_report_engine_state(
+        project_root=args.project_root or root,
+        output_root=args.output_root,
+    )
+    print(result["json_path"])
+    print(result["md_path"])
+    print(f"Status level: {result['status_level']}")
+    return 0
+
+
+def cmd_report_sync_authoritative_wiki(root: Path, args: argparse.Namespace) -> int:
+    result = run_report_sync_authoritative_wiki(
+        project_root=args.project_root or root,
+        output_root=args.output_root,
+    )
+    print(result["wiki_manifest_path"])
+    print(f"Wiki root: {result['wiki_root']}")
+    print(f"Status level after: {result['status_level_after']}")
+    return 0
+
+
+def cmd_report_sync_engine_surface(root: Path, args: argparse.Namespace) -> int:
+    result = run_report_sync_engine_surface(
+        project_root=args.project_root or root,
+        output_root=args.output_root,
+    )
+    print(result["manifest_path"])
+    print(f"Status level after: {result['status_level_after']}")
     return 0
 
 
@@ -1133,6 +1177,27 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     report_baseline.add_argument("--project-root", type=Path, default=root)
     report_baseline.add_argument("--output-root", type=Path)
     report_baseline.set_defaults(func=lambda args: cmd_report_baseline(root, args))
+
+    report_engine_state = report_sub.add_parser("engine-state", help="Build authoritative engine state with stale/conflict detection.")
+    report_engine_state.add_argument("--project-root", type=Path, default=root)
+    report_engine_state.add_argument("--output-root", type=Path)
+    report_engine_state.set_defaults(func=lambda args: cmd_report_engine_state(root, args))
+
+    report_sync_authoritative_wiki = report_sub.add_parser(
+        "sync-authoritative-wiki",
+        help="Rebuild wiki outputs from the authoritative readiness audit and canonical corpus.",
+    )
+    report_sync_authoritative_wiki.add_argument("--project-root", type=Path, default=root)
+    report_sync_authoritative_wiki.add_argument("--output-root", type=Path)
+    report_sync_authoritative_wiki.set_defaults(func=lambda args: cmd_report_sync_authoritative_wiki(root, args))
+
+    report_sync_engine_surface = report_sub.add_parser(
+        "sync-engine-surface",
+        help="Refresh baseline, authoritative wiki, and engine state in one step.",
+    )
+    report_sync_engine_surface.add_argument("--project-root", type=Path, default=root)
+    report_sync_engine_surface.add_argument("--output-root", type=Path)
+    report_sync_engine_surface.set_defaults(func=lambda args: cmd_report_sync_engine_surface(root, args))
 
     test_parser = subparsers.add_parser("test", help="Run pytest from the repository root.")
     test_parser.add_argument("pytest_args", nargs="*", help="Additional pytest arguments.")

@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 
 from .corpus_value_classification import classify_corpus_value
+from .engine_surface import sync_engine_surface
 from .tier1_continuous_cycle import run_tier1_continuous_cycle
 from .training_data import write_json
 from .vocaloid_metadata_canonicalize import build_vocaloid_metadata_canonical_corpus
@@ -138,6 +139,8 @@ def run_program_continuous_cycle(
             "manifest_path": "",
         }
 
+    engine_surface = sync_engine_surface(project_root=project_root)
+
     manifest = {
         "schema_version": "1.0",
         "record_type": "program_continuous_cycle_manifest",
@@ -164,6 +167,8 @@ def run_program_continuous_cycle(
             "tier1_pilot20_overlap": tier1_cycle["counts"]["pilot20_overlap"],
             "tier1_pilot10_production_candidate": tier1_cycle["counts"]["pilot10_production_candidate"],
             "tier1_pilot10_professional_target": tier1_cycle["counts"]["pilot10_professional_target"],
+            "engine_surface_readiness_prompt_ready": engine_surface["counts"]["readiness_prompt_ready"],
+            "engine_surface_readiness_professional_target": engine_surface["counts"]["readiness_professional_target"],
         },
         "outputs": {
             "bulk_seed_manifest": bulk_seed["manifest_path"],
@@ -177,6 +182,8 @@ def run_program_continuous_cycle(
             "bulk_utf8_manifest": bulk_utf8["manifest_path"],
             "bulk_value_manifest": bulk_value["manifest_path"],
             "tier1_cycle_manifest": tier1_cycle["manifest_path"],
+            "engine_surface_manifest": engine_surface["manifest_path"],
+            "engine_state_json_path": engine_surface["outputs"]["engine_state_json_path"],
         },
     }
     manifest_path = write_json(
@@ -216,6 +223,7 @@ def run_program_continuous_sweep(
     }
 
     last_tier1_counts: dict[str, Any] = {}
+    last_outputs: dict[str, Any] = {}
     for index in range(batch_count):
         start_offset = bulk_start_offset + (index * offset_step)
         batch_tag = f"{batch_tag_prefix}_{index + 1:02d}"
@@ -236,6 +244,12 @@ def run_program_continuous_sweep(
             "tier1_pilot20_overlap": counts.get("tier1_pilot20_overlap", 0),
             "tier1_pilot10_production_candidate": counts.get("tier1_pilot10_production_candidate", 0),
             "tier1_pilot10_professional_target": counts.get("tier1_pilot10_professional_target", 0),
+            "engine_surface_readiness_prompt_ready": counts.get("engine_surface_readiness_prompt_ready", 0),
+            "engine_surface_readiness_professional_target": counts.get("engine_surface_readiness_professional_target", 0),
+        }
+        last_outputs = {
+            "engine_surface_manifest": manifest["outputs"].get("engine_surface_manifest", ""),
+            "engine_state_json_path": manifest["outputs"].get("engine_state_json_path", ""),
         }
         runs.append(
             {
@@ -265,6 +279,7 @@ def run_program_continuous_sweep(
             **last_tier1_counts,
             "runs": len(runs),
         },
+        "outputs": last_outputs,
         "runs": runs,
     }
     manifest_path = write_json(

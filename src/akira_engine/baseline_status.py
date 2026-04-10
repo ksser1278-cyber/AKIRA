@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -53,7 +54,9 @@ def build_baseline_status(project_root: Path) -> dict[str, Any]:
     return {
         "schema_version": "1.0",
         "record_type": "baseline_status",
-        "snapshot_date": "2026-03-22",
+        "snapshot_date": date.today().isoformat(),
+        "pinned_snapshot_date": "2026-03-22",
+        "snapshot_kind": "pinned_anchor_baseline",
         "approved_anchor_benchmarks": approved_benchmarks,
         "artists": health.get("artists", []),
         "mode_support": health.get("mode_support", {}),
@@ -65,7 +68,8 @@ def render_baseline_status_markdown(payload: dict[str, Any]) -> str:
     lines = [
         "# Pinned Baseline Snapshot",
         "",
-        f"- Snapshot date: `{payload.get('snapshot_date', '')}`",
+        f"- Generated at: `{payload.get('snapshot_date', '')}`",
+        f"- Pinned reference date: `{payload.get('pinned_snapshot_date', '')}`",
         "- This file is a pinned benchmark snapshot. Use `reports/health/engine_health.md` and `reports/planning/execution_backlog.md` for current live operations.",
         "",
         "## Approved Anchor Benchmarks",

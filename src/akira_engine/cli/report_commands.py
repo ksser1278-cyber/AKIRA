@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
+from ..akira_wiki_materializer import materialize_akira_wiki
 from ..baseline_status import build_baseline_status, render_baseline_status_markdown
+from ..engine_surface import sync_engine_surface
 from ..engine_state import build_engine_state, render_engine_state_markdown
 from ..engine_health import build_engine_health, render_engine_health_markdown
 from ..reporting import write_utf8_json, write_utf8_text
@@ -20,6 +23,22 @@ def _source_root(project_root: Path) -> Path:
     if (project_root / "artists").exists() and (project_root / "data").exists():
         return project_root
     return archive_root
+
+
+def _load_json(path: Path | None) -> dict[str, Any]:
+    if path is None or not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _resolve_path(value: str, project_root: Path) -> Path | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    path = Path(text)
+    if not path.is_absolute():
+        path = (project_root / path).resolve()
+    return path.resolve() if path.exists() else None
 
 
 def run_report_engine_health(
@@ -102,3 +121,80 @@ def run_report_engine_state(
         "md_path": str(md_path),
         "status_level": payload.get("status_level", "unknown"),
     }
+
+
+def run_report_sync_authoritative_wiki(
+    *,
+    project_root: Path,
+    output_root: Path | None = None,
+) -> dict[str, Any]:
+    final_project_root = project_root.resolve()
+    wiki_root = (
+        output_root.resolve()
+        if output_root and output_root.is_absolute()
+        else (final_project_root / (output_root or Path("wiki"))).resolve()
+    )
+
+    state = build_engine_state(final_project_root)
+    sources = state.get("authoritative_sources", {})
+
+    readiness_path = _resolve_path(
+        str(sources.get("authoritative_readiness_audit", {}).get("path", "")),
+        final_project_root,
+    )
+    tier1_cycle_path = _resolve_path(
+        str(sources.get("latest_tier1_cycle", {}).get("path", "")),
+        final_project_root,
+    )
+    if readiness_path is None:
+        raise FileNotFoundError("Authoritative readiness audit could not be resolved.")
+    if tier1_cycle_path is None:
+        raise FileNotFoundError("Latest Tier1 cycle manifest could not be resolved.")
+
+    readiness_manifest = _load_json(readiness_path)
+    tier1_cycle = _load_json(tier1_cycle_path)
+
+    canonical_corpus_root = _resolve_path(
+        str(tier1_cycle.get("inputs", {}).get("corpus_root", "")),
+        final_project_root,
+    )
+    generation_root = _resolve_path(
+        str(readiness_manifest.get("inputs", {}).get("generation_root", "")),
+        final_project_root,
+    )
+    if canonical_corpus_root is None:
+        raise FileNotFoundError("Canonical corpus root for authoritative wiki sync could not be resolved.")
+    if generation_root is None:
+        raise FileNotFoundError("Generation root for authoritative wiki sync could not be resolved.")
+
+    wiki_manifest = materialize_akira_wiki(
+        canonical_corpus_root=canonical_corpus_root,
+        generation_root=generation_root,
+        readiness_manifest_path=readiness_path,
+        output_root=wiki_root,
+    )
+    state_after = build_engine_state(final_project_root)
+    return {
+        "wiki_manifest_path": wiki_manifest["manifest_path"],
+        "wiki_root": str(wiki_root),
+        "status_level_after": state_after.get("status_level", "unknown"),
+    }
+
+
+def run_report_sync_engine_surface(
+    *,
+    project_root: Path,
+    output_root: Path | None = None,
+) -> dict[str, Any]:
+    final_project_root = project_root.resolve()
+    final_output_root = (
+        output_root.resolve()
+        if output_root and output_root.is_absolute()
+        else final_project_root
+    )
+    return sync_engine_surface(
+        project_root=final_project_root,
+        wiki_root=final_output_root / "wiki",
+        report_root=final_output_root / "reports" / "planning",
+        data_root=final_output_root / "data",
+    )

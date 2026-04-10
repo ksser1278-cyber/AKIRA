@@ -1,5 +1,5 @@
 # Corpus Status
 
-- total canonical tracks in wiki: `45`
-- prompt-ready tracks: `45`
-- professional-target tracks: `45`
+- total canonical tracks in wiki: `88`
+- prompt-ready tracks: `10`
+- professional-target tracks: `10`

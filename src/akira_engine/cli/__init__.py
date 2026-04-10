@@ -673,6 +673,33 @@ def run_report_engine_health(*, project_root: Path, artists: list[str], output_d
     )
 
 
+def run_report_engine_state(*, project_root: Path, output_root: Path | None = None) -> dict[str, Any]:
+    from .report_commands import run_report_engine_state as _impl
+
+    return _impl(
+        project_root=project_root,
+        output_root=output_root,
+    )
+
+
+def run_report_sync_authoritative_wiki(*, project_root: Path, output_root: Path | None = None) -> dict[str, Any]:
+    from .report_commands import run_report_sync_authoritative_wiki as _impl
+
+    return _impl(
+        project_root=project_root,
+        output_root=output_root,
+    )
+
+
+def run_report_sync_engine_surface(*, project_root: Path, output_root: Path | None = None) -> dict[str, Any]:
+    from .report_commands import run_report_sync_engine_surface as _impl
+
+    return _impl(
+        project_root=project_root,
+        output_root=output_root,
+    )
+
+
 def run_songwriter_demo(*, project_root: Path, artist_id: str, mode_id: str | None = None, intent: str = "", title_seed: str = "", output_dir: Path | None = None, candidate_count: int = 4, generation_mode: str = "auto", model_provider: str = "gpt", model_name: str | None = None) -> dict[str, Any]:
     from .songwriter_commands import run_songwriter_demo as _impl
 
@@ -731,5 +758,8 @@ __all__ = [
     "run_program_continuous_sweep",
     "run_report_baseline",
     "run_report_engine_health",
+    "run_report_engine_state",
+    "run_report_sync_authoritative_wiki",
+    "run_report_sync_engine_surface",
     "run_songwriter_demo",
 ]
