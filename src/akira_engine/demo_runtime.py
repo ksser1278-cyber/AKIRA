@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import random
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -11,6 +12,7 @@ from .demo_planner import build_demo_plan, normalize_demo_plan_for_runtime, rend
 from .demo_renderer import render_demo_candidate, _surface_rewrite
 from .demo_critic import score_demo_candidate
 from .lyric_utils import unique_preserve_order
+from .normalize.mod import contains_bad_script, contains_japanese
 
 # vNext Phase 1 Integration
 from .normalize.mod import run_normalize_stage
@@ -71,6 +73,37 @@ def _safe_print(message: str) -> None:
         print(message)
     except UnicodeEncodeError:
         print(message.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
+
+
+def _collect_surface_contamination(payload: Any, prefix: str = "") -> list[str]:
+    issues: list[str] = []
+    critical_surface = (
+        prefix.endswith(".core_text")
+        or ".required_motifs[" in prefix
+        or ".required_imagery[" in prefix
+        or ".imagery_focus[" in prefix
+        or prefix.endswith(".scene")
+    )
+    if isinstance(payload, dict):
+        for key, value in payload.items():
+            if str(key).endswith("_path"):
+                continue
+            child = f"{prefix}.{key}" if prefix else str(key)
+            issues.extend(_collect_surface_contamination(value, child))
+        return issues
+    if isinstance(payload, list):
+        for index, value in enumerate(payload):
+            child = f"{prefix}[{index}]"
+            issues.extend(_collect_surface_contamination(value, child))
+        return issues
+    if isinstance(payload, str):
+        text = payload.strip()
+        allowed_surface = re.compile(r"^[\u3040-\u30ff\u3400-\u9fff々ー・、。！？「」『』（）\s]+$")
+        if text and contains_japanese(text) and contains_bad_script(text):
+            issues.append(prefix or "value")
+        elif critical_surface and text and not allowed_surface.fullmatch(text):
+            issues.append(prefix or "value")
+    return issues
 
 
 # ---------------------------------------------------------------------------
@@ -481,6 +514,18 @@ def run_demo_songwriter(
         "motif_roster": [m.__dict__ if hasattr(m, "__dict__") else m for m in vnext_plan.motif_roster],
         "section_cards": [c.__dict__ if hasattr(c, "__dict__") else c for c in vnext_plan.section_cards]
     }
+    contamination_paths = _collect_surface_contamination(
+        {
+            "hook_blueprint": runtime_plan.get("hook_blueprint", {}),
+            "section_cards": runtime_plan.get("section_cards", []),
+            "vnext_grounding": runtime_plan.get("vnext_grounding", {}),
+        }
+    )
+    if contamination_paths:
+        raise ValueError(
+            "demo_runtime_surface_contamination: "
+            + ", ".join(contamination_paths[:12])
+        )
 
     # Deterministic RNG
     seed_string = f"{runtime_plan['track_id']}:runtime"

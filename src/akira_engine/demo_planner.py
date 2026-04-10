@@ -13,6 +13,7 @@ from .lyric_utils import (
     unique_preserve_order,
     contains_japanese,
     contains_bad_script,
+    looks_corrupted_text,
     safe_text,
     extract_japanese_lexical_atoms,
 )
@@ -60,6 +61,105 @@ def _clean_demo_terms(values: list[str], limit: int) -> list[str]:
         if len(cleaned) >= limit:
             break
     return _unique(cleaned)
+
+
+def _clean_demo_phrase(value: Any, *, max_len: int = 24) -> str:
+    text = safe_text(value)
+    if not text:
+        return ""
+    if not _is_clean_japanese_surface(text):
+        return ""
+    if len(text.replace(" ", "")) > max_len:
+        return ""
+    return text
+
+
+_CLEAN_JAPANESE_SURFACE_PATTERN = re.compile(r"^[\u3040-\u30ff\u3400-\u9fff々ー・、。！？「」『』（）\s]+$")
+
+
+def _is_clean_japanese_surface(value: Any) -> bool:
+    text = safe_text(value)
+    if not text:
+        return False
+    if not contains_japanese(text):
+        return False
+    if contains_bad_script(text) or looks_corrupted_text(text):
+        return False
+    return bool(_CLEAN_JAPANESE_SURFACE_PATTERN.fullmatch(text))
+
+
+def _clean_demo_phrase_list(values: list[Any], *, limit: int, max_len: int = 24) -> list[str]:
+    cleaned: list[str] = []
+    for value in values:
+        text = _clean_demo_phrase(value, max_len=max_len)
+        if not text:
+            continue
+        cleaned.append(text)
+        if len(cleaned) >= limit:
+            break
+    return _unique(cleaned)
+
+
+def _sanitize_archetype_sections(sections: dict[str, str]) -> dict[str, str]:
+    sanitized: dict[str, str] = {}
+    for key, value in sections.items():
+        text = safe_text(value)
+        if not text:
+            continue
+        kept_lines: list[str] = []
+        for raw_line in text.splitlines():
+            line = raw_line.rstrip()
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if contains_bad_script(stripped) or looks_corrupted_text(stripped):
+                continue
+            kept_lines.append(line)
+        if kept_lines:
+            sanitized[safe_text(key)] = "\n".join(kept_lines)
+    return sanitized
+
+
+def _sanitize_archetype_context(context: dict[str, Any]) -> dict[str, Any]:
+    payload = dict(context)
+    payload["artist_sections"] = _sanitize_archetype_sections(
+        payload.get("artist_sections", {}) if isinstance(payload.get("artist_sections", {}), dict) else {}
+    )
+    payload["mode_sections"] = _sanitize_archetype_sections(
+        payload.get("mode_sections", {}) if isinstance(payload.get("mode_sections", {}), dict) else {}
+    )
+    return payload
+
+
+def _sanitize_section_card(card: dict[str, Any]) -> dict[str, Any]:
+    section = safe_text(card.get("section"))
+    required_motifs = _clean_demo_phrase_list(list(card.get("required_motifs", [])), limit=6, max_len=12)
+    required_imagery = _clean_demo_phrase_list(list(card.get("required_imagery", [])), limit=4, max_len=12)
+    imagery_focus = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
+    emotion_focus = _clean_demo_phrase_list(list(card.get("emotion_focus", [])), limit=3, max_len=16)
+    narrative_goals = [
+        safe_text(item)
+        for item in card.get("narrative_goals", [])
+        if safe_text(item) and not contains_bad_script(safe_text(item)) and not looks_corrupted_text(safe_text(item))
+    ][:3]
+    scene = _clean_demo_phrase(card.get("scene"), max_len=12)
+    if not scene:
+        scene = (required_imagery or imagery_focus or required_motifs or [""])[0]
+    goal = safe_text(card.get("goal"))
+    if not goal or contains_bad_script(goal) or looks_corrupted_text(goal):
+        goal = section or "section"
+    return {
+        **card,
+        "section": section,
+        "canonical_section": safe_text(card.get("canonical_section") or section),
+        "goal": goal,
+        "required_motifs": required_motifs,
+        "required_imagery": required_imagery,
+        "scene": scene,
+        "emotion_focus": emotion_focus or ([goal] if goal else []),
+        "narrative_goals": narrative_goals or ([goal] if goal else []),
+        "imagery_focus": imagery_focus,
+    }
 
 
 _RUNTIME_META_BLOCKLIST = {
@@ -328,6 +428,80 @@ def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
         "bridge": ["ひび", "血", "反射"],
         "chorus_final": ["叫비", "火花", "落下"],
         "outro": ["余熱", "静けさ", "残り香"],
+    }
+def _section_goal_defaults(mode_id: str) -> dict[str, list[str]]:
+    if mode_id == "direct_emotional_pop":
+        return {
+            "intro": ["감정의 문을 여는 도입", "숨을 고르는 첫 장면"],
+            "verse_1": ["상처를 드러내는 진술", "관계를 설명하는 첫 고백"],
+            "pre_chorus": ["압력이 높아지는 전환", "감정이 몰리는 직전"],
+            "chorus": ["핵심 감정을 선명하게 선언", "제목과 후렴을 결박"],
+            "verse_2": ["관계를 뒤집는 추가 고백", "상처의 원인을 더 깊게 제시"],
+            "pre_chorus_2": ["파국 직전의 고조", "호흡을 조여 오는 재가속"],
+            "bridge": ["가장 깊은 균열을 드러냄", "정서를 반전시키는 침잠"],
+            "chorus_final": ["감정의 최종 방출", "후렴을 더 크게 재점화"],
+            "outro": ["잔향만 남기는 마감"],
+        }
+    if mode_id == "dark_cute_breakdown":
+        return {
+            "intro": ["귀여운 표면 아래 불안을 깔기", "놀이 같은 공포를 예고"],
+            "verse_1": ["장난스러운 표정으로 위협 제시", "달콤함과 독성을 병치"],
+            "pre_chorus": ["귀여운 세계가 금 가기 시작", "글리치와 불안을 상승"],
+            "chorus": ["달콤한 후렴을 무기로 전환", "귀여움과 파괴를 동시 폭발"],
+            "verse_2": ["위협을 더 노골적으로 확대"],
+            "pre_chorus_2": ["붕괴 직전의 과열"],
+            "bridge": ["정적과 공백으로 공포 강화"],
+            "chorus_final": ["최대 강도로 무너뜨리는 클라이맥스", "후렴과 파괴를 동시에 증폭"],
+            "outro": ["독한 잔상만 남기는 퇴장"],
+        }
+    return {
+        "intro": ["세계와 화자를 소개"],
+        "verse_1": ["첫 갈등을 드러냄"],
+        "pre_chorus": ["전환과 긴장 상승"],
+        "chorus": ["핵심 감정과 제목 제시"],
+        "verse_2": ["갈등 확대"],
+        "pre_chorus_2": ["후렴 재진입 직전 고조"],
+        "bridge": ["정서의 변곡점"],
+        "chorus_final": ["마지막 방출"],
+        "outro": ["잔향으로 마감"],
+    }
+
+
+def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
+    if mode_id == "dark_cute_breakdown":
+        return {
+            "intro": ["사탕", "놀이터", "미소"],
+            "verse_1": ["손끝", "상처", "장난감"],
+            "pre_chorus": ["노이즈", "심장", "경보"],
+            "chorus": ["캔디", "독", "글리치"],
+            "verse_2": ["교실", "밤길", "잔향"],
+            "pre_chorus_2": ["호흡", "균열", "치아"],
+            "bridge": ["정적", "암실", "체온"],
+            "chorus_final": ["비명", "단선", "파편"],
+            "outro": ["잔향", "야경", "독"],
+        }
+    if mode_id == "direct_emotional_pop":
+        return {
+            "intro": ["새벽", "창문", "한숨"],
+            "verse_1": ["거리", "손끝", "기억"],
+            "pre_chorus": ["파도", "온기", "침묵"],
+            "chorus": ["눈물", "목소리", "심장"],
+            "verse_2": ["계절", "편지", "그림자"],
+            "pre_chorus_2": ["호흡", "체온", "거리"],
+            "bridge": ["정적", "새벽빛", "메아리"],
+            "chorus_final": ["파편", "울림", "잔광"],
+            "outro": ["잔향", "걸음", "새벽"],
+        }
+    return {
+        "intro": ["새벽", "거리", "숨"],
+        "verse_1": ["손끝", "기억", "그림자"],
+        "pre_chorus": ["심장", "침묵", "균열"],
+        "chorus": ["목소리", "파편", "잔향"],
+        "verse_2": ["밤길", "체온", "잔광"],
+        "pre_chorus_2": ["노이즈", "호흡", "멜로디"],
+        "bridge": ["정적", "암전", "메아리"],
+        "chorus_final": ["비명", "폭발", "후광"],
+        "outro": ["잔향", "걸음", "새벽"],
     }
 
 
@@ -793,7 +967,9 @@ def build_demo_plan(
     profile_path = _find_artist_profile(project_root, primary_id)
     representative_profile = _load_json(profile_path)
     effective_mode_id = safe_text(mode_id) or safe_text(representative_profile.get("mode_priority", ["ironic_meta"])[0])
-    archetype_context = _load_archetype_context(project_root, artist_id, effective_mode_id)
+    archetype_context = _sanitize_archetype_context(
+        _load_archetype_context(project_root, artist_id, effective_mode_id)
+    )
 
     all_anchor_records: list[dict[str, Any]] = []
     all_expansion_records: list[dict[str, Any]] = []
@@ -876,7 +1052,7 @@ def build_demo_plan(
         + list(mode_support_context.get("theme_axes", [])),
         10,
     )
-    imagery_anchors = _top(
+    imagery_anchors = _clean_demo_phrase_list(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -884,9 +1060,10 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("imagery_anchors", [])),
-        12,
+        limit=12,
+        max_len=12,
     )
-    vocal_tones = _top(
+    vocal_tones = _clean_demo_phrase_list(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -894,9 +1071,10 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("vocal_tones", [])),
-        8,
+        limit=8,
+        max_len=16,
     )
-    production_palette = _top(
+    production_palette = _clean_demo_phrase_list(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -904,7 +1082,8 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("production_palette", [])),
-        8,
+        limit=8,
+        max_len=16,
     )
     energy_arc = _top(
         [
@@ -919,7 +1098,10 @@ def build_demo_plan(
 
     title_patterns = _derive_title_patterns(anchor_records + expansion_records)
     hook_blueprint = _derive_hook_blueprint(anchor_records + expansion_records, mode_support_context)
-    section_cards = _derive_section_cards(anchor_records + expansion_records, effective_mode_id)
+    section_cards = [
+        _sanitize_section_card(card)
+        for card in _derive_section_cards(anchor_records + expansion_records, effective_mode_id)
+    ]
     leakage_guardrails = _derive_leakage_guardrails(
         artist_id,
         anchor_records,
@@ -927,7 +1109,7 @@ def build_demo_plan(
         representative_profile,
     )
 
-    seed_phrases = _top(
+    seed_phrases = _clean_demo_phrase_list(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -936,7 +1118,8 @@ def build_demo_plan(
         ]
         + list(mode_support_context.get("motif_atoms", []))
         + list(mode_support_context.get("scene_atoms", [])),
-        12,
+        limit=12,
+        max_len=12,
     )
 
     return {
@@ -1076,6 +1259,24 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     composite = plan.get("composite_style", {}) or {}
     leakage = plan.get("leakage_guardrails", {}) or {}
     artist_profile = load_artist_profile(artist_id) or {}
+    clean_theme_axes = _unique(
+        [
+            safe_text(value)
+            for value in composite.get("theme_axes", [])
+            if safe_text(value)
+            and not contains_bad_script(safe_text(value))
+            and not looks_corrupted_text(safe_text(value))
+        ]
+    )[:10]
+    clean_energy_arc = _unique(
+        [
+            safe_text(value)
+            for value in composite.get("energy_arc", [])
+            if safe_text(value)
+            and not contains_bad_script(safe_text(value))
+            and not looks_corrupted_text(safe_text(value))
+        ]
+    )[:8]
 
     seed_phrases = _clean_demo_terms(composite.get("seed_phrases", []), limit=12)
     imagery = _clean_demo_terms(composite.get("imagery_anchors", []), limit=12)
@@ -1084,13 +1285,17 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     if not motifs:
         motifs = list(conditioning_atoms.get("motifs", []))
 
-    fallback_hook = title_seed
-    if not contains_japanese(fallback_hook) or contains_bad_script(fallback_hook):
-        fallback_hook = safe_text((conditioning_atoms.get("title_atoms") or [None])[0])
+    fallback_hook = title_seed if _is_clean_japanese_surface(title_seed) else ""
     if not fallback_hook:
-        fallback_hook = safe_text((conditioning_atoms.get("hook_atoms") or [None])[0])
+        title_atom = safe_text((conditioning_atoms.get("title_atoms") or [None])[0])
+        fallback_hook = title_atom if _is_clean_japanese_surface(title_atom) else ""
     if not fallback_hook:
-        fallback_hook = motifs[0] if motifs else "..."
+        hook_atom = safe_text((conditioning_atoms.get("hook_atoms") or [None])[0])
+        fallback_hook = hook_atom if _is_clean_japanese_surface(hook_atom) else ""
+    if not fallback_hook:
+        fallback_hook = next((item for item in motifs if _is_clean_japanese_surface(item)), "")
+    if not fallback_hook:
+        fallback_hook = "幻灯"
     track_id = title_seed or safe_text(conditioning_atoms.get("track_id")) or f"{artist_id}_{mode}_demo"
 
     # Map vNext imagery if plan exists
@@ -1106,9 +1311,15 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     normalized_cards: list[dict[str, Any]] = []
     for idx, card in enumerate(plan.get("section_cards", [])):
         s_name = safe_text(card.get("section"))
-        goals = [safe_text(x) for x in card.get("narrative_goals", []) if safe_text(x)]
-        imagery_terms = _clean_demo_terms(list(card.get("imagery_focus", [])), limit=4)
-        emotion_terms = _clean_demo_terms(goals, limit=2)
+        goals = [
+            safe_text(x)
+            for x in card.get("narrative_goals", [])
+            if safe_text(x)
+            and not contains_bad_script(safe_text(x))
+            and not looks_corrupted_text(safe_text(x))
+        ]
+        imagery_terms = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
+        emotion_terms = _clean_demo_phrase_list(goals, limit=2, max_len=16)
         section_motifs = _unique(imagery_terms + _rotating_take(motifs, 2, idx * 2))
         if not section_motifs:
             section_motifs = _rotating_take(motifs, 2, idx * 2)
@@ -1125,11 +1336,11 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "goal": goals[0] if goals else s_name,
                 "line_target": int(card.get("line_target", 4) or 4),
                 "required_motifs": section_motifs,
-                "required_imagery": vnext_imagery_map.get(s_name, []), # PROMOTED vNext Anchors
+                "required_imagery": _clean_demo_phrase_list(vnext_imagery_map.get(s_name, []), limit=4, max_len=12),
                 "scene": section_scene,
                 "emotion_focus": emotion_terms or goals[:2],
                 "narrative_goals": goals,
-                "imagery_focus": list(card.get("imagery_focus", [])),
+                "imagery_focus": imagery_terms,
                 "delivery": (
                     "release"
                     if s_name == "chorus_final"
@@ -1160,13 +1371,13 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         },
         "hook_density": safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium"),
         "artist_profile": artist_profile,
-        "theme_axes": list(composite.get("theme_axes", [])),
-        "dominant_emotions": list(composite.get("theme_axes", []))[:4],
+        "theme_axes": clean_theme_axes,
+        "dominant_emotions": clean_theme_axes[:4],
         "voice": {
             "voice": "first_person",
             "address": "second_person",
         },
-        "arc_label": " -> ".join(list(composite.get("energy_arc", []))[:3]) or mode,
+        "arc_label": " -> ".join(clean_energy_arc[:3]) or mode,
         "form_profile": {
             "section_order": [card["section"] for card in normalized_cards],
             "tags": [mode, "artist_demo"],
@@ -1175,8 +1386,8 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         "conditioning_context": {
             "available": True,
             "track_id": safe_text(conditioning_atoms.get("track_id")) or artist_id,
-            "contrast_device": list(composite.get("theme_axes", []))[:3],
-            "dramatic_arc": list(composite.get("energy_arc", []))[:4],
+            "contrast_device": clean_theme_axes[:3],
+            "dramatic_arc": clean_energy_arc[:4],
             "phrase_source_types": ["artist_demo_plan"],
             "hook_copy_force": safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium"),
             "title_ignition_style": safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct"),
@@ -1209,6 +1420,26 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         },
         "artist_synthesis_context": {
             "demo_plan": plan,
+            "forbidden_titles": list(leakage.get("forbidden_titles", [])),
+        },
+        "final_release_requirements": {
+            "must_be_clearer_than_chorus": True,
+            "must_introduce_forward_motion": True,
+            "release_markers": ["파열", "잔향", "단선", "후광", "비명"],
+            "required_new_images": _clean_demo_terms(composite.get("imagery_anchors", []), limit=3),
+        },
+        "artist_synthesis_context": {
+            "demo_plan": {
+                **plan,
+                "composite_style": {
+                    **(plan.get("composite_style", {}) or {}),
+                    "theme_axes": clean_theme_axes,
+                    "imagery_anchors": imagery,
+                    "seed_phrases": seed_phrases,
+                    "energy_arc": clean_energy_arc,
+                },
+                "section_cards": normalized_cards,
+            },
             "forbidden_titles": list(leakage.get("forbidden_titles", [])),
         },
         "section_cards": normalized_cards,
