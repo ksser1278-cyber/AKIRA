@@ -83,6 +83,11 @@ def _collect_surface_contamination(payload: Any, prefix: str = "") -> list[str]:
         or ".required_imagery[" in prefix
         or ".imagery_focus[" in prefix
         or prefix.endswith(".scene")
+        or ".release_markers[" in prefix
+        or ".required_new_images[" in prefix
+        or ".title_atoms[" in prefix
+        or ".hook_atoms[" in prefix
+        or ".contrast_terms[" in prefix
     )
     if isinstance(payload, dict):
         for key, value in payload.items():
@@ -508,6 +513,11 @@ def run_demo_songwriter(
     vnext_plan = run_planner_stage(project_root, artist_id, mode_id=(mode_id or demo_plan.get("mode_id", "default")), title_seed=title_seed)
     pre_audit_result = run_pre_audit_stage(conditioning_record, vnext_plan)
     _write_utf8_json(output_dir / "pre_audit_result.json", pre_audit_result.__dict__)
+    if not pre_audit_result.passed:
+        raise ValueError(
+            "demo_pre_audit_failed: "
+            + "; ".join(pre_audit_result.diagnostics[:5])
+        )
 
     runtime_plan = normalize_demo_plan_for_runtime(demo_plan, vnext_plan=vnext_plan)
     runtime_plan["vnext_grounding"] = {

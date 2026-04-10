@@ -1,6 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+import re
 from typing import Any
+
+from src.akira_engine.normalize.mod import contains_bad_script, contains_japanese
 
 @dataclass
 class PreAuditResult:
@@ -10,6 +13,77 @@ class PreAuditResult:
     imagery_coverage: float = 0.0
     structural_match: float = 0.0
     identity_match: bool = False
+
+
+_ALLOWED_SURFACE = re.compile(r"^[\u3040-\u30ff\u3400-\u9fff々ー・、。！？「」『』（）\s]+$")
+_WEAK_AUDIT_TOKENS = {
+    "言い",
+    "訳",
+    "在り",
+    "始まり",
+    "始まりまし",
+    "逃げ",
+    "ニンゲン",
+    "見下し",
+    "物足り",
+    "空振り",
+    "理想論",
+    "タカラモノ",
+}
+_WEAK_AUDIT_SUFFIXES = (
+    "まし",
+    "ですか",
+    "でした",
+    "する",
+    "した",
+    "して",
+    "ます",
+    "です",
+    "ない",
+    "たい",
+    "よう",
+    "られ",
+    "れる",
+    "せる",
+    "とか",
+    "だけ",
+    "ほど",
+    "より",
+    "から",
+)
+
+
+def _clean_term(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    if not contains_japanese(text):
+        return ""
+    if contains_bad_script(text):
+        return ""
+    if not _ALLOWED_SURFACE.fullmatch(text):
+        return ""
+    compact = text.replace(" ", "").replace("　", "")
+    if len(compact) < 2:
+        return ""
+    if compact in _WEAK_AUDIT_TOKENS:
+        return ""
+    if compact.endswith(_WEAK_AUDIT_SUFFIXES):
+        return ""
+    if re.search(r"[\u3400-\u9fff々][\u3040-\u309f]{2,}$", compact):
+        return ""
+    if re.fullmatch(r"[\u3040-\u309f]+", compact) and len(compact) <= 3:
+        return ""
+    return text
+
+
+def _clean_terms(values: list[Any]) -> list[str]:
+    out: list[str] = []
+    for value in values:
+        text = _clean_term(value)
+        if text and text not in out:
+            out.append(text)
+    return out
 
 def run_pre_audit_stage(
     conditioning: Any, # ConditioningResult
@@ -34,13 +108,14 @@ def run_pre_audit_stage(
     required_imagery = getattr(conditioning, "imagery_anchors", [])
     if not required_imagery and hasattr(conditioning, "prompt_conditioning"):
         required_imagery = conditioning.prompt_conditioning.get("imagery_anchors", [])
+    required_imagery = _clean_terms(required_imagery if isinstance(required_imagery, list) else [])
     
     plan_atoms = set()
     for card in getattr(plan, "section_cards", []):
         card_dict = card.__dict__ if hasattr(card, "__dict__") else card
-        plan_atoms.update(card_dict.get("imagery_focus", []))
-        plan_atoms.update(card_dict.get("required_motifs", []))
-        plan_atoms.update(card_dict.get("required_imagery", []))
+        plan_atoms.update(_clean_terms(card_dict.get("imagery_focus", [])))
+        plan_atoms.update(_clean_terms(card_dict.get("required_motifs", [])))
+        plan_atoms.update(_clean_terms(card_dict.get("required_imagery", [])))
         
     unique_required = list(set(required_imagery))
     hits = [atom for atom in unique_required if atom in plan_atoms]
@@ -57,25 +132,25 @@ def run_pre_audit_stage(
     plan_cards = getattr(plan, "section_cards", [])
     
     matches = 0
-    total = max(len(cond_sections), len(plan_cards))
-    for i in range(min(len(cond_sections), len(plan_cards))):
-        c_sec = cond_sections[i].get("section", "")
+    compared = min(len(cond_sections), len(plan_cards))
+    for i in range(compared):
+        c_sec = str(cond_sections[i].get("section", "")).strip()
         p_sec = getattr(plan_cards[i], "section", "")
         if c_sec == p_sec:
             matches += 1
-            
+    total = compared if compared > 0 else 0
     structural_match = round(matches / total, 2) if total > 0 else 1.0
     if structural_match < 1.0:
         diagnostics.append(f"Structural match: {int(structural_match * 100)}% ({matches}/{total} sections)")
 
-    # 4. Severity Verdict (Warning Mode for Phase 1)
+    # 4. Severity Verdict
     severity = "warning"
-    passed = True # Phase 1 always passes but logs diagnostics
-    
-    if not identity_match or structural_match < 0.5:
+    passed = True
+
+    if not identity_match:
         severity = "hard_fail"
-        # In Hard Gate phase, passed would be False
-    elif imagery_coverage < 0.4:
+        passed = False
+    elif unique_required and imagery_coverage < 0.4:
         severity = "soft_fail"
     elif imagery_coverage < 0.8 or structural_match < 0.9:
         severity = "warning"

@@ -51,11 +51,7 @@ def _clean_demo_terms(values: list[str], limit: int) -> list[str]:
         text = safe_text(value)
         if not text:
             continue
-        if not contains_japanese(text):
-            continue
-        if contains_bad_script(text):
-            continue
-        if len(text) > 12:
+        if not _is_usable_runtime_atom(text, max_len=12):
             continue
         cleaned.append(text)
         if len(cleaned) >= limit:
@@ -75,6 +71,52 @@ def _clean_demo_phrase(value: Any, *, max_len: int = 24) -> str:
 
 
 _CLEAN_JAPANESE_SURFACE_PATTERN = re.compile(r"^[\u3040-\u30ff\u3400-\u9fff々ー・、。！？「」『』（）\s]+$")
+_WEAK_HOOK_TOKENS = {
+    "言い",
+    "在り",
+    "逃げ",
+    "記憶",
+    "始まり",
+    "始まりまし",
+    "理想",
+    "夜道",
+    "体温",
+    "残響",
+    "訳",
+    "ニンゲン",
+    "見下し",
+    "物足り",
+    "空振り",
+    "理想論",
+    "タカラモノ",
+}
+_WEAK_RUNTIME_SUFFIXES = (
+    "まし",
+    "ですか",
+    "でした",
+    "する",
+    "した",
+    "して",
+    "ます",
+    "です",
+    "ない",
+    "たい",
+    "よう",
+    "られ",
+    "れる",
+    "せる",
+    "だっ",
+    "とか",
+    "だけ",
+    "ほど",
+    "より",
+    "から",
+)
+_MODE_HOOK_FALLBACKS: dict[str, list[str]] = {
+    "dark_cute_breakdown": ["飴の罰", "毒遊び", "笑う毒", "玩具熱", "甘い傷"],
+    "direct_emotional_pop": ["夜の窓", "残響灯", "心拍線", "朝の傷", "薄明"],
+    "default": ["幻灯", "残響灯", "夜歩き", "薄明", "余熱"],
+}
 
 
 def _is_clean_japanese_surface(value: Any) -> bool:
@@ -86,6 +128,65 @@ def _is_clean_japanese_surface(value: Any) -> bool:
     if contains_bad_script(text) or looks_corrupted_text(text):
         return False
     return bool(_CLEAN_JAPANESE_SURFACE_PATTERN.fullmatch(text))
+
+
+def _is_usable_runtime_atom(value: Any, *, max_len: int = 12) -> bool:
+    text = safe_text(value)
+    if not _is_clean_japanese_surface(text):
+        return False
+    compact = text.replace(" ", "").replace("　", "")
+    if not (2 <= len(compact) <= max_len):
+        return False
+    lowered = compact.lower()
+    if compact in _WEAK_HOOK_TOKENS:
+        return False
+    if any(token in lowered or token in compact for token in _RUNTIME_META_BLOCKLIST):
+        return False
+    if compact.endswith(_WEAK_RUNTIME_SUFFIXES):
+        return False
+    if re.search(r"[\u3400-\u9fff々][\u3040-\u309f]{2,}$", compact):
+        return False
+    if re.fullmatch(r"[\u3040-\u309f]+", compact) and len(compact) <= 3:
+        return False
+    return True
+
+
+def _is_strong_runtime_hook(value: Any) -> bool:
+    text = safe_text(value)
+    if not _is_usable_runtime_atom(text, max_len=8):
+        return False
+    compact = text.replace(" ", "")
+    if re.fullmatch(r"[\u3040-\u309f]+", compact):
+        return len(compact) >= 4
+    return True
+
+
+def _derive_runtime_hook(
+    *,
+    mode: str,
+    title_seed: str,
+    conditioning_atoms: dict[str, Any],
+    motifs: list[str],
+) -> str:
+    if _is_strong_runtime_hook(title_seed):
+        return safe_text(title_seed)
+
+    trusted_track_id = safe_text(conditioning_atoms.get("track_id"))
+    candidates: list[str] = []
+    if trusted_track_id:
+        for key in ("title_atoms", "hook_atoms"):
+            raw = conditioning_atoms.get(key, [])
+            if isinstance(raw, list):
+                candidates.extend([safe_text(item) for item in raw if safe_text(item)])
+        for candidate in candidates:
+            if _is_strong_runtime_hook(candidate):
+                return candidate
+
+    fallbacks = _MODE_HOOK_FALLBACKS.get(mode, _MODE_HOOK_FALLBACKS["default"])
+    for candidate in fallbacks:
+        if _is_strong_runtime_hook(candidate):
+            return candidate
+    return "幻灯"
 
 
 def _clean_demo_phrase_list(values: list[Any], *, limit: int, max_len: int = 24) -> list[str]:
@@ -243,14 +344,7 @@ def _safe_runtime_atoms(values: list[Any], *, limit: int = 8, max_len: int = 8) 
 
     cleaned_atoms: list[str] = []
     for atom in unique_preserve_order(atoms):
-        lowered = atom.lower()
-        if not atom or not contains_japanese(atom) or contains_bad_script(atom):
-            continue
-        if " " in atom or "　" in atom:
-            continue
-        if len(atom) < 2 or len(atom) > max_len:
-            continue
-        if any(token in lowered or token in atom for token in _RUNTIME_META_BLOCKLIST):
+        if not _is_usable_runtime_atom(atom, max_len=max_len):
             continue
         cleaned_atoms.append(atom)
         if len(cleaned_atoms) >= limit:
@@ -414,7 +508,7 @@ def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
             "chorus": ["声", "涙", "光"],
             "verse_2": ["靴音", "影", "痛み"],
             "pre_chorus_2": ["熱", "まばたき", "ざわめき"],
-            "bridge": ["傷", "血流", "祈리"],
+            "bridge": ["傷", "血流", "祈り"],
             "chorus_final": ["叫び", "閃光", "震え"],
             "outro": ["余韻", "呼吸", "ぬくもり"],
         }
@@ -426,82 +520,8 @@ def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
         "verse_2": ["影", "雨粒", "残響"],
         "pre_chorus_2": ["めまい", "ノイズ", "脈"],
         "bridge": ["ひび", "血", "反射"],
-        "chorus_final": ["叫비", "火花", "落下"],
+        "chorus_final": ["叫び", "火花", "落下"],
         "outro": ["余熱", "静けさ", "残り香"],
-    }
-def _section_goal_defaults(mode_id: str) -> dict[str, list[str]]:
-    if mode_id == "direct_emotional_pop":
-        return {
-            "intro": ["감정의 문을 여는 도입", "숨을 고르는 첫 장면"],
-            "verse_1": ["상처를 드러내는 진술", "관계를 설명하는 첫 고백"],
-            "pre_chorus": ["압력이 높아지는 전환", "감정이 몰리는 직전"],
-            "chorus": ["핵심 감정을 선명하게 선언", "제목과 후렴을 결박"],
-            "verse_2": ["관계를 뒤집는 추가 고백", "상처의 원인을 더 깊게 제시"],
-            "pre_chorus_2": ["파국 직전의 고조", "호흡을 조여 오는 재가속"],
-            "bridge": ["가장 깊은 균열을 드러냄", "정서를 반전시키는 침잠"],
-            "chorus_final": ["감정의 최종 방출", "후렴을 더 크게 재점화"],
-            "outro": ["잔향만 남기는 마감"],
-        }
-    if mode_id == "dark_cute_breakdown":
-        return {
-            "intro": ["귀여운 표면 아래 불안을 깔기", "놀이 같은 공포를 예고"],
-            "verse_1": ["장난스러운 표정으로 위협 제시", "달콤함과 독성을 병치"],
-            "pre_chorus": ["귀여운 세계가 금 가기 시작", "글리치와 불안을 상승"],
-            "chorus": ["달콤한 후렴을 무기로 전환", "귀여움과 파괴를 동시 폭발"],
-            "verse_2": ["위협을 더 노골적으로 확대"],
-            "pre_chorus_2": ["붕괴 직전의 과열"],
-            "bridge": ["정적과 공백으로 공포 강화"],
-            "chorus_final": ["최대 강도로 무너뜨리는 클라이맥스", "후렴과 파괴를 동시에 증폭"],
-            "outro": ["독한 잔상만 남기는 퇴장"],
-        }
-    return {
-        "intro": ["세계와 화자를 소개"],
-        "verse_1": ["첫 갈등을 드러냄"],
-        "pre_chorus": ["전환과 긴장 상승"],
-        "chorus": ["핵심 감정과 제목 제시"],
-        "verse_2": ["갈등 확대"],
-        "pre_chorus_2": ["후렴 재진입 직전 고조"],
-        "bridge": ["정서의 변곡점"],
-        "chorus_final": ["마지막 방출"],
-        "outro": ["잔향으로 마감"],
-    }
-
-
-def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
-    if mode_id == "dark_cute_breakdown":
-        return {
-            "intro": ["사탕", "놀이터", "미소"],
-            "verse_1": ["손끝", "상처", "장난감"],
-            "pre_chorus": ["노이즈", "심장", "경보"],
-            "chorus": ["캔디", "독", "글리치"],
-            "verse_2": ["교실", "밤길", "잔향"],
-            "pre_chorus_2": ["호흡", "균열", "치아"],
-            "bridge": ["정적", "암실", "체온"],
-            "chorus_final": ["비명", "단선", "파편"],
-            "outro": ["잔향", "야경", "독"],
-        }
-    if mode_id == "direct_emotional_pop":
-        return {
-            "intro": ["새벽", "창문", "한숨"],
-            "verse_1": ["거리", "손끝", "기억"],
-            "pre_chorus": ["파도", "온기", "침묵"],
-            "chorus": ["눈물", "목소리", "심장"],
-            "verse_2": ["계절", "편지", "그림자"],
-            "pre_chorus_2": ["호흡", "체온", "거리"],
-            "bridge": ["정적", "새벽빛", "메아리"],
-            "chorus_final": ["파편", "울림", "잔광"],
-            "outro": ["잔향", "걸음", "새벽"],
-        }
-    return {
-        "intro": ["새벽", "거리", "숨"],
-        "verse_1": ["손끝", "기억", "그림자"],
-        "pre_chorus": ["심장", "침묵", "균열"],
-        "chorus": ["목소리", "파편", "잔향"],
-        "verse_2": ["밤길", "체온", "잔광"],
-        "pre_chorus_2": ["노이즈", "호흡", "멜로디"],
-        "bridge": ["정적", "암전", "메아리"],
-        "chorus_final": ["비명", "폭발", "후광"],
-        "outro": ["잔향", "걸음", "새벽"],
     }
 
 
@@ -1284,19 +1304,22 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     motifs = _unique(seed_phrases + imagery)
     if not motifs:
         motifs = list(conditioning_atoms.get("motifs", []))
+    if not motifs:
+        motifs = _MODE_HOOK_FALLBACKS.get(mode, _MODE_HOOK_FALLBACKS["default"])[:3]
 
-    fallback_hook = title_seed if _is_clean_japanese_surface(title_seed) else ""
-    if not fallback_hook:
-        title_atom = safe_text((conditioning_atoms.get("title_atoms") or [None])[0])
-        fallback_hook = title_atom if _is_clean_japanese_surface(title_atom) else ""
-    if not fallback_hook:
-        hook_atom = safe_text((conditioning_atoms.get("hook_atoms") or [None])[0])
-        fallback_hook = hook_atom if _is_clean_japanese_surface(hook_atom) else ""
-    if not fallback_hook:
-        fallback_hook = next((item for item in motifs if _is_clean_japanese_surface(item)), "")
-    if not fallback_hook:
-        fallback_hook = "幻灯"
+    fallback_hook = _derive_runtime_hook(
+        mode=mode,
+        title_seed=title_seed,
+        conditioning_atoms=conditioning_atoms,
+        motifs=motifs,
+    )
     track_id = title_seed or safe_text(conditioning_atoms.get("track_id")) or f"{artist_id}_{mode}_demo"
+    title_atoms = [atom for atom in conditioning_atoms.get("title_atoms", []) if _is_usable_runtime_atom(atom, max_len=8)]
+    hook_atoms = [atom for atom in conditioning_atoms.get("hook_atoms", []) if _is_usable_runtime_atom(atom, max_len=8)]
+    contrast_terms = [
+        atom for atom in conditioning_atoms.get("contrast_terms", []) if _is_usable_runtime_atom(atom, max_len=8)
+    ]
+    clean_required_images = imagery[:3]
 
     # Map vNext imagery if plan exists
     vnext_imagery_map: dict[str, list[str]] = {}
@@ -1319,6 +1342,8 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             and not looks_corrupted_text(safe_text(x))
         ]
         imagery_terms = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
+        if not imagery_terms:
+            imagery_terms = _rotating_take(imagery, 2, idx)
         emotion_terms = _clean_demo_phrase_list(goals, limit=2, max_len=16)
         section_motifs = _unique(imagery_terms + _rotating_take(motifs, 2, idx * 2))
         if not section_motifs:
@@ -1328,6 +1353,9 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             section_motifs = _unique([fallback_hook] + section_motifs)
             if not section_scene and fallback_hook != "...":
                 section_scene = fallback_hook
+        required_imagery = _clean_demo_phrase_list(vnext_imagery_map.get(s_name, []), limit=4, max_len=12)
+        if not required_imagery:
+            required_imagery = imagery_terms[:2]
 
         normalized_cards.append(
             {
@@ -1336,7 +1364,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "goal": goals[0] if goals else s_name,
                 "line_target": int(card.get("line_target", 4) or 4),
                 "required_motifs": section_motifs,
-                "required_imagery": _clean_demo_phrase_list(vnext_imagery_map.get(s_name, []), limit=4, max_len=12),
+                "required_imagery": required_imagery,
                 "scene": section_scene,
                 "emotion_focus": emotion_terms or goals[:2],
                 "narrative_goals": goals,
@@ -1354,6 +1382,19 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         )
 
     ordered_headers = [f"[{card['section']}]" for card in normalized_cards if safe_text(card.get("section"))]
+    hook_density = safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium")
+    title_ignition_style = safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct")
+    sanitized_demo_plan = {
+        **plan,
+        "composite_style": {
+            **(plan.get("composite_style", {}) or {}),
+            "theme_axes": clean_theme_axes,
+            "imagery_anchors": imagery,
+            "seed_phrases": seed_phrases,
+            "energy_arc": clean_energy_arc,
+        },
+        "section_cards": normalized_cards,
+    }
     return {
         **plan,
         "track_id": track_id,
@@ -1365,11 +1406,11 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             }
         ],
         "hook_blueprint": {
-            **plan.get("hook_blueprint", {}),
+            **(plan.get("hook_blueprint", {}) or {}),
             "core_text": fallback_hook,
-            "hook_density": safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium"),
+            "hook_density": hook_density,
         },
-        "hook_density": safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium"),
+        "hook_density": hook_density,
         "artist_profile": artist_profile,
         "theme_axes": clean_theme_axes,
         "dominant_emotions": clean_theme_axes[:4],
@@ -1385,22 +1426,22 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         },
         "conditioning_context": {
             "available": True,
-            "track_id": safe_text(conditioning_atoms.get("track_id")) or artist_id,
+            "track_id": safe_text(conditioning_atoms.get("track_id")),
             "contrast_device": clean_theme_axes[:3],
             "dramatic_arc": clean_energy_arc[:4],
             "phrase_source_types": ["artist_demo_plan"],
-            "hook_copy_force": safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium"),
-            "title_ignition_style": safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct"),
+            "hook_copy_force": hook_density,
+            "title_ignition_style": title_ignition_style,
             "critic_focus": ["title binding", "motif landing", "final release"],
-            "title_atoms": list(conditioning_atoms.get("title_atoms", [])) or ([fallback_hook] if fallback_hook != "..." else []),
-            "hook_atoms": list(conditioning_atoms.get("hook_atoms", [])) or (([fallback_hook] if fallback_hook != "..." else []) + motifs[:3]),
-            "contrast_terms": list(conditioning_atoms.get("contrast_terms", [])),
+            "title_atoms": title_atoms or ([fallback_hook] if fallback_hook != "..." else []),
+            "hook_atoms": hook_atoms or (([fallback_hook] if fallback_hook != "..." else []) + motifs[:3]),
+            "contrast_terms": contrast_terms,
         },
         "final_release_requirements": {
             "must_be_clearer_than_chorus": True,
             "must_introduce_forward_motion": True,
-            "release_markers": ["ここから", "最後まで", "隠さない", "終わらせない", "手放さない"],
-            "required_new_images": _clean_demo_terms(composite.get("imagery_anchors", []), limit=3),
+            "release_markers": ["ここから", "最後まで", "壊していく", "終わらせない", "手放さない"],
+            "required_new_images": clean_required_images,
         },
         "output_contract": {
             "title_line": f"# {fallback_hook}",
@@ -1414,32 +1455,8 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         "constraints": {
             "language": "Japanese",
         },
-        "hook_blueprint": {
-            **(plan.get("hook_blueprint", {}) or {}),
-            "core_text": fallback_hook,
-        },
         "artist_synthesis_context": {
-            "demo_plan": plan,
-            "forbidden_titles": list(leakage.get("forbidden_titles", [])),
-        },
-        "final_release_requirements": {
-            "must_be_clearer_than_chorus": True,
-            "must_introduce_forward_motion": True,
-            "release_markers": ["파열", "잔향", "단선", "후광", "비명"],
-            "required_new_images": _clean_demo_terms(composite.get("imagery_anchors", []), limit=3),
-        },
-        "artist_synthesis_context": {
-            "demo_plan": {
-                **plan,
-                "composite_style": {
-                    **(plan.get("composite_style", {}) or {}),
-                    "theme_axes": clean_theme_axes,
-                    "imagery_anchors": imagery,
-                    "seed_phrases": seed_phrases,
-                    "energy_arc": clean_energy_arc,
-                },
-                "section_cards": normalized_cards,
-            },
+            "demo_plan": sanitized_demo_plan,
             "forbidden_titles": list(leakage.get("forbidden_titles", [])),
         },
         "section_cards": normalized_cards,

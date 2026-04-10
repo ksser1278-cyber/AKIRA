@@ -104,6 +104,41 @@ def _singability_score(lines: list[str]) -> float:
     ratio = long_lines / len(lines)
     return round(max(0.0, 1.0 - ratio * 1.5), 2)
 
+
+def _normalized_line_signature(line: str, title: str) -> str:
+    normalized = re.sub(r"\s+", "", line)
+    if title:
+        normalized = normalized.replace(re.sub(r"\s+", "", title), "<TITLE>")
+    return normalized
+
+
+def _line_variety_score(lines: list[str], title: str) -> float:
+    if not lines:
+        return 0.0
+    signatures = [_normalized_line_signature(line, title) for line in lines]
+    unique_ratio = len(set(signatures)) / len(signatures)
+    adjacent_duplicates = sum(1 for i in range(1, len(signatures)) if signatures[i] == signatures[i - 1])
+    duplicate_ratio = adjacent_duplicates / max(len(signatures) - 1, 1)
+    score = unique_ratio - (duplicate_ratio * 0.35)
+    return round(max(0.0, min(1.0, score)), 2)
+
+
+def _hook_restraint_score(title: str, lines: list[str]) -> float:
+    if not title or not lines:
+        return 0.0
+    title_clean = re.sub(r"\s+", "", title)
+    if not title_clean:
+        return 0.0
+    mention_count = sum(_normalized_line_signature(line, "").count(title_clean) for line in lines)
+    mention_ratio = mention_count / len(lines)
+    if 0.15 <= mention_ratio <= 0.75:
+        return 1.0
+    if mention_ratio <= 1.0:
+        return 0.8
+    if mention_ratio <= 1.35:
+        return 0.6
+    return 0.35
+
 def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[float, list[str]]:
     """Evaluates how many mandatory imagery anchors from the plan appear in the PURE lyrics (excluding metadata)."""
     all_required = []
@@ -180,6 +215,8 @@ def run_critic_stage(
     singability = _singability_score(lines)
     binding = _title_binding_score(title, lines)
     imagery_cov, imagery_hits = _calculate_imagery_coverage(plan, pure_body)
+    line_variety = _line_variety_score(lines, title)
+    hook_restraint = _hook_restraint_score(title, lines)
     
     # 3. Diagnostics
     template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
@@ -189,13 +226,23 @@ def run_critic_stage(
         candidate_id=candidate_id,
         hard_gate=gate,
         scores={
-            "total": round(surface_score * 35 + singability * 25 + binding * 20 + imagery_cov * 20, 2),
+            "total": round(
+                surface_score * 28
+                + singability * 18
+                + binding * 14
+                + imagery_cov * 15
+                + line_variety * 15
+                + hook_restraint * 10,
+                2,
+            ),
             "japanese_char_ratio": jp_ratio,
             "latin_token_ratio": latin_ratio,
             "surface_score": surface_score,
             "singability": singability,
             "title_binding": binding,
             "imagery_coverage": imagery_cov,
+            "line_variety": line_variety,
+            "hook_restraint": hook_restraint,
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -203,7 +250,7 @@ def run_critic_stage(
             "has_bad_script": has_bad_script,
             "line_count": len(lines),
             "scaffold_mode": scaffold_mode,
-            "pure_body_length": len(pure_body)
+            "pure_body_length": len(pure_body),
         },
         honest_metrics_active=True
     )
