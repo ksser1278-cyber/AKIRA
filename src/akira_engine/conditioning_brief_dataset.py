@@ -7,6 +7,13 @@ from typing import Any
 
 def canonical_section(section_type: str, jp_role: str, index_map: dict[str, int]) -> str:
     role = (jp_role or "").strip()
+    normalized_section_type = (
+        str(section_type or "")
+        .strip()
+        .lower()
+        .replace("-", "_")
+        .replace(" ", "_")
+    )
     if role == "a_melo":
         index_map["a_melo"] = index_map.get("a_melo", 0) + 1
         return "verse_1" if index_map["a_melo"] == 1 else "verse_2"
@@ -25,13 +32,22 @@ def canonical_section(section_type: str, jp_role: str, index_map: dict[str, int]
         return "outro"
     fallback = {
         "verse": "verse_1",
+        "a_melo": "verse_1",
+        "a-melo": "verse_1",
         "pre_chorus": "pre_chorus",
+        "prechorus": "pre_chorus",
+        "b_melo": "pre_chorus",
         "chorus": "chorus",
+        "refrain": "chorus",
+        "sabi": "chorus",
         "bridge": "bridge",
+        "c_melo": "bridge",
         "intro": "intro",
+        "opening": "intro",
         "outro": "outro",
+        "ending": "outro",
     }
-    return fallback.get(section_type, section_type or "other")
+    return fallback.get(normalized_section_type, normalized_section_type or "other")
 
 
 def unique(values: list[str]) -> list[str]:

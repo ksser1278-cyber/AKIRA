@@ -7,26 +7,48 @@ from typing import Any
 from ..lyric_utils import contains_bad_script, contains_japanese, safe_text, unique_preserve_order
 
 
-_SECTION_FALLBACKS: dict[str, list[str]] = {
-    "intro": ["静寂", "街灯", "息"],
-    "verse_1": ["鼓動", "傷", "記憶"],
-    "verse_2": ["夜道", "影", "残響"],
-    "pre_chorus": ["ノイズ", "沈黙", "心臓"],
-    "pre_chorus_2": ["警報", "体温", "均衡"],
-    "chorus": ["声", "破片", "光"],
-    "chorus_final": ["断線", "悲鳴", "閃光"],
-    "bridge": ["暗室", "静寂", "余熱"],
-    "outro": ["残響", "歩幅", "夜明け"],
-}
-
 _MODE_FALLBACK_HOOKS: dict[str, str] = {
     "dark_cute_breakdown": "飴の罰",
-    "direct_emotional_pop": "残響灯",
-    "default": "幻灯",
+    "direct_emotional_pop": "未明の熱",
+    "default": "残響",
+}
+
+_MODE_DEFAULT_TERMS: dict[str, list[str]] = {
+    "dark_cute_breakdown": ["キャンディ", "遊園地", "毒", "ノイズ", "傷", "体温", "ひび", "静電気"],
+    "direct_emotional_pop": ["鼓動", "夜明け", "涙", "体温", "名前", "ため息", "街灯", "残響"],
+    "default": ["残響", "夜", "体温", "影", "光", "沈黙", "呼吸", "輪郭"],
+}
+
+_SECTION_DEFAULT_TERMS: dict[str, list[str]] = {
+    "intro": ["光", "ノイズ", "体温"],
+    "verse_1": ["呼吸", "輪郭", "傷"],
+    "verse_2": ["残響", "膜", "しびれ"],
+    "pre_chorus": ["警報", "点滅", "鼓動"],
+    "pre_chorus_2": ["残響", "裂け目", "脈"],
+    "chorus": ["熱", "毒", "笑顔"],
+    "bridge": ["暗室", "沈黙", "水位"],
+    "chorus_final": ["悲鳴", "落下", "火花"],
+    "outro": ["余熱", "静電気", "教室"],
+}
+
+_STRONG_VERBS = ("壊", "裂", "砕", "刺", "噛", "締", "沈")
+_LOW_VALUE_TERMS = {
+    "誰に",
+    "場所",
+    "見え",
+    "心を",
+    "色に",
+    "色で",
+    "あと",
+    "少し",
+    "全部",
+    "ことば",
+    "言葉",
+    "大切",
 }
 
 
-def _clean_terms(values: list[Any], *, limit: int = 6) -> list[str]:
+def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
     cleaned: list[str] = []
     for value in values:
         text = safe_text(value)
@@ -36,7 +58,12 @@ def _clean_terms(values: list[Any], *, limit: int = 6) -> list[str]:
             continue
         if contains_bad_script(text):
             continue
-        if len(text.replace(" ", "")) > 12:
+        visible = text.replace(" ", "")
+        if text in _LOW_VALUE_TERMS:
+            continue
+        if len(visible) <= 3 and visible[-1] in {"に", "を", "が", "へ", "で", "と", "は", "も"}:
+            continue
+        if len(visible) > 14:
             continue
         if text not in cleaned:
             cleaned.append(text)
@@ -45,454 +72,367 @@ def _clean_terms(values: list[Any], *, limit: int = 6) -> list[str]:
     return cleaned
 
 
-def _terms_for_card(card: dict[str, Any], hook: str, *, force_hook: bool) -> list[str]:
-    section = safe_text(card.get("section"))
-    fallback = list(_SECTION_FALLBACKS.get(section, ["鼓動", "残響", "光"]))
-    raw_values = (
+def _goal_flags(card: dict[str, Any]) -> set[str]:
+    goal_text = " ".join(str(v) for v in card.get("narrative_goals", []) if v)
+    flags: set[str] = set()
+    if any(token in goal_text for token in ("甘", "可愛", "やさしい")):
+        flags.add("sweet")
+    if any(token in goal_text for token in ("毒", "有害")):
+        flags.add("poison")
+    if any(token in goal_text for token in ("傷", "痛", "刺")):
+        flags.add("wound")
+    if any(token in goal_text for token in ("壊", "崩", "落下", "断線", "不能")):
+        flags.add("collapse")
+    if any(token in goal_text for token in ("笑",)):
+        flags.add("smile")
+    if any(token in goal_text for token in ("依存",)):
+        flags.add("dependence")
+    if any(token in goal_text for token in ("拒絶",)):
+        flags.add("rejection")
+    if any(token in goal_text for token in ("不穏", "警報", "ノイズ", "崩壊")):
+        flags.add("unease")
+    return flags
+
+
+def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
+    primary = _clean_terms(
         list(card.get("required_imagery", []))
-        + list(card.get("required_motifs", []))
-        + list(card.get("imagery_focus", []))
         + [card.get("scene", "")]
+        + list(card.get("imagery_focus", [])),
+        limit=8,
     )
-    cleaned = _clean_terms(raw_values, limit=6)
-    if force_hook and contains_japanese(hook) and not contains_bad_script(hook):
-        cleaned = [hook] + [item for item in cleaned if item != hook]
-    if not cleaned:
-        cleaned = [hook] if force_hook and contains_japanese(hook) and not contains_bad_script(hook) else []
-        cleaned.extend(fallback)
-    return unique_preserve_order(cleaned)[:6]
+    secondary = _clean_terms(list(card.get("required_motifs", [])), limit=8)
+    defaults = _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), []) + _MODE_DEFAULT_TERMS.get(mode, _MODE_DEFAULT_TERMS["default"])
+    pool = unique_preserve_order(primary + [item for item in secondary if item not in primary] + defaults)
+    if not pool:
+        fallback_hook = hook if contains_japanese(hook) and not contains_bad_script(hook) else _MODE_FALLBACK_HOOKS.get(mode, "残響")
+        pool = [fallback_hook] + _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), ["残響", "体温", "呼吸"])
+    return unique_preserve_order(pool)
 
 
-def _rotate_values(values: list[str], offset: int) -> list[str]:
-    if not values:
+def _pick_terms(pool: list[str], offset: int, *, count: int = 4) -> list[str]:
+    if not pool:
+        pool = ["残響", "体温", "呼吸", "輪郭"]
+    head = list(pool[:2])
+    tail = list(pool[2:6]) or list(pool[2:]) or list(pool[:])
+    shift = offset % len(tail)
+    rotated = head + list(tail[shift:] + tail[:shift])
+    while len(rotated) < count:
+        rotated.append(rotated[-1])
+    return rotated[:count]
+
+
+def _policy_mentions(section: str, hook: str, policy: str, pressure: str, *, variant: int) -> list[str]:
+    if not hook:
         return []
-    shift = offset % len(values)
-    return list(values[shift:] + values[:shift])
-
-
-def _pick_triplet(terms: list[str], *, offset: int = 0) -> tuple[str, str, str]:
-    pool = _rotate_values(list(terms), offset)
-    while len(pool) < 3:
-        pool.append(pool[-1] if pool else "鼓動")
-    return pool[0], pool[1], pool[2]
-
-
-def _choose_lines(packs: list[list[str]], variant: int) -> list[str]:
-    if not packs:
+    if policy == "withhold":
         return []
-    return list(packs[variant % len(packs)])
+    if policy == "primary":
+        return [f"{hook} {hook}", f"{hook}をやめるな"] if section == "chorus_final" else [f"{hook} {hook}"]
+    if policy == "anchor":
+        return [f"{hook} {hook}"]
+    if policy == "sparse":
+        if section in {"intro", "outro"}:
+            return [f"{hook}だけまだ笑ってる"] if variant % 2 == 0 else [f"{hook}が遠くでまだ瞬いている"]
+        if pressure == "high" and section.startswith("chorus"):
+            return [f"{hook} {hook}"]
+        return []
+    return []
 
 
-def _lines_for_dark_cute_breakdown(
-    section: str,
-    hook: str,
-    a: str,
-    b: str,
-    c: str,
-    *,
-    artist_id: str,
-    variant: int,
-) -> list[str]:
-    if section == "intro":
-        return _choose_lines(
-            [
-                [
-                    f"{a}の鈴が喉で鳴る",
-                    f"{b}に混ざる砂糖のノイズ",
-                    f"{hook}だけまだ笑ってる",
-                ],
-                [
-                    f"{a}が舌の裏で軋んでいる",
-                    f"{b}の灯りが指先を汚す",
-                    f"{hook}だけがやけに甘い",
-                ],
-                [
-                    f"{a}を噛むたび歯が冷えていく",
-                    f"{b}の粒が喉の奥で跳ねる",
-                    f"{hook}だけまだ息をしている",
-                ],
-            ],
-            variant,
-        )
-    if section in {"verse_1", "verse_2"}:
-        if artist_id == "maretu":
-            return _choose_lines(
-                [
-                    [
-                        f"{a}を舐めれば歯形が増える",
-                        f"{b}の体温が夜を汚す",
-                        f"{c}の匂いで呼吸が曲がる",
-                        "やさしい敬語ほど深く刺さる",
-                    ],
-                    [
-                        f"{a}を噛むたび砂糖が割れる",
-                        f"{b}の膜だけきれいに剥がれる",
-                        f"{c}の残り香で脈が狂う",
-                        "丁寧なことばほど毒がよく回る",
-                    ],
-                    [
-                        f"{a}を数えるほど舌が荒れる",
-                        f"{b}の輪郭だけ夜に浮いている",
-                        f"{c}の気配で呼吸が浅くなる",
-                        "まともな顔ほど先に壊れていく",
-                    ],
-                    [
-                        f"{a}を舐めた指がまだ熱い",
-                        f"{b}のしずくが喉まで落ちる",
-                        f"{c}の気圧で視界が濁る",
-                        "やわらかい声ほど最後に牙を持つ",
-                    ],
-                ],
-                variant,
-            )
-        return _choose_lines(
-            [
-                [
-                    f"{a}を舐めれば歯形が増える",
-                    f"{b}の体温が夜を汚す",
-                    f"{c}の匂いで呼吸が曲がる",
-                    "やさしい声ほど深く刺さる",
-                ],
-                [
-                    f"{a}を噛むたび色が濃くなる",
-                    f"{b}の熱だけ胸で暴れる",
-                    f"{c}の気配でまぶたが軋む",
-                    "かわいい嘘ほど深く刺さる",
-                ],
-            ],
-            variant,
-        )
-    if "pre_chorus" in section:
-        return _choose_lines(
-            [
-                [
-                    f"{a}が点滅して心臓がずれる",
-                    f"{b}の隙間で警報が育つ",
-                    f"{hook}まであと少しで壊れる",
-                ],
-                [
-                    f"{a}がまばたきのたび増えていく",
-                    f"{b}の継ぎ目で熱だけ跳ねている",
-                    f"{hook}までまだ引き返せない",
-                ],
-                [
-                    f"{a}が静かに鼓膜を叩く",
-                    f"{b}の裂け目で甘さが腐る",
-                    f"{hook}まで息を止めていたい",
-                ],
-            ],
-            variant,
-        )
-    if section == "bridge":
-        return _choose_lines(
-            [
-                [
-                    f"{a}を抱いたまま沈んでいく",
-                    f"{b}が耳の奥で冷えていく",
-                    f"{hook}にも触れられないまま",
-                ],
-                [
-                    f"{a}を隠したまま水位が上がる",
-                    f"{b}だけ妙に白く光っている",
-                    f"{hook}さえまだ飲み込めない",
-                ],
-                [
-                    f"{a}の底で静寂が割れていく",
-                    f"{b}の温度だけ手首に残る",
-                    f"{hook}まであと少し届かない",
-                ],
-            ],
-            variant,
-        )
-    if section == "chorus_final":
-        if artist_id == "maretu":
-            return _choose_lines(
-                [
-                    [
-                        f"{hook} {hook}",
-                        f"{a}の色ごと壊していけ",
-                        f"{b}の骨まで舐め尽くして",
-                        f"{c}も全部ひっくり返せ",
-                        "かわいい顔で毒を盛れ",
-                        "笑ったままで終わらせるな",
-                    ],
-                    [
-                        f"{hook} {hook}",
-                        f"{a}の膜ごと裂いていけ",
-                        f"{b}の奥まで甘さを流し込め",
-                        f"{c}の名残まで蹴り倒せ",
-                        "かわいい顔で毒を混ぜろ",
-                        "きれいなままで助かると思うな",
-                    ],
-                    [
-                        f"{hook} {hook}",
-                        f"{a}の輪郭から崩していけ",
-                        f"{b}の脈まで赤く塗り替えろ",
-                        f"{c}の残響ごと踏み潰せ",
-                        "笑う口先で毒を盛れ",
-                        "やさしさなんか最後に捨てろ",
-                    ],
-                ],
-                variant,
-            )
-        return _choose_lines(
-            [
-                [
-                    f"{hook} {hook}",
-                    f"{a}の色ごと壊していけ",
-                    f"{b}の骨まで舐め尽くして",
-                    f"{c}も全部ひっくり返せ",
-                    "かわいい顔で毒を盛れ",
-                    "かわいい顔で牙を立てろ",
-                ],
-                [
-                    f"{hook} {hook}",
-                    f"{a}の形ごと崩していけ",
-                    f"{b}の奥まで赤く染めろ",
-                    f"{c}の名残まで踏み倒せ",
-                    "かわいい顔で毒を盛れ",
-                    "最後の熱で噛みついていけ",
-                ],
-            ],
-            variant,
-        )
-    if section == "chorus":
-        return _choose_lines(
-            [
-                [
-                    f"{hook} {hook}",
-                    f"{a}のままで噛みついて",
-                    f"{b}だけではもう足りない",
-                    "かわいい顔で毒を盛れ",
-                ],
-                [
-                    f"{hook} {hook}",
-                    f"{a}ごと抱えて噛み砕いて",
-                    f"{b}だけじゃまだ満たされない",
-                    "笑う口先で毒を塗れ",
-                ],
-                [
-                    f"{hook} {hook}",
-                    f"{a}の温度で首を締めて",
-                    f"{b}だけならまだ生ぬるい",
-                    "かわいい顔で深く刺され",
-                ],
-            ],
-            variant,
-        )
-    if section == "outro":
-        return _choose_lines(
-            [
-                [
-                    f"{a}だけが夜に残っている",
-                    f"{hook}が遠くでまだ点滅する",
-                ],
-                [
-                    f"{a}だけが喉の奥で残っている",
-                    f"{hook}がやけに静かに滲んでいる",
-                ],
-                [
-                    f"{a}だけが最後まで腐らない",
-                    f"{hook}が遠くでまだ瞬いている",
-                ],
-            ],
-            variant,
-        )
-    return [
-        f"{hook}が静かに揺れている",
-        f"{a}が胸の奥で光っている",
+def _support_word(flags: set[str], primary: str, secondary: str) -> str:
+    if "poison" in flags:
+        return "毒"
+    if "wound" in flags:
+        return "傷口"
+    if "collapse" in flags:
+        return "断線"
+    if "smile" in flags:
+        return "笑顔"
+    return primary or secondary
+
+
+def _ending_word(flags: set[str], fallback: str) -> str:
+    if "collapse" in flags:
+        return "壊れる"
+    if "wound" in flags:
+        return "刺さる"
+    if "poison" in flags:
+        return "濁る"
+    if "dependence" in flags:
+        return "離れない"
+    if "rejection" in flags:
+        return "戻れない"
+    return fallback
+
+
+def _intro_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    mentions = _policy_mentions("intro", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
+    packs = [
+        [
+            f"{a}の音だけ喉に残っている",
+            f"{b}まみれの光がまぶたを刺す",
+            mentions[0] if mentions else f"{c}だけまだ胸で跳ねている",
+            f"{d}の甘さだけ夜に置き去りになる",
+        ],
+        [
+            f"{a}の粒が胸の裏で鳴り続ける",
+            f"{b}の気配が薄い膜みたいに貼りつく",
+            mentions[0] if mentions else f"{c}だけまだこちらを見ている",
+            f"{d}の余熱が呼吸の端でくすぶっている",
+        ],
+        [
+            f"{a}を噛むたび部屋の明度が少し狂う",
+            f"{b}の影だけきれいに床へ転がっていく",
+            mentions[0] if mentions else f"{c}の匂いがまだ喉でほどけない",
+            f"{d}まで静かに濁っている",
+        ],
     ]
+    if "sweet" in flags and "unease" in flags:
+        packs[0][3] = f"{d}の甘さだけ不穏に残っている"
+    return packs[variant % len(packs)]
 
 
-def _lines_for_direct_emotional_pop(section: str, hook: str, a: str, b: str, c: str, *, variant: int) -> list[str]:
-    if section == "intro":
-        return _choose_lines(
-            [
-                [f"{a}に触れた手がまだ熱い", f"{b}だけが窓辺でほどけていく", f"{hook}を言えないまま朝になる"],
-                [f"{a}の余熱だけがまだ残る", f"{b}が静かにガラスを曇らせる", f"{hook}をこぼせないまま夜が明ける"],
-            ],
-            variant,
-        )
-    if section in {"verse_1", "verse_2"}:
-        return _choose_lines(
-            [
-                [f"{a}の温度をまだ覚えてる", f"{b}が胸の奥を擦っていく", f"{c}の影だけ追いかけていた", "言えないことほど歌になっていく"],
-                [f"{a}の気配だけ離れない", f"{b}がまぶたの裏をなぞっていく", f"{c}の名前だけ息に残った", "遅れた気持ちほど歌になっていく"],
-            ],
-            variant,
-        )
-    if "pre_chorus" in section:
-        return [
-            f"{a}が近づくほど息が浅い",
-            f"{b}を越えれば戻れなくなる",
-            f"{hook}まであと少しなのに",
-        ]
-    if section == "bridge":
-        return [
-            f"{a}だけを置いて夜が明ける",
-            f"{b}の匂いが指先に残る",
-            f"{hook}にも触れられないまま",
-        ]
-    if section == "chorus_final":
-        return [
-            f"{hook} {hook}",
-            f"{a}の痛みも抱きしめて",
-            f"{b}の向こうへ踏み出して",
-            f"{c}の残響を越えていけ",
-            "最後の声で名前を呼ぶ",
-        ]
-    if section == "chorus":
-        return [
-            f"{hook} {hook}",
-            f"{a}のままで触れていたい",
-            f"{b}だけではもう足りない",
-            "この心音ごと連れていって",
-        ]
-    if section == "outro":
-        return [
-            f"{a}だけが静かに残っている",
-            f"{hook}が夜明けに溶けていく",
-        ]
-    return [
-        f"{hook}が静かに揺れている",
-        f"{a}が胸の奥で光っている",
+def _verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
+    a, b, c, d = terms
+    sting = _ending_word(flags, "曲がる")
+    support = _support_word(flags, c, d)
+    verb = "増えていく" if not second_half else "剥がれていく"
+    packs = [
+        [
+            f"{a}をなぞるたび{b}の輪郭が{verb}",
+            f"{c}の匂いで呼吸が少し{sting}",
+            f"{d}のせいで笑い方まで痺れていく",
+            f"{support}を隠すほど痛みがよく見える",
+        ],
+        [
+            f"{a}を舐めるたび{b}の温度だけ近づいてくる",
+            f"{c}の残り香で脈の速さがずれていく",
+            f"{d}の気配でまともな顔が先に崩れる",
+            f"{support}みたいな言葉ほど深く刺さる",
+        ],
+        [
+            f"{a}を数えるたび{b}の膜だけ薄くなる",
+            f"{c}のしびれで視界の端が揺れていく",
+            f"{d}の笑みが静かに皮膚へ移ってくる",
+            f"{support}の置き方ひとつで夜が濁っていく",
+        ],
     ]
+    return packs[variant % len(packs)]
 
 
-def _lines_for_default(section: str, hook: str, a: str, b: str, c: str, *, variant: int) -> list[str]:
-    if section == "intro":
-        return _choose_lines(
-            [
-                [f"{a}の奥で息が止まる", f"{b}だけがまだ揺れている", f"{hook}が静かに目を開く"],
-                [f"{a}の影で足が止まる", f"{b}だけが胸に残っている", f"{hook}がゆっくり輪郭を持つ"],
-            ],
-            variant,
-        )
-    if section in {"verse_1", "verse_2"}:
-        return [
-            f"{a}を噛んで夜を飲みこむ",
-            f"{b}の影が胸を擦っていく",
-            f"{c}の匂いが指先に残る",
-            "やさしい声ほど深く刺さる",
-        ]
-    if "pre_chorus" in section:
-        return [
-            f"{a}が近づくたびにずれる",
-            f"{b}の隙間で熱が暴れる",
-            f"{hook}まであと少しなのに",
-        ]
-    if section == "bridge":
-        return [
-            f"{a}だけがゆっくり沈んでいく",
-            f"{b}が耳の奥で冷えていく",
-            f"{hook}にも触れられないまま",
-        ]
-    if section == "chorus_final":
-        return [
-            f"{hook} {hook}",
-            f"{a}のままで壊れていけ",
-            f"{b}の色ごと噛み砕いて",
-            f"{c}まで全部ひっくり返せ",
-            "かわいい顔で牙を立てろ",
-        ]
-    if section == "chorus":
-        return [
-            f"{hook} {hook}",
-            f"{a}のままで壊れていく",
-            f"{b}だけではもう足りない",
-            "かわいい顔で牙を立てる",
-        ]
-    if section == "outro":
-        return [
-            f"{a}だけが夜に沈んでいく",
-            f"{hook}が遠くでまだ揺れている",
-        ]
-    return [
-        f"{hook}が静かに揺れている",
-        f"{a}が胸の奥で光っている",
+def _pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
+    a, b, c, d = terms
+    collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
+    closing = f"{hook}まであと少しで{collapse}" if safe_text(card.get("title_drop_policy")) != "withhold" and second_half else f"{d}まであと少しで{collapse}"
+    packs = [
+        [
+            f"{a}が点滅して心臓の位置がずれる",
+            f"{b}の隙間で{c}だけ育っていく",
+            closing,
+        ],
+        [
+            f"{a}が脈の裏側で静かに裂けていく",
+            f"{b}の継ぎ目から{c}だけ腐り始める",
+            closing,
+        ],
+        [
+            f"{a}に触れるたび呼吸の拍が狂っていく",
+            f"{b}の裂け目で{c}がやけに明るい",
+            closing,
+        ],
     ]
+    return packs[variant % len(packs)]
 
 
-def _render_section(
-    section: str,
-    hook: str,
-    a: str,
-    b: str,
-    c: str,
-    *,
-    mode: str,
-    artist_id: str,
-    variant: int,
-) -> list[str]:
-    if mode == "dark_cute_breakdown":
-        return _lines_for_dark_cute_breakdown(section, hook, a, b, c, artist_id=artist_id, variant=variant)
-    if mode == "direct_emotional_pop":
-        return _lines_for_direct_emotional_pop(section, hook, a, b, c, variant=variant)
-    return _lines_for_default(section, hook, a, b, c, variant=variant)
+def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, final: bool) -> list[str]:
+    a, b, c, d = terms
+    policy = safe_text(card.get("title_drop_policy"))
+    pressure = safe_text(card.get("hook_pressure"), "medium")
+    mentions = _policy_mentions("chorus_final" if final else "chorus", hook, policy, pressure, variant=variant)
+    attack = "噛み砕いて" if "collapse" in flags or final else "締めて"
+    dark_word = _support_word(flags, b, c)
+    last = f"{hook}を壊してもう一度鳴らせ" if final else f"{dark_word}ごと噛んで笑ってみせて"
+    packs = [
+        [
+            *mentions,
+            f"{a}の温度で首を{attack}",
+            f"{b}だけならまだ生ぬるい",
+            f"{c}ごと抱えてこちらへ落ちてこい" if final else last,
+            f"{d}の骨までひっくり返していけ" if final else last,
+        ],
+        [
+            *mentions,
+            f"{a}の破片で耳の奥まで染め上げて",
+            f"{b}だけではまだ何も足りない",
+            f"{c}を笑顔のままで飲み込んで",
+            f"{hook}を傷口へまっすぐ結びつけて" if final else f"{d}ごと噛んで踊ってみせて",
+        ],
+        [
+            *mentions,
+            f"{a}の残響で胸骨まで揺らして",
+            f"{b}の甘さを最後まで誤魔化すな",
+            f"{c}だけをここで逃がすな",
+            f"{hook}の色で全部塗りつぶして" if final else f"{d}の毒まできれいに見せて",
+        ],
+    ]
+    lines = packs[variant % len(packs)]
+    if pressure == "high" and len(mentions) == 1 and not final:
+        lines.insert(1, f"{hook}をまだやめない")
+    return lines
 
 
-def _supplement_section_line(section: str, hook: str, a: str, b: str, c: str, step: int) -> str:
+def _bridge_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    mentions = _policy_mentions("bridge", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
+    packs = [
+        [
+            f"{a}を隠したまま水位だけ上がっていく",
+            f"{b}だけ妙に白く光っている",
+            mentions[0] if mentions else f"{c}さえうまく飲み込めない",
+            f"{d}の沈黙だけがこっちを見ている",
+        ],
+        [
+            f"{a}の底だけ静かに濡れ続けている",
+            f"{b}の反射で部屋の温度が少し下がる",
+            mentions[0] if mentions else f"{c}だけが指先から離れない",
+            f"{d}の跡だけがやけに正確だ",
+        ],
+        [
+            f"{a}を伏せたまま秒針だけが進んでいく",
+            f"{b}の膜が薄く笑っている",
+            mentions[0] if mentions else f"{c}まで黙らせることができない",
+            f"{d}の輪郭だけがきれいすぎる",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _outro_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    mentions = _policy_mentions("outro", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
+    tail = mentions[0] if mentions else f"{hook}が遠くでまだ瞬いている"
+    packs = [
+        [
+            f"{a}だけが最後まで腐らない",
+            tail,
+            f"{b}の静電気だけ床を転がっていく",
+        ],
+        [
+            f"{a}の余熱だけがまだ部屋に残っている",
+            tail,
+            f"{c}の残り香だけが眠れずにいる",
+        ],
+        [
+            f"{a}だけが最後までこちらを見ている",
+            tail,
+            f"{d}の薄明かりだけが靴底に貼りついている",
+        ],
+    ]
+    if "aftertaste" in safe_text(card.get("function")):
+        packs[0][2] = f"{b}の残り香だけが眠れずにいる"
+    return packs[variant % len(packs)]
+
+
+def _supplemental_line(section: str, hook: str, terms: list[str], flags: set[str], step: int) -> str:
+    a, b, c, d = terms
+    support = _support_word(flags, c, d)
     pools = {
         "intro": [
-            f"{c}の甘さだけまだ喉に残っている",
-            f"{a}の輪郭だけ先に光り出す",
+            f"{a}の明るさだけやけに怖い",
+            f"{b}の粒がまだ舌の裏で鳴っている",
         ],
         "verse_1": [
-            f"{a}と{b}の間で心拍だけが遅れる",
-            f"{c}の匂いまで静かに刺さっていく",
+            f"{a}の肌ざわりだけが嘘みたいにやさしい",
+            f"{support}の置き方ひとつで全部ずれていく",
         ],
         "verse_2": [
-            f"{a}の名残まできれいに壊れていく",
-            f"{b}の裏側で{c}だけ育っていく",
+            f"{a}の破片がまぶたの内側でこすれる",
+            f"{support}がほどけるほど拒めなくなる",
         ],
         "pre_chorus": [
-            f"{c}まで落ちればもう戻れない",
-            f"{hook}の前で呼吸だけが乱れていく",
+            f"{a}のちらつきで足元まで軋み始める",
+            f"{b}の奥からまだ警報が消えない",
         ],
         "pre_chorus_2": [
-            f"{c}の合図で景色がすべてずれていく",
-            f"{hook}の前で言い訳だけが剥がれていく",
+            f"{a}の裂け目から熱が少し漏れている",
+            f"{b}まで巻き込んで拍が揃わない",
         ],
         "chorus": [
-            f"{c}まで全部噛み砕いて",
-            f"{hook}しか残らないところまで行け",
+            f"{a}のかわいさで全部ごまかすな",
+            f"{hook}の周りだけやけに色が濃い",
         ],
         "bridge": [
-            f"{c}の笑い声だけ遠くで歪んでいる",
-            f"{a}も{b}も黙ったまま沈んでいく",
+            f"{a}の水位だけが正直だ",
+            f"{b}の白さがいちばん危ない",
         ],
         "chorus_final": [
-            f"{a}も{b}もまとめて飲み込め",
-            f"{c}まで過去ごと引き裂いていけ",
-            f"{hook}の甘さを最後まで罰にしろ",
+            f"{a}の火花までまとめて踏み抜け",
+            f"{hook}の名前だけ最後まで濁らせるな",
         ],
         "outro": [
-            f"{c}だけが床に転がっている",
-            f"{hook}の残響だけまだ消えない",
+            f"{a}の余韻だけが妙に静かだ",
+            f"{b}の跡だけまだ剥がれない",
         ],
     }
-    candidates = pools.get(section, [f"{c}だけがまだ揺れている"])
+    candidates = pools.get(section, [f"{a}の輪郭だけがまだ消えない"])
     return candidates[step % len(candidates)]
 
 
 def _fit_section_lines(
-    section_lines: list[str],
+    lines: list[str],
     *,
     section: str,
     hook: str,
-    a: str,
-    b: str,
-    c: str,
+    terms: list[str],
+    flags: set[str],
     line_target: int,
 ) -> list[str]:
-    fitted = list(section_lines[:line_target])
+    fitted = unique_preserve_order([safe_text(line) for line in lines if safe_text(line)])
+    if line_target <= 0:
+        return fitted
     step = 0
-    while len(fitted) < line_target and step < 12:
-        candidate = _supplement_section_line(section, hook, a, b, c, step)
+    while len(fitted) < line_target and step < 8:
+        candidate = _supplemental_line(section, hook, terms, flags, step)
         if candidate not in fitted:
             fitted.append(candidate)
         step += 1
-    return fitted
+    return fitted[:line_target]
+
+
+def _render_section(
+    card: dict[str, Any],
+    *,
+    hook: str,
+    terms: list[str],
+    mode: str,
+    variant: int,
+) -> list[str]:
+    section = safe_text(card.get("section"))
+    flags = _goal_flags(card)
+    if mode == "dark_cute_breakdown":
+        flags.update({"sweet", "unease"})
+    if section == "intro":
+        return _intro_lines(card, hook, terms, flags, variant=variant)
+    if section == "verse_1":
+        return _verse_lines(card, hook, terms, flags, variant=variant, second_half=False)
+    if section == "verse_2":
+        return _verse_lines(card, hook, terms, flags, variant=variant, second_half=True)
+    if section == "pre_chorus":
+        return _pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=False)
+    if section == "pre_chorus_2":
+        return _pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=True)
+    if section == "chorus":
+        return _chorus_lines(card, hook, terms, flags, variant=variant, final=False)
+    if section == "bridge":
+        return _bridge_lines(card, hook, terms, flags, variant=variant)
+    if section == "chorus_final":
+        return _chorus_lines(card, hook, terms, flags, variant=variant, final=True)
+    if section == "outro":
+        return _outro_lines(card, hook, terms, flags, variant=variant)
+    a, b, c, _ = terms
+    return [f"{a}だけがまだ残っている", f"{b}の気配で{c}まで少し揺れる"]
 
 
 def run_renderer_stage(
@@ -503,15 +443,14 @@ def run_renderer_stage(
 ) -> dict[str, Any]:
     artist_id = safe_text(plan.get("artist_id", "default"))
     mode = safe_text(plan.get("primary_mode") or plan.get("mode_id") or "default")
-    hook = safe_text(plan.get("hook_blueprint", {}).get("core_text", ""))
-    rng = random.Random(int(hashlib.md5(f"{plan['track_id']}:{variant_index}".encode("utf-8")).hexdigest()[:8], 16))
+    track_id = safe_text(plan.get("track_id", f"{artist_id}_{mode}_demo"))
+    raw_hook = safe_text(plan.get("hook_blueprint", {}).get("core_text", ""))
+    hook = raw_hook if contains_japanese(raw_hook) and not contains_bad_script(raw_hook) else _MODE_FALLBACK_HOOKS.get(mode, _MODE_FALLBACK_HOOKS["default"])
 
-    if not contains_japanese(hook) or contains_bad_script(hook):
-        hook = _MODE_FALLBACK_HOOKS.get(mode, _MODE_FALLBACK_HOOKS["default"])
+    rng_seed = int(hashlib.md5(f"{track_id}:{variant_index}".encode("utf-8")).hexdigest()[:8], 16)
+    rng = random.Random(rng_seed)
 
-    lines = [f"# {hook}", ""]
     section_cards = list(plan.get("section_cards", []))
-
     ordered_sections = list(plan.get("form_profile", {}).get("section_order", []))
     if ordered_sections:
         index_map = {name: idx for idx, name in enumerate(ordered_sections)}
@@ -519,44 +458,32 @@ def run_renderer_stage(
     else:
         section_cards.sort(key=lambda card: safe_text(card.get("section")))
 
-    for card in section_cards:
+    lines = [f"# {hook}", ""]
+    for position, card in enumerate(section_cards):
         section = safe_text(card.get("section"))
         if not section:
             continue
-        force_hook = section in {"chorus", "chorus_final", "outro"}
-        terms = _terms_for_card(card, hook, force_hook=force_hook)
-        if not force_hook and terms and terms[0] == hook and len(terms) > 1:
-            terms = terms[1:] + terms[:1]
-        term_offset = variant_index + sum(ord(ch) for ch in section)
-        a, b, c = _pick_triplet(terms, offset=term_offset)
-        lines.append(f"[{section}]")
-        section_lines = _render_section(
-            section,
-            hook,
-            a,
-            b,
-            c,
-            mode=mode,
-            artist_id=artist_id,
-            variant=variant_index + len(lines),
-        )
-        line_target = int(card.get("line_target", len(section_lines)) or len(section_lines))
-        section_lines = _fit_section_lines(
+        pool = _term_pool(card, hook, mode=mode)
+        offset = variant_index + position + rng.randint(0, 2)
+        terms = _pick_terms(pool, offset, count=4)
+        section_lines = _render_section(card, hook=hook, terms=terms, mode=mode, variant=variant_index + position)
+        target = int(card.get("line_target", len(section_lines)) or len(section_lines))
+        fitted = _fit_section_lines(
             section_lines,
             section=section,
             hook=hook,
-            a=a,
-            b=b,
-            c=c,
-            line_target=line_target,
+            terms=terms,
+            flags=_goal_flags(card),
+            line_target=target,
         )
-        if scaffold_mode and section in {"chorus", "chorus_final"}:
-            section_lines = list(section_lines) + [f"{hook}をもう一度繰り返す"]
-        lines.extend(section_lines)
+        if scaffold_mode and section in {"chorus", "chorus_final"} and hook not in "".join(fitted):
+            fitted.append(f"{hook}をまだやめない")
+        lines.append(f"[{section}]")
+        lines.extend(fitted[:target])
         lines.append("")
 
     return {
-        "candidate_id": f"{plan['track_id']}-candidate-{variant_index + 1}",
+        "candidate_id": f"{track_id}-candidate-{variant_index + 1}",
         "title": hook,
         "markdown": "\n".join(lines).strip() + "\n",
         "scaffold_mode": scaffold_mode,

@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Any
 
 from src.akira_engine.normalize.mod import contains_bad_script, contains_japanese
+from src.akira_engine.section_evidence_bank import build_section_evidence_bank
+from src.akira_engine.songwriter_io import load_conditioning_records
 
 
 @dataclass
@@ -15,9 +17,13 @@ class SectionCard:
     required_motifs: list[str] = field(default_factory=list)
     imagery_focus: list[str] = field(default_factory=list)
     required_imagery: list[str] = field(default_factory=list)
+    narrative_goals: list[str] = field(default_factory=list)
     line_target: int = 4
     cadence_target: str = "medium"
     abstraction_ceiling: float = 0.2
+    title_drop_policy: str = "sparse"
+    hook_pressure: str = "medium"
+    evidence_track_ids: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -154,32 +160,57 @@ def run_planner_stage(
     track_id = f"{artist_id}_{mode_id}_{title_seed or 'demo'}"
     imagery_bank = _get_sensory_imagery(mode_id, project_root)
     section_blueprint = _section_blueprint(mode_id)
+    conditioning_records = load_conditioning_records(artist_id)
+    evidence_bank = build_section_evidence_bank(conditioning_records, mode_id=mode_id)
+    section_evidence = evidence_bank.get("sections", {})
 
     cards: list[SectionCard] = []
     for spec in section_blueprint:
         section = spec["section"]
-        focus = imagery_bank.get(section, ["鼓動", "残響"])
+        evidence = section_evidence.get(section, {})
+        focus = list(evidence.get("imagery_focus") or imagery_bank.get(section, ["鼓動", "残響"]))
+        required_motifs = list(evidence.get("required_motifs") or focus[:2])
+        required_imagery = list(evidence.get("required_imagery") or focus[:2])
+        narrative_goals = list(evidence.get("narrative_goals") or [])
         cards.append(
             SectionCard(
                 section=section,
                 function=str(spec["function"]),
-                required_motifs=list(focus[:2]),
+                required_motifs=required_motifs[:4],
                 imagery_focus=list(focus),
-                required_imagery=list(focus[:2]) if Policy.MANDATORY_SENSORY_ANCHORS else [],
-                line_target=int(spec["line_target"]),
-                cadence_target=str(spec["cadence_target"]),
-                abstraction_ceiling=float(spec["abstraction_ceiling"]),
+                required_imagery=required_imagery[:4] if Policy.MANDATORY_SENSORY_ANCHORS else [],
+                narrative_goals=narrative_goals[:3],
+                line_target=max(int(spec["line_target"]), int(evidence.get("line_target", 0) or 0)),
+                cadence_target=str(evidence.get("cadence_target") or spec["cadence_target"]),
+                abstraction_ceiling=float(evidence.get("abstraction_ceiling") or spec["abstraction_ceiling"]),
+                title_drop_policy=str(
+                    evidence.get("title_drop_policy")
+                    or ("primary" if section == "chorus_final" else "anchor" if section == "chorus" else "sparse")
+                ),
+                hook_pressure=str(evidence.get("hook_pressure") or ("high" if "chorus" in section else "medium")),
+                evidence_track_ids=list(evidence.get("evidence_track_ids") or []),
             )
         )
 
     motif_roster = [
         {
             "motif_id": "core_sensory",
-            "motifs": list(imagery_bank.get("chorus", ["鼓動", "残響", "破片"]))[:3],
+            "motifs": list(
+                evidence_bank.get("global_motifs")
+                or imagery_bank.get("chorus", ["鼓動", "残響", "破片"])
+            )[:6],
         }
     ]
 
     hook_core = title_seed if contains_japanese(title_seed) and not contains_bad_script(title_seed) else ""
+    hook_blueprint = {
+        "core_text": hook_core or "幻灯",
+        "hook_density": "high" if mode_id == "dark_cute_breakdown" else "medium",
+        "chorus_line_target": 4,
+        "repetition_pressure": "high" if mode_id == "dark_cute_breakdown" else "medium",
+    }
+    hook_blueprint.update(evidence_bank.get("hook_blueprint", {}))
+    hook_blueprint["core_text"] = hook_core or hook_blueprint.get("core_text") or "幻灯"
     return PlanResult(
         track_id=track_id,
         artist_id=artist_id,
@@ -187,11 +218,6 @@ def run_planner_stage(
         title_seed=title_seed,
         section_cards=cards,
         motif_roster=motif_roster,
-        hook_blueprint={
-            "core_text": hook_core or "幻灯",
-            "hook_density": "high" if mode_id == "dark_cute_breakdown" else "medium",
-            "chorus_line_target": 4,
-            "repetition_pressure": "high" if mode_id == "dark_cute_breakdown" else "medium",
-        },
+        hook_blueprint=hook_blueprint,
         status="planned",
     )

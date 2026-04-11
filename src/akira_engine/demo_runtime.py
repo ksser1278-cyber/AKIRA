@@ -24,7 +24,7 @@ from .renderer.mod import run_renderer_stage
 from .critic.mod import run_critic_stage, CriticResult
 from .promotion.mod import run_promotion_stage
 
-from .songwriter_io import load_artist_profile
+from .songwriter_io import load_artist_profile, load_conditioning_records
 
 from .songwriter_v2 import (
     build_prompt_package,
@@ -469,21 +469,16 @@ def run_demo_songwriter(
     primary_artist = artist_id.split("+")[0]
     artist_profile = load_artist_profile(primary_artist) or {}
     
-    # Attempt to find a representative lyric from the artist's reference tracks for grounding
-    ref_dir = project_root / "data" / primary_artist / "reference_tracks"
-    source_lyric = "..." # Minimal fallback
-    if ref_dir.exists():
-        for p in ref_dir.glob("*.conditioning.json"):
-            try:
-                with open(p, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    sections = data.get("lyric_ground_truth", {}).get("sections", [])
-                    all_lines = []
-                    for s in sections: all_lines.extend(s.get("lines", []))
-                    if all_lines:
-                        source_lyric = "\n".join(all_lines)
-                        break
-            except: continue
+    # Bootstrap from the best available conditioning corpus, including archive roots.
+    source_lyric = "..."
+    for conditioning_payload in load_conditioning_records(primary_artist):
+        sections = conditioning_payload.get("lyric_ground_truth", {}).get("sections", [])
+        all_lines: list[str] = []
+        for section in sections:
+            all_lines.extend(section.get("lines", []))
+        if all_lines:
+            source_lyric = "\n".join(all_lines)
+            break
 
     # Stage B: Normalize
     norm_result = run_normalize_stage(f"{primary_artist}_source", source_lyric)

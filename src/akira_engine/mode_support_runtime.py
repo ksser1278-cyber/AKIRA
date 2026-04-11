@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .songwriter_io import candidate_content_roots
+
 
 def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -32,14 +34,19 @@ def load_mode_support_context(
     if not clean_mode_id:
         return {"available": False, "mode_id": clean_mode_id, "records": []}
 
-    audit_path = (
-        project_root
-        / "reports"
-        / "quality"
-        / "mode_support_audit"
-        / f"{clean_mode_id}_mode_support_audit.json"
-    )
-    if not audit_path.exists():
+    audit_path = None
+    for content_root in candidate_content_roots(project_root):
+        candidate = (
+            content_root
+            / "reports"
+            / "quality"
+            / "mode_support_audit"
+            / f"{clean_mode_id}_mode_support_audit.json"
+        )
+        if candidate.exists():
+            audit_path = candidate
+            break
+    if not audit_path or not audit_path.exists():
         return {"available": False, "mode_id": clean_mode_id, "records": []}
 
     audit_payload = _load_json(audit_path)

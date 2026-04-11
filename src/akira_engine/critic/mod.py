@@ -140,6 +140,102 @@ def _hook_restraint_score(title: str, lines: list[str]) -> float:
     return 0.35
 
 
+def _evidence_atoms(card: dict[str, Any]) -> list[str]:
+    atoms: list[str] = []
+    values = (
+        list(card.get("required_imagery", []))
+        + [card.get("scene", "")]
+        + list(card.get("imagery_focus", []))[:2]
+        + list(card.get("required_motifs", []))[:2]
+    )
+    for value in values:
+        text = str(value or "").strip()
+        if not text:
+            continue
+        if len(text.replace(" ", "")) > 14:
+            continue
+        if text in {"誰に", "場所", "見え", "心を", "色に", "色で", "あと", "少し", "全部"}:
+            continue
+        if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
+            continue
+        if contains_bad_script(text):
+            continue
+        if text not in atoms:
+            atoms.append(text)
+    return atoms[:4]
+
+
+def _title_policy_score(policy: str, title: str, section_lines: list[str]) -> float:
+    title_clean = re.sub(r"\s+", "", title)
+    if not title_clean:
+        return 1.0
+    signatures = [_normalized_line_signature(line, "") for line in section_lines]
+    mentions = sum(sig.count(title_clean) for sig in signatures)
+    first_line_has = bool(signatures and title_clean in signatures[0])
+
+    if policy == "withhold":
+        return 1.0 if mentions == 0 else max(0.0, 0.55 - ((mentions - 1) * 0.15))
+    if policy == "sparse":
+        if mentions <= 1:
+            return 1.0
+        if mentions == 2:
+            return 0.75
+        return 0.4
+    if policy == "anchor":
+        if mentions >= 1 and first_line_has:
+            return 1.0
+        if mentions >= 1:
+            return 0.8
+        return 0.2
+    if policy == "primary":
+        if mentions >= 2 and first_line_has:
+            return 1.0
+        if mentions >= 1:
+            return 0.7
+        return 0.2
+    return 1.0
+
+
+def _evidence_utilization_score(plan: dict[str, Any], title: str, markdown: str) -> tuple[float, dict[str, Any]]:
+    parsed = _parse_sections(markdown)
+    section_scores: dict[str, Any] = {}
+    scores: list[float] = []
+
+    for card in plan.get("section_cards", []):
+        section = str(card.get("section", "")).strip()
+        if not section:
+            continue
+        section_lines = parsed.get(section, [])
+        joined = "".join(section_lines)
+        atoms = _evidence_atoms(card)
+        atom_hits = [atom for atom in atoms if atom in joined]
+        atom_score = len(atom_hits) / len(atoms) if atoms else 1.0
+        title_policy = str(card.get("title_drop_policy", "")).strip()
+        title_score = _title_policy_score(title_policy, title, section_lines)
+        if card.get("evidence_track_ids"):
+            section_score = atom_score * 0.7 + title_score * 0.3
+        else:
+            section_score = atom_score * 0.55 + title_score * 0.45
+        scores.append(section_score)
+        section_scores[section] = {
+            "atoms": atoms,
+            "atom_hits": atom_hits,
+            "atom_score": round(atom_score, 2),
+            "title_drop_policy": title_policy,
+            "title_policy_score": round(title_score, 2),
+            "evidence_track_count": len(card.get("evidence_track_ids", [])),
+            "line_count": len(section_lines),
+            "section_score": round(section_score, 2),
+        }
+
+    if not scores:
+        return 0.0, {"per_section": {}, "section_count": 0}
+    return round(sum(scores) / len(scores), 2), {
+        "per_section": section_scores,
+        "section_count": len(scores),
+    }
+
+
 def _structure_score(plan: dict[str, Any], text: str) -> tuple[float, dict[str, Any]]:
     parsed = _parse_sections(text)
     present_sections = [section for section in parsed.keys() if section and section != "body"]
@@ -285,6 +381,7 @@ def run_critic_stage(
     line_variety = _line_variety_score(lines, title)
     hook_restraint = _hook_restraint_score(title, lines)
     structure_score, structure_diag = _structure_score(plan, markdown)
+    evidence_utilization, evidence_diag = _evidence_utilization_score(plan, title, markdown)
     
     # 3. Diagnostics
     template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
@@ -295,13 +392,14 @@ def run_critic_stage(
         hard_gate=gate,
         scores={
             "total": round(
-                surface_score * 24
-                + singability * 16
-                + binding * 12
-                + imagery_cov * 14
-                + line_variety * 12
+                surface_score * 22
+                + singability * 14
+                + binding * 10
+                + imagery_cov * 12
+                + line_variety * 10
                 + hook_restraint * 8
-                + structure_score * 14,
+                + structure_score * 12
+                + evidence_utilization * 12,
                 2,
             ),
             "japanese_char_ratio": jp_ratio,
@@ -313,6 +411,7 @@ def run_critic_stage(
             "line_variety": line_variety,
             "hook_restraint": hook_restraint,
             "structure_score": structure_score,
+            "evidence_utilization": evidence_utilization,
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -322,6 +421,7 @@ def run_critic_stage(
             "scaffold_mode": scaffold_mode,
             "pure_body_length": len(pure_body),
             "structure": structure_diag,
+            "evidence": evidence_diag,
         },
         honest_metrics_active=True
     )
@@ -334,5 +434,7 @@ def run_critic_stage(
         result.notes.append("CRITICAL: Imagery coverage hard fail (Grounding Bridge broken)")
     if structure_score < 0.8:
         result.notes.append("Structure under target: section coverage or escalation is weak")
+    if evidence_utilization < 0.68:
+        result.notes.append("Evidence utilization under target: section atoms or title policy are weak")
         
     return result

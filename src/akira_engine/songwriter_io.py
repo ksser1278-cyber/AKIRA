@@ -38,13 +38,54 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
+def candidate_content_roots(root: Path | None = None) -> list[Path]:
+    base_root = root or project_root()
+    roots: list[Path] = [base_root]
+    quarantine_root = base_root / "_quarantine"
+    if quarantine_root.exists():
+        archives = sorted(
+            (path / "archive" for path in quarantine_root.iterdir() if (path / "archive").is_dir()),
+            key=lambda path: path.parent.name,
+            reverse=True,
+        )
+        for archive_root in archives:
+            if archive_root not in roots:
+                roots.append(archive_root)
+    return roots
+
+
+def _first_existing_relative_path(relative_path: Path, *, root: Path | None = None) -> Path | None:
+    for content_root in candidate_content_roots(root):
+        candidate = content_root / relative_path
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def conditioning_reference_dirs(artist_id: str, *, root: Path | None = None) -> list[Path]:
+    clean_artist_id = str(artist_id).strip()
+    if not clean_artist_id:
+        return []
+    reference_dirs: list[Path] = []
+    relative_dirs = (
+        Path("data") / clean_artist_id / "reference_tracks",
+        Path("data") / "reference_tracks" / clean_artist_id,
+    )
+    for content_root in candidate_content_roots(root):
+        for relative_dir in relative_dirs:
+            candidate = content_root / relative_dir
+            if candidate.exists() and candidate not in reference_dirs:
+                reference_dirs.append(candidate)
+    return reference_dirs
+
+
 def load_artist_profile(artist_id: str) -> dict[str, Any] | None:
     clean_artist_id = str(artist_id).strip()
     if not clean_artist_id:
         return None
 
-    profile_path = project_root() / "artists" / clean_artist_id / "profile.json"
-    if not profile_path.exists():
+    profile_path = _first_existing_relative_path(Path("artists") / clean_artist_id / "profile.json")
+    if not profile_path or not profile_path.exists():
         return None
 
     try:
@@ -58,8 +99,8 @@ def load_structure_profile(artist_id: str) -> dict[str, Any] | None:
     if not clean_artist_id:
         return None
 
-    profile_path = project_root() / "artists" / clean_artist_id / "structure_profile.json"
-    if not profile_path.exists():
+    profile_path = _first_existing_relative_path(Path("artists") / clean_artist_id / "structure_profile.json")
+    if not profile_path or not profile_path.exists():
         return None
 
     try:
@@ -73,8 +114,10 @@ def load_representative_demo_profile(artist_id: str) -> dict[str, Any] | None:
     if not clean_artist_id:
         return None
 
-    profile_path = project_root() / "artists" / clean_artist_id / "representative_demo_profile.json"
-    if not profile_path.exists():
+    profile_path = _first_existing_relative_path(
+        Path("artists") / clean_artist_id / "representative_demo_profile.json"
+    )
+    if not profile_path or not profile_path.exists():
         return None
 
     try:
@@ -96,12 +139,8 @@ def load_conditioning_records(artist_id: str) -> list[dict[str, Any]]:
         return CONDITIONING_CACHE[clean_artist_id]
 
     records: list[dict[str, Any]] = []
-    reference_dirs = [
-        project_root() / "data" / clean_artist_id / "reference_tracks",
-        project_root() / "data" / "reference_tracks" / clean_artist_id,
-    ]
     seen_paths: set[Path] = set()
-    for reference_dir in reference_dirs:
+    for reference_dir in conditioning_reference_dirs(clean_artist_id):
         if not reference_dir.exists():
             continue
         for path in sorted(reference_dir.glob("*.conditioning.json")):
@@ -123,9 +162,11 @@ def load_generated_mode_assignments(artist_id: str) -> dict[str, str]:
     if clean_artist_id in GENERATED_MODE_ASSIGNMENT_CACHE:
         return GENERATED_MODE_ASSIGNMENT_CACHE[clean_artist_id]
 
-    profile_path = project_root() / "artists" / clean_artist_id / "style_prompt_profile.generated.json"
+    profile_path = _first_existing_relative_path(
+        Path("artists") / clean_artist_id / "style_prompt_profile.generated.json"
+    )
     assignments: dict[str, str] = {}
-    if profile_path.exists():
+    if profile_path and profile_path.exists():
         try:
             payload = json.loads(profile_path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:

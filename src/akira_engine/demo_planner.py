@@ -17,7 +17,9 @@ from .lyric_utils import (
     safe_text,
     extract_japanese_lexical_atoms,
 )
+from .section_evidence_bank import build_section_evidence_bank
 from .songwriter_io import (
+    candidate_content_roots,
     load_artist_profile,
     load_conditioning_records,
     load_generated_mode_assignments,
@@ -58,6 +60,20 @@ def _is_weak_narrative_goal(value: str) -> bool:
         "outro",
     }:
         return True
+    if not contains_japanese(text):
+        generic_english_prefixes = (
+            "sets the ",
+            "standard ",
+            "drives the ",
+            "explosive delivery",
+            "highest energy state",
+            "subverts expectations",
+            "introduces ",
+            "keeps the ",
+            "final release",
+        )
+        if lowered.startswith(generic_english_prefixes):
+            return True
     return False
 
 
@@ -697,29 +713,30 @@ def _canonical_archetype_to_sections(payload: dict[str, Any]) -> dict[str, str]:
 
 
 def _load_artist_archetype_sections(project_root: Path, artist_id: str) -> tuple[dict[str, str], str, str]:
-    base = project_root / "data" / "_global" / "artist_archetypes"
-    artist_dir = base / artist_id
-    json_path = artist_dir / "archetype.json"
-    md_path = artist_dir / "archetype.md"
-    if not json_path.exists():
-        json_path = base / f"{artist_id}_archetype.json"
-    if not md_path.exists():
-        md_path = base / f"{artist_id}_archetype.md"
-    json_invalid = False
+    invalid_paths: list[str] = []
+    for content_root in candidate_content_roots(project_root):
+        base = content_root / "data" / "_global" / "artist_archetypes"
+        artist_dir = base / artist_id
+        json_path = artist_dir / "archetype.json"
+        md_path = artist_dir / "archetype.md"
+        if not json_path.exists():
+            json_path = base / f"{artist_id}_archetype.json"
+        if not md_path.exists():
+            md_path = base / f"{artist_id}_archetype.md"
 
-    if json_path.exists():
-        try:
-            payload = _load_json(json_path)
-            if _is_valid_canonical_archetype(payload):
-                return _canonical_archetype_to_sections(payload), str(json_path), "json"
-        except (OSError, json.JSONDecodeError, TypeError, ValueError):
-            json_invalid = True
+        if json_path.exists():
+            try:
+                payload = _load_json(json_path)
+                if _is_valid_canonical_archetype(payload):
+                    return _canonical_archetype_to_sections(payload), str(json_path), "json"
+            except (OSError, json.JSONDecodeError, TypeError, ValueError):
+                invalid_paths.append(str(json_path))
 
-    if md_path.exists():
-        return _load_markdown_sections(md_path), str(md_path), "markdown"
+        if md_path.exists():
+            return _load_markdown_sections(md_path), str(md_path), "markdown"
 
-    if json_invalid:
-        return {}, str(json_path), "json_invalid"
+    if invalid_paths:
+        return {}, invalid_paths[0], "json_invalid"
     return {}, "", ""
 
 
@@ -840,35 +857,8 @@ def _derive_hook_blueprint(records: list[dict[str, Any]], mode_support_context: 
 
 
 def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[dict[str, Any]]:
-    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
-
-    for record in records:
-        analysis_by_name = {
-            safe_text(entry.get("section_name")): entry
-            for entry in record.get("section_analysis", [])
-        }
-        index_map: dict[str, int] = {}
-        for section in record.get("lyric_ground_truth", {}).get("sections", []):
-            canonical = canonical_section(
-                safe_text(section.get("section_type")),
-                safe_text(section.get("jp_section_role")),
-                index_map,
-            )
-            analysis = analysis_by_name.get(safe_text(section.get("section_name")), {})
-            grouped[canonical].append(
-                {
-                    "line_count": len(section.get("lines", [])),
-                    "narrative_job": safe_text(analysis.get("narrative_job")),
-                    "vocabulary_focus": [str(value) for value in analysis.get("vocabulary_focus", []) if value],
-                    "phrase_energy_role": safe_text(
-                        analysis.get("phrase_energy_role") or section.get("phrase_energy_role")
-                    ),
-                    "title_drop_role": safe_text(
-                        analysis.get("title_drop_role") or section.get("title_drop_role")
-                    ),
-                }
-            )
-
+    evidence_bank = build_section_evidence_bank(records, mode_id=mode_id)
+    section_evidence = evidence_bank.get("sections", {})
     preferred_order = [
         "intro",
         "verse_1",
@@ -900,33 +890,34 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
         mandated |= {"pre_chorus", "verse_2"}
     
     for section_name in preferred_order:
-        items = grouped.get(section_name, [])
-        if not items and section_name not in mandated:
+        evidence = section_evidence.get(section_name, {})
+        if not evidence and section_name not in mandated:
             continue
             
-        # Enforce structural tension over literal vocabulary to allow original metaphor generation
-        cleaned_imagery = imagery_defaults.get(section_name, ["Standard Tension Flow"])
-        
-        if items:
-            line_target = max(default_line_target(section_name), int(round(median(item["line_count"] for item in items))))
-            goals = _top([item["narrative_job"] for item in items], 2)
-            if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
-                goals = goal_defaults.get(section_name, [section_name])
-            phrase_energy_roles = _top([item["phrase_energy_role"] for item in items], 2)
-            title_drop_roles = _top([item["title_drop_role"] for item in items], 2)
-            imagery_terms = [
-                value
-                for item in items
-                for value in item.get("vocabulary_focus", [])
-                if safe_text(value)
-            ]
-            cleaned_terms = _clean_demo_terms(imagery_terms, limit=4)
-            if cleaned_terms:
-                cleaned_imagery = cleaned_terms
-        else:
-            # Fallback for mandated sections missing from anchors
-            line_target = default_line_target(section_name)
+        cleaned_imagery = _clean_demo_terms(
+            list(evidence.get("imagery_focus", [])),
+            limit=4,
+        ) or imagery_defaults.get(section_name, ["Standard Tension Flow"])
+        goals = [
+            safe_text(goal)
+            for goal in evidence.get("narrative_goals", [])
+            if safe_text(goal)
+        ]
+        if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
             goals = goal_defaults.get(section_name, [section_name])
+        line_target = max(default_line_target(section_name), int(evidence.get("line_target", 0) or 0))
+        phrase_energy_roles = [
+            safe_text(value)
+            for value in evidence.get("phrase_energy_roles", [])
+            if safe_text(value)
+        ][:2]
+        title_drop_roles = [
+            safe_text(value)
+            for value in evidence.get("title_drop_roles", [])
+            if safe_text(value)
+        ][:2]
+        if not evidence:
+            line_target = default_line_target(section_name)
             phrase_energy_roles = []
             title_drop_roles = []
 
@@ -938,6 +929,9 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
                 "imagery_focus": cleaned_imagery,
                 "phrase_energy_roles": phrase_energy_roles,
                 "title_drop_roles": title_drop_roles,
+                "evidence_track_ids": list(evidence.get("evidence_track_ids", [])),
+                "title_drop_policy": safe_text(evidence.get("title_drop_policy")),
+                "hook_pressure": safe_text(evidence.get("hook_pressure"), "medium"),
             }
         )
     return cards
@@ -976,10 +970,23 @@ def _derive_leakage_guardrails(
     }
 
 
+def _resolve_existing_relative_path(project_root: Path, relative_path: Path) -> Path | None:
+    for content_root in candidate_content_roots(project_root):
+        candidate = content_root / relative_path
+        if candidate.exists():
+            return candidate
+    return None
+
+
 def _find_artist_profile(project_root: Path, artist_id: str) -> Path:
-    candidate = project_root / "artists" / artist_id / "representative_demo_profile.json"
-    if not candidate.exists():
-        raise FileNotFoundError(f"Representative demo profile not found: {candidate}")
+    candidate = _resolve_existing_relative_path(
+        project_root,
+        Path("artists") / artist_id / "representative_demo_profile.json",
+    )
+    if not candidate:
+        raise FileNotFoundError(
+            f"Representative demo profile not found under content roots for artist_id={artist_id}"
+        )
     return candidate
 
 
@@ -1003,13 +1010,16 @@ def _load_archetype_context(project_root: Path, artist_id: str, mode_id: str) ->
                 else:
                     combined_artist_sections[key] = val
                     
-    mode_path = project_root / "data" / "_global" / "mode_archetypes" / f"{mode_id}.md"
-    mode_sections = _load_markdown_sections(mode_path)
+    mode_path = _resolve_existing_relative_path(
+        project_root,
+        Path("data") / "_global" / "mode_archetypes" / f"{mode_id}.md",
+    )
+    mode_sections = _load_markdown_sections(mode_path) if mode_path else {}
     
     return {
         "artist_archetype_path": "; ".join(combined_paths),
         "artist_archetype_source": "; ".join(combined_sources),
-        "mode_archetype_path": str(mode_path) if mode_path.exists() else "",
+        "mode_archetype_path": str(mode_path) if mode_path and mode_path.exists() else "",
         "artist_sections": combined_artist_sections,
         "mode_sections": mode_sections,
         "available": bool(combined_artist_sections or mode_sections),
@@ -1040,26 +1050,34 @@ def build_demo_plan(
     all_expansion_records: list[dict[str, Any]] = []
 
     if conditioning_record:
-        # vNext: Check if this record is trusted enough to be a primary anchor
-        if conditioning_record.get("use_for_grounding", True):
+        runtime_track_id = safe_text(conditioning_record.get("track_identity", {}).get("track_id"))
+        runtime_allowed_layers = (
+            conditioning_record.get("generation_safety", {}).get("allowed_layers", {})
+            if isinstance(conditioning_record.get("generation_safety", {}), dict)
+            else {}
+        )
+        runtime_is_real_track = runtime_track_id and not runtime_track_id.endswith("_conditioning_vnext")
+        runtime_is_anchor_safe = bool(runtime_allowed_layers.get("planner")) and runtime_is_real_track
+
+        if conditioning_record.get("use_for_grounding", True) and runtime_is_anchor_safe:
             all_anchor_records = [conditioning_record]
             all_expansion_records = [conditioning_record]
         else:
-            # Low confidence (provisional): Treat as expansion, still search for real anchors
             all_expansion_records = [conditioning_record]
-            # Continue to search for anchors in the main loop below
 
     if not all_anchor_records:
         for aid in artist_ids:
-            active_audit_path = (
-                project_root / "reports" / "quality" / "conditioning" / f"{aid}_conditioning_audit_active.json"
+            active_audit_path = _resolve_existing_relative_path(
+                project_root,
+                Path("reports") / "quality" / "conditioning" / f"{aid}_conditioning_audit_active.json",
             )
-            expansion_audit_path = (
-                project_root / "reports" / "quality" / "conditioning" / f"{aid}_producer_expansion_audit.json"
+            expansion_audit_path = _resolve_existing_relative_path(
+                project_root,
+                Path("reports") / "quality" / "conditioning" / f"{aid}_producer_expansion_audit.json",
             )
             
-            anchors = _audit_records(active_audit_path, ("gold",))
-            expansions = _audit_records(expansion_audit_path, ("gold", "usable"), limit=6)
+            anchors = _audit_records(active_audit_path, ("gold",)) if active_audit_path else []
+            expansions = _audit_records(expansion_audit_path, ("gold", "usable"), limit=6) if expansion_audit_path else []
 
             if not anchors or not expansions:
                 fallback_anchors, fallback_expansions = _prompt_ready_conditioning_records(
@@ -1162,7 +1180,9 @@ def build_demo_plan(
     )
 
     title_patterns = _derive_title_patterns(anchor_records + expansion_records)
+    section_evidence_bank = build_section_evidence_bank(anchor_records + expansion_records, mode_id=effective_mode_id)
     hook_blueprint = _derive_hook_blueprint(anchor_records + expansion_records, mode_support_context)
+    hook_blueprint.update(section_evidence_bank.get("hook_blueprint", {}))
     section_cards = [
         _sanitize_section_card(card)
         for card in _derive_section_cards(anchor_records + expansion_records, effective_mode_id)
@@ -1190,7 +1210,7 @@ def build_demo_plan(
     return {
         "schema_version": "1.0",
         "record_type": "artist_demo_plan",
-        "planner_version": "demo_planner_v1",
+        "planner_version": "demo_planner_v2_dataset_driven",
         "artist_id": artist_id,
         "artist_display_name": artist_names[0] if artist_names else artist_id,
         "mode_id": effective_mode_id,
@@ -1219,6 +1239,11 @@ def build_demo_plan(
         },
         "hook_blueprint": hook_blueprint,
         "section_cards": section_cards,
+        "section_evidence": {
+            "record_count": int(section_evidence_bank.get("record_count", 0) or 0),
+            "selected_track_ids": list(section_evidence_bank.get("selected_track_ids", [])),
+            "available_sections": sorted(section_evidence_bank.get("sections", {}).keys()),
+        },
         "mode_support_context": mode_support_context,
         "leakage_guardrails": leakage_guardrails,
         "generation_notes": [
@@ -1378,9 +1403,13 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "function": vc.function if hasattr(vc, "function") else vc.get("function", ""),
                 "required_imagery": list(vc.required_imagery) if hasattr(vc, "required_imagery") else list(vc.get("required_imagery", [])),
                 "required_motifs": list(vc.required_motifs) if hasattr(vc, "required_motifs") else list(vc.get("required_motifs", [])),
+                "narrative_goals": list(vc.narrative_goals) if hasattr(vc, "narrative_goals") else list(vc.get("narrative_goals", [])),
                 "line_target": vc.line_target if hasattr(vc, "line_target") else vc.get("line_target", 0),
                 "cadence_target": vc.cadence_target if hasattr(vc, "cadence_target") else vc.get("cadence_target", ""),
                 "abstraction_ceiling": vc.abstraction_ceiling if hasattr(vc, "abstraction_ceiling") else vc.get("abstraction_ceiling", 0.0),
+                "title_drop_policy": vc.title_drop_policy if hasattr(vc, "title_drop_policy") else vc.get("title_drop_policy", ""),
+                "hook_pressure": vc.hook_pressure if hasattr(vc, "hook_pressure") else vc.get("hook_pressure", ""),
+                "evidence_track_ids": list(vc.evidence_track_ids) if hasattr(vc, "evidence_track_ids") else list(vc.get("evidence_track_ids", [])),
             }
 
     normalized_cards: list[dict[str, Any]] = []
@@ -1396,6 +1425,13 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         ]
         if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
             goals = list(_section_goal_defaults(mode).get(s_name, [s_name]))
+        vnext_goals = [
+            goal
+            for goal in _clean_demo_phrase_list(list(vnext_meta.get("narrative_goals", [])), limit=3, max_len=48)
+            if not _is_weak_narrative_goal(goal)
+        ]
+        if vnext_goals:
+            goals = _unique(vnext_goals + goals)
         imagery_terms = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
         if not imagery_terms:
             imagery_terms = _rotating_take(imagery, 2, idx)
@@ -1418,6 +1454,16 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         line_target = int(vnext_meta.get("line_target", 0) or card.get("line_target", 4) or 4)
         cadence_target = safe_text(vnext_meta.get("cadence_target"), "medium")
         abstraction_ceiling = float(vnext_meta.get("abstraction_ceiling", 0.18) or 0.18)
+        title_drop_policy = safe_text(vnext_meta.get("title_drop_policy")) or (
+            "primary"
+            if s_name == "chorus_final"
+            else "anchor"
+            if s_name == "chorus"
+            else "withhold"
+            if "pre_chorus" in s_name or s_name == "bridge"
+            else "sparse"
+        )
+        hook_pressure = safe_text(vnext_meta.get("hook_pressure"), "medium")
 
         normalized_cards.append(
             {
@@ -1435,15 +1481,9 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "function": function_name,
                 "cadence_target": cadence_target,
                 "abstraction_ceiling": abstraction_ceiling,
-                "title_drop_policy": (
-                    "primary"
-                    if s_name == "chorus_final"
-                    else "anchor"
-                    if s_name == "chorus"
-                    else "withhold"
-                    if "pre_chorus" in s_name or s_name == "bridge"
-                    else "sparse"
-                ),
+                "title_drop_policy": title_drop_policy,
+                "hook_pressure": hook_pressure,
+                "evidence_track_ids": list(vnext_meta.get("evidence_track_ids", [])),
                 "phrase_energy_roles": list(card.get("phrase_energy_roles", [])),
                 "title_drop_roles": list(card.get("title_drop_roles", [])),
             }
