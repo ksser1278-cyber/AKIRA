@@ -254,6 +254,34 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
     attack = "噛み砕いて" if "collapse" in flags or final else "締めて"
     dark_word = _support_word(flags, b, c)
     last = f"{hook}を壊してもう一度鳴らせ" if final else f"{dark_word}ごと噛んで笑ってみせて"
+    if final:
+        packs = [
+            [
+                *mentions,
+                f"{a}の残響ごと胸骨まで割っていけ",
+                f"{b}の甘さを最後まで誤魔化すな",
+                f"{c}だけをここで逃がすな",
+                f"{d}も名前も全部ひっくり返せ",
+            ],
+            [
+                *mentions,
+                f"{a}の火花で喉の奥まで焼き切って",
+                f"{b}のかわいさで赦された気になるな",
+                f"{c}ごと今すぐ引きずり落とせ",
+                f"{hook}の色で最後まで息を塞げ",
+            ],
+            [
+                *mentions,
+                f"{a}の骨までまとめて踏み抜いていけ",
+                f"{b}の明度を最後まで信じるな",
+                f"{c}も拍もまとめて裂いてしまえ",
+                f"{d}の底でまだ笑ってみせろ",
+            ],
+        ]
+        lines = packs[variant % len(packs)]
+        if pressure == "high" and len(mentions) == 1:
+            lines.insert(1, f"{hook}をやめるな")
+        return lines
     packs = [
         [
             *mentions,

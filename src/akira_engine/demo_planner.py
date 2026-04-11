@@ -157,6 +157,19 @@ _MODE_HOOK_FALLBACKS: dict[str, list[str]] = {
 }
 
 
+_LOW_VALUE_RUNTIME_TERMS = {
+    "誰に",
+    "場所",
+    "見え",
+    "心を",
+    "色に",
+    "大切",
+    "全部",
+    "あと",
+    "少し",
+}
+
+
 def _is_clean_japanese_surface(value: Any) -> bool:
     text = safe_text(value)
     if not text:
@@ -174,6 +187,10 @@ def _is_usable_runtime_atom(value: Any, *, max_len: int = 12) -> bool:
         return False
     compact = text.replace(" ", "").replace("　", "")
     if not (2 <= len(compact) <= max_len):
+        return False
+    if compact in _LOW_VALUE_RUNTIME_TERMS:
+        return False
+    if len(compact) <= 3 and compact[-1] in {"に", "を", "が", "へ", "で", "と", "は", "も"}:
         return False
     lowered = compact.lower()
     if compact in _WEAK_HOOK_TOKENS:
@@ -225,6 +242,100 @@ def _derive_runtime_hook(
         if _is_strong_runtime_hook(candidate):
             return candidate
     return "幻灯"
+
+
+_CUTE_TITLE_TERMS = ("飴", "キャンディ", "遊園地", "ピンク", "砂糖", "メロディ", "リボン", "おもちゃ")
+_DARK_TITLE_TERMS = ("断線", "悲鳴", "毒", "傷", "傷口", "落下", "火花", "警報", "ノイズ", "暗室", "沈黙", "ひび", "罰")
+
+
+def _select_title_term(candidates: list[str], markers: tuple[str, ...], *, avoid: set[str] | None = None) -> str:
+    blocked = avoid or set()
+    preferred: list[tuple[int, str]] = []
+    fallback: list[tuple[int, str]] = []
+    for text in candidates:
+        atom = safe_text(text)
+        if not _is_usable_runtime_atom(atom, max_len=10):
+            continue
+        if atom in blocked:
+            continue
+        compact = atom.replace(" ", "")
+        score = 0
+        if len(compact) <= 4:
+            score += 2
+        if compact in markers:
+            score += 3
+        if compact not in {"ピンク", "毒", "ノイズ"}:
+            score += 1
+        fallback.append((score, atom))
+        if any(marker in atom for marker in markers):
+            preferred.append((score, atom))
+    preferred.sort(key=lambda item: (-item[0], len(item[1]), item[1]))
+    fallback.sort(key=lambda item: (-item[0], len(item[1]), item[1]))
+    concrete = [item for score, item in preferred if item not in {"ピンク", "毒", "ノイズ"}]
+    if concrete:
+        return concrete[0]
+    if preferred:
+        return preferred[0][1]
+    return fallback[0][1] if fallback else ""
+
+
+def _compose_runtime_title(
+    *,
+    mode: str,
+    title_seed: str,
+    title_patterns: list[str],
+    title_atoms: list[str],
+    hook_atoms: list[str],
+    motifs: list[str],
+    contrast_terms: list[str],
+    normalized_cards: list[dict[str, Any]],
+    fallback_hook: str,
+) -> str:
+    if _is_strong_runtime_hook(title_seed):
+        return safe_text(title_seed)
+
+    candidates = unique_preserve_order(
+        list(title_atoms)
+        + list(hook_atoms)
+        + list(contrast_terms)
+        + list(motifs)
+        + [
+            term
+            for card in normalized_cards
+            if safe_text(card.get("section")) in {"intro", "chorus", "bridge", "chorus_final"}
+            for term in (
+                list(card.get("required_imagery", []))
+                + list(card.get("imagery_focus", []))
+                + list(card.get("required_motifs", []))[:3]
+                + [card.get("scene", "")]
+            )
+        ]
+    )
+    candidates = [atom for atom in candidates if _is_usable_runtime_atom(atom, max_len=10)]
+    if not candidates:
+        return fallback_hook
+
+    if mode == "dark_cute_breakdown":
+        cute = _select_title_term(candidates, _CUTE_TITLE_TERMS)
+        dark = _select_title_term(candidates, _DARK_TITLE_TERMS, avoid={cute} if cute else set())
+        if "phrase_title" in title_patterns and cute and dark:
+            composed = f"{cute}の{dark}"
+            if _is_strong_runtime_hook(composed):
+                return composed
+        if dark and cute:
+            glued = f"{dark}{cute}" if len(dark) <= 3 and len(cute) <= 4 else f"{cute}{dark}"
+            if _is_strong_runtime_hook(glued):
+                return glued
+
+    if "phrase_title" in title_patterns and len(candidates) >= 2:
+        composed = f"{candidates[0]}の{candidates[1]}"
+        if _is_strong_runtime_hook(composed):
+            return composed
+
+    for candidate in candidates:
+        if _is_strong_runtime_hook(candidate):
+            return candidate
+    return fallback_hook
 
 
 def _clean_demo_phrase_list(values: list[Any], *, limit: int, max_len: int = 24) -> list[str]:
@@ -1367,6 +1478,15 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             and not looks_corrupted_text(safe_text(value))
         ]
     )[:8]
+    title_patterns = _unique(
+        [
+            safe_text(value)
+            for value in composite.get("title_patterns", [])
+            if safe_text(value)
+            and not contains_bad_script(safe_text(value))
+            and not looks_corrupted_text(safe_text(value))
+        ]
+    )[:6]
 
     seed_phrases = _clean_demo_terms(composite.get("seed_phrases", []), limit=12)
     imagery = _clean_demo_terms(composite.get("imagery_anchors", []), limit=12)
@@ -1377,7 +1497,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     if not motifs:
         motifs = _MODE_HOOK_FALLBACKS.get(mode, _MODE_HOOK_FALLBACKS["default"])[:3]
 
-    fallback_hook = _derive_runtime_hook(
+    provisional_hook = _derive_runtime_hook(
         mode=mode,
         title_seed=title_seed,
         conditioning_atoms=conditioning_atoms,
@@ -1444,9 +1564,9 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             section_motifs = _unique(vnext_required_motifs + section_motifs)
         section_scene = imagery_terms[0] if imagery_terms else (motifs[(idx + 5) % len(motifs)] if motifs else "")
         if s_name == "chorus_final":
-            section_motifs = _unique([fallback_hook] + section_motifs)
-            if not section_scene and fallback_hook != "...":
-                section_scene = fallback_hook
+            section_motifs = _unique([provisional_hook] + section_motifs)
+            if not section_scene and provisional_hook != "...":
+                section_scene = provisional_hook
         required_imagery = _clean_demo_phrase_list(list(vnext_meta.get("required_imagery", [])), limit=4, max_len=12)
         if not required_imagery:
             required_imagery = imagery_terms[:2]
@@ -1490,6 +1610,23 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         )
 
     ordered_headers = [f"[{card['section']}]" for card in normalized_cards if safe_text(card.get("section"))]
+    fallback_hook = _compose_runtime_title(
+        mode=mode,
+        title_seed=title_seed,
+        title_patterns=title_patterns,
+        title_atoms=title_atoms,
+        hook_atoms=hook_atoms,
+        motifs=motifs,
+        contrast_terms=contrast_terms,
+        normalized_cards=normalized_cards,
+        fallback_hook=provisional_hook,
+    )
+    for card in normalized_cards:
+        section_name = safe_text(card.get("section"))
+        if section_name in {"chorus", "chorus_final"}:
+            card["required_motifs"] = _unique([fallback_hook] + list(card.get("required_motifs", [])))
+        if section_name == "chorus_final":
+            card["scene"] = safe_text(card.get("scene")) or fallback_hook
     hook_density = safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium")
     title_ignition_style = safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct")
     sanitized_demo_plan = {
@@ -1500,6 +1637,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             "imagery_anchors": imagery,
             "seed_phrases": seed_phrases,
             "energy_arc": clean_energy_arc,
+            "title_patterns": title_patterns,
         },
         "section_cards": normalized_cards,
     }
