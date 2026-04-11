@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from collections import Counter, defaultdict
@@ -17,6 +18,7 @@ from .lyric_utils import (
     safe_text,
     extract_japanese_lexical_atoms,
 )
+from .lexical_family_bank import is_cliche_term
 from .section_evidence_bank import build_section_evidence_bank
 from .songwriter_io import (
     candidate_content_roots,
@@ -264,14 +266,16 @@ def _select_title_term(candidates: list[str], markers: tuple[str, ...], *, avoid
             score += 2
         if compact in markers:
             score += 3
-        if compact not in {"ピンク", "毒", "ノイズ"}:
+        if not is_cliche_term(compact):
             score += 1
+        else:
+            score -= 2
         fallback.append((score, atom))
         if any(marker in atom for marker in markers):
             preferred.append((score, atom))
     preferred.sort(key=lambda item: (-item[0], len(item[1]), item[1]))
     fallback.sort(key=lambda item: (-item[0], len(item[1]), item[1]))
-    concrete = [item for score, item in preferred if item not in {"ピンク", "毒", "ノイズ"}]
+    concrete = [item for score, item in preferred if not is_cliche_term(item)]
     if concrete:
         return concrete[0]
     if preferred:
@@ -501,7 +505,13 @@ def _safe_runtime_atoms(values: list[Any], *, limit: int = 8, max_len: int = 8) 
     return cleaned_atoms
 
 
-def _conditioning_runtime_atoms(artist_id: str, mode_id: str, title_seed: str) -> dict[str, Any]:
+def _conditioning_runtime_atoms(
+    artist_id: str,
+    mode_id: str,
+    title_seed: str,
+    *,
+    preferred_track_ids: list[str] | None = None,
+) -> dict[str, Any]:
     records = load_conditioning_records(artist_id)
     if not records:
         return {
@@ -513,8 +523,9 @@ def _conditioning_runtime_atoms(artist_id: str, mode_id: str, title_seed: str) -
         }
 
     normalized_title_seed = re.sub(r"\s+", "", safe_text(title_seed)).lower()
+    preferred_ids = {safe_text(item) for item in (preferred_track_ids or []) if safe_text(item)}
     best_record: dict[str, Any] | None = None
-    best_key: tuple[int, int, int, float] | None = None
+    best_key: tuple[int, int, int, int, float] | None = None
     for record in records:
         generation_safety = record.get("generation_safety", {}) if isinstance(record.get("generation_safety", {}), dict) else {}
         verdict = safe_text(generation_safety.get("verdict"))
@@ -544,8 +555,9 @@ def _conditioning_runtime_atoms(artist_id: str, mode_id: str, title_seed: str) -
         title_match = 1 if normalized_title_seed and normalized_title_seed in normalized_candidates else 0
         mode_match = 1 if mode_id and mode_id in role_list else 0
         benchmark_bonus = 1 if verdict == "benchmark_safe" else 0
+        preferred_bonus = 1 if safe_text(identity.get("track_id")) in preferred_ids else 0
         score = float(generation_safety.get("score", 0.0) or 0.0)
-        key = (title_match, mode_match, benchmark_bonus, score)
+        key = (preferred_bonus, title_match, mode_match, benchmark_bonus, score)
         if best_key is None or key > best_key:
             best_key = key
             best_record = record
@@ -896,6 +908,93 @@ def _conditioning_score(record: dict[str, Any]) -> float:
     return 0.0
 
 
+def _record_mode_affinity(record: dict[str, Any], mode_id: str) -> int:
+    if not mode_id:
+        return 0
+    haystacks: list[str] = []
+    mode_assignments = record.get("mode_assignments", [])
+    if isinstance(mode_assignments, list):
+        for item in mode_assignments:
+            haystacks.append(json.dumps(item, ensure_ascii=False) if isinstance(item, dict) else safe_text(item))
+    elif isinstance(mode_assignments, dict):
+        haystacks.append(json.dumps(mode_assignments, ensure_ascii=False))
+    song_intent = record.get("song_intent", {}) if isinstance(record.get("song_intent", {}), dict) else {}
+    for key in ("core_theme", "narrative_role", "contrast_device"):
+        value = song_intent.get(key, [])
+        if isinstance(value, list):
+            haystacks.extend(safe_text(item) for item in value)
+        else:
+            haystacks.append(safe_text(value))
+    blob = " ".join(item for item in haystacks if item)
+    return 1 if mode_id in blob else 0
+
+
+def _record_theme_signal(record: dict[str, Any]) -> int:
+    prompt_conditioning = record.get("prompt_conditioning", {}) if isinstance(record.get("prompt_conditioning", {}), dict) else {}
+    lyric_ground = record.get("lyric_ground_truth", {}) if isinstance(record.get("lyric_ground_truth", {}), dict) else {}
+    imagery_anchors = prompt_conditioning.get("imagery_anchors", [])
+    production = prompt_conditioning.get("production_palette", [])
+    hook_lines = lyric_ground.get("hook_lines", [])
+    section_map = lyric_ground.get("section_map", {})
+    signal = 0
+    signal += len([item for item in imagery_anchors if safe_text(item)])
+    signal += len([item for item in production if safe_text(item)])
+    signal += len([item for item in hook_lines if safe_text(item)])
+    if isinstance(section_map, dict):
+        signal += len([key for key, value in section_map.items() if safe_text(key) and value])
+    return signal
+
+
+def _expand_theme_anchor_records(
+    anchor_records: list[dict[str, Any]],
+    expansion_records: list[dict[str, Any]],
+    *,
+    mode_id: str,
+    limit: int = 3,
+) -> list[dict[str, Any]]:
+    selected: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for record in anchor_records:
+        track_id = _conditioning_track_id(record)
+        if not track_id or track_id in seen:
+            continue
+        selected.append(record)
+        seen.add(track_id)
+
+    candidates = [
+        record
+        for record in expansion_records
+        if _conditioning_track_id(record)
+        and _conditioning_track_id(record) not in seen
+        and not _conditioning_track_id(record).endswith("_conditioning_vnext")
+    ]
+    candidates.sort(
+        key=lambda record: (
+            -_record_mode_affinity(record, mode_id),
+            -_record_theme_signal(record),
+            -_conditioning_score(record),
+            _conditioning_track_id(record),
+        )
+    )
+    for record in candidates:
+        if len(selected) >= limit:
+            break
+        selected.append(record)
+        seen.add(_conditioning_track_id(record))
+    return selected
+
+
+def _synthetic_runtime_track_id(
+    artist_id: str,
+    mode_id: str,
+    hook: str,
+    evidence_track_ids: list[str],
+) -> str:
+    seed = "|".join([artist_id, mode_id, hook] + [safe_text(item) for item in evidence_track_ids if safe_text(item)])
+    digest = hashlib.md5(seed.encode("utf-8")).hexdigest()[:10]
+    return f"{artist_id}_{mode_id}_{digest}"
+
+
 def _prompt_ready_conditioning_records(
     project_root: Path,
     artist_id: str,
@@ -1221,6 +1320,12 @@ def build_demo_plan(
         filtered_anchor_records = _filter_tracks(anchor_records, core_anchor_ids)
         if filtered_anchor_records:
             anchor_records = filtered_anchor_records
+    anchor_records = _expand_theme_anchor_records(
+        anchor_records,
+        expansion_records,
+        mode_id=effective_mode_id,
+        limit=3,
+    )
 
     if not anchor_records:
         raise ValueError(f"No anchor records available for artist_id={artist_id}")
@@ -1490,7 +1595,16 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
 
     seed_phrases = _clean_demo_terms(composite.get("seed_phrases", []), limit=12)
     imagery = _clean_demo_terms(composite.get("imagery_anchors", []), limit=12)
-    conditioning_atoms = _conditioning_runtime_atoms(artist_id, mode, title_seed)
+    preferred_conditioning_ids = _unique(
+        list((plan.get("evidence", {}) or {}).get("anchor_track_ids", []))
+        + list((plan.get("section_evidence", {}) or {}).get("selected_track_ids", []))
+    )
+    conditioning_atoms = _conditioning_runtime_atoms(
+        artist_id,
+        mode,
+        title_seed,
+        preferred_track_ids=preferred_conditioning_ids,
+    )
     motifs = _unique(seed_phrases + imagery)
     if not motifs:
         motifs = list(conditioning_atoms.get("motifs", []))
@@ -1620,6 +1734,20 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         contrast_terms=contrast_terms,
         normalized_cards=normalized_cards,
         fallback_hook=provisional_hook,
+    )
+    runtime_evidence_track_ids = _unique(
+        [
+            safe_text(track_id)
+            for card in normalized_cards
+            for track_id in card.get("evidence_track_ids", [])
+            if safe_text(track_id)
+        ]
+    )
+    track_id = _synthetic_runtime_track_id(
+        artist_id,
+        mode,
+        fallback_hook,
+        runtime_evidence_track_ids,
     )
     for card in normalized_cards:
         section_name = safe_text(card.get("section"))

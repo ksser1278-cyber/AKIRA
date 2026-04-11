@@ -3,6 +3,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from typing import Any
+
+from src.akira_engine.lexical_family_bank import score_demo_cliche_density, score_family_diversity
 from src.akira_engine.normalize.mod import calculate_script_ratios, contains_bad_script
 
 @dataclass
@@ -382,6 +384,9 @@ def run_critic_stage(
     hook_restraint = _hook_restraint_score(title, lines)
     structure_score, structure_diag = _structure_score(plan, markdown)
     evidence_utilization, evidence_diag = _evidence_utilization_score(plan, title, markdown)
+    family_diversity, family_diag = score_family_diversity(pure_body)
+    cliche_density, cliche_diag = score_demo_cliche_density(pure_body)
+    cliche_control = round(max(0.0, 1.0 - cliche_density), 2)
     
     # 3. Diagnostics
     template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
@@ -392,14 +397,16 @@ def run_critic_stage(
         hard_gate=gate,
         scores={
             "total": round(
-                surface_score * 22
-                + singability * 14
-                + binding * 10
+                surface_score * 16
+                + singability * 10
+                + binding * 8
                 + imagery_cov * 12
-                + line_variety * 10
-                + hook_restraint * 8
+                + line_variety * 8
+                + hook_restraint * 6
                 + structure_score * 12
-                + evidence_utilization * 12,
+                + evidence_utilization * 14
+                + family_diversity * 6
+                + cliche_control * 8,
                 2,
             ),
             "japanese_char_ratio": jp_ratio,
@@ -412,6 +419,9 @@ def run_critic_stage(
             "hook_restraint": hook_restraint,
             "structure_score": structure_score,
             "evidence_utilization": evidence_utilization,
+            "family_diversity": family_diversity,
+            "cliche_density": cliche_density,
+            "cliche_control": cliche_control,
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -422,6 +432,8 @@ def run_critic_stage(
             "pure_body_length": len(pure_body),
             "structure": structure_diag,
             "evidence": evidence_diag,
+            "family_profile": family_diag,
+            "cliche_profile": cliche_diag,
         },
         honest_metrics_active=True
     )
@@ -436,5 +448,9 @@ def run_critic_stage(
         result.notes.append("Structure under target: section coverage or escalation is weak")
     if evidence_utilization < 0.68:
         result.notes.append("Evidence utilization under target: section atoms or title policy are weak")
+    if cliche_density > 0.34:
+        result.notes.append("Cliche density under review: overused mode vocabulary is dominating")
+    if family_diversity < 0.5:
+        result.notes.append("Family diversity under target: lexical field mix is too narrow")
         
     return result

@@ -4,6 +4,7 @@ import hashlib
 import random
 from typing import Any
 
+from ..lexical_family_bank import is_cliche_term, pick_family_balanced_terms
 from ..lyric_utils import contains_bad_script, contains_japanese, safe_text, unique_preserve_order
 
 
@@ -110,16 +111,83 @@ def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
     return unique_preserve_order(pool)
 
 
-def _pick_terms(pool: list[str], offset: int, *, count: int = 4) -> list[str]:
+def _pick_terms(pool: list[str], offset: int, *, section: str, count: int = 4) -> list[str]:
     if not pool:
         pool = ["残響", "体温", "呼吸", "輪郭"]
-    head = list(pool[:2])
-    tail = list(pool[2:6]) or list(pool[2:]) or list(pool[:])
-    shift = offset % len(tail)
-    rotated = head + list(tail[shift:] + tail[:shift])
-    while len(rotated) < count:
-        rotated.append(rotated[-1])
-    return rotated[:count]
+    balanced = pick_family_balanced_terms(pool, section=section, offset=offset, count=count)
+    if not balanced:
+        head = list(pool[:2])
+        tail = list(pool[2:6]) or list(pool[2:]) or list(pool[:])
+        shift = offset % len(tail)
+        balanced = head + list(tail[shift:] + tail[:shift])
+    while len(balanced) < count:
+        balanced.append(balanced[-1])
+    return balanced[:count]
+
+
+def _distinct_term(primary: str, *fallbacks: str) -> str:
+    root = safe_text(primary)
+    for candidate in fallbacks:
+        text = safe_text(candidate)
+        if not text:
+            continue
+        if text == root:
+            continue
+        if root and (text in root or root in text):
+            continue
+        return text
+    return root
+
+
+def _de_cliche_term(primary: str, *fallbacks: str) -> str:
+    root = safe_text(primary)
+    if root and not is_cliche_term(root):
+        return root
+    return _distinct_term(root, *fallbacks)
+
+
+def _term_conflicts(term: str, blocked: list[str]) -> bool:
+    text = safe_text(term)
+    if not text:
+        return True
+    for other in blocked:
+        candidate = safe_text(other)
+        if not candidate:
+            continue
+        if text == candidate:
+            return True
+        if text in candidate or candidate in text:
+            return True
+    return False
+
+
+def _section_alternate_terms(card: dict[str, Any], hook: str) -> list[str]:
+    values = (
+        list(card.get("required_motifs", []))
+        + list(card.get("required_imagery", []))
+        + list(card.get("imagery_focus", []))
+        + [card.get("scene", ""), hook]
+    )
+    return _clean_terms(values, limit=12)
+
+
+def _pick_section_distinct_term(primary: str, *, blocked: list[str], alternates: list[str], allow_cliche: bool = False) -> str:
+    root = safe_text(primary)
+    candidates = [root] + alternates
+    for candidate in candidates:
+        text = safe_text(candidate)
+        if not text:
+            continue
+        if not allow_cliche and is_cliche_term(text):
+            continue
+        if _term_conflicts(text, blocked):
+            continue
+        return text
+    for candidate in candidates:
+        text = safe_text(candidate)
+        if text and not _term_conflicts(text, blocked):
+            return text
+    return root
 
 
 def _policy_mentions(section: str, hook: str, policy: str, pressure: str, *, variant: int) -> list[str]:
@@ -241,6 +309,182 @@ def _pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: 
             f"{a}に触れるたび呼吸の拍が狂っていく",
             f"{b}の裂け目で{c}がやけに明るい",
             closing,
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _dense_intro_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    mentions = _policy_mentions("intro", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
+    packs = [
+        [
+            f"{a}の音だけ喉に錆びついている",
+            f"{b}まみれの光がまぶたの裏を裂く",
+            mentions[0] if mentions else f"{c}だけまだ歯の奥で鳴っている",
+            f"{d}の甘さだけ胃の底で腐り続ける",
+        ],
+        [
+            f"{a}の粒が胸の裏でひび割れながら鳴り続ける",
+            f"{b}の気配が薄い膜みたいに首筋へ貼りつく",
+            mentions[0] if mentions else f"{c}だけまだこちらを噛み返してくる",
+            f"{d}の余熱が呼吸の縁で黒く燻っている",
+        ],
+        [
+            f"{a}を噛むたび部屋の明度が骨ごと狂っていく",
+            f"{b}の影だけきれいな顔で床へ転がっていく",
+            mentions[0] if mentions else f"{c}の匂いがまだ喉の奥でほどけない",
+            f"{d}まで静かに濡れてこちらへ寄ってくる",
+        ],
+    ]
+    if "sweet" in flags and "unease" in flags:
+        packs[0][3] = f"{d}の甘さだけ不穏に腐って残っている"
+    return packs[variant % len(packs)]
+
+
+def _dense_verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
+    a, b, c, d = terms
+    if second_half:
+        alternates = [
+            term
+            for term in _section_alternate_terms(card, hook)
+            if safe_text(term) != safe_text(a)
+        ]
+        a = _pick_section_distinct_term(
+            "",
+            blocked=[],
+            alternates=alternates + [_de_cliche_term(a, b, d, hook)],
+            allow_cliche=False,
+        )
+        b = _pick_section_distinct_term(
+            b,
+            blocked=[a],
+            alternates=alternates,
+            allow_cliche=False,
+        )
+        c = _pick_section_distinct_term(
+            _de_cliche_term(c, b, d, a, hook),
+            blocked=[a, b],
+            alternates=alternates,
+            allow_cliche=False,
+        )
+        d = _pick_section_distinct_term(
+            _distinct_term(d, b, a, hook),
+            blocked=[a, b, c],
+            alternates=alternates,
+            allow_cliche=False,
+        )
+    sting = _ending_word(flags, "曲がる")
+    support = _support_word(flags, c, d)
+    if second_half:
+        support = _pick_section_distinct_term(
+            _distinct_term(support, c, d, hook),
+            blocked=[a, b, c, d],
+            alternates=_section_alternate_terms(card, hook),
+            allow_cliche=False,
+        )
+    verb = "増えていく" if not second_half else "剥がれていく"
+    packs = [
+        [
+            f"{a}をなぞるたび{b}の輪郭が{verb}",
+            f"{c}の匂いで呼吸が少し{sting}",
+            f"{d}のせいで笑い方まで痺れていく",
+            f"{support}を隠すほど痛みがよく見える",
+        ],
+        [
+            f"{a}を舐めるたび{b}の温度だけ骨まで食い込んでくる",
+            f"{c}の残り香で脈の速さが首を絞めていく",
+            f"{d}の気配でまともな顔が先に剥がれる",
+            f"{support}みたいな言葉ほど深く刺さって抜けない",
+        ],
+        [
+            f"{a}を数えるたび{b}の膜だけ無防備に薄くなる",
+            f"{c}のしびれで視界の端から順に裂けていく",
+            f"{d}の笑みが静かに皮膚の裏へ移ってくる",
+            f"{support}の置き方ひとつで夜が濁って戻れなくなる",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
+    a, b, c, d = terms
+    if second_half:
+        alternates = [
+            term
+            for term in _section_alternate_terms(card, hook)
+            if term not in {"ノイズ", "魔法み"} and safe_text(term) != safe_text(a)
+        ]
+        a = _pick_section_distinct_term(
+            "",
+            blocked=[],
+            alternates=alternates + [_de_cliche_term(a, b, d, hook)],
+            allow_cliche=False,
+        )
+        b = _pick_section_distinct_term(
+            "",
+            blocked=[a],
+            alternates=alternates + [_distinct_term(b, a, d, hook)],
+            allow_cliche=False,
+        )
+        c = _pick_section_distinct_term(
+            "",
+            blocked=[a, b],
+            alternates=alternates + [_de_cliche_term(c, d, a, hook)],
+            allow_cliche=False,
+        )
+        d = _pick_section_distinct_term(
+            d,
+            blocked=[a, b, c],
+            alternates=alternates,
+            allow_cliche=False,
+        )
+    else:
+        c = _de_cliche_term(c, d, a, b)
+    collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
+    closing = f"{hook}まであと少しで{collapse}" if safe_text(card.get("title_drop_policy")) != "withhold" and second_half else f"{d}まであと少しで{collapse}"
+    packs = [
+        [
+            f"{a}が点滅して心臓の位置ごとずらされる",
+            f"{b}の隙間で{c}だけ先に暴れ出す",
+            closing,
+        ],
+        [
+            f"{a}が脈の裏側で静かに裂け続けていく",
+            f"{b}の継ぎ目から{c}だけ先にこぼれ始める",
+            closing,
+        ],
+        [
+            f"{a}に触れるたび呼吸の拍が壊れ始める",
+            f"{b}の継ぎ目で{c}だけやけに近づきすぎる",
+            closing,
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _dense_outro_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    a = _distinct_term(a, b, c, d, hook)
+    b = _distinct_term(b, c, d, a, hook)
+    c = _distinct_term(c, d, a, b, hook)
+    mentions = _policy_mentions("outro", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
+    tail = mentions[0] if mentions else f"{hook}が遠くでまだ瞬いている"
+    packs = [
+        [
+            f"{a}だけが最後まで部屋の湿度を抱え込んでいる",
+            tail,
+            f"{b}の残り香だけが靴底から離れない",
+        ],
+        [
+            f"{a}だけが最後までこちらの体温を覚えている",
+            tail,
+            f"{c}の薄明かりだけが眠れずに貼りついている",
+        ],
+        [
+            f"{a}だけが最後まで床の上でゆっくり腐っていく",
+            tail,
+            f"{d}の気配だけが朝まで指先に残っている",
         ],
     ]
     return packs[variant % len(packs)]
@@ -439,17 +683,28 @@ def _render_section(
 ) -> list[str]:
     section = safe_text(card.get("section"))
     flags = _goal_flags(card)
-    if mode == "dark_cute_breakdown":
+    dense_mode = mode == "dark_cute_breakdown"
+    if dense_mode:
         flags.update({"sweet", "unease"})
     if section == "intro":
+        if dense_mode:
+            return _dense_intro_lines(card, hook, terms, flags, variant=variant)
         return _intro_lines(card, hook, terms, flags, variant=variant)
     if section == "verse_1":
+        if dense_mode:
+            return _dense_verse_lines(card, hook, terms, flags, variant=variant, second_half=False)
         return _verse_lines(card, hook, terms, flags, variant=variant, second_half=False)
     if section == "verse_2":
+        if dense_mode:
+            return _dense_verse_lines(card, hook, terms, flags, variant=variant, second_half=True)
         return _verse_lines(card, hook, terms, flags, variant=variant, second_half=True)
     if section == "pre_chorus":
+        if dense_mode:
+            return _dense_pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=False)
         return _pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=False)
     if section == "pre_chorus_2":
+        if dense_mode:
+            return _dense_pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=True)
         return _pre_chorus_lines(card, hook, terms, flags, variant=variant, second_half=True)
     if section == "chorus":
         return _chorus_lines(card, hook, terms, flags, variant=variant, final=False)
@@ -458,6 +713,8 @@ def _render_section(
     if section == "chorus_final":
         return _chorus_lines(card, hook, terms, flags, variant=variant, final=True)
     if section == "outro":
+        if dense_mode:
+            return _dense_outro_lines(card, hook, terms, flags, variant=variant)
         return _outro_lines(card, hook, terms, flags, variant=variant)
     a, b, c, _ = terms
     return [f"{a}だけがまだ残っている", f"{b}の気配で{c}まで少し揺れる"]
@@ -493,7 +750,7 @@ def run_renderer_stage(
             continue
         pool = _term_pool(card, hook, mode=mode)
         offset = variant_index + position + rng.randint(0, 2)
-        terms = _pick_terms(pool, offset, count=4)
+        terms = _pick_terms(pool, offset, section=section, count=4)
         section_lines = _render_section(card, hook=hook, terms=terms, mode=mode, variant=variant_index + position)
         target = int(card.get("line_target", len(section_lines)) or len(section_lines))
         fitted = _fit_section_lines(
