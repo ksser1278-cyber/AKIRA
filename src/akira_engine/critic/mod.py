@@ -139,6 +139,73 @@ def _hook_restraint_score(title: str, lines: list[str]) -> float:
         return 0.6
     return 0.35
 
+
+def _structure_score(plan: dict[str, Any], text: str) -> tuple[float, dict[str, Any]]:
+    parsed = _parse_sections(text)
+    present_sections = [section for section in parsed.keys() if section and section != "body"]
+    expected_sections = [
+        str(section).strip()
+        for section in plan.get("form_profile", {}).get("section_order", [])
+        if str(section).strip()
+    ]
+
+    if not expected_sections:
+        return 0.5, {
+            "expected_sections": [],
+            "present_sections": present_sections,
+            "missing_sections": [],
+            "coverage_ratio": 0.0,
+            "order_ratio": 0.0,
+            "escalation_ok": False,
+        }
+
+    missing_sections = [section for section in expected_sections if section not in present_sections]
+    coverage_ratio = (len(expected_sections) - len(missing_sections)) / len(expected_sections)
+
+    filtered_present = [section for section in present_sections if section in expected_sections]
+    expected_iter = iter(expected_sections)
+    next_expected = next(expected_iter, None)
+    ordered_hits = 0
+    for section in filtered_present:
+        while next_expected is not None and next_expected != section:
+            next_expected = next(expected_iter, None)
+        if next_expected == section:
+            ordered_hits += 1
+            next_expected = next(expected_iter, None)
+    order_ratio = ordered_hits / len(expected_sections)
+
+    chorus_len = len(parsed.get("chorus", []))
+    final_len = len(parsed.get("chorus_final", []))
+    escalation_ok = final_len >= max(chorus_len + 1, 5) if chorus_len else final_len >= 5
+
+    pre_chorus_expected = any(section.startswith("pre_chorus") for section in expected_sections)
+    pre_chorus_present = any(section.startswith("pre_chorus") for section in present_sections)
+    bridge_present = "bridge" in present_sections
+    transition_score = 1.0
+    if pre_chorus_expected and not pre_chorus_present:
+        transition_score -= 0.35
+    if not bridge_present:
+        transition_score -= 0.2
+    transition_score = max(0.0, transition_score)
+
+    score = (
+        coverage_ratio * 0.4
+        + order_ratio * 0.2
+        + (1.0 if escalation_ok else 0.45) * 0.25
+        + transition_score * 0.15
+    )
+    return round(max(0.0, min(1.0, score)), 2), {
+        "expected_sections": expected_sections,
+        "present_sections": present_sections,
+        "missing_sections": missing_sections,
+        "coverage_ratio": round(coverage_ratio, 2),
+        "order_ratio": round(order_ratio, 2),
+        "escalation_ok": escalation_ok,
+        "transition_score": round(transition_score, 2),
+        "chorus_line_count": chorus_len,
+        "chorus_final_line_count": final_len,
+    }
+
 def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[float, list[str]]:
     """Evaluates how many mandatory imagery anchors from the plan appear in the PURE lyrics (excluding metadata)."""
     all_required = []
@@ -217,6 +284,7 @@ def run_critic_stage(
     imagery_cov, imagery_hits = _calculate_imagery_coverage(plan, pure_body)
     line_variety = _line_variety_score(lines, title)
     hook_restraint = _hook_restraint_score(title, lines)
+    structure_score, structure_diag = _structure_score(plan, markdown)
     
     # 3. Diagnostics
     template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
@@ -227,12 +295,13 @@ def run_critic_stage(
         hard_gate=gate,
         scores={
             "total": round(
-                surface_score * 28
-                + singability * 18
-                + binding * 14
-                + imagery_cov * 15
-                + line_variety * 15
-                + hook_restraint * 10,
+                surface_score * 24
+                + singability * 16
+                + binding * 12
+                + imagery_cov * 14
+                + line_variety * 12
+                + hook_restraint * 8
+                + structure_score * 14,
                 2,
             ),
             "japanese_char_ratio": jp_ratio,
@@ -243,6 +312,7 @@ def run_critic_stage(
             "imagery_coverage": imagery_cov,
             "line_variety": line_variety,
             "hook_restraint": hook_restraint,
+            "structure_score": structure_score,
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -251,6 +321,7 @@ def run_critic_stage(
             "line_count": len(lines),
             "scaffold_mode": scaffold_mode,
             "pure_body_length": len(pure_body),
+            "structure": structure_diag,
         },
         honest_metrics_active=True
     )
@@ -261,5 +332,7 @@ def run_critic_stage(
         
     if imagery_cov <= Policy.IMAGERY_COVERAGE_HARD_FAIL_THRESHOLD and not scaffold_mode:
         result.notes.append("CRITICAL: Imagery coverage hard fail (Grounding Bridge broken)")
+    if structure_score < 0.8:
+        result.notes.append("Structure under target: section coverage or escalation is weak")
         
     return result

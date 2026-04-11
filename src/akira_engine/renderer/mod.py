@@ -431,6 +431,70 @@ def _render_section(
     return _lines_for_default(section, hook, a, b, c, variant=variant)
 
 
+def _supplement_section_line(section: str, hook: str, a: str, b: str, c: str, step: int) -> str:
+    pools = {
+        "intro": [
+            f"{c}の甘さだけまだ喉に残っている",
+            f"{a}の輪郭だけ先に光り出す",
+        ],
+        "verse_1": [
+            f"{a}と{b}の間で心拍だけが遅れる",
+            f"{c}の匂いまで静かに刺さっていく",
+        ],
+        "verse_2": [
+            f"{a}の名残まできれいに壊れていく",
+            f"{b}の裏側で{c}だけ育っていく",
+        ],
+        "pre_chorus": [
+            f"{c}まで落ちればもう戻れない",
+            f"{hook}の前で呼吸だけが乱れていく",
+        ],
+        "pre_chorus_2": [
+            f"{c}の合図で景色がすべてずれていく",
+            f"{hook}の前で言い訳だけが剥がれていく",
+        ],
+        "chorus": [
+            f"{c}まで全部噛み砕いて",
+            f"{hook}しか残らないところまで行け",
+        ],
+        "bridge": [
+            f"{c}の笑い声だけ遠くで歪んでいる",
+            f"{a}も{b}も黙ったまま沈んでいく",
+        ],
+        "chorus_final": [
+            f"{a}も{b}もまとめて飲み込め",
+            f"{c}まで過去ごと引き裂いていけ",
+            f"{hook}の甘さを最後まで罰にしろ",
+        ],
+        "outro": [
+            f"{c}だけが床に転がっている",
+            f"{hook}の残響だけまだ消えない",
+        ],
+    }
+    candidates = pools.get(section, [f"{c}だけがまだ揺れている"])
+    return candidates[step % len(candidates)]
+
+
+def _fit_section_lines(
+    section_lines: list[str],
+    *,
+    section: str,
+    hook: str,
+    a: str,
+    b: str,
+    c: str,
+    line_target: int,
+) -> list[str]:
+    fitted = list(section_lines[:line_target])
+    step = 0
+    while len(fitted) < line_target and step < 12:
+        candidate = _supplement_section_line(section, hook, a, b, c, step)
+        if candidate not in fitted:
+            fitted.append(candidate)
+        step += 1
+    return fitted
+
+
 def run_renderer_stage(
     plan: dict[str, Any],
     *,
@@ -475,6 +539,16 @@ def run_renderer_stage(
             mode=mode,
             artist_id=artist_id,
             variant=variant_index + len(lines),
+        )
+        line_target = int(card.get("line_target", len(section_lines)) or len(section_lines))
+        section_lines = _fit_section_lines(
+            section_lines,
+            section=section,
+            hook=hook,
+            a=a,
+            b=b,
+            c=c,
+            line_target=line_target,
         )
         if scaffold_mode and section in {"chorus", "chorus_final"}:
             section_lines = list(section_lines) + [f"{hook}をもう一度繰り返す"]

@@ -39,6 +39,28 @@ def _top(values: list[str], limit: int) -> list[str]:
     return [value for value, _ in ordered[:limit]]
 
 
+def _is_weak_narrative_goal(value: str) -> bool:
+    text = safe_text(value)
+    if not text:
+        return True
+    lowered = text.lower()
+    if lowered.startswith("standard ") and lowered.endswith(" flow"):
+        return True
+    if lowered in {
+        "intro",
+        "verse_1",
+        "verse_2",
+        "pre_chorus",
+        "pre_chorus_2",
+        "chorus",
+        "chorus_final",
+        "bridge",
+        "outro",
+    }:
+        return True
+    return False
+
+
 def _unique(values: list[str]) -> list[str]:
     return unique_preserve_order([safe_text(value) for value in values if safe_text(value)])
 
@@ -487,6 +509,19 @@ def _section_goal_defaults(mode_id: str) -> dict[str, list[str]]:
     }
 
 
+def _delivery_from_function(function_name: str, section_name: str) -> str:
+    function_key = safe_text(function_name)
+    if function_key in {"breakdown", "collapse_release", "emotional_release", "final_release", "release"}:
+        return "release"
+    if function_key in {"glitch_ramp", "glitch_ramp_2", "tension_ramp"}:
+        return "lift"
+    if function_key in {"false_lullaby", "exposure"}:
+        return "break"
+    if "chorus" in safe_text(section_name):
+        return "release"
+    return "narrative"
+
+
 def _section_imagery_defaults(mode_id: str) -> dict[str, list[str]]:
     if mode_id == "dark_cute_breakdown":
         return {
@@ -848,11 +883,21 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
     goal_defaults = _section_goal_defaults(mode_id)
     imagery_defaults = _section_imagery_defaults(mode_id)
     cards: list[dict[str, Any]] = []
-    # Structural Fulfillment: 
-    # Ensure core sections are always present to avoid "truncated" songs.
-    # We include optional sections like Verse 2/Pre-Chorus if available, 
-    # but MANDATE Intro, Verse 1, Chorus, Bridge, Final Chorus, Outro.
+
+    def default_line_target(section_name: str) -> int:
+        if section_name == "chorus_final":
+            return 6
+        if section_name in {"intro", "pre_chorus", "pre_chorus_2", "bridge", "outro"}:
+            return 3
+        if "chorus" in section_name:
+            return 4
+        return 4
+
     mandated = {"intro", "verse_1", "chorus", "bridge", "chorus_final", "outro"}
+    if mode_id == "dark_cute_breakdown":
+        mandated |= {"pre_chorus", "verse_2", "pre_chorus_2"}
+    elif mode_id == "direct_emotional_pop":
+        mandated |= {"pre_chorus", "verse_2"}
     
     for section_name in preferred_order:
         items = grouped.get(section_name, [])
@@ -863,9 +908,9 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
         cleaned_imagery = imagery_defaults.get(section_name, ["Standard Tension Flow"])
         
         if items:
-            line_target = max(1, int(round(median(item["line_count"] for item in items))))
+            line_target = max(default_line_target(section_name), int(round(median(item["line_count"] for item in items))))
             goals = _top([item["narrative_job"] for item in items], 2)
-            if not goals:
+            if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
                 goals = goal_defaults.get(section_name, [section_name])
             phrase_energy_roles = _top([item["phrase_energy_role"] for item in items], 2)
             title_drop_roles = _top([item["title_drop_role"] for item in items], 2)
@@ -880,7 +925,7 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
                 cleaned_imagery = cleaned_terms
         else:
             # Fallback for mandated sections missing from anchors
-            line_target = 6 if "chorus" in section_name else 4
+            line_target = default_line_target(section_name)
             goals = goal_defaults.get(section_name, [section_name])
             phrase_energy_roles = []
             title_drop_roles = []
@@ -1321,19 +1366,27 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     ]
     clean_required_images = imagery[:3]
 
-    # Map vNext imagery if plan exists
-    vnext_imagery_map: dict[str, list[str]] = {}
+    # Map vNext structural cards if plan exists
+    vnext_card_map: dict[str, dict[str, Any]] = {}
     if vnext_plan:
         cards = vnext_plan.section_cards if hasattr(vnext_plan, "section_cards") else vnext_plan.get("section_cards", [])
         for vc in cards:
             s_name = vc.section if hasattr(vc, "section") else vc.get("section")
-            r_img = vc.required_imagery if hasattr(vc, "required_imagery") else vc.get("required_imagery", [])
-            if s_name and r_img:
-                vnext_imagery_map[s_name] = list(r_img)
+            if not s_name:
+                continue
+            vnext_card_map[s_name] = {
+                "function": vc.function if hasattr(vc, "function") else vc.get("function", ""),
+                "required_imagery": list(vc.required_imagery) if hasattr(vc, "required_imagery") else list(vc.get("required_imagery", [])),
+                "required_motifs": list(vc.required_motifs) if hasattr(vc, "required_motifs") else list(vc.get("required_motifs", [])),
+                "line_target": vc.line_target if hasattr(vc, "line_target") else vc.get("line_target", 0),
+                "cadence_target": vc.cadence_target if hasattr(vc, "cadence_target") else vc.get("cadence_target", ""),
+                "abstraction_ceiling": vc.abstraction_ceiling if hasattr(vc, "abstraction_ceiling") else vc.get("abstraction_ceiling", 0.0),
+            }
 
     normalized_cards: list[dict[str, Any]] = []
     for idx, card in enumerate(plan.get("section_cards", [])):
         s_name = safe_text(card.get("section"))
+        vnext_meta = vnext_card_map.get(s_name, {})
         goals = [
             safe_text(x)
             for x in card.get("narrative_goals", [])
@@ -1341,6 +1394,8 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             and not contains_bad_script(safe_text(x))
             and not looks_corrupted_text(safe_text(x))
         ]
+        if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
+            goals = list(_section_goal_defaults(mode).get(s_name, [s_name]))
         imagery_terms = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
         if not imagery_terms:
             imagery_terms = _rotating_take(imagery, 2, idx)
@@ -1348,33 +1403,46 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         section_motifs = _unique(imagery_terms + _rotating_take(motifs, 2, idx * 2))
         if not section_motifs:
             section_motifs = _rotating_take(motifs, 2, idx * 2)
+        vnext_required_motifs = _clean_demo_phrase_list(list(vnext_meta.get("required_motifs", [])), limit=4, max_len=12)
+        if vnext_required_motifs:
+            section_motifs = _unique(vnext_required_motifs + section_motifs)
         section_scene = imagery_terms[0] if imagery_terms else (motifs[(idx + 5) % len(motifs)] if motifs else "")
         if s_name == "chorus_final":
             section_motifs = _unique([fallback_hook] + section_motifs)
             if not section_scene and fallback_hook != "...":
                 section_scene = fallback_hook
-        required_imagery = _clean_demo_phrase_list(vnext_imagery_map.get(s_name, []), limit=4, max_len=12)
+        required_imagery = _clean_demo_phrase_list(list(vnext_meta.get("required_imagery", [])), limit=4, max_len=12)
         if not required_imagery:
             required_imagery = imagery_terms[:2]
+        function_name = safe_text(vnext_meta.get("function"), "release" if "chorus" in s_name else "narrative")
+        line_target = int(vnext_meta.get("line_target", 0) or card.get("line_target", 4) or 4)
+        cadence_target = safe_text(vnext_meta.get("cadence_target"), "medium")
+        abstraction_ceiling = float(vnext_meta.get("abstraction_ceiling", 0.18) or 0.18)
 
         normalized_cards.append(
             {
                 "section": s_name,
                 "canonical_section": s_name,
                 "goal": goals[0] if goals else s_name,
-                "line_target": int(card.get("line_target", 4) or 4),
+                "line_target": line_target,
                 "required_motifs": section_motifs,
                 "required_imagery": required_imagery,
                 "scene": section_scene,
                 "emotion_focus": emotion_terms or goals[:2],
                 "narrative_goals": goals,
                 "imagery_focus": imagery_terms,
-                "delivery": (
-                    "release"
+                "delivery": _delivery_from_function(function_name, s_name),
+                "function": function_name,
+                "cadence_target": cadence_target,
+                "abstraction_ceiling": abstraction_ceiling,
+                "title_drop_policy": (
+                    "primary"
                     if s_name == "chorus_final"
-                    else "lift"
-                    if "chorus" in s_name
-                    else "narrative"
+                    else "anchor"
+                    if s_name == "chorus"
+                    else "withhold"
+                    if "pre_chorus" in s_name or s_name == "bridge"
+                    else "sparse"
                 ),
                 "phrase_energy_roles": list(card.get("phrase_energy_roles", [])),
                 "title_drop_roles": list(card.get("title_drop_roles", [])),

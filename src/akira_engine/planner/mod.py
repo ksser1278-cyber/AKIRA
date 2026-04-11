@@ -32,6 +32,41 @@ class PlanResult:
     status: str = "pending"
 
 
+def _section_blueprint(mode_id: str) -> list[dict[str, Any]]:
+    if mode_id == "dark_cute_breakdown":
+        return [
+            {"section": "intro", "function": "setup", "line_target": 4, "cadence_target": "medium", "abstraction_ceiling": 0.20},
+            {"section": "verse_1", "function": "observation", "line_target": 4, "cadence_target": "tight", "abstraction_ceiling": 0.18},
+            {"section": "pre_chorus", "function": "glitch_ramp", "line_target": 3, "cadence_target": "tight", "abstraction_ceiling": 0.15},
+            {"section": "chorus", "function": "breakdown", "line_target": 4, "cadence_target": "percussive", "abstraction_ceiling": 0.12},
+            {"section": "verse_2", "function": "escalation", "line_target": 4, "cadence_target": "tight", "abstraction_ceiling": 0.16},
+            {"section": "pre_chorus_2", "function": "glitch_ramp_2", "line_target": 3, "cadence_target": "percussive", "abstraction_ceiling": 0.13},
+            {"section": "bridge", "function": "false_lullaby", "line_target": 3, "cadence_target": "broken", "abstraction_ceiling": 0.20},
+            {"section": "chorus_final", "function": "collapse_release", "line_target": 6, "cadence_target": "explosive", "abstraction_ceiling": 0.10},
+            {"section": "outro", "function": "aftertaste", "line_target": 3, "cadence_target": "cooldown", "abstraction_ceiling": 0.18},
+        ]
+    if mode_id == "direct_emotional_pop":
+        return [
+            {"section": "intro", "function": "setup", "line_target": 3, "cadence_target": "medium", "abstraction_ceiling": 0.22},
+            {"section": "verse_1", "function": "confession", "line_target": 4, "cadence_target": "flowing", "abstraction_ceiling": 0.20},
+            {"section": "pre_chorus", "function": "tension_ramp", "line_target": 3, "cadence_target": "lifting", "abstraction_ceiling": 0.18},
+            {"section": "chorus", "function": "emotional_release", "line_target": 4, "cadence_target": "open", "abstraction_ceiling": 0.14},
+            {"section": "verse_2", "function": "deepening", "line_target": 4, "cadence_target": "flowing", "abstraction_ceiling": 0.18},
+            {"section": "bridge", "function": "exposure", "line_target": 3, "cadence_target": "suspended", "abstraction_ceiling": 0.20},
+            {"section": "chorus_final", "function": "final_release", "line_target": 5, "cadence_target": "open", "abstraction_ceiling": 0.12},
+            {"section": "outro", "function": "afterglow", "line_target": 3, "cadence_target": "cooldown", "abstraction_ceiling": 0.20},
+        ]
+    return [
+        {"section": "intro", "function": "setup", "line_target": 3, "cadence_target": "medium", "abstraction_ceiling": 0.22},
+        {"section": "verse_1", "function": "observation", "line_target": 4, "cadence_target": "medium", "abstraction_ceiling": 0.20},
+        {"section": "pre_chorus", "function": "tension_ramp", "line_target": 3, "cadence_target": "tight", "abstraction_ceiling": 0.18},
+        {"section": "chorus", "function": "release", "line_target": 4, "cadence_target": "open", "abstraction_ceiling": 0.14},
+        {"section": "bridge", "function": "exposure", "line_target": 3, "cadence_target": "broken", "abstraction_ceiling": 0.20},
+        {"section": "chorus_final", "function": "final_release", "line_target": 5, "cadence_target": "open", "abstraction_ceiling": 0.12},
+        {"section": "outro", "function": "aftertaste", "line_target": 3, "cadence_target": "cooldown", "abstraction_ceiling": 0.20},
+    ]
+
+
 def _clean_terms(values: list[Any], fallback: list[str], *, limit: int = 6) -> list[str]:
     cleaned: list[str] = []
     for value in values:
@@ -118,20 +153,22 @@ def run_planner_stage(
 
     track_id = f"{artist_id}_{mode_id}_{title_seed or 'demo'}"
     imagery_bank = _get_sensory_imagery(mode_id, project_root)
-    sections = ["intro", "verse_1", "pre_chorus", "chorus", "bridge", "chorus_final", "outro"]
+    section_blueprint = _section_blueprint(mode_id)
 
     cards: list[SectionCard] = []
-    for section in sections:
+    for spec in section_blueprint:
+        section = spec["section"]
         focus = imagery_bank.get(section, ["鼓動", "残響"])
         cards.append(
             SectionCard(
                 section=section,
-                function="narrative" if "verse" in section else "release" if "chorus" in section else "setup",
+                function=str(spec["function"]),
                 required_motifs=list(focus[:2]),
                 imagery_focus=list(focus),
                 required_imagery=list(focus[:2]) if Policy.MANDATORY_SENSORY_ANCHORS else [],
-                line_target=4 if section not in {"chorus_final"} else 5,
-                abstraction_ceiling=0.15 if "chorus" in section else 0.25,
+                line_target=int(spec["line_target"]),
+                cadence_target=str(spec["cadence_target"]),
+                abstraction_ceiling=float(spec["abstraction_ceiling"]),
             )
         )
 
@@ -152,8 +189,9 @@ def run_planner_stage(
         motif_roster=motif_roster,
         hook_blueprint={
             "core_text": hook_core or "幻灯",
-            "hook_density": "medium",
+            "hook_density": "high" if mode_id == "dark_cute_breakdown" else "medium",
             "chorus_line_target": 4,
+            "repetition_pressure": "high" if mode_id == "dark_cute_breakdown" else "medium",
         },
         status="planned",
     )

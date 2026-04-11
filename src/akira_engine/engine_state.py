@@ -107,6 +107,16 @@ def _normalize_readiness(path: Path | None, payload: dict[str, Any]) -> dict[str
     return normalized
 
 
+def _normalize_bulk(path: Path | None, payload: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "path": path,
+        "bulk_seed_written": _as_int(payload.get("counts", {}).get("bulk_seed_written")),
+        "bulk_canonical_records": _as_int(payload.get("counts", {}).get("bulk_canonical_records")),
+        "bulk_core": _as_int(payload.get("counts", {}).get("bulk_core")),
+        "bulk_low_value_retained": _as_int(payload.get("counts", {}).get("bulk_low_value_retained")),
+    }
+
+
 def _readiness_score(item: dict[str, Any]) -> tuple[int, int, int, int, int, float]:
     path = item.get("path")
     generation_root = _safe_text(item.get("generation_root")).replace("/", "\\").lower()
@@ -123,6 +133,23 @@ def _readiness_score(item: dict[str, Any]) -> tuple[int, int, int, int, int, flo
         professional_target,
         prompt_ready,
         records,
+        modified,
+    )
+
+
+def _bulk_score(item: dict[str, Any]) -> tuple[int, int, int, int, float]:
+    path = item.get("path")
+    path_text = str(path).replace("/", "\\").lower() if path else ""
+    non_probe = int("probe" not in path_text)
+    canonical_records = _as_int(item.get("bulk_canonical_records"))
+    seed_written = _as_int(item.get("bulk_seed_written"))
+    core = _as_int(item.get("bulk_core"))
+    modified = path.stat().st_mtime if isinstance(path, Path) and path.exists() else 0.0
+    return (
+        non_probe,
+        canonical_records,
+        seed_written,
+        core,
         modified,
     )
 
@@ -167,6 +194,93 @@ def _select_authoritative_readiness(
     return authoritative_readiness_path, latest_raw_readiness_path
 
 
+def _select_authoritative_bulk(planning_root: Path) -> Path | None:
+    candidates = [
+        *[path for path in planning_root.glob("program_continuous_cycle_*.json") if path.is_file()],
+        *[path for path in planning_root.glob("program_continuous_sweep_*.json") if path.is_file()],
+    ]
+    if not candidates:
+        return None
+    normalized_candidates = [_normalize_bulk(path, _load_json(path)) for path in candidates]
+    normalized_candidates.sort(key=_bulk_score, reverse=True)
+    return normalized_candidates[0]["path"]
+
+
+def _count_jsonl_rows(path: Path | None) -> int:
+    if path is None or not path.exists():
+        return 0
+    count = 0
+    with path.open("r", encoding="utf-8", errors="ignore") as handle:
+        for _ in handle:
+            count += 1
+    return count
+
+
+def _build_dataset_scale(project_root: Path) -> dict[str, Any]:
+    intake_root = project_root / "datasets" / "_global" / "vocaloid_metadata_intake"
+    canonical_root = project_root / "datasets" / "_global" / "vocaloid_metadata_canonical"
+    global_queue_path = (
+        project_root
+        / "datasets"
+        / "training"
+        / "lyric_technique_acquisition_queue"
+        / "global_v1"
+        / "lyric_technique_acquisition_queue.jsonl"
+    )
+
+    bulk_manifest_paths = [path for path in intake_root.rglob("vocadb_bulk_seed_manifest.json") if path.is_file()]
+    bulk_manifest_count = len(bulk_manifest_paths)
+    max_start_offset = 0
+    max_total_count = 0
+    observed_page_sizes: set[int] = set()
+    max_offset_manifest_path = ""
+
+    for path in bulk_manifest_paths:
+        payload = _load_json(path)
+        start_offset = _as_int(payload.get("start_offset"))
+        if start_offset > max_start_offset:
+            max_start_offset = start_offset
+            max_offset_manifest_path = str(path)
+        page_size = _as_int(payload.get("page_size"))
+        if page_size > 0:
+            observed_page_sizes.add(page_size)
+        for page in payload.get("pages_scanned", []):
+            if isinstance(page, dict):
+                max_total_count = max(max_total_count, _as_int(page.get("total_count")))
+
+    canonical_manifest_paths = [path for path in canonical_root.rglob("canonical_manifest.json") if path.is_file()]
+    canonical_manifest_count = len(canonical_manifest_paths)
+    canonical_record_rows = 0
+    canonical_track_ids: set[str] = set()
+
+    for path in canonical_manifest_paths:
+        payload = _load_json(path)
+        canonical_record_rows += _as_int(payload.get("counts", {}).get("accepted_records"))
+        for record in payload.get("records", []):
+            if isinstance(record, dict):
+                track_id = _safe_text(record.get("track_id"))
+                if track_id:
+                    canonical_track_ids.add(track_id)
+
+    queue_rows = _count_jsonl_rows(global_queue_path)
+
+    return {
+        "source_scale": {
+            "bulk_manifest_count": bulk_manifest_count,
+            "bulk_catalog_max_start_offset": max_start_offset,
+            "bulk_catalog_total_count_upper_bound": max_total_count,
+            "observed_page_sizes": sorted(observed_page_sizes),
+            "max_offset_manifest_path": max_offset_manifest_path,
+        },
+        "materialized_corpus": {
+            "canonical_manifest_count": canonical_manifest_count,
+            "canonical_record_rows_total": canonical_record_rows,
+            "canonical_unique_track_ids": len(canonical_track_ids),
+            "global_queue_rows": queue_rows,
+        },
+    }
+
+
 def build_engine_state(project_root: Path) -> dict[str, Any]:
     project_root = project_root.resolve()
     planning_root = project_root / "reports" / "planning"
@@ -187,12 +301,7 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
         readiness_root,
         generation_profiles_root,
     )
-
-    latest_bulk_path = latest_program_cycle_path
-    if latest_program_sweep_path and (
-        latest_bulk_path is None or latest_program_sweep_path.stat().st_mtime > latest_bulk_path.stat().st_mtime
-    ):
-        latest_bulk_path = latest_program_sweep_path
+    latest_bulk_path = _select_authoritative_bulk(planning_root)
 
     baseline = _load_json(baseline_path)
     grounding = _load_json(grounding_path)
@@ -208,6 +317,7 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
         latest_raw_readiness_path,
         _load_json(latest_raw_readiness_path),
     )
+    dataset_scale = _build_dataset_scale(project_root)
 
     issues: list[dict[str, Any]] = []
 
@@ -324,6 +434,13 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
             "bulk_canonical_records_latest": int(latest_bulk.get("counts", {}).get("bulk_canonical_records", 0) or 0),
             "bulk_core_latest": int(latest_bulk.get("counts", {}).get("bulk_core", 0) or 0),
             "bulk_low_value_retained_latest": int(latest_bulk.get("counts", {}).get("bulk_low_value_retained", 0) or 0),
+            "source_bulk_manifest_count": int(dataset_scale.get("source_scale", {}).get("bulk_manifest_count", 0) or 0),
+            "source_bulk_catalog_max_start_offset": int(dataset_scale.get("source_scale", {}).get("bulk_catalog_max_start_offset", 0) or 0),
+            "source_bulk_catalog_total_count_upper_bound": int(dataset_scale.get("source_scale", {}).get("bulk_catalog_total_count_upper_bound", 0) or 0),
+            "materialized_canonical_manifest_count": int(dataset_scale.get("materialized_corpus", {}).get("canonical_manifest_count", 0) or 0),
+            "materialized_canonical_record_rows_total": int(dataset_scale.get("materialized_corpus", {}).get("canonical_record_rows_total", 0) or 0),
+            "materialized_canonical_unique_track_ids": int(dataset_scale.get("materialized_corpus", {}).get("canonical_unique_track_ids", 0) or 0),
+            "materialized_global_queue_rows": int(dataset_scale.get("materialized_corpus", {}).get("global_queue_rows", 0) or 0),
             "tier1_canonical_records": int(canonical_tier1.get("counts", {}).get("accepted_records", 0) or 0),
             "grounding_total_incoming": int(grounding.get("counts", {}).get("total_incoming", 0) or 0),
             "grounding_total_accepted": grounding_total_accepted,
@@ -341,6 +458,7 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
             "wiki_prompt_ready_tracks": int(wiki_manifest.get("counts", {}).get("prompt_ready_tracks", 0) or 0),
             "wiki_professional_target_tracks": int(wiki_manifest.get("counts", {}).get("professional_target_tracks", 0) or 0),
         },
+        "dataset_scale": dataset_scale,
         "professional_target_tracks": authoritative_readiness.get("professional_track_ids", []),
         "stale_or_conflicting_state": issues,
     }
@@ -350,6 +468,9 @@ def build_engine_state(project_root: Path) -> dict[str, Any]:
 def render_engine_state_markdown(payload: dict[str, Any]) -> str:
     counts = payload.get("counts", {})
     sources = payload.get("authoritative_sources", {})
+    dataset_scale = payload.get("dataset_scale", {})
+    source_scale = dataset_scale.get("source_scale", {})
+    materialized_corpus = dataset_scale.get("materialized_corpus", {})
     issues = payload.get("stale_or_conflicting_state", [])
     professional_track_ids = payload.get("professional_target_tracks", [])
 
@@ -363,6 +484,34 @@ def render_engine_state_markdown(payload: dict[str, Any]) -> str:
             "# AKIRA Engine State",
             "",
             f"- status level: `{_safe_text(payload.get('status_level'))}`",
+            f"- source-scale max catalog offset: `{source_scale.get('bulk_catalog_max_start_offset', 0)}`",
+            f"- source-scale total count upper bound: `{source_scale.get('bulk_catalog_total_count_upper_bound', 0)}`",
+            f"- materialized canonical unique tracks: `{materialized_corpus.get('canonical_unique_track_ids', 0)}`",
+            f"- materialized global queue rows: `{materialized_corpus.get('global_queue_rows', 0)}`",
+            f"- tier1 canonical: `{counts.get('tier1_canonical_records', 0)}`",
+            f"- grounding accepted: `{counts.get('grounding_total_accepted', 0)}`",
+            f"- readiness prompt-ready: `{counts.get('readiness_prompt_ready', 0)}`",
+            f"- readiness professional-target: `{counts.get('readiness_professional_target', 0)}`",
+            "",
+            "## Dataset Scale Layers",
+            "",
+            "### Source-Scale",
+            "",
+            f"- bulk manifests: `{source_scale.get('bulk_manifest_count', 0)}`",
+            f"- max catalog offset: `{source_scale.get('bulk_catalog_max_start_offset', 0)}`",
+            f"- observed catalog total-count upper bound: `{source_scale.get('bulk_catalog_total_count_upper_bound', 0)}`",
+            f"- observed page sizes: `{', '.join(str(item) for item in source_scale.get('observed_page_sizes', [])) or 'none'}`",
+            f"- max offset manifest: `{_safe_text(source_scale.get('max_offset_manifest_path'))}`",
+            "",
+            "### Materialized Corpus",
+            "",
+            f"- canonical manifests: `{materialized_corpus.get('canonical_manifest_count', 0)}`",
+            f"- canonical record rows: `{materialized_corpus.get('canonical_record_rows_total', 0)}`",
+            f"- canonical unique tracks: `{materialized_corpus.get('canonical_unique_track_ids', 0)}`",
+            f"- global queue rows: `{materialized_corpus.get('global_queue_rows', 0)}`",
+            "",
+            "### Promoted Quality Lane",
+            "",
             f"- tier1 canonical: `{counts.get('tier1_canonical_records', 0)}`",
             f"- grounding accepted: `{counts.get('grounding_total_accepted', 0)}`",
             f"- grounding needs patch: `{counts.get('grounding_total_needs_patch', 0)}`",
