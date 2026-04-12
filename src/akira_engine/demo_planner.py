@@ -19,7 +19,7 @@ from .lyric_utils import (
     safe_text,
     extract_japanese_lexical_atoms,
 )
-from .lexical_family_bank import is_cliche_term
+from .lexical_family_bank import classify_term_family, is_cliche_term
 from .section_evidence_bank import build_section_evidence_bank
 from .songwriter_io import (
     candidate_content_roots,
@@ -1617,6 +1617,56 @@ def _filter_blocked_terms(values: list[str], blocked_terms: list[str], *, limit:
     ][:limit]
 
 
+def _prune_cross_section_motifs(
+    cards: list[dict[str, Any]],
+    *,
+    anchor_hook: str,
+) -> list[dict[str, Any]]:
+    motif_counts = Counter(
+        safe_text(term)
+        for card in cards
+        for term in card.get("required_motifs", [])
+        if safe_text(term)
+    )
+    repeat_threshold = max(4, len(cards) // 2)
+    pruned_cards: list[dict[str, Any]] = []
+    for card in cards:
+        required_imagery = [safe_text(value) for value in card.get("required_imagery", []) if safe_text(value)]
+        imagery_focus = [safe_text(value) for value in card.get("imagery_focus", []) if safe_text(value)]
+        scene = safe_text(card.get("scene"))
+        role_terms = set(required_imagery + imagery_focus + ([scene] if scene else []))
+        role_families = {
+            family
+            for value in role_terms
+            for family in [classify_term_family(value)]
+            if family
+        }
+
+        kept_motifs: list[str] = []
+        for term in card.get("required_motifs", []):
+            text = safe_text(term)
+            if not text:
+                continue
+            if text == anchor_hook:
+                kept_motifs.append(text)
+                continue
+            family = classify_term_family(text)
+            role_grounded = text in role_terms or (family and family in role_families)
+            if motif_counts[text] >= repeat_threshold and not role_grounded:
+                continue
+            kept_motifs.append(text)
+
+        if not kept_motifs:
+            kept_motifs = required_imagery[:2] + imagery_focus[:2]
+            if scene:
+                kept_motifs.append(scene)
+
+        pruned = dict(card)
+        pruned["required_motifs"] = _unique(kept_motifs)[:8]
+        pruned_cards.append(pruned)
+    return pruned_cards
+
+
 def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None = None) -> dict[str, Any]:
     mode = safe_text(plan.get("mode_id"))
     artist_id = safe_text(plan.get("artist_id"))
@@ -1824,6 +1874,10 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         normalized_cards=normalized_cards,
         fallback_hook=provisional_hook,
     )
+    normalized_cards = _prune_cross_section_motifs(
+        normalized_cards,
+        anchor_hook=fallback_hook,
+    )
     runtime_evidence_track_ids = _unique(
         [
             safe_text(track_id)
@@ -1844,6 +1898,14 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             card["required_motifs"] = _unique([fallback_hook] + list(card.get("required_motifs", [])))
         if section_name == "chorus_final":
             card["scene"] = safe_text(card.get("scene")) or fallback_hook
+    normalized_motif_roster = _unique(
+        [
+            safe_text(term)
+            for card in normalized_cards
+            for term in card.get("required_motifs", [])
+            if safe_text(term)
+        ]
+    )
     hook_density = safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium")
     title_ignition_style = safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct")
     sanitized_demo_plan = {
@@ -1865,7 +1927,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         "motif_roster": [
             {
                 "motif_id": "seed_motifs",
-                "motifs": motifs[:8],
+                "motifs": normalized_motif_roster[:8] or motifs[:8],
             }
         ],
         "hook_blueprint": {
