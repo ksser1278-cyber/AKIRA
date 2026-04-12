@@ -22,6 +22,77 @@ def _unique(values: list[str]) -> list[str]:
     return out
 
 
+def _resolve_mode_support_audit_path(project_root: Path, mode_id: str) -> Path | None:
+    clean_mode_id = str(mode_id or "").strip()
+    if not clean_mode_id:
+        return None
+    for content_root in candidate_content_roots(project_root):
+        candidate = (
+            content_root
+            / "reports"
+            / "quality"
+            / "mode_support_audit"
+            / f"{clean_mode_id}_mode_support_audit.json"
+        )
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def _resolve_content_path(project_root: Path, raw_path: str) -> Path:
+    path = Path(str(raw_path or "").strip())
+    if path.exists():
+        return path
+
+    relative_path: Path | None = None
+    candidate_roots = candidate_content_roots(project_root)
+    for root in candidate_roots:
+        try:
+            relative_path = path.relative_to(root)
+            break
+        except ValueError:
+            if root.name in path.parts:
+                index = path.parts.index(root.name)
+                if index + 1 < len(path.parts):
+                    relative_path = Path(*path.parts[index + 1 :])
+                    break
+
+    if relative_path:
+        for content_root in candidate_roots:
+            candidate = content_root / relative_path
+            if candidate.exists():
+                return candidate
+    return path
+
+
+def load_mode_support_records(
+    project_root: Path,
+    mode_id: str,
+    *,
+    current_track_id: str = "",
+    minimum_grades: tuple[str, ...] = ("gold", "usable"),
+    limit: int = 3,
+) -> list[dict[str, Any]]:
+    audit_path = _resolve_mode_support_audit_path(project_root, mode_id)
+    if not audit_path or not audit_path.exists():
+        return []
+
+    audit_payload = _load_json(audit_path)
+    selected_records: list[dict[str, Any]] = []
+    for item in audit_payload.get("records", []):
+        grade = str(item.get("grade", "")).strip().lower()
+        path = _resolve_content_path(project_root, str(item.get("path", "")).strip())
+        track_id = str(item.get("track_id", "")).strip()
+        if grade not in minimum_grades or not path.exists():
+            continue
+        if current_track_id and track_id == current_track_id:
+            continue
+        selected_records.append(_load_json(path))
+        if len(selected_records) >= limit:
+            break
+    return selected_records
+
+
 def load_mode_support_context(
     project_root: Path,
     mode_id: str,
@@ -34,35 +105,13 @@ def load_mode_support_context(
     if not clean_mode_id:
         return {"available": False, "mode_id": clean_mode_id, "records": []}
 
-    audit_path = None
-    for content_root in candidate_content_roots(project_root):
-        candidate = (
-            content_root
-            / "reports"
-            / "quality"
-            / "mode_support_audit"
-            / f"{clean_mode_id}_mode_support_audit.json"
-        )
-        if candidate.exists():
-            audit_path = candidate
-            break
-    if not audit_path or not audit_path.exists():
-        return {"available": False, "mode_id": clean_mode_id, "records": []}
-
-    audit_payload = _load_json(audit_path)
-    selected_records: list[dict[str, Any]] = []
-    for item in audit_payload.get("records", []):
-        grade = str(item.get("grade", "")).strip().lower()
-        path = Path(str(item.get("path", "")).strip())
-        track_id = str(item.get("track_id", "")).strip()
-        if grade not in minimum_grades or not path.exists():
-            continue
-        if current_track_id and track_id == current_track_id:
-            continue
-        selected_records.append(_load_json(path))
-        if len(selected_records) >= limit:
-            break
-
+    selected_records = load_mode_support_records(
+        project_root,
+        clean_mode_id,
+        current_track_id=current_track_id,
+        minimum_grades=minimum_grades,
+        limit=limit,
+    )
     if not selected_records:
         return {"available": False, "mode_id": clean_mode_id, "records": []}
 

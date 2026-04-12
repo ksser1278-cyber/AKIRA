@@ -8,8 +8,9 @@ from pathlib import Path
 from statistics import median
 from typing import Any
 
+from .composition_frame import build_composition_frame
 from .conditioning_brief_dataset import canonical_section
-from .mode_support_runtime import load_mode_support_context
+from .mode_support_runtime import load_mode_support_context, load_mode_support_records
 from .lyric_utils import (
     unique_preserve_order,
     contains_japanese,
@@ -63,19 +64,7 @@ def _is_weak_narrative_goal(value: str) -> bool:
     }:
         return True
     if not contains_japanese(text):
-        generic_english_prefixes = (
-            "sets the ",
-            "standard ",
-            "drives the ",
-            "explosive delivery",
-            "highest energy state",
-            "subverts expectations",
-            "introduces ",
-            "keeps the ",
-            "final release",
-        )
-        if lowered.startswith(generic_english_prefixes):
-            return True
+        return True
     return False
 
 
@@ -91,6 +80,8 @@ def _clean_demo_terms(values: list[str], limit: int) -> list[str]:
         text = safe_text(value)
         if not text:
             continue
+        if text in _LOW_VALUE_RUNTIME_TERMS:
+            continue
         if not _is_usable_runtime_atom(text, max_len=12):
             continue
         cleaned.append(text)
@@ -102,6 +93,8 @@ def _clean_demo_terms(values: list[str], limit: int) -> list[str]:
 def _clean_demo_phrase(value: Any, *, max_len: int = 24) -> str:
     text = safe_text(value)
     if not text:
+        return ""
+    if text in _LOW_VALUE_RUNTIME_TERMS:
         return ""
     if not _is_clean_japanese_surface(text):
         return ""
@@ -169,6 +162,11 @@ _LOW_VALUE_RUNTIME_TERMS = {
     "全部",
     "あと",
     "少し",
+    "平日",
+    "休日",
+    "連日",
+    "粗末",
+    "毎日",
 }
 
 
@@ -1066,8 +1064,7 @@ def _derive_hook_blueprint(records: list[dict[str, Any]], mode_support_context: 
     }
 
 
-def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[dict[str, Any]]:
-    evidence_bank = build_section_evidence_bank(records, mode_id=mode_id)
+def _derive_section_cards_from_bank(evidence_bank: dict[str, Any], mode_id: str) -> list[dict[str, Any]]:
     section_evidence = evidence_bank.get("sections", {})
     preferred_order = [
         "intro",
@@ -1145,6 +1142,11 @@ def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[d
             }
         )
     return cards
+
+
+def _derive_section_cards(records: list[dict[str, Any]], mode_id: str) -> list[dict[str, Any]]:
+    evidence_bank = build_section_evidence_bank(records, mode_id=mode_id)
+    return _derive_section_cards_from_bank(evidence_bank, mode_id)
 
 
 def _derive_leakage_guardrails(
@@ -1337,6 +1339,18 @@ def build_demo_plan(
         minimum_grades=("gold", "usable"),
         limit=4,
     )
+    mode_support_records = load_mode_support_records(
+        project_root,
+        effective_mode_id,
+        current_track_id="",
+        minimum_grades=("gold", "usable"),
+        limit=4,
+    )
+    composition_frame = build_composition_frame(
+        artist_records=anchor_records + expansion_records,
+        mode_support_records=mode_support_records,
+        mode_id=effective_mode_id,
+    )
 
     artist_names = _unique(
         [safe_text(record.get("track_identity", {}).get("artist_name")) for record in anchor_records]
@@ -1359,6 +1373,11 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("imagery_anchors", [])),
+        limit=12,
+        max_len=12,
+    )
+    imagery_anchors = _clean_demo_phrase_list(
+        imagery_anchors + list((composition_frame.get("merged_bank") or {}).get("global_imagery", [])),
         limit=12,
         max_len=12,
     )
@@ -1396,12 +1415,12 @@ def build_demo_plan(
     )
 
     title_patterns = _derive_title_patterns(anchor_records + expansion_records)
-    section_evidence_bank = build_section_evidence_bank(anchor_records + expansion_records, mode_id=effective_mode_id)
+    section_evidence_bank = composition_frame.get("merged_bank", {})
     hook_blueprint = _derive_hook_blueprint(anchor_records + expansion_records, mode_support_context)
     hook_blueprint.update(section_evidence_bank.get("hook_blueprint", {}))
     section_cards = [
         _sanitize_section_card(card)
-        for card in _derive_section_cards(anchor_records + expansion_records, effective_mode_id)
+        for card in _derive_section_cards_from_bank(section_evidence_bank, effective_mode_id)
     ]
     leakage_guardrails = _derive_leakage_guardrails(
         artist_id,
@@ -1418,7 +1437,8 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("motif_atoms", []))
-        + list(mode_support_context.get("scene_atoms", [])),
+        + list(mode_support_context.get("scene_atoms", []))
+        + list((composition_frame.get("merged_bank") or {}).get("global_motifs", [])),
         limit=12,
         max_len=12,
     )
@@ -1444,6 +1464,15 @@ def build_demo_plan(
             "mode_support_track_ids": list(mode_support_context.get("track_ids", [])),
             "mode_support_artists": list(mode_support_context.get("artist_ids", [])),
         },
+        "composition_frame": {
+            "planning_basis": composition_frame.get("planning_basis"),
+            "artist_record_count": composition_frame.get("artist_record_count", 0),
+            "mode_record_count": composition_frame.get("mode_record_count", 0),
+            "artist_track_ids": list(composition_frame.get("artist_track_ids", [])),
+            "mode_track_ids": list(composition_frame.get("mode_track_ids", [])),
+            "merged_track_ids": list(composition_frame.get("merged_track_ids", [])),
+            "foreign_title_terms_filtered": list(composition_frame.get("foreign_title_terms_filtered", [])),
+        },
         "composite_style": {
             "theme_axes": theme_axes,
             "imagery_anchors": imagery_anchors,
@@ -1463,9 +1492,10 @@ def build_demo_plan(
         "mode_support_context": mode_support_context,
         "leakage_guardrails": leakage_guardrails,
         "generation_notes": [
+            "Use the merged corpus frame as the planning base; artist anchors only bias the result.",
             "Use artist-level common evidence, not one anchor track's exact hook lines.",
             "Let title-binding come from title pattern and hook density, not from direct title reuse.",
-            "Use mode support only as secondary evidence; anchor leakage is a higher-priority risk.",
+            "Mode-wide approved corpus is allowed to fill section evidence gaps before template defaults.",
             "Prefer archetype-safe originality zones over any single-track imitation.",
         ],
     }
@@ -1509,6 +1539,12 @@ def render_demo_plan_report(plan: dict[str, Any]) -> str:
             f"- Anchors: {', '.join(plan['evidence']['anchor_track_ids'])}",
             f"- Producer expansion: {', '.join(plan['evidence']['producer_expansion_track_ids']) or 'none'}",
             f"- Mode support: {', '.join(plan['evidence']['mode_support_track_ids']) or 'none'}",
+            "",
+            "## Composition Frame",
+            f"- Basis: {safe_text((plan.get('composition_frame') or {}).get('planning_basis'), 'unknown')}",
+            f"- Artist records: {int((plan.get('composition_frame') or {}).get('artist_record_count', 0) or 0)}",
+            f"- Mode records: {int((plan.get('composition_frame') or {}).get('mode_record_count', 0) or 0)}",
+            f"- Merged tracks: {', '.join((plan.get('composition_frame') or {}).get('merged_track_ids', [])) or 'none'}",
             "",
             "## Composite Style",
             f"- Theme axes: {', '.join(plan['composite_style']['theme_axes'])}",
@@ -1558,11 +1594,36 @@ def _rotating_take(items: list[str], count: int, offset: int) -> list[str]:
     return out
 
 
+def _contains_blocked_term(value: str, blocked_terms: list[str]) -> bool:
+    text = safe_text(value)
+    if not text:
+        return False
+    for blocked in blocked_terms:
+        marker = safe_text(blocked)
+        if not marker:
+            continue
+        if text == marker:
+            return True
+        if text in marker or marker in text:
+            return True
+    return False
+
+
+def _filter_blocked_terms(values: list[str], blocked_terms: list[str], *, limit: int) -> list[str]:
+    return [
+        value
+        for value in _clean_demo_terms(values, limit=limit * 3)
+        if not _contains_blocked_term(value, blocked_terms)
+    ][:limit]
+
+
 def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None = None) -> dict[str, Any]:
     mode = safe_text(plan.get("mode_id"))
     artist_id = safe_text(plan.get("artist_id"))
     title_seed = safe_text(plan.get("title_seed"))
     composite = plan.get("composite_style", {}) or {}
+    composition_frame = plan.get("composition_frame", {}) or {}
+    foreign_title_terms = list(composition_frame.get("foreign_title_terms_filtered", []))
     leakage = plan.get("leakage_guardrails", {}) or {}
     artist_profile = load_artist_profile(artist_id) or {}
     clean_theme_axes = _unique(
@@ -1593,8 +1654,8 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         ]
     )[:6]
 
-    seed_phrases = _clean_demo_terms(composite.get("seed_phrases", []), limit=12)
-    imagery = _clean_demo_terms(composite.get("imagery_anchors", []), limit=12)
+    seed_phrases = _filter_blocked_terms(composite.get("seed_phrases", []), foreign_title_terms, limit=12)
+    imagery = _filter_blocked_terms(composite.get("imagery_anchors", []), foreign_title_terms, limit=12)
     preferred_conditioning_ids = _unique(
         list((plan.get("evidence", {}) or {}).get("anchor_track_ids", []))
         + list((plan.get("section_evidence", {}) or {}).get("selected_track_ids", []))
@@ -1610,6 +1671,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         motifs = list(conditioning_atoms.get("motifs", []))
     if not motifs:
         motifs = _MODE_HOOK_FALLBACKS.get(mode, _MODE_HOOK_FALLBACKS["default"])[:3]
+    motifs = [value for value in motifs if not _contains_blocked_term(value, foreign_title_terms)]
 
     provisional_hook = _derive_runtime_hook(
         mode=mode,
@@ -1666,14 +1728,33 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         ]
         if vnext_goals:
             goals = _unique(vnext_goals + goals)
-        imagery_terms = _clean_demo_phrase_list(list(card.get("imagery_focus", [])), limit=4, max_len=12)
+        imagery_terms = _clean_demo_phrase_list(
+            [
+                value
+                for value in list(card.get("imagery_focus", []))
+                if not _contains_blocked_term(safe_text(value), foreign_title_terms)
+            ],
+            limit=4,
+            max_len=12,
+        )
         if not imagery_terms:
             imagery_terms = _rotating_take(imagery, 2, idx)
         emotion_terms = _clean_demo_phrase_list(goals, limit=2, max_len=16)
         section_motifs = _unique(imagery_terms + _rotating_take(motifs, 2, idx * 2))
         if not section_motifs:
             section_motifs = _rotating_take(motifs, 2, idx * 2)
-        vnext_required_motifs = _clean_demo_phrase_list(list(vnext_meta.get("required_motifs", [])), limit=4, max_len=12)
+        section_motifs = [
+            value for value in section_motifs if not _contains_blocked_term(value, foreign_title_terms)
+        ]
+        vnext_required_motifs = _clean_demo_phrase_list(
+            [
+                value
+                for value in list(vnext_meta.get("required_motifs", []))
+                if not _contains_blocked_term(safe_text(value), foreign_title_terms)
+            ],
+            limit=4,
+            max_len=12,
+        )
         if vnext_required_motifs:
             section_motifs = _unique(vnext_required_motifs + section_motifs)
         section_scene = imagery_terms[0] if imagery_terms else (motifs[(idx + 5) % len(motifs)] if motifs else "")
@@ -1681,7 +1762,15 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             section_motifs = _unique([provisional_hook] + section_motifs)
             if not section_scene and provisional_hook != "...":
                 section_scene = provisional_hook
-        required_imagery = _clean_demo_phrase_list(list(vnext_meta.get("required_imagery", [])), limit=4, max_len=12)
+        required_imagery = _clean_demo_phrase_list(
+            [
+                value
+                for value in list(vnext_meta.get("required_imagery", []))
+                if not _contains_blocked_term(safe_text(value), foreign_title_terms)
+            ],
+            limit=4,
+            max_len=12,
+        )
         if not required_imagery:
             required_imagery = imagery_terms[:2]
         function_name = safe_text(vnext_meta.get("function"), "release" if "chorus" in s_name else "narrative")
@@ -1770,7 +1859,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         "section_cards": normalized_cards,
     }
     return {
-        **plan,
+        **sanitized_demo_plan,
         "track_id": track_id,
         "primary_mode": mode,
         "motif_roster": [
@@ -1780,7 +1869,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             }
         ],
         "hook_blueprint": {
-            **(plan.get("hook_blueprint", {}) or {}),
+            **(sanitized_demo_plan.get("hook_blueprint", {}) or {}),
             "core_text": fallback_hook,
             "hook_density": hook_density,
         },

@@ -41,7 +41,17 @@ def project_root() -> Path:
 def candidate_content_roots(root: Path | None = None) -> list[Path]:
     base_root = root or project_root()
     roots: list[Path] = [base_root]
+    if (
+        base_root.name == "archive"
+        and len(base_root.parents) >= 3
+        and base_root.parent.parent.name == "_quarantine"
+    ):
+        repo_root = base_root.parents[2]
+        if repo_root not in roots:
+            roots.append(repo_root)
     quarantine_root = base_root / "_quarantine"
+    if not quarantine_root.exists() and len(roots) > 1:
+        quarantine_root = roots[1] / "_quarantine"
     if quarantine_root.exists():
         archives = sorted(
             (path / "archive" for path in quarantine_root.iterdir() if (path / "archive").is_dir()),

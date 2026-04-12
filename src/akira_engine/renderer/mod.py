@@ -171,6 +171,24 @@ def _section_alternate_terms(card: dict[str, Any], hook: str) -> list[str]:
     return _clean_terms(values, limit=12)
 
 
+def _section_support_terms(card: dict[str, Any], hook: str) -> list[str]:
+    banned = {
+        safe_text(term)
+        for term in list(card.get("required_imagery", []))[:2]
+    }
+    values = (
+        list(card.get("imagery_focus", []))
+        + [card.get("scene", "")]
+        + list(card.get("required_motifs", []))
+        + [hook]
+    )
+    return [
+        term
+        for term in _clean_terms(values, limit=12)
+        if safe_text(term) not in banned
+    ]
+
+
 def _pick_section_distinct_term(primary: str, *, blocked: list[str], alternates: list[str], allow_cliche: bool = False) -> str:
     root = safe_text(primary)
     candidates = [root] + alternates
@@ -380,7 +398,7 @@ def _dense_verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags:
         support = _pick_section_distinct_term(
             _distinct_term(support, c, d, hook),
             blocked=[a, b, c, d],
-            alternates=_section_alternate_terms(card, hook),
+            alternates=_section_support_terms(card, hook),
             allow_cliche=False,
         )
     verb = "増えていく" if not second_half else "剥がれていく"
@@ -443,23 +461,43 @@ def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], f
         c = _de_cliche_term(c, d, a, b)
     collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
     closing = f"{hook}まであと少しで{collapse}" if safe_text(card.get("title_drop_policy")) != "withhold" and second_half else f"{d}まであと少しで{collapse}"
-    packs = [
+    packs = (
         [
-            f"{a}が点滅して心臓の位置ごとずらされる",
-            f"{b}の隙間で{c}だけ先に暴れ出す",
-            closing,
-        ],
-        [
-            f"{a}が脈の裏側で静かに裂け続けていく",
-            f"{b}の継ぎ目から{c}だけ先にこぼれ始める",
-            closing,
-        ],
-        [
-            f"{a}に触れるたび呼吸の拍が壊れ始める",
-            f"{b}の継ぎ目で{c}だけやけに近づきすぎる",
-            closing,
-        ],
-    ]
+            [
+                f"{a}が点滅して心臓の位置ごとずらされる",
+                f"{b}の隙間で{c}だけ先に膨れ上がる",
+                closing,
+            ],
+            [
+                f"{a}が脈の裏側で静かに裂け続けていく",
+                f"{b}の継ぎ目から{c}だけ先に滲み始める",
+                closing,
+            ],
+            [
+                f"{a}に触れるたび呼吸の拍が壊れ始める",
+                f"{b}の継ぎ目で{c}だけやけに明滅しすぎる",
+                closing,
+            ],
+        ]
+        if not second_half
+        else [
+            [
+                f"{a}が点滅して胸骨の内側を急かし続ける",
+                f"{b}の隙間で{c}だけ先に痙攣し始める",
+                closing,
+            ],
+            [
+                f"{a}が脈の裏側で静かに裂け続けていく",
+                f"{b}の継ぎ目から{c}だけ先に逆流し始める",
+                closing,
+            ],
+            [
+                f"{a}に触れるたび呼吸の拍が壊れ始める",
+                f"{b}の継ぎ目で{c}だけ喉元までせり上がる",
+                closing,
+            ],
+        ]
+    )
     return packs[variant % len(packs)]
 
 
@@ -529,24 +567,24 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
     packs = [
         [
             *mentions,
-            f"{a}の温度で首を{attack}",
-            f"{b}だけならまだ生ぬるい",
-            f"{c}ごと抱えてこちらへ落ちてこい" if final else last,
-            f"{d}の骨までひっくり返していけ" if final else last,
+            f"{a}の温度で首筋まで{attack}",
+            f"{b}だけならまだ傷には浅すぎる",
+            f"{c}ごと抱えて笑顔のまま沈んでいけ",
+            f"{d}の膜まで噛み裂いてみせて",
         ],
         [
             *mentions,
-            f"{a}の破片で耳の奥まで染め上げて",
-            f"{b}だけではまだ何も足りない",
-            f"{c}を笑顔のままで飲み込んで",
-            f"{hook}を傷口へまっすぐ結びつけて" if final else f"{d}ごと噛んで踊ってみせて",
+            f"{a}の破片を奥歯の裏まで押し込んで",
+            f"{b}だけではまだ傷口が黙らない",
+            f"{c}を笑顔のままで飼い慣らすな",
+            f"{d}ごと喉の奥へ吊り上げて",
         ],
         [
             *mentions,
-            f"{a}の残響で胸骨まで揺らして",
-            f"{b}の甘さを最後まで誤魔化すな",
-            f"{c}だけをここで逃がすな",
-            f"{hook}の色で全部塗りつぶして" if final else f"{d}の毒まできれいに見せて",
+            f"{a}の残響で胸骨の芯まで揺らして",
+            f"{b}の甘さをここで言い訳にするな",
+            f"{c}だけをやさしく逃がすな",
+            f"{d}の毒まできれいな顔で見せつけろ",
         ],
     ]
     lines = packs[variant % len(packs)]
