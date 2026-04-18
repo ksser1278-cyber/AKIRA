@@ -53,6 +53,30 @@ _WEAK_AUDIT_SUFFIXES = (
 )
 
 
+_LOW_SIGNAL_AUDIT_TERMS = {
+    "方",
+    "感謝",
+    "恩",
+    "一生",
+    "子供",
+    "想い",
+    "秘め",
+    "愛言葉",
+    "聴いてくれ",
+    "世話になって",
+    "誰と",
+    "頂戴",
+    "なくても",
+    "僕は僕を見ない",
+    "愛されない",
+    "全部あげる",
+    "知りたい",
+    "好き",
+    "大好き",
+    "お別れ",
+}
+
+
 def _clean_term(value: Any) -> str:
     text = str(value or "").strip()
     if not text:
@@ -67,6 +91,8 @@ def _clean_term(value: Any) -> str:
     if len(compact) < 2:
         return ""
     if compact in _WEAK_AUDIT_TOKENS:
+        return ""
+    if compact in _LOW_SIGNAL_AUDIT_TERMS:
         return ""
     if compact.endswith(_WEAK_AUDIT_SUFFIXES):
         return ""
@@ -105,10 +131,20 @@ def run_pre_audit_stage(
         diagnostics.append(f"Identity mismatch: Plan artist '{plan_artist}' vs Conditioning artist '{cond_artist}'")
 
     # 2. Imagery Coverage
-    required_imagery = getattr(conditioning, "imagery_anchors", [])
-    if not required_imagery and hasattr(conditioning, "prompt_conditioning"):
-        required_imagery = conditioning.prompt_conditioning.get("imagery_anchors", [])
-    required_imagery = _clean_terms(required_imagery if isinstance(required_imagery, list) else [])
+    plan_required_imagery: list[Any] = []
+    for card in getattr(plan, "section_cards", []):
+        card_dict = card.__dict__ if hasattr(card, "__dict__") else card
+        plan_required_imagery.extend(card_dict.get("required_imagery", []))
+        plan_required_imagery.extend(card_dict.get("imagery_focus", []))
+        scene = card_dict.get("scene")
+        if scene:
+            plan_required_imagery.append(scene)
+    required_imagery = _clean_terms(plan_required_imagery)
+    if not required_imagery:
+        required_imagery = getattr(conditioning, "imagery_anchors", [])
+        if not required_imagery and hasattr(conditioning, "prompt_conditioning"):
+            required_imagery = conditioning.prompt_conditioning.get("imagery_anchors", [])
+        required_imagery = _clean_terms(required_imagery if isinstance(required_imagery, list) else [])
     
     plan_atoms = set()
     for card in getattr(plan, "section_cards", []):

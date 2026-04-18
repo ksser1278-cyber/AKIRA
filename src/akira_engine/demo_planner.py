@@ -171,6 +171,30 @@ _LOW_VALUE_RUNTIME_TERMS = {
 }
 
 
+_LOW_SIGNAL_PLANNER_TERMS = {
+    "方",
+    "感謝",
+    "恩",
+    "一生",
+    "子供",
+    "想い",
+    "秘め",
+    "愛言葉",
+    "聴いてくれ",
+    "世話になって",
+    "誰と",
+    "頂戴",
+    "なくても",
+    "僕は僕を見ない",
+    "愛されない",
+    "全部あげる",
+    "知りたい",
+    "好き",
+    "大好き",
+    "お別れ",
+}
+
+
 def _is_clean_japanese_surface(value: Any) -> bool:
     text = safe_text(value)
     if not text:
@@ -215,6 +239,55 @@ def _is_strong_runtime_hook(value: Any) -> bool:
     if re.fullmatch(r"[\u3040-\u309f]+", compact):
         return len(compact) >= 4
     return True
+
+
+def _term_overlaps_lexicon(term: str, lexicon: set[str]) -> bool:
+    text = safe_text(term)
+    if not text or not lexicon:
+        return False
+    for existing in lexicon:
+        marker = safe_text(existing)
+        if not marker:
+            continue
+        if text == marker or text in marker or marker in text:
+            return True
+    return False
+
+
+def _filter_artist_biased_terms(
+    values: list[Any],
+    *,
+    blocked_terms: list[str],
+    artist_lexicon: set[str],
+    artist_families: set[str],
+    limit: int,
+    max_len: int = 12,
+) -> list[str]:
+    preferred: list[str] = []
+    fallback: list[str] = []
+    for text in _clean_demo_phrase_list(list(values or []), limit=limit * 4, max_len=max_len):
+        if text in _LOW_SIGNAL_PLANNER_TERMS:
+            continue
+        if _contains_blocked_term(text, blocked_terms):
+            continue
+        family = classify_term_family(text)
+        if artist_lexicon and (_term_overlaps_lexicon(text, artist_lexicon) or (family and family in artist_families)):
+            if text not in preferred:
+                preferred.append(text)
+            continue
+        if text not in fallback:
+            fallback.append(text)
+    return _unique(preferred + fallback)[:limit]
+
+
+def _prune_low_signal_planner_terms(values: list[Any], *, limit: int | None = None) -> list[str]:
+    pruned = [
+        safe_text(value)
+        for value in values
+        if safe_text(value) and safe_text(value) not in _LOW_SIGNAL_PLANNER_TERMS
+    ]
+    unique = _unique(pruned)
+    return unique[:limit] if limit is not None else unique
 
 
 def _derive_runtime_hook(
@@ -1539,6 +1612,19 @@ def build_demo_plan(
         mode_id=effective_mode_id,
         behavior_priors=behavior_priors,
     )
+    foreign_title_terms = list(composition_frame.get("foreign_title_terms_filtered", []))
+    artist_lexicon = {
+        safe_text(value)
+        for value in list(composition_frame.get("artist_global_motifs", []))
+        + list(composition_frame.get("artist_global_imagery", []))
+        if safe_text(value)
+    }
+    artist_families = {
+        family
+        for value in artist_lexicon
+        for family in [classify_term_family(value)]
+        if family
+    }
 
     artist_names = _unique(
         [safe_text(record.get("track_identity", {}).get("artist_name")) for record in anchor_records]
@@ -1553,7 +1639,7 @@ def build_demo_plan(
         + list(mode_support_context.get("theme_axes", [])),
         10,
     )
-    imagery_anchors = _clean_demo_phrase_list(
+    imagery_anchors = _filter_artist_biased_terms(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -1561,11 +1647,17 @@ def build_demo_plan(
             if value
         ]
         + list(mode_support_context.get("imagery_anchors", [])),
+        blocked_terms=foreign_title_terms,
+        artist_lexicon=artist_lexicon,
+        artist_families=artist_families,
         limit=12,
         max_len=12,
     )
-    imagery_anchors = _clean_demo_phrase_list(
+    imagery_anchors = _filter_artist_biased_terms(
         imagery_anchors + list((composition_frame.get("merged_bank") or {}).get("global_imagery", [])),
+        blocked_terms=foreign_title_terms,
+        artist_lexicon=artist_lexicon,
+        artist_families=artist_families,
         limit=12,
         max_len=12,
     )
@@ -1606,6 +1698,23 @@ def build_demo_plan(
     section_evidence_bank = composition_frame.get("merged_bank", {})
     hook_blueprint = _derive_hook_blueprint(anchor_records + expansion_records, mode_support_context)
     hook_blueprint.update(section_evidence_bank.get("hook_blueprint", {}))
+    hook_blueprint["mode_support_bias"] = {
+        "theme_axes": [
+            safe_text(value)
+            for value in list((hook_blueprint.get("mode_support_bias", {}) or {}).get("theme_axes", []))
+            if safe_text(value)
+            and not contains_bad_script(safe_text(value))
+            and not looks_corrupted_text(safe_text(value))
+        ][:6],
+        "motif_atoms": _filter_artist_biased_terms(
+            list((hook_blueprint.get("mode_support_bias", {}) or {}).get("motif_atoms", [])),
+            blocked_terms=foreign_title_terms,
+            artist_lexicon=artist_lexicon,
+            artist_families=artist_families,
+            limit=6,
+            max_len=12,
+        ),
+    }
     section_cards = [
         _sanitize_section_card(card)
         for card in _derive_section_cards_from_bank(section_evidence_bank, effective_mode_id)
@@ -1617,7 +1726,7 @@ def build_demo_plan(
         representative_profile,
     )
 
-    seed_phrases = _clean_demo_phrase_list(
+    seed_phrases = _filter_artist_biased_terms(
         [
             str(value)
             for record in anchor_records + expansion_records
@@ -1627,6 +1736,9 @@ def build_demo_plan(
         + list(mode_support_context.get("motif_atoms", []))
         + list(mode_support_context.get("scene_atoms", []))
         + list((composition_frame.get("merged_bank") or {}).get("global_motifs", [])),
+        blocked_terms=foreign_title_terms,
+        artist_lexicon=artist_lexicon,
+        artist_families=artist_families,
         limit=12,
         max_len=12,
     )
@@ -2013,15 +2125,21 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             limit=4,
             max_len=12,
         )
+        imagery_terms = _prune_low_signal_planner_terms(imagery_terms, limit=4)
         if not imagery_terms:
             imagery_terms = _rotating_take(imagery, 2, idx)
         emotion_terms = _clean_demo_phrase_list(goals, limit=2, max_len=16)
         section_motifs = _unique(imagery_terms + _rotating_take(motifs, 2, idx * 2))
         if not section_motifs:
             section_motifs = _rotating_take(motifs, 2, idx * 2)
-        section_motifs = [
-            value for value in section_motifs if not _contains_blocked_term(value, foreign_title_terms)
-        ]
+        section_motifs = _prune_low_signal_planner_terms(
+            [
+                value
+                for value in section_motifs
+                if not _contains_blocked_term(value, foreign_title_terms)
+            ],
+            limit=8,
+        )
         vnext_required_motifs = _clean_demo_phrase_list(
             [
                 value
@@ -2031,6 +2149,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             limit=4,
             max_len=12,
         )
+        vnext_required_motifs = _prune_low_signal_planner_terms(vnext_required_motifs, limit=4)
         if vnext_required_motifs:
             section_motifs = _unique(vnext_required_motifs + section_motifs)
         section_scene = imagery_terms[0] if imagery_terms else (motifs[(idx + 5) % len(motifs)] if motifs else "")
@@ -2047,6 +2166,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             limit=4,
             max_len=12,
         )
+        required_imagery = _prune_low_signal_planner_terms(required_imagery, limit=4)
         if not required_imagery:
             required_imagery = imagery_terms[:2]
         function_name = safe_text(vnext_meta.get("function"), "release" if "chorus" in s_name else "narrative")
@@ -2150,6 +2270,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     )
     hook_density = safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium")
     title_ignition_style = safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct")
+    hook_mode_support_bias = (plan.get("hook_blueprint", {}) or {}).get("mode_support_bias", {}) or {}
     sanitized_demo_plan = {
         **plan,
         "composite_style": {
@@ -2183,6 +2304,20 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             **(sanitized_demo_plan.get("hook_blueprint", {}) or {}),
             "core_text": fallback_hook,
             "hook_density": hook_density,
+            "mode_support_bias": {
+                "theme_axes": [
+                    safe_text(value)
+                    for value in list(hook_mode_support_bias.get("theme_axes", []))
+                    if safe_text(value)
+                    and not contains_bad_script(safe_text(value))
+                    and not looks_corrupted_text(safe_text(value))
+                ][:6],
+                "motif_atoms": _filter_blocked_terms(
+                    list(hook_mode_support_bias.get("motif_atoms", [])),
+                    foreign_title_terms,
+                    limit=6,
+                ),
+            },
         },
         "hook_density": hook_density,
         "artist_profile": artist_profile,

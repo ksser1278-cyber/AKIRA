@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
+from .lyric_utils import contains_bad_script, contains_japanese, looks_corrupted_text, safe_text
 from .songwriter_io import candidate_content_roots
 
 
@@ -20,6 +22,64 @@ def _unique(values: list[str]) -> list[str]:
             seen.add(text)
             out.append(text)
     return out
+
+
+_LOW_SIGNAL_MODE_SUPPORT_TERMS = {
+    "方",
+    "感謝",
+    "恩",
+    "一生",
+    "子供",
+    "想い",
+    "秘め",
+    "愛言葉",
+    "聴いてくれ",
+    "世話になって",
+    "誰と",
+    "頂戴",
+    "なくても",
+    "僕は僕を見ない",
+    "愛されない",
+    "全部あげる",
+    "知りたい",
+    "好き",
+    "大好き",
+    "お別れ",
+}
+
+
+def _is_usable_mode_support_term(value: Any, *, max_len: int = 16) -> bool:
+    text = safe_text(value)
+    if not text:
+        return False
+    if not contains_japanese(text):
+        return False
+    if contains_bad_script(text) or looks_corrupted_text(text):
+        return False
+    compact = re.sub(r"\s+", "", text)
+    if len(compact) < 2 or len(compact) > max_len:
+        return False
+    if text in _LOW_SIGNAL_MODE_SUPPORT_TERMS:
+        return False
+    if any(marker in text for marker in ("(", ")", "[", "]", "{", "}", "/", ":")):
+        return False
+    if re.search(r"[A-Za-z0-9]", text):
+        return False
+    return True
+
+
+def _clean_mode_support_terms(values: list[Any], *, limit: int, max_len: int = 16) -> list[str]:
+    cleaned: list[str] = []
+    for value in values:
+        text = safe_text(value)
+        if not _is_usable_mode_support_term(text, max_len=max_len):
+            continue
+        if text in cleaned:
+            continue
+        cleaned.append(text)
+        if len(cleaned) >= limit:
+            break
+    return cleaned
 
 
 def _resolve_mode_support_audit_path(project_root: Path, mode_id: str) -> Path | None:
@@ -144,6 +204,10 @@ def load_mode_support_context(
             if summary:
                 scene_atoms.append(summary)
 
+    clean_imagery = _clean_mode_support_terms(imagery_anchors, limit=8, max_len=12)
+    clean_motifs = _clean_mode_support_terms(motif_atoms + clean_imagery, limit=10, max_len=12)
+    clean_scene_atoms = _clean_mode_support_terms(scene_atoms, limit=8, max_len=18)
+
     return {
         "available": True,
         "mode_id": clean_mode_id,
@@ -160,9 +224,9 @@ def load_mode_support_context(
             for record in selected_records
         ],
         "theme_axes": _unique(theme_axes)[:6],
-        "imagery_anchors": _unique(imagery_anchors)[:8],
-        "motif_atoms": _unique(motif_atoms + imagery_anchors)[:10],
-        "scene_atoms": _unique(scene_atoms)[:8],
+        "imagery_anchors": clean_imagery,
+        "motif_atoms": clean_motifs,
+        "scene_atoms": clean_scene_atoms,
         "vocal_tones": _unique(vocal_tones)[:6],
         "production_palette": _unique(production_palette)[:6],
         "energy_arc": _unique(energy_arc)[:6],

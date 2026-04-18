@@ -168,6 +168,55 @@ def _evidence_atoms(card: dict[str, Any]) -> list[str]:
 
 
 def _title_policy_score(policy: str, title: str, section_lines: list[str]) -> float:
+    return _title_policy_score_impl(policy, title, section_lines)
+
+
+def _evidence_atoms(card: dict[str, Any]) -> list[str]:
+    atoms: list[str] = []
+    values = (
+        list(card.get("required_imagery", []))
+        + [card.get("scene", "")]
+        + list(card.get("imagery_focus", []))[:3]
+        + list(card.get("required_motifs", []))[:4]
+    )
+    blocked_terms = {
+        "沃겹겓",
+        "?닸?",
+        "誤뗣걟",
+        "恙껁굮",
+        "?꿔겓",
+        "?꿔겎",
+        "?귙겏",
+        "弱묆걮",
+        "?③깿",
+        "方",
+        "感謝",
+        "恩",
+        "一生",
+        "子供",
+        "想い",
+        "秘め",
+        "愛言葉",
+    }
+    for value in values:
+        text = str(value or "").strip()
+        if not text:
+            continue
+        compact = text.replace(" ", "")
+        if len(compact) > 18:
+            continue
+        if text in blocked_terms:
+            continue
+        if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
+            continue
+        if contains_bad_script(text):
+            continue
+        if text not in atoms:
+            atoms.append(text)
+    return atoms[:6]
+
+
+def _title_policy_score_impl(policy: str, title: str, section_lines: list[str]) -> float:
     title_clean = re.sub(r"\s+", "", title)
     if not title_clean:
         return 1.0
@@ -199,6 +248,46 @@ def _title_policy_score(policy: str, title: str, section_lines: list[str]) -> fl
 
 
 def _evidence_utilization_score(plan: dict[str, Any], title: str, markdown: str) -> tuple[float, dict[str, Any]]:
+    return _evidence_utilization_score_impl(plan, title, markdown)
+
+
+def _evidence_atoms(card: dict[str, Any]) -> list[str]:
+    atoms: list[str] = []
+    values = (
+        list(card.get("required_imagery", []))
+        + [card.get("scene", "")]
+        + list(card.get("imagery_focus", []))[:3]
+        + list(card.get("required_motifs", []))[:4]
+    )
+    blocked_terms = {
+        "\u65b9",
+        "\u611f\u8b1d",
+        "\u6069",
+        "\u4e00\u751f",
+        "\u5b50\u4f9b",
+        "\u60f3\u3044",
+        "\u79d8\u3081",
+        "\u611b\u8a00\u8449",
+    }
+    for value in values:
+        text = str(value or "").strip()
+        if not text:
+            continue
+        compact = text.replace(" ", "")
+        if len(compact) > 18:
+            continue
+        if text in blocked_terms:
+            continue
+        if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
+            continue
+        if contains_bad_script(text):
+            continue
+        if text not in atoms:
+            atoms.append(text)
+    return atoms[:6]
+
+
+def _evidence_utilization_score_impl(plan: dict[str, Any], title: str, markdown: str) -> tuple[float, dict[str, Any]]:
     parsed = _parse_sections(markdown)
     section_scores: dict[str, Any] = {}
     scores: list[float] = []
