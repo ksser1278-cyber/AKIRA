@@ -34,6 +34,21 @@ def run_extract_lyric_technique_records(
     )
 
 
+def run_build_lyric_behavior_dataset(
+    *,
+    project_root: Path,
+    artists: list[str] | None = None,
+    output_root: Path | None = None,
+) -> dict[str, Any]:
+    from .dataset_commands import run_build_lyric_behavior_dataset as _impl
+
+    return _impl(
+        project_root=project_root,
+        artists=artists,
+        output_root=output_root,
+    )
+
+
 def run_bootstrap_training_rights(*, project_root: Path, derived_jsonl: Path | None = None, existing_map: Path | None = None, output_path: Path | None = None) -> dict[str, Any]:
     from .dataset_commands import run_bootstrap_training_rights as _impl
 
@@ -720,6 +735,7 @@ def run_songwriter_demo(*, project_root: Path, artist_id: str, mode_id: str | No
 __all__ = [
     "run_build_derived_datasets",
     "run_extract_lyric_technique_records",
+    "run_build_lyric_behavior_dataset",
     "run_bootstrap_training_rights",
     "run_export_supervised_samples",
     "run_import_training_sources",

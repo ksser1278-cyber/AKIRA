@@ -355,7 +355,7 @@ def render_demo_run_report(run_manifest: dict[str, Any]) -> str:
         f"# AKIRA ENGINE: Lyric Generation Report",
         f"- Track ID: `{run_manifest['track_id']}`",
         f"- Artist: `{run_manifest['artist_id']}`",
-        f"- Selection Path: `RC-2026-03-31 (Frozen Baseline)`",
+        f"- Selection Path: `{run_manifest.get('selection_mode', 'RC-2026-03-31 (Frozen Baseline)')}`",
         "",
         "## Performance Snapshot",
     ]
@@ -371,8 +371,13 @@ def render_demo_run_report(run_manifest: dict[str, Any]) -> str:
     metrics = {
         "Imagery Coverage": critic.get("imagery_coverage", 0.0),
         "Japanese Ratio": critic.get("japanese_char_ratio", 0.0),
-        "Motif Landing": critic.get("motif_landing_score", 0.0),
-        "Singability": critic.get("singability_score", 0.0),
+        "Evidence Utilization": critic.get("evidence_utilization", 0.0),
+        "Singability": critic.get("singability", 0.0),
+        "Prosodic Flow": critic.get("musical_scores", {}).get("prosodic_flow", 0.0) if isinstance(critic.get("musical_scores", {}), dict) else 0.0,
+        "Hook Memorability": critic.get("musical_scores", {}).get("hook_memorability", 0.0) if isinstance(critic.get("musical_scores", {}), dict) else 0.0,
+        "Legacy Total": critic.get("legacy_total", total_score),
+        "Musical Total": critic.get("musical_total", total_score),
+        "Blended Total": critic.get("blended_total", total_score),
     }
     
     for label, val in metrics.items():
@@ -591,6 +596,7 @@ def run_demo_songwriter(
         "mode_id": _safe_text(runtime_plan.get("primary_mode")),
         "router_mode": _safe_text(runtime_plan.get("primary_mode", "default")),
         "policy_version": execution_result.get("policy_version", "unknown"),
+        "selection_mode": execution_result.get("selection_mode", "legacy_total"),
         "prompt_package_hash": prompt_hash,
         "ok": ok,
         "failure_reason": execution_result.get("failure_reason"),
@@ -602,11 +608,15 @@ def run_demo_songwriter(
         "candidate_count": len(candidates),
         "selected_candidate_id": winner["candidate_id"] if winner else None,
         "honest_metrics": winner_score.honest_metrics_active if winner_score else True,
-        "selected_score": winner_score.scores["total"] if winner_score else 0.0,
+        "selected_score": execution_result.get(
+            "selected_score",
+            winner_score.scores.get("blended_total", winner_score.scores.get("total", 0.0)) if winner_score else 0.0,
+        ),
         "grade": promotion.grade if promotion else "Fail",
         "pre_audit": pre_audit_result.__dict__,
         "critic": winner_score.scores if winner_score else {},
         "promotion_result": promotion.__dict__ if promotion else {},
+        "selection_diagnostics": execution_result.get("selection_diagnostics", {}),
         "selected_lyric_path": str(winner_path) if winner_path else None,
     }
     _write_utf8_text(output_dir / "run_report.md", render_demo_run_report(manifest), trailing_newline=False)

@@ -218,6 +218,7 @@ def _merge_section_payload(
             artist_payload.get("function_hint")
             or corpus_payload.get("function_hint")
         ),
+        "behavior_prior": artist_payload.get("behavior_prior") or corpus_payload.get("behavior_prior") or {},
         "narrative_goals": _merge_list(
             list(artist_payload.get("narrative_goals", [])),
             list(corpus_payload.get("narrative_goals", [])),
@@ -280,9 +281,18 @@ def build_composition_frame(
     artist_records: list[dict[str, Any]],
     mode_support_records: list[dict[str, Any]],
     mode_id: str,
+    behavior_priors: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    artist_bank = build_section_evidence_bank(artist_records, mode_id=mode_id)
-    corpus_bank = build_section_evidence_bank(mode_support_records, mode_id=mode_id)
+    artist_bank = build_section_evidence_bank(
+        artist_records,
+        mode_id=mode_id,
+        behavior_priors=behavior_priors,
+    )
+    corpus_bank = build_section_evidence_bank(
+        mode_support_records,
+        mode_id=mode_id,
+        behavior_priors=behavior_priors,
+    )
     artist_lexicon = _collect_bank_lexicon(artist_bank)
     artist_families = {
         family
@@ -386,6 +396,8 @@ def build_composition_frame(
                 limit=12,
             ),
             "hook_blueprint": merged_hook,
+            "behavior_priors": dict(behavior_priors or {}),
             "sections": merged_sections,
         },
+        "behavior_priors": dict(behavior_priors or {}),
     }

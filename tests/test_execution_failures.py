@@ -100,3 +100,111 @@ def test_permanent_hard_gate_failure(mock_plan, mock_prompt):
             assert result["failure_reason"] == "hard_gate_failure_final"
             assert len(result["attempt_history"]) == Policy.MAX_RETRIES + 1
             assert result["selected_candidate"] is None
+
+
+def test_blended_selection_records_shadow_compare(mock_plan, mock_prompt):
+    def indexed_generator(*args, **kwargs):
+        index = kwargs.get("index", 0)
+        return {"candidate_id": f"c{index + 1}", "markdown": "lyrics"}
+
+    critic_legacy = CriticResult(
+        candidate_id="c1",
+        hard_gate=HardGate(passed=True),
+        scores={
+            "total": 90.0,
+            "legacy_total": 90.0,
+            "musical_total": 70.0,
+            "blended_total": 78.0,
+            "imagery_coverage": 1.0,
+            "japanese_char_ratio": 0.95,
+        },
+    )
+    critic_blended = CriticResult(
+        candidate_id="c2",
+        hard_gate=HardGate(passed=True),
+        scores={
+            "total": 82.0,
+            "legacy_total": 82.0,
+            "musical_total": 96.0,
+            "blended_total": 90.4,
+            "imagery_coverage": 1.0,
+            "japanese_char_ratio": 0.95,
+        },
+    )
+    promo = PromotionResult(candidate_id="c2", grade="Gold", score=90.4)
+
+    with patch("src.akira_engine.execution.mod.run_critic_stage") as mock_critic:
+        with patch("src.akira_engine.execution.mod.run_promotion_stage") as mock_promo:
+            mock_critic.side_effect = [critic_legacy, critic_blended]
+            mock_promo.return_value = promo
+
+            result = run_production_loop(
+                project_root=Path("."),
+                runtime_plan=mock_plan,
+                prompt_package=mock_prompt,
+                candidate_generator_fn=indexed_generator,
+                max_candidates=2,
+            )
+
+            assert result["ok"] is True
+            assert result["selection_mode"] == "legacy_total_shadow_compare"
+            assert result["selected_candidate"]["candidate_id"] == "c1"
+            assert result["selected_score"] == pytest.approx(90.0)
+            assert result["selection_diagnostics"]["legacy_winner"]["candidate_id"] == "c1"
+            assert result["selection_diagnostics"]["blended_winner"]["candidate_id"] == "c2"
+
+
+def test_blended_selection_can_be_enabled_via_rollout(mock_prompt):
+    runtime_plan = {
+        "track_id": "test_track",
+        "artist_id": "test_artist",
+        "selection_rollout": {"enable_blended_selection": True},
+    }
+
+    def indexed_generator(*args, **kwargs):
+        index = kwargs.get("index", 0)
+        return {"candidate_id": f"c{index + 1}", "markdown": "lyrics"}
+
+    critic_legacy = CriticResult(
+        candidate_id="c1",
+        hard_gate=HardGate(passed=True),
+        scores={
+            "total": 90.0,
+            "legacy_total": 90.0,
+            "musical_total": 70.0,
+            "blended_total": 78.0,
+            "imagery_coverage": 1.0,
+            "japanese_char_ratio": 0.95,
+        },
+    )
+    critic_blended = CriticResult(
+        candidate_id="c2",
+        hard_gate=HardGate(passed=True),
+        scores={
+            "total": 82.0,
+            "legacy_total": 82.0,
+            "musical_total": 96.0,
+            "blended_total": 90.4,
+            "imagery_coverage": 1.0,
+            "japanese_char_ratio": 0.95,
+        },
+    )
+    promo = PromotionResult(candidate_id="c2", grade="Gold", score=90.4)
+
+    with patch("src.akira_engine.execution.mod.run_critic_stage") as mock_critic:
+        with patch("src.akira_engine.execution.mod.run_promotion_stage") as mock_promo:
+            mock_critic.side_effect = [critic_legacy, critic_blended]
+            mock_promo.return_value = promo
+
+            result = run_production_loop(
+                project_root=Path("."),
+                runtime_plan=runtime_plan,
+                prompt_package=mock_prompt,
+                candidate_generator_fn=indexed_generator,
+                max_candidates=2,
+            )
+
+            assert result["ok"] is True
+            assert result["selection_mode"] == "blended_total_with_shadow_compare"
+            assert result["selected_candidate"]["candidate_id"] == "c2"
+            assert result["selected_score"] == pytest.approx(90.4)

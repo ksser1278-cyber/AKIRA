@@ -1,10 +1,11 @@
 from __future__ import annotations
+from dataclasses import replace
 import random
 import hashlib
 from pathlib import Path
 from typing import Any
 from src.akira_engine.production_policy import BASELINE_2026_03_31 as Policy
-from src.akira_engine.critic.mod import run_critic_stage
+from src.akira_engine.critic.mod import CriticResult, run_critic_stage
 from src.akira_engine.promotion.mod import run_promotion_stage
 
 from src.akira_engine.execution.routing import ProductionRouter
@@ -50,8 +51,12 @@ def run_production_loop(
     best_critic = None
     all_results = []
     attempt_history = []
+    selection_diagnostics = {}
     failure_reason = None
     
+    selection_rollout = runtime_plan_legacy.get("selection_rollout", {}) if isinstance(runtime_plan_legacy, dict) else {}
+    use_blended_selection = bool(selection_rollout.get("enable_blended_selection", False))
+
     # 1. Implementation of Selective Retry (Hard Gate)
     for attempt in range(Policy.MAX_RETRIES + 1):
         candidates = []
@@ -72,16 +77,66 @@ def run_production_loop(
         batch_results = []
         for c in candidates:
             critic = run_critic_stage(runtime_plan_legacy, c)
-            promotion = run_promotion_stage(critic)
+            legacy_total = float(critic.scores.get("legacy_total", critic.scores.get("total", 0.0)))
+            musical_total = float(critic.scores.get("musical_total", legacy_total))
+            blended_total = float(
+                critic.scores.get(
+                    "blended_total",
+                    round((legacy_total * 0.4) + (musical_total * 0.6), 2),
+                )
+            )
+            promotion_target_total = blended_total if use_blended_selection else legacy_total
+            critic_for_promotion = replace(
+                critic,
+                scores={**critic.scores, "total": promotion_target_total},
+            )
+            promotion = run_promotion_stage(critic_for_promotion)
             batch_results.append({
                 "candidate": c,
                 "critic": critic,
                 "promotion": promotion,
-                "score": critic.scores.get("total", 0.0)
+                "legacy_total": legacy_total,
+                "musical_total": musical_total,
+                "blended_total": blended_total,
+                "score": blended_total,
             })
-            
-        # Sort by Score
-        batch_results.sort(key=lambda x: x["score"], reverse=True)
+
+        if batch_results:
+            legacy_winner = max(batch_results, key=lambda x: (x["legacy_total"], x["musical_total"], x["score"]))
+            musical_winner = max(batch_results, key=lambda x: (x["musical_total"], x["legacy_total"], x["score"]))
+            blended_winner = max(batch_results, key=lambda x: (x["blended_total"], x["legacy_total"], x["musical_total"]))
+            selection_diagnostics = {
+                "legacy_winner": {
+                    "candidate_id": legacy_winner["candidate"].get("candidate_id"),
+                    "legacy_total": legacy_winner["legacy_total"],
+                    "musical_total": legacy_winner["musical_total"],
+                    "blended_total": legacy_winner["blended_total"],
+                },
+                "musical_winner": {
+                    "candidate_id": musical_winner["candidate"].get("candidate_id"),
+                    "legacy_total": musical_winner["legacy_total"],
+                    "musical_total": musical_winner["musical_total"],
+                    "blended_total": musical_winner["blended_total"],
+                },
+                "blended_winner": {
+                    "candidate_id": blended_winner["candidate"].get("candidate_id"),
+                    "legacy_total": blended_winner["legacy_total"],
+                    "musical_total": blended_winner["musical_total"],
+                    "blended_total": blended_winner["blended_total"],
+                },
+                "shadow_compare": {
+                    "legacy_vs_musical_same": legacy_winner["candidate"].get("candidate_id") == musical_winner["candidate"].get("candidate_id"),
+                    "legacy_vs_blended_same": legacy_winner["candidate"].get("candidate_id") == blended_winner["candidate"].get("candidate_id"),
+                    "musical_vs_blended_same": musical_winner["candidate"].get("candidate_id") == blended_winner["candidate"].get("candidate_id"),
+                    "legacy_gap": round(legacy_winner["legacy_total"] - blended_winner["legacy_total"], 2),
+                    "musical_gap": round(musical_winner["musical_total"] - blended_winner["musical_total"], 2),
+                },
+            }
+
+        if use_blended_selection:
+            batch_results.sort(key=lambda x: (x["blended_total"], x["legacy_total"], x["musical_total"]), reverse=True)
+        else:
+            batch_results.sort(key=lambda x: (x["legacy_total"], x["musical_total"], x["blended_total"]), reverse=True)
         winner = batch_results[0]
         all_results = batch_results # Preserve last batch
         
@@ -126,13 +181,20 @@ def run_production_loop(
         "policy_version": "BASELINE_2026_03_31",
         "ok": best_candidate is not None,
         "failure_reason": failure_reason,
+        "selection_mode": "blended_total_with_shadow_compare" if use_blended_selection else "legacy_total_shadow_compare",
+        "selected_score": (
+            float(best_critic.scores.get("blended_total", best_critic.scores.get("total", 0.0)))
+            if (best_critic and use_blended_selection)
+            else float(best_critic.scores.get("legacy_total", best_critic.scores.get("total", 0.0))) if best_critic else 0.0
+        ),
         "selected_candidate": best_candidate,
         "promotion": best_promotion,
         "critic": best_critic,
         "attempt_history": attempt_history,
         "batch_candidates": [r["candidate"] for r in all_results],
         "batch_critics": [r["critic"] for r in all_results],
-        "batch_promotions": [r["promotion"] for r in all_results]
+        "batch_promotions": [r["promotion"] for r in all_results],
+        "selection_diagnostics": selection_diagnostics,
     }
 
 def _safe_print(msg: str):

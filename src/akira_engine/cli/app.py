@@ -8,6 +8,7 @@ from . import (
     run_bootstrap_training_rights,
     run_build_derived_datasets,
     run_extract_lyric_technique_records,
+    run_build_lyric_behavior_dataset,
     run_build_training_pilot,
     run_export_supervised_samples,
     run_export_vertex_supervised,
@@ -130,6 +131,19 @@ def cmd_dataset_extract_technique(root: Path, args: argparse.Namespace) -> int:
     print(f"Technique manifest: {manifest['manifest_path']}")
     print(f"Records: {manifest['counts']['records']}")
     print(f"Source root: {manifest['source_root']}")
+    return 0
+
+
+def cmd_dataset_build_lyric_behavior(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_build_lyric_behavior_dataset(
+        project_root=args.project_root or root,
+        artists=args.artists,
+        output_root=args.output_root,
+    )
+    print(f"Lyric behavior manifest: {manifest['manifest_path']}")
+    print(f"Line behavior records: {manifest['counts']['line_behavior_records']}")
+    print(f"Phrase behavior records: {manifest['counts']['phrase_behavior_records']}")
+    print(f"Chorus behavior records: {manifest['counts']['chorus_behavior_records']}")
     return 0
 
 
@@ -786,6 +800,15 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     extract_technique.add_argument("--default-rights-status", default="unknown")
     extract_technique.add_argument("--source-kind", choices=["normalized_corpus", "owned_original_hook_pilot"], default="normalized_corpus")
     extract_technique.set_defaults(func=lambda args: cmd_dataset_extract_technique(root, args))
+
+    build_lyric_behavior = dataset_sub.add_parser(
+        "build-lyric-behavior",
+        help="Extract line/phrase/chorus behavior records from conditioning corpora.",
+    )
+    build_lyric_behavior.add_argument("--project-root", type=Path, default=root)
+    build_lyric_behavior.add_argument("--artists", nargs="*")
+    build_lyric_behavior.add_argument("--output-root", type=Path)
+    build_lyric_behavior.set_defaults(func=lambda args: cmd_dataset_build_lyric_behavior(root, args))
 
     bootstrap_rights = dataset_sub.add_parser("bootstrap-rights", help="Bootstrap the training rights map from derived records.")
     bootstrap_rights.add_argument("--project-root", type=Path, default=root)

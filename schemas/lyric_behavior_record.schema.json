@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lyric Behavior Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "record_id",
+    "track_id",
+    "artist_id",
+    "section_name"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "line_behavior_record",
+        "phrase_behavior_record",
+        "chorus_behavior_record"
+      ]
+    },
+    "record_id": { "type": "string" },
+    "track_id": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "mode_id": { "type": "string" },
+    "section_name": { "type": "string" },
+    "section_index": { "type": "integer" },
+    "line_index": { "type": "integer" },
+    "surface_text": { "type": "string" },
+    "line_length": { "type": "integer" },
+    "mora_count": { "type": "integer" },
+    "vowel_profile": {
+      "type": "object",
+      "properties": {
+        "a": { "type": "integer" },
+        "i": { "type": "integer" },
+        "u": { "type": "integer" },
+        "e": { "type": "integer" },
+        "o": { "type": "integer" }
+      }
+    },
+    "repetition_role": { "type": "string" },
+    "tension_state": { "type": "string" },
+    "cadence_shape": { "type": "string" },
+    "hook_distance": { "type": ["integer", "null"] },
+    "title_return_offset": { "type": ["integer", "null"] },
+    "lexical_family": { "type": "string" },
+    "cliche_risk": { "type": "string" },
+    "line_count": { "type": "integer" },
+    "average_mora_count": { "type": "number" },
+    "repetition_count": { "type": "integer" },
+    "hook_hit_count": { "type": "integer" },
+    "dominant_lexical_family": { "type": "string" },
+    "title_return_count": { "type": "integer" },
+    "average_line_length": { "type": "number" },
+    "repetition_payoff": { "type": "string" }
+  }
+}

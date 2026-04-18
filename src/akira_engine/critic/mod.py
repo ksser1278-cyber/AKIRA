@@ -338,6 +338,118 @@ def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[f
     coverage = len(hits) / len(unique_required)
     return round(coverage, 2), hits
 
+def _section_lines(parsed: dict[str, list[str]], expected_sections: list[str]) -> list[tuple[str, list[str]]]:
+    ordered: list[tuple[str, list[str]]] = []
+    seen: set[str] = set()
+    for section in expected_sections:
+        if section in seen:
+            continue
+        lines = parsed.get(section, [])
+        if lines:
+            ordered.append((section, lines))
+            seen.add(section)
+    if ordered:
+        return ordered
+    for section, lines in parsed.items():
+        if section and section != "body" and lines:
+            ordered.append((section, lines))
+    return ordered
+
+def _mean_line_length(lines: list[str]) -> float:
+    if not lines:
+        return 0.0
+    lengths = [len(re.sub(r"\s+", "", line)) for line in lines if line.strip()]
+    if not lengths:
+        return 0.0
+    return sum(lengths) / len(lengths)
+
+def _prosodic_flow_score(lines: list[str], parsed: dict[str, list[str]], expected_sections: list[str], singability: float) -> float:
+    if not lines:
+        return 0.0
+    lengths = [len(re.sub(r"\s+", "", line)) for line in lines if line.strip()]
+    if len(lengths) < 2:
+        return round(max(0.0, min(1.0, singability)), 2)
+
+    jumps = [abs(lengths[i] - lengths[i - 1]) for i in range(1, len(lengths))]
+    avg_jump = sum(jumps) / len(jumps)
+    smoothness = max(0.0, 1.0 - min(avg_jump / 14.0, 1.0))
+
+    section_groups = _section_lines(parsed, expected_sections)
+    section_means = [_mean_line_length(section_lines) for _, section_lines in section_groups if section_lines]
+    if len(section_means) >= 2:
+        section_jumps = [abs(section_means[i] - section_means[i - 1]) for i in range(1, len(section_means))]
+        avg_section_jump = sum(section_jumps) / len(section_jumps)
+        section_flow = max(0.0, 1.0 - min(avg_section_jump / 10.0, 1.0))
+    else:
+        section_flow = 0.5
+
+    score = (singability * 0.45) + (smoothness * 0.35) + (section_flow * 0.20)
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _hook_memorability_score(title: str, parsed: dict[str, list[str]]) -> float:
+    chorus_lines = list(parsed.get("chorus", [])) + list(parsed.get("chorus_final", []))
+    target_lines = chorus_lines or [line for section, lines in parsed.items() if section and section != "body" for line in lines]
+    if not title or not target_lines:
+        return 0.0
+    title_clean = re.sub(r"\s+", "", title)
+    if not title_clean:
+        return 0.0
+    mentions = sum(1 for line in target_lines if title_clean in re.sub(r"\s+", "", line))
+    title_binding = _title_binding_score(title, target_lines)
+    density = min(1.0, mentions / max(1.0, len(target_lines) / 2.0))
+    first_line_bonus = 1.0 if title_clean in re.sub(r"\s+", "", target_lines[0]) else 0.0
+    score = (title_binding * 0.45) + (density * 0.35) + (first_line_bonus * 0.20)
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _repetition_payoff_score(title: str, parsed: dict[str, list[str]]) -> float:
+    chorus_lines = list(parsed.get("chorus", [])) + list(parsed.get("chorus_final", []))
+    if not chorus_lines:
+        return 0.35
+    title_clean = re.sub(r"\s+", "", title)
+    normalized = [re.sub(r"\s+", "", line) for line in chorus_lines]
+    repeated_line_hits = sum(1 for i in range(1, len(normalized)) if normalized[i] == normalized[i - 1])
+    repeated_line_ratio = repeated_line_hits / max(1, len(normalized) - 1)
+    title_mentions = sum(1 for line in normalized if title_clean and title_clean in line)
+    title_ratio = title_mentions / len(normalized)
+    chorus_return_bonus = 0.25 if title_mentions >= 2 else 0.0
+    score = (repeated_line_ratio * 0.35) + (min(1.0, title_ratio * 2.0) * 0.45) + chorus_return_bonus
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _section_contrast_score(parsed: dict[str, list[str]], expected_sections: list[str]) -> float:
+    section_groups = _section_lines(parsed, expected_sections)
+    if len(section_groups) < 2:
+        return 0.5
+
+    section_means = [(section, _mean_line_length(lines)) for section, lines in section_groups if lines]
+    if len(section_means) < 2:
+        return 0.5
+
+    jumps = [abs(section_means[i][1] - section_means[i - 1][1]) for i in range(1, len(section_means))]
+    avg_jump = sum(jumps) / len(jumps)
+    base = min(1.0, avg_jump / 6.0)
+
+    section_map = {section: mean for section, mean in section_means}
+    verse_sections = [section_map[s] for s in section_map if s.startswith("verse")]
+    verse_mean = sum(verse_sections) / len(verse_sections) if verse_sections else 0.0
+    chorus_mean = section_map.get("chorus", section_map.get("chorus_final", verse_mean))
+    bridge_mean = section_map.get("bridge", verse_mean)
+    verse_chorus_gap = min(0.2, abs(verse_mean - chorus_mean) / 30.0)
+    bridge_gap = min(0.1, abs(bridge_mean - verse_mean) / 40.0)
+
+    score = base + verse_chorus_gap + bridge_gap
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _oral_friction_score(lines: list[str], singability: float) -> float:
+    if not lines:
+        return 0.0
+    lengths = [len(re.sub(r"\s+", "", line)) for line in lines if line.strip()]
+    if not lengths:
+        return 0.0
+    long_ratio = sum(1 for length in lengths if length > 24) / len(lengths)
+    short_ratio = sum(1 for length in lengths if length < 6) / len(lengths)
+    friction = (long_ratio * 0.65) + ((1.0 - singability) * 0.55) + (short_ratio * 0.1)
+    return round(max(0.0, min(1.0, friction)), 2)
+
 def run_critic_stage(
     plan: dict[str, Any],
     candidate: dict[str, Any],
@@ -387,6 +499,47 @@ def run_critic_stage(
     family_diversity, family_diag = score_family_diversity(pure_body)
     cliche_density, cliche_diag = score_demo_cliche_density(pure_body)
     cliche_control = round(max(0.0, 1.0 - cliche_density), 2)
+
+    parsed_sections = _parse_sections(markdown)
+    expected_sections = [
+        str(section).strip()
+        for section in plan.get("form_profile", {}).get("section_order", [])
+        if str(section).strip()
+    ]
+    prosodic_flow = _prosodic_flow_score(lines, parsed_sections, expected_sections, singability)
+    hook_memorability = _hook_memorability_score(title, parsed_sections)
+    repetition_payoff = _repetition_payoff_score(title, parsed_sections)
+    section_contrast = _section_contrast_score(parsed_sections, expected_sections)
+    oral_friction = _oral_friction_score(lines, singability)
+    musical_scores = {
+        "prosodic_flow": prosodic_flow,
+        "hook_memorability": hook_memorability,
+        "repetition_payoff": repetition_payoff,
+        "section_contrast": section_contrast,
+        "oral_friction": oral_friction,
+    }
+    legacy_total = round(
+        surface_score * 16
+        + singability * 10
+        + binding * 8
+        + imagery_cov * 12
+        + line_variety * 8
+        + hook_restraint * 6
+        + structure_score * 8
+        + evidence_utilization * 14
+        + family_diversity * 6
+        + cliche_control * 8,
+        2,
+    )
+    musical_total = round(
+        prosodic_flow * 24
+        + hook_memorability * 24
+        + repetition_payoff * 20
+        + section_contrast * 18
+        + (1.0 - oral_friction) * 14,
+        2,
+    )
+    blended_total = round((legacy_total * 0.4) + (musical_total * 0.6), 2)
     
     # 3. Diagnostics
     template_markers = ["(Ah-hah)", "Ready-dy-dy", "Ga-ga-giga", "B-B-BPM"]
@@ -396,19 +549,10 @@ def run_critic_stage(
         candidate_id=candidate_id,
         hard_gate=gate,
         scores={
-            "total": round(
-                surface_score * 16
-                + singability * 10
-                + binding * 8
-                + imagery_cov * 12
-                + line_variety * 8
-                + hook_restraint * 6
-                + structure_score * 12
-                + evidence_utilization * 14
-                + family_diversity * 6
-                + cliche_control * 8,
-                2,
-            ),
+            "total": legacy_total,
+            "legacy_total": legacy_total,
+            "musical_total": musical_total,
+            "blended_total": blended_total,
             "japanese_char_ratio": jp_ratio,
             "latin_token_ratio": latin_ratio,
             "surface_score": surface_score,
@@ -422,6 +566,7 @@ def run_critic_stage(
             "family_diversity": family_diversity,
             "cliche_density": cliche_density,
             "cliche_control": cliche_control,
+            "musical_scores": musical_scores,
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -434,6 +579,10 @@ def run_critic_stage(
             "evidence": evidence_diag,
             "family_profile": family_diag,
             "cliche_profile": cliche_diag,
+            "musical_scores": musical_scores,
+            "legacy_total": legacy_total,
+            "musical_total": musical_total,
+            "blended_total": blended_total,
         },
         honest_metrics_active=True
     )

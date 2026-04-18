@@ -5,6 +5,7 @@ from statistics import median
 from typing import Any
 
 from .conditioning_brief_dataset import canonical_section
+from .lexical_family_bank import classify_term_family
 from .lyric_utils import (
     contains_bad_script,
     contains_japanese,
@@ -144,7 +145,69 @@ def _is_synthetic_runtime_record(record: dict[str, Any]) -> bool:
     return bool(track_id and track_id.endswith("_conditioning_vnext"))
 
 
-def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str = "") -> dict[str, Any]:
+def _coerce_band(value: Any) -> tuple[int, int] | None:
+    if isinstance(value, dict):
+        low = value.get("low", value.get("min", value.get("start")))
+        high = value.get("high", value.get("max", value.get("end")))
+        try:
+            return int(low), int(high)
+        except (TypeError, ValueError):
+            return None
+    if isinstance(value, (list, tuple)) and len(value) >= 2:
+        try:
+            low = int(value[0])
+            high = int(value[1])
+        except (TypeError, ValueError):
+            return None
+        return (low, high) if high >= low else (high, low)
+    return None
+
+
+def _band_center(value: Any, default: int) -> int:
+    band = _coerce_band(value)
+    if not band:
+        return default
+    low, high = band
+    return max(low, min(high, int(round((low + high) / 2))))
+
+
+def _clamp_to_band(value: int, band: Any) -> int:
+    parsed = _coerce_band(band)
+    if not parsed:
+        return value
+    low, high = parsed
+    return max(low, min(high, value))
+
+
+def _behavior_section_prior(behavior_priors: dict[str, Any] | None, section_name: str) -> dict[str, Any]:
+    if not behavior_priors:
+        return {}
+    shared = behavior_priors.get("shared", {}) if isinstance(behavior_priors.get("shared", {}), dict) else {}
+    sections = behavior_priors.get("sections", {}) if isinstance(behavior_priors.get("sections", {}), dict) else {}
+    section = sections.get(section_name, {}) if isinstance(sections.get(section_name, {}), dict) else {}
+    merged = dict(shared)
+    merged.update(section)
+    return merged
+
+
+def _prioritize_terms_by_family(values: list[str], families: list[str]) -> list[str]:
+    clean_families = {safe_text(value) for value in families if safe_text(value)}
+    if not clean_families:
+        return unique_preserve_order(values)
+    scored: list[tuple[int, str]] = []
+    for value in unique_preserve_order(values):
+        family = safe_text(classify_term_family(value))
+        scored.append((1 if family and family in clean_families else 0, value))
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    return [value for _, value in scored]
+
+
+def build_section_evidence_bank(
+    records: list[dict[str, Any]],
+    *,
+    mode_id: str = "",
+    behavior_priors: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     selected_records = [record for record in records if _record_matches_mode(record, mode_id)]
     if not selected_records:
         selected_records = list(records)
@@ -207,6 +270,7 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
                 index_map,
             )
             analysis = analysis_by_name.get(safe_text(section.get("section_name")), {})
+            section_behavior_prior = _behavior_section_prior(behavior_priors, canonical)
             section_vocabulary = [
                 atom
                 for atom in (
@@ -239,11 +303,25 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
                 + section_imagery
             )
             narrative_goal = _clean_phrase(analysis.get("narrative_job"), max_len=120)
+            lexical_bias = list(section_behavior_prior.get("lexical_family_bias", []))
+            if lexical_bias:
+                section_motifs = _prioritize_terms_by_family(section_motifs, lexical_bias)
+                section_imagery = _prioritize_terms_by_family(section_imagery, lexical_bias)
+                section_vocabulary = _prioritize_terms_by_family(section_vocabulary, lexical_bias)
+            behavior_line_target = _coerce_band(section_behavior_prior.get("line_target_range"))
+            behavior_title_band = _coerce_band(section_behavior_prior.get("title_return_band"))
+            behavior_mora_band = _coerce_band(section_behavior_prior.get("mora_band"))
+            behavior_cadence = safe_text(section_behavior_prior.get("cadence_family"))
+            behavior_hook_density = safe_text(section_behavior_prior.get("hook_density_band"))
+            behavior_closure = safe_text(section_behavior_prior.get("closure_strength_target"))
+            behavior_contrast_role = safe_text(section_behavior_prior.get("section_contrast_role"))
             cadence = _cadence_target(
                 canonical,
                 safe_text(section.get("mora_density")),
                 safe_text(section.get("spoken_speed_bias")),
             )
+            if behavior_cadence:
+                cadence = behavior_cadence
 
             line_count = len(section.get("lines", []))
             if canonical.startswith("chorus") and line_count:
@@ -253,6 +331,20 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
                 {
                     "track_id": track_id,
                     "line_count": line_count,
+                    "behavior_prior": {
+                        "line_target_range": list(behavior_line_target) if behavior_line_target else [],
+                        "mora_band": list(behavior_mora_band) if behavior_mora_band else [],
+                        "cadence_family": behavior_cadence,
+                        "preferred_line_target": _band_center(behavior_line_target, line_count),
+                        "preferred_mora_target": _band_center(behavior_mora_band, 12),
+                        "repetition_budget": int(section_behavior_prior.get("repetition_budget", 0) or 0),
+                        "title_return_band": list(behavior_title_band) if behavior_title_band else [],
+                        "preferred_title_return_count": _band_center(behavior_title_band, 0),
+                        "hook_density_band": behavior_hook_density,
+                        "section_contrast_role": behavior_contrast_role,
+                        "closure_strength_target": behavior_closure,
+                        "lexical_family_bias": lexical_bias,
+                    },
                     "narrative_goal": narrative_goal,
                     "required_motifs": section_motifs[:4],
                     "required_imagery": section_imagery[:4],
@@ -300,6 +392,18 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
         cadence_votes = _top([item["cadence_target"] for item in items], 1)
         title_drop_roles = _top([item["title_drop_role"] for item in items], 2)
         phrase_energy_roles = _top([item["phrase_energy_role"] for item in items], 2)
+        behavior_priors_for_section = _behavior_section_prior(behavior_priors, section_name)
+        behavior_line_target = _coerce_band(behavior_priors_for_section.get("line_target_range"))
+        behavior_title_band = _coerce_band(behavior_priors_for_section.get("title_return_band"))
+        behavior_mora_band = _coerce_band(behavior_priors_for_section.get("mora_band"))
+        behavior_hook_density = safe_text(behavior_priors_for_section.get("hook_density_band"))
+        behavior_cadence = safe_text(behavior_priors_for_section.get("cadence_family"))
+        behavior_closure = safe_text(behavior_priors_for_section.get("closure_strength_target"))
+        behavior_contrast_role = safe_text(behavior_priors_for_section.get("section_contrast_role"))
+        behavior_lexical_bias = list(behavior_priors_for_section.get("lexical_family_bias", []))
+        if behavior_lexical_bias:
+            narrative_goals = _prioritize_terms_by_family(narrative_goals, behavior_lexical_bias)
+            phrase_energy_roles = _prioritize_terms_by_family(phrase_energy_roles, behavior_lexical_bias)
         title_drop_policy = _default_title_drop_policy(section_name)
         if any("primary" in role.lower() for role in title_drop_roles):
             title_drop_policy = "primary"
@@ -307,8 +411,39 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
             title_drop_policy = "anchor"
         elif any("withhold" in role.lower() for role in title_drop_roles):
             title_drop_policy = "withhold"
+        if behavior_title_band:
+            if section_name == "chorus_final" and behavior_title_band[1] >= 1:
+                title_drop_policy = "primary"
+            elif section_name == "chorus" and behavior_title_band[1] >= 1:
+                title_drop_policy = "anchor"
+            elif section_name in {"pre_chorus", "pre_chorus_2", "bridge"} and behavior_title_band[1] == 0:
+                title_drop_policy = "withhold"
+        if behavior_closure and section_name == "chorus_final":
+            title_drop_policy = "primary"
 
         hook_pressure = "high" if section_name.startswith("chorus") and max(hook_counts or [0]) >= 2 else "medium"
+        if behavior_hook_density:
+            hook_pressure = behavior_hook_density
+
+        line_target = int(round(median(line_counts))) if line_counts else 0
+        if behavior_line_target:
+            line_target = _clamp_to_band(max(line_target, _band_center(behavior_line_target, line_target)), behavior_line_target)
+        elif not line_target:
+            shared_chorus_target = 4
+            if behavior_priors and isinstance(behavior_priors.get("shared", {}), dict):
+                shared_chorus_target = _band_center(
+                    behavior_priors.get("shared", {}).get("chorus_line_target"),
+                    shared_chorus_target,
+                )
+            line_target = shared_chorus_target if section_name.startswith("chorus") else max(3, shared_chorus_target - 1)
+        if behavior_cadence:
+            cadence_votes = [behavior_cadence]
+        if behavior_contrast_role and phrase_energy_roles:
+            phrase_energy_roles = _top(phrase_energy_roles + [behavior_contrast_role], 2)
+        if behavior_lexical_bias:
+            required_motifs = _prioritize_terms_by_family(required_motifs, behavior_lexical_bias)
+            imagery_focus = _prioritize_terms_by_family(imagery_focus, behavior_lexical_bias)
+            required_imagery = _prioritize_terms_by_family(required_imagery, behavior_lexical_bias)
 
         section_payload[section_name] = {
             "section": section_name,
@@ -317,7 +452,7 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
             "required_motifs": required_motifs,
             "required_imagery": required_imagery or imagery_focus[:2],
             "imagery_focus": imagery_focus,
-            "line_target": int(round(median(line_counts))) if line_counts else 0,
+            "line_target": line_target,
             "cadence_target": cadence_votes[0] if cadence_votes else _cadence_target(section_name, "", ""),
             "abstraction_ceiling": _abstraction_ceiling(
                 section_name,
@@ -328,6 +463,20 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
             "title_drop_roles": title_drop_roles,
             "phrase_energy_roles": phrase_energy_roles,
             "hook_pressure": hook_pressure,
+            "behavior_prior": {
+                "line_target_range": list(behavior_line_target) if behavior_line_target else [],
+                "mora_band": list(behavior_mora_band) if behavior_mora_band else [],
+                "cadence_family": behavior_cadence,
+                "preferred_line_target": _band_center(behavior_line_target, line_target),
+                "preferred_mora_target": _band_center(behavior_mora_band, 12),
+                "repetition_budget": int(behavior_priors_for_section.get("repetition_budget", 0) or 0),
+                "title_return_band": list(behavior_title_band) if behavior_title_band else [],
+                "preferred_title_return_count": _band_center(behavior_title_band, 0),
+                "hook_density_band": behavior_hook_density,
+                "section_contrast_role": behavior_contrast_role,
+                "closure_strength_target": behavior_closure,
+                "lexical_family_bias": behavior_lexical_bias,
+            },
             "evidence_track_ids": unique_preserve_order(
                 [safe_text(item.get("track_id")) for item in items if safe_text(item.get("track_id"))]
             ),
@@ -336,6 +485,9 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
 
     dominant_hook_force = _top(hook_forces, 1)[0] if hook_forces else "medium"
     dominant_title_style = _top(title_styles, 1)[0] if title_styles else "direct"
+    shared_behavior = _behavior_section_prior(behavior_priors, "")
+    if safe_text(shared_behavior.get("hook_density_band")):
+        dominant_hook_force = safe_text(shared_behavior.get("hook_density_band"))
 
     return {
         "available": bool(section_payload),
@@ -345,11 +497,20 @@ def build_section_evidence_bank(records: list[dict[str, Any]], *, mode_id: str =
         "global_motifs": unique_preserve_order(global_motifs)[:10],
         "global_imagery": unique_preserve_order(global_imagery)[:10],
         "hook_blueprint": {
-            "hook_density": "high" if dominant_hook_force in {"high", "heavy"} else "medium",
+            "hook_density": "high" if dominant_hook_force in {"high", "heavy"} else safe_text(dominant_hook_force, "medium"),
             "title_ignition_style": dominant_title_style,
-            "chorus_line_target": max(3, int(round(median(chorus_line_targets)))) if chorus_line_targets else 4,
+            "chorus_line_target": _band_center(shared_behavior.get("chorus_line_target"), max(3, int(round(median(chorus_line_targets)))) if chorus_line_targets else 4),
             "hook_line_target": max(2, int(round(median(hook_counts)))) if hook_counts else 2,
-            "repetition_pressure": "high" if sum(repetition_counts) >= max(2, len(selected_records)) else "medium",
+            "repetition_pressure": safe_text(shared_behavior.get("repetition_pressure"))
+            or ("high" if sum(repetition_counts) >= max(2, len(selected_records)) else "medium"),
+        },
+        "behavior_priors": {
+            "available": bool(behavior_priors),
+            "shared": dict(shared_behavior),
+            "sections": {
+                section_name: dict(payload.get("behavior_prior", {}))
+                for section_name, payload in section_payload.items()
+            },
         },
         "sections": section_payload,
     }

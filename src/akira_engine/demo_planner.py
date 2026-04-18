@@ -10,6 +10,7 @@ from typing import Any
 
 from .composition_frame import build_composition_frame
 from .conditioning_brief_dataset import canonical_section
+from .lyric_behavior_priors import build_behavior_priors
 from .mode_support_runtime import load_mode_support_context, load_mode_support_records
 from .lyric_utils import (
     unique_preserve_order,
@@ -383,6 +384,81 @@ def _sanitize_archetype_context(context: dict[str, Any]) -> dict[str, Any]:
     return payload
 
 
+def _sanitize_behavior_prior(prior: Any) -> dict[str, Any]:
+    if not isinstance(prior, dict):
+        return {}
+    sanitized: dict[str, Any] = {}
+    for key in (
+        "line_target_range",
+        "mora_band",
+        "title_return_band",
+    ):
+        band = prior.get(key, [])
+        if isinstance(band, list):
+            cleaned = []
+            for value in band[:2]:
+                try:
+                    cleaned.append(int(value))
+                except (TypeError, ValueError):
+                    continue
+            sanitized[key] = cleaned
+        else:
+            sanitized[key] = []
+    for key in ("cadence_family", "hook_density_band", "section_contrast_role", "closure_strength_target"):
+        value = safe_text(prior.get(key))
+        sanitized[key] = value if value and not contains_bad_script(value) and not looks_corrupted_text(value) else ""
+    try:
+        sanitized["repetition_budget"] = max(0, int(prior.get("repetition_budget", 0) or 0))
+    except (TypeError, ValueError):
+        sanitized["repetition_budget"] = 0
+    lexical_bias = []
+    for value in prior.get("lexical_family_bias", []) if isinstance(prior.get("lexical_family_bias", []), list) else []:
+        text = safe_text(value)
+        if text and not contains_bad_script(text) and not looks_corrupted_text(text):
+            lexical_bias.append(text)
+    sanitized["lexical_family_bias"] = lexical_bias[:6]
+    try:
+        sanitized["preferred_line_target"] = max(0, int(prior.get("preferred_line_target", 0) or 0))
+    except (TypeError, ValueError):
+        sanitized["preferred_line_target"] = 0
+    try:
+        sanitized["preferred_mora_target"] = max(0, int(prior.get("preferred_mora_target", 0) or 0))
+    except (TypeError, ValueError):
+        sanitized["preferred_mora_target"] = 0
+    try:
+        sanitized["preferred_title_return_count"] = max(0, int(prior.get("preferred_title_return_count", 0) or 0))
+    except (TypeError, ValueError):
+        sanitized["preferred_title_return_count"] = 0
+    sanitized["confidence"] = float(prior.get("confidence", 0.0) or 0.0)
+    sanitized["source_track_ids"] = _unique(
+        [safe_text(value) for value in prior.get("source_track_ids", []) if safe_text(value)]
+    )[:8]
+    sanitized["source_mode_ids"] = _unique(
+        [safe_text(value) for value in prior.get("source_mode_ids", []) if safe_text(value)]
+    )[:4]
+    sanitized["source_artist_ids"] = _unique(
+        [safe_text(value) for value in prior.get("source_artist_ids", []) if safe_text(value)]
+    )[:4]
+    sanitized["record_count"] = max(0, int(prior.get("record_count", 0) or 0))
+    return sanitized
+
+
+def _behavior_prior_has_signal(prior: dict[str, Any]) -> bool:
+    if not isinstance(prior, dict):
+        return False
+    if any(prior.get(key) for key in ("line_target_range", "mora_band", "title_return_band", "lexical_family_bias")):
+        return True
+    if any(safe_text(prior.get(key)) for key in ("cadence_family", "hook_density_band", "section_contrast_role", "closure_strength_target")):
+        return True
+    for key in ("repetition_budget", "preferred_line_target", "preferred_mora_target", "preferred_title_return_count", "record_count"):
+        try:
+            if int(prior.get(key, 0) or 0) > 0:
+                return True
+        except (TypeError, ValueError):
+            continue
+    return False
+
+
 def _sanitize_section_card(card: dict[str, Any]) -> dict[str, Any]:
     section = safe_text(card.get("section"))
     required_motifs = _clean_demo_phrase_list(list(card.get("required_motifs", [])), limit=6, max_len=12)
@@ -400,6 +476,7 @@ def _sanitize_section_card(card: dict[str, Any]) -> dict[str, Any]:
     goal = safe_text(card.get("goal"))
     if not goal or contains_bad_script(goal) or looks_corrupted_text(goal):
         goal = section or "section"
+    behavior_prior = _sanitize_behavior_prior(card.get("behavior_prior", {}))
     return {
         **card,
         "section": section,
@@ -411,6 +488,7 @@ def _sanitize_section_card(card: dict[str, Any]) -> dict[str, Any]:
         "emotion_focus": emotion_focus or ([goal] if goal else []),
         "narrative_goals": narrative_goals or ([goal] if goal else []),
         "imagery_focus": imagery_focus,
+        "behavior_prior": behavior_prior,
     }
 
 
@@ -1139,6 +1217,34 @@ def _derive_section_cards_from_bank(evidence_bank: dict[str, Any], mode_id: str)
                 "evidence_track_ids": list(evidence.get("evidence_track_ids", [])),
                 "title_drop_policy": safe_text(evidence.get("title_drop_policy")),
                 "hook_pressure": safe_text(evidence.get("hook_pressure"), "medium"),
+                "behavior_prior": _sanitize_behavior_prior(evidence.get("behavior_prior", {})),
+                "line_target_range": list(evidence.get("behavior_prior", {}).get("line_target_range", []))
+                if isinstance(evidence.get("behavior_prior", {}), dict)
+                else [],
+                "mora_band": list(evidence.get("behavior_prior", {}).get("mora_band", []))
+                if isinstance(evidence.get("behavior_prior", {}), dict)
+                else [],
+                "repetition_budget": int(
+                    (evidence.get("behavior_prior", {}) or {}).get("repetition_budget", 0) or 0
+                ),
+                "title_return_band": list(evidence.get("behavior_prior", {}).get("title_return_band", []))
+                if isinstance(evidence.get("behavior_prior", {}), dict)
+                else [],
+                "closure_strength_target": safe_text(
+                    (evidence.get("behavior_prior", {}) or {}).get("closure_strength_target")
+                ),
+                "section_contrast_role": safe_text(
+                    (evidence.get("behavior_prior", {}) or {}).get("section_contrast_role")
+                ),
+                "hook_density_band": safe_text(
+                    (evidence.get("behavior_prior", {}) or {}).get("hook_density_band"),
+                    safe_text(evidence.get("hook_pressure"), "medium"),
+                ),
+                "lexical_family_bias": [
+                    safe_text(value)
+                    for value in ((evidence.get("behavior_prior", {}) or {}).get("lexical_family_bias", []))
+                    if safe_text(value)
+                ],
             }
         )
     return cards
@@ -1346,10 +1452,16 @@ def build_demo_plan(
         minimum_grades=("gold", "usable"),
         limit=4,
     )
+    behavior_priors = build_behavior_priors(
+        project_root,
+        artist_ids=artist_ids,
+        mode_id=effective_mode_id,
+    )
     composition_frame = build_composition_frame(
         artist_records=anchor_records + expansion_records,
         mode_support_records=mode_support_records,
         mode_id=effective_mode_id,
+        behavior_priors=behavior_priors,
     )
 
     artist_names = _unique(
@@ -1472,6 +1584,19 @@ def build_demo_plan(
             "mode_track_ids": list(composition_frame.get("mode_track_ids", [])),
             "merged_track_ids": list(composition_frame.get("merged_track_ids", [])),
             "foreign_title_terms_filtered": list(composition_frame.get("foreign_title_terms_filtered", [])),
+        },
+        "behavior_priors": {
+            "available": bool(behavior_priors.get("available")),
+            "artists": list(behavior_priors.get("artists", [])),
+            "record_counts": dict(behavior_priors.get("record_counts", {})),
+            "available_sections": sorted((behavior_priors.get("sections", {}) or {}).keys()),
+            "loaded_manifest_paths": list(behavior_priors.get("loaded_manifest_paths", [])),
+        },
+        "selection_rollout": {
+            "phase": "shadow_compare",
+            "enable_blended_selection": False,
+            "selection_basis": "legacy_total",
+            "shadow_metrics": ["legacy_total", "musical_total", "blended_total"],
         },
         "composite_style": {
             "theme_axes": theme_axes,
@@ -1740,28 +1865,53 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     # Map vNext structural cards if plan exists
     vnext_card_map: dict[str, dict[str, Any]] = {}
     if vnext_plan:
+        def _card_field(card_obj: Any, name: str, default: Any) -> Any:
+            if hasattr(card_obj, name):
+                return getattr(card_obj, name)
+            if isinstance(card_obj, dict):
+                return card_obj.get(name, default)
+            return default
+
         cards = vnext_plan.section_cards if hasattr(vnext_plan, "section_cards") else vnext_plan.get("section_cards", [])
         for vc in cards:
-            s_name = vc.section if hasattr(vc, "section") else vc.get("section")
+            s_name = _card_field(vc, "section", "")
             if not s_name:
                 continue
             vnext_card_map[s_name] = {
-                "function": vc.function if hasattr(vc, "function") else vc.get("function", ""),
-                "required_imagery": list(vc.required_imagery) if hasattr(vc, "required_imagery") else list(vc.get("required_imagery", [])),
-                "required_motifs": list(vc.required_motifs) if hasattr(vc, "required_motifs") else list(vc.get("required_motifs", [])),
-                "narrative_goals": list(vc.narrative_goals) if hasattr(vc, "narrative_goals") else list(vc.get("narrative_goals", [])),
-                "line_target": vc.line_target if hasattr(vc, "line_target") else vc.get("line_target", 0),
-                "cadence_target": vc.cadence_target if hasattr(vc, "cadence_target") else vc.get("cadence_target", ""),
-                "abstraction_ceiling": vc.abstraction_ceiling if hasattr(vc, "abstraction_ceiling") else vc.get("abstraction_ceiling", 0.0),
-                "title_drop_policy": vc.title_drop_policy if hasattr(vc, "title_drop_policy") else vc.get("title_drop_policy", ""),
-                "hook_pressure": vc.hook_pressure if hasattr(vc, "hook_pressure") else vc.get("hook_pressure", ""),
-                "evidence_track_ids": list(vc.evidence_track_ids) if hasattr(vc, "evidence_track_ids") else list(vc.get("evidence_track_ids", [])),
+                "function": _card_field(vc, "function", ""),
+                "required_imagery": list(_card_field(vc, "required_imagery", [])),
+                "required_motifs": list(_card_field(vc, "required_motifs", [])),
+                "narrative_goals": list(_card_field(vc, "narrative_goals", [])),
+                "line_target": _card_field(vc, "line_target", 0),
+                "cadence_target": _card_field(vc, "cadence_target", ""),
+                "abstraction_ceiling": _card_field(vc, "abstraction_ceiling", 0.0),
+                "title_drop_policy": _card_field(vc, "title_drop_policy", ""),
+                "hook_pressure": _card_field(vc, "hook_pressure", ""),
+                "evidence_track_ids": list(_card_field(vc, "evidence_track_ids", [])),
+                "behavior_prior": _sanitize_behavior_prior(
+                    _card_field(vc, "behavior_prior", {})
+                ),
+                "line_target_range": list(_card_field(vc, "line_target_range", [])),
+                "mora_band": list(_card_field(vc, "mora_band", [])),
+                "repetition_budget": _card_field(vc, "repetition_budget", 0),
+                "title_return_band": list(_card_field(vc, "title_return_band", [])),
+                "closure_strength_target": _card_field(vc, "closure_strength_target", ""),
+                "section_contrast_role": _card_field(vc, "section_contrast_role", ""),
+                "hook_density_band": _card_field(vc, "hook_density_band", ""),
+                "lexical_family_bias": list(_card_field(vc, "lexical_family_bias", [])),
             }
 
     normalized_cards: list[dict[str, Any]] = []
     for idx, card in enumerate(plan.get("section_cards", [])):
         s_name = safe_text(card.get("section"))
         vnext_meta = vnext_card_map.get(s_name, {})
+        vnext_behavior_prior = _sanitize_behavior_prior(vnext_meta.get("behavior_prior", {}))
+        card_behavior_prior = _sanitize_behavior_prior(card.get("behavior_prior", {}))
+        effective_behavior_prior = (
+            vnext_behavior_prior
+            if _behavior_prior_has_signal(vnext_behavior_prior)
+            else card_behavior_prior
+        )
         goals = [
             safe_text(x)
             for x in card.get("narrative_goals", [])
@@ -1825,6 +1975,13 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             required_imagery = imagery_terms[:2]
         function_name = safe_text(vnext_meta.get("function"), "release" if "chorus" in s_name else "narrative")
         line_target = int(vnext_meta.get("line_target", 0) or card.get("line_target", 4) or 4)
+        behavior_line_target = int(
+            vnext_behavior_prior.get("preferred_line_target", 0)
+            or card_behavior_prior.get("preferred_line_target", 0)
+            or 0
+        )
+        if behavior_line_target:
+            line_target = max(line_target, behavior_line_target)
         cadence_target = safe_text(vnext_meta.get("cadence_target"), "medium")
         abstraction_ceiling = float(vnext_meta.get("abstraction_ceiling", 0.18) or 0.18)
         title_drop_policy = safe_text(vnext_meta.get("title_drop_policy")) or (
@@ -1856,6 +2013,15 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "abstraction_ceiling": abstraction_ceiling,
                 "title_drop_policy": title_drop_policy,
                 "hook_pressure": hook_pressure,
+                "behavior_prior": effective_behavior_prior,
+                "line_target_range": list(effective_behavior_prior.get("line_target_range", [])),
+                "mora_band": list(effective_behavior_prior.get("mora_band", [])),
+                "repetition_budget": int(effective_behavior_prior.get("repetition_budget", 0) or 0),
+                "title_return_band": list(effective_behavior_prior.get("title_return_band", [])),
+                "closure_strength_target": safe_text(effective_behavior_prior.get("closure_strength_target")),
+                "section_contrast_role": safe_text(effective_behavior_prior.get("section_contrast_role")),
+                "hook_density_band": safe_text(effective_behavior_prior.get("hook_density_band"), hook_pressure),
+                "lexical_family_bias": list(effective_behavior_prior.get("lexical_family_bias", [])),
                 "evidence_track_ids": list(vnext_meta.get("evidence_track_ids", [])),
                 "phrase_energy_roles": list(card.get("phrase_energy_roles", [])),
                 "title_drop_roles": list(card.get("title_drop_roles", [])),
@@ -1924,6 +2090,13 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         **sanitized_demo_plan,
         "track_id": track_id,
         "primary_mode": mode,
+        "selection_rollout": {
+            **(sanitized_demo_plan.get("selection_rollout", {}) or {}),
+            "phase": safe_text((sanitized_demo_plan.get("selection_rollout", {}) or {}).get("phase"), "shadow_compare"),
+            "enable_blended_selection": bool((sanitized_demo_plan.get("selection_rollout", {}) or {}).get("enable_blended_selection", False)),
+            "selection_basis": safe_text((sanitized_demo_plan.get("selection_rollout", {}) or {}).get("selection_basis"), "legacy_total"),
+            "shadow_metrics": list((sanitized_demo_plan.get("selection_rollout", {}) or {}).get("shadow_metrics", ["legacy_total", "musical_total", "blended_total"])),
+        },
         "motif_roster": [
             {
                 "motif_id": "seed_motifs",

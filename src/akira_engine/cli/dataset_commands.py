@@ -48,6 +48,7 @@ from ..vocadb_lyric_grounding_status import report_vocadb_lyric_grounding_status
 from ..vocadb_lyric_grounding_auto import auto_ground_vocadb_workspace_from_url_map
 from ..lyric_technique_pilot_batch import build_lyric_technique_pilot_batch
 from ..lyric_technique_pilot_workspace import materialize_lyric_technique_pilot_workspace
+from ..lyric_behavior_dataset import build_lyric_behavior_dataset
 
 
 def _archive_root(project_root: Path) -> Path:
@@ -174,6 +175,23 @@ def run_extract_lyric_technique_records(
         artists=artists,
         default_rights_status=default_rights_status,
         source_kind=source_kind,
+    )
+
+
+def run_build_lyric_behavior_dataset(
+    *,
+    project_root: Path,
+    artists: list[str] | None = None,
+    output_root: Path | None = None,
+) -> dict[str, Any]:
+    final_project_root = project_root.resolve()
+    final_output_root = _resolve(final_project_root, output_root) or (
+        final_project_root / "datasets" / "training" / "lyric_behavior"
+    ).resolve()
+    return build_lyric_behavior_dataset(
+        project_root=final_project_root,
+        artists=artists,
+        output_root=final_output_root,
     )
 
 
