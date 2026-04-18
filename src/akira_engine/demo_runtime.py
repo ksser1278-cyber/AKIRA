@@ -111,6 +111,48 @@ def _collect_surface_contamination(payload: Any, prefix: str = "") -> list[str]:
     return issues
 
 
+def _is_clean_surface_text(text: str) -> bool:
+    stripped = text.strip()
+    if not stripped:
+        return False
+    if contains_bad_script(stripped):
+        return False
+    if not contains_japanese(stripped):
+        return False
+    allowed_surface = re.compile(r"^[\u3040-\u30ff\u3400-\u9fffー・！？、。0-9\s]+$")
+    return bool(allowed_surface.fullmatch(stripped))
+
+
+def _sanitize_vnext_grounding_card(card: Any) -> dict[str, Any]:
+    if hasattr(card, "__dict__"):
+        payload = dict(card.__dict__)
+    elif isinstance(card, dict):
+        payload = dict(card)
+    else:
+        return {}
+
+    sanitized: dict[str, Any] = {}
+    for key, value in payload.items():
+        if key in {"required_motifs", "required_imagery", "imagery_focus", "narrative_goals"}:
+            if isinstance(value, list):
+                sanitized[key] = [
+                    text for text in (_safe_text(item) for item in value)
+                    if _is_clean_surface_text(text)
+                ]
+            else:
+                sanitized[key] = []
+            continue
+        if isinstance(value, str):
+            text = _safe_text(value)
+            if key == "section" or _is_clean_surface_text(text):
+                sanitized[key] = text
+            else:
+                sanitized[key] = ""
+            continue
+        sanitized[key] = value
+    return sanitized
+
+
 # ---------------------------------------------------------------------------
 # Style metadata constants
 # ---------------------------------------------------------------------------
@@ -522,7 +564,7 @@ def run_demo_songwriter(
     runtime_plan = normalize_demo_plan_for_runtime(demo_plan, vnext_plan=vnext_plan)
     runtime_plan["vnext_grounding"] = {
         "motif_roster": [m.__dict__ if hasattr(m, "__dict__") else m for m in vnext_plan.motif_roster],
-        "section_cards": [c.__dict__ if hasattr(c, "__dict__") else c for c in vnext_plan.section_cards]
+        "section_cards": [_sanitize_vnext_grounding_card(c) for c in vnext_plan.section_cards]
     }
     contamination_paths = _collect_surface_contamination(
         {

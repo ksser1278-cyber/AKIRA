@@ -1083,6 +1083,71 @@ def _prompt_ready_conditioning_records(
     return load_trusted_conditioning_records(artist_id, expansion_limit=expansion_limit)
 
 
+def _representative_anchor_fallback_records(
+    artist_id: str,
+    representative_profile: dict[str, Any],
+    mode_id: str,
+    *,
+    expansion_limit: int = 6,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    records = load_conditioning_records(artist_id)
+    if not records:
+        return [], []
+
+    preferred_track_ids = [
+        safe_text(item.get("track_id"))
+        for item in representative_profile.get("core_anchor_tracks", [])
+        if safe_text(item.get("track_id")) and safe_text(item.get("mode_id")) == safe_text(mode_id)
+    ]
+    default_track_id = safe_text(representative_profile.get("default_demo_track_id"))
+    if default_track_id and default_track_id not in preferred_track_ids:
+        preferred_track_ids.append(default_track_id)
+    preferred_track_id_set = {track_id for track_id in preferred_track_ids if track_id}
+
+    def _usable(record: dict[str, Any]) -> bool:
+        qc = record.get("quality_control", {}) if isinstance(record.get("quality_control", {}), dict) else {}
+        if qc.get("ready_for_prompting") is not True:
+            return False
+        warnings = " ".join(str(item) for item in qc.get("warnings", []) if safe_text(item)).lower()
+        if "generic scaffold only" in warnings:
+            return False
+        if "not ready for benchmark or prompting" in warnings:
+            return False
+        return True
+
+    def _rank_key(record: dict[str, Any]) -> tuple[int, int, int]:
+        identity = record.get("track_identity", {}) if isinstance(record.get("track_identity", {}), dict) else {}
+        qc = record.get("quality_control", {}) if isinstance(record.get("quality_control", {}), dict) else {}
+        lyric_ground = record.get("lyric_ground_truth", {}) if isinstance(record.get("lyric_ground_truth", {}), dict) else {}
+        track_id = safe_text(identity.get("track_id"))
+        preferred_bonus = 1 if track_id in preferred_track_id_set else 0
+        missing_penalty = -len(qc.get("missing_fields", []) or [])
+        section_bonus = len(lyric_ground.get("sections", []) or [])
+        return (preferred_bonus, section_bonus, missing_penalty)
+
+    usable_records = [record for record in records if _usable(record)]
+    usable_records.sort(key=_rank_key, reverse=True)
+
+    anchors = [
+        record
+        for record in usable_records
+        if safe_text((record.get("track_identity", {}) or {}).get("track_id")) in preferred_track_id_set
+    ]
+    if not anchors and usable_records:
+        anchors = usable_records[: min(3, len(usable_records))]
+
+    anchor_ids = {
+        safe_text((record.get("track_identity", {}) or {}).get("track_id"))
+        for record in anchors
+    }
+    expansions = [
+        record
+        for record in usable_records
+        if safe_text((record.get("track_identity", {}) or {}).get("track_id")) not in anchor_ids
+    ][:expansion_limit]
+    return anchors[:3], expansions
+
+
 def _derive_title_patterns(records: list[dict[str, Any]]) -> list[str]:
     patterns: list[str] = []
     for record in records:
@@ -1408,6 +1473,17 @@ def build_demo_plan(
                     anchors = fallback_anchors
                 if not expansions:
                     expansions = fallback_expansions
+            if not anchors or not expansions:
+                representative_fallback_anchors, representative_fallback_expansions = _representative_anchor_fallback_records(
+                    aid,
+                    representative_profile,
+                    effective_mode_id,
+                    expansion_limit=6,
+                )
+                if not anchors:
+                    anchors = representative_fallback_anchors
+                if not expansions:
+                    expansions = representative_fallback_expansions
             
             all_anchor_records.extend(anchors)
             all_expansion_records.extend(expansions)
