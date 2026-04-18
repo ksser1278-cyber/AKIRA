@@ -53,7 +53,7 @@ def test_hard_gate_failure_and_retry(mock_plan, mock_prompt):
         scores={"total": 85.0, "imagery_coverage": 1.0, "japanese_char_ratio": 0.9}
     )
 
-    promo = PromotionResult(candidate_id="c1", grade="Gold", score=85.0)
+    promo = PromotionResult(candidate_id="c1", grade="Gold", reason="ok")
 
     with patch("src.akira_engine.execution.mod.run_critic_stage") as mock_critic:
         with patch("src.akira_engine.execution.mod.run_promotion_stage") as mock_promo:
@@ -84,7 +84,7 @@ def test_permanent_hard_gate_failure(mock_plan, mock_prompt):
         hard_gate=HardGate(passed=True),
         scores={"total": 40.0, "imagery_coverage": 0.0, "japanese_char_ratio": 0.9}
     )
-    promo = PromotionResult(candidate_id="c1", grade="Fail", score=40.0)
+    promo = PromotionResult(candidate_id="c1", grade="Fail", reason="hard gate")
 
     with patch("src.akira_engine.execution.mod.run_critic_stage", return_value=fail_critic):
         with patch("src.akira_engine.execution.mod.run_promotion_stage", return_value=promo):
@@ -131,7 +131,7 @@ def test_blended_selection_records_shadow_compare(mock_plan, mock_prompt):
             "japanese_char_ratio": 0.95,
         },
     )
-    promo = PromotionResult(candidate_id="c2", grade="Gold", score=90.4)
+    promo = PromotionResult(candidate_id="c2", grade="Gold", reason="ok")
 
     with patch("src.akira_engine.execution.mod.run_critic_stage") as mock_critic:
         with patch("src.akira_engine.execution.mod.run_promotion_stage") as mock_promo:
@@ -152,6 +152,8 @@ def test_blended_selection_records_shadow_compare(mock_plan, mock_prompt):
             assert result["selected_score"] == pytest.approx(90.0)
             assert result["selection_diagnostics"]["legacy_winner"]["candidate_id"] == "c1"
             assert result["selection_diagnostics"]["blended_winner"]["candidate_id"] == "c2"
+            assert result["selection_diagnostics"]["rollout_gate"]["recommended"] is True
+            assert result["selection_diagnostics"]["rollout_gate"]["candidate_id"] == "c2"
 
 
 def test_blended_selection_can_be_enabled_via_rollout(mock_prompt):
@@ -189,7 +191,7 @@ def test_blended_selection_can_be_enabled_via_rollout(mock_prompt):
             "japanese_char_ratio": 0.95,
         },
     )
-    promo = PromotionResult(candidate_id="c2", grade="Gold", score=90.4)
+    promo = PromotionResult(candidate_id="c2", grade="Gold", reason="ok")
 
     with patch("src.akira_engine.execution.mod.run_critic_stage") as mock_critic:
         with patch("src.akira_engine.execution.mod.run_promotion_stage") as mock_promo:

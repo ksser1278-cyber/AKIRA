@@ -12,6 +12,20 @@ from src.akira_engine.execution.routing import ProductionRouter
 from src.akira_engine.creative.planner.schema import AbstractBlueprint
 
 
+def _passes_rollout_gate(result: dict[str, Any]) -> bool:
+    critic = result.get("critic")
+    if critic is None:
+        return False
+    if not critic.hard_gate.passed:
+        return False
+    imagery_coverage = float(critic.scores.get("imagery_coverage", 0.0))
+    japanese_ratio = float(critic.scores.get("japanese_char_ratio", 0.0))
+    return (
+        imagery_coverage > Policy.IMAGERY_COVERAGE_HARD_FAIL_THRESHOLD
+        and japanese_ratio >= (Policy.JAPANESE_RATIO_MIN - 0.1)
+    )
+
+
 def run_production_loop(
     project_root: Path,
     runtime_plan: dict[str, Any] | AbstractBlueprint,
@@ -105,6 +119,12 @@ def run_production_loop(
             legacy_winner = max(batch_results, key=lambda x: (x["legacy_total"], x["musical_total"], x["score"]))
             musical_winner = max(batch_results, key=lambda x: (x["musical_total"], x["legacy_total"], x["score"]))
             blended_winner = max(batch_results, key=lambda x: (x["blended_total"], x["legacy_total"], x["musical_total"]))
+            rollout_recommended = (
+                not use_blended_selection
+                and legacy_winner["candidate"].get("candidate_id") != blended_winner["candidate"].get("candidate_id")
+                and _passes_rollout_gate(blended_winner)
+                and blended_winner["blended_total"] > legacy_winner["blended_total"]
+            )
             selection_diagnostics = {
                 "legacy_winner": {
                     "candidate_id": legacy_winner["candidate"].get("candidate_id"),
@@ -130,6 +150,15 @@ def run_production_loop(
                     "musical_vs_blended_same": musical_winner["candidate"].get("candidate_id") == blended_winner["candidate"].get("candidate_id"),
                     "legacy_gap": round(legacy_winner["legacy_total"] - blended_winner["legacy_total"], 2),
                     "musical_gap": round(musical_winner["musical_total"] - blended_winner["musical_total"], 2),
+                },
+                "rollout_gate": {
+                    "recommended": rollout_recommended,
+                    "candidate_id": blended_winner["candidate"].get("candidate_id") if rollout_recommended else None,
+                    "reason": (
+                        "blended_winner_passes_gate_and_outperforms_legacy_on_blended_total"
+                        if rollout_recommended
+                        else "shadow_compare_hold"
+                    ),
                 },
             }
 
@@ -163,6 +192,7 @@ def run_production_loop(
                 continue
             else:
                 failure_reason = "hard_gate_failure_final"
+                break
         
         # Accept Winner
         best_candidate = winner["candidate"]

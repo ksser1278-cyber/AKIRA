@@ -49,6 +49,21 @@ _LOW_VALUE_TERMS = {
 }
 
 
+_LOW_SIGNAL_NON_CHORUS_TERMS = {
+    "ちゅっ",
+    "いないいないばあっ",
+    "痛い痛い痛い",
+    "鏡よ鏡",
+    "真っ赤な",
+}
+
+
+def _is_low_signal_non_chorus_term(term: str, *, section: str) -> bool:
+    if section in {"chorus", "chorus_final"}:
+        return False
+    return safe_text(term) in _LOW_SIGNAL_NON_CHORUS_TERMS
+
+
 def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
     cleaned: list[str] = []
     for value in values:
@@ -96,6 +111,7 @@ def _goal_flags(card: dict[str, Any]) -> set[str]:
 
 
 def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
+    section = safe_text(card.get("section"))
     primary = _clean_terms(
         list(card.get("required_imagery", []))
         + [card.get("scene", "")]
@@ -108,6 +124,9 @@ def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
     if not pool:
         fallback_hook = hook if contains_japanese(hook) and not contains_bad_script(hook) else _MODE_FALLBACK_HOOKS.get(mode, "残響")
         pool = [fallback_hook] + _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), ["残響", "体温", "呼吸"])
+    filtered = [term for term in pool if not _is_low_signal_non_chorus_term(term, section=section)]
+    if filtered:
+        pool = filtered
     return unique_preserve_order(pool)
 
 
@@ -120,6 +139,18 @@ def _pick_terms(pool: list[str], offset: int, *, section: str, count: int = 4) -
         tail = list(pool[2:6]) or list(pool[2:]) or list(pool[:])
         shift = offset % len(tail)
         balanced = head + list(tail[shift:] + tail[:shift])
+    filtered = [term for term in balanced if not _is_low_signal_non_chorus_term(term, section=section)]
+    if filtered:
+        balanced = filtered
+    if len(balanced) < count:
+        fallback_terms = [term for term in pool if not _is_low_signal_non_chorus_term(term, section=section)]
+        if not fallback_terms:
+            fallback_terms = list(pool)
+        for term in fallback_terms:
+            if len(balanced) >= count:
+                break
+            if term not in balanced:
+                balanced.append(term)
     while len(balanced) < count:
         balanced.append(balanced[-1])
     return balanced[:count]
@@ -162,16 +193,20 @@ def _term_conflicts(term: str, blocked: list[str]) -> bool:
 
 
 def _section_alternate_terms(card: dict[str, Any], hook: str) -> list[str]:
+    section = safe_text(card.get("section"))
     values = (
         list(card.get("required_motifs", []))
         + list(card.get("required_imagery", []))
         + list(card.get("imagery_focus", []))
         + [card.get("scene", ""), hook]
     )
-    return _clean_terms(values, limit=12)
+    terms = _clean_terms(values, limit=12)
+    filtered = [term for term in terms if not _is_low_signal_non_chorus_term(term, section=section)]
+    return filtered or terms
 
 
 def _section_support_terms(card: dict[str, Any], hook: str) -> list[str]:
+    section = safe_text(card.get("section"))
     banned = {
         safe_text(term)
         for term in list(card.get("required_imagery", []))[:2]
@@ -182,11 +217,13 @@ def _section_support_terms(card: dict[str, Any], hook: str) -> list[str]:
         + list(card.get("required_motifs", []))
         + [hook]
     )
-    return [
+    terms = [
         term
         for term in _clean_terms(values, limit=12)
         if safe_text(term) not in banned
     ]
+    filtered = [term for term in terms if not _is_low_signal_non_chorus_term(term, section=section)]
+    return filtered or terms
 
 
 def _pick_section_distinct_term(primary: str, *, blocked: list[str], alternates: list[str], allow_cliche: bool = False) -> str:

@@ -41,7 +41,10 @@ def _int_band(values: list[int], *, floor_value: int = 0) -> dict[str, int]:
     if not clean:
         return {"min": floor_value, "max": floor_value, "median": floor_value}
     mid = int(round(median(clean)))
-    low = max(floor_value, min(clean), mid - 1)
+    if len(set(clean)) == 1 and mid <= 2:
+        low = mid
+    else:
+        low = max(floor_value, mid - 1)
     high = max(low, min(max(clean), mid + 1))
     return {"min": int(low), "max": int(high), "median": int(mid)}
 
@@ -224,6 +227,10 @@ def summarize_behavior_priors(
         }
 
     shared_chorus_prior = section_priors.get("chorus", {})
+    shared_chorus_target = list(shared_chorus_prior.get("line_target_range", []))
+    chorus_mid = int(shared_chorus_prior.get("preferred_line_target", 0) or 0)
+    if chorus_mid:
+        shared_chorus_target = [max(4, chorus_mid - 1), max(chorus_mid, 4)]
     return {
         "available": bool(section_priors),
         "mode_id": safe_text(mode_id),
@@ -234,7 +241,7 @@ def summarize_behavior_priors(
             "chorus": len(chorus_records),
         },
         "shared": {
-            "chorus_line_target": list(shared_chorus_prior.get("line_target_range", [])),
+            "chorus_line_target": shared_chorus_target,
             "hook_density_band": safe_text(shared_chorus_prior.get("hook_density_band"), "medium"),
             "repetition_pressure": "high" if int(shared_chorus_prior.get("repetition_budget", 0) or 0) >= 2 else "medium",
         },
