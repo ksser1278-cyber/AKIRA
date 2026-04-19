@@ -984,6 +984,71 @@ def _hybrid_terms(card: dict[str, Any], hook: str, terms: list[str]) -> list[str
     return [a, b, c, d]
 
 
+def _hybrid_intro_lines(card: dict[str, Any], hook: str, terms: list[str], *, variant: int) -> list[str]:
+    a, b, c, d = _hybrid_terms(card, hook, terms)
+    proposition = _chorus_proposition(card, hook)
+    core_phrase = safe_text(proposition.get("core_phrase")) or hook
+    packs = [
+        [
+            f"{a}の通知だけまだ喉元でちらついている",
+            f"{b}のやさしさが画面越しに爪を立てる",
+            f"{core_phrase}だけうまく消せない",
+            f"{c}の熱で笑顔まで少し遅れて滲む",
+        ],
+        [
+            f"{a}の気配だけ先に指先へ貼りついてくる",
+            f"{b}の明度がまぶたの裏でじわじわ歪んでいく",
+            f"{core_phrase}だけまだ息の浅いところに残ってる",
+            f"{d}の余熱で言い訳まで甘く腐っていく",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _hybrid_verse_lines(
+    card: dict[str, Any],
+    hook: str,
+    terms: list[str],
+    *,
+    variant: int,
+    second_half: bool,
+) -> list[str]:
+    a, b, c, d = _hybrid_terms(card, hook, terms)
+    proposition = _chorus_proposition(card, hook)
+    core_phrase = safe_text(proposition.get("core_phrase")) or hook
+    if second_half:
+        packs = [
+            [
+                f"{a}の明滅ばかり追いかけて夜まで遅れ始める",
+                f"{b}の温度を読むたび鼓動だけ先に急いていく",
+                f"{c}を抱えたまま笑うほど逃げ場がなくなる",
+                f"{core_phrase}より甘い言い訳ではもう隠しきれない",
+            ],
+            [
+                f"{a}の気分ひとつで呼吸まで細くなっていく",
+                f"{b}の残り香を測るたび視界だけ少し尖り出す",
+                f"{c}を欲しがるほどかわいく壊れていく",
+                f"{core_phrase}を真似した愛ではもう足りなくなる",
+            ],
+        ]
+        return packs[variant % len(packs)]
+    packs = [
+        [
+            f"{a}の既読ばかり気にして息が浅くなる",
+            f"{b}の温度を測るたび指先まで嘘になる",
+            f"{c}を欲しがるほどかわいく壊れていく",
+            f"{core_phrase}みたいな愛ほど雑に刺さって抜けない",
+        ],
+        [
+            f"{a}の輪郭ばかりなぞって朝まで眠れない",
+            f"{b}の機嫌を待つたび心拍だけ先に濁っていく",
+            f"{c}を隠すほど依存だけよく見えてしまう",
+            f"{core_phrase}よりやさしいふりではもう誤魔化せない",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
 def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
@@ -1036,11 +1101,11 @@ def _render_dark_cute_hybrid_section(
     local_flags = set(flags) | {"sweet", "unease"}
     hybrid_terms = _hybrid_terms(card, hook, terms)
     if section == "intro":
-        return _dense_intro_lines(card, hook, terms, local_flags, variant=variant)
+        return _hybrid_intro_lines(card, hook, hybrid_terms, variant=variant)
     if section == "verse_1":
-        return _verse_lines(card, hook, hybrid_terms, local_flags, variant=variant, second_half=False)
+        return _hybrid_verse_lines(card, hook, hybrid_terms, variant=variant, second_half=False)
     if section == "verse_2":
-        return _verse_lines(card, hook, hybrid_terms, local_flags, variant=variant, second_half=True)
+        return _hybrid_verse_lines(card, hook, hybrid_terms, variant=variant, second_half=True)
     if section == "pre_chorus":
         return _hybrid_pre_chorus_lines(card, hook, hybrid_terms, second_half=False, variant=variant)
     if section == "pre_chorus_2":
