@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 from typing import Any
 
 from ..lexical_family_bank import is_cliche_term, pick_family_balanced_terms
@@ -115,6 +116,68 @@ def _goal_flags(card: dict[str, Any]) -> set[str]:
     if any(token in goal_text for token in ("不穏", "警報", "ノイズ", "崩壊")):
         flags.add("unease")
     return flags
+
+
+def _render_context(card: dict[str, Any]) -> dict[str, Any]:
+    context = card.get("_render_context", {})
+    return context if isinstance(context, dict) else {}
+
+
+def _chorus_proposition(card: dict[str, Any], hook: str) -> dict[str, Any]:
+    context = _render_context(card)
+    composition_brief = context.get("composition_brief", {})
+    proposition = composition_brief.get("chorus_proposition", {}) if isinstance(composition_brief, dict) else {}
+    core_phrase = safe_text(proposition.get("core_phrase"))
+    if not core_phrase or not contains_japanese(core_phrase) or contains_bad_script(core_phrase):
+        core_phrase = hook
+    return {
+        "core_phrase": core_phrase,
+        "escalation_phrase": safe_text(proposition.get("escalation_phrase")).lower(),
+        "release_phrase": safe_text(proposition.get("release_phrase")).lower(),
+    }
+
+
+def _hook_blueprint(card: dict[str, Any]) -> dict[str, Any]:
+    context = _render_context(card)
+    hook_blueprint = context.get("hook_blueprint", {})
+    return hook_blueprint if isinstance(hook_blueprint, dict) else {}
+
+
+def _renderer_frame_family(mode: str, form_family_id: str) -> str:
+    return f"{safe_text(mode)}/{safe_text(form_family_id)}"
+
+
+def _chorus_shape_id(form_family_id: str) -> str:
+    if safe_text(form_family_id) == "compressed_hook":
+        return "repeat_punch"
+    if safe_text(form_family_id) == "hybrid_release":
+        return "statement_hook_release"
+    return "default"
+
+
+def _bridge_shape_id(form_family_id: str) -> str:
+    if safe_text(form_family_id) == "compressed_hook":
+        return "withholding_drop"
+    if safe_text(form_family_id) == "hybrid_release":
+        return "perspective_delay"
+    return "default"
+
+
+def _count_hook_mentions(lines: list[str], hook: str) -> int:
+    hook_clean = safe_text(hook).replace(" ", "")
+    if not hook_clean:
+        return 0
+    return sum(re.sub(r"\s+", "", line).count(hook_clean) for line in lines)
+
+
+def _realized_hook_pressure(chorus_lines: list[str], chorus_final_lines: list[str], hook: str) -> str:
+    target_lines = list(chorus_lines) + list(chorus_final_lines)
+    mentions = _count_hook_mentions(target_lines, hook)
+    if mentions >= 5:
+        return "high"
+    if mentions >= 3:
+        return "medium"
+    return "low"
 
 
 def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
@@ -645,30 +708,38 @@ def _dense_outro_lines(card: dict[str, Any], hook: str, terms: list[str], flags:
 
 def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, final: bool) -> list[str]:
     a, b, c, d = terms
+    proposition = _chorus_proposition(card, hook)
+    core_phrase = safe_text(proposition.get("core_phrase")) or hook
+    escalation_hint = safe_text(proposition.get("escalation_phrase"))
+    release_hint = safe_text(proposition.get("release_phrase"))
+    hook_blueprint = _hook_blueprint(card)
     policy = safe_text(card.get("title_drop_policy"))
     pressure = safe_text(card.get("hook_pressure"), "medium")
-    mentions = _policy_mentions("chorus_final" if final else "chorus", hook, policy, pressure, variant=variant)
-    attack = "噛み砕いて" if "collapse" in flags or final else "締めて"
+    mentions = _policy_mentions("chorus_final" if final else "chorus", core_phrase, policy, pressure, variant=variant)
+    attack = "押し込んで" if "pressure" in escalation_hint else ("噛み砕いて" if "collapse" in flags or final else "締めて")
     dark_word = _support_word(flags, b, c)
-    last = f"{hook}を壊してもう一度鳴らせ" if final else f"{dark_word}ごと噛んで笑ってみせて"
+    repetition_pressure = safe_text(hook_blueprint.get("repetition_pressure"), pressure)
     if final:
         packs = [
             [
-                *mentions,
+                f"{core_phrase} {core_phrase}",
+                f"{core_phrase}をやめるな",
                 f"{a}の残響ごと胸骨まで割っていけ",
                 f"{b}の甘さを最後まで誤魔化すな",
                 f"{c}だけをここで逃がすな",
-                f"{d}も名前も全部ひっくり返せ",
+                f"{d}も名前も全部ひっくり返せ" if "irreversible" in release_hint else f"{d}の底でまだ笑ってみせろ",
             ],
             [
-                *mentions,
+                f"{core_phrase} {core_phrase}",
+                f"{core_phrase}をやめるな",
                 f"{a}の火花で喉の奥まで焼き切って",
                 f"{b}のかわいさで赦された気になるな",
                 f"{c}ごと今すぐ引きずり落とせ",
-                f"{hook}の色で最後まで息を塞げ",
+                f"{core_phrase}の色で最後まで息を塞げ",
             ],
             [
-                *mentions,
+                f"{core_phrase} {core_phrase}",
+                f"{core_phrase}をやめるな",
                 f"{a}の骨までまとめて踏み抜いていけ",
                 f"{b}の明度を最後まで信じるな",
                 f"{c}も拍もまとめて裂いてしまえ",
@@ -676,35 +747,33 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
             ],
         ]
         lines = packs[variant % len(packs)]
-        if pressure == "high" and len(mentions) == 1:
-            lines.insert(1, f"{hook}をやめるな")
+        if repetition_pressure == "high" and len(lines) >= 2:
+            lines[0] = f"{core_phrase} {core_phrase}"
+            lines[1] = f"{core_phrase}をやめるな"
         return lines
     packs = [
         [
-            *mentions,
-            f"{a}の温度で首筋まで{attack}",
-            f"{b}だけならまだ傷には浅すぎる",
-            f"{c}ごと抱えて笑顔のまま沈んでいけ",
-            f"{d}の膜まで噛み裂いてみせて",
-        ],
-        [
-            *mentions,
-            f"{a}の破片を奥歯の裏まで押し込んで",
+            f"{core_phrase} {core_phrase}",
+            f"{core_phrase}をまだやめない",
+            f"{a}の破片を奥歯の裏まで{attack}",
             f"{b}だけではまだ傷口が黙らない",
-            f"{c}を笑顔のままで飼い慣らすな",
-            f"{d}ごと喉の奥へ吊り上げて",
         ],
         [
-            *mentions,
-            f"{a}の残響で胸骨の芯まで揺らして",
-            f"{b}の甘さをここで言い訳にするな",
-            f"{c}だけをやさしく逃がすな",
-            f"{d}の毒まできれいな顔で見せつけろ",
+            f"{core_phrase} {core_phrase}",
+            f"{core_phrase}をまだ飲み込めない",
+            f"{a}の熱だけ喉元まで連れていって",
+            f"{dark_word}だけではもう呼吸がほどけない",
+        ],
+        [
+            f"{core_phrase} {core_phrase}",
+            f"{core_phrase}をまだ手放せない",
+            f"{a}の残響を胸骨の内側まで押し当てて",
+            f"{d}だけではまだ脈が止まらない",
         ],
     ]
     lines = packs[variant % len(packs)]
-    if pressure == "high" and len(mentions) == 1 and not final:
-        lines.insert(1, f"{hook}をまだやめない")
+    if repetition_pressure != "high":
+        lines[1] = f"{core_phrase}をまだ手放せない"
     return lines
 
 
@@ -719,25 +788,21 @@ def _bridge_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
             alternates=alternates + [b, c, d],
             allow_cliche=False,
         )
-    mentions = _policy_mentions("bridge", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
     packs = [
-        [
-            f"{a}を隠したまま水位だけ上がっていく",
-            f"{b}だけ妙に白く光っている",
-            mentions[0] if mentions else f"{c}さえうまく飲み込めない",
-            f"{d}の沈黙だけがこっちを見ている",
-        ],
         [
             f"{a}の底だけ静かに濡れ続けている",
             f"{b}の反射で部屋の温度が少し下がる",
-            mentions[0] if mentions else f"{c}だけが指先から離れない",
-            f"{d}の跡だけがやけに正確だ",
+            f"{c}だけが指先から離れない",
         ],
         [
             f"{a}を伏せたまま秒針だけが進んでいく",
             f"{b}の膜が薄く笑っている",
-            mentions[0] if mentions else f"{c}まで黙らせることができない",
-            f"{d}の輪郭だけがきれいすぎる",
+            f"{c}まで黙らせることができない",
+        ],
+        [
+            f"{a}を隠したまま水位だけ上がっていく",
+            f"{b}だけ妙に白く光っている",
+            f"{d}の沈黙だけがこっちを見ている",
         ],
     ]
     return packs[variant % len(packs)]
@@ -867,21 +932,23 @@ def _render_dark_cute_compressed_section(
     return [f"{a}だけがまだ息をしている", f"{b}の奥で{c}がまだざらついている"]
 
 
-def _hybrid_chorus_lines(hook: str, terms: list[str], *, final: bool) -> list[str]:
+def _hybrid_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, final: bool) -> list[str]:
     a, b, c, _ = terms
+    proposition = _chorus_proposition(card, hook)
+    core_phrase = safe_text(proposition.get("core_phrase")) or hook
     if final:
         return [
-            f"{hook} {hook}",
-            f"{hook}をやめるな",
-            f"{a}の熱で喉元まで裂いていけ",
-            f"{b}の明度にまだ赦されるな",
+            f"{core_phrase}だけではもう誤魔化せない",
+            f"{core_phrase} {core_phrase}",
+            f"{core_phrase}をやめるな",
+            f"{b}の熱で喉元まで裂いていけ",
             f"{c}ごと今すぐ抱えたまま落ちていけ",
         ]
     return [
-        f"{hook} {hook}",
-        f"{hook}をまだ手放せない",
-        f"{a}の熱で指先まで染め上げて",
-        f"{b}だけではまだ心音が足りない",
+        f"{core_phrase}だけじゃまだ足りない",
+        f"{core_phrase} {core_phrase}",
+        f"{core_phrase}をまだ手放せない",
+        f"{b}の熱で指先まで染め上げて",
         f"{c}の残り香を噛んだまま沈んでいけ",
     ]
 
@@ -889,10 +956,41 @@ def _hybrid_chorus_lines(hook: str, terms: list[str], *, final: bool) -> list[st
 def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
-        f"{a}を隠したまま{b}だけ上がっていく",
-        f"{c}の反射で{d}の輪郭が少し遅れる",
+        f"{a}を隠したまま視界だけ半拍遅れる",
+        f"{b}の反射で{c}の輪郭が少し遠のく",
         f"{hook}の余熱だけうまく捨てられない",
     ]
+
+
+def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
+    a, b, c, d = terms
+    if second_half:
+        packs = [
+            [
+                f"{a}が胸の裏で半拍ずつ遅れ始める",
+                f"{b}の継ぎ目で{c}まで喉元へ迫り上がる",
+                f"{hook}まであと少しで壊れそうだ",
+            ],
+            [
+                f"{a}が脈の裏側で静かにせり上がってくる",
+                f"{b}の反射で{c}だけ先に逃げ場をなくす",
+                f"{hook}まであと少しで戻れなくなる",
+            ],
+        ]
+        return packs[variant % len(packs)]
+    packs = [
+        [
+            f"{a}に触れるたび拍だけ先に乱れ始める",
+            f"{b}の継ぎ目で{c}まで言い訳できなくなる",
+            f"もう{d}しか残ってない",
+        ],
+        [
+            f"{a}が喉の奥で少しずつ明滅していく",
+            f"{b}の隙間から{c}まで静かに染まり始める",
+            f"もう{d}だけでは足りない",
+        ],
+    ]
+    return packs[variant % len(packs)]
 
 
 def _render_dark_cute_hybrid_section(
@@ -912,15 +1010,15 @@ def _render_dark_cute_hybrid_section(
     if section == "verse_2":
         return _verse_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
     if section == "pre_chorus":
-        return _pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+        return _hybrid_pre_chorus_lines(card, hook, terms, second_half=False, variant=variant)
     if section == "pre_chorus_2":
-        return _pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+        return _hybrid_pre_chorus_lines(card, hook, terms, second_half=True, variant=variant)
     if section == "chorus":
-        return _hybrid_chorus_lines(hook, terms, final=False)
+        return _hybrid_chorus_lines(card, hook, terms, final=False)
     if section == "bridge":
         return _hybrid_bridge_lines(hook, terms)
     if section == "chorus_final":
-        return _hybrid_chorus_lines(hook, terms, final=True)
+        return _hybrid_chorus_lines(card, hook, terms, final=True)
     if section == "outro":
         return _outro_lines(card, hook, terms, local_flags, variant=variant)
     a, b, c, _ = terms
@@ -1003,6 +1101,13 @@ def run_renderer_stage(
     else:
         section_cards.sort(key=lambda card: safe_text(card.get("section")))
 
+    render_context = {
+        "composition_brief": dict(plan.get("composition_brief", {}) or {}),
+        "hook_blueprint": dict(plan.get("hook_blueprint", {}) or {}),
+        "form_family_id": form_family_id,
+        "artist_grammar_bias": dict(plan.get("artist_grammar_bias", {}) or {}),
+    }
+    section_outputs: dict[str, list[str]] = {}
     lines = [f"# {hook}", ""]
     for position, card in enumerate(section_cards):
         section = safe_text(card.get("section"))
@@ -1011,37 +1116,46 @@ def run_renderer_stage(
         pool = _term_pool(card, hook, mode=mode)
         offset = variant_index + position + rng.randint(0, 2)
         terms = _pick_terms(pool, offset, section=section, count=4)
-        # Reverse-inject used terms into card for critic alignment
         card["conditioning_atoms"] = unique_preserve_order(
             terms + list(card.get("conditioning_atoms", []))
         )[:6]
+        card_payload = dict(card)
+        card_payload["_render_context"] = render_context
         section_lines = _render_section(
-            card,
+            card_payload,
             hook=hook,
             terms=terms,
             mode=mode,
-            form_family_id=safe_text(card.get("form_family_id") or form_family_id),
+            form_family_id=safe_text(card_payload.get("form_family_id") or form_family_id),
             variant=variant_index + position,
         )
-        target = int(card.get("line_target", len(section_lines)) or len(section_lines))
+        target = int(card_payload.get("line_target", len(section_lines)) or len(section_lines))
         fitted = _fit_section_lines(
             section_lines,
             section=section,
             hook=hook,
             terms=terms,
-            flags=_goal_flags(card),
+            flags=_goal_flags(card_payload),
             line_target=target,
         )
         if scaffold_mode and section in {"chorus", "chorus_final"} and hook not in "".join(fitted):
             fitted.append(f"{hook}をまだやめない")
+        section_outputs[section] = list(fitted[:target])
         lines.append(f"[{section}]")
         lines.extend(fitted[:target])
         lines.append("")
 
+    chorus_lines = section_outputs.get("chorus", [])
+    chorus_final_lines = section_outputs.get("chorus_final", [])
     return {
         "candidate_id": f"{track_id}-candidate-{variant_index + 1}",
         "title": hook,
         "markdown": "\n".join(lines).strip() + "\n",
         "scaffold_mode": scaffold_mode,
         "artist_id": artist_id,
+        "form_family_id": form_family_id,
+        "renderer_frame_family": _renderer_frame_family(mode, form_family_id),
+        "chorus_shape": _chorus_shape_id(form_family_id),
+        "bridge_shape": _bridge_shape_id(form_family_id),
+        "hook_pressure_realized": _realized_hook_pressure(chorus_lines, chorus_final_lines, hook),
     }

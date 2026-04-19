@@ -482,7 +482,7 @@ def _repetition_payoff_score(title: str, parsed: dict[str, list[str]]) -> float:
     score = (repeated_line_ratio * 0.35) + (min(1.0, title_ratio * 2.0) * 0.45) + chorus_return_bonus
     return round(max(0.0, min(1.0, score)), 2)
 
-def _section_contrast_score(parsed: dict[str, list[str]], expected_sections: list[str]) -> float:
+def _section_contrast_score(plan: dict[str, Any], parsed: dict[str, list[str]], expected_sections: list[str]) -> float:
     section_groups = _section_lines(parsed, expected_sections)
     if len(section_groups) < 2:
         return 0.5
@@ -502,8 +502,37 @@ def _section_contrast_score(parsed: dict[str, list[str]], expected_sections: lis
     bridge_mean = section_map.get("bridge", verse_mean)
     verse_chorus_gap = min(0.2, abs(verse_mean - chorus_mean) / 30.0)
     bridge_gap = min(0.1, abs(bridge_mean - verse_mean) / 40.0)
+    signature_sets = []
+    for section, lines in section_groups:
+        normalized = {
+            _normalized_line_signature(line, "")
+            for line in lines
+            if str(line or "").strip()
+        }
+        if normalized:
+            signature_sets.append((section, normalized))
+    divergences: list[float] = []
+    for index in range(1, len(signature_sets)):
+        previous = signature_sets[index - 1][1]
+        current = signature_sets[index][1]
+        union = previous | current
+        if not union:
+            continue
+        divergences.append(1.0 - (len(previous & current) / len(union)))
+    lexical_divergence = sum(divergences) / len(divergences) if divergences else 0.0
 
-    score = base + verse_chorus_gap + bridge_gap
+    form_family_id = str(plan.get("form_family_id", "")).strip()
+    family_bonus = 0.0
+    if form_family_id == "hybrid_release":
+        if parsed.get("bridge") and parsed.get("chorus_final"):
+            family_bonus += 0.08
+        if parsed.get("verse_2") and not parsed.get("pre_chorus_2"):
+            family_bonus += 0.05
+    elif form_family_id == "compressed_hook":
+        if parsed.get("pre_chorus_2") and parsed.get("chorus_final"):
+            family_bonus += 0.05
+
+    score = (base * 0.45) + (lexical_divergence * 0.35) + verse_chorus_gap + bridge_gap + family_bonus
     return round(max(0.0, min(1.0, score)), 2)
 
 def _oral_friction_score(lines: list[str], singability: float) -> float:
@@ -576,7 +605,7 @@ def run_critic_stage(
     prosodic_flow = _prosodic_flow_score(lines, parsed_sections, expected_sections, singability)
     hook_memorability = _hook_memorability_score(title, parsed_sections)
     repetition_payoff = _repetition_payoff_score(title, parsed_sections)
-    section_contrast = _section_contrast_score(parsed_sections, expected_sections)
+    section_contrast = _section_contrast_score(plan, parsed_sections, expected_sections)
     oral_friction = _oral_friction_score(lines, singability)
     musical_scores = {
         "prosodic_flow": prosodic_flow,
@@ -586,26 +615,28 @@ def run_critic_stage(
         "oral_friction": oral_friction,
     }
     legacy_total = round(
-        surface_score * 16
+        surface_score * 14
         + singability * 10
-        + binding * 8
+        + binding * 7
         + imagery_cov * 10
-        + line_variety * 8
-        + hook_restraint * 6
-        + structure_score * 8
-        + evidence_utilization * 14
-        + family_diversity * 6
+        + line_variety * 6
+        + hook_restraint * 4
+        + structure_score * 4
+        + evidence_utilization * 12
+        + family_diversity * 4
         + cliche_control * 4
-        + section_contrast * 4
-        + hook_memorability * 2,
+        + prosodic_flow * 3
+        + hook_memorability * 7
+        + repetition_payoff * 6
+        + section_contrast * 9,
         2,
     )
     musical_total = round(
-        prosodic_flow * 24
+        prosodic_flow * 22
         + hook_memorability * 24
-        + repetition_payoff * 20
-        + section_contrast * 18
-        + (1.0 - oral_friction) * 14,
+        + repetition_payoff * 22
+        + section_contrast * 20
+        + (1.0 - oral_friction) * 12,
         2,
     )
     blended_total = round((legacy_total * 0.4) + (musical_total * 0.6), 2)
@@ -636,6 +667,11 @@ def run_critic_stage(
             "cliche_density": cliche_density,
             "cliche_control": cliche_control,
             "musical_scores": musical_scores,
+            "form_family_id": str(plan.get("form_family_id", "")).strip(),
+            "renderer_frame_family": str(candidate.get("renderer_frame_family", "")).strip(),
+            "chorus_shape": str(candidate.get("chorus_shape", "")).strip(),
+            "bridge_shape": str(candidate.get("bridge_shape", "")).strip(),
+            "hook_pressure_realized": str(candidate.get("hook_pressure_realized", "")).strip(),
         },
         diagnostics={
             "template_hits": detected_templates,
@@ -652,6 +688,11 @@ def run_critic_stage(
             "legacy_total": legacy_total,
             "musical_total": musical_total,
             "blended_total": blended_total,
+            "form_family_id": str(plan.get("form_family_id", "")).strip(),
+            "renderer_frame_family": str(candidate.get("renderer_frame_family", "")).strip(),
+            "chorus_shape": str(candidate.get("chorus_shape", "")).strip(),
+            "bridge_shape": str(candidate.get("bridge_shape", "")).strip(),
+            "hook_pressure_realized": str(candidate.get("hook_pressure_realized", "")).strip(),
         },
         honest_metrics_active=True
     )
@@ -662,7 +703,7 @@ def run_critic_stage(
         
     if imagery_cov <= Policy.IMAGERY_COVERAGE_HARD_FAIL_THRESHOLD and not scaffold_mode:
         result.notes.append("CRITICAL: Imagery coverage hard fail (Grounding Bridge broken)")
-    if structure_score < 0.8:
+    if structure_score < 0.72:
         result.notes.append("Structure under target: section coverage or escalation is weak")
     if evidence_utilization < 0.68:
         result.notes.append("Evidence utilization under target: section atoms or title policy are weak")

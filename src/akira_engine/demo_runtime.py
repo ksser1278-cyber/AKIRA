@@ -398,6 +398,8 @@ def render_demo_run_report(run_manifest: dict[str, Any]) -> str:
         f"- Track ID: `{run_manifest['track_id']}`",
         f"- Artist: `{run_manifest['artist_id']}`",
         f"- Selection Path: `{run_manifest.get('selection_mode', 'RC-2026-03-31 (Frozen Baseline)')}`",
+        f"- Form Family: `{run_manifest.get('form_family_id', 'unknown')}`",
+        f"- Renderer Frame: `{run_manifest.get('renderer_frame_family', 'unknown')}`",
         "",
         "## Performance Snapshot",
     ]
@@ -431,6 +433,11 @@ def render_demo_run_report(run_manifest: dict[str, Any]) -> str:
         lines.append(f"- **{label}**: `{f_val:.3f}`")
         
     lines.extend([
+        "",
+        "## Calibration Diagnostics",
+        f"- Chorus Shape: `{run_manifest.get('chorus_shape', 'unknown')}`",
+        f"- Bridge Shape: `{run_manifest.get('bridge_shape', 'unknown')}`",
+        f"- Hook Pressure Realized: `{run_manifest.get('hook_pressure_realized', 'unknown')}`",
         "",
         "## Manifest Metadata",
         f"- Record Type: `{run_manifest.get('record_type')}`",
@@ -655,6 +662,11 @@ def run_demo_songwriter(
             winner_score.scores.get("blended_total", winner_score.scores.get("total", 0.0)) if winner_score else 0.0,
         ),
         "grade": promotion.grade if promotion else "Fail",
+        "form_family_id": _safe_text(runtime_plan.get("form_family_id")),
+        "renderer_frame_family": _safe_text(winner.get("renderer_frame_family")) if winner else "",
+        "chorus_shape": _safe_text(winner.get("chorus_shape")) if winner else "",
+        "bridge_shape": _safe_text(winner.get("bridge_shape")) if winner else "",
+        "hook_pressure_realized": _safe_text(winner.get("hook_pressure_realized")) if winner else "",
         "pre_audit": pre_audit_result.__dict__,
         "critic": winner_score.scores if winner_score else {},
         "promotion_result": promotion.__dict__ if promotion else {},

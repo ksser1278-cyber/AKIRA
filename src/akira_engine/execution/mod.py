@@ -26,6 +26,17 @@ def _passes_rollout_gate(result: dict[str, Any]) -> bool:
     )
 
 
+def _candidate_calibration_fields(result: dict[str, Any]) -> dict[str, Any]:
+    candidate = result.get("candidate", {}) if isinstance(result, dict) else {}
+    return {
+        "form_family_id": candidate.get("form_family_id"),
+        "renderer_frame_family": candidate.get("renderer_frame_family"),
+        "chorus_shape": candidate.get("chorus_shape"),
+        "bridge_shape": candidate.get("bridge_shape"),
+        "hook_pressure_realized": candidate.get("hook_pressure_realized"),
+    }
+
+
 def run_production_loop(
     project_root: Path,
     runtime_plan: dict[str, Any] | AbstractBlueprint,
@@ -131,18 +142,21 @@ def run_production_loop(
                     "legacy_total": legacy_winner["legacy_total"],
                     "musical_total": legacy_winner["musical_total"],
                     "blended_total": legacy_winner["blended_total"],
+                    **_candidate_calibration_fields(legacy_winner),
                 },
                 "musical_winner": {
                     "candidate_id": musical_winner["candidate"].get("candidate_id"),
                     "legacy_total": musical_winner["legacy_total"],
                     "musical_total": musical_winner["musical_total"],
                     "blended_total": musical_winner["blended_total"],
+                    **_candidate_calibration_fields(musical_winner),
                 },
                 "blended_winner": {
                     "candidate_id": blended_winner["candidate"].get("candidate_id"),
                     "legacy_total": blended_winner["legacy_total"],
                     "musical_total": blended_winner["musical_total"],
                     "blended_total": blended_winner["blended_total"],
+                    **_candidate_calibration_fields(blended_winner),
                 },
                 "shadow_compare": {
                     "legacy_vs_musical_same": legacy_winner["candidate"].get("candidate_id") == musical_winner["candidate"].get("candidate_id"),

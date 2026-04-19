@@ -248,3 +248,11 @@ def test_runtime_and_renderer_respect_form_family(tmp_path):
     hybrid_render = run_renderer_stage(normalized_hybrid, variant_index=0)
 
     assert compressed_render["markdown"] != hybrid_render["markdown"]
+    assert compressed_render["form_family_id"] == "compressed_hook"
+    assert hybrid_render["form_family_id"] == "hybrid_release"
+    assert compressed_render["renderer_frame_family"] == "dark_cute_breakdown/compressed_hook"
+    assert hybrid_render["renderer_frame_family"] == "dark_cute_breakdown/hybrid_release"
+    assert compressed_render["chorus_shape"] == "repeat_punch"
+    assert hybrid_render["chorus_shape"] == "statement_hook_release"
+    assert compressed_render["bridge_shape"] == "withholding_drop"
+    assert hybrid_render["bridge_shape"] == "perspective_delay"

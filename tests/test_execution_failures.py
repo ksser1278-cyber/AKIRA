@@ -105,7 +105,15 @@ def test_permanent_hard_gate_failure(mock_plan, mock_prompt):
 def test_blended_selection_records_shadow_compare(mock_plan, mock_prompt):
     def indexed_generator(*args, **kwargs):
         index = kwargs.get("index", 0)
-        return {"candidate_id": f"c{index + 1}", "markdown": "lyrics"}
+        return {
+            "candidate_id": f"c{index + 1}",
+            "markdown": "lyrics",
+            "form_family_id": "compressed_hook" if index == 0 else "hybrid_release",
+            "renderer_frame_family": "dark_cute_breakdown/compressed_hook" if index == 0 else "dark_cute_breakdown/hybrid_release",
+            "chorus_shape": "repeat_punch" if index == 0 else "statement_hook_release",
+            "bridge_shape": "withholding_drop" if index == 0 else "perspective_delay",
+            "hook_pressure_realized": "high" if index == 0 else "medium",
+        }
 
     critic_legacy = CriticResult(
         candidate_id="c1",
@@ -152,6 +160,8 @@ def test_blended_selection_records_shadow_compare(mock_plan, mock_prompt):
             assert result["selected_score"] == pytest.approx(90.0)
             assert result["selection_diagnostics"]["legacy_winner"]["candidate_id"] == "c1"
             assert result["selection_diagnostics"]["blended_winner"]["candidate_id"] == "c2"
+            assert result["selection_diagnostics"]["legacy_winner"]["renderer_frame_family"] == "dark_cute_breakdown/compressed_hook"
+            assert result["selection_diagnostics"]["blended_winner"]["bridge_shape"] == "perspective_delay"
             assert result["selection_diagnostics"]["rollout_gate"]["recommended"] is True
             assert result["selection_diagnostics"]["rollout_gate"]["candidate_id"] == "c2"
 
@@ -165,7 +175,15 @@ def test_blended_selection_can_be_enabled_via_rollout(mock_prompt):
 
     def indexed_generator(*args, **kwargs):
         index = kwargs.get("index", 0)
-        return {"candidate_id": f"c{index + 1}", "markdown": "lyrics"}
+        return {
+            "candidate_id": f"c{index + 1}",
+            "markdown": "lyrics",
+            "form_family_id": "compressed_hook" if index == 0 else "hybrid_release",
+            "renderer_frame_family": "dark_cute_breakdown/compressed_hook" if index == 0 else "dark_cute_breakdown/hybrid_release",
+            "chorus_shape": "repeat_punch" if index == 0 else "statement_hook_release",
+            "bridge_shape": "withholding_drop" if index == 0 else "perspective_delay",
+            "hook_pressure_realized": "high" if index == 0 else "medium",
+        }
 
     critic_legacy = CriticResult(
         candidate_id="c1",
