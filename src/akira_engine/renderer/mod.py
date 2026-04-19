@@ -953,6 +953,37 @@ def _hybrid_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, f
     ]
 
 
+def _hybrid_terms(card: dict[str, Any], hook: str, terms: list[str]) -> list[str]:
+    a, b, c, d = terms
+    alternates = _section_alternate_terms(card, hook)
+    support_terms = _section_support_terms(card, hook)
+    a = _pick_section_distinct_term(
+        _de_cliche_term(a, b, c, d, hook),
+        blocked=[],
+        alternates=alternates + support_terms,
+        allow_cliche=False,
+    )
+    b = _pick_section_distinct_term(
+        _de_cliche_term(b, c, d, a, hook),
+        blocked=[a],
+        alternates=alternates + support_terms,
+        allow_cliche=False,
+    )
+    c = _pick_section_distinct_term(
+        _de_cliche_term(c, d, a, b, hook),
+        blocked=[a, b],
+        alternates=alternates + support_terms,
+        allow_cliche=False,
+    )
+    d = _pick_section_distinct_term(
+        _de_cliche_term(d, a, b, c, hook),
+        blocked=[a, b, c],
+        alternates=alternates + support_terms,
+        allow_cliche=False,
+    )
+    return [a, b, c, d]
+
+
 def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
@@ -963,7 +994,7 @@ def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
 
 
 def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
-    a, b, c, d = terms
+    a, b, c, d = _hybrid_terms(card, hook, terms)
     if second_half:
         packs = [
             [
@@ -1003,25 +1034,26 @@ def _render_dark_cute_hybrid_section(
 ) -> list[str]:
     section = safe_text(card.get("section"))
     local_flags = set(flags) | {"sweet", "unease"}
+    hybrid_terms = _hybrid_terms(card, hook, terms)
     if section == "intro":
         return _dense_intro_lines(card, hook, terms, local_flags, variant=variant)
     if section == "verse_1":
-        return _verse_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+        return _verse_lines(card, hook, hybrid_terms, local_flags, variant=variant, second_half=False)
     if section == "verse_2":
-        return _verse_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+        return _verse_lines(card, hook, hybrid_terms, local_flags, variant=variant, second_half=True)
     if section == "pre_chorus":
-        return _hybrid_pre_chorus_lines(card, hook, terms, second_half=False, variant=variant)
+        return _hybrid_pre_chorus_lines(card, hook, hybrid_terms, second_half=False, variant=variant)
     if section == "pre_chorus_2":
-        return _hybrid_pre_chorus_lines(card, hook, terms, second_half=True, variant=variant)
+        return _hybrid_pre_chorus_lines(card, hook, hybrid_terms, second_half=True, variant=variant)
     if section == "chorus":
-        return _hybrid_chorus_lines(card, hook, terms, final=False)
+        return _hybrid_chorus_lines(card, hook, hybrid_terms, final=False)
     if section == "bridge":
-        return _hybrid_bridge_lines(hook, terms)
+        return _hybrid_bridge_lines(hook, hybrid_terms)
     if section == "chorus_final":
-        return _hybrid_chorus_lines(card, hook, terms, final=True)
+        return _hybrid_chorus_lines(card, hook, hybrid_terms, final=True)
     if section == "outro":
-        return _outro_lines(card, hook, terms, local_flags, variant=variant)
-    a, b, c, _ = terms
+        return _outro_lines(card, hook, hybrid_terms, local_flags, variant=variant)
+    a, b, c, _ = hybrid_terms
     return [f"{a}の明滅だけがまだ収まらない", f"{b}の裏で{c}だけ先に跳ねている"]
 
 
