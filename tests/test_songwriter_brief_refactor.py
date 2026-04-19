@@ -262,15 +262,19 @@ def test_deco27_surface_terms_filter_title_like_non_chorus_terms():
     card = {
         "section": "verse_1",
         "required_imagery": ["蛍光", "体温"],
-        "required_motifs": ["シンデレラ", "ラビットホール", "輪郭", "残り香"],
-        "imagery_focus": ["輪郭", "残り香"],
+        "required_motifs": ["シンデレラ", "ラビットホール", "毒の味", "輪郭", "残り香"],
+        "imagery_focus": ["輪郭", "残り香", "毒の味"],
         "scene": "深夜",
         "_render_context": {"artist_id": "deco27"},
     }
 
-    selected = _deco27_surface_terms(card, "一緒の毒の味", ["シンデレラ", "ラビットホール", "蛍光", "体温"])
+    selected = _deco27_surface_terms(
+        card,
+        "一緒の毒の味",
+        ["シンデレラ", "ラビットホール", "毒の味", "体温"],
+    )
 
-    assert all(term not in {"シンデレラ", "ラビットホール"} for term in selected)
+    assert all(term not in {"シンデレラ", "ラビットホール", "毒の味"} for term in selected)
 
 
 def test_hybrid_release_keeps_core_phrase_inside_chorus_family():

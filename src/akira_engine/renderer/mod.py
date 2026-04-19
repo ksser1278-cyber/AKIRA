@@ -69,7 +69,36 @@ def _is_low_signal_non_chorus_term(term: str, *, section: str) -> bool:
 def _is_non_chorus_hook_term(term: str, hook: str, *, section: str) -> bool:
     if section in {"chorus", "chorus_final"}:
         return False
-    return bool(safe_text(term)) and safe_text(term) == safe_text(hook)
+    text = safe_text(term)
+    hook_text = safe_text(hook)
+    if not text or not hook_text:
+        return False
+    if text == hook_text:
+        return True
+    if len(text) >= 3 and text in _hook_fragments(hook_text):
+        return True
+    return False
+
+
+def _hook_fragments(hook: str) -> set[str]:
+    hook_text = safe_text(hook)
+    if not hook_text:
+        return set()
+    fragments = {hook_text}
+    separators = ("の", "と", "や", "へ", "で", "が", "を", "は", "も", "に")
+    for separator in separators:
+        if separator not in hook_text:
+            continue
+        parts = [part for part in hook_text.split(separator) if len(part) >= 2]
+        for part in parts:
+            if len(part) >= 3:
+                fragments.add(part)
+        if len(parts) >= 2:
+            for index in range(len(parts) - 1):
+                joined = f"{parts[index]}{separator}{parts[index + 1]}"
+                if len(joined) >= 3:
+                    fragments.add(joined)
+    return fragments
 
 
 def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
@@ -1059,14 +1088,24 @@ def _deco27_surface_terms(card: dict[str, Any], hook: str, terms: list[str]) -> 
     if section in {"chorus", "chorus_final"}:
         return selected
 
-    candidate_pool = _section_alternate_terms(card, hook) + _section_support_terms(card, hook)
+    blocked_hook_terms = [*_DECO27_NON_CHORUS_TITLE_TERMS, *_hook_fragments(hook)]
+    candidate_pool = [
+        term
+        for term in unique_preserve_order(
+            _section_alternate_terms(card, hook)
+            + _section_support_terms(card, hook)
+            + _SECTION_DEFAULT_TERMS.get(section, [])
+            + _MODE_DEFAULT_TERMS.get("dark_cute_breakdown", [])
+        )
+        if safe_text(term) and safe_text(term) not in blocked_hook_terms
+    ]
     rewritten: list[str] = []
     for term in selected:
         text = safe_text(term)
-        if text in _DECO27_NON_CHORUS_TITLE_TERMS:
+        if text in _DECO27_NON_CHORUS_TITLE_TERMS or _is_non_chorus_hook_term(text, hook, section=section):
             replacement = _pick_section_distinct_term(
                 "",
-                blocked=[*_DECO27_NON_CHORUS_TITLE_TERMS, *rewritten],
+                blocked=[*blocked_hook_terms, *rewritten],
                 alternates=candidate_pool,
                 allow_cliche=False,
             )
