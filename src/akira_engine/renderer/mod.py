@@ -119,6 +119,8 @@ def _goal_flags(card: dict[str, Any]) -> set[str]:
 
 def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
     section = safe_text(card.get("section"))
+    # Conditioning atoms from plan are highest priority — they are artist-specific
+    conditioning_atoms = _clean_terms(list(card.get("conditioning_atoms", []))[:6], limit=6)
     primary = _clean_terms(
         list(card.get("required_imagery", []))
         + [card.get("scene", "")]
@@ -127,7 +129,8 @@ def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
     )
     secondary = _clean_terms(list(card.get("required_motifs", [])), limit=8)
     defaults = _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), []) + _MODE_DEFAULT_TERMS.get(mode, _MODE_DEFAULT_TERMS["default"])
-    pool = unique_preserve_order(primary + [item for item in secondary if item not in primary] + defaults)
+    # conditioning_atoms first, then primary imagery, then secondary, then defaults
+    pool = unique_preserve_order(conditioning_atoms + primary + [item for item in secondary if item not in primary] + defaults)
     if not pool:
         fallback_hook = hook if contains_japanese(hook) and not contains_bad_script(hook) else _MODE_FALLBACK_HOOKS.get(mode, "残響")
         pool = [fallback_hook] + _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), ["残響", "体温", "呼吸"])
@@ -356,48 +359,72 @@ def _verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[s
     a, b, c, d = terms
     sting = _ending_word(flags, "曲がる")
     support = _support_word(flags, c, d)
-    verb = "増えていく" if not second_half else "剥がれていく"
-    packs = [
+    # verse_1 packs: observational → introspective flow
+    v1_packs = [
         [
-            f"{a}をなぞるたび{b}の輪郭が{verb}",
-            f"{c}の匂いで呼吸が少し{sting}",
-            f"{d}のせいで笑い方まで痺れていく",
-            f"{support}を隠すほど痛みがよく見える",
+            f"{a}の匂いがまだ残ってるくせに",
+            f"もう{b}のことは忘れたふりをする",
+            f"{c}のせいだって言い訳ばかり増えていく",
+            f"それでも{support}だけは手放せない",
         ],
         [
-            f"{a}を舐めるたび{b}の温度だけ近づいてくる",
-            f"{c}の残り香で脈の速さがずれていく",
-            f"{d}の気配でまともな顔が先に崩れる",
+            f"どうせ{a}なんて最初から壊れてた",
+            f"{b}の輪郭をなぞるたび指が{sting}",
+            f"{c}を隠すほど痛みがよく見える",
             f"{support}みたいな言葉ほど深く刺さる",
         ],
         [
             f"{a}を数えるたび{b}の膜だけ薄くなる",
             f"{c}のしびれで視界の端が揺れていく",
-            f"{d}の笑みが静かに皮膚へ移ってくる",
+            f"まともな顔して笑ってるのが一番きつい",
             f"{support}の置き方ひとつで夜が濁っていく",
         ],
     ]
-    return packs[variant % len(packs)]
+    # verse_2 packs: escalation → rawer, more direct
+    v2_packs = [
+        [
+            f"{a}のこと好きだった気がする",
+            f"でも{b}の裏にはいつも{c}が透けていた",
+            f"嘘つき。全部嘘つき。",
+            f"{support}すら信じられないまま朝が来る",
+        ],
+        [
+            f"何度{a}を塗り替えても{b}が滲む",
+            f"きれいな{c}ほど先に壊れていくって",
+            f"誰が教えてくれた？ 誰も教えてくれない",
+            f"{support}の残骸だけが正しく光る",
+        ],
+        [
+            f"{a}を捨てろ、{b}を捨てろ、",
+            f"そう言い聞かせるたび{c}が増えていく",
+            f"矛盾ごと飲み込んで笑えるほど",
+            f"もう{support}には慣れてしまった",
+        ],
+    ]
+    if second_half:
+        return v2_packs[variant % len(v2_packs)]
+    return v1_packs[variant % len(v1_packs)]
 
 
 def _pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
     a, b, c, d = terms
     collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
-    closing = f"{hook}まであと少しで{collapse}" if safe_text(card.get("title_drop_policy")) != "withhold" and second_half else f"{d}まであと少しで{collapse}"
+    can_title_drop = safe_text(card.get("title_drop_policy")) != "withhold"
+    closing = f"もう{hook}しか聞こえない" if can_title_drop and second_half else f"もう{d}しか残ってない"
     packs = [
         [
-            f"{a}が点滅して心臓の位置がずれる",
-            f"{b}の隙間で{c}だけ育っていく",
+            f"わかってる、全部わかってるのに",
+            f"{b}が{c}を呼んでしまう",
             closing,
         ],
         [
-            f"{a}が脈の裏側で静かに裂けていく",
-            f"{b}の継ぎ目から{c}だけ腐り始める",
+            f"息を止めたって{a}は消えない",
+            f"{b}の奥で{c}がまだ脈を打ってる",
             closing,
         ],
         [
-            f"{a}に触れるたび呼吸の拍が狂っていく",
-            f"{b}の裂け目で{c}がやけに明るい",
+            f"限界なんてとっくに超えてた",
+            f"{a}も{b}も{c}も全部抱えたまま",
             closing,
         ],
     ]
@@ -886,6 +913,10 @@ def run_renderer_stage(
         pool = _term_pool(card, hook, mode=mode)
         offset = variant_index + position + rng.randint(0, 2)
         terms = _pick_terms(pool, offset, section=section, count=4)
+        # Reverse-inject used terms into card for critic alignment
+        card["conditioning_atoms"] = unique_preserve_order(
+            terms + list(card.get("conditioning_atoms", []))
+        )[:6]
         section_lines = _render_section(card, hook=hook, terms=terms, mode=mode, variant=variant_index + position)
         target = int(card.get("line_target", len(section_lines)) or len(section_lines))
         fitted = _fit_section_lines(

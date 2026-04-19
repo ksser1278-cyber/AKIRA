@@ -155,80 +155,12 @@ def _hook_restraint_score(title: str, lines: list[str]) -> float:
     return 0.35
 
 
-def _evidence_atoms(card: dict[str, Any]) -> list[str]:
-    atoms: list[str] = []
-    values = (
-        list(card.get("required_imagery", []))
-        + [card.get("scene", "")]
-        + list(card.get("imagery_focus", []))[:2]
-        + list(card.get("required_motifs", []))[:2]
-    )
-    for value in values:
-        text = str(value or "").strip()
-        if not text:
-            continue
-        if len(text.replace(" ", "")) > 14:
-            continue
-        if text in {"誰に", "場所", "見え", "心を", "色に", "色で", "あと", "少し", "全部"}:
-            continue
-        if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
-            continue
-        if contains_bad_script(text):
-            continue
-        if text not in atoms:
-            atoms.append(text)
-    return atoms[:4]
 
 
 def _title_policy_score(policy: str, title: str, section_lines: list[str]) -> float:
     return _title_policy_score_impl(policy, title, section_lines)
 
 
-def _evidence_atoms(card: dict[str, Any]) -> list[str]:
-    atoms: list[str] = []
-    values = (
-        list(card.get("required_imagery", []))
-        + [card.get("scene", "")]
-        + list(card.get("imagery_focus", []))[:3]
-        + list(card.get("required_motifs", []))[:4]
-    )
-    blocked_terms = {
-        "沃겹겓",
-        "?닸?",
-        "誤뗣걟",
-        "恙껁굮",
-        "?꿔겓",
-        "?꿔겎",
-        "?귙겏",
-        "弱묆걮",
-        "?③깿",
-        "方",
-        "感謝",
-        "恩",
-        "一生",
-        "子供",
-        "想い",
-        "秘め",
-        "愛言葉",
-    }
-    for value in values:
-        text = str(value or "").strip()
-        if not text:
-            continue
-        compact = text.replace(" ", "")
-        if len(compact) > 18:
-            continue
-        if text in blocked_terms:
-            continue
-        if _is_low_signal_alignment_term(text):
-            continue
-        if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
-            continue
-        if contains_bad_script(text):
-            continue
-        if text not in atoms:
-            atoms.append(text)
-    return atoms[:6]
 
 
 def _title_policy_score_impl(policy: str, title: str, section_lines: list[str]) -> float:
@@ -268,8 +200,10 @@ def _evidence_utilization_score(plan: dict[str, Any], title: str, markdown: str)
 
 def _evidence_atoms(card: dict[str, Any]) -> list[str]:
     atoms: list[str] = []
+    # Include conditioning_atoms as primary evidence source
     values = (
-        list(card.get("required_imagery", []))
+        list(card.get("conditioning_atoms", []))[:4]
+        + list(card.get("required_imagery", []))
         + [card.get("scene", "")]
         + list(card.get("imagery_focus", []))[:3]
         + list(card.get("required_motifs", []))[:4]
@@ -292,6 +226,8 @@ def _evidence_atoms(card: dict[str, Any]) -> list[str]:
         if len(compact) > 18:
             continue
         if text in blocked_terms:
+            continue
+        if _is_low_signal_alignment_term(text):
             continue
         if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
             continue
@@ -408,41 +344,66 @@ def _structure_score(plan: dict[str, Any], text: str) -> tuple[float, dict[str, 
         "chorus_final_line_count": final_len,
     }
 
+def _atom_matches_body(atom: str, body: str) -> bool:
+    """Check if atom appears in body, with partial matching for longer atoms."""
+    if atom in body:
+        return True
+    # Partial match: if atom is 3+ chars, check core substring (first 2 kanji/kana)
+    compact = atom.replace(" ", "")
+    jp_chars = [ch for ch in compact if ("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") or ("\u30a0" <= ch <= "\u30ff")]
+    if len(jp_chars) >= 3:
+        core = "".join(jp_chars[:2])
+        if core in body:
+            return True
+    return False
+
+
 def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[float, list[str]]:
-    """Evaluates how many mandatory imagery anchors from the plan appear in the PURE lyrics (excluding metadata)."""
-    all_required = []
-    # vNext: Use section cards if available
-    for card in plan.get("section_cards", []):
-        all_required.extend(card.get("required_imagery", []))
+    """Evaluates how many imagery anchors from each section card appear in the lyrics."""
+    parsed = _parse_sections(pure_body)
+    section_scores: list[float] = []
+    all_hits: list[str] = []
     
-    # Compatibility: Use motif_roster or keywords if no section cards
-    if not all_required:
+    for card in plan.get("section_cards", []):
+        section = str(card.get("section", "")).strip()
+        section_lines = parsed.get(section, [])
+        section_body = "".join(section_lines)
+        
+        atoms: list[str] = []
+        for value in (
+            list(card.get("conditioning_atoms", []))[:4]
+            + list(card.get("required_imagery", []))
+            + list(card.get("imagery_focus", []))[:2]
+        ):
+            text = str(value or "").strip()
+            if text and text not in atoms and not _is_low_signal_alignment_term(text):
+                atoms.append(text)
+        
+        if not atoms:
+            section_scores.append(1.0)
+            continue
+        
+        # Check in section body first, then fall back to full body
+        hits = [atom for atom in atoms[:4] if _atom_matches_body(atom, section_body) or _atom_matches_body(atom, pure_body)]
+        all_hits.extend(hits)
+        section_scores.append(len(hits) / len(atoms[:4]) if atoms[:4] else 1.0)
+    
+    if not section_scores:
+        # Compatibility fallback for plans without section cards
+        all_required = list(plan.get("keywords", []))
         roster = plan.get("motif_roster", [])
         for item in roster:
             if isinstance(item, dict):
-                # Extract motifs list from dictionary if present
                 all_required.extend(item.get("motifs", []))
-                if "text" in item: all_required.append(item["text"])
             elif isinstance(item, str):
                 all_required.append(item)
-        all_required.extend(plan.get("keywords", []))
+        clean_required = list(set(str(x) for x in all_required if isinstance(x, str)))
+        if not clean_required:
+            return 1.0, []
+        hits = [atom for atom in clean_required if _atom_matches_body(atom, pure_body)]
+        return round(len(hits) / len(clean_required), 2), hits
     
-    # Ensure all items are strings and unique
-    clean_required = []
-    for item in all_required:
-        if isinstance(item, str):
-            clean_required.append(item)
-        elif isinstance(item, (list, tuple)):
-            clean_required.extend([str(x) for x in item if isinstance(x, (str, int, float))])
-            
-    unique_required = sorted(list(set(clean_required)))
-    if not unique_required: return 1.0, []
-    unique_required = [atom for atom in unique_required if not _is_low_signal_alignment_term(atom)]
-    if not unique_required: return 1.0, []
-    
-    hits = [atom for atom in unique_required if atom in pure_body]
-    coverage = len(hits) / len(unique_required)
-    return round(coverage, 2), hits
+    return round(sum(section_scores) / len(section_scores), 2), list(set(all_hits))
 
 def _section_lines(parsed: dict[str, list[str]], expected_sections: list[str]) -> list[tuple[str, list[str]]]:
     ordered: list[tuple[str, list[str]]] = []

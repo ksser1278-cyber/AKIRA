@@ -3858,8 +3858,19 @@ def specificity_score(plan: dict[str, Any], markdown_text: str) -> float:
     for item in plan["motif_roster"]:
         concrete_words.extend(item.get("motifs", []))
         concrete_words.extend(item.get("scene_candidates", []))
+    # Also count conditioning atoms as concrete
+    for card in plan.get("section_cards", []):
+        concrete_words.extend(card.get("conditioning_atoms", []))
     concrete_words = unique_preserve_order(concrete_words)
     abstract_markers = ["言葉", "弱さ", "本音", "未来", "輪郭", "気配", "証明", "夜", "明日"]
+    # Exempt abstract markers that appear in conditioning context (they're intentional, not generic)
+    conditioning_imagery = set()
+    for card in plan.get("section_cards", []):
+        for atom in card.get("conditioning_atoms", []):
+            conditioning_imagery.add(str(atom or "").strip())
+        for atom in card.get("required_imagery", []):
+            conditioning_imagery.add(str(atom or "").strip())
+    abstract_markers = [m for m in abstract_markers if m not in conditioning_imagery]
     concretized_phrases = [
         "乱れの輪郭",
         "輪郭ばかり",

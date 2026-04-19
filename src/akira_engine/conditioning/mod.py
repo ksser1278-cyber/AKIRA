@@ -37,7 +37,11 @@ def load_trusted_conditioning_records(
         cloned = dict(record)
         grade = "provisional"
         if record.get("record_type") == "track_conditioning_record" and not record.get("record_stage"):
-             grade = "provisional"
+            # If ready_for_prompting is True, the record passed QC — treat as curated
+            if qc.get("ready_for_prompting") is True:
+                grade = "curated"
+            else:
+                grade = "provisional"
         else:
              grade = str(record.get("record_stage") or qc.get("record_stage") or "curated").strip().lower()
              

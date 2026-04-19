@@ -1344,12 +1344,29 @@ def _derive_section_cards_from_bank(evidence_bank: dict[str, Any], mode_id: str)
             phrase_energy_roles = []
             title_drop_roles = []
 
+        # Build conditioning_atoms for renderer integration
+        # These are the artist-specific atoms that the renderer should prioritize
+        section_conditioning_atoms = _clean_demo_terms(
+            list(evidence.get("required_motifs", []))
+            + list(evidence.get("imagery_focus", []))
+            + list(evidence.get("required_imagery", [])),
+            limit=6,
+        )
+        # Fallback to global bank-level atoms if section has none
+        if not section_conditioning_atoms:
+            section_conditioning_atoms = _clean_demo_terms(
+                list(evidence_bank.get("global_motifs", []))
+                + list(evidence_bank.get("global_imagery", [])),
+                limit=4,
+            )
+
         cards.append(
             {
                 "section": section_name,
                 "line_target": line_target,
                 "narrative_goals": goals,
                 "imagery_focus": cleaned_imagery,
+                "conditioning_atoms": section_conditioning_atoms,
                 "phrase_energy_roles": phrase_energy_roles,
                 "title_drop_roles": title_drop_roles,
                 "evidence_track_ids": list(evidence.get("evidence_track_ids", [])),
