@@ -4,7 +4,7 @@ from src.akira_engine.demo_planner import (
     _derive_songwriter_section_cards_from_bank,
     normalize_demo_plan_for_runtime,
 )
-from src.akira_engine.renderer.mod import run_renderer_stage
+from src.akira_engine.renderer.mod import _deco27_surface_terms, run_renderer_stage
 from src.akira_engine.songwriter_brief import build_songwriter_brief
 
 
@@ -256,6 +256,21 @@ def test_runtime_and_renderer_respect_form_family(tmp_path):
     assert hybrid_render["chorus_shape"] == "statement_hook_release"
     assert compressed_render["bridge_shape"] == "withholding_drop"
     assert hybrid_render["bridge_shape"] == "perspective_delay"
+
+
+def test_deco27_surface_terms_filter_title_like_non_chorus_terms():
+    card = {
+        "section": "verse_1",
+        "required_imagery": ["蛍光", "体温"],
+        "required_motifs": ["シンデレラ", "ラビットホール", "輪郭", "残り香"],
+        "imagery_focus": ["輪郭", "残り香"],
+        "scene": "深夜",
+        "_render_context": {"artist_id": "deco27"},
+    }
+
+    selected = _deco27_surface_terms(card, "一緒の毒の味", ["シンデレラ", "ラビットホール", "蛍光", "体温"])
+
+    assert all(term not in {"シンデレラ", "ラビットホール"} for term in selected)
 
 
 def test_hybrid_release_keeps_core_phrase_inside_chorus_family():

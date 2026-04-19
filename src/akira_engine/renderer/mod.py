@@ -1043,6 +1043,39 @@ def _hybrid_terms(card: dict[str, Any], hook: str, terms: list[str]) -> list[str
     return selected
 
 
+_DECO27_NON_CHORUS_TITLE_TERMS = {
+    "シンデレラ",
+    "ラビットホール",
+    "モニタリング",
+    "ヴァンパイア",
+    "乙女解剖",
+    "ヒバナ",
+}
+
+
+def _deco27_surface_terms(card: dict[str, Any], hook: str, terms: list[str]) -> list[str]:
+    selected = _hybrid_terms(card, hook, terms)
+    section = safe_text(card.get("section"))
+    if section in {"chorus", "chorus_final"}:
+        return selected
+
+    candidate_pool = _section_alternate_terms(card, hook) + _section_support_terms(card, hook)
+    rewritten: list[str] = []
+    for term in selected:
+        text = safe_text(term)
+        if text in _DECO27_NON_CHORUS_TITLE_TERMS:
+            replacement = _pick_section_distinct_term(
+                "",
+                blocked=[*_DECO27_NON_CHORUS_TITLE_TERMS, *rewritten],
+                alternates=candidate_pool,
+                allow_cliche=False,
+            )
+            if safe_text(replacement):
+                text = replacement
+        rewritten.append(text or term)
+    return rewritten
+
+
 def _hybrid_intro_lines(card: dict[str, Any], hook: str, terms: list[str], *, variant: int) -> list[str]:
     a, b, c, d = _hybrid_terms(card, hook, terms)
     packs = [
@@ -1162,19 +1195,19 @@ def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], 
 
 
 def _hybrid_deco27_intro_lines(card: dict[str, Any], hook: str, terms: list[str], *, variant: int) -> list[str]:
-    a, b, c, d = _hybrid_terms(card, hook, terms)
+    a, b, c, d = _deco27_surface_terms(card, hook, terms)
     packs = [
         [
-            f"{a}の通知だけ先に指先へ貼りついてくる",
-            f"{b}の明度がまぶたの裏でじわじわ歪んでいく",
-            f"{c}だけまだ息の浅いところに残ってる",
-            f"{d}の余熱で言い訳まで甘く腐っていく",
+            f"{a}の既読だけ増えて夜更けがやけに近い",
+            f"{b}の輪郭をなぞるほどやさしさまで嘘になる",
+            f"{c}だけまだ息の浅いところで熱を持つ",
+            f"{d}の余熱で本音まで少し遅れて濁っていく",
         ],
         [
-            f"{a}の既読だけ増えて夜更けがやけに近い",
-            f"{b}の輪郭が笑うたび体温まで言い逃れできない",
-            f"{c}だけまだ胸の浅いところで光ってる",
-            f"{d}の気配でやさしさまで少し遅れて濁っていく",
+            f"{a}の通知だけ先に指先へ貼りついてくる",
+            f"{b}の明度を見過ぎてまばたきまで遅れていく",
+            f"{c}だけまだ胸の浅いところで滲んでる",
+            f"{d}の気配で言い訳まで甘く傷んでいく",
         ],
     ]
     return packs[variant % len(packs)]
@@ -1188,42 +1221,42 @@ def _hybrid_deco27_verse_lines(
     variant: int,
     second_half: bool,
 ) -> list[str]:
-    a, b, c, d = _hybrid_terms(card, hook, terms)
+    a, b, c, d = _deco27_surface_terms(card, hook, terms)
     if second_half:
         packs = [
             [
-                f"{a}の気分ひとつで呼吸まで細くなっていく",
+                f"{a}の温度差ひとつで笑い方までずれていく",
                 f"{b}の残り香を測るたび視界だけ少し尖り出す",
                 f"{c}を欲しがるほどかわいく壊れていく",
-                f"{d}を真似した愛ではもう足りなくなる",
+                "似たような愛ではもう足りなくなる",
             ],
             [
-                f"{a}の温度差ひとつで笑い方までずれていく",
+                f"{a}の気分ひとつで呼吸まで細くなっていく",
                 f"{b}を撫でるたび鼓動だけやけに素直になる",
                 f"{c}を抱えたままでもまだ逃げる気になれない",
-                f"{d}より軽い言い訳ではもう抱き止めきれない",
+                "優しいだけの愛ではもう抱き止めきれない",
             ],
         ]
         return packs[variant % len(packs)]
     packs = [
         [
-            f"{a}の既読ばかり気にして息が浅くなる",
-            f"{b}の温度を測るたび指先まで嘘になる",
-            f"{c}を欲しがるほどかわいく壊れていく",
-            f"{d}みたいな愛ほど雑に刺さって抜けない",
+            f"{a}の機嫌ひとつで朝まで眠れない",
+            f"{b}を待つたびやさしさだけ先に息を切らす",
+            f"{c}を隠すほど依存だけよく見えてしまう",
+            "やさしいふりだけではもう誤魔化せない",
         ],
         [
-            f"{a}の機嫌ばかり読んで朝まで眠れない",
-            f"{b}を待つたび言い訳だけ先に熱を持つ",
-            f"{c}を隠すほど依存だけよく見えてしまう",
-            f"{d}よりやさしいふりではもう誤魔化せない",
+            f"{a}の既読ばかり気にして呼吸まで浅くなる",
+            f"{b}を測るたび本音だけ先に熱を持つ",
+            f"{c}を欲しがるほどかわいく壊れていく",
+            "軽い言い訳ではもう抱き止めきれない",
         ],
     ]
     return packs[variant % len(packs)]
 
 
 def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
-    a, b, c, d = _hybrid_terms(card, hook, terms)
+    a, b, c, d = _deco27_surface_terms(card, hook, terms)
     if second_half:
         packs = [
             [
@@ -1233,21 +1266,21 @@ def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list
             ],
             [
                 f"{a}が脈の内側で静かにせり上がってくる",
-                f"{b}の反射で{c}までまともに笑えなくなる",
+                f"{b}の反射で{c}までまともに触れられなくなる",
                 f"{hook}まであと少しで戻れなくなる",
             ],
         ]
         return packs[variant % len(packs)]
     packs = [
         [
-            f"{a}が喉の奥で少しずつ明滅していく",
-            f"{b}の継ぎ目から言い訳まで静かにほどけ始める",
+            f"{a}が喉の奥でうるさく明滅していく",
+            f"{b}の継ぎ目から言い訳まで静かに剥がれ始める",
             f"もう{d}だけでは足りない",
             f"{c}のちらつきで足元まで軋み始める",
         ],
         [
-            f"{a}に触れるたび拍だけ先に乱れ始める",
-            f"{b}の通知ひとつで{c}まで言い訳できなくなる",
+            f"{a}に触れるたび鼓動まで少し乱れ始める",
+            f"{b}の気配ひとつで{c}までまともに言えなくなる",
             f"もう{d}しか残ってない",
         ],
     ]
@@ -1258,7 +1291,7 @@ def _hybrid_deco27_bridge_lines(terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
         f"{a}を隠したまま視界だけ半拍遅れる",
-        f"{b}の反射で{c}の輪郭が少し遠のく",
+        f"{b}の反射で{c}の輪郭まで少し遠のく",
         f"{d}の余熱だけうまく捨てられない",
     ]
 
@@ -1267,8 +1300,8 @@ def _hybrid_deco27_outro_lines(terms: list[str], *, variant: int) -> list[str]:
     a, b, c, d = terms
     packs = [
         [
-            f"{a}の余熱だけがまだ部屋に残っている",
-            f"{b}の残り香だけが眠れずにいる",
+            f"{a}だけがまだ部屋の隅で熱を持っている",
+            f"{b}の気配だけが眠れずにいる",
             f"{c}の静電気だけ床を転がっていく",
         ],
         [
