@@ -55,6 +55,7 @@ _LOW_SIGNAL_NON_CHORUS_TERMS = {
     "痛い痛い痛い",
     "鏡よ鏡",
     "真っ赤な",
+    "痛い",
 }
 
 
@@ -62,6 +63,12 @@ def _is_low_signal_non_chorus_term(term: str, *, section: str) -> bool:
     if section in {"chorus", "chorus_final"}:
         return False
     return safe_text(term) in _LOW_SIGNAL_NON_CHORUS_TERMS
+
+
+def _is_non_chorus_hook_term(term: str, hook: str, *, section: str) -> bool:
+    if section in {"chorus", "chorus_final"}:
+        return False
+    return bool(safe_text(term)) and safe_text(term) == safe_text(hook)
 
 
 def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
@@ -124,7 +131,12 @@ def _term_pool(card: dict[str, Any], hook: str, *, mode: str) -> list[str]:
     if not pool:
         fallback_hook = hook if contains_japanese(hook) and not contains_bad_script(hook) else _MODE_FALLBACK_HOOKS.get(mode, "残響")
         pool = [fallback_hook] + _SECTION_DEFAULT_TERMS.get(safe_text(card.get("section")), ["残響", "体温", "呼吸"])
-    filtered = [term for term in pool if not _is_low_signal_non_chorus_term(term, section=section)]
+    filtered = [
+        term
+        for term in pool
+        if not _is_low_signal_non_chorus_term(term, section=section)
+        and not _is_non_chorus_hook_term(term, hook, section=section)
+    ]
     if filtered:
         pool = filtered
     return unique_preserve_order(pool)
@@ -144,6 +156,12 @@ def _pick_terms(pool: list[str], offset: int, *, section: str, count: int = 4) -
         balanced = filtered
     if len(balanced) < count:
         fallback_terms = [term for term in pool if not _is_low_signal_non_chorus_term(term, section=section)]
+        if not fallback_terms:
+            fallback_terms = [
+                term
+                for term in _SECTION_DEFAULT_TERMS.get(section, []) + _MODE_DEFAULT_TERMS.get("default", [])
+                if not _is_low_signal_non_chorus_term(term, section=section)
+            ]
         if not fallback_terms:
             fallback_terms = list(pool)
         for term in fallback_terms:
@@ -198,10 +216,19 @@ def _section_alternate_terms(card: dict[str, Any], hook: str) -> list[str]:
         list(card.get("required_motifs", []))
         + list(card.get("required_imagery", []))
         + list(card.get("imagery_focus", []))
-        + [card.get("scene", ""), hook]
+        + [card.get("scene", "")]
     )
+    if section in {"chorus", "chorus_final"}:
+        values.append(hook)
     terms = _clean_terms(values, limit=12)
-    filtered = [term for term in terms if not _is_low_signal_non_chorus_term(term, section=section)]
+    filtered = [
+        term
+        for term in terms
+        if not _is_low_signal_non_chorus_term(term, section=section)
+        and not _is_non_chorus_hook_term(term, hook, section=section)
+    ]
+    if section not in {"chorus", "chorus_final"}:
+        return filtered
     return filtered or terms
 
 
@@ -215,14 +242,22 @@ def _section_support_terms(card: dict[str, Any], hook: str) -> list[str]:
         list(card.get("imagery_focus", []))
         + [card.get("scene", "")]
         + list(card.get("required_motifs", []))
-        + [hook]
     )
+    if section in {"chorus", "chorus_final"}:
+        values.append(hook)
     terms = [
         term
         for term in _clean_terms(values, limit=12)
         if safe_text(term) not in banned
     ]
-    filtered = [term for term in terms if not _is_low_signal_non_chorus_term(term, section=section)]
+    filtered = [
+        term
+        for term in terms
+        if not _is_low_signal_non_chorus_term(term, section=section)
+        and not _is_non_chorus_hook_term(term, hook, section=section)
+    ]
+    if section not in {"chorus", "chorus_final"}:
+        return filtered
     return filtered or terms
 
 
@@ -464,6 +499,7 @@ def _dense_verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags:
 
 def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
     a, b, c, d = terms
+    section = safe_text(card.get("section"))
     if second_half:
         alternates = [
             term
@@ -494,6 +530,21 @@ def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], f
             alternates=alternates,
             allow_cliche=False,
         )
+        fallback_terms = [
+            term
+            for term in _SECTION_DEFAULT_TERMS.get(section, []) + _MODE_DEFAULT_TERMS.get("default", [])
+            if term
+            and not _is_low_signal_non_chorus_term(term, section=section)
+            and not _is_non_chorus_hook_term(term, hook, section=section)
+        ]
+        if not a and fallback_terms:
+            a = fallback_terms[0]
+        if not b:
+            b = _pick_section_distinct_term("", blocked=[a], alternates=fallback_terms, allow_cliche=False)
+        if not c:
+            c = _pick_section_distinct_term("", blocked=[a, b], alternates=fallback_terms, allow_cliche=False)
+        if not d:
+            d = _pick_section_distinct_term("", blocked=[a, b, c], alternates=fallback_terms, allow_cliche=False)
     else:
         c = _de_cliche_term(c, d, a, b)
     collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
@@ -632,6 +683,15 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
 
 def _bridge_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int) -> list[str]:
     a, b, c, d = terms
+    alternates = _section_alternate_terms(card, hook)
+    compact_a = safe_text(a).replace(" ", "")
+    if len(compact_a) <= 2 or safe_text(a).endswith("い"):
+        a = _pick_section_distinct_term(
+            "",
+            blocked=[],
+            alternates=alternates + [b, c, d],
+            allow_cliche=False,
+        )
     mentions = _policy_mentions("bridge", hook, safe_text(card.get("title_drop_policy")), safe_text(card.get("hook_pressure")), variant=variant)
     packs = [
         [

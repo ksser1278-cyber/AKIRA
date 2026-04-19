@@ -7,6 +7,15 @@ from typing import Any
 from src.akira_engine.lexical_family_bank import score_demo_cliche_density, score_family_diversity
 from src.akira_engine.normalize.mod import calculate_script_ratios, contains_bad_script
 
+_LOW_SIGNAL_ALIGNMENT_TERMS = {
+    "ちゅっ",
+    "いないいないばあっ",
+    "痛い痛い痛い",
+    "鏡よ鏡",
+    "真っ赤な",
+    "痛い",
+}
+
 @dataclass
 class HardGate:
     passed: bool
@@ -74,6 +83,10 @@ def _calculate_honest_latin_ratio(text: str) -> float:
             latin_tokens += 1
             
     return round(latin_tokens / len(tokens), 3)
+
+
+def _is_low_signal_alignment_term(text: str) -> bool:
+    return str(text or "").strip() in _LOW_SIGNAL_ALIGNMENT_TERMS
 
 def _parse_sections(text: str) -> dict[str, list[str]]:
     sections = {}
@@ -206,6 +219,8 @@ def _evidence_atoms(card: dict[str, Any]) -> list[str]:
         if len(compact) > 18:
             continue
         if text in blocked_terms:
+            continue
+        if _is_low_signal_alignment_term(text):
             continue
         if not any(("\u3040" <= ch <= "\u30ff") or ("\u4e00" <= ch <= "\u9fff") for ch in text):
             continue
@@ -422,6 +437,8 @@ def _calculate_imagery_coverage(plan: dict[str, Any], pure_body: str) -> tuple[f
             
     unique_required = sorted(list(set(clean_required)))
     if not unique_required: return 1.0, []
+    unique_required = [atom for atom in unique_required if not _is_low_signal_alignment_term(atom)]
+    if not unique_required: return 1.0, []
     
     hits = [atom for atom in unique_required if atom in pure_body]
     coverage = len(hits) / len(unique_required)
@@ -611,13 +628,15 @@ def run_critic_stage(
         surface_score * 16
         + singability * 10
         + binding * 8
-        + imagery_cov * 12
+        + imagery_cov * 10
         + line_variety * 8
         + hook_restraint * 6
         + structure_score * 8
         + evidence_utilization * 14
         + family_diversity * 6
-        + cliche_control * 8,
+        + cliche_control * 4
+        + section_contrast * 4
+        + hook_memorability * 2,
         2,
     )
     musical_total = round(
