@@ -111,6 +111,46 @@ def _clean_terms(values: list[Any]) -> list[str]:
             out.append(text)
     return out
 
+
+_STRUCTURAL_OPTIONAL_SECTIONS = {
+    "intro",
+    "outro",
+    "pre_chorus_2",
+    "chorus_2",
+    "post_chorus",
+    "post_bridge",
+    "interlude",
+    "instrumental",
+}
+
+
+def _ordered_structural_match(cond_sections: list[Any], plan_cards: list[Any]) -> tuple[int, int]:
+    cond_names = [
+        str((section or {}).get("section", "")).strip()
+        for section in cond_sections
+        if isinstance(section, dict) and str((section or {}).get("section", "")).strip()
+    ]
+    plan_names = [
+        str(getattr(card, "section", "")).strip()
+        for card in plan_cards
+        if str(getattr(card, "section", "")).strip()
+    ]
+    cond_names = [name for name in cond_names if name not in _STRUCTURAL_OPTIONAL_SECTIONS]
+    plan_names = [name for name in plan_names if name not in _STRUCTURAL_OPTIONAL_SECTIONS]
+    if not plan_names:
+        return 0, 0
+
+    rows = len(cond_names)
+    cols = len(plan_names)
+    dp = [[0] * (cols + 1) for _ in range(rows + 1)]
+    for row in range(1, rows + 1):
+        for col in range(1, cols + 1):
+            if cond_names[row - 1] == plan_names[col - 1]:
+                dp[row][col] = dp[row - 1][col - 1] + 1
+            else:
+                dp[row][col] = max(dp[row - 1][col], dp[row][col - 1])
+    return dp[rows][cols], len(plan_names)
+
 def run_pre_audit_stage(
     conditioning: Any, # ConditioningResult
     plan: Any          # PlanResult
@@ -166,15 +206,8 @@ def run_pre_audit_stage(
     # 3. Structural Match
     cond_sections = getattr(conditioning, "normalized_sections", [])
     plan_cards = getattr(plan, "section_cards", [])
-    
-    matches = 0
-    compared = min(len(cond_sections), len(plan_cards))
-    for i in range(compared):
-        c_sec = str(cond_sections[i].get("section", "")).strip()
-        p_sec = getattr(plan_cards[i], "section", "")
-        if c_sec == p_sec:
-            matches += 1
-    total = compared if compared > 0 else 0
+
+    matches, total = _ordered_structural_match(cond_sections, plan_cards)
     structural_match = round(matches / total, 2) if total > 0 else 1.0
     if structural_match < 1.0:
         diagnostics.append(f"Structural match: {int(structural_match * 100)}% ({matches}/{total} sections)")

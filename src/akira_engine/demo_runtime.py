@@ -525,14 +525,24 @@ def run_demo_songwriter(
     
     # Bootstrap from the best available conditioning corpus, including archive roots.
     source_lyric = "..."
+    grade_rank = {"gold": 3, "silver": 2, "failed_source": 1, "rejected": 0}
+    best_source_score = (-1, -1, -1)
     for conditioning_payload in load_conditioning_records(primary_artist):
         sections = conditioning_payload.get("lyric_ground_truth", {}).get("sections", [])
         all_lines: list[str] = []
         for section in sections:
             all_lines.extend(section.get("lines", []))
-        if all_lines:
+        if not all_lines:
+            continue
+        source_grade = str(conditioning_payload.get("source_grade", "failed_source")).strip().lower()
+        score = (
+            grade_rank.get(source_grade, 0),
+            len(sections),
+            len(all_lines),
+        )
+        if score > best_source_score:
+            best_source_score = score
             source_lyric = "\n".join(all_lines)
-            break
 
     # Stage B: Normalize
     norm_result = run_normalize_stage(f"{primary_artist}_source", source_lyric)
