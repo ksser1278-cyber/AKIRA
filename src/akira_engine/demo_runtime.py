@@ -153,6 +153,109 @@ def _sanitize_vnext_grounding_card(card: Any) -> dict[str, Any]:
     return sanitized
 
 
+def _bootstrap_sections(payload: dict[str, Any]) -> list[dict[str, Any]]:
+    normalized = payload.get("normalized_sections", [])
+    if isinstance(normalized, list) and normalized:
+        return [section for section in normalized if isinstance(section, dict)]
+    lyric_sections = payload.get("lyric_ground_truth", {}).get("sections", [])
+    if isinstance(lyric_sections, list):
+        return [section for section in lyric_sections if isinstance(section, dict)]
+    return []
+
+
+def _canonicalize_bootstrap_sections(payload: dict[str, Any]) -> list[dict[str, Any]]:
+    counts = {
+        "verse": 0,
+        "pre_chorus": 0,
+        "chorus": 0,
+    }
+    canonical_sections: list[dict[str, Any]] = []
+
+    for section in _bootstrap_sections(payload):
+        explicit = _safe_text(section.get("section"))
+        name = _safe_text(section.get("section_name")).lower()
+        section_type = _safe_text(section.get("section_type")).lower()
+        jp_role = _safe_text(section.get("jp_role")).lower()
+
+        canonical = explicit
+        if not canonical:
+            if "final" in name or jp_role == "dai_sabi":
+                canonical = "chorus_final"
+            elif "intro" in name or section_type == "intro" or jp_role == "intro":
+                canonical = "intro"
+            elif "outro" in name or section_type == "outro" or jp_role == "outro":
+                canonical = "outro"
+            elif "bridge" in name or section_type == "bridge" or jp_role == "c_melo":
+                canonical = "bridge"
+            elif "pre" in name or section_type == "prechorus" or jp_role == "b_melo":
+                canonical = "pre_chorus" if counts["pre_chorus"] == 0 else "pre_chorus_2"
+                counts["pre_chorus"] += 1
+            elif "chorus" in name or section_type == "chorus" or jp_role == "sabi":
+                if "2" in name or "second" in name:
+                    canonical = "chorus_2"
+                else:
+                    canonical = "chorus" if counts["chorus"] == 0 else "chorus_2"
+                    counts["chorus"] += 1
+            elif "verse" in name or section_type == "verse" or jp_role == "a_melo":
+                canonical = "verse_1" if counts["verse"] == 0 else "verse_2"
+                counts["verse"] += 1
+
+        if not canonical:
+            continue
+        lines = [line for line in section.get("lines", []) if isinstance(line, str) and line.strip()]
+        canonical_sections.append(
+            {
+                "section": canonical,
+                "jp_role": _safe_text(section.get("jp_role")) or canonical,
+                "lines": lines,
+                "section_name": _safe_text(section.get("section_name")) or canonical.replace("_", " ").title(),
+                "section_type": _safe_text(section.get("section_type")) or canonical,
+            }
+        )
+    return canonical_sections
+
+
+def _bootstrap_payload_score(payload: dict[str, Any]) -> tuple[int, int, int]:
+    grade_rank = {"gold": 3, "silver": 2, "failed_source": 1, "rejected": 0}
+    source_grade = _safe_text(payload.get("source_grade")).lower()
+    if not source_grade:
+        quality_control = payload.get("quality_control", {})
+        if isinstance(quality_control, dict) and quality_control.get("ready_for_prompting") is True:
+            source_grade = "silver"
+    sections = _canonicalize_bootstrap_sections(payload)
+    line_count = sum(len(section.get("lines", [])) for section in sections)
+    return grade_rank.get(source_grade, 0), len(sections), line_count
+
+
+def _apply_bootstrap_payload(conditioning_record: Any, payload: dict[str, Any]) -> None:
+    sections = _canonicalize_bootstrap_sections(payload)
+    if not sections:
+        return
+    conditioning_record.normalized_sections = sections
+    conditioning_record.lyric_ground_truth = {
+        "sections": sections,
+        "full_text": "\n".join(line for section in sections for line in section.get("lines", [])),
+        "hook_lines": next((section.get("lines", []) for section in sections if section.get("section") == "chorus"), []),
+    }
+    if isinstance(payload.get("track_identity"), dict):
+        conditioning_record.track_identity = dict(payload.get("track_identity", {}))
+    if isinstance(payload.get("source_provenance"), dict):
+        conditioning_record.source_provenance = dict(payload.get("source_provenance", {}))
+    if isinstance(payload.get("section_analysis"), list) and payload.get("section_analysis"):
+        conditioning_record.section_analysis = list(payload.get("section_analysis", []))
+    if isinstance(payload.get("japanese_lyric_profile"), dict) and payload.get("japanese_lyric_profile"):
+        conditioning_record.japanese_lyric_profile = dict(payload.get("japanese_lyric_profile", {}))
+    if isinstance(payload.get("prompt_conditioning"), dict):
+        imagery = payload.get("prompt_conditioning", {}).get("imagery_anchors", [])
+        if isinstance(imagery, list) and imagery:
+            conditioning_record.imagery_anchors = list(imagery)
+            conditioning_record.prompt_conditioning = dict(payload.get("prompt_conditioning", {}))
+    if _safe_text(payload.get("audit_status")):
+        conditioning_record.audit_status = _safe_text(payload.get("audit_status"))
+    if _safe_text(payload.get("source_grade")):
+        conditioning_record.source_grade = _safe_text(payload.get("source_grade"))
+
+
 # ---------------------------------------------------------------------------
 # Style metadata constants
 # ---------------------------------------------------------------------------
@@ -525,23 +628,19 @@ def run_demo_songwriter(
     
     # Bootstrap from the best available conditioning corpus, including archive roots.
     source_lyric = "..."
-    grade_rank = {"gold": 3, "silver": 2, "failed_source": 1, "rejected": 0}
     best_source_score = (-1, -1, -1)
+    best_source_payload: dict[str, Any] | None = None
     for conditioning_payload in load_conditioning_records(primary_artist):
-        sections = conditioning_payload.get("lyric_ground_truth", {}).get("sections", [])
+        sections = _canonicalize_bootstrap_sections(conditioning_payload)
         all_lines: list[str] = []
         for section in sections:
             all_lines.extend(section.get("lines", []))
         if not all_lines:
             continue
-        source_grade = str(conditioning_payload.get("source_grade", "failed_source")).strip().lower()
-        score = (
-            grade_rank.get(source_grade, 0),
-            len(sections),
-            len(all_lines),
-        )
+        score = _bootstrap_payload_score(conditioning_payload)
         if score > best_source_score:
             best_source_score = score
+            best_source_payload = conditioning_payload
             source_lyric = "\n".join(all_lines)
 
     # Stage B: Normalize
@@ -560,6 +659,8 @@ def run_demo_songwriter(
         features=feature_profile,
         normalization_result=norm_result
     )
+    if best_source_payload:
+        _apply_bootstrap_payload(conditioning_record, best_source_payload)
     
     # Save Conditioning Artifact
     cond_path = _write_utf8_json(output_dir / "conditioning_record.json", conditioning_record.__dict__)

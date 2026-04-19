@@ -115,6 +115,7 @@ def _clean_terms(values: list[Any]) -> list[str]:
 _STRUCTURAL_OPTIONAL_SECTIONS = {
     "intro",
     "outro",
+    "verse_2",
     "pre_chorus_2",
     "chorus_2",
     "post_chorus",
@@ -135,6 +136,9 @@ def _ordered_structural_match(cond_sections: list[Any], plan_cards: list[Any]) -
         for card in plan_cards
         if str(getattr(card, "section", "")).strip()
     ]
+    if "chorus_final" not in cond_names and "chorus_2" in cond_names:
+        last_chorus_2 = max(index for index, name in enumerate(cond_names) if name == "chorus_2")
+        cond_names[last_chorus_2] = "chorus_final"
     cond_names = [name for name in cond_names if name not in _STRUCTURAL_OPTIONAL_SECTIONS]
     plan_names = [name for name in plan_names if name not in _STRUCTURAL_OPTIONAL_SECTIONS]
     if not plan_names:
