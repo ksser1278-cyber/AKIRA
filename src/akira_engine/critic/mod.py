@@ -546,6 +546,77 @@ def _oral_friction_score(lines: list[str], singability: float) -> float:
     friction = (long_ratio * 0.65) + ((1.0 - singability) * 0.55) + (short_ratio * 0.1)
     return round(max(0.0, min(1.0, friction)), 2)
 
+
+def _legacy_total_score(
+    *,
+    form_family_id: str,
+    surface_score: float,
+    singability: float,
+    binding: float,
+    imagery_cov: float,
+    line_variety: float,
+    hook_restraint: float,
+    structure_score: float,
+    evidence_utilization: float,
+    family_diversity: float,
+    cliche_control: float,
+    prosodic_flow: float,
+    hook_memorability: float,
+    repetition_payoff: float,
+    section_contrast: float,
+    oral_friction: float,
+) -> tuple[float, dict[str, float]]:
+    family = str(form_family_id or "").strip()
+    weights = {
+        "surface_score": 14.0,
+        "singability": 10.0,
+        "binding": 7.0,
+        "imagery_cov": 10.0,
+        "line_variety": 6.0,
+        "hook_restraint": 4.0,
+        "structure_score": 4.0,
+        "evidence_utilization": 12.0,
+        "family_diversity": 4.0,
+        "cliche_control": 4.0,
+        "prosodic_flow": 3.0,
+        "hook_memorability": 7.0,
+        "repetition_payoff": 6.0,
+        "section_contrast": 9.0,
+        "oral_release": 0.0,
+    }
+    if family == "hybrid_release":
+        weights.update(
+            {
+                "singability": 12.0,
+                "structure_score": 3.0,
+                "evidence_utilization": 9.0,
+                "cliche_control": 6.0,
+                "prosodic_flow": 5.0,
+                "section_contrast": 8.0,
+                "oral_release": 2.0,
+            }
+        )
+
+    score = round(
+        surface_score * weights["surface_score"]
+        + singability * weights["singability"]
+        + binding * weights["binding"]
+        + imagery_cov * weights["imagery_cov"]
+        + line_variety * weights["line_variety"]
+        + hook_restraint * weights["hook_restraint"]
+        + structure_score * weights["structure_score"]
+        + evidence_utilization * weights["evidence_utilization"]
+        + family_diversity * weights["family_diversity"]
+        + cliche_control * weights["cliche_control"]
+        + prosodic_flow * weights["prosodic_flow"]
+        + hook_memorability * weights["hook_memorability"]
+        + repetition_payoff * weights["repetition_payoff"]
+        + section_contrast * weights["section_contrast"]
+        + (1.0 - oral_friction) * weights["oral_release"],
+        2,
+    )
+    return score, weights
+
 def run_critic_stage(
     plan: dict[str, Any],
     candidate: dict[str, Any],
@@ -614,22 +685,24 @@ def run_critic_stage(
         "section_contrast": section_contrast,
         "oral_friction": oral_friction,
     }
-    legacy_total = round(
-        surface_score * 14
-        + singability * 10
-        + binding * 7
-        + imagery_cov * 10
-        + line_variety * 6
-        + hook_restraint * 4
-        + structure_score * 4
-        + evidence_utilization * 12
-        + family_diversity * 4
-        + cliche_control * 4
-        + prosodic_flow * 3
-        + hook_memorability * 7
-        + repetition_payoff * 6
-        + section_contrast * 9,
-        2,
+    form_family_id = str(plan.get("form_family_id", "")).strip()
+    legacy_total, legacy_profile = _legacy_total_score(
+        form_family_id=form_family_id,
+        surface_score=surface_score,
+        singability=singability,
+        binding=binding,
+        imagery_cov=imagery_cov,
+        line_variety=line_variety,
+        hook_restraint=hook_restraint,
+        structure_score=structure_score,
+        evidence_utilization=evidence_utilization,
+        family_diversity=family_diversity,
+        cliche_control=cliche_control,
+        prosodic_flow=prosodic_flow,
+        hook_memorability=hook_memorability,
+        repetition_payoff=repetition_payoff,
+        section_contrast=section_contrast,
+        oral_friction=oral_friction,
     )
     musical_total = round(
         prosodic_flow * 22
@@ -667,7 +740,8 @@ def run_critic_stage(
             "cliche_density": cliche_density,
             "cliche_control": cliche_control,
             "musical_scores": musical_scores,
-            "form_family_id": str(plan.get("form_family_id", "")).strip(),
+            "legacy_profile": legacy_profile,
+            "form_family_id": form_family_id,
             "renderer_frame_family": str(candidate.get("renderer_frame_family", "")).strip(),
             "chorus_shape": str(candidate.get("chorus_shape", "")).strip(),
             "bridge_shape": str(candidate.get("bridge_shape", "")).strip(),
@@ -685,10 +759,11 @@ def run_critic_stage(
             "family_profile": family_diag,
             "cliche_profile": cliche_diag,
             "musical_scores": musical_scores,
+            "legacy_profile": legacy_profile,
             "legacy_total": legacy_total,
             "musical_total": musical_total,
             "blended_total": blended_total,
-            "form_family_id": str(plan.get("form_family_id", "")).strip(),
+            "form_family_id": form_family_id,
             "renderer_frame_family": str(candidate.get("renderer_frame_family", "")).strip(),
             "chorus_shape": str(candidate.get("chorus_shape", "")).strip(),
             "bridge_shape": str(candidate.get("bridge_shape", "")).strip(),

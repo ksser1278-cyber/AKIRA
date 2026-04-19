@@ -256,3 +256,108 @@ def test_runtime_and_renderer_respect_form_family(tmp_path):
     assert hybrid_render["chorus_shape"] == "statement_hook_release"
     assert compressed_render["bridge_shape"] == "withholding_drop"
     assert hybrid_render["bridge_shape"] == "perspective_delay"
+
+
+def test_hybrid_release_keeps_core_phrase_inside_chorus_family():
+    plan = {
+        "artist_id": "fixture_deco27",
+        "mode_id": "dark_cute_breakdown",
+        "primary_mode": "dark_cute_breakdown",
+        "track_id": "fixture_deco27_hybrid",
+        "form_family_id": "hybrid_release",
+        "composition_brief": {
+            "chorus_proposition": {
+                "core_phrase": "一緒の毒の味",
+                "escalation_phrase": "pressure escalation",
+                "release_phrase": "irreversible release",
+            }
+        },
+        "hook_blueprint": {
+            "core_text": "一緒の毒の味",
+            "hook_density": "medium",
+            "hook_line_target": 3,
+            "repetition_pressure": "medium",
+        },
+        "artist_grammar_bias": {},
+        "form_profile": {
+            "section_order": ["intro", "verse_1", "chorus", "verse_2", "bridge", "chorus_final", "outro"]
+        },
+        "section_cards": [
+            {
+                "section": "intro",
+                "line_target": 4,
+                "required_imagery": ["遊園地", "キャンディ"],
+                "required_motifs": ["傷", "呼吸"],
+                "imagery_focus": ["画面"],
+                "scene": "指先",
+            },
+            {
+                "section": "verse_1",
+                "line_target": 4,
+                "required_imagery": ["遊園地", "体温"],
+                "required_motifs": ["傷", "依存"],
+                "imagery_focus": ["視界"],
+                "scene": "深夜",
+            },
+            {
+                "section": "chorus",
+                "line_target": 5,
+                "required_imagery": ["遊園地", "熱"],
+                "required_motifs": ["静電気", "残り香"],
+                "imagery_focus": ["喉元"],
+                "scene": "指先",
+            },
+            {
+                "section": "verse_2",
+                "line_target": 4,
+                "required_imagery": ["体温", "静電気"],
+                "required_motifs": ["依存", "視界"],
+                "imagery_focus": ["残り香"],
+                "scene": "深夜",
+            },
+            {
+                "section": "bridge",
+                "line_target": 3,
+                "required_imagery": ["沈黙", "暗室"],
+                "required_motifs": ["輪郭", "余熱"],
+                "imagery_focus": ["視界"],
+                "scene": "暗室",
+            },
+            {
+                "section": "chorus_final",
+                "line_target": 5,
+                "required_imagery": ["熱", "静電気"],
+                "required_motifs": ["傷", "余熱"],
+                "imagery_focus": ["喉元"],
+                "scene": "落下",
+            },
+            {
+                "section": "outro",
+                "line_target": 3,
+                "required_imagery": ["余熱", "残り香"],
+                "required_motifs": ["部屋", "教室"],
+                "imagery_focus": ["深夜"],
+                "scene": "部屋",
+            },
+        ],
+    }
+
+    rendered = run_renderer_stage(plan, variant_index=0)
+    rendered_title = rendered["title"]
+    section_lines: dict[str, list[str]] = {}
+    current = ""
+    for raw_line in rendered["markdown"].splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            current = line[1:-1]
+            section_lines[current] = []
+            continue
+        if current:
+            section_lines[current].append(line)
+
+    for section in ["intro", "verse_1", "verse_2", "bridge", "outro"]:
+        assert all(rendered_title not in line for line in section_lines.get(section, []))
+    assert any(rendered_title in line for line in section_lines.get("chorus", []))
+    assert any(rendered_title in line for line in section_lines.get("chorus_final", []))

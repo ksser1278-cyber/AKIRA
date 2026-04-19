@@ -123,6 +123,10 @@ def _render_context(card: dict[str, Any]) -> dict[str, Any]:
     return context if isinstance(context, dict) else {}
 
 
+def _render_artist_id(card: dict[str, Any]) -> str:
+    return safe_text(_render_context(card).get("artist_id", ""))
+
+
 def _chorus_proposition(card: dict[str, Any], hook: str) -> dict[str, Any]:
     context = _render_context(card)
     composition_brief = context.get("composition_brief", {})
@@ -135,6 +139,22 @@ def _chorus_proposition(card: dict[str, Any], hook: str) -> dict[str, Any]:
         "escalation_phrase": safe_text(proposition.get("escalation_phrase")).lower(),
         "release_phrase": safe_text(proposition.get("release_phrase")).lower(),
     }
+
+
+def _hybrid_context_blocked_terms(card: dict[str, Any]) -> list[str]:
+    context = _render_context(card)
+    recent_terms = [
+        safe_text(term)
+        for term in context.get("last_non_chorus_terms", [])
+        if safe_text(term)
+    ][:2]
+    usage = context.get("non_chorus_term_usage", {})
+    recurring_terms = [
+        safe_text(term)
+        for term, count in usage.items()
+        if safe_text(term) and int(count or 0) >= 2
+    ]
+    return unique_preserve_order(recent_terms + recurring_terms)
 
 
 def _hook_blueprint(card: dict[str, Any]) -> dict[str, Any]:
@@ -954,51 +974,88 @@ def _hybrid_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, f
 
 
 def _hybrid_terms(card: dict[str, Any], hook: str, terms: list[str]) -> list[str]:
+    section = safe_text(card.get("section"))
     a, b, c, d = terms
-    alternates = _section_alternate_terms(card, hook)
-    support_terms = _section_support_terms(card, hook)
+    blocked_terms: list[str] = []
+    if section in {"intro", "verse_1", "verse_2", "pre_chorus", "pre_chorus_2", "bridge"}:
+        blocked_terms = _hybrid_context_blocked_terms(card)
+    alternates = [
+        term
+        for term in _section_alternate_terms(card, hook)
+        if not _term_conflicts(term, blocked_terms)
+    ]
+    support_terms = [
+        term
+        for term in _section_support_terms(card, hook)
+        if not _term_conflicts(term, blocked_terms)
+    ]
+    candidate_pool = alternates + support_terms
+    if len(candidate_pool) < 2:
+        blocked_terms = []
+        alternates = _section_alternate_terms(card, hook)
+        support_terms = _section_support_terms(card, hook)
+        candidate_pool = alternates + support_terms
     a = _pick_section_distinct_term(
-        _de_cliche_term(a, b, c, d, hook),
-        blocked=[],
-        alternates=alternates + support_terms,
+        "" if _term_conflicts(a, blocked_terms) else _de_cliche_term(a, b, c, d, hook),
+        blocked=list(blocked_terms),
+        alternates=candidate_pool,
         allow_cliche=False,
     )
     b = _pick_section_distinct_term(
-        _de_cliche_term(b, c, d, a, hook),
-        blocked=[a],
-        alternates=alternates + support_terms,
+        "" if _term_conflicts(b, blocked_terms + [a]) else _de_cliche_term(b, c, d, a, hook),
+        blocked=list(blocked_terms) + [a],
+        alternates=candidate_pool,
         allow_cliche=False,
     )
     c = _pick_section_distinct_term(
-        _de_cliche_term(c, d, a, b, hook),
-        blocked=[a, b],
-        alternates=alternates + support_terms,
+        "" if _term_conflicts(c, blocked_terms + [a, b]) else _de_cliche_term(c, d, a, b, hook),
+        blocked=list(blocked_terms) + [a, b],
+        alternates=candidate_pool,
         allow_cliche=False,
     )
     d = _pick_section_distinct_term(
-        _de_cliche_term(d, a, b, c, hook),
-        blocked=[a, b, c],
-        alternates=alternates + support_terms,
+        "" if _term_conflicts(d, blocked_terms + [a, b, c]) else _de_cliche_term(d, a, b, c, hook),
+        blocked=list(blocked_terms) + [a, b, c],
+        alternates=candidate_pool,
         allow_cliche=False,
     )
-    return [a, b, c, d]
+    selected = [a, b, c, d]
+    fallback_terms = [
+        term
+        for term in unique_preserve_order(
+            candidate_pool
+            + _SECTION_DEFAULT_TERMS.get(section, [])
+            + _MODE_DEFAULT_TERMS.get("dark_cute_breakdown", [])
+        )
+        if safe_text(term)
+    ]
+    for index, term in enumerate(selected):
+        if safe_text(term):
+            continue
+        blocked = [item for pos, item in enumerate(selected) if pos != index and safe_text(item)]
+        replacement = _pick_section_distinct_term(
+            "",
+            blocked=blocked,
+            alternates=fallback_terms,
+            allow_cliche=False,
+        )
+        selected[index] = replacement or (fallback_terms[index % len(fallback_terms)] if fallback_terms else hook)
+    return selected
 
 
 def _hybrid_intro_lines(card: dict[str, Any], hook: str, terms: list[str], *, variant: int) -> list[str]:
     a, b, c, d = _hybrid_terms(card, hook, terms)
-    proposition = _chorus_proposition(card, hook)
-    core_phrase = safe_text(proposition.get("core_phrase")) or hook
     packs = [
         [
             f"{a}の通知だけまだ喉元でちらついている",
             f"{b}のやさしさが画面越しに爪を立てる",
-            f"{core_phrase}だけうまく消せない",
+            f"{d}だけうまく消せない",
             f"{c}の熱で笑顔まで少し遅れて滲む",
         ],
         [
             f"{a}の気配だけ先に指先へ貼りついてくる",
             f"{b}の明度がまぶたの裏でじわじわ歪んでいく",
-            f"{core_phrase}だけまだ息の浅いところに残ってる",
+            f"{c}だけまだ息の浅いところに残ってる",
             f"{d}の余熱で言い訳まで甘く腐っていく",
         ],
     ]
@@ -1014,21 +1071,19 @@ def _hybrid_verse_lines(
     second_half: bool,
 ) -> list[str]:
     a, b, c, d = _hybrid_terms(card, hook, terms)
-    proposition = _chorus_proposition(card, hook)
-    core_phrase = safe_text(proposition.get("core_phrase")) or hook
     if second_half:
         packs = [
             [
                 f"{a}の明滅ばかり追いかけて夜まで遅れ始める",
                 f"{b}の温度を読むたび鼓動だけ先に急いていく",
                 f"{c}を抱えたまま笑うほど逃げ場がなくなる",
-                f"{core_phrase}より甘い言い訳ではもう隠しきれない",
+                f"{d}より甘い言い訳ではもう隠しきれない",
             ],
             [
                 f"{a}の気分ひとつで呼吸まで細くなっていく",
                 f"{b}の残り香を測るたび視界だけ少し尖り出す",
                 f"{c}を欲しがるほどかわいく壊れていく",
-                f"{core_phrase}を真似した愛ではもう足りなくなる",
+                f"{d}を真似した愛ではもう足りなくなる",
             ],
         ]
         return packs[variant % len(packs)]
@@ -1037,25 +1092,42 @@ def _hybrid_verse_lines(
             f"{a}の既読ばかり気にして息が浅くなる",
             f"{b}の温度を測るたび指先まで嘘になる",
             f"{c}を欲しがるほどかわいく壊れていく",
-            f"{core_phrase}みたいな愛ほど雑に刺さって抜けない",
+            f"{d}みたいな愛ほど雑に刺さって抜けない",
         ],
         [
             f"{a}の輪郭ばかりなぞって朝まで眠れない",
             f"{b}の機嫌を待つたび心拍だけ先に濁っていく",
             f"{c}を隠すほど依存だけよく見えてしまう",
-            f"{core_phrase}よりやさしいふりではもう誤魔化せない",
+            f"{d}よりやさしいふりではもう誤魔化せない",
         ],
     ]
     return packs[variant % len(packs)]
 
 
-def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
+def _hybrid_bridge_lines(terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
         f"{a}を隠したまま視界だけ半拍遅れる",
         f"{b}の反射で{c}の輪郭が少し遠のく",
-        f"{hook}の余熱だけうまく捨てられない",
+        f"{d}の余熱だけうまく捨てられない",
     ]
+
+
+def _hybrid_outro_lines(terms: list[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    packs = [
+        [
+            f"{a}の余熱だけがまだ部屋に残っている",
+            f"{b}の残り香だけが眠れずにいる",
+            f"{c}の静電気だけ床を転がっていく",
+        ],
+        [
+            f"{a}だけが最後までこちらを見ている",
+            f"{b}の薄明かりだけが靴底に貼りついている",
+            f"{d}の気配だけ朝まで抜けていかない",
+        ],
+    ]
+    return packs[variant % len(packs)]
 
 
 def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
@@ -1089,6 +1161,125 @@ def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], 
     return packs[variant % len(packs)]
 
 
+def _hybrid_deco27_intro_lines(card: dict[str, Any], hook: str, terms: list[str], *, variant: int) -> list[str]:
+    a, b, c, d = _hybrid_terms(card, hook, terms)
+    packs = [
+        [
+            f"{a}の通知だけ先に指先へ貼りついてくる",
+            f"{b}の明度がまぶたの裏でじわじわ歪んでいく",
+            f"{c}だけまだ息の浅いところに残ってる",
+            f"{d}の余熱で言い訳まで甘く腐っていく",
+        ],
+        [
+            f"{a}の既読だけ増えて夜更けがやけに近い",
+            f"{b}の輪郭が笑うたび体温まで言い逃れできない",
+            f"{c}だけまだ胸の浅いところで光ってる",
+            f"{d}の気配でやさしさまで少し遅れて濁っていく",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _hybrid_deco27_verse_lines(
+    card: dict[str, Any],
+    hook: str,
+    terms: list[str],
+    *,
+    variant: int,
+    second_half: bool,
+) -> list[str]:
+    a, b, c, d = _hybrid_terms(card, hook, terms)
+    if second_half:
+        packs = [
+            [
+                f"{a}の気分ひとつで呼吸まで細くなっていく",
+                f"{b}の残り香を測るたび視界だけ少し尖り出す",
+                f"{c}を欲しがるほどかわいく壊れていく",
+                f"{d}を真似した愛ではもう足りなくなる",
+            ],
+            [
+                f"{a}の温度差ひとつで笑い方までずれていく",
+                f"{b}を撫でるたび鼓動だけやけに素直になる",
+                f"{c}を抱えたままでもまだ逃げる気になれない",
+                f"{d}より軽い言い訳ではもう抱き止めきれない",
+            ],
+        ]
+        return packs[variant % len(packs)]
+    packs = [
+        [
+            f"{a}の既読ばかり気にして息が浅くなる",
+            f"{b}の温度を測るたび指先まで嘘になる",
+            f"{c}を欲しがるほどかわいく壊れていく",
+            f"{d}みたいな愛ほど雑に刺さって抜けない",
+        ],
+        [
+            f"{a}の機嫌ばかり読んで朝まで眠れない",
+            f"{b}を待つたび言い訳だけ先に熱を持つ",
+            f"{c}を隠すほど依存だけよく見えてしまう",
+            f"{d}よりやさしいふりではもう誤魔化せない",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
+    a, b, c, d = _hybrid_terms(card, hook, terms)
+    if second_half:
+        packs = [
+            [
+                f"{a}が胸の裏で半拍ずつ遅れ始める",
+                f"{b}の継ぎ目から言い訳まで喉元へせり上がる",
+                f"{hook}まであと少しで壊れそうだ",
+            ],
+            [
+                f"{a}が脈の内側で静かにせり上がってくる",
+                f"{b}の反射で{c}までまともに笑えなくなる",
+                f"{hook}まであと少しで戻れなくなる",
+            ],
+        ]
+        return packs[variant % len(packs)]
+    packs = [
+        [
+            f"{a}が喉の奥で少しずつ明滅していく",
+            f"{b}の継ぎ目から言い訳まで静かにほどけ始める",
+            f"もう{d}だけでは足りない",
+            f"{c}のちらつきで足元まで軋み始める",
+        ],
+        [
+            f"{a}に触れるたび拍だけ先に乱れ始める",
+            f"{b}の通知ひとつで{c}まで言い訳できなくなる",
+            f"もう{d}しか残ってない",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
+def _hybrid_deco27_bridge_lines(terms: list[str]) -> list[str]:
+    a, b, c, d = terms
+    return [
+        f"{a}を隠したまま視界だけ半拍遅れる",
+        f"{b}の反射で{c}の輪郭が少し遠のく",
+        f"{d}の余熱だけうまく捨てられない",
+    ]
+
+
+def _hybrid_deco27_outro_lines(terms: list[str], *, variant: int) -> list[str]:
+    a, b, c, d = terms
+    packs = [
+        [
+            f"{a}の余熱だけがまだ部屋に残っている",
+            f"{b}の残り香だけが眠れずにいる",
+            f"{c}の静電気だけ床を転がっていく",
+        ],
+        [
+            f"{a}だけが最後までこちらを見ている",
+            f"{b}の薄明かりだけが靴底に貼りついている",
+            f"{d}の気配だけ朝まで抜けていかない",
+        ],
+    ]
+    return packs[variant % len(packs)]
+
+
 def _render_dark_cute_hybrid_section(
     card: dict[str, Any],
     *,
@@ -1099,7 +1290,23 @@ def _render_dark_cute_hybrid_section(
 ) -> list[str]:
     section = safe_text(card.get("section"))
     local_flags = set(flags) | {"sweet", "unease"}
+    artist_id = _render_artist_id(card)
     hybrid_terms = _hybrid_terms(card, hook, terms)
+    if artist_id == "deco27":
+        if section == "intro":
+            return _hybrid_deco27_intro_lines(card, hook, hybrid_terms, variant=variant)
+        if section == "verse_1":
+            return _hybrid_deco27_verse_lines(card, hook, hybrid_terms, variant=variant, second_half=False)
+        if section == "verse_2":
+            return _hybrid_deco27_verse_lines(card, hook, hybrid_terms, variant=variant, second_half=True)
+        if section == "pre_chorus":
+            return _hybrid_deco27_pre_chorus_lines(card, hook, hybrid_terms, second_half=False, variant=variant)
+        if section == "pre_chorus_2":
+            return _hybrid_deco27_pre_chorus_lines(card, hook, hybrid_terms, second_half=True, variant=variant)
+        if section == "bridge":
+            return _hybrid_deco27_bridge_lines(hybrid_terms)
+        if section == "outro":
+            return _hybrid_deco27_outro_lines(hybrid_terms, variant=variant)
     if section == "intro":
         return _hybrid_intro_lines(card, hook, hybrid_terms, variant=variant)
     if section == "verse_1":
@@ -1113,11 +1320,11 @@ def _render_dark_cute_hybrid_section(
     if section == "chorus":
         return _hybrid_chorus_lines(card, hook, hybrid_terms, final=False)
     if section == "bridge":
-        return _hybrid_bridge_lines(hook, hybrid_terms)
+        return _hybrid_bridge_lines(hybrid_terms)
     if section == "chorus_final":
         return _hybrid_chorus_lines(card, hook, hybrid_terms, final=True)
     if section == "outro":
-        return _outro_lines(card, hook, hybrid_terms, local_flags, variant=variant)
+        return _hybrid_outro_lines(hybrid_terms, variant=variant)
     a, b, c, _ = hybrid_terms
     return [f"{a}の明滅だけがまだ収まらない", f"{b}の裏で{c}だけ先に跳ねている"]
 
@@ -1199,10 +1406,13 @@ def run_renderer_stage(
         section_cards.sort(key=lambda card: safe_text(card.get("section")))
 
     render_context = {
+        "artist_id": artist_id,
         "composition_brief": dict(plan.get("composition_brief", {}) or {}),
         "hook_blueprint": dict(plan.get("hook_blueprint", {}) or {}),
         "form_family_id": form_family_id,
         "artist_grammar_bias": dict(plan.get("artist_grammar_bias", {}) or {}),
+        "non_chorus_term_usage": {},
+        "last_non_chorus_terms": [],
     }
     section_outputs: dict[str, list[str]] = {}
     lines = [f"# {hook}", ""]
@@ -1237,6 +1447,13 @@ def run_renderer_stage(
         )
         if scaffold_mode and section in {"chorus", "chorus_final"} and hook not in "".join(fitted):
             fitted.append(f"{hook}をまだやめない")
+        if section not in {"chorus", "chorus_final"}:
+            render_context["last_non_chorus_terms"] = list(terms)
+            usage = render_context.setdefault("non_chorus_term_usage", {})
+            for term in unique_preserve_order(list(terms)):
+                text = safe_text(term)
+                if text:
+                    usage[text] = int(usage.get(text, 0)) + 1
         section_outputs[section] = list(fitted[:target])
         lines.append(f"[{section}]")
         lines.extend(fitted[:target])
