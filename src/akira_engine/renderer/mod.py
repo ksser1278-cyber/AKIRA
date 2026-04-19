@@ -835,17 +835,114 @@ def _fit_section_lines(
     return fitted[:line_target]
 
 
+def _render_dark_cute_compressed_section(
+    card: dict[str, Any],
+    *,
+    hook: str,
+    terms: list[str],
+    flags: set[str],
+    variant: int,
+) -> list[str]:
+    section = safe_text(card.get("section"))
+    local_flags = set(flags) | {"sweet", "unease"}
+    if section == "intro":
+        return _dense_intro_lines(card, hook, terms, local_flags, variant=variant)
+    if section == "verse_1":
+        return _dense_verse_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+    if section == "verse_2":
+        return _dense_verse_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+    if section == "pre_chorus":
+        return _dense_pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+    if section == "pre_chorus_2":
+        return _dense_pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+    if section == "chorus":
+        return _chorus_lines(card, hook, terms, local_flags, variant=variant, final=False)
+    if section == "bridge":
+        return _bridge_lines(card, hook, terms, local_flags, variant=variant)
+    if section == "chorus_final":
+        return _chorus_lines(card, hook, terms, local_flags, variant=variant, final=True)
+    if section == "outro":
+        return _dense_outro_lines(card, hook, terms, local_flags, variant=variant)
+    a, b, c, _ = terms
+    return [f"{a}だけがまだ息をしている", f"{b}の奥で{c}がまだざらついている"]
+
+
+def _hybrid_chorus_lines(hook: str, terms: list[str], *, final: bool) -> list[str]:
+    a, b, c, _ = terms
+    if final:
+        return [
+            f"{hook} {hook}",
+            f"{hook}をやめるな",
+            f"{a}の熱で喉元まで裂いていけ",
+            f"{b}の明度にまだ赦されるな",
+            f"{c}ごと今すぐ抱えたまま落ちていけ",
+        ]
+    return [
+        f"{hook} {hook}",
+        f"{hook}をまだ手放せない",
+        f"{a}の熱で指先まで染め上げて",
+        f"{b}だけではまだ心音が足りない",
+        f"{c}の残り香を噛んだまま沈んでいけ",
+    ]
+
+
+def _hybrid_bridge_lines(hook: str, terms: list[str]) -> list[str]:
+    a, b, c, d = terms
+    return [
+        f"{a}を隠したまま{b}だけ上がっていく",
+        f"{c}の反射で{d}の輪郭が少し遅れる",
+        f"{hook}の余熱だけうまく捨てられない",
+    ]
+
+
+def _render_dark_cute_hybrid_section(
+    card: dict[str, Any],
+    *,
+    hook: str,
+    terms: list[str],
+    flags: set[str],
+    variant: int,
+) -> list[str]:
+    section = safe_text(card.get("section"))
+    local_flags = set(flags) | {"sweet", "unease"}
+    if section == "intro":
+        return _dense_intro_lines(card, hook, terms, local_flags, variant=variant)
+    if section == "verse_1":
+        return _verse_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+    if section == "verse_2":
+        return _verse_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+    if section == "pre_chorus":
+        return _pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=False)
+    if section == "pre_chorus_2":
+        return _pre_chorus_lines(card, hook, terms, local_flags, variant=variant, second_half=True)
+    if section == "chorus":
+        return _hybrid_chorus_lines(hook, terms, final=False)
+    if section == "bridge":
+        return _hybrid_bridge_lines(hook, terms)
+    if section == "chorus_final":
+        return _hybrid_chorus_lines(hook, terms, final=True)
+    if section == "outro":
+        return _outro_lines(card, hook, terms, local_flags, variant=variant)
+    a, b, c, _ = terms
+    return [f"{a}の明滅だけがまだ収まらない", f"{b}の裏で{c}だけ先に跳ねている"]
+
+
 def _render_section(
     card: dict[str, Any],
     *,
     hook: str,
     terms: list[str],
     mode: str,
+    form_family_id: str,
     variant: int,
 ) -> list[str]:
     section = safe_text(card.get("section"))
     flags = _goal_flags(card)
     dense_mode = mode == "dark_cute_breakdown"
+    if dense_mode and form_family_id == "compressed_hook":
+        return _render_dark_cute_compressed_section(card, hook=hook, terms=terms, flags=flags, variant=variant)
+    if dense_mode and form_family_id == "hybrid_release":
+        return _render_dark_cute_hybrid_section(card, hook=hook, terms=terms, flags=flags, variant=variant)
     if dense_mode:
         flags.update({"sweet", "unease"})
     if section == "intro":
@@ -890,6 +987,7 @@ def run_renderer_stage(
 ) -> dict[str, Any]:
     artist_id = safe_text(plan.get("artist_id", "default"))
     mode = safe_text(plan.get("primary_mode") or plan.get("mode_id") or "default")
+    form_family_id = safe_text(plan.get("form_family_id") or "hybrid_release")
     track_id = safe_text(plan.get("track_id", f"{artist_id}_{mode}_demo"))
     raw_hook = safe_text(plan.get("hook_blueprint", {}).get("core_text", ""))
     hook = raw_hook if contains_japanese(raw_hook) and not contains_bad_script(raw_hook) else _MODE_FALLBACK_HOOKS.get(mode, _MODE_FALLBACK_HOOKS["default"])
@@ -917,7 +1015,14 @@ def run_renderer_stage(
         card["conditioning_atoms"] = unique_preserve_order(
             terms + list(card.get("conditioning_atoms", []))
         )[:6]
-        section_lines = _render_section(card, hook=hook, terms=terms, mode=mode, variant=variant_index + position)
+        section_lines = _render_section(
+            card,
+            hook=hook,
+            terms=terms,
+            mode=mode,
+            form_family_id=safe_text(card.get("form_family_id") or form_family_id),
+            variant=variant_index + position,
+        )
         target = int(card.get("line_target", len(section_lines)) or len(section_lines))
         fitted = _fit_section_lines(
             section_lines,

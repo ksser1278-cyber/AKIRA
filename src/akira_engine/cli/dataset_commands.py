@@ -49,6 +49,7 @@ from ..vocadb_lyric_grounding_auto import auto_ground_vocadb_workspace_from_url_
 from ..lyric_technique_pilot_batch import build_lyric_technique_pilot_batch
 from ..lyric_technique_pilot_workspace import materialize_lyric_technique_pilot_workspace
 from ..lyric_behavior_dataset import build_lyric_behavior_dataset
+from ..form_family_catalog import build_form_family_catalog
 
 
 def _archive_root(project_root: Path) -> Path:
@@ -192,6 +193,28 @@ def run_build_lyric_behavior_dataset(
         project_root=final_project_root,
         artists=artists,
         output_root=final_output_root,
+    )
+
+
+def run_build_form_family_catalog(
+    *,
+    project_root: Path,
+    artists: list[str] | None = None,
+    behavior_root: Path | None = None,
+    output_root: Path | None = None,
+    catalog_name: str = "calibration_v1",
+) -> dict[str, Any]:
+    final_project_root = project_root.resolve()
+    final_behavior_root = _resolve(final_project_root, behavior_root)
+    final_output_root = _resolve(final_project_root, output_root) or (
+        final_project_root / "datasets" / "training" / "form_families"
+    ).resolve()
+    return build_form_family_catalog(
+        final_project_root,
+        artists=artists,
+        behavior_root=final_behavior_root,
+        output_root=final_output_root,
+        catalog_name=catalog_name,
     )
 
 

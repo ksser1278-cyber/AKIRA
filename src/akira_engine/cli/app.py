@@ -9,6 +9,7 @@ from . import (
     run_build_derived_datasets,
     run_extract_lyric_technique_records,
     run_build_lyric_behavior_dataset,
+    run_build_form_family_catalog,
     run_build_training_pilot,
     run_export_supervised_samples,
     run_export_vertex_supervised,
@@ -144,6 +145,23 @@ def cmd_dataset_build_lyric_behavior(root: Path, args: argparse.Namespace) -> in
     print(f"Line behavior records: {manifest['counts']['line_behavior_records']}")
     print(f"Phrase behavior records: {manifest['counts']['phrase_behavior_records']}")
     print(f"Chorus behavior records: {manifest['counts']['chorus_behavior_records']}")
+    return 0
+
+
+def cmd_dataset_build_form_family_catalog(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_build_form_family_catalog(
+        project_root=args.project_root or root,
+        artists=args.artists,
+        behavior_root=args.behavior_root,
+        output_root=args.output_root,
+        catalog_name=args.catalog_name,
+    )
+    print(f"Form family manifest: {manifest['manifest_path']}")
+    print(f"Track assignments: {manifest['counts']['track_assignments']}")
+    print(f"Families: {manifest['counts']['families']}")
+    print(f"Compressed hook: {manifest['counts']['compressed_hook']}")
+    print(f"Expansive statement: {manifest['counts']['expansive_statement']}")
+    print(f"Hybrid release: {manifest['counts']['hybrid_release']}")
     return 0
 
 
@@ -809,6 +827,17 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     build_lyric_behavior.add_argument("--artists", nargs="*")
     build_lyric_behavior.add_argument("--output-root", type=Path)
     build_lyric_behavior.set_defaults(func=lambda args: cmd_dataset_build_lyric_behavior(root, args))
+
+    build_form_families = dataset_sub.add_parser(
+        "build-form-families",
+        help="Cluster lyric behavior corpora into reusable chorus/form families.",
+    )
+    build_form_families.add_argument("--project-root", type=Path, default=root)
+    build_form_families.add_argument("--artists", nargs="*")
+    build_form_families.add_argument("--behavior-root", type=Path)
+    build_form_families.add_argument("--output-root", type=Path)
+    build_form_families.add_argument("--catalog-name", default="calibration_v1")
+    build_form_families.set_defaults(func=lambda args: cmd_dataset_build_form_family_catalog(root, args))
 
     bootstrap_rights = dataset_sub.add_parser("bootstrap-rights", help="Bootstrap the training rights map from derived records.")
     bootstrap_rights.add_argument("--project-root", type=Path, default=root)

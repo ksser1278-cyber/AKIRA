@@ -22,6 +22,7 @@ from .lyric_utils import (
 )
 from .lexical_family_bank import classify_term_family, is_cliche_term
 from .section_evidence_bank import build_section_evidence_bank
+from .songwriter_brief import build_songwriter_brief
 from .songwriter_io import (
     candidate_content_roots,
     load_artist_profile,
@@ -1280,6 +1281,167 @@ def _derive_hook_blueprint(records: list[dict[str, Any]], mode_support_context: 
     }
 
 
+def _build_songwriter_hook_blueprint(
+    *,
+    title_seed: str,
+    form_family_id: str,
+    composition_brief: dict[str, Any],
+) -> dict[str, Any]:
+    hook_surface_policy = composition_brief.get("hook_surface_policy", {}) if isinstance(composition_brief, dict) else {}
+    singability_profile = composition_brief.get("singability_profile", {}) if isinstance(composition_brief, dict) else {}
+    hook_density = "high" if safe_text(form_family_id) == "compressed_hook" else "medium"
+    if safe_text(singability_profile.get("repeatability_target")) == "high":
+        repetition_pressure = "high"
+    else:
+        repetition_pressure = safe_text(singability_profile.get("repeatability_target"), "medium")
+    return {
+        "core_text": safe_text(title_seed),
+        "hook_density": hook_density,
+        "hook_line_target": 2 if safe_text(form_family_id) == "compressed_hook" else 3,
+        "repetition_pressure": repetition_pressure,
+        "hook_mora_band": list(singability_profile.get("hook_mora_band", [])),
+    }
+
+
+def _songwriter_default_goals(section_role: str, pressure_stage: str, section_name: str) -> list[str]:
+    values = [safe_text(section_role), safe_text(pressure_stage), safe_text(section_name)]
+    return [value for value in values if value][:3]
+
+
+def _songwriter_title_drop_policy(section_name: str, hook_dependency: str) -> str:
+    if section_name == "chorus_final":
+        return "primary"
+    if section_name == "chorus":
+        return "anchor"
+    if hook_dependency in {"withhold", "none"}:
+        return "withhold"
+    if hook_dependency in {"foreshadow", "accelerate"}:
+        return "delayed"
+    return "sparse"
+
+
+def _songwriter_hook_pressure(section_name: str, repetition_budget: int) -> str:
+    if section_name in {"chorus", "chorus_final"}:
+        return "high" if repetition_budget >= 2 else "medium"
+    if section_name.startswith("pre_chorus"):
+        return "medium"
+    return "low"
+
+
+def _merge_songwriter_behavior_prior(
+    evidence: dict[str, Any],
+    spec: dict[str, Any],
+) -> dict[str, Any]:
+    prior = _sanitize_behavior_prior((evidence.get("behavior_prior", {}) if isinstance(evidence, dict) else {}) or {})
+    prior["line_target_range"] = list(spec.get("line_target_range", []))
+    prior["preferred_line_target"] = int(spec.get("line_target", 0) or 0)
+    if not prior.get("cadence_family"):
+        prior["cadence_family"] = safe_text(spec.get("cadence_target"))
+    if not prior.get("section_contrast_role"):
+        prior["section_contrast_role"] = safe_text(spec.get("section_contrast_role"))
+    if not prior.get("closure_strength_target"):
+        prior["closure_strength_target"] = safe_text(spec.get("closure_strength_target"))
+    if int(prior.get("repetition_budget", 0) or 0) <= 0:
+        prior["repetition_budget"] = int(spec.get("repetition_budget", 0) or 0)
+    return prior
+
+
+def _derive_songwriter_section_cards_from_bank(
+    evidence_bank: dict[str, Any],
+    *,
+    mode_id: str,
+    songwriter_bundle: dict[str, Any],
+) -> list[dict[str, Any]]:
+    section_evidence = evidence_bank.get("sections", {}) if isinstance(evidence_bank, dict) else {}
+    goal_defaults = _section_goal_defaults(mode_id)
+    imagery_defaults = _section_imagery_defaults(mode_id)
+    specs = songwriter_bundle.get("section_specs", []) if isinstance(songwriter_bundle, dict) else []
+    form_family_id = safe_text(songwriter_bundle.get("form_family_id"))
+
+    cards: list[dict[str, Any]] = []
+    for spec in specs:
+        section_name = safe_text(spec.get("section"))
+        if not section_name:
+            continue
+        evidence = section_evidence.get(section_name, {}) if isinstance(section_evidence, dict) else {}
+        behavior_prior = _merge_songwriter_behavior_prior(evidence, spec)
+
+        imagery_focus = _clean_demo_terms(
+            list(evidence.get("imagery_focus", [])),
+            limit=4,
+        ) or imagery_defaults.get(section_name, [])[:4]
+        required_imagery = _clean_demo_terms(
+            list(evidence.get("required_imagery", [])) + imagery_focus,
+            limit=4,
+        ) or imagery_focus[:2]
+        required_motifs = _clean_demo_terms(
+            list(evidence.get("required_motifs", []))
+            + list(evidence.get("imagery_focus", []))
+            + list(evidence_bank.get("global_motifs", [])),
+            limit=8,
+        )
+        conditioning_atoms = _clean_demo_terms(
+            list(evidence.get("required_motifs", []))
+            + list(evidence.get("imagery_focus", []))
+            + list(evidence.get("required_imagery", []))
+            + list(evidence_bank.get("global_motifs", []))
+            + list(evidence_bank.get("global_imagery", [])),
+            limit=6,
+        )
+
+        evidence_goals = [
+            safe_text(goal)
+            for goal in evidence.get("narrative_goals", [])
+            if safe_text(goal)
+        ]
+        if not evidence_goals or all(_is_weak_narrative_goal(goal) for goal in evidence_goals):
+            evidence_goals = _songwriter_default_goals(
+                safe_text(spec.get("section_role")),
+                safe_text(spec.get("pressure_stage")),
+                section_name,
+            )
+        if not evidence_goals:
+            evidence_goals = goal_defaults.get(section_name, [section_name])
+
+        line_target = int(spec.get("line_target", 0) or 0) or int(evidence.get("line_target", 0) or 0) or 4
+        repetition_budget = int(spec.get("repetition_budget", 0) or 0)
+        cards.append(
+            {
+                "section": section_name,
+                "form_family_id": form_family_id,
+                "line_target": line_target,
+                "line_target_range": list(spec.get("line_target_range", [])),
+                "section_role": safe_text(spec.get("section_role")),
+                "pressure_stage": safe_text(spec.get("pressure_stage")),
+                "hook_dependency": safe_text(spec.get("hook_dependency")),
+                "narrative_goals": evidence_goals[:3],
+                "imagery_focus": imagery_focus,
+                "required_imagery": required_imagery,
+                "required_motifs": required_motifs,
+                "conditioning_atoms": conditioning_atoms,
+                "scene": _clean_demo_phrase(evidence.get("scene"), max_len=12) or (required_imagery or imagery_focus or [""])[0],
+                "evidence_track_ids": list(evidence.get("evidence_track_ids", [])),
+                "title_drop_policy": safe_text(evidence.get("title_drop_policy")) or _songwriter_title_drop_policy(section_name, safe_text(spec.get("hook_dependency"))),
+                "hook_pressure": safe_text(evidence.get("hook_pressure")) or _songwriter_hook_pressure(section_name, repetition_budget),
+                "cadence_target": safe_text(spec.get("cadence_target")),
+                "repetition_budget": repetition_budget,
+                "closure_strength_target": safe_text(spec.get("closure_strength_target")),
+                "section_contrast_role": safe_text(spec.get("section_contrast_role")),
+                "behavior_prior": behavior_prior,
+                "mora_band": list(behavior_prior.get("mora_band", [])),
+                "title_return_band": list(behavior_prior.get("title_return_band", [])),
+                "hook_density_band": safe_text(behavior_prior.get("hook_density_band")),
+                "lexical_family_bias": list(behavior_prior.get("lexical_family_bias", [])),
+                "phrase_energy_roles": [
+                    safe_text(spec.get("pressure_stage")),
+                    safe_text(spec.get("section_role")),
+                ],
+                "title_drop_roles": [safe_text(spec.get("hook_dependency"))],
+            }
+        )
+    return cards
+
+
 def _derive_section_cards_from_bank(evidence_bank: dict[str, Any], mode_id: str) -> list[dict[str, Any]]:
     section_evidence = evidence_bank.get("sections", {})
     preferred_order = [
@@ -1515,6 +1677,12 @@ def build_demo_plan(
     profile_path = _find_artist_profile(project_root, primary_id)
     representative_profile = _load_json(profile_path)
     effective_mode_id = safe_text(mode_id) or safe_text(representative_profile.get("mode_priority", ["ironic_meta"])[0])
+    songwriter_bundle = build_songwriter_brief(
+        project_root,
+        artist_id=primary_id,
+        mode_id=effective_mode_id,
+        title_seed=title_seed,
+    )
     archetype_context = _sanitize_archetype_context(
         _load_archetype_context(project_root, artist_id, effective_mode_id)
     )
@@ -1713,28 +1881,18 @@ def build_demo_plan(
 
     title_patterns = _derive_title_patterns(anchor_records + expansion_records)
     section_evidence_bank = composition_frame.get("merged_bank", {})
-    hook_blueprint = _derive_hook_blueprint(anchor_records + expansion_records, mode_support_context)
-    hook_blueprint.update(section_evidence_bank.get("hook_blueprint", {}))
-    hook_blueprint["mode_support_bias"] = {
-        "theme_axes": [
-            safe_text(value)
-            for value in list((hook_blueprint.get("mode_support_bias", {}) or {}).get("theme_axes", []))
-            if safe_text(value)
-            and not contains_bad_script(safe_text(value))
-            and not looks_corrupted_text(safe_text(value))
-        ][:6],
-        "motif_atoms": _filter_artist_biased_terms(
-            list((hook_blueprint.get("mode_support_bias", {}) or {}).get("motif_atoms", [])),
-            blocked_terms=foreign_title_terms,
-            artist_lexicon=artist_lexicon,
-            artist_families=artist_families,
-            limit=6,
-            max_len=12,
-        ),
-    }
+    hook_blueprint = _build_songwriter_hook_blueprint(
+        title_seed=title_seed,
+        form_family_id=safe_text(songwriter_bundle.get("form_family_id")),
+        composition_brief=songwriter_bundle.get("composition_brief", {}),
+    )
     section_cards = [
         _sanitize_section_card(card)
-        for card in _derive_section_cards_from_bank(section_evidence_bank, effective_mode_id)
+        for card in _derive_songwriter_section_cards_from_bank(
+            section_evidence_bank,
+            mode_id=effective_mode_id,
+            songwriter_bundle=songwriter_bundle,
+        )
     ]
     leakage_guardrails = _derive_leakage_guardrails(
         artist_id,
@@ -1763,7 +1921,7 @@ def build_demo_plan(
     return {
         "schema_version": "1.0",
         "record_type": "artist_demo_plan",
-        "planner_version": "demo_planner_v2_dataset_driven",
+        "planner_version": "demo_planner_v3_songwriter_first",
         "artist_id": artist_id,
         "artist_display_name": artist_names[0] if artist_names else artist_id,
         "mode_id": effective_mode_id,
@@ -1803,6 +1961,12 @@ def build_demo_plan(
             "selection_basis": "legacy_total",
             "shadow_metrics": ["legacy_total", "musical_total", "blended_total"],
         },
+        "composition_brief": dict(songwriter_bundle.get("composition_brief", {})),
+        "form_family_id": safe_text(songwriter_bundle.get("form_family_id")),
+        "form_family_reason": safe_text(songwriter_bundle.get("form_family_reason")),
+        "form_family_shortlist": list(songwriter_bundle.get("form_family_shortlist", [])),
+        "artist_grammar_bias": dict(songwriter_bundle.get("artist_grammar_bias", {})),
+        "singability_profile": dict(songwriter_bundle.get("singability_profile", {})),
         "composite_style": {
             "theme_axes": theme_axes,
             "imagery_anchors": imagery_anchors,
@@ -1822,6 +1986,7 @@ def build_demo_plan(
         "mode_support_context": mode_support_context,
         "leakage_guardrails": leakage_guardrails,
         "generation_notes": [
+            "Plan from melody-fit and chorus proposition before locking sections.",
             "Use the merged corpus frame as the planning base; artist anchors only bias the result.",
             "Use artist-level common evidence, not one anchor track's exact hook lines.",
             "Let title-binding come from title pattern and hook density, not from direct title reuse.",
@@ -1884,10 +2049,15 @@ def render_demo_plan_report(plan: dict[str, Any]) -> str:
             f"- Energy arc: {', '.join(plan['composite_style']['energy_arc'])}",
             f"- Title patterns: {', '.join(plan['composite_style']['title_patterns'])}",
             "",
+            "## Composition Brief",
+            f"- Form family: `{safe_text(plan.get('form_family_id'), 'unknown')}`",
+            f"- Form reason: {safe_text(plan.get('form_family_reason'), 'n/a')}",
+            f"- Shortlist: {', '.join(plan.get('form_family_shortlist', [])) or 'n/a'}",
+            f"- Hook mora band: {', '.join(str(v) for v in (plan.get('singability_profile', {}) or {}).get('hook_mora_band', [])) or 'n/a'}",
+            f"- Verse mora band: {', '.join(str(v) for v in (plan.get('singability_profile', {}) or {}).get('verse_mora_band', [])) or 'n/a'}",
+            "",
             "## Hook Blueprint",
             f"- Hook density: `{plan['hook_blueprint']['hook_density']}`",
-            f"- Title ignition style: `{plan['hook_blueprint']['title_ignition_style']}`",
-            f"- Chorus line target: `{plan['hook_blueprint']['chorus_line_target']}`",
             f"- Hook line target: `{plan['hook_blueprint']['hook_line_target']}`",
             f"- Repetition pressure: `{plan['hook_blueprint']['repetition_pressure']}`",
             "",
@@ -2003,6 +2173,12 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
     title_seed = safe_text(plan.get("title_seed"))
     composite = plan.get("composite_style", {}) or {}
     composition_frame = plan.get("composition_frame", {}) or {}
+    composition_brief = dict(plan.get("composition_brief", {}) or {})
+    form_family_id = safe_text(plan.get("form_family_id"))
+    form_family_reason = safe_text(plan.get("form_family_reason"))
+    form_family_shortlist = list(plan.get("form_family_shortlist", []))
+    artist_grammar_bias = dict(plan.get("artist_grammar_bias", {}) or {})
+    singability_profile = dict(plan.get("singability_profile", {}) or {})
     foreign_title_terms = list(composition_frame.get("foreign_title_terms_filtered", []))
     leakage = plan.get("leakage_guardrails", {}) or {}
     artist_profile = load_artist_profile(artist_id) or {}
@@ -2125,7 +2301,12 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             and not looks_corrupted_text(safe_text(x))
         ]
         if not goals or all(_is_weak_narrative_goal(goal) for goal in goals):
-            goals = list(_section_goal_defaults(mode).get(s_name, [s_name]))
+            songwriter_goals = [
+                safe_text(card.get("section_role")),
+                safe_text(card.get("pressure_stage")),
+                safe_text(card.get("hook_dependency")),
+            ]
+            goals = [goal for goal in songwriter_goals if goal] or list(_section_goal_defaults(mode).get(s_name, [s_name]))
         vnext_goals = [
             goal
             for goal in _clean_demo_phrase_list(list(vnext_meta.get("narrative_goals", [])), limit=3, max_len=48)
@@ -2207,6 +2388,9 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             else "sparse"
         )
         hook_pressure = safe_text(vnext_meta.get("hook_pressure"), "medium")
+        line_target_range = list(card.get("line_target_range", [])) if isinstance(card.get("line_target_range", []), list) else []
+        if not line_target_range:
+            line_target_range = list(effective_behavior_prior.get("line_target_range", []))
 
         normalized_cards.append(
             {
@@ -2222,12 +2406,16 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
                 "imagery_focus": imagery_terms,
                 "delivery": _delivery_from_function(function_name, s_name),
                 "function": function_name,
+                "form_family_id": safe_text(card.get("form_family_id") or form_family_id),
+                "section_role": safe_text(card.get("section_role")),
+                "pressure_stage": safe_text(card.get("pressure_stage")),
+                "hook_dependency": safe_text(card.get("hook_dependency")),
                 "cadence_target": cadence_target,
                 "abstraction_ceiling": abstraction_ceiling,
                 "title_drop_policy": title_drop_policy,
                 "hook_pressure": hook_pressure,
                 "behavior_prior": effective_behavior_prior,
-                "line_target_range": list(effective_behavior_prior.get("line_target_range", [])),
+                "line_target_range": line_target_range,
                 "mora_band": list(effective_behavior_prior.get("mora_band", [])),
                 "repetition_budget": int(effective_behavior_prior.get("repetition_budget", 0) or 0),
                 "title_return_band": list(effective_behavior_prior.get("title_return_band", [])),
@@ -2286,8 +2474,6 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         ]
     )
     hook_density = safe_text(plan.get("hook_blueprint", {}).get("hook_density"), "medium")
-    title_ignition_style = safe_text(plan.get("hook_blueprint", {}).get("title_ignition_style"), "direct")
-    hook_mode_support_bias = (plan.get("hook_blueprint", {}) or {}).get("mode_support_bias", {}) or {}
     sanitized_demo_plan = {
         **plan,
         "composite_style": {
@@ -2298,6 +2484,12 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             "energy_arc": clean_energy_arc,
             "title_patterns": title_patterns,
         },
+        "composition_brief": composition_brief,
+        "form_family_id": form_family_id,
+        "form_family_reason": form_family_reason,
+        "form_family_shortlist": form_family_shortlist,
+        "artist_grammar_bias": artist_grammar_bias,
+        "singability_profile": singability_profile,
         "section_cards": normalized_cards,
     }
     return {
@@ -2321,23 +2513,15 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             **(sanitized_demo_plan.get("hook_blueprint", {}) or {}),
             "core_text": fallback_hook,
             "hook_density": hook_density,
-            "mode_support_bias": {
-                "theme_axes": [
-                    safe_text(value)
-                    for value in list(hook_mode_support_bias.get("theme_axes", []))
-                    if safe_text(value)
-                    and not contains_bad_script(safe_text(value))
-                    and not looks_corrupted_text(safe_text(value))
-                ][:6],
-                "motif_atoms": _filter_blocked_terms(
-                    list(hook_mode_support_bias.get("motif_atoms", [])),
-                    foreign_title_terms,
-                    limit=6,
-                ),
-            },
         },
         "hook_density": hook_density,
         "artist_profile": artist_profile,
+        "composition_brief": composition_brief,
+        "form_family_id": form_family_id,
+        "form_family_reason": form_family_reason,
+        "form_family_shortlist": form_family_shortlist,
+        "artist_grammar_bias": artist_grammar_bias,
+        "singability_profile": singability_profile,
         "theme_axes": clean_theme_axes,
         "dominant_emotions": clean_theme_axes[:4],
         "voice": {
@@ -2347,7 +2531,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
         "arc_label": " -> ".join(clean_energy_arc[:3]) or mode,
         "form_profile": {
             "section_order": [card["section"] for card in normalized_cards],
-            "tags": [mode, "artist_demo"],
+            "tags": [mode, "artist_demo", form_family_id or "unclassified_form"],
             "target_line_total": sum(int(card.get("line_target", 0) or 0) for card in normalized_cards),
         },
         "conditioning_context": {
@@ -2357,7 +2541,7 @@ def normalize_demo_plan_for_runtime(plan: dict[str, Any], vnext_plan: Any | None
             "dramatic_arc": clean_energy_arc[:4],
             "phrase_source_types": ["artist_demo_plan"],
             "hook_copy_force": hook_density,
-            "title_ignition_style": title_ignition_style,
+            "title_ignition_style": safe_text((composition_brief.get("hook_surface_policy", {}) or {}).get("surface_mode"), "hook_first"),
             "critic_focus": ["title binding", "motif landing", "final release"],
             "title_atoms": title_atoms or ([fallback_hook] if fallback_hook != "..." else []),
             "hook_atoms": hook_atoms or (([fallback_hook] if fallback_hook != "..." else []) + motifs[:3]),

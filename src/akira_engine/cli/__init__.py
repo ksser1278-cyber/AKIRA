@@ -49,6 +49,25 @@ def run_build_lyric_behavior_dataset(
     )
 
 
+def run_build_form_family_catalog(
+    *,
+    project_root: Path,
+    artists: list[str] | None = None,
+    behavior_root: Path | None = None,
+    output_root: Path | None = None,
+    catalog_name: str = "calibration_v1",
+) -> dict[str, Any]:
+    from .dataset_commands import run_build_form_family_catalog as _impl
+
+    return _impl(
+        project_root=project_root,
+        artists=artists,
+        behavior_root=behavior_root,
+        output_root=output_root,
+        catalog_name=catalog_name,
+    )
+
+
 def run_bootstrap_training_rights(*, project_root: Path, derived_jsonl: Path | None = None, existing_map: Path | None = None, output_path: Path | None = None) -> dict[str, Any]:
     from .dataset_commands import run_bootstrap_training_rights as _impl
 
