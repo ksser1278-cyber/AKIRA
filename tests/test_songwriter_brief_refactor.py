@@ -4,7 +4,7 @@ from src.akira_engine.demo_planner import (
     _derive_songwriter_section_cards_from_bank,
     normalize_demo_plan_for_runtime,
 )
-from src.akira_engine.renderer.mod import _deco27_surface_terms, run_renderer_stage
+from src.akira_engine.renderer.mod import _deco27_surface_terms, _hybrid_deco27_bridge_lines, _hybrid_deco27_chorus_lines, _hybrid_deco27_outro_lines, _hybrid_deco27_pre_chorus_lines, run_renderer_stage
 from src.akira_engine.songwriter_brief import build_songwriter_brief
 
 
@@ -275,6 +275,55 @@ def test_deco27_surface_terms_filter_title_like_non_chorus_terms():
     )
 
     assert all(term not in {"シンデレラ", "ラビットホール", "毒の味"} for term in selected)
+
+
+def test_deco27_pre_chorus_lines_do_not_reuse_hook_fragments_as_pressure_line():
+    lines = _hybrid_deco27_pre_chorus_lines(
+        {
+            "section": "pre_chorus",
+            "required_imagery": ["キャンディ", "点滅"],
+            "required_motifs": ["毒の味", "魔法", "鼓動"],
+            "imagery_focus": ["魔法", "キャンディ"],
+            "scene": "深夜",
+            "_render_context": {"artist_id": "deco27"},
+        },
+        "一緒の毒の味",
+        ["毒の味", "点滅", "魔法", "キャンディ"],
+        second_half=False,
+        variant=0,
+    )
+
+    assert "毒の味" not in lines[2]
+
+
+def test_deco27_bridge_and_outro_avoid_generic_dakega_repetition():
+    bridge = _hybrid_deco27_bridge_lines(["沈黙", "暗室", "血", "反射"])
+    outro = _hybrid_deco27_outro_lines(["キャンディ", "余熱", "教室", "静電気"], variant=0)
+
+    assert all("だけが" not in line for line in bridge)
+    assert all("だけが" not in line for line in outro)
+
+
+def test_deco27_chorus_frame_is_artist_specific():
+    lines = _hybrid_deco27_chorus_lines(
+        {
+            "section": "chorus",
+            "_render_context": {
+                "artist_id": "deco27",
+                "composition_brief": {
+                    "chorus_proposition": {
+                        "core_phrase": "一緒の毒の味",
+                    }
+                },
+            },
+        },
+        "一緒の毒の味",
+        ["傷", "遊園地", "静電気", "体温"],
+        final=False,
+    )
+
+    assert lines[0] == "一緒の毒の味だけじゃまだ足りない"
+    assert "遊園地の熱で指先まで染め上げて" in lines
 
 
 def test_hybrid_release_keeps_core_phrase_inside_chorus_family():

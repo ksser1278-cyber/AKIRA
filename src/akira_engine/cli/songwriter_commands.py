@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from ..demo_runtime import run_demo_songwriter
+from ..corpus_proposition_engine import run_corpus_proposition_demo
 
 
 def _archive_root(project_root: Path) -> Path:
@@ -43,7 +43,7 @@ def run_songwriter_demo(
     output_root = _resolve(final_project_root, output_dir) or (final_project_root / "outputs" / "demo_songwriter").resolve()
     mode_segment = mode_id or "auto"
     final_output_dir = output_root / artist_id / mode_segment
-    manifest = run_demo_songwriter(
+    manifest = run_corpus_proposition_demo(
         source_root,
         artist_id=artist_id,
         mode_id=mode_id,

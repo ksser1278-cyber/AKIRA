@@ -1314,24 +1314,46 @@ def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list
         [
             f"{a}が喉の奥でうるさく明滅していく",
             f"{b}の継ぎ目から言い訳まで静かに剥がれ始める",
-            f"もう{d}だけでは足りない",
+            "もう引き返せる感じがしない",
             f"{c}のちらつきで足元まで軋み始める",
         ],
         [
             f"{a}に触れるたび鼓動まで少し乱れ始める",
             f"{b}の気配ひとつで{c}までまともに言えなくなる",
-            f"もう{d}しか残ってない",
+            "もうまともな顔ではいられない",
         ],
     ]
     return packs[variant % len(packs)]
 
 
+def _hybrid_deco27_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, final: bool) -> list[str]:
+    a, b, c, d = _deco27_surface_terms(card, hook, terms)
+    proposition = _chorus_proposition(card, hook)
+    core_phrase = safe_text(proposition.get("core_phrase")) or hook
+    if final:
+        return [
+            f"{core_phrase}だけではもう誤魔化せない",
+            f"{core_phrase} {core_phrase}",
+            f"{core_phrase}をやめるな",
+            f"{b}の熱で喉元まで裂いていけ",
+            f"{a}ごと今すぐ抱えたまま落ちていけ",
+            f"{c}の火花までまとめて踏み抜け",
+        ]
+    return [
+        f"{core_phrase}だけじゃまだ足りない",
+        f"{core_phrase} {core_phrase}",
+        f"{core_phrase}をまだ手放せない",
+        f"{b}の熱で指先まで染め上げて",
+        f"{d}の残り香を噛んだまま沈んでいけ",
+    ]
+
+
 def _hybrid_deco27_bridge_lines(terms: list[str]) -> list[str]:
     a, b, c, d = terms
     return [
-        f"{a}を隠したまま視界だけ半拍遅れる",
-        f"{b}の反射で{c}の輪郭まで少し遠のく",
-        f"{d}の余熱だけうまく捨てられない",
+        f"{a}を隠したまま視界から先に温度が消えていく",
+        f"{b}の反射で{c}の輪郭まで少し鈍くなる",
+        f"{d}の余熱だけ喉の奥でまだ止まらない",
     ]
 
 
@@ -1339,14 +1361,14 @@ def _hybrid_deco27_outro_lines(terms: list[str], *, variant: int) -> list[str]:
     a, b, c, d = terms
     packs = [
         [
-            f"{a}だけがまだ部屋の隅で熱を持っている",
-            f"{b}の気配だけが眠れずにいる",
-            f"{c}の静電気だけ床を転がっていく",
+            f"{a}がまだ部屋の隅で熱を持っている",
+            f"{b}の気配が眠れないまま薄く残っている",
+            f"{c}の静電気が床を転がっていく",
         ],
         [
-            f"{a}だけが最後までこちらを見ている",
-            f"{b}の薄明かりだけが靴底に貼りついている",
-            f"{d}の気配だけ朝まで抜けていかない",
+            f"{a}が最後までこちらを見ている",
+            f"{b}の薄明かりが靴底に貼りついている",
+            f"{d}の気配が朝まで抜けていかない",
         ],
     ]
     return packs[variant % len(packs)]
@@ -1375,8 +1397,12 @@ def _render_dark_cute_hybrid_section(
             return _hybrid_deco27_pre_chorus_lines(card, hook, hybrid_terms, second_half=False, variant=variant)
         if section == "pre_chorus_2":
             return _hybrid_deco27_pre_chorus_lines(card, hook, hybrid_terms, second_half=True, variant=variant)
+        if section == "chorus":
+            return _hybrid_deco27_chorus_lines(card, hook, hybrid_terms, final=False)
         if section == "bridge":
             return _hybrid_deco27_bridge_lines(hybrid_terms)
+        if section == "chorus_final":
+            return _hybrid_deco27_chorus_lines(card, hook, hybrid_terms, final=True)
         if section == "outro":
             return _hybrid_deco27_outro_lines(hybrid_terms, variant=variant)
     if section == "intro":
