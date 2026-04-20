@@ -796,7 +796,7 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     songwriter_demo.add_argument("--project-root", type=Path, default=root)
     songwriter_demo.add_argument("--output-dir", type=Path)
     songwriter_demo.add_argument("--candidate-count", type=int)
-    songwriter_demo.add_argument("--generation-mode", choices=["auto", "template", "llm"])
+    songwriter_demo.add_argument("--generation-mode", choices=["auto", "template", "llm", "api"])
     songwriter_demo.add_argument("--model-provider", choices=["gemini", "gpt", "openai"])
     songwriter_demo.add_argument("--model-name")
     songwriter_demo.set_defaults(func=lambda args: cmd_songwriter_demo(root, args))

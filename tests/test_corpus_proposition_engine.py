@@ -1,5 +1,10 @@
 import json
+from pathlib import Path
 
+from src.akira_engine import corpus_proposition_engine as cpe
+from src.akira_engine.lyric_api_adapter import _resolve_api_project_root
+from src.akira_engine.openai_songwriter import validate_markdown as validate_openai_markdown
+from src.akira_engine.prompt_package_builder import build_prompt_package
 from src.akira_engine.corpus_proposition_engine import (
     _score_novelty,
     _sanitize_japanese_term,
@@ -9,6 +14,7 @@ from src.akira_engine.corpus_proposition_engine import (
     build_proposition_archetype_set,
     build_runtime_plan,
     build_section_behavior_plan,
+    run_corpus_proposition_demo,
 )
 
 
@@ -229,6 +235,91 @@ def test_runtime_plan_exposes_new_engine_artifacts(tmp_path):
     assert runtime_plan["section_cards"][0]["hook_dependency"]
 
 
+def test_prompt_package_enforces_core_phrase_contract(tmp_path):
+    intelligence = _fixture_intelligence(tmp_path, "deco27")
+    brief = build_composition_brief(intelligence)
+    propositions = build_proposition_archetype_set(intelligence, brief)
+    proposition = propositions[0]
+    form_plan = build_form_plan(intelligence, proposition)
+    section_plan = build_section_behavior_plan(intelligence, brief, proposition, form_plan)
+    runtime_plan = build_runtime_plan(
+        intelligence,
+        brief,
+        proposition,
+        form_plan,
+        section_plan,
+        propositions,
+        candidate_index=0,
+    )
+
+    prompt_package = build_prompt_package(
+        runtime_plan,
+        candidate_index=0,
+        model_provider="gpt",
+        model_name="stub-model",
+    )
+
+    assert prompt_package["output_contract"]["required_title"] == proposition["core_phrase"]
+    assert prompt_package["output_contract"]["required_core_phrase"] == proposition["core_phrase"]
+    assert "chorus" in prompt_package["output_contract"]["required_core_sections"]
+    assert "chorus_final" in prompt_package["output_contract"]["required_core_sections"]
+    assert "compressed_hook family" not in prompt_package["user_prompt"]
+
+
+def test_openai_validate_markdown_rejects_wrong_title_and_missing_core_phrase():
+    request_record = {
+        "output_contract": {
+            "format": "markdown_section",
+            "required_sections": ["[intro]", "[chorus]", "[chorus_final]"],
+            "required_title": "罪と罰",
+            "required_core_phrase": "罪と罰",
+            "required_core_sections": ["chorus", "chorus_final"],
+            "min_core_phrase_mentions": 3,
+            "blocked_non_chorus_fragments": ["罪と罰"],
+        }
+    }
+
+    bad_markdown = """# 玻璃の口づけ
+
+[intro]
+罪と罰がこぼれていく
+
+[chorus]
+ラブドール、ねえ
+
+[chorus_final]
+ラブドール、ねえ
+"""
+    ok, error = validate_openai_markdown(request_record, bad_markdown)
+    assert not ok
+    assert error in {"wrong_title", "missing_core_phrase_mentions", "hook_fragment_leak:intro"}
+
+
+def test_prompt_package_includes_family_specific_directives(tmp_path):
+    intelligence = _fixture_intelligence(tmp_path, "maretu")
+    brief = build_composition_brief(intelligence)
+    propositions = build_proposition_archetype_set(intelligence, brief)
+    proposition = propositions[0]
+    form_plan = build_form_plan(intelligence, proposition)
+    section_plan = build_section_behavior_plan(intelligence, brief, proposition, form_plan)
+    runtime_plan = build_runtime_plan(
+        intelligence,
+        brief,
+        proposition,
+        form_plan,
+        section_plan,
+        propositions,
+        candidate_index=0,
+    )
+    prompt_package = build_prompt_package(
+        runtime_plan,
+        candidate_index=0,
+        model_provider="gpt",
+        model_name="stub-model",
+    )
+    assert "compressed_hook family" in prompt_package["user_prompt"]
+
+
 def test_novelty_penalizes_same_surface_and_same_proposition():
     scored = _score_novelty(
         [
@@ -275,3 +366,86 @@ def test_corpus_intelligence_prefers_representative_mode_tracks(tmp_path):
     intelligence = _fixture_intelligence(tmp_path, "deco27")
     assert "deco27_ghost_rule" in intelligence["representative_track_ids"]
     assert "deco27_tsumi_to_batsu" in intelligence["representative_track_ids"]
+
+
+def _fake_api_candidate(runtime_plan, candidate_index: int):
+    title = runtime_plan["hook_blueprint"]["core_text"] or "仮題"
+    section_lines = []
+    for card in runtime_plan["section_cards"]:
+        section = card["section"]
+        section_lines.append(f"[{section}]")
+        if section == "chorus":
+            section_lines.append(title)
+            section_lines.append(f"{title}をまだ手放せない")
+        elif section == "chorus_final":
+            section_lines.append(title)
+            section_lines.append(f"{title}をやめるな")
+        else:
+            section_lines.append(f"{section}の圧だけがまだ残っている")
+    markdown = "# " + title + "\n\n" + "\n".join(section_lines) + "\n"
+    return {
+        "ok": True,
+        "candidate_id": f"{runtime_plan['track_id']}-candidate-{candidate_index + 1}",
+        "title": title,
+        "markdown": markdown,
+        "artist_id": runtime_plan["artist_id"],
+        "form_family_id": runtime_plan["form_family_id"],
+        "renderer_frame_family": "api/test",
+        "chorus_shape": "statement_hook_release",
+        "bridge_shape": "perspective_delay",
+        "hook_pressure_realized": "medium",
+        "generation_backend": "api",
+        "api_provider": "test",
+        "api_model": "stub-model",
+        "api_status_code": 200,
+        "api_finish_reason": "stop",
+        "api_error": "",
+        "raw_response": {"ok": True},
+        "prompt_package": {"request_id": f"req-{candidate_index + 1}"},
+    }
+
+
+def test_run_corpus_proposition_demo_api_mode_writes_prompt_packages(tmp_path, monkeypatch):
+    fixture_intelligence = _fixture_intelligence(tmp_path, "deco27")
+
+    monkeypatch.setattr(cpe, "build_corpus_intelligence", lambda *args, **kwargs: fixture_intelligence)
+
+    def _stub_generate(project_root: Path, runtime_plan, prompt_package, *, candidate_index, model_provider, model_name):
+        assert prompt_package["form_family_id"] == runtime_plan["form_family_id"]
+        assert prompt_package["proposition_id"] == runtime_plan["selected_proposition"]["proposition_id"]
+        return _fake_api_candidate(runtime_plan, candidate_index)
+
+    monkeypatch.setattr(cpe, "generate_candidate_via_api", _stub_generate)
+
+    output_dir = tmp_path / "outputs" / "api_demo"
+    manifest = run_corpus_proposition_demo(
+        tmp_path,
+        artist_id="deco27",
+        mode_id="dark_cute_breakdown",
+        output_dir=output_dir,
+        candidate_count=2,
+        generation_mode="api",
+        model_provider="gpt",
+        model_name="stub-model",
+    )
+
+    assert manifest["generation_mode"] == "api"
+    assert manifest["generation_backend"] == "api"
+    assert manifest["api_provider"] == "test"
+    assert Path(manifest["output_paths"]["prompt_packages"]).exists()
+    assert Path(manifest["output_paths"]["api_generation_records"]).exists()
+
+    prompt_packages = json.loads((output_dir / "prompt_packages.json").read_text(encoding="utf-8"))
+    assert len(prompt_packages) == 2
+    assert prompt_packages[0]["prompt_inputs"]["selected_proposition"]["proposition_id"]
+    assert prompt_packages[0]["form_family_id"] == "hybrid_release"
+
+
+def test_resolve_api_project_root_walks_up_to_config_env(tmp_path):
+    project_root = tmp_path / "AKIRA ENGINE"
+    archive_root = project_root / "_quarantine" / "2026-04-03" / "archive"
+    (project_root / "config").mkdir(parents=True, exist_ok=True)
+    (project_root / "config" / ".env").write_text("OPENAI_API_KEY=test\n", encoding="utf-8")
+    archive_root.mkdir(parents=True, exist_ok=True)
+
+    assert _resolve_api_project_root(archive_root) == project_root.resolve()

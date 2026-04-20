@@ -46,6 +46,29 @@ def extract_section_headers(markdown_text: str) -> list[str]:
     return headers
 
 
+def _section_map(markdown_text: str) -> dict[str, str]:
+    sections: dict[str, list[str]] = {}
+    current: str | None = None
+    for raw_line in markdown_text.splitlines():
+        line = raw_line.rstrip()
+        match = SECTION_HEADER_PATTERN.match(line.strip())
+        if match:
+            current = match.group(1).strip()
+            sections.setdefault(current, [])
+            continue
+        if current is not None and line.strip():
+            sections[current].append(line.strip())
+    return {section: "\n".join(lines) for section, lines in sections.items()}
+
+
+def _first_non_empty_line(text: str) -> str:
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if line:
+            return line
+    return ""
+
+
 def validate_markdown(request_record: dict[str, Any], markdown_text: str) -> tuple[bool, str | None]:
     text = markdown_text.strip()
     
@@ -71,6 +94,38 @@ def validate_markdown(request_record: dict[str, Any], markdown_text: str) -> tup
         missing = [section for section in required_sections if section not in found_sections]
         if missing:
             return False, f"missing_sections:{', '.join(missing)}"
+
+    required_title = str(output_contract.get("required_title", "")).strip()
+    if required_title:
+        title_line = _first_non_empty_line(text)
+        if title_line != f"# {required_title}":
+            return False, "wrong_title"
+
+    required_core_phrase = str(output_contract.get("required_core_phrase", "")).strip()
+    compact_text = re.sub(r"\s+", "", text)
+    if required_core_phrase:
+        required_mentions = int(output_contract.get("min_core_phrase_mentions", 0) or 0)
+        compact_phrase = re.sub(r"\s+", "", required_core_phrase)
+        if compact_text.count(compact_phrase) < required_mentions:
+            return False, "missing_core_phrase_mentions"
+        required_core_sections = list(output_contract.get("required_core_sections", []))
+        if required_core_sections:
+            sections = _section_map(text)
+            for section in required_core_sections:
+                if compact_phrase not in re.sub(r"\s+", "", sections.get(section, "")):
+                    return False, f"missing_core_phrase_in_section:{section}"
+
+    blocked_non_chorus_fragments = [str(value).strip() for value in output_contract.get("blocked_non_chorus_fragments", []) if str(value).strip()]
+    if blocked_non_chorus_fragments:
+        sections = _section_map(text)
+        for section, content in sections.items():
+            if section in {"chorus", "chorus_final"}:
+                continue
+            compact_content = re.sub(r"\s+", "", content)
+            for fragment in blocked_non_chorus_fragments:
+                compact_fragment = re.sub(r"\s+", "", fragment)
+                if compact_fragment and compact_fragment in compact_content:
+                    return False, f"hook_fragment_leak:{section}"
 
     return True, None
 

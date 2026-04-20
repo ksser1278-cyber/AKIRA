@@ -9,9 +9,11 @@ from typing import Any
 
 from .critic.mod import CriticResult, run_critic_stage
 from .lexical_family_bank import classify_term_family
+from .lyric_api_adapter import generate_candidate_via_api
 from .lyric_behavior_priors import load_lyric_behavior_priors
 from .lyric_utils import contains_bad_script, contains_japanese, safe_text, unique_preserve_order
 from .promotion.mod import run_promotion_stage
+from .prompt_package_builder import build_prompt_package
 from .renderer.mod import run_renderer_stage
 from .songwriter_io import candidate_content_roots, load_conditioning_records, load_representative_demo_profile
 
@@ -202,29 +204,29 @@ _PROPOSITION_TEMPLATES: list[dict[str, Any]] = [
         "archetype_kind": "obsessive_return",
         "hook_density_target": "high",
         "title_return_policy": "primary",
-        "escalation_phrase": "pressure escalation",
-        "release_phrase": "collapse release",
+        "escalation_phrase": "離せないまま深く沈む",
+        "release_phrase": "壊れながらも戻れない",
     },
     {
         "archetype_kind": "confessional_hold",
         "hook_density_target": "medium",
         "title_return_policy": "anchor",
-        "escalation_phrase": "confession escalation",
-        "release_phrase": "irreversible release",
+        "escalation_phrase": "やさしい顔では抱えきれない",
+        "release_phrase": "抱えたまま落ちていく",
     },
     {
         "archetype_kind": "dependency_spiral",
         "hook_density_target": "medium",
         "title_return_policy": "anchor",
-        "escalation_phrase": "dependency escalation",
-        "release_phrase": "fall release",
+        "escalation_phrase": "甘さの底でもまだ逃げられない",
+        "release_phrase": "依存のままで崩れていく",
     },
     {
         "archetype_kind": "rupture_assertion",
         "hook_density_target": "high",
         "title_return_policy": "primary",
-        "escalation_phrase": "pressure rupture",
-        "release_phrase": "impact release",
+        "escalation_phrase": "ひびごと喉元まで裂けていく",
+        "release_phrase": "衝動のままで踏み抜いていく",
     },
 ]
 
@@ -571,8 +573,8 @@ def build_composition_brief(
         "listener_position": _derive_listener_position(intelligence),
         "chorus_proposition": {
             "core_phrase": seed_core,
-            "escalation_phrase": "pressure escalation",
-            "release_phrase": "collapse release",
+            "escalation_phrase": "やさしい顔では抱えきれない",
+            "release_phrase": "抱えたまま落ちていく",
         },
         "singability_profile": dict(mode_profile.get("singability_profile", {})),
         "energy_curve": list(mode_profile.get("energy_curve", [])),
@@ -657,8 +659,8 @@ def build_proposition_archetype_set(
                 "source_track_id": "",
                 "source_title_core": fallback_core,
                 "core_phrase": fallback_core,
-                "escalation_phrase": "pressure escalation",
-                "release_phrase": "collapse release",
+                "escalation_phrase": "やさしい顔では抱えきれない",
+                "release_phrase": "抱えたまま落ちていく",
                 "allowed_lexical_families": list(intelligence.get("mode_profile", {}).get("preferred_families", [])[:2]),
                 "forbidden_fragments": [fallback_core],
                 "hook_density_target": "medium",
@@ -773,6 +775,11 @@ def build_section_behavior_plan(
     section_order = list(form_plan.get("section_order", []))
     line_targets = list(form_plan.get("line_target_profile", []))
     energy_curve = list(brief.get("energy_curve", []))
+    energy_stage_by_section = {
+        safe_text(item.get("section")): safe_text(item.get("pressure_stage"))
+        for item in energy_curve
+        if isinstance(item, dict) and safe_text(item.get("section"))
+    }
 
     for index, section in enumerate(section_order):
         prior = _section_prior(intelligence, section)
@@ -785,7 +792,7 @@ def build_section_behavior_plan(
         else:
             line_target_range = [max(2, default_target - 1), default_target]
         scene = _section_scene(intelligence, section, allowed_families, terms)
-        pressure_stage = safe_text(energy_curve[index].get("pressure_stage")) if index < len(energy_curve) else "set"
+        pressure_stage = energy_stage_by_section.get(section, "set")
         title_drop_policy = _TITLE_RETURN_POLICY_BY_SECTION.get(section, "withhold")
         if section == "chorus":
             title_drop_policy = safe_text(proposition.get("title_return_policy"), "primary")
@@ -1011,6 +1018,13 @@ def _promoted_critic_result(item: dict[str, Any]) -> CriticResult:
     return replace(critic_result, scores=scores, diagnostics=diagnostics)
 
 
+def _resolved_generation_mode(generation_mode: str) -> str:
+    mode = safe_text(generation_mode).lower()
+    if mode in {"api", "llm"}:
+        return "api"
+    return "template"
+
+
 def run_corpus_proposition_demo(
     project_root: Path,
     *,
@@ -1030,6 +1044,7 @@ def run_corpus_proposition_demo(
 
     resolved_mode_id = safe_text(mode_id) or "dark_cute_breakdown"
     resolved_candidate_count = max(2, min(int(candidate_count or 4), 4))
+    resolved_generation_mode = _resolved_generation_mode(generation_mode)
 
     intelligence = build_corpus_intelligence(
         final_project_root,
@@ -1045,6 +1060,8 @@ def run_corpus_proposition_demo(
     )
 
     candidate_batch: list[dict[str, Any]] = []
+    prompt_packages: list[dict[str, Any]] = []
+    api_generation_records: list[dict[str, Any]] = []
     for index in range(resolved_candidate_count):
         proposition = proposition_set[index % len(proposition_set)]
         form_plan = build_form_plan(intelligence, proposition)
@@ -1058,7 +1075,37 @@ def run_corpus_proposition_demo(
             proposition_set,
             candidate_index=index,
         )
-        rendered = run_renderer_stage(runtime_plan, variant_index=index, scaffold_mode=False)
+        prompt_package: dict[str, Any] | None = None
+        if resolved_generation_mode == "api":
+            prompt_package = build_prompt_package(
+                runtime_plan,
+                candidate_index=index,
+                model_provider=model_provider,
+                model_name=model_name,
+            )
+            rendered = generate_candidate_via_api(
+                final_project_root,
+                runtime_plan,
+                prompt_package,
+                candidate_index=index,
+                model_provider=model_provider,
+                model_name=model_name,
+            )
+            prompt_packages.append(prompt_package)
+            api_generation_records.append(
+                {
+                    "candidate_id": safe_text(rendered.get("candidate_id")),
+                    "request_id": safe_text(prompt_package.get("request_id")),
+                    "api_provider": safe_text(rendered.get("api_provider")),
+                    "api_model": safe_text(rendered.get("api_model")),
+                    "api_status_code": rendered.get("api_status_code"),
+                    "api_finish_reason": safe_text(rendered.get("api_finish_reason")),
+                    "api_error": safe_text(rendered.get("api_error")),
+                    "ok": bool(rendered.get("ok")),
+                }
+            )
+        else:
+            rendered = run_renderer_stage(runtime_plan, variant_index=index, scaffold_mode=False)
         critic = run_critic_stage(runtime_plan, rendered)
         candidate_batch.append(
             {
@@ -1079,6 +1126,13 @@ def run_corpus_proposition_demo(
                 "critic_notes": list(critic.notes),
                 "critic_result": critic,
                 "runtime_plan": runtime_plan,
+                "prompt_package": prompt_package,
+                "generation_backend": safe_text(rendered.get("generation_backend")) or resolved_generation_mode,
+                "api_provider": safe_text(rendered.get("api_provider")),
+                "api_model": safe_text(rendered.get("api_model")),
+                "api_status_code": rendered.get("api_status_code"),
+                "api_finish_reason": safe_text(rendered.get("api_finish_reason")),
+                "api_error": safe_text(rendered.get("api_error")),
             }
         )
 
@@ -1109,6 +1163,10 @@ def run_corpus_proposition_demo(
     _write_json(final_output_dir / "composition_brief.json", brief)
     _write_json(final_output_dir / "proposition_archetype_set.json", proposition_set)
     _write_json(final_output_dir / "runtime_plan.json", selected_runtime_plan)
+    if prompt_packages:
+        _write_json(final_output_dir / "prompt_packages.json", prompt_packages)
+    if api_generation_records:
+        _write_json(final_output_dir / "api_generation_records.json", api_generation_records)
     _write_json(
         final_output_dir / "candidate_packages.json",
         [
@@ -1122,6 +1180,12 @@ def run_corpus_proposition_demo(
                 "chorus_shape": safe_text(item.get("chorus_shape")),
                 "bridge_shape": safe_text(item.get("bridge_shape")),
                 "title": safe_text(item.get("title")),
+                "generation_backend": safe_text(item.get("generation_backend")),
+                "api_provider": safe_text(item.get("api_provider")),
+                "api_model": safe_text(item.get("api_model")),
+                "api_status_code": item.get("api_status_code"),
+                "api_finish_reason": safe_text(item.get("api_finish_reason")),
+                "api_error": safe_text(item.get("api_error")),
                 "legacy_total": float(item.get("legacy_total", 0.0) or 0.0),
                 "musical_total": float(item.get("musical_total", 0.0) or 0.0),
                 "novelty_score": float(item.get("novelty_score", 0.0) or 0.0),
@@ -1148,7 +1212,7 @@ def run_corpus_proposition_demo(
         "title_seed": safe_text(title_seed),
         "ok": bool(promoted_critic.hard_gate.passed),
         "requested_generation_mode": safe_text(generation_mode or "template"),
-        "generation_mode": "template",
+        "generation_mode": resolved_generation_mode,
         "model_provider": safe_text(model_provider),
         "model_name": safe_text(model_name),
         "candidate_count": resolved_candidate_count,
@@ -1158,6 +1222,12 @@ def run_corpus_proposition_demo(
         "section_behavior_plan": list(selected_runtime_plan.get("section_behavior_plan", [])),
         "form_family_id": safe_text(winner.get("form_family_id")),
         "renderer_frame_family": safe_text(winner.get("renderer_frame_family")),
+        "generation_backend": safe_text(winner.get("generation_backend")) or resolved_generation_mode,
+        "api_provider": safe_text(winner.get("api_provider")),
+        "api_model": safe_text(winner.get("api_model")),
+        "api_status_code": winner.get("api_status_code"),
+        "api_finish_reason": safe_text(winner.get("api_finish_reason")),
+        "api_error": safe_text(winner.get("api_error")),
         "chorus_shape": safe_text(winner.get("chorus_shape")),
         "bridge_shape": safe_text(winner.get("bridge_shape")),
         "hook_pressure_realized": safe_text(winner.get("hook_pressure_realized")),
@@ -1191,6 +1261,8 @@ def run_corpus_proposition_demo(
             "candidate_packages": str((final_output_dir / "candidate_packages.json").resolve()),
             "evaluation_manifest": str((final_output_dir / "evaluation_manifest.json").resolve()),
             "selected_lyric": str((final_output_dir / "selected_lyric.md").resolve()),
+            "prompt_packages": str((final_output_dir / "prompt_packages.json").resolve()) if prompt_packages else "",
+            "api_generation_records": str((final_output_dir / "api_generation_records.json").resolve()) if api_generation_records else "",
         },
         "source_root": str(final_project_root),
         "manifest_path": str((final_output_dir / "run_manifest.json").resolve()),
