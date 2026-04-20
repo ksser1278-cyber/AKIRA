@@ -599,6 +599,7 @@ def build_form_plan(intelligence: dict[str, Any], proposition: dict[str, Any]) -
     chorus_hook_avg = float(artist_style_prior.get("chorus_hook_avg", 0.0) or 0.0)
     chorus_mora_avg = float(artist_style_prior.get("chorus_mora_avg", 0.0) or 0.0)
     payoff_mode = safe_text(artist_style_prior.get("payoff_mode"), "medium")
+    hook_compression = safe_text((artist_style_prior.get("artist_grammar_bias") or {}).get("hook_compression"))
 
     allow_expansive = (
         "expansive_statement" in shortlist
@@ -609,9 +610,9 @@ def build_form_plan(intelligence: dict[str, Any], proposition: dict[str, Any]) -
     if allow_expansive:
         form_family_id = "expansive_statement"
         form_reason = "artist prior permits expansive statement cadence"
-    elif chorus_hook_avg >= 2.0 or safe_text(proposition.get("hook_density_target")) == "high":
+    elif chorus_hook_avg >= 2.0 or hook_compression in {"high", "very_high"}:
         form_family_id = "compressed_hook"
-        form_reason = "hook density and artist prior favor compressed chorus-first form"
+        form_reason = "artist prior and grammar bias favor compressed chorus-first form"
     else:
         form_family_id = "hybrid_release"
         form_reason = "proposition benefits from mixed statement-release form"
@@ -1082,6 +1083,7 @@ def run_corpus_proposition_demo(
         "bridge_shape": safe_text(winner.get("bridge_shape")),
         "hook_pressure_realized": safe_text(winner.get("hook_pressure_realized")),
         "grade": safe_text(promotion_result.grade),
+        "selected_candidate_id": safe_text(winner.get("candidate_id")),
         "selected_score": float(winner.get("blended_total", 0.0) or 0.0),
         "legacy_total": float(winner.get("legacy_total", 0.0) or 0.0),
         "musical_total": float(winner.get("musical_total", 0.0) or 0.0),
@@ -1112,6 +1114,8 @@ def run_corpus_proposition_demo(
             "selected_lyric": str((final_output_dir / "selected_lyric.md").resolve()),
         },
         "source_root": str(final_project_root),
+        "manifest_path": str((final_output_dir / "run_manifest.json").resolve()),
+        "selected_lyric_path": str((final_output_dir / "selected_lyric.md").resolve()),
     }
     _write_json(final_output_dir / "run_manifest.json", manifest)
     return manifest
