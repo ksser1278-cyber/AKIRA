@@ -4,7 +4,7 @@ from src.akira_engine.demo_planner import (
     _derive_songwriter_section_cards_from_bank,
     normalize_demo_plan_for_runtime,
 )
-from src.akira_engine.renderer.mod import _deco27_surface_terms, _hybrid_deco27_bridge_lines, _hybrid_deco27_chorus_lines, _hybrid_deco27_outro_lines, _hybrid_deco27_pre_chorus_lines, run_renderer_stage
+from src.akira_engine.renderer.mod import _chorus_lines, _clean_terms, _deco27_surface_terms, _hybrid_chorus_lines, _hybrid_deco27_bridge_lines, _hybrid_deco27_chorus_lines, _hybrid_deco27_outro_lines, _hybrid_deco27_pre_chorus_lines, _hybrid_pre_chorus_lines, run_renderer_stage
 from src.akira_engine.songwriter_brief import build_songwriter_brief
 
 
@@ -277,6 +277,13 @@ def test_deco27_surface_terms_filter_title_like_non_chorus_terms():
     assert all(term not in {"シンデレラ", "ラビットホール", "毒の味"} for term in selected)
 
 
+def test_clean_terms_drop_phrase_like_surface_terms():
+    terms = _clean_terms(["ぶっ壊して", "壊していく", "毒林檎", "体温"], limit=8)
+    assert "ぶっ壊して" not in terms
+    assert "壊していく" not in terms
+    assert "毒林檎" in terms
+
+
 def test_deco27_pre_chorus_lines_do_not_reuse_hook_fragments_as_pressure_line():
     lines = _hybrid_deco27_pre_chorus_lines(
         {
@@ -324,6 +331,94 @@ def test_deco27_chorus_frame_is_artist_specific():
 
     assert lines[0] == "一緒の毒の味だけじゃまだ足りない"
     assert "遊園地の熱で指先まで染め上げて" in lines
+
+
+def test_selected_proposition_changes_hybrid_chorus_wording():
+    dependency_lines = _hybrid_chorus_lines(
+        {
+            "section": "chorus",
+            "_render_context": {
+                "selected_proposition": {
+                    "core_phrase": "ダーリン",
+                    "archetype_kind": "dependency_spiral",
+                    "escalation_phrase": "dependency escalation",
+                    "release_phrase": "fall release",
+                }
+            },
+        },
+        "ダーリン",
+        ["傷", "遊園地", "静電気", "体温"],
+        final=False,
+    )
+    confession_lines = _hybrid_chorus_lines(
+        {
+            "section": "chorus",
+            "_render_context": {
+                "selected_proposition": {
+                    "core_phrase": "ダーリン",
+                    "archetype_kind": "confessional_hold",
+                    "escalation_phrase": "confession escalation",
+                    "release_phrase": "irreversible release",
+                }
+            },
+        },
+        "ダーリン",
+        ["傷", "遊園地", "静電気", "体温"],
+        final=False,
+    )
+
+    assert dependency_lines[0] == "ダーリンだけではまだ離れられない"
+    assert dependency_lines[2] == "ダーリンをまだ手放せない"
+    assert confession_lines[0] == "ダーリンだけじゃまだ言い切れない"
+    assert confession_lines[2] == "ダーリンをまだ隠しきれない"
+
+
+def test_selected_proposition_removes_hook_from_pre_chorus_closing():
+    lines = _hybrid_pre_chorus_lines(
+        {
+            "section": "pre_chorus_2",
+            "_render_context": {
+                "selected_proposition": {
+                    "core_phrase": "罪と罰",
+                    "archetype_kind": "rupture_assertion",
+                    "escalation_phrase": "pressure rupture",
+                    "release_phrase": "impact release",
+                }
+            },
+        },
+        "罪と罰",
+        ["点滅", "継ぎ目", "鼓動", "傷"],
+        second_half=True,
+        variant=0,
+    )
+
+    assert "罪と罰" not in lines[2]
+    assert lines[2] == "もう壊れずに済む形が残っていない"
+
+
+def test_selected_proposition_changes_compressed_chorus_hold():
+    lines = _chorus_lines(
+        {
+            "section": "chorus",
+            "_render_context": {
+                "selected_proposition": {
+                    "core_phrase": "ダーリン",
+                    "archetype_kind": "confessional_hold",
+                    "escalation_phrase": "confession escalation",
+                    "release_phrase": "irreversible release",
+                }
+            },
+            "title_drop_policy": "primary",
+            "hook_pressure": "medium",
+        },
+        "ダーリン",
+        ["傷", "体温", "静電気", "残響"],
+        {"collapse"},
+        variant=0,
+        final=False,
+    )
+
+    assert lines[1] == "ダーリンをまだ隠しきれない"
 
 
 def test_hybrid_release_keeps_core_phrase_inside_chorus_family():

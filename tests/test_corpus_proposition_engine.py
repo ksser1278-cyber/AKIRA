@@ -2,6 +2,7 @@ import json
 
 from src.akira_engine.corpus_proposition_engine import (
     _score_novelty,
+    _sanitize_japanese_term,
     build_composition_brief,
     build_corpus_intelligence,
     build_form_plan,
@@ -263,3 +264,14 @@ def test_novelty_penalizes_same_surface_and_same_proposition():
     novelty = {item["candidate_id"]: item["novelty_score"] for item in scored}
     assert novelty["c"] > novelty["a"]
     assert novelty["c"] > novelty["b"]
+
+
+def test_corpus_surface_sanitizer_strips_english_gloss():
+    assert _sanitize_japanese_term("愛言葉 (Love Password)") == "愛言葉"
+    assert _sanitize_japanese_term("毒林檎 (Poison Apple)") == "毒林檎"
+
+
+def test_corpus_intelligence_prefers_representative_mode_tracks(tmp_path):
+    intelligence = _fixture_intelligence(tmp_path, "deco27")
+    assert "deco27_ghost_rule" in intelligence["representative_track_ids"]
+    assert "deco27_tsumi_to_batsu" in intelligence["representative_track_ids"]

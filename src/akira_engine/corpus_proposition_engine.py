@@ -13,7 +13,7 @@ from .lyric_behavior_priors import load_lyric_behavior_priors
 from .lyric_utils import contains_bad_script, contains_japanese, safe_text, unique_preserve_order
 from .promotion.mod import run_promotion_stage
 from .renderer.mod import run_renderer_stage
-from .songwriter_io import candidate_content_roots, load_conditioning_records
+from .songwriter_io import candidate_content_roots, load_conditioning_records, load_representative_demo_profile
 
 
 ENGINE_TYPE = "corpus_driven_proposition_engine"
@@ -299,8 +299,18 @@ def _looks_like_low_signal(text: str) -> bool:
     return compact in blocked
 
 
-def _sanitize_japanese_term(value: Any) -> str:
+def _normalize_corpus_surface(value: Any) -> str:
     text = safe_text(value)
+    if not text:
+        return ""
+    text = re.sub(r"\s*\([^)]*[A-Za-z][^)]*\)", "", text)
+    text = re.sub(r"[\"'`]+", "", text)
+    text = re.sub(r"\s+", " ", text).strip(" /-_,;:")
+    return text.strip()
+
+
+def _sanitize_japanese_term(value: Any) -> str:
+    text = _normalize_corpus_surface(value)
     if not text:
         return ""
     if not contains_japanese(text) or contains_bad_script(text):
@@ -313,10 +323,52 @@ def _sanitize_japanese_term(value: Any) -> str:
     return text
 
 
+def _looks_like_surface_phrase(text: str) -> bool:
+    compact = safe_text(text).replace(" ", "")
+    if not compact:
+        return True
+    if compact in {"ぶっ壊して", "壊していく", "ぶっ壊していく"}:
+        return True
+    if len(compact) < 4:
+        return False
+    return any(
+        compact.endswith(ending)
+        for ending in (
+            "して",
+            "していく",
+            "してる",
+            "ていく",
+            "れていく",
+            "される",
+            "られる",
+            "なくなる",
+            "になる",
+        )
+    )
+
+
+def _sanitize_surface_term(value: Any) -> str:
+    text = _sanitize_japanese_term(value)
+    if not text:
+        return ""
+    if _looks_like_surface_phrase(text):
+        return ""
+    return text
+
+
 def _japanese_terms(values: list[Any]) -> list[str]:
     terms: list[str] = []
     for value in values:
         text = _sanitize_japanese_term(value)
+        if text and text not in terms:
+            terms.append(text)
+    return terms
+
+
+def _surface_terms(values: list[Any]) -> list[str]:
+    terms: list[str] = []
+    for value in values:
+        text = _sanitize_surface_term(value)
         if text and text not in terms:
             terms.append(text)
     return terms
@@ -336,7 +388,7 @@ def _record_terms(record: dict[str, Any]) -> list[str]:
     for section in section_analysis:
         if isinstance(section, dict):
             values.extend(section.get("vocabulary_focus", []))
-    return _japanese_terms(values)
+    return _surface_terms(values)
 
 
 def _record_family_votes(record: dict[str, Any]) -> list[str]:
@@ -399,10 +451,30 @@ def _build_lexical_field_bank(records: list[dict[str, Any]], mode_profile: dict[
                 buckets[family].append(term)
     for family in mode_profile.get("preferred_families", []):
         for term in mode_profile.get("fallback_terms", {}).get(family, []):
-            text = _sanitize_japanese_term(term)
+            text = _sanitize_surface_term(term)
             if text and text not in buckets[family]:
                 buckets[family].append(text)
     return dict(buckets)
+
+
+def _representative_mode_track_ids(artist_id: str, mode_id: str) -> list[str]:
+    profile = load_representative_demo_profile(artist_id) or {}
+    track_ids: list[str] = []
+    mode_tracks = profile.get("mode_demo_tracks", {}) if isinstance(profile.get("mode_demo_tracks"), dict) else {}
+    mode_entry = mode_tracks.get(mode_id) if isinstance(mode_tracks.get(mode_id), dict) else None
+    if mode_entry:
+        track_id = safe_text(mode_entry.get("track_id"))
+        if track_id:
+            track_ids.append(track_id)
+    for item in profile.get("core_anchor_tracks", []):
+        if not isinstance(item, dict):
+            continue
+        if safe_text(item.get("mode_id")) != safe_text(mode_id):
+            continue
+        track_id = safe_text(item.get("track_id"))
+        if track_id and track_id not in track_ids:
+            track_ids.append(track_id)
+    return track_ids
 
 
 def build_corpus_intelligence(
@@ -418,20 +490,26 @@ def build_corpus_intelligence(
     behavior_priors = load_lyric_behavior_priors(project_root, artist_ids=[artist_id], mode_id=mode_id)
     mode_profile = _mode_profile(mode_id)
     lexical_field_bank = _build_lexical_field_bank(records, mode_profile)
+    representative_track_ids = _representative_mode_track_ids(artist_id, mode_id)
     proposition_signal_bank: list[dict[str, Any]] = []
     for record in records:
         track_identity = record.get("track_identity", {}) if isinstance(record.get("track_identity"), dict) else {}
         song_intent = record.get("song_intent", {}) if isinstance(record.get("song_intent"), dict) else {}
+        track_id = safe_text(track_identity.get("track_id"))
+        signal_score = _record_signal_score(record)
+        if track_id in representative_track_ids:
+            signal_score += 5
         proposition_signal_bank.append(
             {
-                "track_id": safe_text(track_identity.get("track_id")),
+                "track_id": track_id,
                 "title_core": _record_title(record),
                 "terms": _record_terms(record),
                 "families": _record_family_votes(record),
-                "signal_score": _record_signal_score(record),
-                "emotional_thesis": safe_text(song_intent.get("emotional_thesis")),
+                "signal_score": signal_score,
+                "emotional_thesis": _sanitize_japanese_term(song_intent.get("emotional_thesis")),
                 "narrative_role": [safe_text(value) for value in song_intent.get("narrative_role", []) if safe_text(value)],
                 "record": record,
+                "is_representative_anchor": track_id in representative_track_ids,
             }
         )
     proposition_signal_bank.sort(key=lambda item: (-int(item.get("signal_score", 0)), safe_text(item.get("track_id"))))
@@ -446,6 +524,7 @@ def build_corpus_intelligence(
         "lexical_field_bank": lexical_field_bank,
         "proposition_signal_bank": proposition_signal_bank,
         "mode_profile": mode_profile,
+        "representative_track_ids": representative_track_ids,
     }
 
 
@@ -453,13 +532,13 @@ def _derive_song_purpose(intent: str, intelligence: dict[str, Any]) -> str:
     if safe_text(intent):
         return safe_text(intent)
     for item in intelligence.get("proposition_signal_bank", []):
-        thesis = safe_text(item.get("emotional_thesis"))
+        thesis = _sanitize_japanese_term(item.get("emotional_thesis"))
         if thesis:
             return thesis
     mode_id = safe_text(intelligence.get("mode_id"))
     if mode_id == "dark_cute_breakdown":
-        return "leave the listener with addictive dread and unresolved pressure"
-    return "leave the listener with a memorable emotional residue"
+        return "甘さの裏で圧力が壊れていく感覚を残す"
+    return "聴き終わったあとに感情の残り香を残す"
 
 
 def _derive_listener_position(intelligence: dict[str, Any]) -> str:
@@ -656,7 +735,7 @@ def _family_terms(intelligence: dict[str, Any], families: list[str]) -> list[str
     terms: list[str] = []
     for family in families:
         for term in lexical_field_bank.get(family, []):
-            text = _sanitize_japanese_term(term)
+            text = _sanitize_surface_term(term)
             if text and text not in terms:
                 terms.append(text)
     return terms
@@ -673,7 +752,7 @@ def _section_scene(intelligence: dict[str, Any], section: str, families: list[st
     for family in preferred_scene_families:
         values = lexical_field_bank.get(family, [])
         if values:
-            return safe_text(values[0])
+            return _sanitize_surface_term(values[0]) or safe_text(terms[0]) if terms else ""
     return safe_text(terms[0]) if terms else ""
 
 

@@ -60,6 +60,13 @@ _LOW_SIGNAL_NON_CHORUS_TERMS = {
 }
 
 
+_BAD_SURFACE_TERMS = {
+    "ぶっ壊して",
+    "壊していく",
+    "ぶっ壊していく",
+}
+
+
 def _is_low_signal_non_chorus_term(term: str, *, section: str) -> bool:
     if section in {"chorus", "chorus_final"}:
         return False
@@ -101,6 +108,28 @@ def _hook_fragments(hook: str) -> set[str]:
     return fragments
 
 
+def _looks_like_phrase_term(term: str) -> bool:
+    text = safe_text(term).replace(" ", "")
+    if not text:
+        return True
+    if text in _BAD_SURFACE_TERMS:
+        return True
+    if len(text) < 4:
+        return False
+    phrase_endings = (
+        "して",
+        "していく",
+        "してる",
+        "ていく",
+        "れていく",
+        "される",
+        "られる",
+        "なくなる",
+        "になる",
+    )
+    return any(text.endswith(ending) for ending in phrase_endings)
+
+
 def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
     cleaned: list[str] = []
     for value in values:
@@ -113,6 +142,8 @@ def _clean_terms(values: list[Any], *, limit: int = 8) -> list[str]:
             continue
         visible = text.replace(" ", "")
         if text in _LOW_VALUE_TERMS:
+            continue
+        if _looks_like_phrase_term(text):
             continue
         if len(visible) <= 3 and visible[-1] in {"に", "を", "が", "へ", "で", "と", "は", "も"}:
             continue
@@ -156,17 +187,31 @@ def _render_artist_id(card: dict[str, Any]) -> str:
     return safe_text(_render_context(card).get("artist_id", ""))
 
 
+def _selected_proposition(card: dict[str, Any]) -> dict[str, Any]:
+    proposition = _render_context(card).get("selected_proposition", {})
+    return proposition if isinstance(proposition, dict) else {}
+
+
 def _chorus_proposition(card: dict[str, Any], hook: str) -> dict[str, Any]:
     context = _render_context(card)
     composition_brief = context.get("composition_brief", {})
-    proposition = composition_brief.get("chorus_proposition", {}) if isinstance(composition_brief, dict) else {}
-    core_phrase = safe_text(proposition.get("core_phrase"))
+    brief_proposition = composition_brief.get("chorus_proposition", {}) if isinstance(composition_brief, dict) else {}
+    selected = _selected_proposition(card)
+    core_phrase = safe_text(selected.get("core_phrase")) or safe_text(brief_proposition.get("core_phrase"))
     if not core_phrase or not contains_japanese(core_phrase) or contains_bad_script(core_phrase):
         core_phrase = hook
     return {
         "core_phrase": core_phrase,
-        "escalation_phrase": safe_text(proposition.get("escalation_phrase")).lower(),
-        "release_phrase": safe_text(proposition.get("release_phrase")).lower(),
+        "escalation_phrase": (
+            safe_text(selected.get("escalation_phrase"))
+            or safe_text(brief_proposition.get("escalation_phrase"))
+        ).lower(),
+        "release_phrase": (
+            safe_text(selected.get("release_phrase"))
+            or safe_text(brief_proposition.get("release_phrase"))
+        ).lower(),
+        "archetype_kind": safe_text(selected.get("archetype_kind")).lower(),
+        "hook_density_target": safe_text(selected.get("hook_density_target")).lower(),
     }
 
 
@@ -184,6 +229,104 @@ def _hybrid_context_blocked_terms(card: dict[str, Any]) -> list[str]:
         if safe_text(term) and int(count or 0) >= 2
     ]
     return unique_preserve_order(recent_terms + recurring_terms)
+
+
+def _proposition_escalation_mode(proposition: dict[str, Any]) -> str:
+    signal = " ".join(
+        [
+            safe_text(proposition.get("archetype_kind")),
+            safe_text(proposition.get("escalation_phrase")),
+        ]
+    ).lower()
+    if "confession" in signal or "confessional" in signal:
+        return "confession"
+    if "dependency" in signal or "spiral" in signal:
+        return "dependency"
+    if "rupture" in signal:
+        return "rupture"
+    return "pressure"
+
+
+def _proposition_release_mode(proposition: dict[str, Any]) -> str:
+    signal = " ".join(
+        [
+            safe_text(proposition.get("archetype_kind")),
+            safe_text(proposition.get("release_phrase")),
+        ]
+    ).lower()
+    if "irreversible" in signal:
+        return "irreversible"
+    if "fall" in signal:
+        return "fall"
+    if "impact" in signal:
+        return "impact"
+    if "cling" in signal or "obsessive" in signal:
+        return "cling"
+    return "collapse"
+
+
+def _proposition_pre_chorus_close(proposition: dict[str, Any], *, second_half: bool) -> str:
+    escalation_mode = _proposition_escalation_mode(proposition)
+    release_mode = _proposition_release_mode(proposition)
+    if second_half:
+        if release_mode == "irreversible":
+            return "もう言い逃れできる形が残っていない"
+        if release_mode == "fall":
+            return "もう足場のある言い方には戻れない"
+        if release_mode == "impact":
+            return "もう壊れずに済む形が残っていない"
+        if release_mode == "cling":
+            return "もう離れる理由だけ先に剥がれ落ちる"
+        return "もう引き返せる形が残っていない"
+    if escalation_mode == "confession":
+        return "もうまともな顔ではいられない"
+    if escalation_mode == "dependency":
+        return "もう離れる理由だけ先に消えていく"
+    if escalation_mode == "rupture":
+        return "もう優しい形では受け止めきれない"
+    return "もう引き返せる感じがしない"
+
+
+def _proposition_chorus_statement(core_phrase: str, proposition: dict[str, Any], *, final: bool) -> str:
+    escalation_mode = _proposition_escalation_mode(proposition)
+    release_mode = _proposition_release_mode(proposition)
+    if final:
+        if release_mode == "irreversible":
+            return f"{core_phrase}だけではもう誤魔化せない"
+        if release_mode == "fall":
+            return f"{core_phrase}だけではもう戻れない"
+        if release_mode == "impact":
+            return f"{core_phrase}だけではもう収まらない"
+        if release_mode == "cling":
+            return f"{core_phrase}だけではもうほどけない"
+        return f"{core_phrase}だけではもう足りない"
+    if escalation_mode == "confession":
+        return f"{core_phrase}だけじゃまだ言い切れない"
+    if escalation_mode == "dependency":
+        return f"{core_phrase}だけではまだ離れられない"
+    if escalation_mode == "rupture":
+        return f"{core_phrase}だけじゃまだ足りない"
+    return f"{core_phrase}だけじゃまだ足りない"
+
+
+def _proposition_chorus_hold(core_phrase: str, proposition: dict[str, Any], *, final: bool) -> str:
+    escalation_mode = _proposition_escalation_mode(proposition)
+    release_mode = _proposition_release_mode(proposition)
+    if final:
+        if release_mode == "fall":
+            return f"{core_phrase}ごと落ちていけ"
+        if release_mode == "impact":
+            return f"{core_phrase}を踏み抜け"
+        if release_mode == "cling":
+            return f"{core_phrase}を離すな"
+        return f"{core_phrase}をやめるな"
+    if escalation_mode == "confession":
+        return f"{core_phrase}をまだ隠しきれない"
+    if escalation_mode == "dependency":
+        return f"{core_phrase}をまだ手放せない"
+    if escalation_mode == "rupture":
+        return f"{core_phrase}をまだ飲み込めない"
+    return f"{core_phrase}をまだ手放せない"
 
 
 def _hook_blueprint(card: dict[str, Any]) -> dict[str, Any]:
@@ -639,6 +782,7 @@ def _dense_verse_lines(card: dict[str, Any], hook: str, terms: list[str], flags:
 def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[str], *, variant: int, second_half: bool) -> list[str]:
     a, b, c, d = terms
     section = safe_text(card.get("section"))
+    proposition = _chorus_proposition(card, hook)
     if second_half:
         alternates = [
             term
@@ -686,8 +830,7 @@ def _dense_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], f
             d = _pick_section_distinct_term("", blocked=[a, b, c], alternates=fallback_terms, allow_cliche=False)
     else:
         c = _de_cliche_term(c, d, a, b)
-    collapse = "壊れそうだ" if "collapse" in flags else "ずれていく"
-    closing = f"{hook}まであと少しで{collapse}" if safe_text(card.get("title_drop_policy")) != "withhold" and second_half else f"{d}まであと少しで{collapse}"
+    closing = _proposition_pre_chorus_close(proposition, second_half=second_half)
     packs = (
         [
             [
@@ -761,6 +904,7 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
     core_phrase = safe_text(proposition.get("core_phrase")) or hook
     escalation_hint = safe_text(proposition.get("escalation_phrase"))
     release_hint = safe_text(proposition.get("release_phrase"))
+    release_mode = _proposition_release_mode(proposition)
     hook_blueprint = _hook_blueprint(card)
     policy = safe_text(card.get("title_drop_policy"))
     pressure = safe_text(card.get("hook_pressure"), "medium")
@@ -772,15 +916,15 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
         packs = [
             [
                 f"{core_phrase} {core_phrase}",
-                f"{core_phrase}をやめるな",
+                _proposition_chorus_hold(core_phrase, proposition, final=True),
                 f"{a}の残響ごと胸骨まで割っていけ",
                 f"{b}の甘さを最後まで誤魔化すな",
                 f"{c}だけをここで逃がすな",
-                f"{d}も名前も全部ひっくり返せ" if "irreversible" in release_hint else f"{d}の底でまだ笑ってみせろ",
+                f"{d}も名前も全部ひっくり返せ" if release_mode == "irreversible" else f"{d}の底でまだ笑ってみせろ",
             ],
             [
                 f"{core_phrase} {core_phrase}",
-                f"{core_phrase}をやめるな",
+                _proposition_chorus_hold(core_phrase, proposition, final=True),
                 f"{a}の火花で喉の奥まで焼き切って",
                 f"{b}のかわいさで赦された気になるな",
                 f"{c}ごと今すぐ引きずり落とせ",
@@ -788,7 +932,7 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
             ],
             [
                 f"{core_phrase} {core_phrase}",
-                f"{core_phrase}をやめるな",
+                _proposition_chorus_hold(core_phrase, proposition, final=True),
                 f"{a}の骨までまとめて踏み抜いていけ",
                 f"{b}の明度を最後まで信じるな",
                 f"{c}も拍もまとめて裂いてしまえ",
@@ -803,26 +947,26 @@ def _chorus_lines(card: dict[str, Any], hook: str, terms: list[str], flags: set[
     packs = [
         [
             f"{core_phrase} {core_phrase}",
-            f"{core_phrase}をまだやめない",
+            _proposition_chorus_hold(core_phrase, proposition, final=False),
             f"{a}の破片を奥歯の裏まで{attack}",
             f"{b}だけではまだ傷口が黙らない",
         ],
         [
             f"{core_phrase} {core_phrase}",
-            f"{core_phrase}をまだ飲み込めない",
+            _proposition_chorus_hold(core_phrase, proposition, final=False),
             f"{a}の熱だけ喉元まで連れていって",
             f"{dark_word}だけではもう呼吸がほどけない",
         ],
         [
             f"{core_phrase} {core_phrase}",
-            f"{core_phrase}をまだ手放せない",
+            _proposition_chorus_hold(core_phrase, proposition, final=False),
             f"{a}の残響を胸骨の内側まで押し当てて",
             f"{d}だけではまだ脈が止まらない",
         ],
     ]
     lines = packs[variant % len(packs)]
     if repetition_pressure != "high":
-        lines[1] = f"{core_phrase}をまだ手放せない"
+        lines[1] = _proposition_chorus_hold(core_phrase, proposition, final=False)
     return lines
 
 
@@ -987,16 +1131,16 @@ def _hybrid_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, f
     core_phrase = safe_text(proposition.get("core_phrase")) or hook
     if final:
         return [
-            f"{core_phrase}だけではもう誤魔化せない",
+            _proposition_chorus_statement(core_phrase, proposition, final=True),
             f"{core_phrase} {core_phrase}",
-            f"{core_phrase}をやめるな",
+            _proposition_chorus_hold(core_phrase, proposition, final=True),
             f"{b}の熱で喉元まで裂いていけ",
             f"{c}ごと今すぐ抱えたまま落ちていけ",
         ]
     return [
-        f"{core_phrase}だけじゃまだ足りない",
+        _proposition_chorus_statement(core_phrase, proposition, final=False),
         f"{core_phrase} {core_phrase}",
-        f"{core_phrase}をまだ手放せない",
+        _proposition_chorus_hold(core_phrase, proposition, final=False),
         f"{b}の熱で指先まで染め上げて",
         f"{c}の残り香を噛んだまま沈んでいけ",
     ]
@@ -1204,17 +1348,19 @@ def _hybrid_outro_lines(terms: list[str], *, variant: int) -> list[str]:
 
 def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
     a, b, c, d = _hybrid_terms(card, hook, terms)
+    proposition = _chorus_proposition(card, hook)
+    closing = _proposition_pre_chorus_close(proposition, second_half=second_half)
     if second_half:
         packs = [
             [
                 f"{a}が胸の裏で半拍ずつ遅れ始める",
                 f"{b}の継ぎ目で{c}まで喉元へ迫り上がる",
-                f"{hook}まであと少しで壊れそうだ",
+                closing,
             ],
             [
                 f"{a}が脈の裏側で静かにせり上がってくる",
                 f"{b}の反射で{c}だけ先に逃げ場をなくす",
-                f"{hook}まであと少しで戻れなくなる",
+                closing,
             ],
         ]
         return packs[variant % len(packs)]
@@ -1222,12 +1368,12 @@ def _hybrid_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], 
         [
             f"{a}に触れるたび拍だけ先に乱れ始める",
             f"{b}の継ぎ目で{c}まで言い訳できなくなる",
-            f"もう{d}しか残ってない",
+            closing,
         ],
         [
             f"{a}が喉の奥で少しずつ明滅していく",
             f"{b}の隙間から{c}まで静かに染まり始める",
-            f"もう{d}だけでは足りない",
+            closing,
         ],
     ]
     return packs[variant % len(packs)]
@@ -1296,17 +1442,19 @@ def _hybrid_deco27_verse_lines(
 
 def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list[str], *, second_half: bool, variant: int) -> list[str]:
     a, b, c, d = _deco27_surface_terms(card, hook, terms)
+    proposition = _chorus_proposition(card, hook)
+    closing = _proposition_pre_chorus_close(proposition, second_half=second_half)
     if second_half:
         packs = [
             [
                 f"{a}が胸の裏で半拍ずつ遅れ始める",
                 f"{b}の継ぎ目から言い訳まで喉元へせり上がる",
-                f"{hook}まであと少しで壊れそうだ",
+                closing,
             ],
             [
                 f"{a}が脈の内側で静かにせり上がってくる",
                 f"{b}の反射で{c}までまともに触れられなくなる",
-                f"{hook}まであと少しで戻れなくなる",
+                closing,
             ],
         ]
         return packs[variant % len(packs)]
@@ -1317,12 +1465,12 @@ def _hybrid_deco27_pre_chorus_lines(card: dict[str, Any], hook: str, terms: list
             "もう引き返せる感じがしない",
             f"{c}のちらつきで足元まで軋み始める",
         ],
-        [
-            f"{a}に触れるたび鼓動まで少し乱れ始める",
-            f"{b}の気配ひとつで{c}までまともに言えなくなる",
-            "もうまともな顔ではいられない",
-        ],
-    ]
+            [
+                f"{a}に触れるたび鼓動まで少し乱れ始める",
+                f"{b}の気配ひとつで{c}までまともに言えなくなる",
+                closing,
+            ],
+        ]
     return packs[variant % len(packs)]
 
 
@@ -1332,17 +1480,17 @@ def _hybrid_deco27_chorus_lines(card: dict[str, Any], hook: str, terms: list[str
     core_phrase = safe_text(proposition.get("core_phrase")) or hook
     if final:
         return [
-            f"{core_phrase}だけではもう誤魔化せない",
+            _proposition_chorus_statement(core_phrase, proposition, final=True),
             f"{core_phrase} {core_phrase}",
-            f"{core_phrase}をやめるな",
+            _proposition_chorus_hold(core_phrase, proposition, final=True),
             f"{b}の熱で喉元まで裂いていけ",
             f"{a}ごと今すぐ抱えたまま落ちていけ",
             f"{c}の火花までまとめて踏み抜け",
         ]
     return [
-        f"{core_phrase}だけじゃまだ足りない",
+        _proposition_chorus_statement(core_phrase, proposition, final=False),
         f"{core_phrase} {core_phrase}",
-        f"{core_phrase}をまだ手放せない",
+        _proposition_chorus_hold(core_phrase, proposition, final=False),
         f"{b}の熱で指先まで染め上げて",
         f"{d}の残り香を噛んだまま沈んでいけ",
     ]
@@ -1506,6 +1654,7 @@ def run_renderer_stage(
     render_context = {
         "artist_id": artist_id,
         "composition_brief": dict(plan.get("composition_brief", {}) or {}),
+        "selected_proposition": dict(plan.get("selected_proposition", {}) or {}),
         "hook_blueprint": dict(plan.get("hook_blueprint", {}) or {}),
         "form_family_id": form_family_id,
         "artist_grammar_bias": dict(plan.get("artist_grammar_bias", {}) or {}),
