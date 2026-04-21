@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -15,6 +16,8 @@ _LOW_SIGNAL_ALIGNMENT_TERMS = {
     "真っ赤な",
     "痛い",
 }
+
+_SOUND_CLEAN_RE = re.compile(r"[\s\u3000\u3001\u3002\uff01\uff1f!?...\u30fb\u300c\u300d\u300e\u300f\uff08\uff09()\[\]#,.]+")
 
 @dataclass
 class HardGate:
@@ -476,10 +479,156 @@ def _repetition_payoff_score(title: str, parsed: dict[str, list[str]]) -> float:
     normalized = [re.sub(r"\s+", "", line) for line in chorus_lines]
     repeated_line_hits = sum(1 for i in range(1, len(normalized)) if normalized[i] == normalized[i - 1])
     repeated_line_ratio = repeated_line_hits / max(1, len(normalized) - 1)
-    title_mentions = sum(1 for line in normalized if title_clean and title_clean in line)
-    title_ratio = title_mentions / len(normalized)
+    title_mentions = sum(line.count(title_clean) for line in normalized if title_clean)
+    title_call_density = min(1.0, title_mentions / max(1.0, len(normalized) / 2.0))
     chorus_return_bonus = 0.25 if title_mentions >= 2 else 0.0
-    score = (repeated_line_ratio * 0.35) + (min(1.0, title_ratio * 2.0) * 0.45) + chorus_return_bonus
+    score = (repeated_line_ratio * 0.15) + (title_call_density * 0.60) + chorus_return_bonus
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _sound_compact(text: str) -> str:
+    cleaned = _SOUND_CLEAN_RE.sub("", str(text or ""))
+    folded: list[str] = []
+    for ch in cleaned:
+        code = ord(ch)
+        if 0x30A1 <= code <= 0x30F6:
+            folded.append(chr(code - 0x60))
+        else:
+            folded.append(ch)
+    return "".join(folded)
+
+def _rhyme_tail(line: str, width: int = 2) -> str:
+    compact = _sound_compact(line)
+    if not compact:
+        return ""
+    return compact[-max(1, width):]
+
+def _tail_echo_score(tails: list[str]) -> float:
+    if len(tails) < 2:
+        return 0.0
+    counts = Counter(tails)
+    repeated_tail_ratio = sum(count for count in counts.values() if count >= 2) / len(tails)
+    dominant_ratio = max(counts.values()) / len(tails)
+    adjacent_echo = sum(1 for i in range(1, len(tails)) if tails[i] == tails[i - 1]) / max(1, len(tails) - 1)
+    skip_echo = sum(1 for i in range(2, len(tails)) if tails[i] == tails[i - 2]) / max(1, len(tails) - 2)
+    overlock_penalty = max(0.0, dominant_ratio - 0.75) * 0.25 if len(tails) >= 4 else 0.0
+    return max(
+        0.0,
+        min(
+            1.0,
+            repeated_tail_ratio * 0.45
+            + skip_echo * 0.30
+            + adjacent_echo * 0.15
+            + dominant_ratio * 0.10
+            - overlock_penalty,
+        ),
+    )
+
+def _rhyme_flow_score(parsed: dict[str, list[str]], expected_sections: list[str]) -> float:
+    section_groups = _section_lines(parsed, expected_sections)
+    section_scores: list[float] = []
+    all_tails: list[str] = []
+
+    for _, section_lines in section_groups:
+        exact_tails = [_rhyme_tail(line, width=2) for line in section_lines if str(line or "").strip()]
+        loose_tails = [_rhyme_tail(line, width=1) for line in section_lines if str(line or "").strip()]
+        exact_tails = [tail for tail in exact_tails if tail]
+        loose_tails = [tail for tail in loose_tails if tail]
+        if len(loose_tails) < 2:
+            continue
+        all_tails.extend(loose_tails)
+        section_scores.append(_tail_echo_score(exact_tails) * 0.55 + _tail_echo_score(loose_tails) * 0.45)
+
+    if not section_scores or not all_tails:
+        return 0.35
+
+    all_counts = Counter(all_tails)
+    cross_repeat_ratio = sum(count for count in all_counts.values() if count >= 2) / len(all_tails)
+    repeating_tail_count = sum(1 for count in all_counts.values() if count >= 2)
+    palette_score = min(1.0, repeating_tail_count / max(1, len(section_scores)))
+    score = (sum(section_scores) / len(section_scores)) * 0.70 + cross_repeat_ratio * 0.20 + palette_score * 0.10
+    return round(max(0.0, min(1.0, score)), 2)
+
+def _line_attack(line: str, title: str) -> str:
+    normalized = re.sub(r"[\s、。！？!?…・「」『』（）()\[\]]+", "", line)
+    title_clean = re.sub(r"\s+", "", title)
+    if title_clean and normalized.startswith(title_clean):
+        return "<TITLE>"
+    return normalized[:4]
+
+def _line_attack(line: str, title: str) -> str:
+    normalized = _sound_compact(line)
+    title_clean = _sound_compact(title)
+    if title_clean and normalized.startswith(title_clean):
+        return "<TITLE>"
+    return normalized[:4]
+
+def _same_planned_tail(line_a: str, line_b: str) -> bool:
+    return (
+        bool(_rhyme_tail(line_a, width=1))
+        and _rhyme_tail(line_a, width=1) == _rhyme_tail(line_b, width=1)
+    ) or (
+        bool(_rhyme_tail(line_a, width=2))
+        and _rhyme_tail(line_a, width=2) == _rhyme_tail(line_b, width=2)
+    )
+
+def _rhyme_plan_alignment_score(plan: dict[str, Any], parsed: dict[str, list[str]]) -> float:
+    cards = [card for card in plan.get("section_cards", []) if isinstance(card, dict)]
+    scores: list[float] = []
+    for card in cards:
+        section = str(card.get("section", "")).strip()
+        pattern = [str(value).strip() for value in card.get("tail_sound_pattern", []) if str(value).strip()]
+        lines = [line for line in parsed.get(section, []) if str(line or "").strip()]
+        if len(pattern) < 2 or len(lines) < 2:
+            continue
+        limit = min(len(pattern), len(lines))
+        pairs = 0
+        hits = 0
+        for left in range(limit):
+            for right in range(left + 1, limit):
+                if pattern[left] != pattern[right]:
+                    continue
+                pairs += 1
+                if _same_planned_tail(lines[left], lines[right]):
+                    hits += 1
+        if pairs:
+            scores.append(hits / pairs)
+            continue
+        target_pool = [str(value).strip() for value in card.get("target_tail_pool", []) if str(value).strip()]
+        if target_pool:
+            tail_hits = sum(
+                1
+                for line in lines[:limit]
+                if _rhyme_tail(line, width=1) in target_pool or _rhyme_tail(line, width=2) in target_pool
+            )
+            scores.append(tail_hits / limit)
+    if not scores:
+        return 0.35
+    return round(max(0.0, min(1.0, sum(scores) / len(scores))), 2)
+
+def _line_attack_repeat_score(title: str, parsed: dict[str, list[str]]) -> float:
+    chorus_lines = list(parsed.get("chorus", [])) + list(parsed.get("chorus_final", []))
+    if not chorus_lines:
+        return 0.35
+    attacks = [_line_attack(line, title) for line in chorus_lines if str(line or "").strip()]
+    attacks = [attack for attack in attacks if attack]
+    if not attacks:
+        return 0.0
+
+    counts = {attack: attacks.count(attack) for attack in set(attacks)}
+    max_repeat_ratio = max(counts.values()) / len(attacks)
+    consecutive_hits = sum(1 for i in range(1, len(attacks)) if attacks[i] == attacks[i - 1])
+    consecutive_ratio = consecutive_hits / max(len(attacks) - 1, 1)
+    title_attack_ratio = attacks.count("<TITLE>") / len(attacks)
+    title_clean = re.sub(r"\s+", "", title)
+    normalized = [re.sub(r"\s+", "", line) for line in chorus_lines]
+    title_mentions = sum(line.count(title_clean) for line in normalized if title_clean)
+    title_call_density = min(1.0, title_mentions / max(1.0, len(attacks) / 2.0))
+    score = (
+        max_repeat_ratio * 0.25
+        + consecutive_ratio * 0.10
+        + title_call_density * 0.45
+        + min(1.0, title_attack_ratio * 2.0) * 0.20
+    )
     return round(max(0.0, min(1.0, score)), 2)
 
 def _section_contrast_score(plan: dict[str, Any], parsed: dict[str, list[str]], expected_sections: list[str]) -> float:
@@ -565,34 +714,36 @@ def _legacy_total_score(
     repetition_payoff: float,
     section_contrast: float,
     oral_friction: float,
+    rhyme_flow: float = 0.0,
 ) -> tuple[float, dict[str, float]]:
     family = str(form_family_id or "").strip()
     weights = {
-        "surface_score": 14.0,
-        "singability": 10.0,
-        "binding": 7.0,
-        "imagery_cov": 10.0,
+        "surface_score": 9.0,
+        "singability": 11.0,
+        "binding": 5.0,
+        "imagery_cov": 4.0,
         "line_variety": 6.0,
-        "hook_restraint": 4.0,
-        "structure_score": 4.0,
-        "evidence_utilization": 12.0,
-        "family_diversity": 4.0,
-        "cliche_control": 4.0,
-        "prosodic_flow": 3.0,
-        "hook_memorability": 7.0,
-        "repetition_payoff": 6.0,
-        "section_contrast": 9.0,
+        "hook_restraint": 3.0,
+        "structure_score": 2.0,
+        "evidence_utilization": 4.0,
+        "family_diversity": 3.0,
+        "cliche_control": 3.0,
+        "prosodic_flow": 12.0,
+        "hook_memorability": 10.0,
+        "repetition_payoff": 10.0,
+        "rhyme_flow": 15.0,
+        "section_contrast": 3.0,
         "oral_release": 0.0,
     }
     if family == "hybrid_release":
         weights.update(
             {
-                "singability": 12.0,
-                "structure_score": 3.0,
-                "evidence_utilization": 9.0,
-                "cliche_control": 6.0,
-                "prosodic_flow": 5.0,
-                "section_contrast": 8.0,
+                "surface_score": 8.0,
+                "imagery_cov": 3.0,
+                "evidence_utilization": 3.0,
+                "repetition_payoff": 9.0,
+                "rhyme_flow": 15.0,
+                "section_contrast": 5.0,
                 "oral_release": 2.0,
             }
         )
@@ -611,6 +762,7 @@ def _legacy_total_score(
         + prosodic_flow * weights["prosodic_flow"]
         + hook_memorability * weights["hook_memorability"]
         + repetition_payoff * weights["repetition_payoff"]
+        + rhyme_flow * weights["rhyme_flow"]
         + section_contrast * weights["section_contrast"]
         + (1.0 - oral_friction) * weights["oral_release"],
         2,
@@ -676,12 +828,18 @@ def run_critic_stage(
     prosodic_flow = _prosodic_flow_score(lines, parsed_sections, expected_sections, singability)
     hook_memorability = _hook_memorability_score(title, parsed_sections)
     repetition_payoff = _repetition_payoff_score(title, parsed_sections)
+    line_attack_repeat = _line_attack_repeat_score(title, parsed_sections)
+    rhyme_flow = _rhyme_flow_score(parsed_sections, expected_sections)
+    rhyme_plan_alignment = _rhyme_plan_alignment_score(plan, parsed_sections)
     section_contrast = _section_contrast_score(plan, parsed_sections, expected_sections)
     oral_friction = _oral_friction_score(lines, singability)
     musical_scores = {
         "prosodic_flow": prosodic_flow,
         "hook_memorability": hook_memorability,
         "repetition_payoff": repetition_payoff,
+        "line_attack_repeat": line_attack_repeat,
+        "rhyme_flow": rhyme_flow,
+        "rhyme_plan_alignment": rhyme_plan_alignment,
         "section_contrast": section_contrast,
         "oral_friction": oral_friction,
     }
@@ -703,13 +861,17 @@ def run_critic_stage(
         repetition_payoff=repetition_payoff,
         section_contrast=section_contrast,
         oral_friction=oral_friction,
+        rhyme_flow=rhyme_flow,
     )
     musical_total = round(
         prosodic_flow * 22
-        + hook_memorability * 24
-        + repetition_payoff * 22
-        + section_contrast * 20
-        + (1.0 - oral_friction) * 12,
+        + hook_memorability * 14
+        + repetition_payoff * 18
+        + line_attack_repeat * 12
+        + rhyme_flow * 16
+        + rhyme_plan_alignment * 8
+        + section_contrast * 4
+        + (1.0 - oral_friction) * 6,
         2,
     )
     blended_total = round((legacy_total * 0.4) + (musical_total * 0.6), 2)
@@ -741,6 +903,7 @@ def run_critic_stage(
             "cliche_control": cliche_control,
             "musical_scores": musical_scores,
             "legacy_profile": legacy_profile,
+            "ranking_priority": "rhythm_first",
             "form_family_id": form_family_id,
             "renderer_frame_family": str(candidate.get("renderer_frame_family", "")).strip(),
             "chorus_shape": str(candidate.get("chorus_shape", "")).strip(),
@@ -760,6 +923,7 @@ def run_critic_stage(
             "cliche_profile": cliche_diag,
             "musical_scores": musical_scores,
             "legacy_profile": legacy_profile,
+            "ranking_priority": "rhythm_first",
             "legacy_total": legacy_total,
             "musical_total": musical_total,
             "blended_total": blended_total,

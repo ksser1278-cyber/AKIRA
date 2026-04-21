@@ -26,6 +26,50 @@ def _family_directives(form_family_id: str) -> list[str]:
     return []
 
 
+def _rhythm_contract(form_family_id: str) -> list[str]:
+    lines = [
+        "Rhythm-first contract:",
+        "- Rhythm, cadence, and repeatability outrank semantic completeness.",
+        "- If meaning detail conflicts with chantability, remove detail and keep the line attack.",
+        "- Keep each lyric line singable in one breath; avoid explanatory clauses and stacked noun inventories.",
+        "- Build repeated line attacks in chorus-facing sections; the first sound of a line matters.",
+        "- Build rhyme flow across the whole song, not only in the chorus.",
+        "- Every verse and pre-chorus should have recurring end-sounds or vowel echoes.",
+        "- Use A/A/B/A or A/B/A/B tail echoes when possible; avoid four unrelated line endings in a section.",
+        "- Rhyme can be subtle Japanese vowel/ending-sound echo, not forced identical words.",
+        "- For every section with 3 or more lyric lines, at least 2 lines must share the same final sound.",
+        "- For 4-line verses, prefer line-ending pattern A/B/A/B or A/A/B/A.",
+        "- For 2-line pre-chorus sections, make both line endings feel like a tight sound pair.",
+        "- For outro, keep at least one audible tail echo so the rhythm resolves.",
+        "- Prefer two clean rhythmic images over four meaningful details.",
+        "- Use imagery/motif atoms as light grounding only. Do not force every atom into the lyric.",
+        "- Prefer compact vowel flow and clear mouth movement over dense conceptual phrasing.",
+    ]
+    if form_family_id == "compressed_hook":
+        lines.extend(
+            [
+                "- compressed_hook rhythm shape for [chorus]: short / short / medium / short.",
+                "- compressed_hook [chorus] lines 1 and 2 must start with the exact core phrase.",
+                "- compressed_hook [chorus] hook-led lines should be clipped and chantable, not sentence-length.",
+                "- compressed_hook [pre_chorus] and [pre_chorus_2] shape: short / short lift, no explanation.",
+                "- compressed_hook verses should use tight end-sound echoes so the rhythm is already moving before the hook.",
+                "- compressed_hook [chorus_final] shape: hook / hook / break / hook / release / release.",
+            ]
+        )
+    elif form_family_id == "hybrid_release":
+        lines.extend(
+            [
+                "- hybrid_release rhythm shape for [chorus]: medium statement / short hook / pressure / short hook / release.",
+                "- hybrid_release [chorus] hook lines should be repeatable as crowd-call fragments.",
+                "- hybrid_release [pre_chorus] shape: medium / medium / lifted pressure.",
+                "- hybrid_release verses should use smooth A/B/A/B tail echoes, then tighten in pre_chorus.",
+                "- hybrid_release [bridge] shape: delayed viewpoint / sensory turn / breath before release.",
+                "- hybrid_release [chorus_final] must repeat the hook attack but land the release harder.",
+            ]
+        )
+    return lines
+
+
 def _section_summary(card: dict[str, Any]) -> str:
     section = safe_text(card.get("section"))
     role = safe_text(card.get("section_role"))
@@ -35,6 +79,9 @@ def _section_summary(card: dict[str, Any]) -> str:
     blocked_fragments = ", ".join(safe_text(value) for value in card.get("blocked_hook_fragments", []) if safe_text(value))
     required_imagery = ", ".join(safe_text(value) for value in card.get("required_imagery", []) if safe_text(value))
     required_motifs = ", ".join(safe_text(value) for value in card.get("required_motifs", []) if safe_text(value))
+    tail_pattern = "/".join(safe_text(value) for value in card.get("tail_sound_pattern", []) if safe_text(value))
+    tail_pool = ", ".join(safe_text(value) for value in card.get("target_tail_pool", []) if safe_text(value))
+    internal_slots = ", ".join(str(value) for value in card.get("internal_rhyme_slots", []))
     return "\n".join(
         [
             f"- section: {section}",
@@ -50,8 +97,33 @@ def _section_summary(card: dict[str, Any]) -> str:
             f"  required_motifs: {required_motifs or '-'}",
             f"  allowed_lexical_families: {allowed_families or '-'}",
             f"  blocked_hook_fragments: {blocked_fragments or '-'}",
+            f"  tail_sound_pattern: {tail_pattern or '-'}",
+            f"  target_tail_pool_sound_only: {tail_pool or '-'}",
+            f"  internal_rhyme_slots: {internal_slots or '-'}",
+            f"  rhyme_density_target: {safe_text(card.get('rhyme_density_target')) or '-'}",
+            f"  rhyme_role: {safe_text(card.get('rhyme_role')) or '-'}",
         ]
     )
+
+
+def _rhyme_plan_summary(rhyme_plan: dict[str, Any]) -> str:
+    if not rhyme_plan:
+        return "-"
+    lines = [
+        f"plan_id: {safe_text(rhyme_plan.get('plan_id'))}",
+        f"priority: {safe_text(rhyme_plan.get('priority'))}",
+        f"tail_sound_pool: {', '.join(safe_text(value) for value in rhyme_plan.get('tail_sound_pool', []) if safe_text(value)) or '-'}",
+    ]
+    for spec in rhyme_plan.get("section_rhyme_specs", []):
+        if not isinstance(spec, dict):
+            continue
+        pattern = "/".join(safe_text(value) for value in spec.get("tail_sound_pattern", []) if safe_text(value))
+        pool = ", ".join(safe_text(value) for value in spec.get("target_tail_pool", []) if safe_text(value))
+        slots = ", ".join(str(value) for value in spec.get("internal_rhyme_slots", []))
+        lines.append(
+            f"- {safe_text(spec.get('section'))}: pattern={pattern or '-'}; tail_sounds={pool or '-'}; internal_slots={slots or '-'}; density={safe_text(spec.get('rhyme_density_target'))}; role={safe_text(spec.get('rhyme_role'))}"
+        )
+    return "\n".join(lines)
 
 
 def build_prompt_package(
@@ -66,6 +138,7 @@ def build_prompt_package(
     form_plan = runtime_plan.get("form_plan", {}) if isinstance(runtime_plan.get("form_plan"), dict) else {}
     section_cards = list(runtime_plan.get("section_cards", []))
     hook_blueprint = runtime_plan.get("hook_blueprint", {}) if isinstance(runtime_plan.get("hook_blueprint"), dict) else {}
+    rhyme_plan = runtime_plan.get("rhyme_plan", {}) if isinstance(runtime_plan.get("rhyme_plan"), dict) else {}
 
     required_sections = [f"[{safe_text(card.get('section'))}]" for card in section_cards if safe_text(card.get("section"))]
     section_block = "\n\n".join(_section_summary(card) for card in section_cards if isinstance(card, dict))
@@ -87,6 +160,12 @@ def build_prompt_package(
     min_core_mentions = 4 if safe_text(proposition.get("hook_density_target")) == "high" else 3
     form_family_id = safe_text(form_plan.get("form_family_id") or runtime_plan.get("form_family_id"))
     family_directives = _family_directives(form_family_id)
+    theme_lane = composition_brief.get("theme_lane", {}) if isinstance(composition_brief.get("theme_lane"), dict) else {}
+    forbidden_theme_motifs = [
+        safe_text(value)
+        for value in theme_lane.get("forbidden_motifs", [])
+        if safe_text(value)
+    ]
 
     system_prompt = "\n".join(
         [
@@ -98,7 +177,8 @@ def build_prompt_package(
             "Do not invent a different title or a different main hook.",
             "Non-chorus sections must not reuse the full chorus hook or blocked hook fragments verbatim.",
             "The chorus and final chorus must realize the proposition core phrase directly and repeatedly.",
-            "Keep the result singable, concrete, and section-role aware.",
+            "Keep the result rhythm-first, singable, concrete, and section-role aware.",
+            "Cadence and mouth-feel outrank semantic completeness.",
         ]
     )
 
@@ -117,6 +197,7 @@ def build_prompt_package(
             f"singability_profile: {composition_brief.get('singability_profile', {})}",
             f"energy_curve: {composition_brief.get('energy_curve', [])}",
             f"artist_grammar_bias: {runtime_plan.get('artist_grammar_bias', {})}",
+            f"theme_lane: {theme_lane}",
             "",
             "Required sections:",
             *required_sections,
@@ -124,21 +205,33 @@ def build_prompt_package(
             "Section behavior plan:",
             section_block,
             "",
+            "Rhyme plan:",
+            _rhyme_plan_summary(rhyme_plan),
+            "",
             "Hard rules:",
             f"- Title must be exactly '{core_phrase}'.",
             f"- The exact core phrase '{core_phrase}' must appear at least {min_core_mentions} times in total.",
             f"- The exact core phrase '{core_phrase}' must appear in both [chorus] and [chorus_final].",
             f"- Use '{escalation_phrase}' as the pressure direction in [chorus].",
             f"- Use '{release_phrase}' as the release direction in [chorus_final].",
-            "- For each section, actually use its scene and at least one required imagery/motif atom in natural Japanese.",
+            "- Use each section scene as light grounding; if imagery detail damages rhythm, keep only one strong atom.",
             "- Do not output comma-separated noun lists or inventory-style lines.",
             "- verse_2 must intensify pressure, not switch topic.",
             "- pre_chorus_2 must accelerate pressure, not introduce a new idea.",
             "- chorus_final is the only place allowed to sound irreversible.",
             "- keep the chorus proposition central and memorable.",
             "- Never replace the core phrase with a synonym or a different title.",
+            f"- Do not use these overused theme motifs anywhere: {', '.join(forbidden_theme_motifs) or '-'}",
+            "- Build the setting from the current theme_lane instead of candy/toy/room imagery.",
+            "- Obey each section's tail_sound_pattern from the Rhyme plan. Same letters must share an audible final sound.",
+            "- Use target_tail_pool as sound targets, not as mandatory literal words.",
+            "- Never end a line with an isolated tail marker such as る, く, い, て, う, む, ん, or ない.",
+            "- Bad endings: 'まだ る', '少し く', '温度 い'. Use natural Japanese words that already carry the sound.",
+            "- Good endings for る/く/い/て: 残る, 鳴る, 深く, 遠く, 痛い, 近い, ほどけて.",
             f"- Non-chorus sections must not contain these blocked hook fragments: {', '.join(blocked_fragments) or '-'}",
             *family_directives,
+            "",
+            *_rhythm_contract(form_family_id),
             "",
             "Line count guidance by section:",
             *[f"- {section}: {count} lines" for section, count in exact_line_targets.items()],
@@ -166,14 +259,29 @@ def build_prompt_package(
             "required_core_sections": ["chorus", "chorus_final"],
             "min_core_phrase_mentions": min_core_mentions,
             "blocked_non_chorus_fragments": unique_preserve_order(blocked_fragments),
+            "forbidden_theme_motifs": unique_preserve_order(forbidden_theme_motifs),
+            "rhythm_first": True,
+            "whole_song_rhyme_required": True,
+            "rhyme_plan": rhyme_plan,
+            "rhythm_priority": [
+                "line_attack",
+                "whole_song_rhyme_flow",
+                "end_sound_echo",
+                "repeatability",
+                "prosodic_flow",
+                "vowel_flow",
+                "hook_cadence_payoff",
+            ],
         },
         "system_prompt": system_prompt,
         "user_prompt": user_prompt,
         "prompt_inputs": {
             "composition_brief": composition_brief,
+            "theme_lane": theme_lane,
             "selected_proposition": proposition,
             "form_plan": form_plan,
             "section_behavior_plan": section_cards,
+            "rhyme_plan": rhyme_plan,
             "hook_blueprint": hook_blueprint,
         },
     }

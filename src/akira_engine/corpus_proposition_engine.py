@@ -45,14 +45,21 @@ _DARK_CUTE_MODE_PROFILE: dict[str, Any] = {
         {"section": "chorus_final", "pressure_stage": "overload"},
         {"section": "outro", "pressure_stage": "residual"},
     ],
-    "preferred_families": ["body", "collapse", "childhood", "architectural", "mechanical", "silence"],
+    "preferred_families": ["body", "collapse", "urban", "weather", "neon", "mechanical", "silence"],
     "fallback_terms": {
         "body": ["体温", "傷", "鼓動", "喉元", "皮膚", "爪"],
         "collapse": ["ひび", "落下", "崩壊", "断線", "軋み", "沈下"],
-        "childhood": ["キャンディ", "遊園地", "おもちゃ", "まばたき", "魔法", "教室"],
-        "architectural": ["部屋", "暗室", "教室", "廊下", "窓", "床"],
+        "urban": ["駅", "改札", "ホーム", "歩道橋", "信号", "ビル"],
+        "weather": ["雨", "水たまり", "傘", "曇り空", "風", "濡れた靴"],
+        "neon": ["ネオン", "看板", "終電", "路地", "車窓", "街灯"],
         "mechanical": ["静電気", "点滅", "反射", "通知", "ノイズ", "モニタリング"],
         "silence": ["沈黙", "余熱", "残り香", "温度", "影", "気配"],
+    },
+    "theme_lane": {
+        "theme_lane_id": "urban_rain_pressure",
+        "theme_promise": "雨の街、駅、信号、ネオンの反射で圧力を作る",
+        "forbidden_motifs": ["キャンディ", "遊園地", "おもちゃ", "部屋", "暗室", "教室"],
+        "preferred_scene_families": ["urban", "weather", "neon", "mechanical", "silence"],
     },
     "listener_position": "self_address",
 }
@@ -467,6 +474,19 @@ def _mode_profile(mode_id: str) -> dict[str, Any]:
     return dict(_DARK_CUTE_MODE_PROFILE)
 
 
+def _forbidden_theme_motifs(mode_profile: dict[str, Any]) -> set[str]:
+    lane = mode_profile.get("theme_lane", {}) if isinstance(mode_profile.get("theme_lane"), dict) else {}
+    return {safe_text(value) for value in lane.get("forbidden_motifs", []) if safe_text(value)}
+
+
+def _is_forbidden_theme_term(term: str, mode_profile: dict[str, Any]) -> bool:
+    text = safe_text(term)
+    if not text:
+        return False
+    forbidden = _forbidden_theme_motifs(mode_profile)
+    return any(value and value in text for value in forbidden)
+
+
 def _artist_bias(artist_id: str) -> dict[str, Any]:
     return dict(_ARTIST_GRAMMAR_BIAS.get(safe_text(artist_id), _ARTIST_GRAMMAR_BIAS["default"]))
 
@@ -494,12 +514,16 @@ def _build_lexical_field_bank(records: list[dict[str, Any]], mode_profile: dict[
     buckets: dict[str, list[str]] = defaultdict(list)
     for record in records:
         for term in _record_terms(record):
+            if _is_forbidden_theme_term(term, mode_profile):
+                continue
             family = safe_text(classify_term_family(term))
             if family and term not in buckets[family]:
                 buckets[family].append(term)
     for family in mode_profile.get("preferred_families", []):
         for term in mode_profile.get("fallback_terms", {}).get(family, []):
             text = _sanitize_surface_term(term)
+            if _is_forbidden_theme_term(text, mode_profile):
+                continue
             if text and text not in buckets[family]:
                 buckets[family].append(text)
     return dict(buckets)
@@ -625,6 +649,7 @@ def build_composition_brief(
         "singability_profile": dict(mode_profile.get("singability_profile", {})),
         "energy_curve": list(mode_profile.get("energy_curve", [])),
         "artist_grammar_bias": dict(intelligence.get("artist_style_prior", {}).get("artist_grammar_bias", {})),
+        "theme_lane": dict(mode_profile.get("theme_lane", {})),
         "mode_bias": {
             "mode_id": safe_text(intelligence.get("mode_id")),
             "form_family_shortlist": list(mode_profile.get("form_shortlist", [])),
@@ -764,15 +789,15 @@ def _section_allowed_families(section: str, proposition: dict[str, Any], intelli
     mode_families = list(intelligence.get("mode_profile", {}).get("preferred_families", []))
     proposition_families = list(proposition.get("allowed_lexical_families", []))
     section_specific: dict[str, list[str]] = {
-        "intro": ["childhood", "architectural", "silence"],
-        "verse_1": ["body", "architectural", "childhood"],
-        "pre_chorus": ["mechanical", "body", "silence"],
+        "intro": ["urban", "weather", "neon"],
+        "verse_1": ["body", "urban", "weather"],
+        "pre_chorus": ["mechanical", "weather", "silence"],
         "chorus": proposition_families + ["collapse", "body"],
         "verse_2": proposition_families + ["body", "mechanical"],
         "pre_chorus_2": ["mechanical", "collapse", "body"],
-        "bridge": ["architectural", "silence", "collapse"],
+        "bridge": ["neon", "silence", "weather"],
         "chorus_final": proposition_families + ["collapse", "mechanical"],
-        "outro": ["silence", "architectural", "childhood"],
+        "outro": ["silence", "weather", "urban"],
     }
     values = section_specific.get(section, []) + proposition_families + mode_families
     return unique_preserve_order([safe_text(value) for value in values if safe_text(value)])[:4]
@@ -780,10 +805,13 @@ def _section_allowed_families(section: str, proposition: dict[str, Any], intelli
 
 def _family_terms(intelligence: dict[str, Any], families: list[str]) -> list[str]:
     lexical_field_bank = intelligence.get("lexical_field_bank", {})
+    mode_profile = intelligence.get("mode_profile", {}) if isinstance(intelligence.get("mode_profile"), dict) else {}
     terms: list[str] = []
     for family in families:
         for term in lexical_field_bank.get(family, []):
             text = _sanitize_surface_term(term)
+            if _is_forbidden_theme_term(text, mode_profile):
+                continue
             if text and text not in terms:
                 terms.append(text)
     return terms
@@ -791,16 +819,20 @@ def _family_terms(intelligence: dict[str, Any], families: list[str]) -> list[str
 
 def _section_scene(intelligence: dict[str, Any], section: str, families: list[str], terms: list[str]) -> str:
     preferred_scene_families = {
-        "intro": ["architectural", "childhood", "silence"],
-        "verse_1": ["architectural", "childhood"],
-        "bridge": ["architectural", "silence"],
-        "outro": ["silence", "architectural"],
+        "intro": ["urban", "weather", "neon"],
+        "verse_1": ["urban", "weather", "neon"],
+        "bridge": ["neon", "weather", "silence"],
+        "outro": ["silence", "weather", "urban"],
     }.get(section, families)
     lexical_field_bank = intelligence.get("lexical_field_bank", {})
+    mode_profile = intelligence.get("mode_profile", {}) if isinstance(intelligence.get("mode_profile"), dict) else {}
     for family in preferred_scene_families:
         values = lexical_field_bank.get(family, [])
         if values:
-            return _sanitize_surface_term(values[0]) or safe_text(terms[0]) if terms else ""
+            for value in values:
+                text = _sanitize_surface_term(value)
+                if text and not _is_forbidden_theme_term(text, mode_profile):
+                    return text
     return safe_text(terms[0]) if terms else ""
 
 
@@ -809,6 +841,116 @@ def _section_prior(intelligence: dict[str, Any], section: str) -> dict[str, Any]
     sections = line_behavior.get("sections", {}) if isinstance(line_behavior.get("sections"), dict) else {}
     prior = sections.get(section)
     return prior if isinstance(prior, dict) else {}
+
+
+def _rhyme_pattern_for_section(section: str, line_target: int, form_family_id: str) -> list[str]:
+    if line_target <= 1:
+        return ["A"]
+    if line_target == 2:
+        return ["A", "A"]
+    if line_target == 3:
+        return ["A", "B", "A"] if section != "bridge" else ["A", "B", "B"]
+    if line_target == 4:
+        if section in {"chorus", "chorus_final"} or form_family_id == "compressed_hook":
+            return ["A", "A", "B", "A"]
+        return ["A", "B", "A", "B"]
+    if line_target == 5:
+        return ["A", "A", "B", "A", "B"]
+    return ["A", "A", "B", "A"] + ["C"] * max(0, line_target - 4)
+
+
+def _kana_sound_tail(text: str) -> str:
+    compact = safe_text(text).replace(" ", "")
+    if not compact:
+        return ""
+    ch = compact[-1]
+    code = ord(ch)
+    if 0x30A1 <= code <= 0x30F6:
+        return chr(code - 0x60)
+    if 0x3041 <= code <= 0x3096:
+        return ch
+    if ch in {"ん", "ー"}:
+        return ch
+    # Kanji tails are semantic characters, not safe phonetic rhyme targets.
+    if 0x4E00 <= code <= 0x9FFF:
+        return ""
+    return ch
+
+
+def _artist_tail_pool(intelligence: dict[str, Any], proposition: dict[str, Any], form_family_id: str) -> list[str]:
+    artist_id = safe_text(intelligence.get("artist_id"))
+    core_tail = _kana_sound_tail(safe_text(proposition.get("core_phrase")))
+    pools = {
+        "maretu": ["る", "く", "い", "て", "う", "む"],
+        "deco27": ["て", "い", "る", "ない", "う", "く"],
+        "pinocchiop": ["る", "い", "て", "う", "ん", "く"],
+        "kanaria": ["る", "い", "く", "た", "て", "う"],
+    }
+    pool = list(pools.get(artist_id, ["る", "い", "て", "う", "く", "ない"]))
+    if form_family_id == "compressed_hook":
+        pool = unique_preserve_order([core_tail, "る", "く", "い", "て"] + pool)
+    else:
+        pool = unique_preserve_order([core_tail, "て", "い", "る", "ない"] + pool)
+    return [tail for tail in pool if tail][:6]
+
+
+def _section_tail_pool(base_pool: list[str], section: str, index: int) -> list[str]:
+    if section in {"chorus", "chorus_final"}:
+        return unique_preserve_order(base_pool[:3] + ["る", "い"])[:4]
+    if section.startswith("pre_chorus"):
+        return unique_preserve_order(base_pool[1:4] + ["て", "る"])[:4]
+    if section == "bridge":
+        return unique_preserve_order(["い", "る"] + base_pool[:2])[:4]
+    if section == "outro":
+        return unique_preserve_order(["る", "い"] + base_pool[:2])[:4]
+    rotated = base_pool[index % len(base_pool):] + base_pool[: index % len(base_pool)] if base_pool else []
+    return rotated[:4]
+
+
+def _rhyme_role(section: str) -> str:
+    return {
+        "intro": "soft_setup_echo",
+        "verse_1": "world_rhyme_grid",
+        "pre_chorus": "tightening_pair",
+        "chorus": "hook_rhyme_anchor",
+        "verse_2": "same_grid_intensified",
+        "pre_chorus_2": "faster_tightening_pair",
+        "bridge": "withheld_tail_resolution",
+        "chorus_final": "overloaded_hook_rhyme",
+        "outro": "resolving_echo",
+    }.get(section, "section_echo")
+
+
+def build_rhyme_plan(
+    intelligence: dict[str, Any],
+    proposition: dict[str, Any],
+    form_plan: dict[str, Any],
+) -> dict[str, Any]:
+    form_family_id = safe_text(form_plan.get("form_family_id"))
+    section_order = [safe_text(section) for section in form_plan.get("section_order", []) if safe_text(section)]
+    line_targets = list(form_plan.get("line_target_profile", []))
+    base_pool = _artist_tail_pool(intelligence, proposition, form_family_id)
+    section_specs: list[dict[str, Any]] = []
+    for index, section in enumerate(section_order):
+        line_target = int(line_targets[index]) if index < len(line_targets) else 4
+        pattern = _rhyme_pattern_for_section(section, line_target, form_family_id)
+        section_specs.append(
+            {
+                "section": section,
+                "tail_sound_pattern": pattern,
+                "target_tail_pool": _section_tail_pool(base_pool, section, index),
+                "internal_rhyme_slots": [2] if line_target >= 4 else [],
+                "rhyme_density_target": "high" if section in {"chorus", "chorus_final"} else "medium",
+                "rhyme_role": _rhyme_role(section),
+            }
+        )
+    return {
+        "plan_id": f"{safe_text(intelligence.get('artist_id'))}:{safe_text(proposition.get('proposition_id'))}:{form_family_id}:rhyme",
+        "scope": "whole_song",
+        "priority": "high",
+        "tail_sound_pool": base_pool,
+        "section_rhyme_specs": section_specs,
+    }
 
 
 def build_section_behavior_plan(
@@ -820,6 +962,12 @@ def build_section_behavior_plan(
     cards: list[dict[str, Any]] = []
     section_order = list(form_plan.get("section_order", []))
     line_targets = list(form_plan.get("line_target_profile", []))
+    rhyme_plan = build_rhyme_plan(intelligence, proposition, form_plan)
+    rhyme_specs = {
+        safe_text(spec.get("section")): spec
+        for spec in rhyme_plan.get("section_rhyme_specs", [])
+        if isinstance(spec, dict) and safe_text(spec.get("section"))
+    }
     energy_curve = list(brief.get("energy_curve", []))
     energy_stage_by_section = {
         safe_text(item.get("section")): safe_text(item.get("pressure_stage"))
@@ -842,6 +990,7 @@ def build_section_behavior_plan(
         title_drop_policy = _TITLE_RETURN_POLICY_BY_SECTION.get(section, "withhold")
         if section == "chorus":
             title_drop_policy = safe_text(proposition.get("title_return_policy"), "primary")
+        rhyme_spec = dict(rhyme_specs.get(section, {}))
         card = {
             "section": section,
             "section_role": _SECTION_ROLE_MAP[section],
@@ -857,6 +1006,11 @@ def build_section_behavior_plan(
             "blocked_hook_fragments": list(proposition.get("forbidden_fragments", [])) if section not in {"chorus", "chorus_final"} else [],
             "title_drop_policy": title_drop_policy,
             "hook_pressure": safe_text(proposition.get("hook_density_target"), "medium"),
+            "tail_sound_pattern": list(rhyme_spec.get("tail_sound_pattern", [])),
+            "target_tail_pool": list(rhyme_spec.get("target_tail_pool", [])),
+            "internal_rhyme_slots": list(rhyme_spec.get("internal_rhyme_slots", [])),
+            "rhyme_density_target": safe_text(rhyme_spec.get("rhyme_density_target"), "medium"),
+            "rhyme_role": safe_text(rhyme_spec.get("rhyme_role"), "section_echo"),
             "conditioning_atoms": terms[:4],
             "required_motifs": terms[:4],
             "required_imagery": terms[:3],
@@ -895,6 +1049,7 @@ def build_runtime_plan(
     }
     hook_density = safe_text(proposition.get("hook_density_target"), "medium")
     form_family_id = safe_text(form_plan.get("form_family_id"))
+    rhyme_plan = build_rhyme_plan(intelligence, proposition, form_plan)
     return {
         "engine_type": ENGINE_TYPE,
         "track_id": f"{safe_text(intelligence.get('artist_id'))}_{safe_text(intelligence.get('mode_id'))}_{safe_text(proposition.get('proposition_id'))}_{candidate_index + 1}",
@@ -906,6 +1061,7 @@ def build_runtime_plan(
         "selected_proposition": dict(proposition),
         "form_plan": dict(form_plan),
         "section_behavior_plan": list(section_behavior_plan),
+        "rhyme_plan": rhyme_plan,
         "form_family_id": form_family_id,
         "form_family_reason": safe_text(form_plan.get("form_family_reason")),
         "form_family_shortlist": list(brief.get("mode_bias", {}).get("form_family_shortlist", [])),
@@ -978,7 +1134,8 @@ def _recent_repeat_penalty(
     same_proposition = sum(1 for entry in entries if proposition_id and safe_text(entry.get("proposition_id")) == proposition_id)
     same_core = sum(1 for entry in entries if core_phrase and safe_text(entry.get("core_phrase")) == core_phrase)
     same_form = sum(1 for entry in entries if form_family_id and safe_text(entry.get("form_family_id")) == form_family_id)
-    penalty = min(0.35, same_proposition * 0.14 + same_core * 0.16 + min(same_form, 3) * 0.02)
+    # Novelty should break ties and prevent obvious repetition, not overpower musical quality.
+    penalty = min(0.12, same_proposition * 0.04 + same_core * 0.05 + min(same_form, 3) * 0.01)
     return round(penalty, 3), {
         "same_proposition_recent_count": same_proposition,
         "same_core_phrase_recent_count": same_core,
@@ -1039,7 +1196,7 @@ def _score_novelty(
         legacy_total = float(enriched.get("legacy_total", 0.0) or 0.0)
         musical_total = float(enriched.get("musical_total", 0.0) or 0.0)
         enriched["blended_total"] = round(
-            legacy_total * 0.35 + musical_total * 0.45 + novelty_score * 0.20,
+            legacy_total * 0.25 + musical_total * 0.60 + novelty_score * 0.15,
             2,
         )
         scored.append(enriched)
@@ -1052,7 +1209,7 @@ def _selection_diagnostics(batch: list[dict[str, Any]], winner: dict[str, Any]) 
     novelty_winner = max(batch, key=lambda item: float(item.get("novelty_score", 0.0) or 0.0))
     blended_winner = max(batch, key=lambda item: float(item.get("blended_total", 0.0) or 0.0))
     return {
-        "selection_mode": "corpus_proposition_blended_total",
+        "selection_mode": "corpus_proposition_rhythm_first_blended_total",
         "legacy_winner": safe_text(legacy_winner.get("candidate_id")),
         "musical_winner": safe_text(musical_winner.get("candidate_id")),
         "novelty_winner": safe_text(novelty_winner.get("candidate_id")),
@@ -1278,6 +1435,7 @@ def run_corpus_proposition_demo(
     _write_json(final_output_dir / "composition_brief.json", brief)
     _write_json(final_output_dir / "proposition_archetype_set.json", proposition_set)
     _write_json(final_output_dir / "runtime_plan.json", selected_runtime_plan)
+    _write_json(final_output_dir / "rhyme_plan.json", selected_runtime_plan.get("rhyme_plan", {}))
     if prompt_packages:
         _write_json(final_output_dir / "prompt_packages.json", prompt_packages)
     if api_generation_records:
@@ -1339,6 +1497,7 @@ def run_corpus_proposition_demo(
         "selected_proposition": dict(selected_runtime_plan.get("selected_proposition", {})),
         "form_plan": dict(selected_runtime_plan.get("form_plan", {})),
         "section_behavior_plan": list(selected_runtime_plan.get("section_behavior_plan", [])),
+        "rhyme_plan": dict(selected_runtime_plan.get("rhyme_plan", {})),
         "form_family_id": safe_text(winner.get("form_family_id")),
         "renderer_frame_family": safe_text(winner.get("renderer_frame_family")),
         "generation_backend": safe_text(winner.get("generation_backend")) or resolved_generation_mode,
@@ -1380,6 +1539,7 @@ def run_corpus_proposition_demo(
             "composition_brief": str((final_output_dir / "composition_brief.json").resolve()),
             "proposition_archetype_set": str((final_output_dir / "proposition_archetype_set.json").resolve()),
             "runtime_plan": str((final_output_dir / "runtime_plan.json").resolve()),
+            "rhyme_plan": str((final_output_dir / "rhyme_plan.json").resolve()),
             "candidate_packages": str((final_output_dir / "candidate_packages.json").resolve()),
             "evaluation_manifest": str((final_output_dir / "evaluation_manifest.json").resolve()),
             "selected_lyric": str((final_output_dir / "selected_lyric.md").resolve()),

@@ -12,6 +12,7 @@ from src.akira_engine.corpus_proposition_engine import (
     build_corpus_intelligence,
     build_form_plan,
     build_proposition_archetype_set,
+    build_rhyme_plan,
     build_runtime_plan,
     build_section_behavior_plan,
     run_corpus_proposition_demo,
@@ -209,6 +210,8 @@ def test_section_behavior_plan_uses_pressure_not_topic_shift(tmp_path):
     assert section_map["pre_chorus_2"]["semantic_carry"] == "same_field_faster"
     assert section_map["verse_1"]["blocked_hook_fragments"] == [proposition["core_phrase"]]
     assert section_map["chorus"]["blocked_hook_fragments"] == []
+    assert section_map["verse_1"]["tail_sound_pattern"]
+    assert section_map["verse_1"]["target_tail_pool"]
 
 
 def test_runtime_plan_exposes_new_engine_artifacts(tmp_path):
@@ -233,6 +236,44 @@ def test_runtime_plan_exposes_new_engine_artifacts(tmp_path):
     assert runtime_plan["form_plan"]["form_family_id"] == form_plan["form_family_id"]
     assert runtime_plan["section_behavior_plan"][0]["section_role"]
     assert runtime_plan["section_cards"][0]["hook_dependency"]
+    assert runtime_plan["rhyme_plan"]["scope"] == "whole_song"
+    assert runtime_plan["section_cards"][0]["tail_sound_pattern"] == runtime_plan["rhyme_plan"]["section_rhyme_specs"][0]["tail_sound_pattern"]
+    assert runtime_plan["composition_brief"]["theme_lane"]["theme_lane_id"] == "urban_rain_pressure"
+
+
+def test_build_rhyme_plan_assigns_section_tail_patterns(tmp_path):
+    intelligence = _fixture_intelligence(tmp_path, "maretu")
+    brief = build_composition_brief(intelligence)
+    proposition = build_proposition_archetype_set(intelligence, brief)[0]
+    form_plan = build_form_plan(intelligence, proposition)
+    rhyme_plan = build_rhyme_plan(intelligence, proposition, form_plan)
+
+    by_section = {spec["section"]: spec for spec in rhyme_plan["section_rhyme_specs"]}
+    assert rhyme_plan["priority"] == "high"
+    assert all(tail not in {"ン", "ル"} for tail in rhyme_plan["tail_sound_pool"])
+    assert by_section["verse_1"]["tail_sound_pattern"] == ["A", "A", "B", "A"]
+    assert by_section["pre_chorus"]["tail_sound_pattern"] == ["A", "A"]
+    assert by_section["chorus"]["rhyme_density_target"] == "high"
+
+
+def test_dark_cute_theme_lane_blocks_overused_candy_room_imagery(tmp_path):
+    intelligence = _fixture_intelligence(tmp_path, "deco27")
+    brief = build_composition_brief(intelligence)
+    proposition = build_proposition_archetype_set(intelligence, brief)[0]
+    form_plan = build_form_plan(intelligence, proposition)
+    section_plan = build_section_behavior_plan(intelligence, brief, proposition, form_plan)
+
+    forbidden = set(brief["theme_lane"]["forbidden_motifs"])
+    surface = " ".join(
+        " ".join(str(value) for value in card.get(key, []))
+        + " "
+        + str(card.get("scene", ""))
+        for card in section_plan
+        for key in ["conditioning_atoms", "required_motifs", "required_imagery"]
+    )
+    assert forbidden
+    assert not any(term in surface for term in forbidden)
+    assert any(term in surface for term in ["駅", "雨", "ネオン", "信号", "終電"])
 
 
 def test_prompt_package_enforces_core_phrase_contract(tmp_path):
@@ -263,6 +304,10 @@ def test_prompt_package_enforces_core_phrase_contract(tmp_path):
     assert prompt_package["output_contract"]["required_core_phrase"] == proposition["core_phrase"]
     assert "chorus" in prompt_package["output_contract"]["required_core_sections"]
     assert "chorus_final" in prompt_package["output_contract"]["required_core_sections"]
+    assert prompt_package["output_contract"]["whole_song_rhyme_required"] is True
+    assert prompt_package["output_contract"]["rhyme_plan"]["priority"] == "high"
+    assert "キャンディ" in prompt_package["output_contract"]["forbidden_theme_motifs"]
+    assert "Rhyme plan:" in prompt_package["user_prompt"]
     assert "compressed_hook family" not in prompt_package["user_prompt"]
 
 
