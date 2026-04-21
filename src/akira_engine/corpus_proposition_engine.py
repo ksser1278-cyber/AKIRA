@@ -17,6 +17,7 @@ from .promotion.mod import run_promotion_stage
 from .prompt_package_builder import build_prompt_package
 from .renderer.mod import run_renderer_stage
 from .songwriter_io import candidate_content_roots, load_conditioning_records, load_representative_demo_profile
+from .vocal_material_plan import SONGWRITER_IDENTITY_CONTRACT, build_vocal_material_plan
 
 
 ENGINE_TYPE = "corpus_driven_proposition_engine"
@@ -1050,6 +1051,16 @@ def build_runtime_plan(
     hook_density = safe_text(proposition.get("hook_density_target"), "medium")
     form_family_id = safe_text(form_plan.get("form_family_id"))
     rhyme_plan = build_rhyme_plan(intelligence, proposition, form_plan)
+    artist_grammar_bias = dict(intelligence.get("artist_style_prior", {}).get("artist_grammar_bias", {}))
+    vocal_material_plan = build_vocal_material_plan(
+        artist_id=safe_text(intelligence.get("artist_id")),
+        mode_id=safe_text(intelligence.get("mode_id")),
+        proposition=proposition,
+        form_plan=form_plan,
+        section_behavior_plan=section_behavior_plan,
+        rhyme_plan=rhyme_plan,
+        artist_grammar_bias=artist_grammar_bias,
+    )
     return {
         "engine_type": ENGINE_TYPE,
         "track_id": f"{safe_text(intelligence.get('artist_id'))}_{safe_text(intelligence.get('mode_id'))}_{safe_text(proposition.get('proposition_id'))}_{candidate_index + 1}",
@@ -1065,8 +1076,10 @@ def build_runtime_plan(
         "form_family_id": form_family_id,
         "form_family_reason": safe_text(form_plan.get("form_family_reason")),
         "form_family_shortlist": list(brief.get("mode_bias", {}).get("form_family_shortlist", [])),
-        "artist_grammar_bias": dict(intelligence.get("artist_style_prior", {}).get("artist_grammar_bias", {})),
+        "artist_grammar_bias": artist_grammar_bias,
         "singability_profile": dict(brief.get("singability_profile", {})),
+        "songwriter_identity_contract": dict(SONGWRITER_IDENTITY_CONTRACT),
+        "vocal_material_plan": vocal_material_plan,
         "hook_blueprint": {
             "core_text": safe_text(proposition.get("core_phrase")),
             "hook_density": hook_density,
@@ -1436,6 +1449,7 @@ def run_corpus_proposition_demo(
     _write_json(final_output_dir / "proposition_archetype_set.json", proposition_set)
     _write_json(final_output_dir / "runtime_plan.json", selected_runtime_plan)
     _write_json(final_output_dir / "rhyme_plan.json", selected_runtime_plan.get("rhyme_plan", {}))
+    _write_json(final_output_dir / "vocal_material_plan.json", selected_runtime_plan.get("vocal_material_plan", {}))
     if prompt_packages:
         _write_json(final_output_dir / "prompt_packages.json", prompt_packages)
     if api_generation_records:
@@ -1498,6 +1512,8 @@ def run_corpus_proposition_demo(
         "form_plan": dict(selected_runtime_plan.get("form_plan", {})),
         "section_behavior_plan": list(selected_runtime_plan.get("section_behavior_plan", [])),
         "rhyme_plan": dict(selected_runtime_plan.get("rhyme_plan", {})),
+        "songwriter_identity_contract": dict(selected_runtime_plan.get("songwriter_identity_contract", {})),
+        "vocal_material_plan": dict(selected_runtime_plan.get("vocal_material_plan", {})),
         "form_family_id": safe_text(winner.get("form_family_id")),
         "renderer_frame_family": safe_text(winner.get("renderer_frame_family")),
         "generation_backend": safe_text(winner.get("generation_backend")) or resolved_generation_mode,
@@ -1540,6 +1556,7 @@ def run_corpus_proposition_demo(
             "proposition_archetype_set": str((final_output_dir / "proposition_archetype_set.json").resolve()),
             "runtime_plan": str((final_output_dir / "runtime_plan.json").resolve()),
             "rhyme_plan": str((final_output_dir / "rhyme_plan.json").resolve()),
+            "vocal_material_plan": str((final_output_dir / "vocal_material_plan.json").resolve()),
             "candidate_packages": str((final_output_dir / "candidate_packages.json").resolve()),
             "evaluation_manifest": str((final_output_dir / "evaluation_manifest.json").resolve()),
             "selected_lyric": str((final_output_dir / "selected_lyric.md").resolve()),

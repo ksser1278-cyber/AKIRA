@@ -61,6 +61,74 @@ def _section_map(markdown_text: str) -> dict[str, str]:
     return {section: "\n".join(lines) for section, lines in sections.items()}
 
 
+def _section_line_map(markdown_text: str) -> dict[str, list[str]]:
+    sections: dict[str, list[str]] = {}
+    current: str | None = None
+    for raw_line in markdown_text.splitlines():
+        line = raw_line.rstrip()
+        match = SECTION_HEADER_PATTERN.match(line.strip())
+        if match:
+            current = match.group(1).strip()
+            sections.setdefault(current, [])
+            continue
+        if current is not None and line.strip():
+            sections[current].append(line.strip())
+    return sections
+
+
+def _compact_for_tail(text: str) -> str:
+    compact = re.sub(r"[\s、。！？!?…・「」『』（）()\[\],.]+", "", str(text or ""))
+    return compact
+
+
+def _line_ends_with_any_terminal(line: str, terminals: list[str]) -> bool:
+    compact = _compact_for_tail(line)
+    if not compact:
+        return False
+    for terminal in terminals:
+        candidate = _compact_for_tail(terminal)
+        if candidate and compact.endswith(candidate):
+            return True
+    return False
+
+
+def _line_end_alignment_ratio(output_contract: dict[str, Any], markdown_text: str) -> tuple[float, int, int]:
+    vocal_plan = output_contract.get("vocal_material_plan", {})
+    if not isinstance(vocal_plan, dict):
+        return 1.0, 0, 0
+    section_grid = vocal_plan.get("section_line_end_grid", {})
+    if not isinstance(section_grid, dict) or not section_grid:
+        return 1.0, 0, 0
+    sections = _section_line_map(markdown_text)
+    total = 0
+    hits = 0
+    for section, grid in section_grid.items():
+        if not isinstance(grid, list):
+            continue
+        lines = sections.get(str(section), [])
+        for target in grid:
+            if not isinstance(target, dict):
+                continue
+            if target.get("required_for_validation") is False:
+                continue
+            line_index = int(target.get("line_index", 0) or 0) - 1
+            if line_index < 0 or line_index >= len(lines):
+                continue
+            terminals = [
+                str(value).strip()
+                for value in target.get("allowed_terminal_words", [])
+                if str(value).strip()
+            ]
+            if not terminals:
+                continue
+            total += 1
+            if _line_ends_with_any_terminal(lines[line_index], terminals):
+                hits += 1
+    if total == 0:
+        return 1.0, hits, total
+    return hits / total, hits, total
+
+
 def _first_non_empty_line(text: str) -> str:
     for raw_line in text.splitlines():
         line = raw_line.strip()
@@ -126,6 +194,11 @@ def validate_markdown(request_record: dict[str, Any], markdown_text: str) -> tup
                 compact_fragment = re.sub(r"\s+", "", fragment)
                 if compact_fragment and compact_fragment in compact_content:
                     return False, f"hook_fragment_leak:{section}"
+
+    line_end_ratio, line_end_hits, line_end_total = _line_end_alignment_ratio(output_contract, text)
+    min_line_end_alignment = float(output_contract.get("minimum_line_end_alignment", 0.0) or 0.0)
+    if line_end_total >= 6 and line_end_ratio < min_line_end_alignment:
+        return False, f"line_end_alignment_low:{line_end_hits}/{line_end_total}"
 
     return True, None
 

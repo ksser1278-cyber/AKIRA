@@ -239,6 +239,9 @@ def test_runtime_plan_exposes_new_engine_artifacts(tmp_path):
     assert runtime_plan["rhyme_plan"]["scope"] == "whole_song"
     assert runtime_plan["section_cards"][0]["tail_sound_pattern"] == runtime_plan["rhyme_plan"]["section_rhyme_specs"][0]["tail_sound_pattern"]
     assert runtime_plan["composition_brief"]["theme_lane"]["theme_lane_id"] == "urban_rain_pressure"
+    assert runtime_plan["songwriter_identity_contract"]["role"] == "utaite_vocaloid_singer_songwriter"
+    assert runtime_plan["vocal_material_plan"]["terminal_word_bank"]
+    assert runtime_plan["vocal_material_plan"]["line_realization_plan"][0]["terminal_word_candidates"]
 
 
 def test_build_rhyme_plan_assigns_section_tail_patterns(tmp_path):
@@ -306,9 +309,82 @@ def test_prompt_package_enforces_core_phrase_contract(tmp_path):
     assert "chorus_final" in prompt_package["output_contract"]["required_core_sections"]
     assert prompt_package["output_contract"]["whole_song_rhyme_required"] is True
     assert prompt_package["output_contract"]["rhyme_plan"]["priority"] == "high"
+    assert prompt_package["output_contract"]["songwriter_identity_contract"]["role"] == "utaite_vocaloid_singer_songwriter"
+    assert prompt_package["output_contract"]["vocal_material_plan"]["terminal_word_bank"]
+    assert prompt_package["output_contract"]["vocal_material_plan"]["section_line_end_grid"]
+    assert prompt_package["output_contract"]["minimum_line_end_alignment"] == 0.55
     assert "キャンディ" in prompt_package["output_contract"]["forbidden_theme_motifs"]
     assert "Rhyme plan:" in prompt_package["user_prompt"]
+    assert "Vocal material plan:" in prompt_package["user_prompt"]
+    assert "section_line_end_grid" in prompt_package["user_prompt"]
+    assert "Required line endings:" in prompt_package["user_prompt"]
+    assert "utaite_vocaloid_singer_songwriter" in prompt_package["system_prompt"]
     assert "compressed_hook family" not in prompt_package["user_prompt"]
+
+
+def test_openai_validate_markdown_rejects_low_line_end_alignment():
+    request_record = {
+        "output_contract": {
+            "format": "markdown_section",
+            "required_sections": ["[verse_1]", "[chorus]", "[chorus_final]"],
+            "required_title": "ピンク",
+            "required_core_phrase": "ピンク",
+            "required_core_sections": ["chorus", "chorus_final"],
+            "min_core_phrase_mentions": 2,
+            "minimum_line_end_alignment": 0.55,
+            "vocal_material_plan": {
+                "section_line_end_grid": {
+                    "verse_1": [
+                        {"line_index": 1, "allowed_terminal_words": ["残る", "鳴る"]},
+                        {"line_index": 2, "allowed_terminal_words": ["残る", "鳴る"]},
+                        {"line_index": 3, "allowed_terminal_words": ["痛い", "近い"]},
+                        {"line_index": 4, "allowed_terminal_words": ["残る", "鳴る"]},
+                    ],
+                    "chorus": [
+                        {"line_index": 1, "allowed_terminal_words": ["残る", "鳴る"]},
+                        {"line_index": 2, "allowed_terminal_words": ["残る", "鳴る"]},
+                    ],
+                }
+            },
+        }
+    }
+    bad_markdown = """# ピンク
+
+[verse_1]
+雨が白くなる
+駅の端で見える
+鼓動だけが遠い
+息の奥で揺れる
+
+[chorus]
+ピンク、まだ落ちていく
+ピンク、まだ壊れていく
+
+[chorus_final]
+ピンク、もう戻れない
+"""
+    ok, error = validate_openai_markdown(request_record, bad_markdown)
+    assert not ok
+    assert error == "line_end_alignment_low:0/6"
+
+    good_markdown = """# ピンク
+
+[verse_1]
+雨がまだ残る
+駅の端で鳴る
+鼓動だけが痛い
+息の奥で残る
+
+[chorus]
+ピンク、まだ残る
+ピンク、まだ鳴る
+
+[chorus_final]
+ピンク、もう戻れない
+"""
+    ok, error = validate_openai_markdown(request_record, good_markdown)
+    assert ok
+    assert error is None
 
 
 def test_openai_validate_markdown_rejects_wrong_title_and_missing_core_phrase():
@@ -528,10 +604,13 @@ def test_run_corpus_proposition_demo_api_mode_writes_prompt_packages(tmp_path, m
     assert Path(manifest["output_paths"]["prompt_packages"]).exists()
     assert Path(manifest["output_paths"]["api_generation_records"]).exists()
     assert Path(manifest["output_paths"]["recent_winner_history"]).exists()
+    assert Path(manifest["output_paths"]["vocal_material_plan"]).exists()
+    assert manifest["songwriter_identity_contract"]["role"] == "utaite_vocaloid_singer_songwriter"
 
     prompt_packages = json.loads((output_dir / "prompt_packages.json").read_text(encoding="utf-8"))
     assert len(prompt_packages) == 2
     assert prompt_packages[0]["prompt_inputs"]["selected_proposition"]["proposition_id"]
+    assert prompt_packages[0]["prompt_inputs"]["vocal_material_plan"]["plan_id"]
     assert prompt_packages[0]["form_family_id"] == "hybrid_release"
 
     history = json.loads(Path(manifest["output_paths"]["recent_winner_history"]).read_text(encoding="utf-8"))

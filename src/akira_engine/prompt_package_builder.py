@@ -126,6 +126,93 @@ def _rhyme_plan_summary(rhyme_plan: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _vocal_material_plan_summary(vocal_material_plan: dict[str, Any]) -> str:
+    if not vocal_material_plan:
+        return "-"
+    identity = vocal_material_plan.get("songwriter_identity_contract", {})
+    role = safe_text(identity.get("role")) if isinstance(identity, dict) else ""
+    priority = ", ".join(
+        safe_text(value)
+        for value in vocal_material_plan.get("priority_order", [])
+        if safe_text(value)
+    )
+    hook_shape = vocal_material_plan.get("hook_phoneme_shape", {})
+    lines = [
+        f"songwriter_role: {role or '-'}",
+        f"priority_order: {priority or '-'}",
+        f"hook_phoneme_shape: {hook_shape if isinstance(hook_shape, dict) else {}}",
+        "learning_sources:",
+    ]
+    for source in vocal_material_plan.get("learning_source_contract", []):
+        if not isinstance(source, dict):
+            continue
+        lines.append(
+            f"- {safe_text(source.get('source'))}: learns={safe_text(source.get('learns'))}; used_for={safe_text(source.get('used_for'))}"
+        )
+    lines.append("line_realization:")
+    terminal_bank = vocal_material_plan.get("terminal_word_bank", {})
+    if isinstance(terminal_bank, dict):
+        lines.append(f"terminal_word_bank: {terminal_bank}")
+    for plan in vocal_material_plan.get("line_realization_plan", []):
+        if not isinstance(plan, dict):
+            continue
+        patterns = " | ".join(safe_text(value) for value in plan.get("syntax_patterns", []) if safe_text(value))
+        terminals = ", ".join(safe_text(value) for value in plan.get("terminal_word_candidates", [])[:8] if safe_text(value))
+        avoid = ", ".join(safe_text(value) for value in plan.get("avoid", []) if safe_text(value))
+        line_end_parts: list[str] = []
+        for target in plan.get("line_end_grid", []):
+            if not isinstance(target, dict):
+                continue
+            words = "/".join(
+                safe_text(value)
+                for value in target.get("allowed_terminal_words", [])[:4]
+                if safe_text(value)
+            )
+            line_end_parts.append(
+                f"L{int(target.get('line_index', 0) or 0)}={safe_text(target.get('pattern_label'))}:{safe_text(target.get('tail_sound'))}[{words or '-'}]"
+            )
+        lines.append(
+            f"- {safe_text(plan.get('section'))}: pressure={safe_text(plan.get('pressure_stage'))}; patterns={patterns or '-'}; terminal_words={terminals or '-'}; line_end_grid={'; '.join(line_end_parts) or '-'}; avoid={avoid or '-'}"
+        )
+    lines.append("rhythm_cells:")
+    for plan in vocal_material_plan.get("rhythm_cell_plan", []):
+        if not isinstance(plan, dict):
+            continue
+        cells = " | ".join(safe_text(value) for value in plan.get("rhythm_cells", []) if safe_text(value))
+        lines.append(
+            f"- {safe_text(plan.get('section'))}: line_attack={safe_text(plan.get('line_attack_mode'))}; breath_cut={safe_text(plan.get('breath_cut'))}; cells={cells or '-'}"
+        )
+    return "\n".join(lines)
+
+
+def _required_line_endings_summary(vocal_material_plan: dict[str, Any]) -> str:
+    section_grid = vocal_material_plan.get("section_line_end_grid", {})
+    if not isinstance(section_grid, dict) or not section_grid:
+        return "-"
+    lines: list[str] = []
+    for section, grid in section_grid.items():
+        if not isinstance(grid, list):
+            continue
+        parts: list[str] = []
+        for target in grid:
+            if not isinstance(target, dict) or target.get("required_for_validation") is False:
+                continue
+            words = [
+                safe_text(value)
+                for value in target.get("allowed_terminal_words", [])[:4]
+                if safe_text(value)
+            ]
+            if not words:
+                continue
+            parts.append(
+                f"L{int(target.get('line_index', 0) or 0)} must end with {safe_text(target.get('tail_sound'))}: "
+                + "/".join(words)
+            )
+        if parts:
+            lines.append(f"- [{safe_text(section)}]: " + "; ".join(parts))
+    return "\n".join(lines) if lines else "-"
+
+
 def build_prompt_package(
     runtime_plan: dict[str, Any],
     *,
@@ -139,6 +226,16 @@ def build_prompt_package(
     section_cards = list(runtime_plan.get("section_cards", []))
     hook_blueprint = runtime_plan.get("hook_blueprint", {}) if isinstance(runtime_plan.get("hook_blueprint"), dict) else {}
     rhyme_plan = runtime_plan.get("rhyme_plan", {}) if isinstance(runtime_plan.get("rhyme_plan"), dict) else {}
+    songwriter_identity_contract = (
+        runtime_plan.get("songwriter_identity_contract", {})
+        if isinstance(runtime_plan.get("songwriter_identity_contract"), dict)
+        else {}
+    )
+    vocal_material_plan = (
+        runtime_plan.get("vocal_material_plan", {})
+        if isinstance(runtime_plan.get("vocal_material_plan"), dict)
+        else {}
+    )
 
     required_sections = [f"[{safe_text(card.get('section'))}]" for card in section_cards if safe_text(card.get("section"))]
     section_block = "\n\n".join(_section_summary(card) for card in section_cards if isinstance(card, dict))
@@ -169,7 +266,9 @@ def build_prompt_package(
 
     system_prompt = "\n".join(
         [
-            "You are writing original Japanese lyrics from a planning package.",
+            "You are an utaite/vocaloid singer-songwriter writing original Japanese lyrics from a planning package.",
+            "Role ID: utaite_vocaloid_singer_songwriter.",
+            "Treat every lyric line as vocal material for melody, breath, rhyme, and mouthfeel.",
             "Output only markdown lyrics.",
             "Start with a title line formatted exactly as '# <core_phrase>'.",
             "Then output the required section headers exactly once and in the required order.",
@@ -179,6 +278,7 @@ def build_prompt_package(
             "The chorus and final chorus must realize the proposition core phrase directly and repeatedly.",
             "Keep the result rhythm-first, singable, concrete, and section-role aware.",
             "Cadence and mouth-feel outrank semantic completeness.",
+            "Do not write poetry-first explanations, motif inventories, or theme summaries.",
         ]
     )
 
@@ -197,6 +297,7 @@ def build_prompt_package(
             f"singability_profile: {composition_brief.get('singability_profile', {})}",
             f"energy_curve: {composition_brief.get('energy_curve', [])}",
             f"artist_grammar_bias: {runtime_plan.get('artist_grammar_bias', {})}",
+            f"songwriter_identity_contract: {songwriter_identity_contract}",
             f"theme_lane: {theme_lane}",
             "",
             "Required sections:",
@@ -207,6 +308,12 @@ def build_prompt_package(
             "",
             "Rhyme plan:",
             _rhyme_plan_summary(rhyme_plan),
+            "",
+            "Vocal material plan:",
+            _vocal_material_plan_summary(vocal_material_plan),
+            "",
+            "Required line endings:",
+            _required_line_endings_summary(vocal_material_plan),
             "",
             "Hard rules:",
             f"- Title must be exactly '{core_phrase}'.",
@@ -225,6 +332,14 @@ def build_prompt_package(
             "- Build the setting from the current theme_lane instead of candy/toy/room imagery.",
             "- Obey each section's tail_sound_pattern from the Rhyme plan. Same letters must share an audible final sound.",
             "- Use target_tail_pool as sound targets, not as mandatory literal words.",
+            "- Use vocal_material_plan.terminal_word_bank for natural line endings that satisfy those sounds.",
+            "- For each section, obey vocal_material_plan.section_line_end_grid line by line.",
+            "- Lines listed in Required line endings are validation anchors; their final written characters must be one listed terminal word.",
+            "- Do not add particles, punctuation words, or extra clauses after a required terminal word.",
+            "- If line_end_grid says L1=A:る, line 1 must end with a natural る-word candidate such as 残る, 鳴る, 揺れる, 崩れる, 刺さる, or 染みる.",
+            "- Same pattern label must use the same tail sound family inside that section. A/A/B/A means lines 1, 2, and 4 need the same final sound family.",
+            "- Every lyric line must realize one rhythm cell and one breath cut from the vocal material plan.",
+            "- Do not explain the theme. Write sung attacks, tail echoes, and short repeatable phrases.",
             "- Never end a line with an isolated tail marker such as る, く, い, て, う, む, ん, or ない.",
             "- Bad endings: 'まだ る', '少し く', '温度 い'. Use natural Japanese words that already carry the sound.",
             "- Good endings for る/く/い/て: 残る, 鳴る, 深く, 遠く, 痛い, 近い, ほどけて.",
@@ -263,6 +378,9 @@ def build_prompt_package(
             "rhythm_first": True,
             "whole_song_rhyme_required": True,
             "rhyme_plan": rhyme_plan,
+            "songwriter_identity_contract": songwriter_identity_contract,
+            "vocal_material_plan": vocal_material_plan,
+            "minimum_line_end_alignment": float(vocal_material_plan.get("minimum_line_end_alignment", 0.55) or 0.55),
             "rhythm_priority": [
                 "line_attack",
                 "whole_song_rhyme_flow",
@@ -282,6 +400,8 @@ def build_prompt_package(
             "form_plan": form_plan,
             "section_behavior_plan": section_cards,
             "rhyme_plan": rhyme_plan,
+            "songwriter_identity_contract": songwriter_identity_contract,
+            "vocal_material_plan": vocal_material_plan,
             "hook_blueprint": hook_blueprint,
         },
     }
