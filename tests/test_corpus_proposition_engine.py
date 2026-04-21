@@ -357,6 +357,54 @@ def test_novelty_penalizes_same_surface_and_same_proposition():
     assert novelty["c"] > novelty["b"]
 
 
+def test_novelty_penalizes_recent_same_winner_for_artist_mode():
+    batch = [
+        {
+            "candidate_id": "repeat",
+            "proposition_id": "prop_recent",
+            "core_phrase": "ダーリン",
+            "form_family_id": "compressed_hook",
+            "title": "ダーリン",
+            "markdown": "# ダーリン\n\n[chorus]\nダーリン\n",
+            "legacy_total": 95.0,
+            "musical_total": 90.0,
+        },
+        {
+            "candidate_id": "fresh",
+            "proposition_id": "prop_fresh",
+            "core_phrase": "コウカツ",
+            "form_family_id": "compressed_hook",
+            "title": "コウカツ",
+            "markdown": "# コウカツ\n\n[chorus]\nコウカツ\n",
+            "legacy_total": 92.0,
+            "musical_total": 90.0,
+        },
+    ]
+    recent_history = {
+        "entries": [
+            {
+                "artist_id": "maretu",
+                "mode_id": "dark_cute_breakdown",
+                "proposition_id": "prop_recent",
+                "core_phrase": "ダーリン",
+                "form_family_id": "compressed_hook",
+            }
+        ]
+    }
+
+    scored = _score_novelty(
+        batch,
+        recent_history,
+        artist_id="maretu",
+        mode_id="dark_cute_breakdown",
+    )
+    by_id = {item["candidate_id"]: item for item in scored}
+
+    assert by_id["repeat"]["recent_repeat_penalty"] > 0
+    assert by_id["repeat"]["novelty_score"] < by_id["repeat"]["base_novelty_score"]
+    assert by_id["fresh"]["recent_repeat_penalty"] < by_id["repeat"]["recent_repeat_penalty"]
+
+
 def test_corpus_surface_sanitizer_strips_english_gloss():
     assert _sanitize_japanese_term("愛言葉 (Love Password)") == "愛言葉"
     assert _sanitize_japanese_term("毒林檎 (Poison Apple)") == "毒林檎"
@@ -434,11 +482,16 @@ def test_run_corpus_proposition_demo_api_mode_writes_prompt_packages(tmp_path, m
     assert manifest["api_provider"] == "test"
     assert Path(manifest["output_paths"]["prompt_packages"]).exists()
     assert Path(manifest["output_paths"]["api_generation_records"]).exists()
+    assert Path(manifest["output_paths"]["recent_winner_history"]).exists()
 
     prompt_packages = json.loads((output_dir / "prompt_packages.json").read_text(encoding="utf-8"))
     assert len(prompt_packages) == 2
     assert prompt_packages[0]["prompt_inputs"]["selected_proposition"]["proposition_id"]
     assert prompt_packages[0]["form_family_id"] == "hybrid_release"
+
+    history = json.loads(Path(manifest["output_paths"]["recent_winner_history"]).read_text(encoding="utf-8"))
+    assert history["entries"][0]["artist_id"] == "deco27"
+    assert history["entries"][0]["proposition_id"]
 
 
 def test_resolve_api_project_root_walks_up_to_config_env(tmp_path):

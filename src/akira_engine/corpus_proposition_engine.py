@@ -4,6 +4,7 @@ import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import replace
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +21,8 @@ from .songwriter_io import candidate_content_roots, load_conditioning_records, l
 
 ENGINE_TYPE = "corpus_driven_proposition_engine"
 SCHEMA_VERSION = "3.0"
+RECENT_WINNER_HISTORY_SCHEMA_VERSION = "1.0"
+RECENT_WINNER_HISTORY_LIMIT = 40
 
 _DARK_CUTE_MODE_PROFILE: dict[str, Any] = {
     "mode_id": "dark_cute_breakdown",
@@ -262,6 +265,49 @@ def _write_text(path: Path, text: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text.rstrip() + "\n", encoding="utf-8")
     return path
+
+
+def _state_project_root(project_root: Path) -> Path:
+    for content_root in candidate_content_roots(project_root.resolve()):
+        if (content_root / "akira.py").exists() or (content_root / "config").exists():
+            return content_root.resolve()
+    return project_root.resolve()
+
+
+def _recent_winner_history_path(project_root: Path) -> Path:
+    return _state_project_root(project_root) / "reports" / "planning" / "corpus_proposition_recent_winners.json"
+
+
+def _load_recent_winner_history(project_root: Path) -> dict[str, Any]:
+    path = _recent_winner_history_path(project_root)
+    if not path.exists():
+        return {
+            "schema_version": RECENT_WINNER_HISTORY_SCHEMA_VERSION,
+            "record_type": "corpus_proposition_recent_winners",
+            "entries": [],
+        }
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        payload = {}
+    entries = payload.get("entries", [])
+    return {
+        "schema_version": RECENT_WINNER_HISTORY_SCHEMA_VERSION,
+        "record_type": "corpus_proposition_recent_winners",
+        "entries": [entry for entry in entries if isinstance(entry, dict)],
+    }
+
+
+def _write_recent_winner_history(project_root: Path, history: dict[str, Any], entry: dict[str, Any]) -> Path:
+    path = _recent_winner_history_path(project_root)
+    entries = [item for item in history.get("entries", []) if isinstance(item, dict)]
+    entries.insert(0, entry)
+    payload = {
+        "schema_version": RECENT_WINNER_HISTORY_SCHEMA_VERSION,
+        "record_type": "corpus_proposition_recent_winners",
+        "entries": entries[:RECENT_WINNER_HISTORY_LIMIT],
+    }
+    return _write_json(path, payload)
 
 
 def _discover_form_family_assets(
@@ -905,7 +951,48 @@ def _surface_overlap(markdown_a: str, markdown_b: str, title_a: str = "", title_
     return round(len(sig_a & sig_b) / len(union), 3)
 
 
-def _score_novelty(batch: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _recent_repeat_penalty(
+    item: dict[str, Any],
+    recent_history: dict[str, Any] | None,
+    *,
+    artist_id: str = "",
+    mode_id: str = "",
+) -> tuple[float, dict[str, Any]]:
+    if not recent_history:
+        return 0.0, {
+            "same_proposition_recent_count": 0,
+            "same_core_phrase_recent_count": 0,
+            "same_form_recent_count": 0,
+        }
+    clean_artist_id = safe_text(artist_id)
+    clean_mode_id = safe_text(mode_id)
+    proposition_id = safe_text(item.get("proposition_id"))
+    core_phrase = safe_text(item.get("core_phrase") or item.get("title"))
+    form_family_id = safe_text(item.get("form_family_id"))
+    entries = [
+        entry
+        for entry in recent_history.get("entries", [])[:12]
+        if safe_text(entry.get("artist_id")) == clean_artist_id
+        and safe_text(entry.get("mode_id")) == clean_mode_id
+    ]
+    same_proposition = sum(1 for entry in entries if proposition_id and safe_text(entry.get("proposition_id")) == proposition_id)
+    same_core = sum(1 for entry in entries if core_phrase and safe_text(entry.get("core_phrase")) == core_phrase)
+    same_form = sum(1 for entry in entries if form_family_id and safe_text(entry.get("form_family_id")) == form_family_id)
+    penalty = min(0.35, same_proposition * 0.14 + same_core * 0.16 + min(same_form, 3) * 0.02)
+    return round(penalty, 3), {
+        "same_proposition_recent_count": same_proposition,
+        "same_core_phrase_recent_count": same_core,
+        "same_form_recent_count": same_form,
+    }
+
+
+def _score_novelty(
+    batch: list[dict[str, Any]],
+    recent_history: dict[str, Any] | None = None,
+    *,
+    artist_id: str = "",
+    mode_id: str = "",
+) -> list[dict[str, Any]]:
     proposition_counts = Counter(safe_text(item.get("proposition_id")) for item in batch if safe_text(item.get("proposition_id")))
     form_counts = Counter(safe_text(item.get("form_family_id")) for item in batch if safe_text(item.get("form_family_id")))
     scored: list[dict[str, Any]] = []
@@ -925,7 +1012,7 @@ def _score_novelty(batch: list[dict[str, Any]]) -> list[dict[str, Any]]:
             if other is not item
         ]
         surface_overlap_penalty = max(overlaps) if overlaps else 0.0
-        novelty_score = round(
+        base_novelty_score = round(
             (
                 proposition_distance * 0.45
                 + form_distance * 0.15
@@ -934,11 +1021,21 @@ def _score_novelty(batch: list[dict[str, Any]]) -> list[dict[str, Any]]:
             * 100.0,
             2,
         )
+        recent_penalty, recent_counts = _recent_repeat_penalty(
+            item,
+            recent_history,
+            artist_id=artist_id,
+            mode_id=mode_id,
+        )
+        novelty_score = round(max(0.0, base_novelty_score - recent_penalty * 100.0), 2)
         enriched = dict(item)
+        enriched["base_novelty_score"] = base_novelty_score
         enriched["novelty_score"] = novelty_score
         enriched["proposition_distance"] = proposition_distance
         enriched["form_distance"] = form_distance
         enriched["surface_overlap_penalty"] = round(surface_overlap_penalty, 3)
+        enriched["recent_repeat_penalty"] = recent_penalty
+        enriched["recent_repeat_counts"] = recent_counts
         legacy_total = float(enriched.get("legacy_total", 0.0) or 0.0)
         musical_total = float(enriched.get("musical_total", 0.0) or 0.0)
         enriched["blended_total"] = round(
@@ -969,9 +1066,12 @@ def _selection_diagnostics(batch: list[dict[str, Any]], winner: dict[str, Any]) 
                 "form_family_id": safe_text(item.get("form_family_id")),
                 "legacy_total": float(item.get("legacy_total", 0.0) or 0.0),
                 "musical_total": float(item.get("musical_total", 0.0) or 0.0),
+                "base_novelty_score": float(item.get("base_novelty_score", 0.0) or 0.0),
                 "novelty_score": float(item.get("novelty_score", 0.0) or 0.0),
                 "blended_total": float(item.get("blended_total", 0.0) or 0.0),
                 "surface_overlap_penalty": float(item.get("surface_overlap_penalty", 0.0) or 0.0),
+                "recent_repeat_penalty": float(item.get("recent_repeat_penalty", 0.0) or 0.0),
+                "recent_repeat_counts": dict(item.get("recent_repeat_counts", {})),
             }
             for item in sorted(batch, key=lambda payload: (-float(payload.get("blended_total", 0.0) or 0.0), safe_text(payload.get("candidate_id"))))
         ],
@@ -1001,18 +1101,23 @@ def _promoted_critic_result(item: dict[str, Any]) -> CriticResult:
             "legacy_total": float(item.get("legacy_total", 0.0) or 0.0),
             "musical_total": float(item.get("musical_total", 0.0) or 0.0),
             "novelty_score": float(item.get("novelty_score", 0.0) or 0.0),
+            "base_novelty_score": float(item.get("base_novelty_score", 0.0) or 0.0),
             "blended_total": float(item.get("blended_total", 0.0) or 0.0),
             "proposition_distance": float(item.get("proposition_distance", 0.0) or 0.0),
             "form_distance": float(item.get("form_distance", 0.0) or 0.0),
             "surface_overlap_penalty": float(item.get("surface_overlap_penalty", 0.0) or 0.0),
+            "recent_repeat_penalty": float(item.get("recent_repeat_penalty", 0.0) or 0.0),
         }
     )
     diagnostics.update(
         {
             "novelty_score": float(item.get("novelty_score", 0.0) or 0.0),
+            "base_novelty_score": float(item.get("base_novelty_score", 0.0) or 0.0),
             "proposition_distance": float(item.get("proposition_distance", 0.0) or 0.0),
             "form_distance": float(item.get("form_distance", 0.0) or 0.0),
             "surface_overlap_penalty": float(item.get("surface_overlap_penalty", 0.0) or 0.0),
+            "recent_repeat_penalty": float(item.get("recent_repeat_penalty", 0.0) or 0.0),
+            "recent_repeat_counts": dict(item.get("recent_repeat_counts", {})),
         }
     )
     return replace(critic_result, scores=scores, diagnostics=diagnostics)
@@ -1045,6 +1150,7 @@ def run_corpus_proposition_demo(
     resolved_mode_id = safe_text(mode_id) or "dark_cute_breakdown"
     resolved_candidate_count = max(2, min(int(candidate_count or 4), 4))
     resolved_generation_mode = _resolved_generation_mode(generation_mode)
+    recent_history = _load_recent_winner_history(final_project_root)
 
     intelligence = build_corpus_intelligence(
         final_project_root,
@@ -1111,6 +1217,7 @@ def run_corpus_proposition_demo(
             {
                 "candidate_id": safe_text(rendered.get("candidate_id")),
                 "proposition_id": safe_text(proposition.get("proposition_id")),
+                "core_phrase": safe_text(proposition.get("core_phrase")),
                 "form_family_id": safe_text(form_plan.get("form_family_id")),
                 "section_order": list(form_plan.get("section_order", [])),
                 "renderer_frame_family": safe_text(rendered.get("renderer_frame_family")),
@@ -1136,7 +1243,12 @@ def run_corpus_proposition_demo(
             }
         )
 
-    scored_batch = _score_novelty(candidate_batch)
+    scored_batch = _score_novelty(
+        candidate_batch,
+        recent_history,
+        artist_id=artist_id,
+        mode_id=resolved_mode_id,
+    )
     winner = max(scored_batch, key=lambda item: float(item.get("blended_total", 0.0) or 0.0))
     diagnostics = _selection_diagnostics(scored_batch, winner)
     winner["winner_reason"] = _winner_reason(winner, diagnostics)
@@ -1151,11 +1263,14 @@ def run_corpus_proposition_demo(
         "legacy_total": float(winner.get("legacy_total", 0.0) or 0.0),
         "musical_total": float(winner.get("musical_total", 0.0) or 0.0),
         "novelty_score": float(winner.get("novelty_score", 0.0) or 0.0),
+        "base_novelty_score": float(winner.get("base_novelty_score", 0.0) or 0.0),
         "blended_total": float(winner.get("blended_total", 0.0) or 0.0),
         "winner_reason": safe_text(winner.get("winner_reason")),
         "proposition_distance": float(winner.get("proposition_distance", 0.0) or 0.0),
         "form_distance": float(winner.get("form_distance", 0.0) or 0.0),
         "surface_overlap_penalty": float(winner.get("surface_overlap_penalty", 0.0) or 0.0),
+        "recent_repeat_penalty": float(winner.get("recent_repeat_penalty", 0.0) or 0.0),
+        "recent_repeat_counts": dict(winner.get("recent_repeat_counts", {})),
         "selection_diagnostics": diagnostics,
     }
 
@@ -1173,6 +1288,7 @@ def run_corpus_proposition_demo(
             {
                 "candidate_id": safe_text(item.get("candidate_id")),
                 "proposition_id": safe_text(item.get("proposition_id")),
+                "core_phrase": safe_text(item.get("core_phrase")),
                 "form_family_id": safe_text(item.get("form_family_id")),
                 "section_order": list(item.get("section_order", [])),
                 "renderer_frame_family": safe_text(item.get("renderer_frame_family")),
@@ -1188,11 +1304,14 @@ def run_corpus_proposition_demo(
                 "api_error": safe_text(item.get("api_error")),
                 "legacy_total": float(item.get("legacy_total", 0.0) or 0.0),
                 "musical_total": float(item.get("musical_total", 0.0) or 0.0),
+                "base_novelty_score": float(item.get("base_novelty_score", 0.0) or 0.0),
                 "novelty_score": float(item.get("novelty_score", 0.0) or 0.0),
                 "blended_total": float(item.get("blended_total", 0.0) or 0.0),
                 "proposition_distance": float(item.get("proposition_distance", 0.0) or 0.0),
                 "form_distance": float(item.get("form_distance", 0.0) or 0.0),
                 "surface_overlap_penalty": float(item.get("surface_overlap_penalty", 0.0) or 0.0),
+                "recent_repeat_penalty": float(item.get("recent_repeat_penalty", 0.0) or 0.0),
+                "recent_repeat_counts": dict(item.get("recent_repeat_counts", {})),
                 "winner_reason": safe_text(item.get("winner_reason")),
             }
             for item in scored_batch
@@ -1237,7 +1356,10 @@ def run_corpus_proposition_demo(
         "legacy_total": float(winner.get("legacy_total", 0.0) or 0.0),
         "musical_total": float(winner.get("musical_total", 0.0) or 0.0),
         "novelty_score": float(winner.get("novelty_score", 0.0) or 0.0),
+        "base_novelty_score": float(winner.get("base_novelty_score", 0.0) or 0.0),
         "blended_total": float(winner.get("blended_total", 0.0) or 0.0),
+        "recent_repeat_penalty": float(winner.get("recent_repeat_penalty", 0.0) or 0.0),
+        "recent_repeat_counts": dict(winner.get("recent_repeat_counts", {})),
         "winner_reason": safe_text(winner.get("winner_reason")),
         "evaluation_manifest": evaluation_manifest,
         "selection_diagnostics": diagnostics,
@@ -1263,10 +1385,32 @@ def run_corpus_proposition_demo(
             "selected_lyric": str((final_output_dir / "selected_lyric.md").resolve()),
             "prompt_packages": str((final_output_dir / "prompt_packages.json").resolve()) if prompt_packages else "",
             "api_generation_records": str((final_output_dir / "api_generation_records.json").resolve()) if api_generation_records else "",
+            "recent_winner_history": str(_recent_winner_history_path(final_project_root).resolve()),
         },
         "source_root": str(final_project_root),
         "manifest_path": str((final_output_dir / "run_manifest.json").resolve()),
         "selected_lyric_path": str((final_output_dir / "selected_lyric.md").resolve()),
     }
+    _write_json(final_output_dir / "run_manifest.json", manifest)
+    recent_history_path = _write_recent_winner_history(
+        final_project_root,
+        recent_history,
+        {
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            "artist_id": safe_text(artist_id),
+            "mode_id": resolved_mode_id,
+            "generation_mode": resolved_generation_mode,
+            "candidate_id": safe_text(winner.get("candidate_id")),
+            "proposition_id": safe_text(winner.get("proposition_id")),
+            "core_phrase": safe_text(winner.get("core_phrase") or selected_runtime_plan.get("selected_proposition", {}).get("core_phrase")),
+            "form_family_id": safe_text(winner.get("form_family_id")),
+            "selected_score": float(winner.get("blended_total", 0.0) or 0.0),
+            "legacy_total": float(winner.get("legacy_total", 0.0) or 0.0),
+            "musical_total": float(winner.get("musical_total", 0.0) or 0.0),
+            "novelty_score": float(winner.get("novelty_score", 0.0) or 0.0),
+            "manifest_path": str((final_output_dir / "run_manifest.json").resolve()),
+        },
+    )
+    manifest["output_paths"]["recent_winner_history"] = str(recent_history_path.resolve())
     _write_json(final_output_dir / "run_manifest.json", manifest)
     return manifest
