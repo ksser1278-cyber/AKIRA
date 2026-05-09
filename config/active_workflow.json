@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "akira_active_quality_loop_v1",
+  "primary_entrypoint": "python akira.py",
+  "operating_goal": "Build Suno-ready Japanese subculture and Vocaloid-adjacent song packages through a traceable corpus-to-generation feedback loop.",
+  "active_stage": "quality_loop_rebuild",
+  "active_engine": {
+    "name": "corpus_driven_proposition_engine",
+    "mode_ids": [
+      "dark_cute_breakdown"
+    ],
+    "generation_backends": [
+      "template",
+      "api"
+    ],
+    "candidate_count_default": 4,
+    "candidate_count_max_current": 4,
+    "form_families_current": [
+      "compressed_hook",
+      "hybrid_release"
+    ],
+    "proposition_archetypes_current": [
+      "obsessive_return",
+      "confessional_hold",
+      "dependency_spiral",
+      "rupture_assertion"
+    ],
+    "known_constraints": [
+      "Only one active mode profile is currently wired through the proposition engine.",
+      "Candidate generation is capped at four candidates per run.",
+      "The active form set is too small to guarantee large-form diversity.",
+      "Renderer phrasing still carries handcrafted line templates."
+    ]
+  },
+  "diversity_targets": {
+    "minimum_active_modes": 3,
+    "minimum_form_families": 4,
+    "minimum_proposition_families": 8,
+    "minimum_candidate_count_max": 8
+  },
+  "quality_targets": {
+    "minimum_demo_blended_total": 85,
+    "minimum_prompt_ready_tracks": 25,
+    "minimum_grounded_accepted_tracks": 50,
+    "maximum_stale_or_conflicting_state": 0,
+    "recent_winner_repeat_window": 20,
+    "maximum_recent_winner_signature_ratio": 0.35
+  },
+  "authoritative_artifacts": {
+    "engine_state": "reports/planning/engine_state.json",
+    "engine_health": "reports/health/engine_health.json",
+    "baseline_status": "reports/planning/baseline_status.json",
+    "recent_winner_history": "reports/planning/corpus_proposition_recent_winners.json"
+  },
+  "data_lanes": {
+    "raw_or_bulk_intake": "datasets/_global",
+    "training_and_generation_workspaces": "datasets/training",
+    "stable_small_registries": "data",
+    "human_review_and_planning_reports": "reports/planning",
+    "demo_and_experiment_outputs": "outputs",
+    "legacy_or_inactive_surfaces": "_quarantine"
+  },
+  "workflow_order": [
+    {
+      "stage": "state_refresh",
+      "command": "python akira.py report sync-engine-surface",
+      "output": "reports/planning/engine_state.json",
+      "promotion_rule": "Do not start generation work if stale_or_conflicting_state is non-empty."
+    },
+    {
+      "stage": "source_selection",
+      "command": "python akira.py dataset report-vocadb-lyric-grounding-status",
+      "output": "reports/planning/vocadb_lyric_grounding_status",
+      "promotion_rule": "Prioritize records with lyric grounding and usable sound/profile support."
+    },
+    {
+      "stage": "generation_profile_build",
+      "command": "python akira.py dataset build-track-generation-records",
+      "output": "datasets/training/generation_profiles",
+      "promotion_rule": "Only joined lyric-technique and generation records should enter prompt packaging."
+    },
+    {
+      "stage": "readiness_audit",
+      "command": "python akira.py dataset audit-generation-readiness",
+      "output": "reports/planning/generation_readiness_audit",
+      "promotion_rule": "Promotion requires prompt_ready and production_candidate gates."
+    },
+    {
+      "stage": "song_generation",
+      "command": "python akira.py songwriter demo --artist-id maretu --mode-id dark_cute_breakdown",
+      "output": "outputs/demo_songwriter",
+      "promotion_rule": "Keep selected lyric, runtime plan, candidates, and evaluation manifest together."
+    },
+    {
+      "stage": "human_feedback",
+      "command": "manual review against selected_lyric.md and candidate_packages.json",
+      "output": "reports/planning",
+      "promotion_rule": "Record concrete weak lines, strong lines, and pairwise preference reasons before mutating the engine."
+    },
+    {
+      "stage": "regression_check",
+      "command": "python akira.py workflow validate && python akira.py test",
+      "output": "reports/planning/active_workflow_validation",
+      "promotion_rule": "No engine change is accepted without passing workflow validation and tests."
+    }
+  ],
+  "required_paths": [
+    {
+      "path": "akira.py",
+      "type": "file",
+      "purpose": "single command entrypoint"
+    },
+    {
+      "path": "src/akira_engine/corpus_proposition_engine.py",
+      "type": "file",
+      "purpose": "active proposition-generation engine"
+    },
+    {
+      "path": "src/akira_engine/renderer/mod.py",
+      "type": "file",
+      "purpose": "active lyric realization layer"
+    },
+    {
+      "path": "src/akira_engine/critic/mod.py",
+      "type": "file",
+      "purpose": "active scoring and hard-gate layer"
+    },
+    {
+      "path": "reports/planning/engine_state.json",
+      "type": "file",
+      "purpose": "authoritative current engine state"
+    },
+    {
+      "path": "reports/health/engine_health.json",
+      "type": "file",
+      "purpose": "artist and mode health report"
+    },
+    {
+      "path": "reports/planning/baseline_status.json",
+      "type": "file",
+      "purpose": "pinned baseline comparison"
+    },
+    {
+      "path": "datasets/training/form_families/calibration_v1/form_family_catalog.json",
+      "type": "file",
+      "purpose": "active form-family prior"
+    },
+    {
+      "path": "datasets/training/generation_profiles",
+      "type": "dir",
+      "purpose": "track generation profile workspace"
+    },
+    {
+      "path": "datasets/training/suno_prompt_assets",
+      "type": "dir",
+      "purpose": "Suno prompt package assets"
+    },
+    {
+      "path": "outputs/demo_songwriter",
+      "type": "dir",
+      "purpose": "default demo generation output root"
+    },
+    {
+      "path": "docs/active-workflow.md",
+      "type": "file",
+      "purpose": "human-readable workflow contract"
+    }
+  ]
+}

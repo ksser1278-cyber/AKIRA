@@ -50,6 +50,7 @@ from . import (
     run_report_engine_state,
     run_report_sync_authoritative_wiki,
     run_report_sync_engine_surface,
+    run_validate_active_workflow,
     run_songwriter_demo,
 )
 
@@ -772,7 +773,31 @@ def cmd_report_sync_engine_surface(root: Path, args: argparse.Namespace) -> int:
 
 
 def cmd_test(root: Path, args: argparse.Namespace) -> int:
-    return _run_pytest(root, args.pytest_args)
+    pytest_args = list(args.pytest_args)
+    if pytest_args and pytest_args[0] == "--":
+        pytest_args = pytest_args[1:]
+    return _run_pytest(root, pytest_args)
+
+
+def cmd_workflow_validate(root: Path, args: argparse.Namespace) -> int:
+    result = run_validate_active_workflow(
+        project_root=args.project_root or root,
+        config_path=args.config_path,
+        output_root=args.output_root,
+        write=not args.no_write,
+    )
+    if result.get("json_path"):
+        print(result["json_path"])
+    if result.get("md_path"):
+        print(result["md_path"])
+    print(f"Workflow OK: {result['ok']}")
+    print(f"Errors: {len(result['errors'])}")
+    print(f"Warnings: {len(result['warnings'])}")
+    for item in result.get("errors", []):
+        print(f"ERROR: {item}")
+    for item in result.get("warnings", [])[:10]:
+        print(f"WARNING: {item}")
+    return 0 if result["ok"] else 1
 
 
 def build_parser(root: Path) -> argparse.ArgumentParser:
@@ -1212,6 +1237,16 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     auto_ground_vocadb_workspace.add_argument("--url-map-path", type=Path, required=True)
     auto_ground_vocadb_workspace.set_defaults(func=lambda args: cmd_dataset_auto_ground_vocadb_workspace_from_url_map(root, args))
 
+    workflow_parser = subparsers.add_parser("workflow", help="Workflow contract commands.")
+    workflow_sub = workflow_parser.add_subparsers(dest="workflow_command", required=True)
+
+    workflow_validate = workflow_sub.add_parser("validate", help="Validate the active workflow contract.")
+    workflow_validate.add_argument("--project-root", type=Path, default=root)
+    workflow_validate.add_argument("--config-path", type=Path)
+    workflow_validate.add_argument("--output-root", type=Path)
+    workflow_validate.add_argument("--no-write", action="store_true")
+    workflow_validate.set_defaults(func=lambda args: cmd_workflow_validate(root, args))
+
     report_parser = subparsers.add_parser("report", help="Report commands.")
     report_sub = report_parser.add_subparsers(dest="report_command", required=True)
 
@@ -1252,7 +1287,7 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     report_sync_engine_surface.set_defaults(func=lambda args: cmd_report_sync_engine_surface(root, args))
 
     test_parser = subparsers.add_parser("test", help="Run pytest from the repository root.")
-    test_parser.add_argument("pytest_args", nargs="*", help="Additional pytest arguments.")
+    test_parser.add_argument("pytest_args", nargs=argparse.REMAINDER, help="Additional pytest arguments.")
     test_parser.set_defaults(func=lambda args: cmd_test(root, args))
 
     return parser
@@ -1260,5 +1295,10 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
 
 def main(root: Path) -> int:
     parser = build_parser(root)
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
+    if unknown:
+        if hasattr(args, "pytest_args"):
+            args.pytest_args.extend(unknown)
+        else:
+            parser.error(f"unrecognized arguments: {' '.join(unknown)}")
     return args.func(args)

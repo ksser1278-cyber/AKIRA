@@ -11,6 +11,13 @@ Rules:
 Use:
 
 - `.env.example` for environment variable names only
+- `active_workflow.json` for the current workflow contract and validation targets
+
+Validate:
+
+```powershell
+python akira.py workflow validate
+```
 
 Previous live config was moved to:
 

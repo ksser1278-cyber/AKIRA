@@ -734,6 +734,23 @@ def run_report_sync_engine_surface(*, project_root: Path, output_root: Path | No
     )
 
 
+def run_validate_active_workflow(
+    *,
+    project_root: Path,
+    config_path: Path | None = None,
+    output_root: Path | None = None,
+    write: bool = True,
+) -> dict[str, Any]:
+    from ..active_workflow import validate_active_workflow as _impl
+
+    return _impl(
+        project_root=project_root,
+        config_path=config_path,
+        output_root=output_root,
+        write=write,
+    )
+
+
 def run_songwriter_demo(*, project_root: Path, artist_id: str, mode_id: str | None = None, intent: str = "", title_seed: str = "", output_dir: Path | None = None, candidate_count: int = 4, generation_mode: str = "auto", model_provider: str = "gpt", model_name: str | None = None) -> dict[str, Any]:
     from .songwriter_commands import run_songwriter_demo as _impl
 
@@ -796,5 +813,6 @@ __all__ = [
     "run_report_engine_state",
     "run_report_sync_authoritative_wiki",
     "run_report_sync_engine_surface",
+    "run_validate_active_workflow",
     "run_songwriter_demo",
 ]

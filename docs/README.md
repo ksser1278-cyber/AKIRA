@@ -9,6 +9,8 @@ Use the files below as the current starting point.
 
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
   - current command surface through `akira.py`
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md)
+  - current folder contract, quality loop, and promotion rule
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)
   - supervised training sample contract
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\lyric-technique-extraction-fields.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\lyric-technique-extraction-fields.md)

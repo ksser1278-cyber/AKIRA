@@ -37,6 +37,7 @@ python akira.py dataset build-derived
 python akira.py dataset bootstrap-rights
 python akira.py dataset export-supervised
 python akira.py dataset import-training-sources
+python akira.py workflow validate
 python akira.py report engine-health
 python akira.py report baseline
 python akira.py test
@@ -55,6 +56,7 @@ Already internalized behind `akira.py` and `src/akira_engine/cli/`:
 - dataset bootstrap-rights
 - dataset export-supervised
 - dataset import-training-sources
+- workflow validate
 - report engine-health
 - report baseline
 
@@ -96,6 +98,7 @@ Start here:
 Important current docs:
 
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)
