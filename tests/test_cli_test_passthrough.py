@@ -21,3 +21,52 @@ def test_cli_test_command_captures_optional_separator() -> None:
     args = parser.parse_args(["test", "--", "-q"])
 
     assert args.pytest_args == ["--", "-q"]
+
+
+def test_cli_has_song_analysis_run_command() -> None:
+    parser = build_parser(Path("C:/tmp/akira"))
+
+    args = parser.parse_args(["song-analysis", "run", "--input-dir", "C:/tmp/input"])
+
+    assert str(args.input_dir) == "C:\\tmp\\input" or str(args.input_dir) == "C:/tmp/input"
+
+
+def test_cli_has_song_analysis_scrape_vocadb_command() -> None:
+    parser = build_parser(Path("C:/tmp/akira"))
+
+    args = parser.parse_args(
+        [
+            "song-analysis",
+            "scrape-vocadb",
+            "--metadata-output-dir",
+            "C:/tmp/meta",
+            "--output-root",
+            "C:/tmp/packages",
+            "--page-count",
+            "2",
+            "--page-size",
+            "5",
+        ]
+    )
+
+    assert args.page_count == 2
+    assert args.page_size == 5
+
+
+def test_cli_has_song_analysis_materialize_metadata_command() -> None:
+    parser = build_parser(Path("C:/tmp/akira"))
+
+    args = parser.parse_args(
+        [
+            "song-analysis",
+            "materialize-metadata",
+            "--metadata-dir",
+            "C:/tmp/meta",
+            "--output-root",
+            "C:/tmp/packages",
+            "--limit",
+            "3",
+        ]
+    )
+
+    assert args.limit == 3

@@ -51,6 +51,10 @@ from . import (
     run_report_sync_authoritative_wiki,
     run_report_sync_engine_surface,
     run_validate_active_workflow,
+    run_song_analysis_pipeline,
+    run_write_song_analysis_template,
+    run_materialize_song_analysis_inputs_from_metadata,
+    run_scrape_vocadb_song_analysis_inputs,
     run_songwriter_demo,
 )
 
@@ -77,6 +81,10 @@ def cmd_status(root: Path, _: argparse.Namespace) -> int:
     print("- akira.py dataset bootstrap-rights")
     print("- akira.py dataset export-supervised")
     print("- akira.py dataset import-training-sources")
+    print("- akira.py song-analysis init-template")
+    print("- akira.py song-analysis scrape-vocadb")
+    print("- akira.py song-analysis materialize-metadata")
+    print("- akira.py song-analysis run")
     print("- akira.py report engine-health")
     print("- akira.py report engine-state")
     print("- akira.py report sync-authoritative-wiki")
@@ -800,6 +808,71 @@ def cmd_workflow_validate(root: Path, args: argparse.Namespace) -> int:
     return 0 if result["ok"] else 1
 
 
+def cmd_song_analysis_run(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_song_analysis_pipeline(
+        input_dir=args.input_dir,
+        output_dir=args.output_dir,
+    )
+    print(f"Song analysis manifest: {manifest['manifest_path']}")
+    print(f"Output dir: {manifest['output_dir']}")
+    print(f"OK: {manifest['ok']}")
+    for name, path in manifest.get("output_paths", {}).items():
+        print(f"{name}: {path}")
+    if manifest.get("validation_errors"):
+        for item in manifest["validation_errors"]:
+            print(f"ERROR: {item}")
+    return 0 if manifest["ok"] else 1
+
+
+def cmd_song_analysis_init_template(root: Path, args: argparse.Namespace) -> int:
+    result = run_write_song_analysis_template(
+        output_dir=args.output_dir,
+        song_id=args.song_id,
+    )
+    print(f"Template input dir: {result['input_dir']}")
+    for name, path in result.get("paths", {}).items():
+        print(f"{name}: {path}")
+    return 0
+
+
+def cmd_song_analysis_materialize_metadata(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_materialize_song_analysis_inputs_from_metadata(
+        metadata_dir=args.metadata_dir,
+        output_root=args.output_root,
+        lyrics_root=args.lyrics_root,
+        limit=args.limit,
+        overwrite=args.overwrite,
+    )
+    counts = manifest.get("counts", {})
+    print(f"Song analysis acquisition manifest: {manifest['manifest_path']}")
+    print(f"Output root: {manifest['output_root']}")
+    print(f"Materialized: {counts.get('materialized', 0)}")
+    print(f"Ready for analysis: {counts.get('ready_for_analysis', 0)}")
+    print(f"Skipped: {counts.get('skipped', 0)}")
+    return 0
+
+
+def cmd_song_analysis_scrape_vocadb(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_scrape_vocadb_song_analysis_inputs(
+        project_root=args.project_root or root,
+        output_root=args.output_root,
+        metadata_output_dir=args.metadata_output_dir,
+        page_count=args.page_count,
+        page_size=args.page_size,
+        start_offset=args.start_offset,
+        sort=args.sort,
+        materialize_limit=args.materialize_limit,
+        lyrics_root=args.lyrics_root,
+        overwrite=args.overwrite,
+    )
+    counts = manifest.get("counts", {})
+    print(f"VocaDB scrape manifest: {manifest['manifest_path']}")
+    print(f"Metadata written: {counts.get('metadata_written', 0)}")
+    print(f"Materialized: {counts.get('materialized', 0)}")
+    print(f"Ready for analysis: {counts.get('ready_for_analysis', 0)}")
+    return 0
+
+
 def build_parser(root: Path) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="akira.py",
@@ -1236,6 +1309,46 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     auto_ground_vocadb_workspace.add_argument("--workspace-root", type=Path)
     auto_ground_vocadb_workspace.add_argument("--url-map-path", type=Path, required=True)
     auto_ground_vocadb_workspace.set_defaults(func=lambda args: cmd_dataset_auto_ground_vocadb_workspace_from_url_map(root, args))
+
+    song_analysis_parser = subparsers.add_parser("song-analysis", help="Run structured five-pass song analysis.")
+    song_analysis_sub = song_analysis_parser.add_subparsers(dest="song_analysis_command", required=True)
+
+    song_analysis_run = song_analysis_sub.add_parser("run", help="Run the five-pass song analysis pipeline.")
+    song_analysis_run.add_argument("--input-dir", type=Path, required=True)
+    song_analysis_run.add_argument("--output-dir", type=Path)
+    song_analysis_run.set_defaults(func=lambda args: cmd_song_analysis_run(root, args))
+
+    song_analysis_template = song_analysis_sub.add_parser("init-template", help="Create a song analysis input template.")
+    song_analysis_template.add_argument("--output-dir", type=Path, required=True)
+    song_analysis_template.add_argument("--song-id", default="sample_song")
+    song_analysis_template.set_defaults(func=lambda args: cmd_song_analysis_init_template(root, args))
+
+    song_analysis_materialize = song_analysis_sub.add_parser(
+        "materialize-metadata",
+        help="Convert local Vocaloid metadata records into song-analysis input packages.",
+    )
+    song_analysis_materialize.add_argument("--metadata-dir", type=Path, required=True)
+    song_analysis_materialize.add_argument("--output-root", type=Path, required=True)
+    song_analysis_materialize.add_argument("--lyrics-root", type=Path)
+    song_analysis_materialize.add_argument("--limit", type=int)
+    song_analysis_materialize.add_argument("--overwrite", action="store_true")
+    song_analysis_materialize.set_defaults(func=lambda args: cmd_song_analysis_materialize_metadata(root, args))
+
+    song_analysis_scrape_vocadb = song_analysis_sub.add_parser(
+        "scrape-vocadb",
+        help="Scrape VocaDB metadata and create song-analysis input packages.",
+    )
+    song_analysis_scrape_vocadb.add_argument("--project-root", type=Path, default=root)
+    song_analysis_scrape_vocadb.add_argument("--metadata-output-dir", type=Path, required=True)
+    song_analysis_scrape_vocadb.add_argument("--output-root", type=Path, required=True)
+    song_analysis_scrape_vocadb.add_argument("--page-count", type=int, default=1)
+    song_analysis_scrape_vocadb.add_argument("--page-size", type=int, default=50)
+    song_analysis_scrape_vocadb.add_argument("--start-offset", type=int, default=0)
+    song_analysis_scrape_vocadb.add_argument("--sort", default="PublishDate")
+    song_analysis_scrape_vocadb.add_argument("--materialize-limit", type=int)
+    song_analysis_scrape_vocadb.add_argument("--lyrics-root", type=Path)
+    song_analysis_scrape_vocadb.add_argument("--overwrite", action="store_true")
+    song_analysis_scrape_vocadb.set_defaults(func=lambda args: cmd_song_analysis_scrape_vocadb(root, args))
 
     workflow_parser = subparsers.add_parser("workflow", help="Workflow contract commands.")
     workflow_sub = workflow_parser.add_subparsers(dest="workflow_command", required=True)

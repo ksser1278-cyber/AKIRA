@@ -37,6 +37,10 @@ python akira.py dataset build-derived
 python akira.py dataset bootstrap-rights
 python akira.py dataset export-supervised
 python akira.py dataset import-training-sources
+python akira.py song-analysis scrape-vocadb --metadata-output-dir outputs/song_scrape/vocadb_metadata --output-root outputs/song_scrape/song_inputs
+python akira.py song-analysis materialize-metadata --metadata-dir outputs/song_scrape/vocadb_metadata --output-root outputs/song_scrape/song_inputs
+python akira.py song-analysis init-template --output-dir inputs/song_analysis/sample --song-id sample
+python akira.py song-analysis run --input-dir inputs/song_analysis/sample --output-dir outputs/song_analysis/sample
 python akira.py workflow validate
 python akira.py report engine-health
 python akira.py report baseline
@@ -56,6 +60,10 @@ Already internalized behind `akira.py` and `src/akira_engine/cli/`:
 - dataset bootstrap-rights
 - dataset export-supervised
 - dataset import-training-sources
+- song-analysis scrape-vocadb
+- song-analysis materialize-metadata
+- song-analysis init-template
+- song-analysis run
 - workflow validate
 - report engine-health
 - report baseline
@@ -99,6 +107,7 @@ Important current docs:
 
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)
