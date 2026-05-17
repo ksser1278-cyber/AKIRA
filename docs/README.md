@@ -11,6 +11,8 @@ Use the files below as the current starting point.
   - current command surface through `akira.py`
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md)
   - current folder contract, quality loop, and promotion rule
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\gpt-ab-experiment.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\gpt-ab-experiment.md)
+  - GPT direct baseline vs AKIRA-assisted generation experiment workflow
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md)
   - VocaDB metadata acquisition plus runnable five-pass song analysis pipeline for human reports and AI reconstruction JSON
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)

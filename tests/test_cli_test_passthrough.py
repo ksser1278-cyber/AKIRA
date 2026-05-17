@@ -31,6 +31,27 @@ def test_cli_has_song_analysis_run_command() -> None:
     assert str(args.input_dir) == "C:\\tmp\\input" or str(args.input_dir) == "C:/tmp/input"
 
 
+def test_cli_has_songwriter_ab_test_command() -> None:
+    parser = build_parser(Path("C:/tmp/akira"))
+
+    args = parser.parse_args(
+        [
+            "songwriter",
+            "ab-test",
+            "--intent",
+            "make a song",
+            "--style",
+            "vocaloid pop",
+            "--title-seed",
+            "test",
+        ]
+    )
+
+    assert args.intent == "make a song"
+    assert args.style == "vocaloid pop"
+    assert args.title_seed == "test"
+
+
 def test_cli_has_song_analysis_scrape_vocadb_command() -> None:
     parser = build_parser(Path("C:/tmp/akira"))
 

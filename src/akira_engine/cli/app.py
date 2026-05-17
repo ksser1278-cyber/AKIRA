@@ -57,6 +57,7 @@ from . import (
     run_materialize_song_analysis_inputs_from_metadata,
     run_scrape_vocadb_song_analysis_inputs,
     run_songwriter_demo,
+    run_songwriter_ab_test,
 )
 
 
@@ -78,6 +79,7 @@ def cmd_status(root: Path, _: argparse.Namespace) -> int:
     print("")
     print("Primary entrypoints:")
     print("- akira.py songwriter demo")
+    print("- akira.py songwriter ab-test")
     print("- akira.py dataset build-derived")
     print("- akira.py dataset bootstrap-rights")
     print("- akira.py dataset export-supervised")
@@ -116,6 +118,37 @@ def cmd_songwriter_demo(root: Path, args: argparse.Namespace) -> int:
     print(f"Requested generation mode: {manifest.get('requested_generation_mode', 'auto')}")
     print(f"Resolved generation mode: {manifest.get('generation_mode', 'template')}")
     print(f"Source root: {manifest.get('source_root', args.project_root or root)}")
+    return 0
+
+
+def cmd_songwriter_ab_test(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_songwriter_ab_test(
+        project_root=args.project_root or root,
+        intent=args.intent,
+        style=args.style,
+        title_seed=args.title_seed or "",
+        language=args.language or "ja",
+        analysis_dir=args.analysis_dir,
+        output_dir=args.output_dir,
+        model_name=args.model_name,
+        execute_api=args.execute_api,
+        direct_output_path=args.direct_output_path,
+        assisted_output_path=args.assisted_output_path,
+        allow_ungrounded_assisted=args.allow_ungrounded_assisted,
+    )
+    print(f"A/B manifest: {manifest['manifest_path']}")
+    print(f"Execution status: {manifest['execution_status']}")
+    if manifest.get("comparison"):
+        comparison = manifest["comparison"]
+        print(f"Verdict: {comparison['verdict']}")
+        print(f"Assisted minus direct: {comparison['assisted_minus_direct']}")
+    print(f"Direct prompt: {manifest['output_paths']['direct_prompt']}")
+    if manifest["output_paths"].get("assisted_prompt"):
+        print(f"Assisted prompt: {manifest['output_paths']['assisted_prompt']}")
+    else:
+        print("Assisted prompt: not generated (no AKIRA analysis data supplied)")
+    if manifest["output_paths"].get("report"):
+        print(f"Report: {manifest['output_paths']['report']}")
     return 0
 
 
@@ -917,6 +950,28 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     songwriter_demo.add_argument("--model-provider", choices=["gemini", "gpt", "openai"])
     songwriter_demo.add_argument("--model-name")
     songwriter_demo.set_defaults(func=lambda args: cmd_songwriter_demo(root, args))
+
+    songwriter_ab = songwriter_sub.add_parser(
+        "ab-test",
+        help="Create or run a GPT direct vs AKIRA-assisted songwriting experiment.",
+    )
+    songwriter_ab.add_argument("--intent", required=True)
+    songwriter_ab.add_argument("--style", required=True)
+    songwriter_ab.add_argument("--title-seed")
+    songwriter_ab.add_argument("--language", default="ja")
+    songwriter_ab.add_argument("--analysis-dir", type=Path)
+    songwriter_ab.add_argument("--project-root", type=Path, default=root)
+    songwriter_ab.add_argument("--output-dir", type=Path)
+    songwriter_ab.add_argument("--model-name")
+    songwriter_ab.add_argument("--execute-api", action="store_true")
+    songwriter_ab.add_argument("--direct-output-path", type=Path)
+    songwriter_ab.add_argument("--assisted-output-path", type=Path)
+    songwriter_ab.add_argument(
+        "--allow-ungrounded-assisted",
+        action="store_true",
+        help="Debug only: permit assisted prompt generation without AKIRA analysis data.",
+    )
+    songwriter_ab.set_defaults(func=lambda args: cmd_songwriter_ab_test(root, args))
 
     dataset_parser = subparsers.add_parser("dataset", help="Dataset and training export commands.")
     dataset_sub = dataset_parser.add_subparsers(dest="dataset_command", required=True)

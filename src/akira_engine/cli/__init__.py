@@ -845,6 +845,39 @@ def run_songwriter_demo(*, project_root: Path, artist_id: str, mode_id: str | No
     )
 
 
+def run_songwriter_ab_test(
+    *,
+    project_root: Path,
+    intent: str,
+    style: str,
+    title_seed: str = "",
+    language: str = "ja",
+    analysis_dir: Path | None = None,
+    output_dir: Path | None = None,
+    model_name: str | None = None,
+    execute_api: bool = False,
+    direct_output_path: Path | None = None,
+    assisted_output_path: Path | None = None,
+    allow_ungrounded_assisted: bool = False,
+) -> dict[str, Any]:
+    from .songwriter_commands import run_songwriter_ab_test as _impl
+
+    return _impl(
+        project_root=project_root,
+        intent=intent,
+        style=style,
+        title_seed=title_seed,
+        language=language,
+        analysis_dir=analysis_dir,
+        output_dir=output_dir,
+        model_name=model_name,
+        execute_api=execute_api,
+        direct_output_path=direct_output_path,
+        assisted_output_path=assisted_output_path,
+        allow_ungrounded_assisted=allow_ungrounded_assisted,
+    )
+
+
 __all__ = [
     "run_build_derived_datasets",
     "run_extract_lyric_technique_records",
@@ -897,4 +930,5 @@ __all__ = [
     "run_materialize_song_analysis_inputs_from_metadata",
     "run_scrape_vocadb_song_analysis_inputs",
     "run_songwriter_demo",
+    "run_songwriter_ab_test",
 ]

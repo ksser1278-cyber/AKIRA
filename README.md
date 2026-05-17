@@ -33,6 +33,7 @@ Use `akira.py` first.
 ```powershell
 python akira.py status
 python akira.py songwriter demo --artist-id maretu --mode-id dark_cute_breakdown
+python akira.py songwriter ab-test --intent "song concept" --style "Japanese Vocaloid/NicoNico subculture pop-rock" --output-dir outputs/gpt_ab/sample
 python akira.py dataset build-derived
 python akira.py dataset bootstrap-rights
 python akira.py dataset export-supervised
@@ -57,6 +58,7 @@ Detailed command notes:
 Already internalized behind `akira.py` and `src/akira_engine/cli/`:
 
 - songwriter demo
+- songwriter ab-test
 - dataset build-derived
 - dataset bootstrap-rights
 - dataset export-supervised
@@ -110,6 +112,7 @@ Important current docs:
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\cli-skeleton.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\active-workflow.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\song-analysis-pipeline.md)
+- [C:\JPop_Songwriter\AKIRA ENGINE\docs\gpt-ab-experiment.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\gpt-ab-experiment.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\professional-song-quality-target.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\low-value-data-policy.md)
 - [C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md](C:\JPop_Songwriter\AKIRA ENGINE\docs\akira-supervised-training-schema.md)
