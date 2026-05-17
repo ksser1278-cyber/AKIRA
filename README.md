@@ -38,6 +38,7 @@ python akira.py dataset bootstrap-rights
 python akira.py dataset export-supervised
 python akira.py dataset import-training-sources
 python akira.py song-analysis scrape-vocadb --metadata-output-dir outputs/song_scrape/vocadb_metadata --output-root outputs/song_scrape/song_inputs
+python akira.py song-analysis match-lyrics --metadata-dir outputs/song_scrape/vocadb_metadata --lyrics-root C:/path/to/local_lyrics --output-root outputs/song_scrape/lyrics_match
 python akira.py song-analysis materialize-metadata --metadata-dir outputs/song_scrape/vocadb_metadata --output-root outputs/song_scrape/song_inputs
 python akira.py song-analysis init-template --output-dir inputs/song_analysis/sample --song-id sample
 python akira.py song-analysis run --input-dir inputs/song_analysis/sample --output-dir outputs/song_analysis/sample
@@ -61,6 +62,7 @@ Already internalized behind `akira.py` and `src/akira_engine/cli/`:
 - dataset export-supervised
 - dataset import-training-sources
 - song-analysis scrape-vocadb
+- song-analysis match-lyrics
 - song-analysis materialize-metadata
 - song-analysis init-template
 - song-analysis run

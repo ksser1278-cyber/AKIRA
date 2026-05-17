@@ -21,6 +21,22 @@ This command does not scrape lyric text. It writes `song_input.json`, `audio_fea
 If locally obtained lyric files are available, attach them while materializing packages:
 
 ```powershell
+python akira.py song-analysis match-lyrics `
+  --metadata-dir outputs/song_scrape/vocadb_metadata `
+  --lyrics-root C:/path/to/local_lyrics `
+  --output-root outputs/song_scrape/lyrics_match
+```
+
+This writes `lyrics_match_report.json` and `lyrics_match_report.md` with:
+
+- `matched`: safe to attach
+- `missing`: no candidate lyric file
+- `ambiguous`: multiple records/files collide; not attached automatically
+- `unmatched_lyrics`: lyric files that did not match any metadata record
+
+After checking the report, materialize packages:
+
+```powershell
 python akira.py song-analysis materialize-metadata `
   --metadata-dir outputs/song_scrape/vocadb_metadata `
   --output-root outputs/song_scrape/song_inputs `
@@ -28,7 +44,7 @@ python akira.py song-analysis materialize-metadata `
   --overwrite
 ```
 
-`lyrics-root` matches files by `track_id.txt`, exact title, or normalized title. Only matched local files become `lyrics.txt` and are marked ready for analysis.
+`lyrics-root` matches files by `track_id.txt`, `track_id + title`, exact title, normalized title, or title variants. Only single highest-confidence matches become `lyrics.txt` and are marked ready for analysis. Ambiguous matches stay as `lyrics.todo.txt`.
 
 Create a runnable input template:
 

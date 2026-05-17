@@ -70,3 +70,23 @@ def test_cli_has_song_analysis_materialize_metadata_command() -> None:
     )
 
     assert args.limit == 3
+
+
+def test_cli_has_song_analysis_match_lyrics_command() -> None:
+    parser = build_parser(Path("C:/tmp/akira"))
+
+    args = parser.parse_args(
+        [
+            "song-analysis",
+            "match-lyrics",
+            "--metadata-dir",
+            "C:/tmp/meta",
+            "--lyrics-root",
+            "C:/tmp/lyrics",
+            "--output-root",
+            "C:/tmp/match",
+        ]
+    )
+
+    assert args.metadata_dir.name == "meta"
+    assert args.lyrics_root.name == "lyrics"

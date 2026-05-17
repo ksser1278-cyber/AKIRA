@@ -53,6 +53,7 @@ from . import (
     run_validate_active_workflow,
     run_song_analysis_pipeline,
     run_write_song_analysis_template,
+    run_match_song_analysis_lyrics,
     run_materialize_song_analysis_inputs_from_metadata,
     run_scrape_vocadb_song_analysis_inputs,
     run_songwriter_demo,
@@ -83,6 +84,7 @@ def cmd_status(root: Path, _: argparse.Namespace) -> int:
     print("- akira.py dataset import-training-sources")
     print("- akira.py song-analysis init-template")
     print("- akira.py song-analysis scrape-vocadb")
+    print("- akira.py song-analysis match-lyrics")
     print("- akira.py song-analysis materialize-metadata")
     print("- akira.py song-analysis run")
     print("- akira.py report engine-health")
@@ -835,6 +837,23 @@ def cmd_song_analysis_init_template(root: Path, args: argparse.Namespace) -> int
     return 0
 
 
+def cmd_song_analysis_match_lyrics(root: Path, args: argparse.Namespace) -> int:
+    manifest = run_match_song_analysis_lyrics(
+        metadata_dir=args.metadata_dir,
+        lyrics_root=args.lyrics_root,
+        output_root=args.output_root,
+        limit=args.limit,
+    )
+    counts = manifest.get("counts", {})
+    print(f"Lyrics match report: {manifest['outputs']['json_path']}")
+    print(f"Markdown report: {manifest['outputs']['md_path']}")
+    print(f"Matched: {counts.get('matched', 0)}")
+    print(f"Missing: {counts.get('missing', 0)}")
+    print(f"Ambiguous: {counts.get('ambiguous', 0)}")
+    print(f"Unmatched lyric files: {counts.get('unmatched_lyrics', 0)}")
+    return 0
+
+
 def cmd_song_analysis_materialize_metadata(root: Path, args: argparse.Namespace) -> int:
     manifest = run_materialize_song_analysis_inputs_from_metadata(
         metadata_dir=args.metadata_dir,
@@ -1322,6 +1341,16 @@ def build_parser(root: Path) -> argparse.ArgumentParser:
     song_analysis_template.add_argument("--output-dir", type=Path, required=True)
     song_analysis_template.add_argument("--song-id", default="sample_song")
     song_analysis_template.set_defaults(func=lambda args: cmd_song_analysis_init_template(root, args))
+
+    song_analysis_match = song_analysis_sub.add_parser(
+        "match-lyrics",
+        help="Report how local lyric files match Vocaloid metadata records before materialization.",
+    )
+    song_analysis_match.add_argument("--metadata-dir", type=Path, required=True)
+    song_analysis_match.add_argument("--lyrics-root", type=Path, required=True)
+    song_analysis_match.add_argument("--output-root", type=Path, required=True)
+    song_analysis_match.add_argument("--limit", type=int)
+    song_analysis_match.set_defaults(func=lambda args: cmd_song_analysis_match_lyrics(root, args))
 
     song_analysis_materialize = song_analysis_sub.add_parser(
         "materialize-metadata",

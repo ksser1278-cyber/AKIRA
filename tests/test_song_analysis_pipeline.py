@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from src.akira_engine.song_analysis import (
+    match_song_analysis_lyrics,
     materialize_song_analysis_inputs_from_metadata,
     run_song_analysis_pipeline,
     write_song_analysis_template,
@@ -155,3 +156,80 @@ def test_materialize_metadata_attaches_local_lyrics(tmp_path: Path) -> None:
     assert (package_dir / "lyrics.txt").read_text(encoding="utf-8").strip() == "[Intro]\nla la"
     song_input = json.loads((package_dir / "song_input.json").read_text(encoding="utf-8"))
     assert song_input["available_sources"]["lyrics"] is True
+    source_manifest = json.loads((package_dir / "source_manifest.json").read_text(encoding="utf-8"))
+    assert source_manifest["lyric_match_status"] == "matched"
+
+
+def test_match_lyrics_reports_unmatched_and_matched_files(tmp_path: Path) -> None:
+    metadata_dir = tmp_path / "metadata"
+    lyrics_root = tmp_path / "lyrics"
+    metadata_dir.mkdir()
+    lyrics_root.mkdir()
+    write_json(
+        metadata_dir / "vocadb_102.json",
+        {
+            "schema_version": "1.0",
+            "record_type": "vocaloid_metadata_record",
+            "track_identity": {"track_id": "vocadb_102", "canonical_title": "Report Song"},
+            "canonical_basis": {"is_vocaloid_canonical": True, "inclusion_basis": "vocadb_canonical"},
+            "vocal_synthesis": {"engine_family": "vocaloid", "voicebanks": ["Hatsune Miku"]},
+            "credits": {"producer": "Demo Producer", "lyricist": "", "composer": "", "arranger": ""},
+            "release_context": {"original_platform": "youtube", "original_upload_date": "2026-01-01"},
+            "metadata_sources": [
+                {"label": "VocaDB song 102", "source_type": "vocadb", "url": "https://vocadb.net/S/102"}
+            ],
+            "collection_status": {"metadata_quality": "seed", "canonical_review_status": "needs_review"},
+        },
+    )
+    (lyrics_root / "vocadb_102.txt").write_text("matched\n", encoding="utf-8")
+    (lyrics_root / "unused.txt").write_text("unused\n", encoding="utf-8")
+
+    report = match_song_analysis_lyrics(
+        metadata_dir=metadata_dir,
+        lyrics_root=lyrics_root,
+        output_root=tmp_path / "match",
+    )
+
+    assert report["counts"]["matched"] == 1
+    assert report["counts"]["unmatched_lyrics"] == 1
+    assert Path(report["outputs"]["json_path"]).exists()
+    assert Path(report["outputs"]["md_path"]).exists()
+
+
+def test_materialize_does_not_attach_ambiguous_title_match(tmp_path: Path) -> None:
+    metadata_dir = tmp_path / "metadata"
+    lyrics_root = tmp_path / "lyrics"
+    metadata_dir.mkdir()
+    lyrics_root.mkdir()
+    for track_id in ("vocadb_201", "vocadb_202"):
+        write_json(
+            metadata_dir / f"{track_id}.json",
+            {
+                "schema_version": "1.0",
+                "record_type": "vocaloid_metadata_record",
+                "track_identity": {"track_id": track_id, "canonical_title": "Same Title"},
+                "canonical_basis": {"is_vocaloid_canonical": True, "inclusion_basis": "vocadb_canonical"},
+                "vocal_synthesis": {"engine_family": "vocaloid", "voicebanks": ["Hatsune Miku"]},
+                "credits": {"producer": "Demo Producer", "lyricist": "", "composer": "", "arranger": ""},
+                "release_context": {"original_platform": "youtube", "original_upload_date": "2026-01-01"},
+                "metadata_sources": [
+                    {"label": track_id, "source_type": "vocadb", "url": f"https://vocadb.net/S/{track_id}"}
+                ],
+                "collection_status": {"metadata_quality": "seed", "canonical_review_status": "needs_review"},
+            },
+        )
+    (lyrics_root / "Same Title.txt").write_text("ambiguous\n", encoding="utf-8")
+
+    manifest = materialize_song_analysis_inputs_from_metadata(
+        metadata_dir=metadata_dir,
+        output_root=tmp_path / "packages",
+        lyrics_root=lyrics_root,
+    )
+
+    assert manifest["lyrics_match_counts"]["ambiguous"] == 2
+    assert manifest["counts"]["ready_for_analysis"] == 0
+    assert not (tmp_path / "packages" / "vocadb_201" / "lyrics.txt").exists()
+    source_manifest = json.loads(
+        (tmp_path / "packages" / "vocadb_201" / "source_manifest.json").read_text(encoding="utf-8")
+    )
+    assert source_manifest["lyric_match_status"] == "ambiguous"

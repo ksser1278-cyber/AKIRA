@@ -763,6 +763,23 @@ def run_write_song_analysis_template(*, output_dir: Path, song_id: str = "sample
     return _impl(output_dir=output_dir, song_id=song_id)
 
 
+def run_match_song_analysis_lyrics(
+    *,
+    metadata_dir: Path,
+    lyrics_root: Path,
+    output_root: Path,
+    limit: int | None = None,
+) -> dict[str, Any]:
+    from ..song_analysis import match_song_analysis_lyrics as _impl
+
+    return _impl(
+        metadata_dir=metadata_dir,
+        lyrics_root=lyrics_root,
+        output_root=output_root,
+        limit=limit,
+    )
+
+
 def run_materialize_song_analysis_inputs_from_metadata(
     *,
     metadata_dir: Path,
@@ -876,6 +893,7 @@ __all__ = [
     "run_validate_active_workflow",
     "run_song_analysis_pipeline",
     "run_write_song_analysis_template",
+    "run_match_song_analysis_lyrics",
     "run_materialize_song_analysis_inputs_from_metadata",
     "run_scrape_vocadb_song_analysis_inputs",
     "run_songwriter_demo",

@@ -35,6 +35,23 @@ def materialize_song_analysis_inputs_from_metadata(
     )
 
 
+def match_song_analysis_lyrics(
+    *,
+    metadata_dir: Path,
+    lyrics_root: Path,
+    output_root: Path,
+    limit: int | None = None,
+) -> dict[str, Any]:
+    from .scrape import match_song_analysis_lyrics as _impl
+
+    return _impl(
+        metadata_dir=metadata_dir,
+        lyrics_root=lyrics_root,
+        output_root=output_root,
+        limit=limit,
+    )
+
+
 def scrape_vocadb_song_analysis_inputs(
     *,
     project_root: Path,
@@ -67,6 +84,7 @@ def scrape_vocadb_song_analysis_inputs(
 __all__ = [
     "run_song_analysis_pipeline",
     "write_song_analysis_template",
+    "match_song_analysis_lyrics",
     "materialize_song_analysis_inputs_from_metadata",
     "scrape_vocadb_song_analysis_inputs",
 ]
